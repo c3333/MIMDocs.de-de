@@ -6,23 +6,20 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [MIMDocs\index.html](https://github.com/Microsoft/MIMDocs-pr/blob/b8fdc643c64460a44d88a8b5c24d4473a0c98f26/MIMDocs/index.html) | OutofSyncHandedBackSuccess | [Details](#c96ec3952309a33e1724eadd69bb5c1b42b4e45487)
+ [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/62aaaf9c6129a43d9b64444d976848449cdb589e/MIMDocs/DeployUse/prepare-server-ws2012r2.md) | HandedOffSuccess | [Details](#2f7d202be96c8f4fc58747bb66bd3acfcaf4a13e70)
  [MIMDocs\privileged-access-management-get-started.md](https://github.com/Microsoft/MIMDocs-pr/blob/9411cf67965bff66b7e24b967f1b77332b02633e/MIMDocs/privileged-access-management-get-started.md) | HandedOffFailed | [Details](#e1f4b80e684a1074c6f0f244dc0374e070f5d494237)
 
 ## Item Details
-##### <a name='c96ec3952309a33e1724eadd69bb5c1b42b4e45487'></a> Source: [MIMDocs\index.html](https://github.com/Microsoft/MIMDocs-pr/blob/b8fdc643c64460a44d88a8b5c24d4473a0c98f26/MIMDocs/index.html)
-* Status: OutofSyncHandedBackSuccess
+##### <a name='2f7d202be96c8f4fc58747bb66bd3acfcaf4a13e70'></a> Source: [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/62aaaf9c6129a43d9b64444d976848449cdb589e/MIMDocs/DeployUse/prepare-server-ws2012r2.md)
+* Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [c96ec3952309a33e1724eadd69bb5c1b42b4e454.html](https://github.com/Microsoft/EM.handoff/blob/6f710c43b00642d3d668bbab2f5d2d9655ecbfa6/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/c96ec3952309a33e1724eadd69bb5c1b42b4e454.html)
-* Handoff Datetime: 2016-03-14 20:22:22
+* Handoff File: [prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/d9665c0e5a54e8e10e12c801355042c82b460307/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.de-de.xlf)
+* Handoff Datetime: 2016-03-14 21:54:05
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\index.html](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/ebd7b1e09337f19abed9eced31d071b4e1f3f17c/MIMDocs/index.html)
-* Current Handback File: [7ff7d0b29fb9cd1ce8c68a66da4feb4e24a62d41.html](https://github.com/Microsoft/EM.handback/blob/26cc9d4f913bf3e2307f0b5bd3784f02f0dddf65/ol-handback/Microsoft/MIMDocs-pr.de-de/master/7ff7d0b29fb9cd1ce8c68a66da4feb4e24a62d41.html)
-* Current Handback Datetime: 2016-03-14 17:50:55
 * [Back to Top](#report-top)
 
 ##### <a name='e1f4b80e684a1074c6f0f244dc0374e070f5d494237'></a> Source: [MIMDocs\privileged-access-management-get-started.md](https://github.com/Microsoft/MIMDocs-pr/blob/9411cf67965bff66b7e24b967f1b77332b02633e/MIMDocs/privileged-access-management-get-started.md)
