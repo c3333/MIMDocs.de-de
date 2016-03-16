@@ -5,12 +5,12 @@
  -------- | ----- 
  Total Files | 300
 [ Handoff Failed Files ](#handoff-failed-list)| 1
-[ Handoff Success Files ](#handoff-success-list)| 23
+[ Handoff Success Files ](#handoff-success-list)| 12
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 20
-[ In Sync Handback Files ](#insync-handback-success-list)| 194
+[ In Sync Handback Files ](#insync-handback-success-list)| 205
 [ Ignored Files ](#ignored-list)| 62
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -30,20 +30,9 @@
  [MIMDocs\DeployUse\prepare-server-sharepoint.md](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/DeployUse/prepare-server-sharepoint.md) | HandedOffSuccess | [Details](#1f22f09075ce2d82690b106d60b83ce6607012f467)
  [MIMDocs\DeployUse\prepare-server-sql2014.md](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/DeployUse/prepare-server-sql2014.md) | HandedOffSuccess | [Details](#2229f35a87f6949bc45d58aa618a3aa3d111fd7c68)
  [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/DeployUse/prepare-server-ws2012r2.md) | HandedOffSuccess | [Details](#75c507e63dba9385ddfc47505cb719123d60391e69)
- [MIMDocs\DeployUse\Sample.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/DeployUse/Sample.md) | HandedOffSuccess | [Details](#80f16e5851e574014594e4d93ba194beb2cc965371)
- [MIMDocs\environment-overview.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/environment-overview.md) | HandedOffSuccess | [Details](#c1e99be11f6e20a17296aeaff30809cbe7e98b8b77)
- [MIMDocs\GetStarted\Sample.md](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/GetStarted/Sample.md) | HandedOffSuccess | [Details](#80f16e5851e574014594e4d93ba194beb2cc965383)
  [MIMDocs\high-availability-disaster-recovery-considerations-bastion-environment.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/high-availability-disaster-recovery-considerations-bastion-environment.md) | HandedOffSuccess | [Details](#e02e93ae53b8db97e46d849e18e26291ffa2608f85)
  [MIMDocs\media\MIM_SSPR_PR2.jpg](https://github.com/Microsoft/MIMDocs-pr/blob/c18373ec7bb55d42af5caa34288003be2040eeda/MIMDocs/media/MIM_SSPR_PR2.jpg) | HandedOffSuccess | [Details](#cea2fd7f210e962825520e937926350c0f5e0f01166)
- [MIMDocs\PlanDesign\Sample.md](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/PlanDesign/Sample.md) | HandedOffSuccess | [Details](#80f16e5851e574014594e4d93ba194beb2cc9653230)
  [MIMDocs\privileged-identity-management-for-active-directory-domain-services.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/privileged-identity-management-for-active-directory-domain-services.md) | HandedOffSuccess | [Details](#3e39c7e49140e4ecd8475779dec4d3c977125082236)
- [MIMDocs\reference\certificate-operations.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/certificate-operations.md) | HandedOffSuccess | [Details](#ebf6795dd871e1192c1fcb4960c53d49d0d61c6d241)
- [MIMDocs\reference\get-certificate-request-generation-options.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/get-certificate-request-generation-options.md) | HandedOffSuccess | [Details](#dbfb536dceeee9c7144686827fe8b96f08322fcc244)
- [MIMDocs\reference\get-user-certificates.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/get-user-certificates.md) | HandedOffSuccess | [Details](#eddf95d5edcf145e10b13c7a96a908ede089b973256)
- [MIMDocs\reference\privileged-access-management-rest-api-service-details.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/privileged-access-management-rest-api-service-details.md) | HandedOffSuccess | [Details](#f6ad6de4c58ba4914b60c484ecf6b10352ceae0d269)
- [MIMDocs\step-6-transition-group-to-pam.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/step-6-transition-group-to-pam.md) | HandedOffSuccess | [Details](#7c2015e0a6c825882ef314930b1845e3ecba351e281)
- [MIMDocs\Troubleshoot\Sample.md](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/Troubleshoot/Sample.md) | HandedOffSuccess | [Details](#80f16e5851e574014594e4d93ba194beb2cc9653287)
- [MIMDocs\Understand\Sample.md](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/Understand/Sample.md) | HandedOffSuccess | [Details](#80f16e5851e574014594e4d93ba194beb2cc9653296)
 
 ## <a name='archive-failed-list'></a> Archive Failed File List
 
@@ -127,10 +116,13 @@
  [MIMDocs\DeployUse\media\MIM-UpgSP7.png](https://github.com/Microsoft/MIMDocs-pr/blob/d3196e23a3bcacc8e563d6a16ec00be7be68fb6d/MIMDocs/DeployUse/media/MIM-UpgSP7.png) | InSyncHandedBackSuccess | [Details](#2fc132e83f6d875b2b872ece9db8f11b87c06c9261)
  [MIMDocs\DeployUse\media\MIM-UpgSP8.PNG](https://github.com/Microsoft/MIMDocs-pr/blob/d3196e23a3bcacc8e563d6a16ec00be7be68fb6d/MIMDocs/DeployUse/media/MIM-UpgSP8.PNG) | InSyncHandedBackSuccess | [Details](#a0c86274e483e6f9a8ffd55b1884e70cee24560d62)
  [MIMDocs\DeployUse\media\MIM-UpgSP9.png](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/DeployUse/media/MIM-UpgSP9.png) | InSyncHandedBackSuccess | [Details](#86552c75a719abf0e4adbe967a98d3a5cf3167c163)
+ [MIMDocs\DeployUse\Sample.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/DeployUse/Sample.md) | InSyncHandedBackSuccess | [Details](#80f16e5851e574014594e4d93ba194beb2cc965371)
+ [MIMDocs\environment-overview.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/environment-overview.md) | InSyncHandedBackSuccess | [Details](#c1e99be11f6e20a17296aeaff30809cbe7e98b8b77)
  [MIMDocs\forefront-identity-manager-issues-solutions.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/forefront-identity-manager-issues-solutions.md) | InSyncHandedBackSuccess | [Details](#9e2f39ee7051489625f08aeb1b1fe5c0342d72d678)
  [MIMDocs\forefront-identity-manager-updates.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/forefront-identity-manager-updates.md) | InSyncHandedBackSuccess | [Details](#369373e2252ef841f0cf358c3885530591ed711080)
  [MIMDocs\forefront-identity-manager-updates-issues-solutions.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/forefront-identity-manager-updates-issues-solutions.md) | InSyncHandedBackSuccess | [Details](#00a3fd51fd6b24c1d0b60dc12811438270b72dd679)
  [MIMDocs\GetStarted\media\150x150.png](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/GetStarted/media/150x150.png) | InSyncHandedBackSuccess | [Details](#84421bf7f4ba657e685239fb27f4798a46485f7182)
+ [MIMDocs\GetStarted\Sample.md](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/GetStarted/Sample.md) | InSyncHandedBackSuccess | [Details](#80f16e5851e574014594e4d93ba194beb2cc965383)
  [MIMDocs\GetStarted\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/GetStarted/TOC.md) | InSyncHandedBackSuccess | [Details](#3036877a4f389967e58c7aa350a9c1fa54ecb5a484)
  [MIMDocs\media\150x150.png](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/media/150x150.png) | InSyncHandedBackSuccess | [Details](#84421bf7f4ba657e685239fb27f4798a46485f7187)
  [MIMDocs\media\bastion1.png](https://github.com/Microsoft/MIMDocs-pr/blob/d3196e23a3bcacc8e563d6a16ec00be7be68fb6d/MIMDocs/media/bastion1.png) | InSyncHandedBackSuccess | [Details](#f93247ee57858fc3d5ac1a2502d4d796658538db91)
@@ -222,14 +214,17 @@
  [MIMDocs\PlanDesign\media\150x150.png](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/PlanDesign/media/150x150.png) | InSyncHandedBackSuccess | [Details](#84421bf7f4ba657e685239fb27f4798a46485f71226)
  [MIMDocs\PlanDesign\media\MIM-topo-multitier.png](https://github.com/Microsoft/MIMDocs-pr/blob/d3196e23a3bcacc8e563d6a16ec00be7be68fb6d/MIMDocs/PlanDesign/media/MIM-topo-multitier.png) | InSyncHandedBackSuccess | [Details](#ff89d0e903b04df6182700b474bc3aef1b0ba24d228)
  [MIMDocs\PlanDesign\media\MIM-topo-multitier-multiservice.png](https://github.com/Microsoft/MIMDocs-pr/blob/d3196e23a3bcacc8e563d6a16ec00be7be68fb6d/MIMDocs/PlanDesign/media/MIM-topo-multitier-multiservice.png) | InSyncHandedBackSuccess | [Details](#c465fc00bd089b73b86daa72968dd67dab832aee227)
+ [MIMDocs\PlanDesign\Sample.md](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/PlanDesign/Sample.md) | InSyncHandedBackSuccess | [Details](#80f16e5851e574014594e4d93ba194beb2cc9653230)
  [MIMDocs\planning-bastion-environment.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/planning-bastion-environment.md) | InSyncHandedBackSuccess | [Details](#60e25f254eed153466c164c27bdd5f185e8c887c233)
  [MIMDocs\privileged-access-management-deployment-considerations.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/privileged-access-management-deployment-considerations.md) | InSyncHandedBackSuccess | [Details](#aab1453791f2307fbd0b3013654812ba2aaf0fc5234)
  [MIMDocs\reference\assign-smartcard-to-request.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/assign-smartcard-to-request.md) | InSyncHandedBackSuccess | [Details](#a770ecc88fc46d075da56ac34495432ad85d2b58237)
  [MIMDocs\reference\cancel-abandon-complete-request.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/cancel-abandon-complete-request.md) | InSyncHandedBackSuccess | [Details](#5b51344d52a01f14d0a086bc39f3e73ce5f9e4a4238)
  [MIMDocs\reference\certificate-management-rest-api-reference.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/certificate-management-rest-api-reference.md) | InSyncHandedBackSuccess | [Details](#67421e1b6cf78554946111d4f458ac469caf9282239)
  [MIMDocs\reference\certificate-management-rest-api-service-details.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/certificate-management-rest-api-service-details.md) | InSyncHandedBackSuccess | [Details](#4ec2c3a722561ad760c7117adfb8f532418b453b240)
+ [MIMDocs\reference\certificate-operations.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/certificate-operations.md) | InSyncHandedBackSuccess | [Details](#ebf6795dd871e1192c1fcb4960c53d49d0d61c6d241)
  [MIMDocs\reference\certificate-request-operations.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/certificate-request-operations.md) | InSyncHandedBackSuccess | [Details](#6552aad722d4c0a532bda0382bc5aabcad0ebcaf242)
  [MIMDocs\reference\create-request.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/create-request.md) | InSyncHandedBackSuccess | [Details](#82318491e445d1555cd6bb39b22434c593f76574243)
+ [MIMDocs\reference\get-certificate-request-generation-options.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/get-certificate-request-generation-options.md) | InSyncHandedBackSuccess | [Details](#dbfb536dceeee9c7144686827fe8b96f08322fcc244)
  [MIMDocs\reference\get-certificate-responses.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/get-certificate-responses.md) | InSyncHandedBackSuccess | [Details](#8725ef2826f8f4cbc55ceccdd8687c2643fc1c05245)
  [MIMDocs\reference\get-profile-data.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/get-profile-data.md) | InSyncHandedBackSuccess | [Details](#ac6c3dd27112bcaf7b3b89d171207d2f3b273220246)
  [MIMDocs\reference\get-profile-state-operations.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/get-profile-state-operations.md) | InSyncHandedBackSuccess | [Details](#2e504b4c70604bb5f6b4e1bac802c9cc5f7f24e4247)
@@ -241,6 +236,7 @@
  [MIMDocs\reference\get-smartcard-policy.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/get-smartcard-policy.md) | InSyncHandedBackSuccess | [Details](#c1ebeace1b37c9c0778892d34cf2732fe7f812fa253)
  [MIMDocs\reference\get-smartcard-profile-certificates.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/get-smartcard-profile-certificates.md) | InSyncHandedBackSuccess | [Details](#573a786c2fa2267de5e31be30940244dac3da9b0254)
  [MIMDocs\reference\get-smartcard-proposed-pin.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/get-smartcard-proposed-pin.md) | InSyncHandedBackSuccess | [Details](#c2c8da74d05279a08d00ee065b474e10fec28cf1255)
+ [MIMDocs\reference\get-user-certificates.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/get-user-certificates.md) | InSyncHandedBackSuccess | [Details](#eddf95d5edcf145e10b13c7a96a908ede089b973256)
  [MIMDocs\reference\get-workflow-policy.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/get-workflow-policy.md) | InSyncHandedBackSuccess | [Details](#3e27cb62ab6a0e10578d145d094008cfab8f9ff4257)
  [MIMDocs\reference\microsoft-identity-manager-2016-developer-reference.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/microsoft-identity-manager-2016-developer-reference.md) | InSyncHandedBackSuccess | [Details](#e3288b84804b401f99bb41fd8cf017d07daf2303258)
  [MIMDocs\reference\policy-operations.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/policy-operations.md) | InSyncHandedBackSuccess | [Details](#faf461430f438d9d19e7d3e7a0f8b92a53a4a363260)
@@ -252,6 +248,7 @@
  [MIMDocs\reference\privileged-access-management-get-roles.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/privileged-access-management-get-roles.md) | InSyncHandedBackSuccess | [Details](#159ee26cbbd2206c93f7c3883fb2a4bdfa08d906266)
  [MIMDocs\reference\privileged-access-management-get-session-info.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/privileged-access-management-get-session-info.md) | InSyncHandedBackSuccess | [Details](#50291dca1fea153b687a8b2b63a253008849796e267)
  [MIMDocs\reference\privileged-access-management-rest-api-reference.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/privileged-access-management-rest-api-reference.md) | InSyncHandedBackSuccess | [Details](#11840efe7e4ac44eb3f7e903412eef4dead3ade9268)
+ [MIMDocs\reference\privileged-access-management-rest-api-service-details.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/privileged-access-management-rest-api-service-details.md) | InSyncHandedBackSuccess | [Details](#f6ad6de4c58ba4914b60c484ecf6b10352ceae0d269)
  [MIMDocs\reference\profile-operations.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/profile-operations.md) | InSyncHandedBackSuccess | [Details](#a85e29e131ec3d1420d4c1d98a7e1a9789b6327d270)
  [MIMDocs\reference\request-operations.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/request-operations.md) | InSyncHandedBackSuccess | [Details](#e60456a665b7492b1306c418964d2ac74788aaab271)
  [MIMDocs\reference\sample-enrollment-walkthrough.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/sample-enrollment-walkthrough.md) | InSyncHandedBackSuccess | [Details](#4504d3dcef3dc8e5d140837a9cffe8a43ab683b9272)
@@ -262,15 +259,18 @@
  [MIMDocs\step-3-prepare-pam-server.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/step-3-prepare-pam-server.md) | InSyncHandedBackSuccess | [Details](#b0bb6867e08e0b522c48e8ea1c69d048986e4ea4278)
  [MIMDocs\step-4-install-mim-components-on-pam-server.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/step-4-install-mim-components-on-pam-server.md) | InSyncHandedBackSuccess | [Details](#602ec0f97def695fffdad60212dfc08630006732279)
  [MIMDocs\step-5-establish-trust-between-priv-and-corp-forests.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/step-5-establish-trust-between-priv-and-corp-forests.md) | InSyncHandedBackSuccess | [Details](#d269abb76d6321b373b036c63dd923a589774233280)
+ [MIMDocs\step-6-transition-group-to-pam.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/step-6-transition-group-to-pam.md) | InSyncHandedBackSuccess | [Details](#7c2015e0a6c825882ef314930b1845e3ecba351e281)
  [MIMDocs\step-7-elevate-user-access.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/step-7-elevate-user-access.md) | InSyncHandedBackSuccess | [Details](#668186b052599f8268fc48fef9adfb31a7477764282)
  [MIMDocs\tier-model-for-partitioning-administrative-privileges.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/tier-model-for-partitioning-administrative-privileges.md) | InSyncHandedBackSuccess | [Details](#ff103c9c44c8c02b976f4dc149643cc0a9408c13283)
  [MIMDocs\toc.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/toc.md) | InSyncHandedBackSuccess | [Details](#b23b075b34e915308d532dce949a691881c84d56284)
  [MIMDocs\Troubleshoot\media\150x150.png](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/Troubleshoot/media/150x150.png) | InSyncHandedBackSuccess | [Details](#84421bf7f4ba657e685239fb27f4798a46485f71286)
+ [MIMDocs\Troubleshoot\Sample.md](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/Troubleshoot/Sample.md) | InSyncHandedBackSuccess | [Details](#80f16e5851e574014594e4d93ba194beb2cc9653287)
  [MIMDocs\Troubleshoot\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/Troubleshoot/TOC.md) | InSyncHandedBackSuccess | [Details](#3036877a4f389967e58c7aa350a9c1fa54ecb5a4288)
  [MIMDocs\Understand\media\150x150.png](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/Understand/media/150x150.png) | InSyncHandedBackSuccess | [Details](#84421bf7f4ba657e685239fb27f4798a46485f71291)
  [MIMDocs\Understand\media\MIM-Hybrid-downloadReportAgent.jpg](https://github.com/Microsoft/MIMDocs-pr/blob/d3196e23a3bcacc8e563d6a16ec00be7be68fb6d/MIMDocs/Understand/media/MIM-Hybrid-downloadReportAgent.jpg) | InSyncHandedBackSuccess | [Details](#7c71abe1409d6676539927896ab4415a043d4340292)
  [MIMDocs\Understand\media\MIM-Hybrid-howitworks.png](https://github.com/Microsoft/MIMDocs-pr/blob/d3196e23a3bcacc8e563d6a16ec00be7be68fb6d/MIMDocs/Understand/media/MIM-Hybrid-howitworks.png) | InSyncHandedBackSuccess | [Details](#47bcebc7b3a069d07f32a5a211af8cb66ad3ce51293)
  [MIMDocs\Understand\media\MIM-Hybrid-passwordreset.jpg](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/Understand/media/MIM-Hybrid-passwordreset.jpg) | InSyncHandedBackSuccess | [Details](#f21f8cd1fd0c882b8768f543e10487140c67dc1c294)
+ [MIMDocs\Understand\Sample.md](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/Understand/Sample.md) | InSyncHandedBackSuccess | [Details](#80f16e5851e574014594e4d93ba194beb2cc9653296)
  [MIMDocs\use-azure-mfa-for-activation.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/use-azure-mfa-for-activation.md) | InSyncHandedBackSuccess | [Details](#1c783bc90fedc324d89be8a6e28b83c539ce58d8298)
 
 ## <a name='ignored-list'></a> Ignored File List
@@ -1264,15 +1264,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='80f16e5851e574014594e4d93ba194beb2cc965371'></a> Source: [MIMDocs\DeployUse\Sample.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/DeployUse/Sample.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\Sample.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/8d59027923694457c37ae859a6b7cb72cda0cb8b/MIMDocs/DeployUse/Sample.md)
 * Handoff File: [Sample.64be80faf311daf1417f99d2b30e2f4066943381.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/d315284ba3b4812bbd4bb52ba5fe7e31f014743a/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/Sample.64be80faf311daf1417f99d2b30e2f4066943381.de-de.xlf)
 * Handoff Datetime: 2016-03-04 18:03:04
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [Sample.64be80faf311daf1417f99d2b30e2f4066943381.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/393e10313777142be58608b7ab91936b31807d45/ol-handback/Microsoft/MIMDocs-pr.de-de/master/Sample.64be80faf311daf1417f99d2b30e2f4066943381.de-de.xlf)
+* Handback Datetime: 2016-03-16 02:52:42
 * [Back to Top](#report-top)
 
 ##### <a name='f3dc4a9fee19b340b354e72f4b3873f2d58a990772'></a> Source: [MIMDocs\DeployUse\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/DeployUse/TOC.md)
@@ -1348,15 +1348,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='c1e99be11f6e20a17296aeaff30809cbe7e98b8b77'></a> Source: [MIMDocs\environment-overview.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/environment-overview.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\environment-overview.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/8d59027923694457c37ae859a6b7cb72cda0cb8b/MIMDocs/environment-overview.md)
 * Handoff File: [environment-overview.77f665983eb91d6446a3dd3150a6d10b595e9e74.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/d315284ba3b4812bbd4bb52ba5fe7e31f014743a/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/environment-overview.77f665983eb91d6446a3dd3150a6d10b595e9e74.de-de.xlf)
 * Handoff Datetime: 2016-03-04 18:03:04
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [environment-overview.77f665983eb91d6446a3dd3150a6d10b595e9e74.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/393e10313777142be58608b7ab91936b31807d45/ol-handback/Microsoft/MIMDocs-pr.de-de/master/environment-overview.77f665983eb91d6446a3dd3150a6d10b595e9e74.de-de.xlf)
+* Handback Datetime: 2016-03-16 02:52:42
 * [Back to Top](#report-top)
 
 ##### <a name='9e2f39ee7051489625f08aeb1b1fe5c0342d72d678'></a> Source: [MIMDocs\forefront-identity-manager-issues-solutions.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/forefront-identity-manager-issues-solutions.md)
@@ -1421,15 +1421,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='80f16e5851e574014594e4d93ba194beb2cc965383'></a> Source: [MIMDocs\GetStarted\Sample.md](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/GetStarted/Sample.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\Sample.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/8d59027923694457c37ae859a6b7cb72cda0cb8b/MIMDocs/DeployUse/Sample.md)
 * Handoff File: [Sample.64be80faf311daf1417f99d2b30e2f4066943381.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/d315284ba3b4812bbd4bb52ba5fe7e31f014743a/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/Sample.64be80faf311daf1417f99d2b30e2f4066943381.de-de.xlf)
 * Handoff Datetime: 2016-03-04 18:03:04
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [Sample.64be80faf311daf1417f99d2b30e2f4066943381.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/393e10313777142be58608b7ab91936b31807d45/ol-handback/Microsoft/MIMDocs-pr.de-de/master/Sample.64be80faf311daf1417f99d2b30e2f4066943381.de-de.xlf)
+* Handback Datetime: 2016-03-16 02:52:42
 * [Back to Top](#report-top)
 
 ##### <a name='3036877a4f389967e58c7aa350a9c1fa54ecb5a484'></a> Source: [MIMDocs\GetStarted\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/GetStarted/TOC.md)
@@ -3284,15 +3284,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='80f16e5851e574014594e4d93ba194beb2cc9653230'></a> Source: [MIMDocs\PlanDesign\Sample.md](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/PlanDesign/Sample.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\Sample.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/8d59027923694457c37ae859a6b7cb72cda0cb8b/MIMDocs/DeployUse/Sample.md)
 * Handoff File: [Sample.64be80faf311daf1417f99d2b30e2f4066943381.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/d315284ba3b4812bbd4bb52ba5fe7e31f014743a/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/Sample.64be80faf311daf1417f99d2b30e2f4066943381.de-de.xlf)
 * Handoff Datetime: 2016-03-04 18:03:04
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [Sample.64be80faf311daf1417f99d2b30e2f4066943381.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/393e10313777142be58608b7ab91936b31807d45/ol-handback/Microsoft/MIMDocs-pr.de-de/master/Sample.64be80faf311daf1417f99d2b30e2f4066943381.de-de.xlf)
+* Handback Datetime: 2016-03-16 02:52:42
 * [Back to Top](#report-top)
 
 ##### <a name='f6e7f89affbc8d133ad220b8fce233127f09a4f7231'></a> Source: [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/PlanDesign/TOC.md)
@@ -3423,15 +3423,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='ebf6795dd871e1192c1fcb4960c53d49d0d61c6d241'></a> Source: [MIMDocs\reference\certificate-operations.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/certificate-operations.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\reference\certificate-operations.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/8d59027923694457c37ae859a6b7cb72cda0cb8b/MIMDocs/reference/certificate-operations.md)
 * Handoff File: [certificate-operations.935420a56f5ef7103420dd2c20e3cb57295a0c00.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/d315284ba3b4812bbd4bb52ba5fe7e31f014743a/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/certificate-operations.935420a56f5ef7103420dd2c20e3cb57295a0c00.de-de.xlf)
 * Handoff Datetime: 2016-03-04 18:03:04
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [certificate-operations.935420a56f5ef7103420dd2c20e3cb57295a0c00.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/393e10313777142be58608b7ab91936b31807d45/ol-handback/Microsoft/MIMDocs-pr.de-de/master/certificate-operations.935420a56f5ef7103420dd2c20e3cb57295a0c00.de-de.xlf)
+* Handback Datetime: 2016-03-16 02:52:42
 * [Back to Top](#report-top)
 
 ##### <a name='6552aad722d4c0a532bda0382bc5aabcad0ebcaf242'></a> Source: [MIMDocs\reference\certificate-request-operations.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/certificate-request-operations.md)
@@ -3459,15 +3459,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='dbfb536dceeee9c7144686827fe8b96f08322fcc244'></a> Source: [MIMDocs\reference\get-certificate-request-generation-options.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/get-certificate-request-generation-options.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\reference\get-certificate-request-generation-options.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/8d59027923694457c37ae859a6b7cb72cda0cb8b/MIMDocs/reference/get-certificate-request-generation-options.md)
 * Handoff File: [get-certificate-request-generation-options.974acc2030f4011b123f99b7397c76af674fa26b.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/d315284ba3b4812bbd4bb52ba5fe7e31f014743a/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/get-certificate-request-generation-options.974acc2030f4011b123f99b7397c76af674fa26b.de-de.xlf)
 * Handoff Datetime: 2016-03-04 18:03:04
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [get-certificate-request-generation-options.974acc2030f4011b123f99b7397c76af674fa26b.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/393e10313777142be58608b7ab91936b31807d45/ol-handback/Microsoft/MIMDocs-pr.de-de/master/get-certificate-request-generation-options.974acc2030f4011b123f99b7397c76af674fa26b.de-de.xlf)
+* Handback Datetime: 2016-03-16 02:52:42
 * [Back to Top](#report-top)
 
 ##### <a name='8725ef2826f8f4cbc55ceccdd8687c2643fc1c05245'></a> Source: [MIMDocs\reference\get-certificate-responses.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/get-certificate-responses.md)
@@ -3603,15 +3603,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='eddf95d5edcf145e10b13c7a96a908ede089b973256'></a> Source: [MIMDocs\reference\get-user-certificates.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/get-user-certificates.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\reference\get-user-certificates.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/8d59027923694457c37ae859a6b7cb72cda0cb8b/MIMDocs/reference/get-user-certificates.md)
 * Handoff File: [get-user-certificates.0d28babfc24b38dd84bbaa22bc1f9ac2baa51d32.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/d315284ba3b4812bbd4bb52ba5fe7e31f014743a/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/get-user-certificates.0d28babfc24b38dd84bbaa22bc1f9ac2baa51d32.de-de.xlf)
 * Handoff Datetime: 2016-03-04 18:03:04
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [get-user-certificates.0d28babfc24b38dd84bbaa22bc1f9ac2baa51d32.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/393e10313777142be58608b7ab91936b31807d45/ol-handback/Microsoft/MIMDocs-pr.de-de/master/get-user-certificates.0d28babfc24b38dd84bbaa22bc1f9ac2baa51d32.de-de.xlf)
+* Handback Datetime: 2016-03-16 02:52:42
 * [Back to Top](#report-top)
 
 ##### <a name='3e27cb62ab6a0e10578d145d094008cfab8f9ff4257'></a> Source: [MIMDocs\reference\get-workflow-policy.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/get-workflow-policy.md)
@@ -3759,15 +3759,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='f6ad6de4c58ba4914b60c484ecf6b10352ceae0d269'></a> Source: [MIMDocs\reference\privileged-access-management-rest-api-service-details.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/privileged-access-management-rest-api-service-details.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\reference\privileged-access-management-rest-api-service-details.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/8d59027923694457c37ae859a6b7cb72cda0cb8b/MIMDocs/reference/privileged-access-management-rest-api-service-details.md)
 * Handoff File: [privileged-access-management-rest-api-service-details.029950116eff5a6445429d5a642f514d93db1738.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/d315284ba3b4812bbd4bb52ba5fe7e31f014743a/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/privileged-access-management-rest-api-service-details.029950116eff5a6445429d5a642f514d93db1738.de-de.xlf)
 * Handoff Datetime: 2016-03-04 18:03:04
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [privileged-access-management-rest-api-service-details.029950116eff5a6445429d5a642f514d93db1738.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/393e10313777142be58608b7ab91936b31807d45/ol-handback/Microsoft/MIMDocs-pr.de-de/master/privileged-access-management-rest-api-service-details.029950116eff5a6445429d5a642f514d93db1738.de-de.xlf)
+* Handback Datetime: 2016-03-16 02:52:42
 * [Back to Top](#report-top)
 
 ##### <a name='a85e29e131ec3d1420d4c1d98a7e1a9789b6327d270'></a> Source: [MIMDocs\reference\profile-operations.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/reference/profile-operations.md)
@@ -3906,15 +3906,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='7c2015e0a6c825882ef314930b1845e3ecba351e281'></a> Source: [MIMDocs\step-6-transition-group-to-pam.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/step-6-transition-group-to-pam.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\step-6-transition-group-to-pam.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/8d59027923694457c37ae859a6b7cb72cda0cb8b/MIMDocs/step-6-transition-group-to-pam.md)
 * Handoff File: [step-6-transition-group-to-pam.464c05e30696babb397abd3a624b5a3f162e2295.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/d315284ba3b4812bbd4bb52ba5fe7e31f014743a/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/step-6-transition-group-to-pam.464c05e30696babb397abd3a624b5a3f162e2295.de-de.xlf)
 * Handoff Datetime: 2016-03-04 18:03:04
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [step-6-transition-group-to-pam.464c05e30696babb397abd3a624b5a3f162e2295.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/393e10313777142be58608b7ab91936b31807d45/ol-handback/Microsoft/MIMDocs-pr.de-de/master/step-6-transition-group-to-pam.464c05e30696babb397abd3a624b5a3f162e2295.de-de.xlf)
+* Handback Datetime: 2016-03-16 02:52:42
 * [Back to Top](#report-top)
 
 ##### <a name='668186b052599f8268fc48fef9adfb31a7477764282'></a> Source: [MIMDocs\step-7-elevate-user-access.md](https://github.com/Microsoft/MIMDocs-pr/blob/1a14f9ebdec94d9e153f802b6c02fd229ba6f633/MIMDocs/step-7-elevate-user-access.md)
@@ -3979,15 +3979,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='80f16e5851e574014594e4d93ba194beb2cc9653287'></a> Source: [MIMDocs\Troubleshoot\Sample.md](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/Troubleshoot/Sample.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\Sample.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/8d59027923694457c37ae859a6b7cb72cda0cb8b/MIMDocs/DeployUse/Sample.md)
 * Handoff File: [Sample.64be80faf311daf1417f99d2b30e2f4066943381.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/d315284ba3b4812bbd4bb52ba5fe7e31f014743a/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/Sample.64be80faf311daf1417f99d2b30e2f4066943381.de-de.xlf)
 * Handoff Datetime: 2016-03-04 18:03:04
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [Sample.64be80faf311daf1417f99d2b30e2f4066943381.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/393e10313777142be58608b7ab91936b31807d45/ol-handback/Microsoft/MIMDocs-pr.de-de/master/Sample.64be80faf311daf1417f99d2b30e2f4066943381.de-de.xlf)
+* Handback Datetime: 2016-03-16 02:52:42
 * [Back to Top](#report-top)
 
 ##### <a name='3036877a4f389967e58c7aa350a9c1fa54ecb5a4288'></a> Source: [MIMDocs\Troubleshoot\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/Troubleshoot/TOC.md)
@@ -4097,15 +4097,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='80f16e5851e574014594e4d93ba194beb2cc9653296'></a> Source: [MIMDocs\Understand\Sample.md](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/Understand/Sample.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\Sample.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/8d59027923694457c37ae859a6b7cb72cda0cb8b/MIMDocs/DeployUse/Sample.md)
 * Handoff File: [Sample.64be80faf311daf1417f99d2b30e2f4066943381.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/d315284ba3b4812bbd4bb52ba5fe7e31f014743a/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/Sample.64be80faf311daf1417f99d2b30e2f4066943381.de-de.xlf)
 * Handoff Datetime: 2016-03-04 18:03:04
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [Sample.64be80faf311daf1417f99d2b30e2f4066943381.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/393e10313777142be58608b7ab91936b31807d45/ol-handback/Microsoft/MIMDocs-pr.de-de/master/Sample.64be80faf311daf1417f99d2b30e2f4066943381.de-de.xlf)
+* Handback Datetime: 2016-03-16 02:52:42
 * [Back to Top](#report-top)
 
 ##### <a name='36580ae1c22c6be6a42a531603d4c49764627277297'></a> Source: [MIMDocs\Understand\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/6597b118777079dabdacfe25304a6a178234f33f/MIMDocs/Understand/TOC.md)
