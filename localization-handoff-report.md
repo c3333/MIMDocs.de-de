@@ -1,14 +1,30 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
+ [MIMDocs\index.html](https://github.com/Microsoft/MIMDocs-pr/blob/a021c64922e09d2d2710855da9f30be0be23b725/MIMDocs/index.html) | OutofSyncHandedBackSuccess | [Details](#661ab885005a67bf037291acc42f4d16f9c7e0a687)
  [MIMDocs\privileged-access-management-get-started.md](https://github.com/Microsoft/MIMDocs-pr/blob/9411cf67965bff66b7e24b967f1b77332b02633e/MIMDocs/privileged-access-management-get-started.md) | HandedOffFailed | [Details](#e1f4b80e684a1074c6f0f244dc0374e070f5d494236)
 
 ## Item Details
+##### <a name='661ab885005a67bf037291acc42f4d16f9c7e0a687'></a> Source: [MIMDocs\index.html](https://github.com/Microsoft/MIMDocs-pr/blob/a021c64922e09d2d2710855da9f30be0be23b725/MIMDocs/index.html)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [661ab885005a67bf037291acc42f4d16f9c7e0a6.html](https://github.com/Microsoft/EM.handoff/blob/f4df4a76ec417afe9df36131fc7ef92bc23d5056/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/661ab885005a67bf037291acc42f4d16f9c7e0a6.html)
+* Handoff Datetime: 2016-03-25 17:39:15
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [MIMDocs\index.html](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/ebd7b1e09337f19abed9eced31d071b4e1f3f17c/MIMDocs/index.html)
+* Current Handback File: [7ff7d0b29fb9cd1ce8c68a66da4feb4e24a62d41.html](https://github.com/Microsoft/EM.handback/blob/26cc9d4f913bf3e2307f0b5bd3784f02f0dddf65/ol-handback/Microsoft/MIMDocs-pr.de-de/master/7ff7d0b29fb9cd1ce8c68a66da4feb4e24a62d41.html)
+* Current Handback Datetime: 2016-03-14 17:50:55
+* [Back to Top](#report-top)
+
 ##### <a name='e1f4b80e684a1074c6f0f244dc0374e070f5d494236'></a> Source: [MIMDocs\privileged-access-management-get-started.md](https://github.com/Microsoft/MIMDocs-pr/blob/9411cf67965bff66b7e24b967f1b77332b02633e/MIMDocs/privileged-access-management-get-started.md)
 * Status: HandedOffFailed
 * Target File: 
