@@ -1,34 +1,27 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 16
+ Total Files | 9
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [MIMDocs\DeployUse\install-mim-service-portal.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/install-mim-service-portal.md) | HandedOffSuccess | [Details](#5e70c4f1c93765480449b03f7383bae11dce923711)
- [MIMDocs\DeployUse\install-mim-sync.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/install-mim-sync.md) | HandedOffSuccess | [Details](#624919d3dfc3ac35e43043a85de1a21b1a00692413)
- [MIMDocs\DeployUse\install-mim-sync-ad-service.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/install-mim-sync-ad-service.md) | HandedOffSuccess | [Details](#827aa52604e0851e83575290c230b9dcaf8d784712)
- [MIMDocs\DeployUse\microsoft-identity-manager-deploy.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/microsoft-identity-manager-deploy.md) | OutofSyncHandedBackSuccess | [Details](#6997d4d8b650196bf2e3ca0fddf9d577a71176d566)
- [MIMDocs\DeployUse\prepare-server-exchange.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/prepare-server-exchange.md) | HandedOffSuccess | [Details](#25e1a190150eaa339d30f4cf6afe1d122c7a278767)
- [MIMDocs\DeployUse\prepare-server-sharepoint.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/prepare-server-sharepoint.md) | HandedOffSuccess | [Details](#4b4235eff0af2c090ead920d2382abed97ec5a3d68)
- [MIMDocs\DeployUse\prepare-server-sql2014.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/prepare-server-sql2014.md) | HandedOffSuccess | [Details](#02fdcab663c3c037f5d742b5caaa3e608c464b2469)
- [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/prepare-server-ws2012r2.md) | HandedOffSuccess | [Details](#de4bd61d0fdf17d2db6ae9433b8a705a4c8370d070)
- [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/preparing-domain.md) | OutofSyncHandedBackSuccess | [Details](#fb74c498d865bce990b618b37e9f81d7c265f33071)
- [MIMDocs\DeployUse\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/TOC.md) | OutofSyncHandedBackSuccess | [Details](#4f9d9d720c9d65efd73991bf06f939238b1b8a9172)
- [MIMDocs\DeployUse\working-with-self-service-password-reset.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/working-with-self-service-password-reset.md) | OutofSyncHandedBackSuccess | [Details](#ce03d837a869db939f4232e375ecd7a8e45ff8c175)
- [MIMDocs\PlanDesign\capacity-planning-guide.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/PlanDesign/capacity-planning-guide.md) | OutofSyncHandedBackSuccess | [Details](#17d2d767164d80e39eea70b8a99ff711310a1084223)
- [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/PlanDesign/TOC.md) | OutofSyncHandedBackSuccess | [Details](#de95bedc4e3ca5e5b069d8dbe897dd7f1e058546229)
+ [MIMDocs\DeployUse\install-mim-service-portal.md](https://github.com/Microsoft/MIMDocs-pr/blob/f6eabbb44e4419ea90a6941fee5fb929b2aba202/MIMDocs/DeployUse/install-mim-service-portal.md) | HandedOffSuccess | [Details](#0d5da3a79e38b3a1a55e76fc841536ddca5096ce11)
+ [MIMDocs\DeployUse\install-mim-sync.md](https://github.com/Microsoft/MIMDocs-pr/blob/f6eabbb44e4419ea90a6941fee5fb929b2aba202/MIMDocs/DeployUse/install-mim-sync.md) | HandedOffSuccess | [Details](#74ade568fc6d0b91367f11e3a6850cb6bae15a0213)
+ [MIMDocs\DeployUse\install-mim-sync-ad-service.md](https://github.com/Microsoft/MIMDocs-pr/blob/f6eabbb44e4419ea90a6941fee5fb929b2aba202/MIMDocs/DeployUse/install-mim-sync-ad-service.md) | HandedOffSuccess | [Details](#cb5d591367f88d67ace814cb463665f152060a2712)
+ [MIMDocs\DeployUse\prepare-server-exchange.md](https://github.com/Microsoft/MIMDocs-pr/blob/f6eabbb44e4419ea90a6941fee5fb929b2aba202/MIMDocs/DeployUse/prepare-server-exchange.md) | HandedOffSuccess | [Details](#44adeaf395ce4ec9a45680fe9d16e12b04cb6aa067)
+ [MIMDocs\DeployUse\prepare-server-sharepoint.md](https://github.com/Microsoft/MIMDocs-pr/blob/f6eabbb44e4419ea90a6941fee5fb929b2aba202/MIMDocs/DeployUse/prepare-server-sharepoint.md) | HandedOffSuccess | [Details](#291aeed3851b8d7c968190dc21437da737065be468)
+ [MIMDocs\DeployUse\prepare-server-sql2014.md](https://github.com/Microsoft/MIMDocs-pr/blob/f6eabbb44e4419ea90a6941fee5fb929b2aba202/MIMDocs/DeployUse/prepare-server-sql2014.md) | HandedOffSuccess | [Details](#0106f1dc2c0e6b4d36456eb65d136cb653b2012f69)
+ [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/f6eabbb44e4419ea90a6941fee5fb929b2aba202/MIMDocs/DeployUse/prepare-server-ws2012r2.md) | HandedOffSuccess | [Details](#06a7553aba409fc146daaab57ec070ddff458d8270)
+ [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/f6eabbb44e4419ea90a6941fee5fb929b2aba202/MIMDocs/DeployUse/preparing-domain.md) | OutofSyncHandedBackSuccess | [Details](#538779382ad6dfc912d04fde258497a0bdc6401571)
  [MIMDocs\privileged-access-management-get-started.md](https://github.com/Microsoft/MIMDocs-pr/blob/9411cf67965bff66b7e24b967f1b77332b02633e/MIMDocs/privileged-access-management-get-started.md) | HandedOffFailed | [Details](#e1f4b80e684a1074c6f0f244dc0374e070f5d494233)
- [MIMDocs\reference\toc.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/reference/toc.md) | OutofSyncHandedBackSuccess | [Details](#f3d583fd18260ed58fbbcf7203ce4f23c0f4b85b272)
- [MIMDocs\Understand\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/Understand/TOC.md) | OutofSyncHandedBackSuccess | [Details](#451ca2da744a506934c79ff0a9abef9e6963b68d293)
 
 ## Item Details
-##### <a name='5e70c4f1c93765480449b03f7383bae11dce923711'></a> Source: [MIMDocs\DeployUse\install-mim-service-portal.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/install-mim-service-portal.md)
+##### <a name='0d5da3a79e38b3a1a55e76fc841536ddca5096ce11'></a> Source: [MIMDocs\DeployUse\install-mim-service-portal.md](https://github.com/Microsoft/MIMDocs-pr/blob/f6eabbb44e4419ea90a6941fee5fb929b2aba202/MIMDocs/DeployUse/install-mim-service-portal.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [install-mim-service-portal.bc0a636322f2b40d28e326917fd5d60c15ff855e.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/2c77917e8ba6a49447be2d1c179e5321cd5421f4/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/install-mim-service-portal.bc0a636322f2b40d28e326917fd5d60c15ff855e.de-de.xlf)
-* Handoff Datetime: 2016-03-30 18:18:26
+* Handoff File: [install-mim-service-portal.bc0a636322f2b40d28e326917fd5d60c15ff855e.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/b819062876afc5d421dfa4a18e300cb921e06df5/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/install-mim-service-portal.bc0a636322f2b40d28e326917fd5d60c15ff855e.de-de.xlf)
+* Handoff Datetime: 2016-03-31 23:50:01
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -36,11 +29,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='624919d3dfc3ac35e43043a85de1a21b1a00692413'></a> Source: [MIMDocs\DeployUse\install-mim-sync.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/install-mim-sync.md)
+##### <a name='74ade568fc6d0b91367f11e3a6850cb6bae15a0213'></a> Source: [MIMDocs\DeployUse\install-mim-sync.md](https://github.com/Microsoft/MIMDocs-pr/blob/f6eabbb44e4419ea90a6941fee5fb929b2aba202/MIMDocs/DeployUse/install-mim-sync.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [install-mim-sync.187fbc84d7198ab90d1445b38ea0a3044b228547.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/2c77917e8ba6a49447be2d1c179e5321cd5421f4/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/install-mim-sync.187fbc84d7198ab90d1445b38ea0a3044b228547.de-de.xlf)
-* Handoff Datetime: 2016-03-30 18:18:26
+* Handoff File: [install-mim-sync.187fbc84d7198ab90d1445b38ea0a3044b228547.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/b819062876afc5d421dfa4a18e300cb921e06df5/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/install-mim-sync.187fbc84d7198ab90d1445b38ea0a3044b228547.de-de.xlf)
+* Handoff Datetime: 2016-03-31 23:50:01
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -48,11 +41,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='827aa52604e0851e83575290c230b9dcaf8d784712'></a> Source: [MIMDocs\DeployUse\install-mim-sync-ad-service.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/install-mim-sync-ad-service.md)
+##### <a name='cb5d591367f88d67ace814cb463665f152060a2712'></a> Source: [MIMDocs\DeployUse\install-mim-sync-ad-service.md](https://github.com/Microsoft/MIMDocs-pr/blob/f6eabbb44e4419ea90a6941fee5fb929b2aba202/MIMDocs/DeployUse/install-mim-sync-ad-service.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [install-mim-sync-ad-service.2a07d4547ca2bf0ca43e7ed04fa3bf20de000a33.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/2c77917e8ba6a49447be2d1c179e5321cd5421f4/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/install-mim-sync-ad-service.2a07d4547ca2bf0ca43e7ed04fa3bf20de000a33.de-de.xlf)
-* Handoff Datetime: 2016-03-30 18:18:26
+* Handoff File: [install-mim-sync-ad-service.2a07d4547ca2bf0ca43e7ed04fa3bf20de000a33.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/b819062876afc5d421dfa4a18e300cb921e06df5/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/install-mim-sync-ad-service.2a07d4547ca2bf0ca43e7ed04fa3bf20de000a33.de-de.xlf)
+* Handoff Datetime: 2016-03-31 23:50:01
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -60,74 +53,59 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='6997d4d8b650196bf2e3ca0fddf9d577a71176d566'></a> Source: [MIMDocs\DeployUse\microsoft-identity-manager-deploy.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/microsoft-identity-manager-deploy.md)
+##### <a name='44adeaf395ce4ec9a45680fe9d16e12b04cb6aa067'></a> Source: [MIMDocs\DeployUse\prepare-server-exchange.md](https://github.com/Microsoft/MIMDocs-pr/blob/f6eabbb44e4419ea90a6941fee5fb929b2aba202/MIMDocs/DeployUse/prepare-server-exchange.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/b819062876afc5d421dfa4a18e300cb921e06df5/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.de-de.xlf)
+* Handoff Datetime: 2016-03-31 23:50:01
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='291aeed3851b8d7c968190dc21437da737065be468'></a> Source: [MIMDocs\DeployUse\prepare-server-sharepoint.md](https://github.com/Microsoft/MIMDocs-pr/blob/f6eabbb44e4419ea90a6941fee5fb929b2aba202/MIMDocs/DeployUse/prepare-server-sharepoint.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/b819062876afc5d421dfa4a18e300cb921e06df5/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.de-de.xlf)
+* Handoff Datetime: 2016-03-31 23:50:01
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='0106f1dc2c0e6b4d36456eb65d136cb653b2012f69'></a> Source: [MIMDocs\DeployUse\prepare-server-sql2014.md](https://github.com/Microsoft/MIMDocs-pr/blob/f6eabbb44e4419ea90a6941fee5fb929b2aba202/MIMDocs/DeployUse/prepare-server-sql2014.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/b819062876afc5d421dfa4a18e300cb921e06df5/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.de-de.xlf)
+* Handoff Datetime: 2016-03-31 23:50:01
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='06a7553aba409fc146daaab57ec070ddff458d8270'></a> Source: [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/f6eabbb44e4419ea90a6941fee5fb929b2aba202/MIMDocs/DeployUse/prepare-server-ws2012r2.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/b819062876afc5d421dfa4a18e300cb921e06df5/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.de-de.xlf)
+* Handoff Datetime: 2016-03-31 23:50:01
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='538779382ad6dfc912d04fde258497a0bdc6401571'></a> Source: [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/f6eabbb44e4419ea90a6941fee5fb929b2aba202/MIMDocs/DeployUse/preparing-domain.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/2c77917e8ba6a49447be2d1c179e5321cd5421f4/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.de-de.xlf)
-* Handoff Datetime: 2016-03-30 18:18:26
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\DeployUse\microsoft-identity-manager-deploy.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/93fa3de227e35bc83b7b9f60425346a2406cde9a/MIMDocs/DeployUse/microsoft-identity-manager-deploy.md)
-* Current Handback File: [microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/d40966ed693dca30f8545d764c0ebae8a508992c/ol-handback/Microsoft/MIMDocs-pr.de-de/master/microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.de-de.xlf)
-* Current Handback Datetime: 2016-03-15 17:28:30
-* [Back to Top](#report-top)
-
-##### <a name='25e1a190150eaa339d30f4cf6afe1d122c7a278767'></a> Source: [MIMDocs\DeployUse\prepare-server-exchange.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/prepare-server-exchange.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/2c77917e8ba6a49447be2d1c179e5321cd5421f4/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.de-de.xlf)
-* Handoff Datetime: 2016-03-30 18:18:26
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='4b4235eff0af2c090ead920d2382abed97ec5a3d68'></a> Source: [MIMDocs\DeployUse\prepare-server-sharepoint.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/prepare-server-sharepoint.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/2c77917e8ba6a49447be2d1c179e5321cd5421f4/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.de-de.xlf)
-* Handoff Datetime: 2016-03-30 18:18:26
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='02fdcab663c3c037f5d742b5caaa3e608c464b2469'></a> Source: [MIMDocs\DeployUse\prepare-server-sql2014.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/prepare-server-sql2014.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/2c77917e8ba6a49447be2d1c179e5321cd5421f4/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.de-de.xlf)
-* Handoff Datetime: 2016-03-30 18:18:26
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='de4bd61d0fdf17d2db6ae9433b8a705a4c8370d070'></a> Source: [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/prepare-server-ws2012r2.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/2c77917e8ba6a49447be2d1c179e5321cd5421f4/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.de-de.xlf)
-* Handoff Datetime: 2016-03-30 18:18:26
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='fb74c498d865bce990b618b37e9f81d7c265f33071'></a> Source: [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/preparing-domain.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/2c77917e8ba6a49447be2d1c179e5321cd5421f4/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.de-de.xlf)
-* Handoff Datetime: 2016-03-30 18:18:26
+* Handoff File: [preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/b819062876afc5d421dfa4a18e300cb921e06df5/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.de-de.xlf)
+* Handoff Datetime: 2016-03-31 23:50:01
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -135,66 +113,6 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/93fa3de227e35bc83b7b9f60425346a2406cde9a/MIMDocs/DeployUse/preparing-domain.md)
 * Current Handback File: [preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/d40966ed693dca30f8545d764c0ebae8a508992c/ol-handback/Microsoft/MIMDocs-pr.de-de/master/preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.de-de.xlf)
-* Current Handback Datetime: 2016-03-15 17:28:30
-* [Back to Top](#report-top)
-
-##### <a name='4f9d9d720c9d65efd73991bf06f939238b1b8a9172'></a> Source: [MIMDocs\DeployUse\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/TOC.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [TOC.113860bc4c6a12249fc3a8d5e5f59fce2f8ca102.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/2c77917e8ba6a49447be2d1c179e5321cd5421f4/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/TOC.113860bc4c6a12249fc3a8d5e5f59fce2f8ca102.de-de.xlf)
-* Handoff Datetime: 2016-03-30 18:18:26
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\DeployUse\TOC.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/93fa3de227e35bc83b7b9f60425346a2406cde9a/MIMDocs/DeployUse/TOC.md)
-* Current Handback File: [TOC.113860bc4c6a12249fc3a8d5e5f59fce2f8ca102.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/d40966ed693dca30f8545d764c0ebae8a508992c/ol-handback/Microsoft/MIMDocs-pr.de-de/master/TOC.113860bc4c6a12249fc3a8d5e5f59fce2f8ca102.de-de.xlf)
-* Current Handback Datetime: 2016-03-15 17:28:30
-* [Back to Top](#report-top)
-
-##### <a name='ce03d837a869db939f4232e375ecd7a8e45ff8c175'></a> Source: [MIMDocs\DeployUse\working-with-self-service-password-reset.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/DeployUse/working-with-self-service-password-reset.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/2c77917e8ba6a49447be2d1c179e5321cd5421f4/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.de-de.xlf)
-* Handoff Datetime: 2016-03-30 18:18:26
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\DeployUse\working-with-self-service-password-reset.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/93fa3de227e35bc83b7b9f60425346a2406cde9a/MIMDocs/DeployUse/working-with-self-service-password-reset.md)
-* Current Handback File: [working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/d40966ed693dca30f8545d764c0ebae8a508992c/ol-handback/Microsoft/MIMDocs-pr.de-de/master/working-with-self-service-password-reset.bcd57dd12a02054bccbba77422a81b03c5e3b624.de-de.xlf)
-* Current Handback Datetime: 2016-03-15 17:28:30
-* [Back to Top](#report-top)
-
-##### <a name='17d2d767164d80e39eea70b8a99ff711310a1084223'></a> Source: [MIMDocs\PlanDesign\capacity-planning-guide.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/PlanDesign/capacity-planning-guide.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/2c77917e8ba6a49447be2d1c179e5321cd5421f4/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.de-de.xlf)
-* Handoff Datetime: 2016-03-30 18:18:26
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\PlanDesign\capacity-planning-guide.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/93fa3de227e35bc83b7b9f60425346a2406cde9a/MIMDocs/PlanDesign/capacity-planning-guide.md)
-* Current Handback File: [capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/d40966ed693dca30f8545d764c0ebae8a508992c/ol-handback/Microsoft/MIMDocs-pr.de-de/master/capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.de-de.xlf)
-* Current Handback Datetime: 2016-03-15 17:28:30
-* [Back to Top](#report-top)
-
-##### <a name='de95bedc4e3ca5e5b069d8dbe897dd7f1e058546229'></a> Source: [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/PlanDesign/TOC.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/2c77917e8ba6a49447be2d1c179e5321cd5421f4/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.de-de.xlf)
-* Handoff Datetime: 2016-03-30 18:18:26
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/93fa3de227e35bc83b7b9f60425346a2406cde9a/MIMDocs/PlanDesign/TOC.md)
-* Current Handback File: [TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/d40966ed693dca30f8545d764c0ebae8a508992c/ol-handback/Microsoft/MIMDocs-pr.de-de/master/TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.de-de.xlf)
 * Current Handback Datetime: 2016-03-15 17:28:30
 * [Back to Top](#report-top)
 
@@ -211,43 +129,13 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='f3d583fd18260ed58fbbcf7203ce4f23c0f4b85b272'></a> Source: [MIMDocs\reference\toc.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/reference/toc.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [toc.593e7022daca6d9da4dae7c1e4324df430b1adb4.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/2c77917e8ba6a49447be2d1c179e5321cd5421f4/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/toc.593e7022daca6d9da4dae7c1e4324df430b1adb4.de-de.xlf)
-* Handoff Datetime: 2016-03-30 18:18:26
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\reference\toc.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/93fa3de227e35bc83b7b9f60425346a2406cde9a/MIMDocs/reference/toc.md)
-* Current Handback File: [toc.593e7022daca6d9da4dae7c1e4324df430b1adb4.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/d40966ed693dca30f8545d764c0ebae8a508992c/ol-handback/Microsoft/MIMDocs-pr.de-de/master/toc.593e7022daca6d9da4dae7c1e4324df430b1adb4.de-de.xlf)
-* Current Handback Datetime: 2016-03-15 17:28:30
-* [Back to Top](#report-top)
-
-##### <a name='451ca2da744a506934c79ff0a9abef9e6963b68d293'></a> Source: [MIMDocs\Understand\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/bd715d12900298a48dbe4fdcce55ee562652a5b8/MIMDocs/Understand/TOC.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [TOC.cf3c9303083fb125b50bea7db798a930a73afc51.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/2c77917e8ba6a49447be2d1c179e5321cd5421f4/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/TOC.cf3c9303083fb125b50bea7db798a930a73afc51.de-de.xlf)
-* Handoff Datetime: 2016-03-30 18:18:26
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\Understand\TOC.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/93fa3de227e35bc83b7b9f60425346a2406cde9a/MIMDocs/Understand/TOC.md)
-* Current Handback File: [TOC.cf3c9303083fb125b50bea7db798a930a73afc51.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/d40966ed693dca30f8545d764c0ebae8a508992c/ol-handback/Microsoft/MIMDocs-pr.de-de/master/TOC.cf3c9303083fb125b50bea7db798a930a73afc51.de-de.xlf)
-* Current Handback Datetime: 2016-03-15 17:28:30
-* [Back to Top](#report-top)
-
 
 ## Error Details
 ##### <a name='e1f4b80e684a1074c6f0f244dc0374e070f5d494233handoff_transform_failed'></a> Source: [MIMDocs\privileged-access-management-get-started.md](#e1f4b80e684a1074c6f0f244dc0374e070f5d494233)
 * Error Code: handoff_transform_failed
 * Error Message: Handoff source file: MIMDocs\privileged-access-management-get-started.md transformed failed.
 * Retriable: False
-* Error Details: {"internal_error_code":"handoff_transform_failed","internal_error_message":"Handoff source file: MIMDocs\\privileged-access-management-get-started.md transformed failed.","internal_error_retriable":false,"exception_message":"MIMDocs\\privileged-access-management-get-started.md file with commit id 9411cf67965bff66b7e24b967f1b77332b02633e can not be found","exception_type":"System.IO.FileNotFoundException","stack_trace":"   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass10_1.<GetHandoffFiles>b__1(Tuple`3 handoff) in D:\\DevEnlistments\\Source\\OpenLocalization\\src\\OpenLocalization\\Localization\\HandoffCore.cs:line 371","extended_information":null}
+* Error Details: {"internal_error_code":"handoff_transform_failed","internal_error_message":"Handoff source file: MIMDocs\\privileged-access-management-get-started.md transformed failed.","internal_error_retriable":false,"exception_message":"MIMDocs\\privileged-access-management-get-started.md file with commit id 9411cf67965bff66b7e24b967f1b77332b02633e can not be found","exception_type":"System.IO.FileNotFoundException","stack_trace":"   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass10_1.<GetHandoffFiles>b__1(Tuple`3 handoff) in C:\\code\\deploy\\src\\OpenLocalization\\Localization\\HandoffCore.cs:line 371","extended_information":null}
 
 
 Generated by OpenLocalization.
