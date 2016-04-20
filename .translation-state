@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "d9a6f6bcce9c7e4dcefe770f5a579b92e95d8878",
+  "LastProcessedCommit": "da8e1a25a23672fab96aa0bd0a851d4b10197491",
   "LastTranslatedCommit": "8d59027923694457c37ae859a6b7cb72cda0cb8b",
   "Items": {
     "c1e15c9548e46cbbff7810e63478074ceeb06152": {
@@ -11851,6 +11851,35 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.de-de\\master\\microsoft-identity-manager-2016.c859ce21f65f43a82f84385a63d9b72e566e0aa6.de-de.xlf",
       "HandoffFileCommit": "b54c9e7c5b1a0d5780c07e779c1d2e4f29974bfb",
       "HandoffDateTime": "2016-04-18T17:19:44.1121343Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null
+    },
+    "5f67859dbc77fd3782dcec680beea36e1f66872f": {
+      "FileHash": "5f67859dbc77fd3782dcec680beea36e1f66872f",
+      "SourceFileCommit": "da55746fab2e41573341288df95429923cec9471",
+      "SourceFilePath": "MIMDocs\\index.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "MIMDocs\\index.md"
+      ],
+      "HandoffFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.de-de\\master\\index.a54b2324d63a6d513b6900195023b9a8089553b4.de-de.xlf",
+      "HandoffFileCommit": "606c10eb8268167eb563f2e2b53f4c643abfc1f1",
+      "HandoffDateTime": "2016-04-20T17:46:44.628699Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
