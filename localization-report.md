@@ -7,11 +7,11 @@
 [ Handoff Failed Files ](#handoff-failed-list)| 0
 [ Handoff Success Files ](#handoff-success-list)| 12
 [ Archive Failed Files ](#archive-failed-list)| 0
-[ Archive Success Files ](#archive-success-list)| 1
+[ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 23
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 22
 [ In Sync Handback Files ](#insync-handback-success-list)| 141
-[ Ignored Files ](#ignored-list)| 107
+[ Ignored Files ](#ignored-list)| 109
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
 
@@ -34,16 +34,12 @@
 ## <a name='archive-failed-list'></a> Archive Failed File List
 
 ## <a name='archive-success-list'></a> Archive Success File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [MIMDocs\DeployUse\deploying-mim-password-change-notification-service-on-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md) | ArchivedSuccess | [Details](#6deaa38f2cde7490ea2f18caa4294d525226efb97)
 
 ## <a name='handback-failed-list'></a> Handback Failed File List
 
 ## <a name='outofsync-handback-success-list'></a> Out Of Sync Handback Success File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [MIMDocs\DeployUse\certificate-manager-for-non-administrators.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/certificate-manager-for-non-administrators.md) | OutofSyncHandedBackSuccess | [Details](#d577c0a9bd2d25f6404d2620f4f7422a46dbe06e5)
  [MIMDocs\DeployUse\certificate-manager-for-software-certificates.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/certificate-manager-for-software-certificates.md) | OutofSyncHandedBackSuccess | [Details](#6b58093744656b9bfa62c1cfcab340ea88e6e1686)
  [MIMDocs\DeployUse\media\MIM-DeploySP2.png](https://github.com/Microsoft/MIMDocs-pr/blob/ef028bca1752cb720003cf76a148a097ff5a297b/MIMDocs/DeployUse/media/MIM-DeploySP2.png) | OutofSyncHandedBackSuccess | [Details](#1480f345e6fc12e8ad603b50ef2781697be09b9715)
  [MIMDocs\DeployUse\media\MIM-SSPR-Azure-MFA.png](https://github.com/Microsoft/MIMDocs-pr/blob/bc92efa83b27bec8d7ce9d0d22d61a8bb781f449/MIMDocs/DeployUse/media/MIM-SSPR-Azure-MFA.png) | OutofSyncHandedBackSuccess | [Details](#773d7c2a80e98ba6e602103140f6828886458e3536)
@@ -220,6 +216,8 @@
  [.localization-config](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/.localization-config) | Ignored | [Details](#14422dbcf64e5d799fe75784f6b4830065edc0662)
  [.openpublishing.build.ps1](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/.openpublishing.build.ps1) | Ignored | [Details](#9103b6933f2481864ecb6a66b76ba730e7f133b43)
  [.openpublishing.publish.config.json](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/.openpublishing.publish.config.json) | Ignored | [Details](#e2140f473f95e0bec10c3efefa750d72e6bec1f64)
+ [MIMDocs\DeployUse\certificate-manager-for-non-administrators.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/DeployUse/certificate-manager-for-non-administrators.md) | Ignored | [Details](#50c0edd60abfa6550cb5a873d32a842e8c0998115)
+ [MIMDocs\DeployUse\deploying-mim-password-change-notification-service-on-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md) | Ignored | [Details](#85e83b85f047ca2c2648b42ec68b832caae645ee7)
  [MIMDocs\DeployUse\docfx.json](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/DeployUse/docfx.json) | Ignored | [Details](#3f5bf9a5604969c2444cf301e2bfe62744c855998)
  [MIMDocs\DeployUse\md.style](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/DeployUse/md.style) | Ignored | [Details](#755db60abb7859af5065e2c5ddfbfc6cfb7aeeda12)
  [MIMDocs\docfx.json](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/docfx.json) | Ignored | [Details](#0013dfe84efae4aef6b021c5efe304a46b08b90975)
@@ -277,7 +275,7 @@
  [MIMDocs\media\pam-test-lab-guide-architecture.png](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/media/pam-test-lab-guide-architecture.png) | Ignored | [Details](#bb288576a1bb20d056635f764cc2d6773cf7cc4e203)
  [MIMDocs\PlanDesign\docfx.json](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/PlanDesign/docfx.json) | Ignored | [Details](#ea052fb2f3e06f2f576d831ab42b80f96fc1ee14221)
  [MIMDocs\PlanDesign\md.style](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/PlanDesign/md.style) | Ignored | [Details](#755db60abb7859af5065e2c5ddfbfc6cfb7aeeda222)
- [MIMDocs\reference\assign-smartcard-to-request.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/assign-smartcard-to-request.md) | Ignored | [Details](#d95553b1dda3865f7ec747162d5497c3c6aba656229)
+ [MIMDocs\reference\assign-smartcard-to-request.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/assign-smartcard-to-request.md) | Ignored | [Details](#eaa7b38f7f38f6535465908287652cf9ba8c7562229)
  [MIMDocs\reference\cancel-abandon-complete-request.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/cancel-abandon-complete-request.md) | Ignored | [Details](#26da35af05db887bed2765c36251637c256cb4dd230)
  [MIMDocs\reference\certificate-management-rest-api-reference.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/certificate-management-rest-api-reference.md) | Ignored | [Details](#5fe33db2451941a4eb854ce4ae8ce93ac3355291231)
  [MIMDocs\reference\certificate-management-rest-api-service-details.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/certificate-management-rest-api-service-details.md) | Ignored | [Details](#4adb85a35fe9cb3c5f2457273455f3f5d06b82a8232)
@@ -312,9 +310,9 @@
  [MIMDocs\reference\privileged-access-management-rest-api-service-details.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/privileged-access-management-rest-api-service-details.md) | Ignored | [Details](#413f722a07a3f41e7e5c79ef3c305ec04bcd675c261)
  [MIMDocs\reference\profile-operations.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/profile-operations.md) | Ignored | [Details](#e63fb6addf10cad9f0f29dd3250d382d6e2388c3262)
  [MIMDocs\reference\request-operations.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/request-operations.md) | Ignored | [Details](#23b5425e417d600e3f26915a9d089c3d270b2071263)
- [MIMDocs\reference\sample-enrollment-walkthrough.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/sample-enrollment-walkthrough.md) | Ignored | [Details](#9e080ac7e79ee24499a83354b010b6a7492e7134264)
- [MIMDocs\reference\smartcard-operations.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/smartcard-operations.md) | Ignored | [Details](#38732ab44f1f4c3401dfd5ca28079fb7330f68cf265)
- [MIMDocs\reference\toc.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/toc.md) | Ignored | [Details](#68abab37bc941a9c9ff6ba8453269029ec055924266)
+ [MIMDocs\reference\sample-enrollment-walkthrough.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/sample-enrollment-walkthrough.md) | Ignored | [Details](#4c8b3565d6b61ac7a80d2526777017943ce9c4a6264)
+ [MIMDocs\reference\smartcard-operations.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/smartcard-operations.md) | Ignored | [Details](#def4ea94bbc551e975145769c85f389ec8d1cfa5265)
+ [MIMDocs\reference\toc.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/toc.md) | Ignored | [Details](#dd8dce58b785571ffba96ec76be5b750fd826d90266)
  [MIMDocs\reference\update-smartcard-status.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/update-smartcard-status.md) | Ignored | [Details](#0de8c32af47be301b6cecfd906f4ed864ff00c11267)
  [MIMDocs\Troubleshoot\docfx.json](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/Troubleshoot/docfx.json) | Ignored | [Details](#9875b87bbea7a4c9249e9839416be84179f3bdc9269)
  [MIMDocs\Troubleshoot\md.style](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/Troubleshoot/md.style) | Ignored | [Details](#755db60abb7859af5065e2c5ddfbfc6cfb7aeeda270)
@@ -384,19 +382,16 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='d577c0a9bd2d25f6404d2620f4f7422a46dbe06e5'></a> Source: [MIMDocs\DeployUse\certificate-manager-for-non-administrators.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/certificate-manager-for-non-administrators.md)
-* Status: OutofSyncHandedBackSuccess
+##### <a name='50c0edd60abfa6550cb5a873d32a842e8c0998115'></a> Source: [MIMDocs\DeployUse\certificate-manager-for-non-administrators.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/DeployUse/certificate-manager-for-non-administrators.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/967977ab270b7695500f60e3ac103a9055b0fe19/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.de-de.xlf)
-* Handoff Datetime: 2016-04-11 22:04:33
-* Handoff Reason: Include
-* Archive File: [certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/7bfddb849c10ee4c6596b6359852aa47686cfb18/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/archive/certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.de-de.xlf)
-* Archive Datetime: 2016-04-16 01:07:48
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\DeployUse\certificate-manager-for-non-administrators.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/93fa3de227e35bc83b7b9f60425346a2406cde9a/MIMDocs/DeployUse/certificate-manager-for-non-administrators.md)
-* Current Handback File: [certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/d40966ed693dca30f8545d764c0ebae8a508992c/ol-handback/Microsoft/MIMDocs-pr.de-de/master/certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.de-de.xlf)
-* Current Handback Datetime: 2016-03-15 17:28:30
 * [Back to Top](#report-top)
 
 ##### <a name='6b58093744656b9bfa62c1cfcab340ea88e6e1686'></a> Source: [MIMDocs\DeployUse\certificate-manager-for-software-certificates.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/certificate-manager-for-software-certificates.md)
@@ -414,14 +409,14 @@
 * Current Handback Datetime: 2016-03-15 17:28:30
 * [Back to Top](#report-top)
 
-##### <a name='6deaa38f2cde7490ea2f18caa4294d525226efb97'></a> Source: [MIMDocs\DeployUse\deploying-mim-password-change-notification-service-on-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md)
-* Status: ArchivedSuccess
+##### <a name='85e83b85f047ca2c2648b42ec68b832caae645ee7'></a> Source: [MIMDocs\DeployUse\deploying-mim-password-change-notification-service-on-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [deploying-mim-password-change-notification-service-on-domain-controller.afdb373626bbd0d122da747e9f586318deea2e70.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/967977ab270b7695500f60e3ac103a9055b0fe19/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/deploying-mim-password-change-notification-service-on-domain-controller.afdb373626bbd0d122da747e9f586318deea2e70.de-de.xlf)
-* Handoff Datetime: 2016-04-11 22:04:33
-* Handoff Reason: Include
-* Archive File: [deploying-mim-password-change-notification-service-on-domain-controller.afdb373626bbd0d122da747e9f586318deea2e70.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/7bfddb849c10ee4c6596b6359852aa47686cfb18/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/archive/deploying-mim-password-change-notification-service-on-domain-controller.afdb373626bbd0d122da747e9f586318deea2e70.de-de.xlf)
-* Archive Datetime: 2016-04-16 01:07:48
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -3271,7 +3266,7 @@
 * Current Handback Datetime: 2016-03-15 17:28:30
 * [Back to Top](#report-top)
 
-##### <a name='d95553b1dda3865f7ec747162d5497c3c6aba656229'></a> Source: [MIMDocs\reference\assign-smartcard-to-request.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/assign-smartcard-to-request.md)
+##### <a name='eaa7b38f7f38f6535465908287652cf9ba8c7562229'></a> Source: [MIMDocs\reference\assign-smartcard-to-request.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/assign-smartcard-to-request.md)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -3691,7 +3686,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='9e080ac7e79ee24499a83354b010b6a7492e7134264'></a> Source: [MIMDocs\reference\sample-enrollment-walkthrough.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/sample-enrollment-walkthrough.md)
+##### <a name='4c8b3565d6b61ac7a80d2526777017943ce9c4a6264'></a> Source: [MIMDocs\reference\sample-enrollment-walkthrough.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/sample-enrollment-walkthrough.md)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -3703,7 +3698,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='38732ab44f1f4c3401dfd5ca28079fb7330f68cf265'></a> Source: [MIMDocs\reference\smartcard-operations.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/smartcard-operations.md)
+##### <a name='def4ea94bbc551e975145769c85f389ec8d1cfa5265'></a> Source: [MIMDocs\reference\smartcard-operations.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/smartcard-operations.md)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -3715,7 +3710,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='68abab37bc941a9c9ff6ba8453269029ec055924266'></a> Source: [MIMDocs\reference\toc.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/toc.md)
+##### <a name='dd8dce58b785571ffba96ec76be5b750fd826d90266'></a> Source: [MIMDocs\reference\toc.md](https://github.com/Microsoft/MIMDocs-pr/blob/ed3349662a7bb6b0c5e96f2e9cb8f206495079d0/MIMDocs/reference/toc.md)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
