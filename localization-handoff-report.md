@@ -1,11 +1,42 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 0
+ Total Files | 2
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/af9f7f75f19bb29f2e29577c787252f6b7fabb7d/MIMDocs/DeployUse/prepare-server-ws2012r2.md) | HandedOffSuccess | [Details](#cd4ac84af4e5416512cf546a5d23b342ebe13c3969)
+ [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/af9f7f75f19bb29f2e29577c787252f6b7fabb7d/MIMDocs/DeployUse/preparing-domain.md) | OutofSyncHandedBackSuccess | [Details](#b22ccf69e6a1a6c8e13baa35c57bde0c6c07183a70)
 
 ## Item Details
+##### <a name='cd4ac84af4e5416512cf546a5d23b342ebe13c3969'></a> Source: [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/af9f7f75f19bb29f2e29577c787252f6b7fabb7d/MIMDocs/DeployUse/prepare-server-ws2012r2.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/5b140c4f30a1c585d026a5cc3469cb02d4bb6857/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.de-de.xlf)
+* Handoff Datetime: 2016-04-22 17:46:17
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='b22ccf69e6a1a6c8e13baa35c57bde0c6c07183a70'></a> Source: [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/af9f7f75f19bb29f2e29577c787252f6b7fabb7d/MIMDocs/DeployUse/preparing-domain.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/5b140c4f30a1c585d026a5cc3469cb02d4bb6857/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.de-de.xlf)
+* Handoff Datetime: 2016-04-22 17:46:17
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/93fa3de227e35bc83b7b9f60425346a2406cde9a/MIMDocs/DeployUse/preparing-domain.md)
+* Current Handback File: [preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/d40966ed693dca30f8545d764c0ebae8a508992c/ol-handback/Microsoft/MIMDocs-pr.de-de/master/preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.de-de.xlf)
+* Current Handback Datetime: 2016-03-15 17:28:30
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
