@@ -1,18 +1,30 @@
 ---
-Titel: Arbeiten mit dem MIM-Zertifikat-Manager
-MS.Custom:
-  - Identitätsmanagement
-  - MIM
-MS.Prod: Identität-Manager-2015
-MS.Reviewer: Na
-MS.Suite: Na
-MS.Technology:
-  - security
-MS.tgt_pltfrm: Na
-MS.topic: Artikel
-MS.AssetId: 66060045-d0be-4874-914b-5926fd924ede
-Autor: Kgremban
+# required metadata
+
+title: Arbeiten mit dem MIM-Zertifikat-Manager | Microsoft Identity Manager
+description: Erfahren Sie, wie Sie die Zertifikat-Manager-App bereitstellen, um Ihren Benutzern das Verwalten ihrer eigenen Zugriffsrechte zu ermöglichen. 
+keywords:
+author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Arbeiten mit dem MIM-Zertifikat-Manager
 Nachdem Sie MIM 2016 und den Zertifikat-Manager installiert und gestartet haben, können Sie die Windows Store-Anwendung für den MIM-Zertifikat-Manager bereitstellen, sodass Benutzer ihre physischen und virtuellen Smartcards und Softwarezertifikate problemlos verwalten können. Mit folgenden Schritten stellen Sie die Anwendung für den MIM-Zertifikat-Manager (MIM Certificate Manager, MIM CM) bereit:
 
@@ -31,20 +43,20 @@ Sie erstellen eine Zertifikatvorlage für die Zertifikat-Manager-Anwendung in de
 
 2.  Öffnen Sie die MMC.
 
-3.  Klicken Sie auf **Datei & Gt; Snap-In hinzufügen/entfernen**.;
+3.  Klicken Sie auf **Datei &gt; Snap-In hinzufügen/entfernen**.;
 
-4.  Klicken Sie in der Liste Verfügbare-Snap-ins auf **Zertifikatvorlagen** und klicken Sie dann auf **Hinzufügen**.
+4.  Klicken Sie in der Liste „Verfügbare Snap-Ins“ auf **Zertifikatvorlagen**, und klicken Sie dann auf **Hinzufügen**.
 
 5.  In der MMC sehen Sie nun **Zertifikatvorlagen** unter **Konsolenstamm** . Doppelklicken Sie auf diesen Eintrag, um alle verfügbaren Zertifikatvorlagen anzuzeigen.
 
-6.  Mit der rechten Maustaste die **Smartcard-Anmeldung** Vorlage, und klicken Sie auf **Doppelte Vorlage**.
+6.  Klicken Sie mit der rechten Maustaste auf die Vorlage **Smartcard-Anmeldung**, und klicken Sie auf **Doppelte Vorlage**.
 
 7.  Auf der Registerkarte „Kompatibilität“ wählen Sie unter „Zertifizierungsstelle“ die Option „Windows Server 2008“ aus, und wählen Sie unter „Zertifikatempfänger“ die Option „Windows 8.1/Windows Server 2012 R2“ aus.
     Dieser Schritt ist entscheidend, da hiermit sichergestellt wird, dass Sie eine Zertifikatvorlage in Version 3 (oder höher) haben, denn nur Version 3 funktioniert mit der Zertifikat-Manager-Anwendung. Da die Version festgelegt wird, wenn Sie die Zertifikatvorlage erstmalig erstellen und speichern, gibt es, wenn Sie die Zertifikatvorlage nicht auf diese Weise erstellt hätten, keine Möglichkeit, sie in die richtige Version zu ändern, und Sie müssen eine neue Vorlage erstellen, bevor Sie die weiteren Schritte ausführen.
 
 8.  Geben Sie auf der Registerkarte **Allgemein** in das Feld **Anzeigename** den Namen ein, der in der Benutzeroberfläche der Anwendung angezeigt werden soll, etwa **Anmeldung über virtuelle Smartcard**.
 
-9. Legen Sie auf der Registerkarte **Anforderungsverarbeitung** das Feld **Zweck** auf **Signatur und Verschlüsselung** fest, und wählen Sie unter **Folgendes ausführen...** die Option **Benutzer zur Eingabe während der Registrierung auffordern**aus.
+9. Legen Sie auf der Registerkarte **Anforderungsverarbeitung** das Feld **Zweck** auf **Signatur und Verschlüsselung** fest, wählen Sie unter **Folgendes ausführen...** die Option **Benutzer zur Eingabe während der Registrierung auffordern**aus.
 
 10. Wählen Sie auf der Registerkarte **Kryptografie** unter **Anbieterkategorie**die Option **Schlüsselspeicheranbieter und Verwendung aller auf dem Computer des Antragstellers verfügbaren Anbieter für Anforderungen möglich**aus.
 
@@ -55,11 +67,11 @@ Sie erstellen eine Zertifikatvorlage für die Zertifikat-Manager-Anwendung in de
 
 12. Klicken Sie auf **OK** , um die von Ihnen vorgenommenen Änderungen abzuschließen und die neue Vorlage zu erstellen. Sie sollten die neue Vorlage in der Liste der Zertifikatvorlagen sehen können.
 
-13. Wählen Sie **Datei** und klicken Sie auf **Snap-In hinzufügen/entfernen** das Zertifizierungsstellen-Snap-in zur MMC-Konsole hinzufügen. Wenn Sie gefragt werden, welchen Computer Sie verwalten möchten, wählen Sie **Lokaler Computer**aus.
+13. die **Datei** aus, und klicken Sie auf **Snap-In hinzufügen/entfernen**, um das Zertifizierungsstelle-Snap-In in der MMC-Konsole hinzuzufügen. Wenn Sie gefragt werden, welchen Computer Sie verwalten möchten, wählen Sie **Lokaler Computer**aus.
 
 14. Erweitern Sie im linken Bereich der MMC den Eintrag **Zertifizierungsstelle (lokal)** , und erweitern Sie dann Ihren Zertifikat-Manager in der Liste „Zertifizierungsstelle“.
 
-15. Mit der rechten Maustaste **Zertifikatvorlagen**, klicken Sie auf **Neue & Gt; Zertifikatvorlage** Problem.
+15. Klicken Sie mit der rechten Maustaste auf **Zertifikatvorlagen**, und klicken Sie auf **Neu &gt; Auszustellende Zertifikatvorlage**.
 
 16. Wählen Sie in der Liste die neue Vorlage aus, die Sie erstellt haben, und klicken Sie auf **OK**.
 
@@ -68,7 +80,7 @@ Wenn Sie eine Profilvorlage erstellen, müssen Sie „Virtuelle SmartCard erstel
 
 1.  Melden Sie sich beim CM-Portal (Zertifikatverwaltung) als Benutzer mit Administratorrechten an.
 
-2.  Wechseln Sie zur Verwaltung & Gt; Verwalten Sie Profilvorlagen, und stellen Sie sicher, dass das Kontrollkästchen neben der Profilvorlage für MIM CM-Beispiel Smartcard-Anmeldung aktiviert ist, und klicken Sie dann auf Kopieren ausgewählte Profilvorlage.
+2.  Wechseln Sie zu „Verwaltung &gt; Profilvorlagen verwalten“, und stellen Sie sicher, dass das Kontrollkästchen neben „MIM CM-Beispielsmartcard-Profilvorlage für Anmeldung“ aktiviert ist, und klicken Sie dann auf „Ausgewählte Profilvorlage kopieren“.
 
 3.  Geben Sie den Namen der Profilvorlage ein, und klicken Sie auf **OK**.
 
@@ -80,7 +92,7 @@ Wenn Sie eine Profilvorlage erstellen, müssen Sie „Virtuelle SmartCard erstel
 
 7.  Scrollen Sie bis nach ganz unten, und klicken Sie auf **Einstellungen ändern**.
 
-8.  Aktivieren Sie die Kontrollkästchen neben **virtuelle Smartcard erstellen/löschen** und **Administratorschlüssel diversifizieren**.
+8.  Aktivieren Sie die Kontrollkästchen neben **Virtuelle SmartCard erstellen/löschen** und **Administratorschlüssel diversifizieren**.
 
 9. Wählen Sie unter **Benutzer-PIN-Richtlinie** die Option **Vom Benutzer angegeben**aus.
 
@@ -120,7 +132,7 @@ Wenn Sie eine Profilvorlage erstellen, müssen Sie „Virtuelle SmartCard erstel
 
 7.  Sie müssen ein Signaturzertifikat abrufen, bevor Sie mit diesem Abschnitt beginnen. Weitere Informationen finden Sie unten unter „Ermöglichen von SmartCard-Erneuerung für Nicht-Administratoren im MIM 2016-Zertifikat-Manager“, Schritt 1.
 
-8.  In der & Lt; Identität & Gt; Element, ändern Sie den Wert des Attributs "Publisher" identisch mit dem Betreff, z. B. in Ihrem Signaturzertifikat aufgeführt ist "CN = SUBJECT".
+8.  Ändern Sie im &lt;Identity&gt;-Element den Wert des Attributs „Publisher“ so, dass es mit dem Antragsteller identisch ist, der in Ihrem Signaturzertifikat aufgeführt ist, z.B. „CN=SUBJECT“.
 
 9. Speichern Sie die Datei, und beenden Sie den Editor.
 
@@ -246,5 +258,9 @@ Wenn Sie eine Profilvorlage erstellen, müssen Sie „Virtuelle SmartCard erstel
     -   Wenn Sie Hilfe zu dem Skript **ConfigureMIimCMClientAndRelyingParty.ps1** wünschen, führen Sie `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`aus.
 
 ## Bereitstellen der App
-Beim Einrichten der CM-app im Download Center herunterladen Sie der Datei MIMDMModernApp_ & Lt; Version & gt;_AnyCPU_Test.zip und extrahieren Sie seinen gesamten Inhalt zu. Die APPX-Datei ist das Installationsprogramm. Können Sie es bereitstellen, in keiner Weise, die Sie normalerweise die Bereitstellung Windows Store-apps mit [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx), oder [Intune](https://technet.microsoft.com/library/dn613839.aspx) Sideloaden der app, damit Benutzer über das Unternehmensportal darauf zugreifen müssen oder sie direkt auf ihren Computern durch erhalten.
-<!--HONumber=Mar16_HO1-->
+Wenn Sie die CM-App (Zertifikat-Manager) einrichten möchten, laden Sie aus dem Download Center die Datei „MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip“ herunter, und extrahieren Sie deren gesamten Inhalt. Die APPX-Datei ist das Installationsprogramm. Sie können diese Datei auf dieselbe Weise bereitstellen, auf die Sie normalerweise Windows Store-Apps bereitstellen. Das heißt, Sie können [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx) oder [Intune](https://technet.microsoft.com/library/dn613839.aspx) verwenden, um die App querzuladen, sodass Benutzer über das Unternehmensportal auf sie zugreifen müssen oder sie durch direktes Übertragen an ihre Computer erhalten.
+
+
+<!--HONumber=Apr16_HO2-->
+
+

@@ -1,34 +1,46 @@
 ---
-Titel: Zertifikat-Manager für Softwarezertifikate
-MS.Custom: 
-  - Identitätsmanagement
-  - MIM
-MS.Prod: Identität-Manager-2015
-MS.Reviewer: Na
-MS.Suite: Na
-MS.Technology: 
-  - security
-MS.tgt_pltfrm: Na
-MS.topic: Artikel
-MS.AssetId: fed5ada9-d80f-4825-aad7-4172ac5d71d3
-Autor: Kgremban
+# required metadata
+
+title: Erstellen von Softwarezertifikaten | Microsoft Identity Manager
+description: Erfahren Sie, wie Sie den Zertifikat-Manager zum Erstellen und Erneuern von Softwarezertifikaten mit Profilvorlagen verwenden.
+keywords:
+author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
-# Zertifikat-Manager für Softwarezertifikate
+
+# Erstellen von Softwarezertifikaten mit dem Zertifikat-Manager
 Zum Registrieren und Erneuern von Softwarezertifikaten müssen Sie kein Administrator sein und es ist keine virtuelle Smartcard erforderlich. Beachten Sie, dass Sie im Verlauf dazu aufgefordert werden, einen Zertifikatvorgang zuzulassen. Das ist normal.
 
-## Erstellen einer Softwarezertifikat-Profilvorlage im MIM 2016 Zertifikat-Manager
+## Erstellen einer Softwarezertifikat-Profilvorlage im MIM 2016-Zertifikat-Manager
 
 1.  Erstellen Sie eine Vorlage für das Zertifikat, das Sie für die virtuelle Smartcard anfordern werden. Öffnen Sie die MMC.
 
-2.  Klicken Sie auf **Datei**, und klicken Sie dann auf **Snap-In hinzufügen/entfernen**.
+2.  Klicken Sie auf **Datei** und dann auf **Snap-In hinzufügen/entfernen**.
 
-3.  Klicken Sie in der Liste Verfügbare-Snap-ins auf **Zertifikatvorlagen**, und klicken Sie dann auf **Hinzufügen**.
+3.  Klicken Sie in der Liste „Verfügbare Snap-Ins“ auf **Zertifikatvorlagen**, und klicken Sie dann auf **Hinzufügen**.
 
 4.  **Zertifikatvorlagen** wird in der MMC jetzt unter „Konsolenstamm“ angezeigt. Doppelklicken Sie auf diesen Eintrag, um alle verfügbaren Zertifikatvorlagen anzuzeigen.
 
-5.  Mit der rechten Maustaste die **Benutzervorlage**, und klicken Sie auf **Doppelte Vorlage**.
+5.  Klicken Sie mit der rechten Maustaste auf die **Benutzervorlage**, und klicken Sie dann auf **Vorlage duplizieren**.
 
-6.  Auf der **Kompatibilität** Registerkarte unter Certification Authority wählen Sie Windows Server 2008 und Zertifikatempfänger wählen Sie Windows 8.1 / Windows Server 2012 R2.
+6.  Auf der Registerkarte **Kompatibilität** wählen Sie unter „Zertifizierungsstelle“ die Option „Windows Server 2008“ aus, und wählen Sie unter „Zertifikatempfänger“ die Option „Windows 8.1/Windows Server 2012 R2“ aus.
 
     1.  Geben Sie auf der Registerkarte **Allgemein** im Feld „Anzeigename“ die Zeichenfolge **Archivierte Zertifikatvorlage**ein.
 
@@ -52,17 +64,17 @@ Zum Registrieren und Erneuern von Softwarezertifikaten müssen Sie kein Administ
 
     5.  Auf der Registerkarte **Antragstellername** :
 
-        1.  Deaktivieren Sie **einschließen e-Mail-Name im Antragstellernamen**.
+        1.  Deaktivieren Sie die Option **E-Mail-Name im Antragstellernamen**.
 
         2.  Deaktivieren Sie unter **Informationen im alternativen Antragstellernamen einbeziehen**die Option **E-Mail-Name**.
 
     6.  Klicken Sie auf **OK** , um die von Ihnen vorgenommenen Änderungen abzuschließen und die neue Vorlage zu erstellen. Ihre neue Vorlage sollte jetzt in der Liste der Zertifikatvorlagen angezeigt werden.
 
-    7.  Wählen Sie **Datei**, klicken Sie dann auf **Snap-In hinzufügen/entfernen** das Zertifizierungsstellen-Snap-in zur MMC-Konsole hinzufügen. Wenn Sie gefragt werden, welchen Computer Sie verwalten möchten, wählen Sie **Lokaler Computer**aus.
+    7.  Wählen Sie **Datei** aus, und klicken Sie auf **Snap-In hinzufügen/entfernen**, um das Zertifizierungsstelle-Snap-In zu Ihrer MMC-Konsole hinzuzufügen. Wenn Sie gefragt werden, welchen Computer Sie verwalten möchten, wählen Sie **Lokaler Computer**aus.
 
     8.  Erweitern Sie im linken Bereich der MMC den Eintrag **Zertifizierungsstelle (lokal)**, und erweitern Sie dann Ihren Zertifikat-Manager in der Liste „Zertifizierungsstelle“.
 
-    9. Mit der rechten Maustaste **Zertifikatvorlagen**, klicken Sie auf **Neu**, und klicken Sie dann auf **Zertifikatvorlage** Problem.
+    9. Klicken Sie mit der rechten Maustaste auf **Zertifikatvorlagen**, klicken Sie auf **Neu**, und klicken Sie dann auf **Auszustellende Zertifikatvorlage**.
 
     10. Wählen Sie aus der Liste die neue Vorlage, die Sie soeben erstellt haben (**Archivierte Zertifikatvorlage**), und klicken Sie dann auf **OK**.
 
@@ -90,4 +102,7 @@ Zum Registrieren und Erneuern von Softwarezertifikaten müssen Sie kein Administ
 
 11. Wenn Sie die Zertifikatsverwaltung mithilfe der virtuellen Smartcard verwenden, müssen Sie Datensammlungselemente deaktivieren, da diese nicht mit aktivierter Datensammlung funktioniert. Deaktivieren Sie die Datensammlung für jede Richtlinie, indem Sie im linken Bereich auf die Richtlinie klicken, dann das Kontrollkästchen neben **Beispieldatenelement** deaktivieren und schließlich auf **Datensammlungselemente löschen**klicken. Klicken Sie dann auf **OK**.
 
-<!--HONumber=Mar16_HO1-->
+
+<!--HONumber=Apr16_HO2-->
+
+

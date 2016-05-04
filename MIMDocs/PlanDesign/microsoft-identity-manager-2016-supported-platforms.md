@@ -1,19 +1,32 @@
 ---
-Titel: Unterstützte Plattformen für MIM 2016
-MS.Custom:
-  - Identitätsmanagement
-  - MIM
-MS.Prod: Identität-Manager-2015
-MS.Reviewer: Na
-MS.Suite: Na
-MS.Technology:
-  - security
-MS.tgt_pltfrm: Na
-MS.topic: Artikel
-MS.AssetId: 4978f60d-044d-4e84-8d93-65801fce1144
-Autor: Kgremban
+# required metadata
+
+title: Unterstützte Plattformen für MIM 2016 | Microsoft Identity Manager
+description: Suchen Sie die Produkte und Versionen, die mit allen Komponenten von MIM 2016 kompatibel sind
+keywords:
+author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Unterstützte Plattformen für MIM 2016
+
 | **MIM-Komponente** | **Plattform** | **Version** |
 |-------------------|--------------|-------------|
 |**MIM-Synchronisierung**|Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2|
@@ -40,13 +53,17 @@ Autor: Kgremban
 | **MIM-Add-Ins und -Erweiterungen** | Windows | Windows 7<br/>Windows 8<br/>Windows 8.1<br/>Windows 10 |
 || Outlook-Integration (optional) | Outlook 2007 SP2<br/>Outlook 2010<br/>Outlook 2013 |
 || PowerShell-Cmdlets für PAM-Requestor (optional) | Windows 8.1<br/>Windows 10 |
-| **MIM Certificate Management** (Server und CA-Integration) | Windows server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 |
+| **MIM-Zertifikatverwaltung** (Server- und CA-Integration) | Windows server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 |
 || Zertifizierungsstelle | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 |
 || MIM CM-Datenbank | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 |
-| **MIM Certificate Management** (Anwendung) | Windows | Windows 8<br/>Windows 8.1<br/>Windows 10 |
-| **MIM Certificate Management** (Client und Bulk-Client) | Windows | Windows 7 |
+| **MIM-Zertifikatverwaltung** (Anwendung) | Windows | Windows 8<br/>Windows 8.1<br/>Windows 10 |
+| **MIM-Zertifikatverwaltung** (Client und Bulk Client) | Windows | Windows 7 |
 | **MIM BHOLD-Suite** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 |
 || BHOLD-Datenbank | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2 |
 || E-Mail-Server (optional) | Exchange Server 2007 SP3<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 |
 || Webbrowser | Internet Explorer 7, 8, 9, 10 oder 11 mit Silverlight |
-<!--HONumber=Mar16_HO1-->
+
+
+<!--HONumber=Apr16_HO2-->
+
+

@@ -1,59 +1,82 @@
 ---
-Titel: Aspekte der Topologie
-MS.Custom:
-  - Identitätsmanagement
-  - MIM
-MS.Prod: Identität-Manager-2015
-MS.Reviewer: Na
-MS.Suite: Na
-MS.Technology:
-  - security
-MS.tgt_pltfrm: Na
-MS.topic: Artikel
-MS.AssetId:
-Autor: Kgremban
+# required metadata
+
+title: Überlegungen zur Topologie zum Bereitstellen von MIM | Microsoft Identity Manager
+description: Grundlegendes zu den Komponenten von MIM 2016 und Vorschläge, wie Sie diese in Ihrer Umgebung bereitstellen können. 
+keywords:
+author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
 
-# Aspekte der Topologie
-Sie können Microsoft Identity Manager (MIM) Komponenten auf demselben Server oder auf mehrere Server in verschiedenen Konfigurationen bereitstellen. Die Topologie, die Sie für die Bereitstellung auswählen, wirkt sich auf die Leistung, die Sie aus MIM erzielen können. In diesem Artikel werden mehrere Bereitstellungstopologien, die Sie implementieren berücksichtigen können.
 
-## Komponenten
-Beim Entwerfen der Bereitstellungstopologie ist es wichtig zu wissen, was bewirkt, dass jede Komponente, und wie sie alle interagieren. Sie können alle Komponenten auf demselben Computer gehostet oder diese auf mehreren Computern und Servern zu verteilen.
+# Überlegungen zur Topologie
+Sie können MIM-Komponenten (Microsoft Identity Manager) auf demselben Server oder auf mehreren Servern in mehreren Konfigurationen bereitstellen. Die für die Bereitstellung ausgewählte Topologie hat Auswirkungen auf die Leistung, die Sie in MIM erreichen können. In diesem Artikel werden mehrere Bereitstellungstopologien vorgestellt, die Sie implementieren können.
 
+## MIM-Komponenten
+Beim Entwerfen der Bereitstellungstopologie sollten Sie wissen, was die einzelnen Komponenten bewirken und wie sie alle interagieren.
 
-| Komponente | Demselben computer | Separaten server | Netzwerklastenausgleich-cluster | Server-cluster |
+- **MIM-Portal** – eine Schnittstelle für das Zurücksetzen von Kennwörtern, die Gruppenverwaltung und administrative Vorgänge.
+    -
+- **MIM-Dienst** – ein Webdienst, der MIM 2016-Identitätsverwaltungsfunktionen implementiert.
+- **MIM Synchronization Service** – synchronisiert Daten mit anderen Identitätssystemen.
+- **Microsoft SQL Server** – Der MIM-Dienst und MIM Synchronization Service speichern ihre Daten beide in SQL-Datenbanken.
+
+In der folgenden Tabelle sind die Optionen zum Hosten der einzelnen MIM-Komponenten dargestellt. Sie können auf demselben Computer gehostet oder auf mehrere Server und Cluster verteilt werden.
+
+| | MIM-Portal | MIM-Dienst | MIM Synchronization Service | SQL Server |
 | --- | --- | --- | --- | --- |
-| MIM-Portal | Ja | Ja | Ja | |
-| MIM-Dienst | Ja | Ja | Ja | |
-| MIM-Synchronisierungsdienst | Ja | Ja | | |
-| Microsoft SQL Server | Ja | Ja | | Ja |
+| Derselbe Computer | Ja | Ja | Ja | Ja |
+| Separater Server | Ja | Ja | Ja | Ja |
+| Netzwerklastenausgleichs-Cluster | Ja | Ja | | |
+| Server-Cluster | | | | Ja |
 
 
-## Topologie mit mehreren Ebenen
-Die Topologie mit mehreren Ebenen ist die am häufigsten verwendeten Topologie. Es bietet die größte Flexibilität. Die MIM-Portal, MIM-Dienst und -Datenbanken sind in Ebenen unterteilt und auf mehreren Computern bereitgestellt. Diese Topologie sorgt für mehr Flexibilität bei der Skalierung der verschiedenen Komponenten des MIM. Beispielsweise können Sie das MIM-Portal horizontal skalieren, durch Hinzufügen zusätzlicher Server in einem Cluster (Network Load Balancing, NLB). Auf ähnliche Weise können Sie den MIM-Dienst mithilfe eines NLB-Clusters und erhöhen die Anzahl der Computer (Knoten) im Cluster nach Bedarf skalieren.
+## Mehrschichtige Topologie
+Die mehrschichtige Topologie ist die am häufigsten verwendete Topologie. Sie bietet die größte Flexibilität. Das MIM-Portal, der MIM-Dienst und die Datenbanken sind in Schichten unterteilt und auf mehreren Computern bereitgestellt. Diese Topologie bietet mehr Flexibilität bei der Skalierung der verschiedenen MIM-Komponenten. Beispielsweise können Sie das MIM-Portal horizontal skalieren, indem Sie einem Netzwerklastenausgleichs-Cluster (NLB) zusätzliche Server hinzufügen. Auf ähnliche Weise können Sie den MIM-Dienst skalieren, indem Sie einen NLB-Cluster verwenden und die Anzahl von Computern (Knoten) im Cluster je nach Bedarf erhöhen.
 
-In der Topologie mit mehreren Ebenen wird ein dedizierter Computer zum Hosten der einzelnen SQL-Datenbank (eine für den MIM-Dienst) und eine andere für den MIM-Synchronisierungsdienst zugewiesen. Die Skalierbarkeit der Leistung der Computer zugreifen, die die SQL-Datenbanken erhöht werden können, durch Hinzufügen oder Aktualisieren von Hardware, z. B. durch das Aktualisieren der CPUs, Hinzufügen von zusätzlichen CPUs, zufällige erhöhen hosten Arbeitsspeicher (RAM) oder den Arbeitsspeicher aktualisieren oder die Aktualisierung der Festplattenkonfigurationen erhöhen, die Lese- und Schreibzugriff und Verringerung der Latenz.
+Bei der mehrschichtigen Topologie wird ein dedizierter Computer zum Hosten jeder SQL-Datenbank zugewiesen (einer für den MIM-Dienst und ein anderer für MIM Synchronization Service). Die Skalierbarkeit der Leistung der Computer, die die SQL-Datenbanken hosten, kann durch das Hinzufügen oder Upgraden von Hardware, z.B. durch CPU-Upgrades, das Erhöhen oder Upgraden des Arbeitsspeichers (RAM) oder das Upgraden der Festplattenkonfigurationen erzielt werden. Dadurch wird auch der Lese- und Schreibzugriff verbessert und die Wartezeit verringert.
 
-![](media/MIM-topo-multitier.png)
+![Diagramm: mehrschichtige Topologie in MIM](media/MIM-topo-multitier.png)
 
-In dieser Konfiguration werden die MIM-Synchronisierungsdienst und seine Datenbank auf demselben Computer gehostet. Allerdings sollten Sie möglicherweise ähnlichen Leistung zu erreichen, wenn eine dediziertes 1-Gigabit-Netzwerk-Verbindung zwischen der MIM-Synchronisierungsdienst und seine Datenbank besteht, wenn sie auf verschiedenen Computern gehostet werden.
+In dieser Konfiguration werden MIM Synchronization Service und dessen Datenbank auf demselben Computer gehostet. Jedoch sollten Sie die gleiche Leistung erzielen können, wenn zwischen MIM Synchronization Service und dessen Datenbank eine 1 GBit dedizierte Netzwerkverbindung besteht, wenn sie auf separaten Computern gehostet werden.
 
 
-## Multi-Tier-Topologie mit mehreren MIM-Diensten.
-Synchronisierung von Daten mit externen Systemen kann hinzufügen eine erhebliche Belastung für das System und über einen längeren Zeitraum ausführen. Wenn die Konfiguration der Synchronisierung Richtlinien mit Workflows auslösen führt, konkurrieren diese Richtlinien für Ressourcen mit Endbenutzer Workflows. Solche Probleme können mit authentifizierungsworkflows, z. B. das Zurücksetzen von Kennwörtern, betont werden, die in Echtzeit mit Endbenutzer warten, bis des Prozess abgeschlossen haben. Durch die Bereitstellung einer Instanz des MIM-Diensts für Endbenutzer und ein separates Portal für die Synchronisierung von Verwaltungsdaten, können Sie eine bessere Reaktionsfähigkeit für Endbenutzer Vorgänge bereitstellen.
+## Mehrschichtige Topologie mit mehreren MIM-Diensten
+Das Synchronisieren von Daten mit externen Systemen kann die Auslastung des Systems beträchtlich erhöhen und einen längeren Zeitraum für die Ausführung benötigen. Wenn die Synchronisierungskonfiguration Richtlinien mit Workflows auslöst, konkurrieren diese Richtlinien mit Endbenutzer-Workflows um Ressourcen. Solche Probleme können bei Authentifizierungsworkflows wie Kennwortzurücksetzungen besonders stark auftreten. Diese Workflows werden in Echtzeit ausgeführt, während der Endbenutzer auf die Fertigstellung des Vorgangs wartet. Sie können eine bessere Reaktionsfähigkeit für Endbenutzervorgänge bieten, indem Sie eine Instanz des MIM-Diensts für Endbenutzervorgänge und ein separates Portal für die Synchronisierung administrativer Daten bereitstellen.
 
-![](media/MIM-topo-multitier-multiservice.png)
+![Diagramm: mehrschichtige Topologie in mehreren MIM-Diensten](media/MIM-topo-multitier-multiservice.png)
 
-Als können mit der standardmäßigen Multi-Tier-Topologie können Sie MIM-Portal mithilfe eines NLB-Clusters und durch Erhöhen der Anzahl von Knoten im Cluster nach Bedarf Leistungssteigerung.
+Wie bei der standardmäßigen mehrschichtigen Topologie können Sie die Leistung des MIM-Portals erhöhen, indem Sie einen NLB-Cluster verwenden und die Anzahl von Knoten im Cluster je nach Bedarf erhöhen.
 
-Die Leistung-Computer mit SQL Server, die die MIM-Synchronisierungsdienst hosten und die MIM-Dienstdatenbank werden die allgemeine Leistung der MIM Bereitstellung erheblich beeinflussen. Daher führen Sie die Empfehlungen in SQL Server-Dokumentation zur Optimierung der Leistung der Datenbank. Finden Sie in den folgenden Dokumenten Informationen:
+Die Gesamtleistung Ihrer MIM-Bereitstellung hängt stark von der Leistung der Computer ab, auf denen SQL Server installiert ist und die als Host für MIM Synchronization Service und die MIM-Dienstdatenbank fungieren. Befolgen Sie daher die Ratschläge in der SQL Server-Dokumentation zum Optimieren der Datenbankleistung. Weitere Informationen finden Sie in folgenden Dokumenten:
 
-- [Storage 10 wichtigsten Best Practices](http://go.microsoft.com/fwlink/?LinkID=183663)
+- [Storage Top 10 Best Practices (Top 10 der bewährten Speichermethoden)](http://go.microsoft.com/fwlink/?LinkID=183663)
 
-- [Optimieren der Tempdb-Leistung](http://go.microsoft.com/fwlink/?LinkID=188267)
+- [Optimieren der Leistung von „tempdb“](http://go.microsoft.com/fwlink/?LinkID=188267)
 
 - [Bewährte Methoden für SQL Server](http://go.microsoft.com/fwlink/?LinkID=188268)
 
 ## Weitere Informationen:
-- Der herunterladbare [Forefront Identity Manager (FIM) 2010-Planungshandbuch für die Capactity](http://go.microsoft.com/fwlink/?LinkId=200180) wird ausführlicher über eine Test-Build und die Ergebnisse der Leistungstests.
-<!--HONumber=Mar16_HO2-->
+- Der zum Download bereitstehende [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) (Handbuch zur Kapazitätsplanung des Forefront Identity Manager (FIM) 2010) bietet weitere Informationen zu einem Test-Build und Leistungstestergebnissen.
+
+
+<!--HONumber=Apr16_HO2-->
+
+

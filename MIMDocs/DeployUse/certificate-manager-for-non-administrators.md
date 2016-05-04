@@ -1,26 +1,38 @@
 ---
-Titel: Zertifikat-Manager für nicht-Administratoren
-MS.Custom:
-  - Identitätsmanagement
-  - MIM
-MS.Prod: Identität-Manager-2015
-MS.Reviewer: Na
-MS.Suite: Na
-MS.Technology:
-  - security
-MS.tgt_pltfrm: Na
-MS.topic: Artikel
-MS.AssetId: bfabc562-a2f0-4cff-ac31-36927f41e102
-Autor: Kgremban
+# required metadata
+
+title: Registrieren von Smartcards für Nichtadministratoren | Microsoft Identity Manager
+description: Erfahren Sie, wie Sie Smartcards für Benutzer ohne Administratorrechte auf ihren Computern registrieren können, damit diese den Zertifikat-Manager verwenden können.
+keywords:
+author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
-# Zertifikat-Manager für Nicht-Administratoren
+
+# Registrieren von Smartcards für Nichtadministratoren
 Wenn ein Benutzer auf seinem Computer kein lokaler Administrator ist, kann er standardmäßig keine Smartcard auf seinen eigenen Computern registrieren. Mithilfe des folgenden Verfahrens können Sie diese Einschränkung umgehen.
 
 ## Ermöglichen von Smartcard-Erneuerung für Nicht-Administratoren im MIM 2016-Zertifikat-Manager
 
 1.  **Entpacken Sie die APPX-Datei.**
 
-    Rufen Sie ein Signaturzertifikat ab. Führen Sie die Schritte zum [Anmelden Windows 8-Anwendung mit einer internen PKI](http://blogs.technet.com/b/deploymentguys/archive/2013/06/14/signing-windows-8-applications-using-an-internal-pki.aspx). Halten Sie an, wenn Sie zu „Anwendung signieren“ gelangen. Benennen Sie die exportierte PFX-Datei. Führen Sie auch einen Export in eine CER-Datei durch, und importieren Sie diese dann mithilfe der CER-Datei des neuen Signaturzertifikats auf dem Client.
+    Rufen Sie ein Signaturzertifikat ab. Führen Sie die Schritte zum [Signing Windows 8 applications using an Internal PKI](http://blogs.technet.com/b/deploymentguys/archive/2013/06/14/signing-windows-8-applications-using-an-internal-pki.aspx) (Anmelden von Windows 8-Anwendung mithilfe einer internen PKI) aus. Halten Sie an, wenn Sie zu „Anwendung signieren“ gelangen. Benennen Sie die exportierte PFX-Datei. Führen Sie auch einen Export in eine CER-Datei durch, und importieren Sie diese dann mithilfe der CER-Datei des neuen Signaturzertifikats auf dem Client.
 
     Führen Sie Folgendes aus, um die APPX-Datei zu entpacken:
 
@@ -36,7 +48,7 @@ Wenn ein Benutzer auf seinem Computer kein lokaler Administrator ist, kann er st
 
     Bearbeiten Sie die Datei „custom.data“, und ändern Sie Folgendes:
 
-    1.  In der & Lt; NonAdmin & Gt; Element, ändern Sie den Wert des Value-Attributs auf "True"
+    1.  Ändern Sie den Wert des Attributs im &lt;NonAdmin&gt;-Element zu TRUE.
 
     2.  Speichern Sie die Datei, und beenden Sie den Editor.
 
@@ -44,7 +56,7 @@ Wenn ein Benutzer auf seinem Computer kein lokaler Administrator ist, kann er st
 
     4.  Bearbeiten Sie die Datei namens „AppxManifest.xml“.
 
-    5.  In der & Lt; Identität & Gt; Element bearbeiten Sie den Wert des Attributs "Publisher" in den Antragsteller des Signaturzertifikats, z. B. "CN=ABCD"
+    5.  Ändern Sie den Wert des „Publisher“-Attributs im &lt;Identity&gt;-Element in den Antragsteller Ihres Signaturzertifikats, z.B. "CN=ABCD"
 
         Das Thema sollte hier mit dem Antragsteller im Signaturzertifikat identisch sein, das Sie zum Signieren der App verwenden.
 
@@ -87,4 +99,8 @@ Wenn ein Benutzer auf seinem Computer kein lokaler Administrator ist, kann er st
 7.  **Installieren Sie die CM-App für das Nicht-Administratorkonto.**
 
 8.  **Starten Sie die CM-App und Registrierung für eine virtuelle Smartcard.**
-<!--HONumber=Mar16_HO1-->
+
+
+<!--HONumber=Apr16_HO2-->
+
+

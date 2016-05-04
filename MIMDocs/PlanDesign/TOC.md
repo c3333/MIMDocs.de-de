@@ -1,8 +1,12 @@
-# [Verstehen und Durchsuchen](/MIM/Understand/microsoft-identity-manager-2016.html)
-# [Planung und Entwurf](/MIM/PlanDesign/jourey-plan-design.html)
+# [Verstehen und Kennenlernen](/microsoft-identity-manager/Understand/microsoft-identity-manager-2016)
+# [Planung und Entwurf](/microsoft-identity-manager/PlanDesign/microsoft-identity-manager-2016-supported-platforms)
 ## [Unterstützte Plattformen](microsoft-identity-manager-2016-supported-platforms.md)
 ## [Kapazitätsplanung](capacity-planning-guide.md)
 ## [Bereitstellungstopologie](topology-considerations.md)
-# [Bereitstellen und verwenden](/MIM/DeployUse/microsoft-identity-manager-deploy.html)
-# [Referenz für Entwickler](/MIM/reference/microsoft-identity-manager-2016-developer-reference.html)
-<!--HONumber=Mar16_HO2-->
+# [Bereitstellen und Verwenden](/microsoft-identity-manager/DeployUse/microsoft-identity-manager-deploy)
+# [Entwicklerreferenz](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
+
+
+<!--HONumber=Mar16_HO5-->
+
+

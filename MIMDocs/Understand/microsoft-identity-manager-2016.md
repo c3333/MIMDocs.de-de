@@ -1,18 +1,30 @@
 ---
-Titel: Microsoft Identity Manager 2016
-MS.Custom:
-  - Identitätsmanagement
-  - MIM
-MS.Prod: Identität-Manager-2015
-MS.Reviewer: Na
-MS.Suite: Na
-MS.Technology:
-  - security
-MS.tgt_pltfrm: Na
-MS.topic: Artikel
-MS.AssetId: ccdd8a9f-02da-440a-81a8-354800dcd2a8
-Autor: Kgremban
+# required metadata
+
+title: Microsoft Identity Manager 2016 | Microsoft Identity Manager
+description: Erfahren Sie, wie MIM 2016 eine sicherere und einfachere Erfahrung bei der Identitätsverwaltung in der Cloud und lokal bietet.
+keywords:
+author: kgremban
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: identity-manager-2015
+ms.service: microsoft-identity-manager
+ms.technology: security
+ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: mwahl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
 ---
+
 # Microsoft Identity Manager 2016
 MIM 2016 baut auf den bereits leistungsstarken Identitäts- und Zugriffsverwaltungsfunktionen von FIM 2010 R2 auf und fügt eine Hybriderfahrung und Privileged Access Management-Funktionen sowie Unterstützung für neue Plattformen hinzu.
 
@@ -40,4 +52,8 @@ MIM unterstützt eine aktualisierte Liste von Produkten und Plattformen, einschl
 Weitere Informationen zu den zuvor vorhandenen Identity Manager-Komponenten finden Sie unter:
 
 -   [Microsoft BHOLD Suite](https://technet.microsoft.com/en-us/library/jj134096.aspx)
-<!--HONumber=Mar16_HO1-->
+
+
+<!--HONumber=Apr16_HO2-->
+
+
