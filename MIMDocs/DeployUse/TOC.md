@@ -1,5 +1,5 @@
-# [Verstehen und Kennenlernen](/microsoft-identity-manager/Understand/microsoft-identity-manager-2016)
-# [Planung und Entwurf](/microsoft-identity-manager/PlanDesign/microsoft-identity-manager-2016-supported-platforms)
+# [Verstehen und Kennenlernen](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
+# [Planung und Entwurf](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
 # [Bereitstellen und Verwenden](microsoft-identity-manager-deploy.md)
 ## [Erstmalige Bereitstellung](microsoft-identity-manager-deploy.md)
 ### [Einrichten der Domäne](preparing-domain.md)
@@ -20,6 +20,6 @@
 # [Entwicklerreferenz](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 
