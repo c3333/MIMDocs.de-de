@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 22
-[ In Sync Handback Files ](#insync-handback-success-list)| 151
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 9
+[ In Sync Handback Files ](#insync-handback-success-list)| 164
 [ Ignored Files ](#ignored-list)| 107
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -31,8 +31,6 @@
 ## <a name='outofsync-handback-success-list'></a> Out Of Sync Handback Success File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [MIMDocs\DeployUse\certificate-manager-for-non-administrators.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/certificate-manager-for-non-administrators.md) | OutofSyncHandedBackSuccess | [Details](#50c0edd60abfa6550cb5a873d32a842e8c0998116)
- [MIMDocs\DeployUse\deploying-mim-password-change-notification-service-on-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md) | OutofSyncHandedBackSuccess | [Details](#85e83b85f047ca2c2648b42ec68b832caae645ee8)
  [MIMDocs\DeployUse\install-mim-service-portal.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/install-mim-service-portal.md) | OutofSyncHandedBackSuccess | [Details](#eb2af412d9638035de591197fa191e990ade0ca110)
  [MIMDocs\DeployUse\install-mim-sync.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/install-mim-sync.md) | OutofSyncHandedBackSuccess | [Details](#8a99b3a291d2b145f453732a72244c43f9c535d612)
  [MIMDocs\DeployUse\install-mim-sync-ad-service.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/install-mim-sync-ad-service.md) | OutofSyncHandedBackSuccess | [Details](#74c61573d520f7ce6969dedefe3d484cdb2e434c11)
@@ -41,23 +39,14 @@
  [MIMDocs\DeployUse\media\MIM-SSPR-Azureportal.png](https://github.com/Microsoft/MIMDocs-pr/blob/bc92efa83b27bec8d7ce9d0d22d61a8bb781f449/MIMDocs/DeployUse/media/MIM-SSPR-Azureportal.png) | OutofSyncHandedBackSuccess | [Details](#05c612cab12ab17981567ac30a24c8f056ac439939)
  [MIMDocs\DeployUse\media\MIM-SSPR-pFile.png](https://github.com/Microsoft/MIMDocs-pr/blob/bc92efa83b27bec8d7ce9d0d22d61a8bb781f449/MIMDocs/DeployUse/media/MIM-SSPR-pFile.png) | OutofSyncHandedBackSuccess | [Details](#1ff0807544bfe5121656e9472e43c792d804af7f43)
  [MIMDocs\DeployUse\media\MIM-UpgSP7.png](https://github.com/Microsoft/MIMDocs-pr/blob/bc92efa83b27bec8d7ce9d0d22d61a8bb781f449/MIMDocs/DeployUse/media/MIM-UpgSP7.png) | OutofSyncHandedBackSuccess | [Details](#1f1a18f843216bed4052f09815b6b75fd759cbb962)
- [MIMDocs\DeployUse\microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/7e61e201b277a2e8ec9fee785e9e34fca3b1cb29/MIMDocs/DeployUse/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md) | OutofSyncHandedBackSuccess | [Details](#24a7bf5bfb0a7450becd08be6743ed7ab175555965)
- [MIMDocs\DeployUse\microsoft-identity-manager-deploy.md](https://github.com/Microsoft/MIMDocs-pr/blob/ca7fdef81eb8a68aff46df528e1989f019f5d2a4/MIMDocs/DeployUse/microsoft-identity-manager-deploy.md) | OutofSyncHandedBackSuccess | [Details](#a56ead9777f1dad1aa0d214a506cf1242f51e16766)
- [MIMDocs\DeployUse\prepare-server-exchange.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/prepare-server-exchange.md) | OutofSyncHandedBackSuccess | [Details](#b69ea20f375869d4ad08987a08aba05913fd1db167)
- [MIMDocs\DeployUse\prepare-server-sharepoint.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/prepare-server-sharepoint.md) | OutofSyncHandedBackSuccess | [Details](#4333d587041fcfa24620812872e312c6e9dc97d868)
- [MIMDocs\DeployUse\prepare-server-sql2014.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/prepare-server-sql2014.md) | OutofSyncHandedBackSuccess | [Details](#2c0ff0bdbba4bcf979def8d5c7aa381947d6cc8769)
- [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/af9f7f75f19bb29f2e29577c787252f6b7fabb7d/MIMDocs/DeployUse/prepare-server-ws2012r2.md) | OutofSyncHandedBackSuccess | [Details](#cd4ac84af4e5416512cf546a5d23b342ebe13c3970)
- [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/b2578d50f855486183ae182330bacb688011c273/MIMDocs/DeployUse/preparing-domain.md) | OutofSyncHandedBackSuccess | [Details](#b84a6c7c7b53a122eefc3846ba93b92b34edb6ce71)
  [MIMDocs\index.md](https://github.com/Microsoft/MIMDocs-pr/blob/4c81ee602b46fa555d6fcb81f91b07e0eee7049f/MIMDocs/index.md) | OutofSyncHandedBackSuccess | [Details](#49841c26e9ecf9d5ea3642e5d9a80883a50eaa1881)
- [MIMDocs\PlanDesign\capacity-planning-guide.md](https://github.com/Microsoft/MIMDocs-pr/blob/0ea8b3d9032a01bd6a6b1faad8ea27d2cb889fc6/MIMDocs/PlanDesign/capacity-planning-guide.md) | OutofSyncHandedBackSuccess | [Details](#323a875aba14a238aa7cb3a0e6df192729ce53d6220)
- [MIMDocs\PlanDesign\topology-considerations.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/PlanDesign/topology-considerations.md) | OutofSyncHandedBackSuccess | [Details](#e33a08d77a0b5c422cdbc8c19516b55df980a2c6228)
- [MIMDocs\Understand\identity-manager-hybrid-reporting-azure.md](https://github.com/Microsoft/MIMDocs-pr/blob/7e61e201b277a2e8ec9fee785e9e34fca3b1cb29/MIMDocs/Understand/identity-manager-hybrid-reporting-azure.md) | OutofSyncHandedBackSuccess | [Details](#b3f3982ade46932b18fb730fe5c16d52cde188a1273)
- [MIMDocs\Understand\microsoft-identity-manager-2016.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/Understand/microsoft-identity-manager-2016.md) | OutofSyncHandedBackSuccess | [Details](#df2f52159b6ff77dd9b28bb934795c685a72210d279)
 
 ## <a name='insync-handback-success-list'></a> In Sync Handback File Success List
  Source File | Status | Details 
  ----------- | ------ | ------- 
+ [MIMDocs\DeployUse\certificate-manager-for-non-administrators.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/certificate-manager-for-non-administrators.md) | InSyncHandedBackSuccess | [Details](#50c0edd60abfa6550cb5a873d32a842e8c0998116)
  [MIMDocs\DeployUse\certificate-manager-for-software-certificates.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/certificate-manager-for-software-certificates.md) | InSyncHandedBackSuccess | [Details](#6b58093744656b9bfa62c1cfcab340ea88e6e1687)
+ [MIMDocs\DeployUse\deploying-mim-password-change-notification-service-on-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md) | InSyncHandedBackSuccess | [Details](#85e83b85f047ca2c2648b42ec68b832caae645ee8)
  [MIMDocs\DeployUse\media\150x150.png](https://github.com/Microsoft/MIMDocs-pr/blob/d3196e23a3bcacc8e563d6a16ec00be7be68fb6d/MIMDocs/DeployUse/media/150x150.png) | InSyncHandedBackSuccess | [Details](#84421bf7f4ba657e685239fb27f4798a46485f7114)
  [MIMDocs\DeployUse\media\MIM-DeploySP1.png](https://github.com/Microsoft/MIMDocs-pr/blob/00d53f5d2d0cf5766279b4a19047f30398f421f9/MIMDocs/DeployUse/media/MIM-DeploySP1.png) | InSyncHandedBackSuccess | [Details](#15fff62827350f7c645f5f6a3e027caa8d471a8c15)
  [MIMDocs\DeployUse\media\MIM-DeployWS2.png](https://github.com/Microsoft/MIMDocs-pr/blob/00d53f5d2d0cf5766279b4a19047f30398f421f9/MIMDocs/DeployUse/media/MIM-DeployWS2.png) | InSyncHandedBackSuccess | [Details](#faa4f7f1b6a3337d8dede5d3aff03a218eaa537617)
@@ -102,6 +91,13 @@
  [MIMDocs\DeployUse\media\MIM-UpgSP6.png](https://github.com/Microsoft/MIMDocs-pr/blob/7ba0efeab2951fa3f02d7232c99919d65a58c2ef/MIMDocs/DeployUse/media/MIM-UpgSP6.png) | InSyncHandedBackSuccess | [Details](#5902b5dd9caf9a4505f491bdfd371054709d613561)
  [MIMDocs\DeployUse\media\MIM-UpgSP8.PNG](https://github.com/Microsoft/MIMDocs-pr/blob/00d53f5d2d0cf5766279b4a19047f30398f421f9/MIMDocs/DeployUse/media/MIM-UpgSP8.PNG) | InSyncHandedBackSuccess | [Details](#a0c86274e483e6f9a8ffd55b1884e70cee24560d63)
  [MIMDocs\DeployUse\media\MIM-UpgSP9.png](https://github.com/Microsoft/MIMDocs-pr/blob/7ba0efeab2951fa3f02d7232c99919d65a58c2ef/MIMDocs/DeployUse/media/MIM-UpgSP9.png) | InSyncHandedBackSuccess | [Details](#86552c75a719abf0e4adbe967a98d3a5cf3167c164)
+ [MIMDocs\DeployUse\microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/7e61e201b277a2e8ec9fee785e9e34fca3b1cb29/MIMDocs/DeployUse/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md) | InSyncHandedBackSuccess | [Details](#24a7bf5bfb0a7450becd08be6743ed7ab175555965)
+ [MIMDocs\DeployUse\microsoft-identity-manager-deploy.md](https://github.com/Microsoft/MIMDocs-pr/blob/ca7fdef81eb8a68aff46df528e1989f019f5d2a4/MIMDocs/DeployUse/microsoft-identity-manager-deploy.md) | InSyncHandedBackSuccess | [Details](#a56ead9777f1dad1aa0d214a506cf1242f51e16766)
+ [MIMDocs\DeployUse\prepare-server-exchange.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/prepare-server-exchange.md) | InSyncHandedBackSuccess | [Details](#b69ea20f375869d4ad08987a08aba05913fd1db167)
+ [MIMDocs\DeployUse\prepare-server-sharepoint.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/prepare-server-sharepoint.md) | InSyncHandedBackSuccess | [Details](#4333d587041fcfa24620812872e312c6e9dc97d868)
+ [MIMDocs\DeployUse\prepare-server-sql2014.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/prepare-server-sql2014.md) | InSyncHandedBackSuccess | [Details](#2c0ff0bdbba4bcf979def8d5c7aa381947d6cc8769)
+ [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/af9f7f75f19bb29f2e29577c787252f6b7fabb7d/MIMDocs/DeployUse/prepare-server-ws2012r2.md) | InSyncHandedBackSuccess | [Details](#cd4ac84af4e5416512cf546a5d23b342ebe13c3970)
+ [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/b2578d50f855486183ae182330bacb688011c273/MIMDocs/DeployUse/preparing-domain.md) | InSyncHandedBackSuccess | [Details](#b84a6c7c7b53a122eefc3846ba93b92b34edb6ce71)
  [MIMDocs\DeployUse\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/4426a38419725d2b4f0e3d2b997f1c876a817f2f/MIMDocs/DeployUse/TOC.md) | InSyncHandedBackSuccess | [Details](#2a5810d92b29e1200c68aacdcf180229eae342cd72)
  [MIMDocs\DeployUse\working-with-identity-manager-hybrid-reporting.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-identity-manager-hybrid-reporting.md) | InSyncHandedBackSuccess | [Details](#e2d0bd6120628d4fd2a14718fc205cde976c778573)
  [MIMDocs\DeployUse\working-with-mim-certificate-manager.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/working-with-mim-certificate-manager.md) | InSyncHandedBackSuccess | [Details](#3e0e6cea0b268836bb6347e81694deec93320ce374)
@@ -195,18 +191,22 @@
  [MIMDocs\media\pam-tiers.png](https://github.com/Microsoft/MIMDocs-pr/blob/d3196e23a3bcacc8e563d6a16ec00be7be68fb6d/MIMDocs/media/pam-tiers.png) | InSyncHandedBackSuccess | [Details](#def923940dacee0e5fdeeef9b0669c9418b5d9ab204)
  [MIMDocs\media\Test-Animated-Gif.gif](https://github.com/Microsoft/MIMDocs-pr/blob/d3196e23a3bcacc8e563d6a16ec00be7be68fb6d/MIMDocs/media/Test-Animated-Gif.gif) | InSyncHandedBackSuccess | [Details](#883c81b159d638e49f4baeac06a081656c1dba8c218)
  [MIMDocs\microsoft-identity-manager-2016-release-notes.md](https://github.com/Microsoft/MIMDocs-pr/blob/62108908497d1dcf69579ba144545346b6a42266/MIMDocs/microsoft-identity-manager-2016-release-notes.md) | InSyncHandedBackSuccess | [Details](#12f245624e644b12825239e378a26752f7a86846219)
+ [MIMDocs\PlanDesign\capacity-planning-guide.md](https://github.com/Microsoft/MIMDocs-pr/blob/0ea8b3d9032a01bd6a6b1faad8ea27d2cb889fc6/MIMDocs/PlanDesign/capacity-planning-guide.md) | InSyncHandedBackSuccess | [Details](#323a875aba14a238aa7cb3a0e6df192729ce53d6220)
  [MIMDocs\PlanDesign\media\150x150.png](https://github.com/Microsoft/MIMDocs-pr/blob/7ba0efeab2951fa3f02d7232c99919d65a58c2ef/MIMDocs/PlanDesign/media/150x150.png) | InSyncHandedBackSuccess | [Details](#84421bf7f4ba657e685239fb27f4798a46485f71223)
  [MIMDocs\PlanDesign\media\MIM-topo-multitier.png](https://github.com/Microsoft/MIMDocs-pr/blob/90bc65826ae511cf50473ee95c73edf2b719b231/MIMDocs/PlanDesign/media/MIM-topo-multitier.png) | InSyncHandedBackSuccess | [Details](#ff89d0e903b04df6182700b474bc3aef1b0ba24d225)
  [MIMDocs\PlanDesign\media\MIM-topo-multitier-multiservice.png](https://github.com/Microsoft/MIMDocs-pr/blob/90bc65826ae511cf50473ee95c73edf2b719b231/MIMDocs/PlanDesign/media/MIM-topo-multitier-multiservice.png) | InSyncHandedBackSuccess | [Details](#c465fc00bd089b73b86daa72968dd67dab832aee224)
  [MIMDocs\PlanDesign\microsoft-identity-manager-2016-supported-platforms.md](https://github.com/Microsoft/MIMDocs-pr/blob/a59e7471a8aaafc6752c9be34d52fd3509104dec/MIMDocs/PlanDesign/microsoft-identity-manager-2016-supported-platforms.md) | InSyncHandedBackSuccess | [Details](#bb3e3abfdc12d78108676d4a9f029531d9df17fd226)
  [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/4426a38419725d2b4f0e3d2b997f1c876a817f2f/MIMDocs/PlanDesign/TOC.md) | InSyncHandedBackSuccess | [Details](#e6ac8e7f786ea4cd7696361d045dc8ce298ae133227)
+ [MIMDocs\PlanDesign\topology-considerations.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/PlanDesign/topology-considerations.md) | InSyncHandedBackSuccess | [Details](#e33a08d77a0b5c422cdbc8c19516b55df980a2c6228)
  [MIMDocs\toc.md](https://github.com/Microsoft/MIMDocs-pr/blob/4426a38419725d2b4f0e3d2b997f1c876a817f2f/MIMDocs/toc.md) | InSyncHandedBackSuccess | [Details](#6381d8816a5d3acc8ee03ca699d93fa111182048267)
  [MIMDocs\Troubleshoot\media\150x150.png](https://github.com/Microsoft/MIMDocs-pr/blob/7ba0efeab2951fa3f02d7232c99919d65a58c2ef/MIMDocs/Troubleshoot/media/150x150.png) | InSyncHandedBackSuccess | [Details](#84421bf7f4ba657e685239fb27f4798a46485f71270)
  [MIMDocs\Troubleshoot\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/7ba0efeab2951fa3f02d7232c99919d65a58c2ef/MIMDocs/Troubleshoot/TOC.md) | InSyncHandedBackSuccess | [Details](#3036877a4f389967e58c7aa350a9c1fa54ecb5a4271)
+ [MIMDocs\Understand\identity-manager-hybrid-reporting-azure.md](https://github.com/Microsoft/MIMDocs-pr/blob/7e61e201b277a2e8ec9fee785e9e34fca3b1cb29/MIMDocs/Understand/identity-manager-hybrid-reporting-azure.md) | InSyncHandedBackSuccess | [Details](#b3f3982ade46932b18fb730fe5c16d52cde188a1273)
  [MIMDocs\Understand\media\150x150.png](https://github.com/Microsoft/MIMDocs-pr/blob/7ba0efeab2951fa3f02d7232c99919d65a58c2ef/MIMDocs/Understand/media/150x150.png) | InSyncHandedBackSuccess | [Details](#84421bf7f4ba657e685239fb27f4798a46485f71275)
  [MIMDocs\Understand\media\MIM-Hybrid-downloadReportAgent.jpg](https://github.com/Microsoft/MIMDocs-pr/blob/00d53f5d2d0cf5766279b4a19047f30398f421f9/MIMDocs/Understand/media/MIM-Hybrid-downloadReportAgent.jpg) | InSyncHandedBackSuccess | [Details](#7c71abe1409d6676539927896ab4415a043d4340276)
  [MIMDocs\Understand\media\MIM-Hybrid-howitworks.png](https://github.com/Microsoft/MIMDocs-pr/blob/00d53f5d2d0cf5766279b4a19047f30398f421f9/MIMDocs/Understand/media/MIM-Hybrid-howitworks.png) | InSyncHandedBackSuccess | [Details](#47bcebc7b3a069d07f32a5a211af8cb66ad3ce51277)
  [MIMDocs\Understand\media\MIM-Hybrid-passwordreset.jpg](https://github.com/Microsoft/MIMDocs-pr/blob/7ba0efeab2951fa3f02d7232c99919d65a58c2ef/MIMDocs/Understand/media/MIM-Hybrid-passwordreset.jpg) | InSyncHandedBackSuccess | [Details](#f21f8cd1fd0c882b8768f543e10487140c67dc1c278)
+ [MIMDocs\Understand\microsoft-identity-manager-2016.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/Understand/microsoft-identity-manager-2016.md) | InSyncHandedBackSuccess | [Details](#df2f52159b6ff77dd9b28bb934795c685a72210d279)
  [MIMDocs\Understand\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/4426a38419725d2b4f0e3d2b997f1c876a817f2f/MIMDocs/Understand/TOC.md) | InSyncHandedBackSuccess | [Details](#b705688c313ca52d6af7062a858e0321ba5c9aba280)
 
 ## <a name='ignored-list'></a> Ignored File List
@@ -394,18 +394,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='50c0edd60abfa6550cb5a873d32a842e8c0998116'></a> Source: [MIMDocs\DeployUse\certificate-manager-for-non-administrators.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/certificate-manager-for-non-administrators.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\certificate-manager-for-non-administrators.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/89ffa6967e9c0d49886c095f9e48deaa71bfae28/MIMDocs/DeployUse/certificate-manager-for-non-administrators.md)
 * Handoff File: [certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/4a46fe29b4edf81e643fd8fac151d3bb2cc12a34/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.de-de.xlf)
 * Handoff Datetime: 2016-05-20 00:04:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\DeployUse\certificate-manager-for-non-administrators.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/2bfc98082ca147dfbce5d370e5838ead5e1ebdda/MIMDocs/DeployUse/certificate-manager-for-non-administrators.md)
-* Current Handback File: [certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/3b0f8009b1c633d48e8eeb878864b347d9bcb9d9/ol-handback/Microsoft/MIMDocs-pr.de-de/master/certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.de-de.xlf)
-* Current Handback Datetime: 2016-05-04 08:09:25
+* Handback File: [certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/2775cf81853216fc19920818eae20f7c52856cf8/ol-handback/Microsoft/MIMDocs-pr.de-de/master/certificate-manager-for-non-administrators.2d024c7e4e9ca80f8293c9ea15d5d5fe93a207d7.de-de.xlf)
+* Handback Datetime: 2016-05-27 12:38:05
 * [Back to Top](#report-top)
 
 ##### <a name='6b58093744656b9bfa62c1cfcab340ea88e6e1687'></a> Source: [MIMDocs\DeployUse\certificate-manager-for-software-certificates.md](https://github.com/Microsoft/MIMDocs-pr/blob/f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda/MIMDocs/DeployUse/certificate-manager-for-software-certificates.md)
@@ -421,18 +418,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='85e83b85f047ca2c2648b42ec68b832caae645ee8'></a> Source: [MIMDocs\DeployUse\deploying-mim-password-change-notification-service-on-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr/blob/875ed6b96929822ac166a4a262cc8547a4ea3b2a/MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\deploying-mim-password-change-notification-service-on-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/89ffa6967e9c0d49886c095f9e48deaa71bfae28/MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md)
 * Handoff File: [deploying-mim-password-change-notification-service-on-domain-controller.afdb373626bbd0d122da747e9f586318deea2e70.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/4a46fe29b4edf81e643fd8fac151d3bb2cc12a34/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/deploying-mim-password-change-notification-service-on-domain-controller.afdb373626bbd0d122da747e9f586318deea2e70.de-de.xlf)
 * Handoff Datetime: 2016-05-20 00:04:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\DeployUse\deploying-mim-password-change-notification-service-on-domain-controller.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/2bfc98082ca147dfbce5d370e5838ead5e1ebdda/MIMDocs/DeployUse/deploying-mim-password-change-notification-service-on-domain-controller.md)
-* Current Handback File: [deploying-mim-password-change-notification-service-on-domain-controller.afdb373626bbd0d122da747e9f586318deea2e70.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/3b0f8009b1c633d48e8eeb878864b347d9bcb9d9/ol-handback/Microsoft/MIMDocs-pr.de-de/master/deploying-mim-password-change-notification-service-on-domain-controller.afdb373626bbd0d122da747e9f586318deea2e70.de-de.xlf)
-* Current Handback Datetime: 2016-05-04 08:09:25
+* Handback File: [deploying-mim-password-change-notification-service-on-domain-controller.afdb373626bbd0d122da747e9f586318deea2e70.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/2775cf81853216fc19920818eae20f7c52856cf8/ol-handback/Microsoft/MIMDocs-pr.de-de/master/deploying-mim-password-change-notification-service-on-domain-controller.afdb373626bbd0d122da747e9f586318deea2e70.de-de.xlf)
+* Handback Datetime: 2016-05-27 12:38:05
 * [Back to Top](#report-top)
 
 ##### <a name='38e13d0e8fa4fc5a8fa97447d5d04c57e4430e149'></a> Source: [MIMDocs\DeployUse\docfx.json](https://github.com/Microsoft/MIMDocs-pr/blob/7ba0efeab2951fa3f02d7232c99919d65a58c2ef/MIMDocs/DeployUse/docfx.json)
@@ -1183,108 +1177,87 @@
 * [Back to Top](#report-top)
 
 ##### <a name='24a7bf5bfb0a7450becd08be6743ed7ab175555965'></a> Source: [MIMDocs\DeployUse\microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/7e61e201b277a2e8ec9fee785e9e34fca3b1cb29/MIMDocs/DeployUse/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/89ffa6967e9c0d49886c095f9e48deaa71bfae28/MIMDocs/DeployUse/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)
 * Handoff File: [microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.436268391a37f93654c5a63fc781f1eae0c91603.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/4a46fe29b4edf81e643fd8fac151d3bb2cc12a34/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.436268391a37f93654c5a63fc781f1eae0c91603.de-de.xlf)
 * Handoff Datetime: 2016-05-20 00:04:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\DeployUse\microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/2bfc98082ca147dfbce5d370e5838ead5e1ebdda/MIMDocs/DeployUse/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)
-* Current Handback File: [microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.436268391a37f93654c5a63fc781f1eae0c91603.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/3b0f8009b1c633d48e8eeb878864b347d9bcb9d9/ol-handback/Microsoft/MIMDocs-pr.de-de/master/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.436268391a37f93654c5a63fc781f1eae0c91603.de-de.xlf)
-* Current Handback Datetime: 2016-05-04 08:09:25
+* Handback File: [microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.436268391a37f93654c5a63fc781f1eae0c91603.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/2775cf81853216fc19920818eae20f7c52856cf8/ol-handback/Microsoft/MIMDocs-pr.de-de/master/microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.436268391a37f93654c5a63fc781f1eae0c91603.de-de.xlf)
+* Handback Datetime: 2016-05-27 12:38:05
 * [Back to Top](#report-top)
 
 ##### <a name='a56ead9777f1dad1aa0d214a506cf1242f51e16766'></a> Source: [MIMDocs\DeployUse\microsoft-identity-manager-deploy.md](https://github.com/Microsoft/MIMDocs-pr/blob/ca7fdef81eb8a68aff46df528e1989f019f5d2a4/MIMDocs/DeployUse/microsoft-identity-manager-deploy.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\microsoft-identity-manager-deploy.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/89ffa6967e9c0d49886c095f9e48deaa71bfae28/MIMDocs/DeployUse/microsoft-identity-manager-deploy.md)
 * Handoff File: [microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/4a46fe29b4edf81e643fd8fac151d3bb2cc12a34/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.de-de.xlf)
 * Handoff Datetime: 2016-05-20 00:04:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\DeployUse\microsoft-identity-manager-deploy.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/2bfc98082ca147dfbce5d370e5838ead5e1ebdda/MIMDocs/DeployUse/microsoft-identity-manager-deploy.md)
-* Current Handback File: [microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/3b0f8009b1c633d48e8eeb878864b347d9bcb9d9/ol-handback/Microsoft/MIMDocs-pr.de-de/master/microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.de-de.xlf)
-* Current Handback Datetime: 2016-05-04 08:09:25
+* Handback File: [microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/2775cf81853216fc19920818eae20f7c52856cf8/ol-handback/Microsoft/MIMDocs-pr.de-de/master/microsoft-identity-manager-deploy.44247d56914b6ca85c7193b74b9004ace0e1246d.de-de.xlf)
+* Handback Datetime: 2016-05-27 12:38:05
 * [Back to Top](#report-top)
 
 ##### <a name='b69ea20f375869d4ad08987a08aba05913fd1db167'></a> Source: [MIMDocs\DeployUse\prepare-server-exchange.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/prepare-server-exchange.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\prepare-server-exchange.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/89ffa6967e9c0d49886c095f9e48deaa71bfae28/MIMDocs/DeployUse/prepare-server-exchange.md)
 * Handoff File: [prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/4a46fe29b4edf81e643fd8fac151d3bb2cc12a34/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.de-de.xlf)
 * Handoff Datetime: 2016-05-20 00:04:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\DeployUse\prepare-server-exchange.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/2bfc98082ca147dfbce5d370e5838ead5e1ebdda/MIMDocs/DeployUse/prepare-server-exchange.md)
-* Current Handback File: [prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/3b0f8009b1c633d48e8eeb878864b347d9bcb9d9/ol-handback/Microsoft/MIMDocs-pr.de-de/master/prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.de-de.xlf)
-* Current Handback Datetime: 2016-05-04 08:09:25
+* Handback File: [prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/2775cf81853216fc19920818eae20f7c52856cf8/ol-handback/Microsoft/MIMDocs-pr.de-de/master/prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.de-de.xlf)
+* Handback Datetime: 2016-05-27 12:38:05
 * [Back to Top](#report-top)
 
 ##### <a name='4333d587041fcfa24620812872e312c6e9dc97d868'></a> Source: [MIMDocs\DeployUse\prepare-server-sharepoint.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/prepare-server-sharepoint.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\prepare-server-sharepoint.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/89ffa6967e9c0d49886c095f9e48deaa71bfae28/MIMDocs/DeployUse/prepare-server-sharepoint.md)
 * Handoff File: [prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/4a46fe29b4edf81e643fd8fac151d3bb2cc12a34/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.de-de.xlf)
 * Handoff Datetime: 2016-05-20 00:04:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\DeployUse\prepare-server-sharepoint.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/2bfc98082ca147dfbce5d370e5838ead5e1ebdda/MIMDocs/DeployUse/prepare-server-sharepoint.md)
-* Current Handback File: [prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/3b0f8009b1c633d48e8eeb878864b347d9bcb9d9/ol-handback/Microsoft/MIMDocs-pr.de-de/master/prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.de-de.xlf)
-* Current Handback Datetime: 2016-05-04 08:09:25
+* Handback File: [prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/2775cf81853216fc19920818eae20f7c52856cf8/ol-handback/Microsoft/MIMDocs-pr.de-de/master/prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.de-de.xlf)
+* Handback Datetime: 2016-05-27 12:38:05
 * [Back to Top](#report-top)
 
 ##### <a name='2c0ff0bdbba4bcf979def8d5c7aa381947d6cc8769'></a> Source: [MIMDocs\DeployUse\prepare-server-sql2014.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/DeployUse/prepare-server-sql2014.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\prepare-server-sql2014.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/89ffa6967e9c0d49886c095f9e48deaa71bfae28/MIMDocs/DeployUse/prepare-server-sql2014.md)
 * Handoff File: [prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/4a46fe29b4edf81e643fd8fac151d3bb2cc12a34/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.de-de.xlf)
 * Handoff Datetime: 2016-05-20 00:04:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\DeployUse\prepare-server-sql2014.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/2bfc98082ca147dfbce5d370e5838ead5e1ebdda/MIMDocs/DeployUse/prepare-server-sql2014.md)
-* Current Handback File: [prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/3b0f8009b1c633d48e8eeb878864b347d9bcb9d9/ol-handback/Microsoft/MIMDocs-pr.de-de/master/prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.de-de.xlf)
-* Current Handback Datetime: 2016-05-04 08:09:25
+* Handback File: [prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/2775cf81853216fc19920818eae20f7c52856cf8/ol-handback/Microsoft/MIMDocs-pr.de-de/master/prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.de-de.xlf)
+* Handback Datetime: 2016-05-27 12:38:05
 * [Back to Top](#report-top)
 
 ##### <a name='cd4ac84af4e5416512cf546a5d23b342ebe13c3970'></a> Source: [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr/blob/af9f7f75f19bb29f2e29577c787252f6b7fabb7d/MIMDocs/DeployUse/prepare-server-ws2012r2.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/89ffa6967e9c0d49886c095f9e48deaa71bfae28/MIMDocs/DeployUse/prepare-server-ws2012r2.md)
 * Handoff File: [prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/4a46fe29b4edf81e643fd8fac151d3bb2cc12a34/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.de-de.xlf)
 * Handoff Datetime: 2016-05-20 00:04:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\DeployUse\prepare-server-ws2012r2.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/2bfc98082ca147dfbce5d370e5838ead5e1ebdda/MIMDocs/DeployUse/prepare-server-ws2012r2.md)
-* Current Handback File: [prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/3b0f8009b1c633d48e8eeb878864b347d9bcb9d9/ol-handback/Microsoft/MIMDocs-pr.de-de/master/prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.de-de.xlf)
-* Current Handback Datetime: 2016-05-04 08:09:25
+* Handback File: [prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/2775cf81853216fc19920818eae20f7c52856cf8/ol-handback/Microsoft/MIMDocs-pr.de-de/master/prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.de-de.xlf)
+* Handback Datetime: 2016-05-27 12:38:05
 * [Back to Top](#report-top)
 
 ##### <a name='b84a6c7c7b53a122eefc3846ba93b92b34edb6ce71'></a> Source: [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr/blob/b2578d50f855486183ae182330bacb688011c273/MIMDocs/DeployUse/preparing-domain.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/89ffa6967e9c0d49886c095f9e48deaa71bfae28/MIMDocs/DeployUse/preparing-domain.md)
 * Handoff File: [preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/4a46fe29b4edf81e643fd8fac151d3bb2cc12a34/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.de-de.xlf)
 * Handoff Datetime: 2016-05-20 00:04:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\DeployUse\preparing-domain.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/2bfc98082ca147dfbce5d370e5838ead5e1ebdda/MIMDocs/DeployUse/preparing-domain.md)
-* Current Handback File: [preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/3b0f8009b1c633d48e8eeb878864b347d9bcb9d9/ol-handback/Microsoft/MIMDocs-pr.de-de/master/preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.de-de.xlf)
-* Current Handback Datetime: 2016-05-04 08:09:25
+* Handback File: [preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/2775cf81853216fc19920818eae20f7c52856cf8/ol-handback/Microsoft/MIMDocs-pr.de-de/master/preparing-domain.9b77cd90d5739c58d60a5f1157edad1db6f26bb3.de-de.xlf)
+* Handback Datetime: 2016-05-27 12:38:05
 * [Back to Top](#report-top)
 
 ##### <a name='2a5810d92b29e1200c68aacdcf180229eae342cd72'></a> Source: [MIMDocs\DeployUse\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/4426a38419725d2b4f0e3d2b997f1c876a817f2f/MIMDocs/DeployUse/TOC.md)
@@ -3155,18 +3128,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='323a875aba14a238aa7cb3a0e6df192729ce53d6220'></a> Source: [MIMDocs\PlanDesign\capacity-planning-guide.md](https://github.com/Microsoft/MIMDocs-pr/blob/0ea8b3d9032a01bd6a6b1faad8ea27d2cb889fc6/MIMDocs/PlanDesign/capacity-planning-guide.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\PlanDesign\capacity-planning-guide.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/89ffa6967e9c0d49886c095f9e48deaa71bfae28/MIMDocs/PlanDesign/capacity-planning-guide.md)
 * Handoff File: [capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/4a46fe29b4edf81e643fd8fac151d3bb2cc12a34/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.de-de.xlf)
 * Handoff Datetime: 2016-05-20 00:04:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\PlanDesign\capacity-planning-guide.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/2bfc98082ca147dfbce5d370e5838ead5e1ebdda/MIMDocs/PlanDesign/capacity-planning-guide.md)
-* Current Handback File: [capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/3b0f8009b1c633d48e8eeb878864b347d9bcb9d9/ol-handback/Microsoft/MIMDocs-pr.de-de/master/capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.de-de.xlf)
-* Current Handback Datetime: 2016-05-04 08:09:25
+* Handback File: [capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/2775cf81853216fc19920818eae20f7c52856cf8/ol-handback/Microsoft/MIMDocs-pr.de-de/master/capacity-planning-guide.a5b5577289101cd375376319cbd1fa3f32f4d38f.de-de.xlf)
+* Handback Datetime: 2016-05-27 12:38:05
 * [Back to Top](#report-top)
 
 ##### <a name='1afc50be85a1f14a9260956a366f9bd7e6e1cd52221'></a> Source: [MIMDocs\PlanDesign\docfx.json](https://github.com/Microsoft/MIMDocs-pr/blob/7ba0efeab2951fa3f02d7232c99919d65a58c2ef/MIMDocs/PlanDesign/docfx.json)
@@ -3257,18 +3227,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='e33a08d77a0b5c422cdbc8c19516b55df980a2c6228'></a> Source: [MIMDocs\PlanDesign\topology-considerations.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/PlanDesign/topology-considerations.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\PlanDesign\topology-considerations.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/89ffa6967e9c0d49886c095f9e48deaa71bfae28/MIMDocs/PlanDesign/topology-considerations.md)
 * Handoff File: [topology-considerations.d6cd599c7ba227a86e53f481eef3d2a96ce028cd.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/4a46fe29b4edf81e643fd8fac151d3bb2cc12a34/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/topology-considerations.d6cd599c7ba227a86e53f481eef3d2a96ce028cd.de-de.xlf)
 * Handoff Datetime: 2016-05-20 00:04:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\PlanDesign\topology-considerations.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/2bfc98082ca147dfbce5d370e5838ead5e1ebdda/MIMDocs/PlanDesign/topology-considerations.md)
-* Current Handback File: [topology-considerations.d6cd599c7ba227a86e53f481eef3d2a96ce028cd.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/3b0f8009b1c633d48e8eeb878864b347d9bcb9d9/ol-handback/Microsoft/MIMDocs-pr.de-de/master/topology-considerations.d6cd599c7ba227a86e53f481eef3d2a96ce028cd.de-de.xlf)
-* Current Handback Datetime: 2016-05-04 08:09:25
+* Handback File: [topology-considerations.d6cd599c7ba227a86e53f481eef3d2a96ce028cd.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/2775cf81853216fc19920818eae20f7c52856cf8/ol-handback/Microsoft/MIMDocs-pr.de-de/master/topology-considerations.d6cd599c7ba227a86e53f481eef3d2a96ce028cd.de-de.xlf)
+* Handback Datetime: 2016-05-27 12:38:05
 * [Back to Top](#report-top)
 
 ##### <a name='c4f8acfe4371db3a1b2bf7b01f3aaef8d2b4ae2c229'></a> Source: [MIMDocs\reference\assign-smartcard-to-request.md](https://github.com/Microsoft/MIMDocs-pr/blob/7ba0efeab2951fa3f02d7232c99919d65a58c2ef/MIMDocs/reference/assign-smartcard-to-request.md)
@@ -3801,18 +3768,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='b3f3982ade46932b18fb730fe5c16d52cde188a1273'></a> Source: [MIMDocs\Understand\identity-manager-hybrid-reporting-azure.md](https://github.com/Microsoft/MIMDocs-pr/blob/7e61e201b277a2e8ec9fee785e9e34fca3b1cb29/MIMDocs/Understand/identity-manager-hybrid-reporting-azure.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\Understand\identity-manager-hybrid-reporting-azure.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/89ffa6967e9c0d49886c095f9e48deaa71bfae28/MIMDocs/Understand/identity-manager-hybrid-reporting-azure.md)
 * Handoff File: [identity-manager-hybrid-reporting-azure.50c26252fc76f6c50be4c477e24cfaf05cf3c4c7.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/4a46fe29b4edf81e643fd8fac151d3bb2cc12a34/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/identity-manager-hybrid-reporting-azure.50c26252fc76f6c50be4c477e24cfaf05cf3c4c7.de-de.xlf)
 * Handoff Datetime: 2016-05-20 00:04:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\Understand\identity-manager-hybrid-reporting-azure.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/2bfc98082ca147dfbce5d370e5838ead5e1ebdda/MIMDocs/Understand/identity-manager-hybrid-reporting-azure.md)
-* Current Handback File: [identity-manager-hybrid-reporting-azure.50c26252fc76f6c50be4c477e24cfaf05cf3c4c7.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/3b0f8009b1c633d48e8eeb878864b347d9bcb9d9/ol-handback/Microsoft/MIMDocs-pr.de-de/master/identity-manager-hybrid-reporting-azure.50c26252fc76f6c50be4c477e24cfaf05cf3c4c7.de-de.xlf)
-* Current Handback Datetime: 2016-05-04 08:09:25
+* Handback File: [identity-manager-hybrid-reporting-azure.50c26252fc76f6c50be4c477e24cfaf05cf3c4c7.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/2775cf81853216fc19920818eae20f7c52856cf8/ol-handback/Microsoft/MIMDocs-pr.de-de/master/identity-manager-hybrid-reporting-azure.50c26252fc76f6c50be4c477e24cfaf05cf3c4c7.de-de.xlf)
+* Handback Datetime: 2016-05-27 12:38:05
 * [Back to Top](#report-top)
 
 ##### <a name='755db60abb7859af5065e2c5ddfbfc6cfb7aeeda274'></a> Source: [MIMDocs\Understand\md.style](https://github.com/Microsoft/MIMDocs-pr/blob/7ba0efeab2951fa3f02d7232c99919d65a58c2ef/MIMDocs/Understand/md.style)
@@ -3880,18 +3844,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='df2f52159b6ff77dd9b28bb934795c685a72210d279'></a> Source: [MIMDocs\Understand\microsoft-identity-manager-2016.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/Understand/microsoft-identity-manager-2016.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\Understand\microsoft-identity-manager-2016.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/89ffa6967e9c0d49886c095f9e48deaa71bfae28/MIMDocs/Understand/microsoft-identity-manager-2016.md)
 * Handoff File: [microsoft-identity-manager-2016.c859ce21f65f43a82f84385a63d9b72e566e0aa6.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/4a46fe29b4edf81e643fd8fac151d3bb2cc12a34/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/microsoft-identity-manager-2016.c859ce21f65f43a82f84385a63d9b72e566e0aa6.de-de.xlf)
 * Handoff Datetime: 2016-05-20 00:04:08
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\Understand\microsoft-identity-manager-2016.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/2bfc98082ca147dfbce5d370e5838ead5e1ebdda/MIMDocs/Understand/microsoft-identity-manager-2016.md)
-* Current Handback File: [microsoft-identity-manager-2016.c859ce21f65f43a82f84385a63d9b72e566e0aa6.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/3b0f8009b1c633d48e8eeb878864b347d9bcb9d9/ol-handback/Microsoft/MIMDocs-pr.de-de/master/microsoft-identity-manager-2016.c859ce21f65f43a82f84385a63d9b72e566e0aa6.de-de.xlf)
-* Current Handback Datetime: 2016-05-04 08:09:25
+* Handback File: [microsoft-identity-manager-2016.c859ce21f65f43a82f84385a63d9b72e566e0aa6.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/2775cf81853216fc19920818eae20f7c52856cf8/ol-handback/Microsoft/MIMDocs-pr.de-de/master/microsoft-identity-manager-2016.c859ce21f65f43a82f84385a63d9b72e566e0aa6.de-de.xlf)
+* Handback Datetime: 2016-05-27 12:38:05
 * [Back to Top](#report-top)
 
 ##### <a name='b705688c313ca52d6af7062a858e0321ba5c9aba280'></a> Source: [MIMDocs\Understand\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/4426a38419725d2b4f0e3d2b997f1c876a817f2f/MIMDocs/Understand/TOC.md)
