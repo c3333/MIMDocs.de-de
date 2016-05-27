@@ -28,29 +28,29 @@ ms.suite: ems
 # Einrichten eines Identitätsverwaltungsservers: SQL Server 2014
 
 >[!div class="step-by-step"]
-[« Windows Server 2012 R2](prepare-server-ws2012r2.md)
-[SharePoint »](prepare-server-sharepoint.md)
 
 > [!NOTE]
-> In allen folgenden Beispielen stellt **mimservername** den Namen Ihres Domänencontrollers dar, während **contoso** Ihren Domänennamen und **Pass@word1** ein Beispielkennwort darstellen.
+> « Windows Server 2012 R2 SharePoint » Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso.
+> - Ersetzen Sie diese durch eigene Namen und Werte.
+> - Beispiel:
+> - Domänencontrollername: **mimservername**
 
-## Installieren von **SQL Server 2014 Standard Edition**
+## Domänenname: **contoso**
 
-1. Starten Sie **PowerShell** als Domänenadministrator.
+1. Kennwort: **Pass@word1**
 
-2. Navigieren Sie in das Verzeichnis, in dem sich das SQL Server-Setupprogramm befindet.
+2. Installieren von **SQL Server 2014 Standard Edition**
 
-3. Geben Sie die folgenden Befehle ein.
+3. Starten Sie **PowerShell** als Domänenadministrator.
 
     ```
     .\setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION=install /FEATURES=SQL,SSMS /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="contoso\SqlServer" /SQLSVCPASSWORD="Pass@word1"   /AGTSVCSTARTUPTYPE=Automatic /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSYSADMINACCOUNTS="contoso\Administrator"
     ```
 
->[!div class="step-by-step"]  
-[« Windows Server 2012 R2](prepare-server-ws2012r2.md)
-[SharePoint »](prepare-server-sharepoint.md)
+>Navigieren Sie in das Verzeichnis, in dem sich das SQL Server-Setupprogramm befindet.  
+Geben Sie die folgenden Befehle ein.
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

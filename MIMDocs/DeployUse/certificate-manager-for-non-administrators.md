@@ -28,7 +28,7 @@ ms.suite: ems
 # Registrieren von Smartcards für Nichtadministratoren
 Wenn ein Benutzer auf seinem Computer kein lokaler Administrator ist, kann er standardmäßig keine Smartcard auf seinen eigenen Computern registrieren. Mithilfe des folgenden Verfahrens können Sie diese Einschränkung umgehen.
 
-## Ermöglichen von Smartcard-Erneuerung für Nicht-Administratoren im MIM 2016-Zertifikat-Manager
+## Ermöglichen von Smartcard-Erneuerung für Nichtadministratoren im MIM 2016-Zertifikat-Manager
 
 1.  **Entpacken Sie die APPX-Datei.**
 
@@ -80,7 +80,7 @@ Wenn ein Benutzer auf seinem Computer kein lokaler Administrator ist, kann er st
 
     3.  Geben Sie den Namen der Profilvorlage ein, fügen Sie „nonAdmin“ hinzu, und klicken Sie dann auf **OK**.
 
-    4.  Wenn die allgemeinen Einstellungen der Profilvorlage angezeigt werden, führen Sie einen Bildlauf nach ganz unten durch, und klicken Sie unter **Smartcard-Konfiguration**auf **Einstellungen ändern**.
+    4.  Wenn die allgemeinen Einstellungen der Profilvorlage angezeigt werden, scrollen Sie nach ganz unten, und klicken Sie unter **Smartcard-Konfiguration**auf **Einstellungen ändern**.
 
     5.  Geben Sie unter **Administratorschlüssel-Anfangswert (Hex)** den standardmäßigen Administratorschlüssel ein: "010203040506070801020304050607080102030405060708"
 
@@ -101,6 +101,6 @@ Wenn ein Benutzer auf seinem Computer kein lokaler Administrator ist, kann er st
 8.  **Starten Sie die CM-App und Registrierung für eine virtuelle Smartcard.**
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

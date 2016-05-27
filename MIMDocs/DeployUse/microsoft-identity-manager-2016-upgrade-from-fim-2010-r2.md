@@ -6,7 +6,7 @@ description: Erfahren Sie, wie Sie die FIM 2010 R2-Komponenten upgraden, und dar
 keywords:
 author: kgremban
 manager: stevenpo
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -25,16 +25,22 @@ ms.suite: ems
 
 ---
 
-# Upgrade von Forefront Identity Manager 2010 R2 auf Microsoft Identity Manager 2016
-In diesem Abschnitt ist beschrieben, wie ein vorhandenes FIM 2010 R2-Testsystem auf MIM 2016 aktualisiert wird. Für die Aktualisierung werden dieselben Installationsprogramme verwendet wie für eine neue Bereitstellung.
+# Upgrade aus Forefront Identity Manager 2010 R2
 
-In diesem Abschnitt wird davon ausgegangen, dass Sie eine vorhandene FIM 2010 R2-Lösung in einer Testumgebung bereitgestellt haben. Ihre Server werden unter Windows Server 2012, Windows Server 2012 R2 oder Windows Server 2008 R2 ausgeführt, den üblichen Betriebssystemen für FIM 2010 R2-Server. Des Weiteren wird davon ausgegangen, dass alle lokalen und umgebungsbedingten Voraussetzungen (SQL Server, Exchange Server, SharePoint Services usw.) für FIM 2010 R2 konfiguriert sind.
+Wenn Sie eine Umgebung mit Forefront Identity Manager (FIM) 2010 R2 haben und Microsoft Identity Manager (MIM) 2016 ausprobieren möchten, verwenden Sie diesen Artikel als Anleitung. Es gibt drei Phasen in diesem Upgrade:
 
-1.  Der MIM-Synchronisierungsdienst (Sync) wird zunächst auf einem Server installiert und gestartet, der zu der Active Directory-Domäne gehört, und ersetzt die FIM 2010 R2-Instanz von Sync.
+1.  Installieren Sie MIM 2016 Synchronization Service (Sync) auf einem Server, der Bestandteil Ihrer Active Directory-Domäne ist. Dadurch wird die FIM 2010 R2-Instanz von Sync ersetzt.
 
-2.  Anschließend werden MIM-Dienst und -Portal, optional einschließlich dem SSPR-Registrierungsportal und dem SSPR-Dienstportal, installiert. Die Featuregruppe für privilegierte Zugriffsverwaltung wird dabei aber nicht installiert.
+2.  Installieren Sie MIM-Dienst und -Portal. An diesem Punkt haben Sie auch die Wahl, das Registrierungsportal und Dienstportal für Self-Service-Kennwortzurücksetzung (Self-Service Password Reset, SSPR) zu installieren. Anschließend wird die Privileged Access Management-Featuregruppe installiert.
 
-3.  Die MIM-Add-Ins und -Erweiterungen samt dem integrierten SSPR-Client für Windows-Anmeldung können dann auf einem separaten Computer bereitgestellt werden.
+3.  Stellen Sie die MIM-Add-Ins und -Erweiterungen auf einem separaten Computer bereit. Hierzu gehört der integrierte Client für SSPR-Windows-Anmeldung.
+
+
+In dieser Anleitung wird davon ausgegangen, dass Sie Folgendes bereits eingerichtet haben:
+- FIM 2010 R2, bereitgestellt in einer Testumgebung
+- Server mit Windows Server 2012, Windows Server 2012 R2 oder Windows Server 2008 R2
+- Lokale und umgebungsbezogene Voraussetzungen (SQL Server, Exchange Server, SharePoint Services usw.), die für FIM 2010 R2 konfiguriert sind
+
 
 ## Vorbereitung
 
@@ -201,6 +207,6 @@ In diesem Abschnitt wird davon ausgegangen, dass Sie eine vorhandene FIM 2010 R2
 Hinweis: Wenn die FIM-Add-Ins und -Erweiterungen derzeit auf den Computern der Benutzer für SSPR bereitgestellt werden, konfigurieren Sie auf keinen Fall die neuen MFA-Telefongates zur Kennwortzurücksetzung. Dies darf erst geschehen, nachdem alle FIM-Add-Ins und -Erweiterungen auf MIM 2016 aktualisiert wurden.  Da die FIM 2010 und FIM 2010 R2-Add-ins und -Erweiterungen die neuen Telefongates nicht erkennen, geben sie einen Fehler zurück. Ein Benutzer ist dann nicht in der Lage, die Zurücksetzung des Kennworts abzuschließen.
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

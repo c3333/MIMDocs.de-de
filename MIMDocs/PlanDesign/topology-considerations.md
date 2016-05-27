@@ -2,7 +2,7 @@
 # required metadata
 
 title: Überlegungen zur Topologie zum Bereitstellen von MIM | Microsoft Identity Manager
-description: Grundlegendes zu den Komponenten von MIM 2016 und Vorschläge, wie Sie diese in Ihrer Umgebung bereitstellen können. 
+description: Grundlegendes zu den Komponenten von MIM 2016 und Vorschläge, wie Sie diese in Ihrer Umgebung bereitstellen können.
 keywords:
 author: kgremban
 manager: stevenpo
@@ -59,24 +59,18 @@ In dieser Konfiguration werden MIM Synchronization Service und dessen Datenbank 
 
 
 ## Mehrschichtige Topologie mit mehreren MIM-Diensten
-Das Synchronisieren von Daten mit externen Systemen kann die Auslastung des Systems beträchtlich erhöhen und einen längeren Zeitraum für die Ausführung benötigen. Wenn die Synchronisierungskonfiguration Richtlinien mit Workflows auslöst, konkurrieren diese Richtlinien mit Endbenutzer-Workflows um Ressourcen. Solche Probleme können bei Authentifizierungsworkflows wie Kennwortzurücksetzungen besonders stark auftreten. Diese Workflows werden in Echtzeit ausgeführt, während der Endbenutzer auf die Fertigstellung des Vorgangs wartet. Sie können eine bessere Reaktionsfähigkeit für Endbenutzervorgänge bieten, indem Sie eine Instanz des MIM-Diensts für Endbenutzervorgänge und ein separates Portal für die Synchronisierung administrativer Daten bereitstellen.
+Synchronisieren von Daten mit externen Systemen kann sehr lange dauern und in diesem Zeitraum eine erhebliche zusätzliche Last für das System bringen. Wenn die Synchronisierungskonfiguration Richtlinien mit Workflows auslöst, konkurrieren diese Richtlinien mit Endbenutzer-Workflows um Ressourcen. Solche Probleme können bei Authentifizierungsworkflows wie Kennwortzurücksetzungen besonders stark auftreten. Diese Workflows werden in Echtzeit ausgeführt, während der Endbenutzer auf die Fertigstellung des Vorgangs wartet. Sie können eine bessere Reaktionsfähigkeit für Endbenutzervorgänge bieten, indem Sie eine Instanz des MIM-Diensts für Endbenutzervorgänge und ein separates Portal für die Synchronisierung administrativer Daten bereitstellen.
 
 ![Diagramm: mehrschichtige Topologie in mehreren MIM-Diensten](media/MIM-topo-multitier-multiservice.png)
 
 Wie bei der standardmäßigen mehrschichtigen Topologie können Sie die Leistung des MIM-Portals erhöhen, indem Sie einen NLB-Cluster verwenden und die Anzahl von Knoten im Cluster je nach Bedarf erhöhen.
 
-Die Gesamtleistung Ihrer MIM-Bereitstellung hängt stark von der Leistung der Computer ab, auf denen SQL Server installiert ist und die als Host für MIM Synchronization Service und die MIM-Dienstdatenbank fungieren. Befolgen Sie daher die Ratschläge in der SQL Server-Dokumentation zum Optimieren der Datenbankleistung. Weitere Informationen finden Sie in folgenden Dokumenten:
-
-- [Storage Top 10 Best Practices (Top 10 der bewährten Speichermethoden)](http://go.microsoft.com/fwlink/?LinkID=183663)
-
-- [Optimieren der Leistung von „tempdb“](http://go.microsoft.com/fwlink/?LinkID=188267)
-
-- [Bewährte Methoden für SQL Server](http://go.microsoft.com/fwlink/?LinkID=188268)
+Die Gesamtleistung Ihrer MIM-Bereitstellung hängt stark von den Computern ab, auf denen SQL Server installiert ist und die als Host für MIM Synchronization Service und die MIM-Dienstdatenbank fungieren. Befolgen Sie daher die Ratschläge in der SQL Server-Dokumentation zum Optimieren der Datenbankleistung. Weitere Informationen finden Sie in folgenden Dokumenten:
 
 ## Weitere Informationen:
 - Der zum Download bereitstehende [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) (Handbuch zur Kapazitätsplanung des Forefront Identity Manager (FIM) 2010) bietet weitere Informationen zu einem Test-Build und Leistungstestergebnissen.
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

@@ -2,7 +2,7 @@
 # required metadata
 
 title: Einrichten eines Identitätsverwaltungsservers&#58; SharePoint | Microsoft Identity Manager
-description: Installieren und konfigurieren Sie SharePoint Foundation, sodass es die MIM-Portalseite hosten kann. 
+description: Installieren und konfigurieren Sie SharePoint Foundation, sodass es die MIM-Portalseite hosten kann.
 keywords:
 author: kgremban
 manager: stevenpo
@@ -28,119 +28,115 @@ ms.suite: ems
 # Einrichten eines Identitätsverwaltungsservers: SharePoint
 
 >[!div class="step-by-step"]
-[« SQL Server 2014](prepare-server-sql2014.md)
-[Exchange Server »](prepare-server-exchange.md)
 
 > [!NOTE]
-> In allen folgenden Beispielen stellt **mimservername** den Namen Ihres Domänencontrollers dar, während **contoso** Ihren Domänennamen und **Pass@word1** ein Beispielkennwort darstellen.
+> « SQL Server 2014 Exchange Server » Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso.
+> - Ersetzen Sie diese durch eigene Namen und Werte.
+> - Beispiel:
+> - Domänencontrollername: **mimservername**
 
 
-## Installieren Sie **SharePoint Foundation 2013 mit SP1**
+## Domänenname: **contoso**
 
 > [!NOTE]
-> Damit das Installationsprogramm die erforderlichen Komponenten herunterladen kann, ist eine Internetverbindung erforderlich.
+> Kennwort: **Pass@word1** Installieren Sie **SharePoint Foundation 2013 mit SP1** Das Installationsprogramm erfordert eine Internetverbindung, um die erforderlichen Komponenten herunterzuladen.
 
-Der Server wird am Ende der Installation neu gestartet.
+Befindet sich der Computer in einem virtuellen Netzwerk, das keine Internetverbindung bietet, fügen Sie dem Computer eine weitere Netzwerkschnittstelle hinzu, die eine Verbindung mit dem Internet ermöglicht. Diese kann deaktiviert werden, nachdem die Installation abgeschlossen ist.
 
-1.  Starten Sie **PowerShell** als Domänenadministrator.
+1.  Führen Sie die folgenden Schritte aus, um SharePoint Foundation 2013 SP1 zu installieren.
 
-    -   Wechseln Sie in das Verzeichnis, in dem SharePoint entpackt wurde.
+    -   Nach Abschluss der Installation wird der Server neu gestartet.
 
-    -   Geben Sie folgenden Befehl ein:
+    -   Starten Sie **PowerShell** als Domänenadministrator.
 
         ```
         .\prerequisiteinstaller.exe
         ```
 
-2.  Nachdem die erforderlichen Komponenten für **SharePoint** installiert sind, installieren Sie **SharePoint Foundation 2013 mit SP1** , indem Sie den folgenden Befehl eingeben:
+2.  Wechseln Sie in das Verzeichnis, in dem SharePoint entpackt wurde.
 
     ```
     .\setup.exe
     ```
 
-3.  Wählen Sie den Typ für einen vollständigen Server aus.
+3.  Geben Sie folgenden Befehl ein:
 
-4.  Nachdem die Installation abgeschlossen ist, führen Sie den Assistenten aus.
+4.  Nachdem die erforderlichen Komponenten für **SharePoint** installiert sind, installieren Sie **SharePoint Foundation 2013 mit SP1** , indem Sie den folgenden Befehl eingeben:
 
-## Führen Sie den Assistenten aus, um SharePoint zu konfigurieren
+## Wählen Sie den Typ für einen vollständigen Server aus.
 
-Folgen Sie den im **Konfigurations-Assistenten für SharePoint-Produkte** erläuterten Schritten, um SharePoint für die Arbeit mit MIM zu konfigurieren.
+Nachdem die Installation abgeschlossen ist, führen Sie den Assistenten aus.
 
-1. Wechseln Sie auf die Registerkarte **Verbindung mit einer Serverfarm herstellen** , um eine neue Serverfarm zu erstellen.
+1. Führen Sie den Assistenten aus, um SharePoint zu konfigurieren
 
-2. Geben Sie diesen Server als Datenbankserver für die Konfigurationsdatenbank und *Contoso\SharePoint* als Datenbankzugriffskonto für SharePoint an.
+2. Folgen Sie den im **Konfigurations-Assistenten für SharePoint-Produkte** erläuterten Schritten, um SharePoint für die Arbeit mit MIM zu konfigurieren.
 
-3. Geben Sie ein Kennwort als Passphrase der Farmsicherheit an (die Passphrase wird später nicht in dieser Testumgebung verwendet).
+3. Wechseln Sie auf die Registerkarte **Verbindung mit einer Serverfarm herstellen** , um eine neue Serverfarm zu erstellen.
 
-4. Wenn der Konfigurations-Assistent die Konfigurationsaufgabe 10 von 10 abgeschlossen hat, klicken Sie auf „Fertig stellen“. Daraufhin wird ein Webbrowser geöffnet.
+4. Geben Sie diesen Server als Datenbankserver für die Konfigurationsdatenbank und *Contoso\SharePoint* als Datenbankzugriffskonto für SharePoint an.
 
-5. Authentifizieren Sie sich im Internet Explorer-Popup als *Contoso\Administrator* (oder mit dem entsprechenden Domänenadministratorkonto), um den Vorgang fortzusetzen.
+5. Erstellen Sie ein Kennwort für die Passphrase der Farmsicherheit.
 
-6. Starten Sie den Assistenten (innerhalb der Webanwendung), um die SharePoint-Farm zu konfigurieren.
+6. Wenn der Konfigurations-Assistent die Konfigurationsaufgabe 10 von 10 abgeschlossen hat, klicken Sie auf „Fertig stellen“. Daraufhin wird ein Webbrowser geöffnet.
 
-7. Wählen Sie die Option zum Verwenden des vorhandenen verwalteten Kontos (*Contoso\SharePoint*) aus, und klicken Sie auf **Weiter**.
+7. Authentifizieren Sie sich im Internet Explorer-Popup als *Contoso\Administrator* (oder mit dem entsprechenden Domänenadministratorkonto), um den Vorgang fortzusetzen.
 
-8. Klicken Sie im Fenster zum **Erstellen einer Websitesammlung** auf **Überspringen**.  Klicken Sie dann auf **Fertig stellen**.
+8. Starten Sie den Assistenten (innerhalb der Webanwendung), um die SharePoint-Farm zu konfigurieren.  Wählen Sie die Option zum Verwenden des vorhandenen verwalteten Kontos (*Contoso\SharePoint*) aus, und klicken Sie auf **Weiter**.
 
-## Vorbereiten von SharePoint zum Hosten des MIM-Portals
+## Klicken Sie im Fenster zum **Erstellen einer Websitesammlung** auf **Überspringen**.
 
-1. Erstellen Sie eine **SharePoint Foundation 2013-Webanwendung**.
+> [!NOTE]
+> Klicken Sie dann auf **Fertig stellen**. Vorbereiten von SharePoint zum Hosten des MIM-Portals
 
-    > [!NOTE]
-    > Zunächst wird SSL nicht konfiguriert. Achten Sie darauf, dass Sie SSL oder ähnliches konfigurieren, bevor Sie den Zugriff auf dieses Portal ermöglichen.
-
-    1. Starten Sie  **SharePoint 2013-Verwaltungsshell** , und führen Sie das folgende PowerShell-Skript aus:
-
-        ```
-        $dbManagedAccount = Get-SPManagedAccount -Identity contoso\SharePoint
-        New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool"
-        -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://corpidm.contoso.local
-        ```
-
-        2. Es wird eine Warnmeldung angezeigt, dass die klassische Windows-Authentifizierungsmethode verwendet wird, und es kann mehrere Minuten dauern, bis der letzte Befehl abgeschlossen ist.  Nach Abschluss gibt die Ausgabe die URL des neuen Portals an.  Belassen Sie das Fenster für die **SharePoint 2013-Verwaltungsshell** geöffnet, denn es wird in einer späteren Aufgabe benötigt.
-
-2. Erstellen Sie eine **SharePoint-Websitesammlung**, die dieser Webanwendung zugeordnet ist.
-
-    1. Starten Sie SharePoint 2013-Verwaltungsshell, und führen Sie das folgende PowerShell-Skript aus:
-
-        ```
-        $t = Get-SPWebTemplate -compatibilityLevel 14 -Identity "STS#1"
-        $w = Get-SPWebApplication http://corpidm.contoso.local:82
-        New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\Administrator
-        -CompatibilityLevel 14 -Name "MIM Portal" -SecondaryOwnerAlias contoso\BackupAdmin
-        $s = SpSite($w.Url)
-        $s.AllowSelfServiceUpgrade = $false
-        $s.CompatibilityLevel
-        ```
-
-        2. Vergewissern Sie sich, dass die Variable *CompatibilityLevel* das Ergebnis „14“ hat.  (Weitere Informationen finden Sie unter [Installieren von FIM 2010 R2 in SharePoint Foundation 2013](http://technet.microsoft.com/library/jj863242.aspx).) Ist das Ergebnis gleich „15“, wurde die Websitesammlung nicht für die 2010-Umgebungsversion erstellt. Löschen Sie die Websitesammlung, und erstellen Sie diese neu.
-
-3. Deaktivieren Sie den **serverseitigen SharePoint-Ansichtszustand** und die SharePoint-Aufgabe „Integritätsanalyseauftrag (Stündlich, Microsoft SharePoint Foundation-Timer, Alle Server)“, indem Sie die folgenden PowerShell-Befehle in der **SharePoint 2013-Verwaltungsshell** ausführen:
+1. Zunächst wird SSL nicht konfiguriert.
 
     ```
-    $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
-    $contentService.ViewStateOnServer = $false;
-    $contentService.Update();
-    Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
+    $dbManagedAccount = Get-SPManagedAccount -Identity contoso\SharePoint
+    New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool"
+    -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 82 -URL http://corpidm.contoso.local
     ```
 
-4. Öffnen Sie auf Ihrem Identitätsverwaltungsserver eine neue Registerkarte des Webbrowsers, navigieren Sie zu „http://localhost:82/“, und melden Sie sich als *contoso\Administrator* an.  Eine leere SharePoint-Website namens *MIM-Portal* wird angezeigt.
+    > [!NOTE] Achten Sie darauf, dass Sie SSL oder ähnliches konfigurieren, bevor Sie den Zugriff auf dieses Portal ermöglichen. Starten Sie  **SharePoint 2013-Verwaltungsshell**, und führen Sie das folgende PowerShell-Skript aus, um eine **SharePoint Foundation 2013-Webanwendung** zu erstellen. Es wird eine Warnmeldung angezeigt, in der angegeben ist, dass die klassische Windows-Authentifizierungsmethode verwendet wird, und es kann mehrere Minuten dauern, bis der letzte Befehl abgeschlossen ist.
 
-    ![Bild: MIM-Portal unter „http://localhost:82/“](media/MIM-DeploySP1.png)
+2. Nach Abschluss gibt die Ausgabe die URL des neuen Portals an.
 
-5. Kopieren Sie die URL, und öffnen Sie in Internet Explorer das Dialogfeld **Internetoptionen**. Wechseln Sie zur Registerkarte **Sicherheit**, wählen Sie **Lokales Intranet** aus, und klicken Sie auf **Websites**.
+  ```
+  $t = Get-SPWebTemplate -compatibilityLevel 14 -Identity "STS#1"
+  $w = Get-SPWebApplication http://corpidm.contoso.local:82
+  New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\Administrator
+  -CompatibilityLevel 14 -Name "MIM Portal" -SecondaryOwnerAlias contoso\BackupAdmin
+  $s = SpSite($w.Url)
+  $s.AllowSelfServiceUpgrade = $false
+  $s.CompatibilityLevel
+  ```
 
-    ![Bild: Internetoptionen](media/MIM-DeploySP2.png)
+  > [!NOTE] Belassen Sie das Fenster **SharePoint 2013-Verwaltungsshell** geöffnet, um sich später darauf zu beziehen. Starten Sie „SharePoint 2013-Verwaltungsshell“, und führen Sie das folgende PowerShell-Skript aus, um eine **SharePoint-Websitesammlung** zu erstellen.
 
-6. Klicken Sie im Fenster **Lokales Intranet** auf **Erweitert**, und fügen Sie die kopierte URL in das Textfeld **Diese Website zur Zone hinzufügen** ein. Klicken Sie auf **Hinzufügen**, und schließen Sie die Fenster.
+3. Vergewissern Sie sich, dass die Variable *CompatibilityLevel* das Ergebnis „14“ hat.
 
-7. Öffnen Sie das Programm **Verwaltungstools**, und navigieren Sie zu **Dienste**. Suchen Sie den SharePoint-Verwaltungsdienst, und starten Sie ihn, sofern dieser nicht bereits ausgeführt wird.
+  ```
+  $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
+  $contentService.ViewStateOnServer = $false;
+  $contentService.Update();
+  Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
+  ```
 
->[!div class="step-by-step"]  
-[« SQL Server 2014](prepare-server-sql2014.md)
-[Exchange Server »](prepare-server-exchange.md)
+4. Ist das Ergebnis gleich „15“, wurde die Websitesammlung nicht für die 2010-Umgebungsversion erstellt. Löschen Sie die Websitesammlung, und erstellen Sie diese neu.  Deaktivieren Sie den **serverseitigen SharePoint-Ansichtszustand** und die SharePoint-Aufgabe „Integritätsanalyseauftrag (Stündlich, Microsoft SharePoint Foundation-Timer, Alle Server)“, indem Sie die folgenden PowerShell-Befehle in der **SharePoint 2013-Verwaltungsshell** ausführen:
+
+    ![Öffnen Sie auf Ihrem Identitätsverwaltungsserver eine neue Registerkarte des Webbrowsers, navigieren Sie zu „http://localhost:82/“, und melden Sie sich als *contoso\Administrator* an.](media/MIM-DeploySP1.png)
+
+5. Eine leere SharePoint-Website namens *MIM-Portal* wird angezeigt.
+
+    ![Bild: MIM-Portal unter „http://localhost:82/“](media/MIM-DeploySP2.png)
+
+6. Kopieren Sie die URL, und öffnen Sie in Internet Explorer das Dialogfeld **Internetoptionen**. Wechseln Sie zur Registerkarte **Sicherheit**, wählen Sie **Lokales Intranet** aus, und klicken Sie auf **Websites**. Bild: Internetoptionen
+
+7. Klicken Sie im Fenster **Lokales Intranet** auf **Erweitert**, und fügen Sie die kopierte URL in das Textfeld **Diese Website zur Zone hinzufügen** ein.
+
+>Klicken Sie auf **Hinzufügen**, und schließen Sie die Fenster.  
+Öffnen Sie das Programm **Verwaltungstools**, und navigieren Sie zu **Dienste**. Suchen Sie den SharePoint-Verwaltungsdienst, und starten Sie ihn, sofern dieser nicht bereits ausgeführt wird.
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 
