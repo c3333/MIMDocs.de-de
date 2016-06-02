@@ -11903,9 +11903,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.de-de\\master\\archive\\install-mim-service-portal.bc0a636322f2b40d28e326917fd5d60c15ff855e.de-de.xlf",
+      "ArchiveFileCommit": "327413aba86e7db3815ccab8a551711ecb7fd69a",
+      "ArchiveFileDateTime": "2016-06-02T00:37:39.9443424Z",
       "ArchiveException": null
     },
     "8a99b3a291d2b145f453732a72244c43f9c535d6": {
@@ -11933,9 +11933,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.de-de\\master\\archive\\install-mim-sync.187fbc84d7198ab90d1445b38ea0a3044b228547.de-de.xlf",
+      "ArchiveFileCommit": "327413aba86e7db3815ccab8a551711ecb7fd69a",
+      "ArchiveFileDateTime": "2016-06-02T00:37:39.9443424Z",
       "ArchiveException": null
     },
     "74c61573d520f7ce6969dedefe3d484cdb2e434c": {
@@ -11963,9 +11963,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.de-de\\master\\archive\\install-mim-sync-ad-service.2a07d4547ca2bf0ca43e7ed04fa3bf20de000a33.de-de.xlf",
+      "ArchiveFileCommit": "327413aba86e7db3815ccab8a551711ecb7fd69a",
+      "ArchiveFileDateTime": "2016-06-02T00:37:39.9443424Z",
       "ArchiveException": null
     },
     "a56ead9777f1dad1aa0d214a506cf1242f51e167": {
