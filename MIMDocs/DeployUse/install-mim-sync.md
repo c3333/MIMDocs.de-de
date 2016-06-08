@@ -27,20 +27,22 @@ ms.suite: ems
 
 # Installieren von MIM 2016: MIM Synchronization Service
 
->[!div class="step-by-step"]
-[« Exchange Server](prepare-server-exchange.md)
+>[!div class="step-by-step"] [« Exchange Server](prepare-server-exchange.md)
 [MIM-Dienst und -Portal »](install-mim-service-portal.md)
 
 > [!NOTE]
-> In allen folgenden Beispielen stellt **mimservername** den Namen Ihres Domänencontrollers dar, während **contoso** Ihren Domänennamen und **Pass@word1** ein Beispielkennwort darstellen.
+> Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiel:
+> - Domänencontrollername: **mimservername**
+> - Domänenname: **contoso**
+> - Kennwort: **Pass@word1**
 
-Gehen Sie wie folgt vor, um den Microsoft Identity Manager 2016 zu installieren:
+Um den Microsoft Identity Manager 2016 zu installieren, richten Sie zuerst das Installationspaket ein:
 
-1. Melden Sie sich als *contoso\Administrator* beim CORPIDM-Server an, den Sie für die Identitätsverwaltung verwenden.
+1. Melden Sie sich beim Server, den Sie für die Identitätsverwaltung verwenden, als *contoso\Administrator* an.
 
 2. Entpacken Sie das MIM-Installationspaket, oder binden Sie die MIM-Image-DVD ein.
 
-## Installieren von MIM 2016 Synchronization Service (Sync)
+## Installieren des MIM 2016-Synchronisierungsdiensts
 
 1. Navigieren Sie im entpackten MIM-Installationsordner zum Ordner **Synchronisierungsdienst** .
 
@@ -50,7 +52,7 @@ Gehen Sie wie folgt vor, um den Microsoft Identity Manager 2016 zu installieren:
 
     ![Begrüßungsbildschirm des MIM Installations-Assistenten](media/MIM-Install1.png)
 
-4. Überprüfen Sie die Lizenzbedingungen, und klicken Sie, wenn Sie sie akzeptieren, auf **Weiter**.
+4. Überprüfen Sie die Lizenzbedingungen, und klicken Sie auf **Weiter**, um den Bedingungen zuzustimmen.
 
 5. Klicken sie auf dem Bildschirm **benutzerdefinierte Installation** auf **Weiter**.
 
@@ -76,15 +78,15 @@ Gehen Sie wie folgt vor, um den Microsoft Identity Manager 2016 zu installieren:
 
 8.  Geben Sie dem Installationsprogramm für die MIM-Synchronisierung die relevanten Sicherheitsgruppen an:
 
-    1.  Administrator = *Contoso\MIMSyncAdmins*
+    1. Administrator = *Contoso\MIMSyncAdmins*
 
-    2.  Operator = *Contoso\MIMSyncOperators*
+    2. Operator = *Contoso\MIMSyncOperators*
 
-    3.  Verbindungszeichen = *Contoso\MIMSyncJoiners*
+    3. Verbindungszeichen = *Contoso\MIMSyncJoiners*
 
-    4.  Connector „Durchsuchen“ = *Contoso\MIMSyncBrowse*
+    4. Connector „Durchsuchen“ = *Contoso\MIMSyncBrowse*
 
-    5.  WMI-Kennwortverwaltung = *contoso\MIMSyncPasswordReset*
+    5. WMI-Kennwortverwaltung = *contoso\MIMSyncPasswordReset*
 
     ![Bild: Sicherheitsgruppen](media/MIM-Install5.png)
 
@@ -92,27 +94,23 @@ Gehen Sie wie folgt vor, um den Microsoft Identity Manager 2016 zu installieren:
 
 10. Klicken Sie auf **Installieren**, um die Installation von MIM Sync zu starten.
 
-    1.  Möglicherweise wird eine Warnung bezüglich des MIM-Synchronisierungsdienstkontos angezeigt – klicken Sie dann auf **OK**.
+    1. Möglicherweise wird eine Warnung bezüglich des MIM-Synchronisierungsdienstkontos angezeigt – klicken Sie dann auf **OK**.
 
-    2.  Die MIM-Synchronisierung wird jetzt installiert.
+    2. Die MIM-Synchronisierung wird installiert.
 
-        ![Bild: Installationsstatus von MIM Sync](media/MIM-Install6.png)
-
-    3.  Ein Hinweis zum Erstellen einer Sicherung des Verschlüsselungsschlüssels wird angezeigt – klicken Sie auf **OK**, und wählen Sie dann einen Ordner zum Speichern der Sicherung des Verschlüsselungsschlüssels aus.
+    3. Ein Hinweis zum Erstellen einer Sicherung des Verschlüsselungsschlüssels wird angezeigt – klicken Sie auf **OK**, und wählen Sie dann einen Ordner zum Speichern der Sicherung des Verschlüsselungsschlüssels aus.
 
         ![Bild: Hinweis zur Sicherung des Verschlüsselungsschlüsselsatzes für MIM Sync](media/MIM-Install7.png)
 
-    4.  Wenn das Installationsprogramm die Installation erfolgreich abgeschlossen hat, klicken Sie auf **Fertig stellen**.
+    4. Wenn das Installationsprogramm die Installation erfolgreich abgeschlossen hat, klicken Sie auf **Fertig stellen**.
 
-        ![Bild: Installation von MIM Sync erfolgreich](media/MIM-Install8.png)
-
-    5.  Sie müssen sich ab- und wieder anmelden, damit Änderungen an der Gruppenmitgliedschaft wirksam werden. Klicken Sie auf **Ja** , um sich abzumelden.
+    5. Sie müssen sich ab- und wieder anmelden, damit Änderungen an der Gruppenmitgliedschaft wirksam werden. Klicken Sie auf **Ja** , um sich abzumelden.
 
 >[!div class="step-by-step"]  
 [« Exchange Server](prepare-server-exchange.md)
 [MIM-Dienst und -Portal »](install-mim-service-portal.md)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

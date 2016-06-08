@@ -27,40 +27,40 @@ ms.suite: ems
 
 # Installieren von MIM 2016: MIM-Dienst und -Portal
 
->[!div class="step-by-step"]
-[« MIM Synchronization Service](install-mim-sync.md)
-[Datenbanken synchronisieren »](install-mim-sync-ad-service.md)
+>[!div class="step-by-step"] [« MIM-Synchronisierungsdienst](install-mim-sync.md)
+[Datenbanken synchronisieren»](install-mim-sync-ad-service.md)
 
 > [!NOTE]
-> In allen folgenden Beispielen stellt **mimservername** den Namen Ihres Domänencontrollers dar, während **contoso** Ihren Domänennamen und **Pass@word1** ein Beispielkennwort darstellen.
+> Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiel:
+> - Domänencontrollername: **mimservername**
+> - Domänenname: **contoso**
+> - Kennwort: **Pass@word1**
+> - Name des Dienstkontos: **MIMService**
 
-Falls Sie im letzten Schritt das MIM-Installationspaket nicht eingerichtet haben, führen Sie diese Schritte aus, um die Komponenten von Microsoft Identity Manager 2016 zu installieren:
+Falls Sie im letzten Schritt das MIM-Installationspaket nicht eingerichtet haben, kehren Sie zurück, und installieren Sie die Komponenten von Microsoft Identity Manager 2016, bevor Sie fortfahren:
 
-1. Melden Sie sich als *contoso\Administrator* beim CORPIDM-Server an, den Sie für die Identitätsverwaltung verwenden.
-
-2. Entpacken Sie das MIM-Installationspaket, oder binden Sie die MIM-Image-DVD ein.
 
 ## Konfigurieren des MIM-Diensts und -Portals für die Installation
 
-1.  Führen Sie das **Installationsprogramm für den MIM-Dienst und das -Portal** aus dem entpackten Unterordner **Dienst und Portal** aus.
+1. Führen Sie das **Installationsprogramm für den MIM-Dienst und das -Portal** aus dem entpackten Unterordner **Dienst und Portal** aus.
 
-2.  Klicken Sie im Begrüßungsbildschirm auf **Weiter**.
+2. Klicken Sie im Begrüßungsbildschirm auf **Weiter**.
 
-3.  Lesen Sie den Lizenzvertrag für Endbenutzer, und klicken Sie, sofern Sie die Lizenzbedingungen akzeptieren, auf **Weiter**.
+3. Lesen Sie die Microsoft-Software-Lizenzbedingungen, und klicken Sie, sofern Sie die Lizenzbedingungen akzeptieren, auf **Weiter**.
 
-4.  Klicken Sie im MIM-Bildschirm für das **Programm zur Verbesserung der Benutzerfreundlichkeit** auf **Weiter**.
+4. Klicken Sie im MIM-Bildschirm für das **Programm zur Verbesserung der Benutzerfreundlichkeit** auf **Weiter**.
 
-5.  Stellen Sie beim Auswählen der Komponentenfunktionen für diese Bereitstellung sicher, dass Sie die MIM-Dienst- (mit Ausnahme von MIM-Berichterstellung) und die MIM-Portalfunktionen einschließen. Sie können auch das MIM-Kennwortzurücksetzungsportal und den MIM-Benachrichtigungsdienst für Kennwortänderungen auswählen.
+5. Stellen Sie beim Auswählen der Komponentenfunktionen für diese Bereitstellung sicher, dass Sie die MIM-Dienst- (mit Ausnahme von MIM-Berichterstellung) und die MIM-Portalfunktionen einschließen. Sie können auch das MIM-Kennwortzurücksetzungsportal und den MIM-Benachrichtigungsdienst für Kennwortänderungen auswählen.
 
-6.  Geben Sie auf der Seite **Configure the MIM database connection** (Konfigurieren der MIM-Datenbankverbindung) **Create a new database** (Erstellen einer neuen Datenbank) an.
+6. Wählen Sie auf der Seite **Konfigurieren der MIM-Datenbankverbindung** die Option **Neue Datenbank erstellen** aus.
 
     ![Bild: Konfigurieren der MIM-Datenbankverbindung](media/MIM-Install10.png)
 
-7.  Geben Sie bei **Konfigurieren der E-Mail-Server-Verbindung**, den Namen Ihres Exchange-Servers als **Mailserver** an. Falls Sie keinen E-Mail-Server konfiguriert haben, geben Sie „localhost“ als Namen des E-Mail-Servers an, und deaktivieren Sie die oberen zwei Kontrollkästchen. Klicken Sie auf **Weiter**.
+7. Geben Sie bei **Konfigurieren der E-Mail-Server-Verbindung**, den Namen Ihres Exchange-Servers als **Mailserver** an. Falls Sie keinen E-Mail-Server konfiguriert haben, verwenden Sie **localhost** als Namen für den E-Mail-Server, und deaktivieren Sie die oberen zwei Kontrollkästchen. Klicken Sie auf **Weiter**.
 
     ![Bild: Konfigurieren der E-Mail-Server-Verbindung](media/MIM-Install11.png)
 
-8.  Geben Sie an, dass Sie ein neues selbstsigniertes Zertifikat generieren möchten, oder wählen Sie das entsprechende Zertifikat.
+8. Geben Sie an, dass Sie ein neues selbstsigniertes Zertifikat generieren möchten, oder wählen Sie das entsprechende Zertifikat.
 
 9. Geben Sie den zu verwendenden Dienstkontonamen an, z.B. *MIMService*, sowie das Dienstkontokennwort, z.B. *Pass@word1*, Ihre Dienstkontodomäne, z.B. *contoso*, und das Dienst-E-Mail-Konto, z.B. *contoso*.
 
@@ -110,8 +110,6 @@ Falls Sie im letzten Schritt das MIM-Installationspaket nicht eingerichtet haben
 
 Wenn alle Vorinstallationsdefinitionen bereit sind, klicken Sie auf **Installieren**, um mit der Installation der ausgewählten **Dienst- und Portal**-Komponenten zu beginnen.
 
-![Bild: Installieren des MIM-Diensts und Portals](media/MIM-Install16.png)
-
 Nach Abschluss der Installation stellen Sie sicher, dass das MIM-Portal aktiv ist.
 
 1. Starten Sie den Internet Explorer, und stellen Sie über *http://corpidm.contoso.local:82/identitymanagement* eine Verbindung mit dem MIM-Portal her. Beachten Sie, dass es beim ersten Besuch der Seite möglicherweise zu einer kurzen Verzögerung kommen kann.
@@ -150,14 +148,13 @@ Nach Abschluss der Installation stellen Sie sicher, dass das MIM-Portal aktiv is
 
     7.  Schließen Sie die **Systemsteuerung**.
 
-> [!NOTE]
-> Optional: Jetzt können Sie MIM-Add-Ins und -Erweiterungen installieren.
+> [!NOTE] Optional: An dieser Stelle können Sie MIM-Add-Ins und -Erweiterungen installieren.
 
 >[!div class="step-by-step"]  
-[« MIM Synchronization Service](install-mim-sync.md)
+[« MIM-Synchronisierungsdienst](install-mim-sync.md)
 [Datenbanken synchronisieren »](install-mim-sync-ad-service.md)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

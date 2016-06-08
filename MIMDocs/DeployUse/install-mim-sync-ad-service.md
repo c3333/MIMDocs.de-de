@@ -27,11 +27,13 @@ ms.suite: ems
 
 # Installieren von MIM 2016: Synchronisieren von Active Directory und MIM-Dienst
 
->[!div class="step-by-step"]
-[« MIM-Dienst und -Portal](install-mim-service-portal.md)
+>[!div class="step-by-step"] [« MIM-Dienst und -Portal](install-mim-service-portal.md)
 
 > [!NOTE]
-> In allen folgenden Beispielen stellt **mimservername** den Namen Ihres Domänencontrollers dar, während **contoso** Ihren Domänennamen und **Pass@word1** ein Beispielkennwort darstellen.
+> Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiel:
+> - Domänencontrollername: **mimservername**
+> - Domänenname: **contoso**
+> - Kennwort: **Pass@word1**
 
 Standardmäßig sind für MIM Synchronization Service (Sync) keine Connectors konfiguriert.  Ein typischer erster Schritt besteht darin, die MIM-Dienstdatenbank mithilfe von MIM Sync mit vorhandenen Active Directory-Konten aufzufüllen. Dazu verwenden Sie die MIM-Synchronisierungsdienstanwendung.
 
@@ -40,8 +42,7 @@ Der MIM-Verwaltungs-Agent (Management Agent; MA) verbindet MIM Sync mit dem MIM-
 
 Wenn Sie einen MIM-Verwaltungs-Agent konfigurieren, müssen Sie ein Benutzerkonto angeben. Dieses Dokument verwendet **MIMMA** als Namen für dieses Konto.
 
-> [!CAUTION]
-> Das Konto, das Sie für Ihren MIM-Verwaltungs-Agent verwenden, muss dasselbe Konto wie das sein, das Sie während der Installation des MIM-Diensts angegeben haben.
+> [!NOTE] Das Konto, das Sie für Ihren MIM-Verwaltungs-Agent verwenden, muss dasselbe Konto sein wie das Konto, das Sie während der Installation des MIM-Diensts angegeben haben.
 
 ###So erstellen Sie den MIM MA
 
@@ -89,19 +90,15 @@ Wenn Sie einen MIM-Verwaltungs-Agent konfigurieren, müssen Sie ein Benutzerkont
 
 8.  Fügen Sie auf der Seite **Objekttypzuordnungen konfigurieren** die folgende Zuordnung hinzu, und klicken Sie dann auf **Weiter**
 
-    -   Wählen Sie in der Liste **Objekttyp der Datenquelle** den Eintrag **Person** aus.
-
-    -   Um das Dialogfeld „Zuordnung“ zu öffnen, klicken Sie auf **Zuordnung hinzufügen**.
-
-    -   Wählen Sie in der Liste **Metaverse-Objekttyp** den Eintrag **Person** aus.
-
-    -   Um das Dialogfeld „Zuordnung“ zu schließen, klicken Sie auf **OK**.
+    - Wählen Sie in der Liste **Objekttyp der Datenquelle** den Eintrag **Person** aus.
+    - Klicken Sie auf **Zuordnung hinzufügen**, um das Dialogfeld „Zuordnung“ zu öffnen.
+    - Wählen Sie in der Liste **Metaverse-Objekttyp** den Eintrag **Person** aus.
+    - Klicken Sie auf **OK**, um das Dialogfeld „Zuordnung“ zu schließen.
 
 9.  Wenden Sie auf der Seite **Attributfluss konfigurieren** die folgenden Attributflusszuordnungen an, und klicken Sie dann auf **Weiter**
 
-    ||||
-    |-|-|-|
     | **Flussrichtung** | **Datenquellenattribut** | **Metaverse-Attribut** |
+    |-|-|-|
     |importieren|importieren|accountName|
     |importieren|importieren|company|
     |importieren|importieren|displayName|
@@ -124,45 +121,36 @@ Wenn Sie einen MIM-Verwaltungs-Agent konfigurieren, müssen Sie ein Benutzerkont
 
 10.  Wählen Sie als Objekttyp der Datenquelle **Person** aus.
 
-    -   Select **Person** as the Metaverse object type.
+    -   Wählen Sie als Metaverse-Objekttyp **Person** aus.
 
-    -   Select **Direct** as the Mapping Type.
+    -   Wählen Sie als Zuordnungstyp **Direkt** aus.
 
-    -   For each row in the previous table, complete the following steps:
+    -   Führen Sie für jede Zeile in der vorherigen Tabelle folgende Schritte aus:
 
-        -   Select the **Flow direction** shown for that row in the table.
+        -   Wählen Sie die für diese Zeile in der Tabelle angezeigte **Flussrichtung** aus.
 
-        -   Select the **Data source attribute** shown for that row in the table.
+        -   Wählen Sie das für diese Zeile in der Tabelle angezeigte **Datenquellenattribut** aus.
 
-        -   Select the **Metaverse attribute** shown for that row in the table.
+        -   Wählen Sie das für diese Zeile in der Tabelle angezeigte **Metaverse-Attribut** aus.
 
-        -   To apply the flow mapping, click **New**.
+        -   Um die Flusszuordnung anzuwenden, klicken Sie auf **Neu**.
 
-    -   Select **Group** as the data source type and as the metaverse object type.
+    -   Wählen Sie **Gruppe** als Datenquellentyp und als Metaverse-Objekttyp aus.
 
-    -   Select **Direct** as the Mapping Type.
+    -   Wählen Sie als Zuordnungstyp **Direkt** aus.
 
-    -   For each row in the following table, complete these steps:
+    -   Führen Sie für jede Zeile in der folgenden Tabelle diese Schritte aus:
 
-        -   Select the **Flow direction** shown for that row in the table.
+        -   Wählen Sie die für diese Zeile in der Tabelle angezeigte **Flussrichtung** aus.
 
-        -   Select the **Data source attribute** shown for that row in the table.
+        -   Wählen Sie das für diese Zeile in der Tabelle angezeigte **Datenquellenattribut** aus.
 
-        -   Select the **Metaverse attribute** shown for that row in the table.
+        -   Wählen Sie das für diese Zeile in der Tabelle angezeigte **Metaverse-Attribut** aus.
 
-        -   To apply the flow mapping, click **New**.
+        -   Um die Flusszuordnung anzuwenden, klicken Sie auf **Neu**.
 
-    | Flow Direction | Data Source Attribute | Metaverse Attribute |
-    |-|-|-|
-    | Export | AccountName | accountName |
-    | Export | DisplayName | displayName |
-    | Export | Domain | domain |
-    | Export | Scope | scope |
-    | Export | Type | type |
-    | Export | Member | member |
-    | Export | MembershipLocked | membershipLocked |
-    | Export | MembershipAddWorkflow | membershipAddWorkflow |
-    | Export | Manager | manager |
+    | Flow Direction | Data Source Attribute | Metaverse Attribute | |-|-|-|
+    | Export | AccountName | accountName | | Export | DisplayName | displayName | | Export | Domain | domain | | Export | Scope | scope | | Export | Type | type | | Export | Member | member | | Export | MembershipLocked | membershipLocked | | Export | MembershipAddWorkflow | membershipAddWorkflow | | Export | Manager | manager |
 
 11.  Klicken Sie auf der Seite **Aufheben der Bereitstellung konfigurieren** auf **Weiter**
 
@@ -182,7 +170,7 @@ Der Active Directory-Verwaltungs-Agent ist ein Connector für Active Directory-D
 
     - Gesamtstrukturname: contoso.local
     - Benutzername: administrator
-    - Kennwort: &lt;Kontokennwort&gt;
+    - Kennwort: &lt;das Kontokennwort&gt;
     - Domäne: contoso
 
 4. Geben Sie auf der Seite **Verzeichnispartitionen konfigurieren** die folgenden Einstellungen an, und klicken Sie dann auf **Weiter**:
@@ -346,18 +334,18 @@ So erstellen Sie die Synchronisierungsregel „AD-Benutzer eingehend“:
 
     Führen Sie für jede Zeile in dieser Tabelle die folgenden Schritte aus:
 
-    -   Um das Dialogfeld „Flussdefinition“ zu öffnen, klicken Sie auf **Neuer Attributfluss**.
+    - Um das Dialogfeld „Flussdefinition“ zu öffnen, klicken Sie auf **Neuer Attributfluss**.
 
-    -   Wählen Sie auf der Registerkarte **Quelle** das für diese Zeile in der Tabelle angezeigte Attribut aus.
+    - Wählen Sie auf der Registerkarte **Quelle** das für diese Zeile in der Tabelle angezeigte Attribut aus.
 
-    -   Wählen Sie auf der Registerkarte **Ziel** das für diese Zeile in der Tabelle angezeigte Attribut aus.
+    - Wählen Sie auf der Registerkarte **Ziel** das für diese Zeile in der Tabelle angezeigte Attribut aus.
 
-    -   Um die Attributflusskonfiguration anzuwenden, klicken Sie auf **OK**.
+    - Um die Attributflusskonfiguration anzuwenden, klicken Sie auf **OK**.
 
 8. Klicken Sie in der Registerkarte **Zusammenfassung** auf **Absenden**.
 
 ## Initialisieren der Testumgebung
-Bevor Sie Ihre Konfiguration mit Ihren AD-Daten testen können, müssen Sie die Konfiguration initialisieren. Dieser Prozess besteht aus vier Schritten:
+Vier Schritte sind erforderlich, bevor Sie die MIM-Konfiguration mit Active Directory-Daten testen können:
 
 ### Aktivieren der Bereitstellung
 
@@ -373,13 +361,12 @@ Bevor Sie Ihre Konfiguration mit Ihren AD-Daten testen können, müssen Sie die 
 
 Führen Sie einen vollständigen Synchronisierungszyklus auf diesem Connector aus. Der vollständige Zyklus besteht aus den folgenden Ausführungsprofilen:
 
-    -   Full Import
+- Vollständiger Import
+- Vollständige Synchronisierung
+- Exportieren
+- Deltaimport
 
-    -   Full Synchronization
-
-    -   Export
-
-    -   Delta Import
+Führen Sie diese Schritte aus, um alle vier Ausführungsprofile auszuführen.
 
 1. Öffnen Sie den Synchronization Service Manager, und klicken Sie im Menü **Extras** auf **Verwaltungs-Agents**.
 
@@ -403,13 +390,9 @@ Passen Sie die Attributflussrangfolge für die von diesem Connector beigetragene
 
 ### Initialisieren des ADMA
 
-Um den Active Directory Connector zu initialisieren, müssen Sie einen vollständigen Import und eine vollständige Synchronisierung für diesen ausführen. Der vollständige Import ist erforderlich, um die vorhandenen Objekte aus AD in den Connectorbereich zu übertragen. Die vollständige Synchronisierung ist erforderlich, weil sich die Synchronisierungsregeln durch das Projizieren der neuen Synchronisierungsregeln aus dem MIM-Connectorbereich MIM in die Metaverse geändert haben. Sie müssen
+Um den Active Directory Connector zu initialisieren, müssen Sie einen vollständigen Import und eine vollständige Synchronisierung für diesen ausführen. Der vollständige Import überträgt die vorhandenen Objekte aus AD in den Connectorbereich. Bei der vollständigen Synchronisierung werden die Synchronisierungsregeln aktualisiert, damit sie mit denjenigen des MIM-Connectors übereinstimmen.
 
-    -   Full Import
-
-    -   Full Synchronization
-
-1. den Synchronization Service Manager öffnen, und im Menü **Extras** auf **Verwaltungs-Agents** klicken.
+1. Öffnen Sie den Synchronisierungsdienst-Manager, und klicken Sie im Menü **Extras** auf **Verwaltungs-Agents**.
 
 2. Wählen Sie in der Liste **Verwaltungs-Agents** den Eintrag **ADMA** aus.
 
@@ -425,32 +408,29 @@ Um den Active Directory Connector zu initialisieren, müssen Sie einen vollstän
 
 ### Auffüllen der MIM-Dienstdatenbank
 
-Um die MIM-Dienstdatenbank mit den Objekten aufzufüllen, müssen Sie einen Synchronisierungszyklus für den MIMMA-Connector ausführen. Der Zyklus besteht aus der Ausführung der folgenden Ausführungsprofile:
+Um die MIM-Dienstdatenbank mit den Objekten aufzufüllen, müssen Sie einen Synchronisierungszyklus für den MIMMA-Connector ausführen. Der Zyklus besteht aus:
 
-    -   Export
+- Exportieren
+- Vollständiger Import
+- Vollständige Synchronisierung
 
-    -   Full Import
+Führen Sie diese Schritte aus, um alle drei Ausführungsprofile auszuführen.
 
-    -   Full Sync
+1. Öffnen Sie den Synchronisierungsdienst-Manager, und klicken Sie im Menü **Extras** auf **Verwaltungs-Agents**.
 
-    1. Open the Synchronization Service Manager and, on the **Tools** menu, click **Management Agents**.
+2. Wählen Sie in der Liste **Verwaltungs-Agents** den Eintrag **MIMMA** aus.
 
-    2. In the **Management Agents** list, select **MIMMA**.
+3. Klicken Sie im Menü **Aktionen** auf **Ausführen**, um das Dialogfeld „Verwaltungs-Agent ausführen“ zu öffnen.
 
-    3. To open the Run Management Agent dialog box, on the **Actions** menu, click **Run**.
+4. Führen Sie jeden der folgenden Schritte für jedes oben aufgeführte Ausführungsprofil aus:
 
-    4. For each run profile listed above, complete the following steps:
+    - Klicken Sie im Menü **Aktionen** auf **Ausführen**, um das Dialogfeld „Verwaltungs-Agent ausführen“ zu öffnen.
+    - Wählen Sie aus der Liste **Ausführungsprofile** das Ausführungsprofil aus, das Sie ausführen möchten.
+    - Klicken Sie auf **OK**, um das Ausführungsprofil zu starten.
 
-        - To open the Run Management Agent dialog box, on the **Actions** menu, click **Run**.
-
-        - In the **Run profiles** list, select the run profile you want to run.
-
-        - To start the run profile, click **OK**.
-
->[!div class="step-by-step"]
-[« MIM-Dienst und -Portal](install-mim-service-portal.md)
+>[!div class="step-by-step"] [« MIM-Dienst und -Portal](install-mim-service-portal.md)
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 
