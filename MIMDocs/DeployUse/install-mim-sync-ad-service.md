@@ -97,27 +97,17 @@ Wenn Sie einen MIM-Verwaltungs-Agent konfigurieren, müssen Sie ein Benutzerkont
 
 9.  Wenden Sie auf der Seite **Attributfluss konfigurieren** die folgenden Attributflusszuordnungen an, und klicken Sie dann auf **Weiter**
 
-    | **Flussrichtung** | **Datenquellenattribut** | **Metaverse-Attribut** |
+    | **Datenquellenattribut** | **Flussrichtung** | **Metaverse-Attribut** |
     |-|-|-|
-    |importieren|importieren|accountName|
-    |importieren|importieren|company|
-    |importieren|importieren|displayName|
-    |importieren|importieren|employeeID|
-    |importieren|importieren|employeeTyp|
-    |importieren|importieren|firstName|
-    |importieren|importieren|lastName|
-    |importieren|importieren|Manager|
-    |importieren|importieren|objectSid|
-    |Exportieren|Exportieren|accountName|
-    |Exportieren|Exportieren|company|
-    |Exportieren|Exportieren|displayName|
-    |Exportieren|Exportieren|Domäne|
-    |Exportieren|Exportieren|employeeID|
-    |Exportieren|Exportieren|employeeTyp|
-    |Exportieren|Exportieren|firstName|
-    |Exportieren|Exportieren|lastName|
-    |Exportieren|Exportieren|manager|
-    |Exportieren|Exportieren|objectSid|
+    | AccountName | Exportieren | accountName |
+    | DisplayName | Exportieren | displayName |
+    | Domain | Exportieren | Domäne |
+    | EmployeeID | Exportieren | employeeID |
+    | EmployeeTyp | Exportieren | employeeTyp |
+    | E-Mail | Exportieren | mail |
+    | FirstName | Exportieren | firstName |
+    | LastName | Exportieren | lastName |
+    | ObjectSID | Exportieren | objectSid |
 
 10.  Wählen Sie als Objekttyp der Datenquelle **Person** aus.
 
@@ -149,8 +139,27 @@ Wenn Sie einen MIM-Verwaltungs-Agent konfigurieren, müssen Sie ein Benutzerkont
 
         -   Um die Flusszuordnung anzuwenden, klicken Sie auf **Neu**.
 
-    | Flow Direction | Data Source Attribute | Metaverse Attribute | |-|-|-|
-    | Export | AccountName | accountName | | Export | DisplayName | displayName | | Export | Domain | domain | | Export | Scope | scope | | Export | Type | type | | Export | Member | member | | Export | MembershipLocked | membershipLocked | | Export | MembershipAddWorkflow | membershipAddWorkflow | | Export | Manager | manager |
+    | **Datenquellenattribut** | **Flussrichtung** | **Metaverse-Attribut** |
+    |-|-|-|
+    | AccountName | Exportieren | accountName |
+    | DisplayName | Exportieren | displayName |
+    | Domain | Exportieren | Domäne |
+    | E-Mail | Exportieren | mail |
+    | MailNickName | Exportieren | mailNickName |
+    | Mitglied | Exportieren | Element |
+    | ObjectSID | Exportieren | objectSid |
+    | Bereich | Exportieren | scope |
+    | Typ | Exportieren | type |
+    | MitgliedshipAddWorkflow | Exportieren | membershipAddWorkflow |
+    | MitgliedshipLocked | Exportieren | membershipLocked |
+    | DisplayName | importieren | displayName |
+    | Bereich | importieren | scope |
+    | Typ | importieren | type |
+    | Mitglied | importieren | Element |
+    | AccountName | importieren | accountName |
+    | DisplayedOwner | importieren | displayedOwner |
+    | MailNickName | importieren | mailNickName |
+
 
 11.  Klicken Sie auf der Seite **Aufheben der Bereitstellung konfigurieren** auf **Weiter**
 
@@ -431,6 +440,6 @@ Führen Sie diese Schritte aus, um alle drei Ausführungsprofile auszuführen.
 >[!div class="step-by-step"] [« MIM-Dienst und -Portal](install-mim-service-portal.md)
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO1-->
 
 
