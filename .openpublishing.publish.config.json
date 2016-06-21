@@ -63,6 +63,13 @@
             }
         }
     ],
+    "dependent_repositories": [
+      {
+         "path_to_root": "_themes",
+         "url": "https://github.com/Microsoft/templates.docs.msft.de-de",
+         "branch": "master"
+      }
+    ],
     "notification_subscribers": [""],
     "branches_to_filter": ["live"]
 }
