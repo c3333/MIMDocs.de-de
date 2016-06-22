@@ -27,7 +27,8 @@ ms.suite: ems
 
 # Installieren von MIM 2016: MIM-Dienst und -Portal
 
->[!div class="step-by-step"] [« MIM-Synchronisierungsdienst](install-mim-sync.md)
+>[!div class="step-by-step"] 
+[« MIM-Synchronisierungsdienst](install-mim-sync.md)
 [Datenbanken synchronisieren»](install-mim-sync-ad-service.md)
 
 > [!NOTE]
