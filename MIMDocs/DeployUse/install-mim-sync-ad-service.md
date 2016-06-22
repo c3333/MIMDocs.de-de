@@ -27,7 +27,8 @@ ms.suite: ems
 
 # Installieren von MIM 2016: Synchronisieren von Active Directory und MIM-Dienst
 
->[!div class="step-by-step"] [« MIM-Dienst und -Portal](install-mim-service-portal.md)
+>[!div class="step-by-step"] 
+[« MIM-Dienst und -Portal](install-mim-service-portal.md)
 
 > [!NOTE]
 > Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiel:
@@ -437,7 +438,8 @@ Führen Sie diese Schritte aus, um alle drei Ausführungsprofile auszuführen.
     - Wählen Sie aus der Liste **Ausführungsprofile** das Ausführungsprofil aus, das Sie ausführen möchten.
     - Klicken Sie auf **OK**, um das Ausführungsprofil zu starten.
 
->[!div class="step-by-step"] [« MIM-Dienst und -Portal](install-mim-service-portal.md)
+>[!div class="step-by-step"] 
+[« MIM-Dienst und -Portal](install-mim-service-portal.md)
 
 
 <!--HONumber=Jun16_HO1-->
