@@ -1,5 +1,5 @@
 {
-  "LastProcessedCommit": "699980362252889bd29a68788b8bfdd013cde696",
+  "LastProcessedCommit": "6ebc30ad870a39cb943360a5ed8e6773b8d87aa9",
   "LastTranslatedCommit": "d5983ce9ffa55fdac580b01a647665e5b10ced07",
   "Items": {
     "c1e15c9548e46cbbff7810e63478074ceeb06152": {
@@ -15518,6 +15518,40 @@
       "HandoffFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.de-de\\master\\TOC.cf3c9303083fb125b50bea7db798a930a73afc51.de-de.xlf",
       "HandoffFileCommit": "5aae39e5c943c86b059c3e33778f8ae724f9666e",
       "HandoffDateTime": "2016-06-21T22:46:12.7270753Z",
+      "HandoffPriority": "",
+      "HandoffException": null,
+      "HandoffFailureTimes": 0,
+      "TargetFileCommit": null,
+      "TargetFilePath": null,
+      "HandbackFilePath": null,
+      "HandbackFileCommit": null,
+      "HandbackDateTime": "0001-01-01T00:00:00",
+      "HandbackException": null,
+      "HandbackFailureTimes": 0,
+      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": null,
+      "ArchiveFileCommit": null,
+      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveException": null,
+      "BilingualFilePath": null,
+      "BilingualFileCommit": null,
+      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualException": null
+    },
+    "f589140e0feac52474256e7ab29b9d3a7a36c5ec": {
+      "FileHash": "f589140e0feac52474256e7ab29b9d3a7a36c5ec",
+      "SourceFileCommit": "0bbdacbfc5b912221257a9425db13804d6dd6a25",
+      "SourceFilePath": "MIMDocs\\index.md",
+      "HandoffReason": 1,
+      "DependencyFrom": null,
+      "TokenReference": null,
+      "FilePathList": [
+        "MIMDocs\\index.md"
+      ],
+      "HasMetadata": true,
+      "HandoffFilePath": "ol-handoff\\Microsoft\\MIMDocs-pr.de-de\\master\\index.a54b2324d63a6d513b6900195023b9a8089553b4.de-de.xlf",
+      "HandoffFileCommit": "9bd075de349d2de6e470a31eb9f2a5677044b37b",
+      "HandoffDateTime": "2016-06-23T22:46:45.1575084Z",
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
