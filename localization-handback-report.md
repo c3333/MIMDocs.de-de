@@ -21,7 +21,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/2775cf81853216fc19920818eae20f7c52856cf8/ol-handback/Microsoft/MIMDocs-pr.de-de/master/prepare-server-exchange.62b650aec624862b1ad85b574bfdb8525ebc36e5.de-de.xlf)
-* Handback Datetime: 2016-06-27 20:47:05
+* Handback Datetime: 2016-06-27 21:14:54
 * Handback Error: [handback_transformer_version_mismatch_with_handoff_transformer_version](#b69ea20f375869d4ad08987a08aba05913fd1db167handback_transformer_version_mismatch_with_handoff_transformer_version)
 * [Back to Top](#report-top)
 
@@ -34,7 +34,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/2775cf81853216fc19920818eae20f7c52856cf8/ol-handback/Microsoft/MIMDocs-pr.de-de/master/prepare-server-sharepoint.ea9bf41d1869c4bf8841649fee7599cbc80b640e.de-de.xlf)
-* Handback Datetime: 2016-06-27 20:47:05
+* Handback Datetime: 2016-06-27 21:14:54
 * Handback Error: [handback_transformer_version_mismatch_with_handoff_transformer_version](#4333d587041fcfa24620812872e312c6e9dc97d868handback_transformer_version_mismatch_with_handoff_transformer_version)
 * [Back to Top](#report-top)
 
@@ -47,7 +47,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/2775cf81853216fc19920818eae20f7c52856cf8/ol-handback/Microsoft/MIMDocs-pr.de-de/master/prepare-server-sql2014.908ce04c42d7be500304a71be06bc4b1acfdd6b7.de-de.xlf)
-* Handback Datetime: 2016-06-27 20:47:05
+* Handback Datetime: 2016-06-27 21:14:54
 * Handback Error: [handback_transformer_version_mismatch_with_handoff_transformer_version](#2c0ff0bdbba4bcf979def8d5c7aa381947d6cc8769handback_transformer_version_mismatch_with_handoff_transformer_version)
 * [Back to Top](#report-top)
 
@@ -60,7 +60,7 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/2775cf81853216fc19920818eae20f7c52856cf8/ol-handback/Microsoft/MIMDocs-pr.de-de/master/prepare-server-ws2012r2.da656f0c9d903e4ab85b248548bd985fcaa0c74a.de-de.xlf)
-* Handback Datetime: 2016-06-27 20:47:05
+* Handback Datetime: 2016-06-27 21:14:54
 * Handback Error: [handback_transformer_version_mismatch_with_handoff_transformer_version](#cd4ac84af4e5416512cf546a5d23b342ebe13c3970handback_transformer_version_mismatch_with_handoff_transformer_version)
 * [Back to Top](#report-top)
 
