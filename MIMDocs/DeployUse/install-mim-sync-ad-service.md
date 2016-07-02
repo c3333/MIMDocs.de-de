@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Installieren von MIM 2016&#58; Synchronisieren von Active Directory und MIM-Dienst| Microsoft Identity Manager
 description: Verwenden Sie Verwaltungs-Agents und MIM Synchronization Service, um Ihr Active Directory und Ihre MIM-Datenbanken zu synchronisieren.
-keywords:
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,22 +10,18 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8fd779bcc4d41b6e67d0fa31aa0f37c4ea2b410a
+ms.openlocfilehash: f4e94980c6a03b08221fd46e19c421cce226086d
+
 
 ---
 
 # Installieren von MIM 2016: Synchronisieren von Active Directory und MIM-Dienst
 
->[!div class="step-by-step"] 
+>[!div class="step-by-step"]
 [« MIM-Dienst und -Portal](install-mim-service-portal.md)
 
 > [!NOTE]
@@ -43,7 +37,8 @@ Der MIM-Verwaltungs-Agent (Management Agent; MA) verbindet MIM Sync mit dem MIM-
 
 Wenn Sie einen MIM-Verwaltungs-Agent konfigurieren, müssen Sie ein Benutzerkonto angeben. Dieses Dokument verwendet **MIMMA** als Namen für dieses Konto.
 
-> [!NOTE] Das Konto, das Sie für Ihren MIM-Verwaltungs-Agent verwenden, muss dasselbe Konto sein wie das Konto, das Sie während der Installation des MIM-Diensts angegeben haben.
+> [!NOTE]
+> Das Konto, das Sie für Ihren MIM-Verwaltungs-Agent verwenden, muss dasselbe Konto wie das sein, das Sie während der Installation des MIM-Diensts angegeben haben.
 
 ###So erstellen Sie den MIM MA
 
@@ -438,10 +433,11 @@ Führen Sie diese Schritte aus, um alle drei Ausführungsprofile auszuführen.
     - Wählen Sie aus der Liste **Ausführungsprofile** das Ausführungsprofil aus, das Sie ausführen möchten.
     - Klicken Sie auf **OK**, um das Ausführungsprofil zu starten.
 
->[!div class="step-by-step"] 
+>[!div class="step-by-step"]
 [« MIM-Dienst und -Portal](install-mim-service-portal.md)
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

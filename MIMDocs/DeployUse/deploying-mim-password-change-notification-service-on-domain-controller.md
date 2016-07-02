@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Bereitstellen des Benachrichtigungsdiensts für Kennwortänderungen | Microsoft Identity Manager
-description: Hier finden Sie die Schritte zum Installieren und Konfigurieren des MIM-Benachrichtigungsdiensts für Kennwortänderungen auf Ihrem Domänencontroller.
-keywords:
+title: "Bereitstellen des Benachrichtigungsdiensts für Kennwortänderungen | Microsoft Identity Manager"
+description: "Hier finden Sie die Schritte zum Installieren und Konfigurieren des MIM-Benachrichtigungsdiensts für Kennwortänderungen auf Ihrem Domänencontroller."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 97edae12-6f86-4f9f-8620-a95a096e482a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 875ed6b96929822ac166a4a262cc8547a4ea3b2a
+ms.openlocfilehash: 85e83b85f047ca2c2648b42ec68b832caae645ee
+
 
 ---
 
@@ -66,6 +60,7 @@ Der Benachrichtigungsdienst für Kennwortänderungen (Password Change Notificati
 Nachdem Sie sich beim Domänencontroller erneut als Domänenadministrator angemeldet haben, wechseln Sie in *C:\Programme\Microsoft Password Change Notification.* Führen Sie *pcnscfg.exe* aus.
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

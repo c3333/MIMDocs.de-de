@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Upgrade von Forefront Identity Manager 2010 R2 | Microsoft Identity Manager
 description: Erfahren Sie, wie Sie die FIM 2010 R2-Komponenten upgraden, und daraufhin die neuen MIM 2016-Komponenten installieren.
-keywords:
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 05/13/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 7e61e201b277a2e8ec9fee785e9e34fca3b1cb29
+ms.openlocfilehash: 24a7bf5bfb0a7450becd08be6743ed7ab1755559
+
 
 ---
 
@@ -207,6 +201,7 @@ In dieser Anleitung wird davon ausgegangen, dass Sie Folgendes bereits eingerich
 Hinweis: Wenn die FIM-Add-Ins und -Erweiterungen derzeit auf den Computern der Benutzer für SSPR bereitgestellt werden, konfigurieren Sie auf keinen Fall die neuen MFA-Telefongates zur Kennwortzurücksetzung. Dies darf erst geschehen, nachdem alle FIM-Add-Ins und -Erweiterungen auf MIM 2016 aktualisiert wurden.  Da die FIM 2010 und FIM 2010 R2-Add-ins und -Erweiterungen die neuen Telefongates nicht erkennen, geben sie einen Fehler zurück. Ein Benutzer ist dann nicht in der Lage, die Zurücksetzung des Kennworts abzuschließen.
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
