@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Registrieren von Smartcards für Nichtadministratoren | Microsoft Identity Manager
-description: Erfahren Sie, wie Sie Smartcards für Benutzer ohne Administratorrechte auf ihren Computern registrieren können, damit diese den Zertifikat-Manager verwenden können.
-keywords:
+title: "Registrieren von Smartcards für Nichtadministratoren | Microsoft Identity Manager"
+description: "Erfahren Sie, wie Sie Smartcards für Benutzer ohne Administratorrechte auf ihren Computern registrieren können, damit diese den Zertifikat-Manager verwenden können."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 875ed6b96929822ac166a4a262cc8547a4ea3b2a
+ms.openlocfilehash: 50c0edd60abfa6550cb5a873d32a842e8c099811
+
 
 ---
 
@@ -48,7 +42,7 @@ Wenn ein Benutzer auf seinem Computer kein lokaler Administrator ist, kann er st
 
     Bearbeiten Sie die Datei „custom.data“, und ändern Sie Folgendes:
 
-    1.  Ändern Sie den Wert des Attributs im &lt;NonAdmin&gt;-Element zu TRUE.
+    1.  Ändern Sie den Wert des „Value“-Attributs im &lt;NonAdmin&gt;-Element zu „True“.
 
     2.  Speichern Sie die Datei, und beenden Sie den Editor.
 
@@ -56,7 +50,7 @@ Wenn ein Benutzer auf seinem Computer kein lokaler Administrator ist, kann er st
 
     4.  Bearbeiten Sie die Datei namens „AppxManifest.xml“.
 
-    5.  Ändern Sie den Wert des „Publisher“-Attributs im &lt;Identity&gt;-Element in den Antragsteller Ihres Signaturzertifikats, z.B. "CN=ABCD"
+    5.  Ändern Sie den Wert des „Publisher“-Attributs im &lt;Identity&gt;-Element in den Antragsteller des Signaturzertifikats, z. B. "CN=ABCD"
 
         Das Thema sollte hier mit dem Antragsteller im Signaturzertifikat identisch sein, das Sie zum Signieren der App verwenden.
 
@@ -76,7 +70,7 @@ Wenn ein Benutzer auf seinem Computer kein lokaler Administrator ist, kann er st
 
     1.  Melden Sie sich beim CM-Portal (Zertifikatverwaltung) als Benutzer mit Administratorrechten an.
 
-    2.  Wechseln Sie zu **Verwaltung** &gt; **Profilvorlagen verwalten** , und stellen Sie sicher, dass das Kontrollkästchen neben der erstellten Profilvorlage aktiviert ist, und klicken Sie dann auf „Ausgewählte Profilvorlage kopieren“.
+    2.  Wechseln Sie zu **Verwaltung** &gt; **Profilvorlagen verwalten**, und stellen Sie sicher, dass das Kontrollkästchen neben der erstellten Profilvorlage aktiviert ist, und klicken Sie dann auf „Ausgewählte Profilvorlage kopieren“.
 
     3.  Geben Sie den Namen der Profilvorlage ein, fügen Sie „nonAdmin“ hinzu, und klicken Sie dann auf **OK**.
 
@@ -101,6 +95,7 @@ Wenn ein Benutzer auf seinem Computer kein lokaler Administrator ist, kann er st
 8.  **Starten Sie die CM-App und Registrierung für eine virtuelle Smartcard.**
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
