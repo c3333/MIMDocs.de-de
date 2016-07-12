@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 1
 [ Handback Failed Files ](#handback-failed-list)| 4
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 19
-[ In Sync Handback Files ](#insync-handback-success-list)| 168
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 18
+[ In Sync Handback Files ](#insync-handback-success-list)| 169
 [ Ignored Files ](#ignored-list)| 109
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -56,7 +56,6 @@
  [MIMDocs\pam\step-5-establish-trust-between-priv-corp-forests.md](https://github.com/Microsoft/MIMDocs-pr/blob/06319438d93d8d92edc833e2d0bf6492dd5919a6/MIMDocs/pam/step-5-establish-trust-between-priv-corp-forests.md) | OutofSyncHandedBackSuccess | [Details](#1260b4e1792bf43a7288866cf3afa41fabe79fe9234)
  [MIMDocs\pam\step-6-transition-group-to-pam.md](https://github.com/Microsoft/MIMDocs-pr/blob/01470689e862b47625346d5d5bc6bc7def11da9c/MIMDocs/pam/step-6-transition-group-to-pam.md) | OutofSyncHandedBackSuccess | [Details](#b21e2fed4588572fd1b793c4942860871ae9a51c235)
  [MIMDocs\pam\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/9cf126d898c93faf89d7119136cce4e4963bb63d/MIMDocs/pam/TOC.md) | OutofSyncHandedBackSuccess | [Details](#6c59c7c73fd09a041b2fb130b533c516c036d540238)
- [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/5fa6f8f60d3ca99bc16333406663bd82ac4ec2e6/MIMDocs/PlanDesign/TOC.md) | OutofSyncHandedBackSuccess | [Details](#4cb419fa58037307e1352dd813e5f9b1767cfac5248)
  [MIMDocs\toc.md](https://github.com/Microsoft/MIMDocs-pr/blob/8d151e15ea35fbaf14e8b55697f3fad9858d2aed/MIMDocs/toc.md) | OutofSyncHandedBackSuccess | [Details](#511bb7e106b832056f9743419fe24c066366090a288)
  [MIMDocs\Understand\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/8d151e15ea35fbaf14e8b55697f3fad9858d2aed/MIMDocs/Understand/TOC.md) | OutofSyncHandedBackSuccess | [Details](#0a32b3c5b574f121bcd34d97a9430d0dfd553ca8301)
 
@@ -222,6 +221,7 @@
  [MIMDocs\PlanDesign\media\MIM-topo-multitier.png](https://github.com/Microsoft/MIMDocs-pr/blob/90bc65826ae511cf50473ee95c73edf2b719b231/MIMDocs/PlanDesign/media/MIM-topo-multitier.png) | InSyncHandedBackSuccess | [Details](#ff89d0e903b04df6182700b474bc3aef1b0ba24d245)
  [MIMDocs\PlanDesign\media\MIM-topo-multitier-multiservice.png](https://github.com/Microsoft/MIMDocs-pr/blob/90bc65826ae511cf50473ee95c73edf2b719b231/MIMDocs/PlanDesign/media/MIM-topo-multitier-multiservice.png) | InSyncHandedBackSuccess | [Details](#c465fc00bd089b73b86daa72968dd67dab832aee244)
  [MIMDocs\PlanDesign\microsoft-identity-manager-2016-supported-platforms.md](https://github.com/Microsoft/MIMDocs-pr/blob/a59e7471a8aaafc6752c9be34d52fd3509104dec/MIMDocs/PlanDesign/microsoft-identity-manager-2016-supported-platforms.md) | InSyncHandedBackSuccess | [Details](#bb3e3abfdc12d78108676d4a9f029531d9df17fd246)
+ [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/5fa6f8f60d3ca99bc16333406663bd82ac4ec2e6/MIMDocs/PlanDesign/TOC.md) | InSyncHandedBackSuccess | [Details](#4cb419fa58037307e1352dd813e5f9b1767cfac5248)
  [MIMDocs\PlanDesign\topology-considerations.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/PlanDesign/topology-considerations.md) | InSyncHandedBackSuccess | [Details](#e33a08d77a0b5c422cdbc8c19516b55df980a2c6249)
  [MIMDocs\Troubleshoot\media\150x150.png](https://github.com/Microsoft/MIMDocs-pr/blob/e0261b00d5df35458d2b1bfc54e9481c5778bfdd/MIMDocs/Troubleshoot/media/150x150.png) | InSyncHandedBackSuccess | [Details](#84421bf7f4ba657e685239fb27f4798a46485f71291)
  [MIMDocs\Troubleshoot\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/e0261b00d5df35458d2b1bfc54e9481c5778bfdd/MIMDocs/Troubleshoot/TOC.md) | InSyncHandedBackSuccess | [Details](#260aec3bd3dd61ecfd8abbeb1a01aa9d7126baa8292)
@@ -3490,18 +3490,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='4cb419fa58037307e1352dd813e5f9b1767cfac5248'></a> Source: [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr/blob/5fa6f8f60d3ca99bc16333406663bd82ac4ec2e6/MIMDocs/PlanDesign/TOC.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/ddbe481ba9124a9119ed6da4ba9b7f2c764dd9a9/MIMDocs/PlanDesign/TOC.md)
 * Handoff File: [TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/9cf5fb9537ced5f16eda39d338582de2221daeed/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.de-de.xlf)
 * Handoff Datetime: 2016-07-06 22:17:49
 * Handoff Reason: Include
 * Archive File: [TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/2616e04a3cfe3d681eac38987aa4a03680fc1689/ol-handoff/Microsoft/MIMDocs-pr.de-de/master/archive/TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.de-de.xlf)
 * Archive Datetime: 2016-07-08 23:13:25
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [MIMDocs\PlanDesign\TOC.md](https://github.com/Microsoft/MIMDocs-pr.de-de/blob/5bb13e99f6d15d9c753a99713254b3e0acd7eeda/MIMDocs/PlanDesign/TOC.md)
-* Current Handback File: [TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/9117441cbac5868ed0c15049e91a79c648b9e278/ol-handback/Microsoft/MIMDocs-pr.de-de/master/TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.de-de.xlf)
-* Current Handback Datetime: 2016-07-11 17:33:21
+* Handback File: [TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/0dabc0ca4dc09b42a15cc21b099890e1a178e4b1/ol-handback/Microsoft/MIMDocs-pr.de-de/master/TOC.4ef4520be73ef9e7aa69c2f08e700c80a68a239d.de-de.xlf)
+* Handback Datetime: 2016-07-12 08:06:34
 * [Back to Top](#report-top)
 
 ##### <a name='e33a08d77a0b5c422cdbc8c19516b55df980a2c6249'></a> Source: [MIMDocs\PlanDesign\topology-considerations.md](https://github.com/Microsoft/MIMDocs-pr/blob/c023d147d0fcc1525fefbe866c952e217f7bee6b/MIMDocs/PlanDesign/topology-considerations.md)
