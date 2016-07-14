@@ -20,7 +20,8 @@ ms.openlocfilehash: b21e2fed4588572fd1b793c4942860871ae9a51c
 
 # Schritt 6 – Übergang eine Gruppe zur privilegierten Zugriffsverwaltung
 
->[!div class="step-by-step"] [« Schritt 5 ](step-5-establish-trust-between-priv-corp-forests.md)
+>[!div class="step-by-step"]
+[!div class="step-by-step"] [« Schritt 5 ](step-5-establish-trust-between-priv-corp-forests.md)
 [Schritt 7 »](step-7-elevate-user-access.md)
 
 Die Erstellung des privilegierten Kontos in der PRIV-Gesamtstruktur erfolgt mit PowerShell-Cmdlets. Diese Cmdlets führen die Funktionen aus:
@@ -82,11 +83,12 @@ Die Cmdlets müssen einmal für jede Gruppe und einmal für jedes Mitglied einer
 
 Wenn Sie veranschaulichen möchten, dass das Administratorkonto des Benutzers über die Gesamtstruktur übergreifende Zugriffsrechte verfügt, fahren Sie mit dem nächsten Schritt fort.
 
->[!div class="step-by-step"] [« Schritt 5 ](step-5-establish-trust-between-priv-corp-forests.md)
+>[!div class="step-by-step"]
+[!div class="step-by-step"] [« Schritt 5 ](step-5-establish-trust-between-priv-corp-forests.md)
 [Schritt 7 »](step-7-elevate-user-access.md)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 

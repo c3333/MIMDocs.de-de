@@ -20,7 +20,8 @@ ms.openlocfilehash: 1260b4e1792bf43a7288866cf3afa41fabe79fe9
 
 # Schritt 5 – Einrichten einer Vertrauensstellung zwischen den Gesamtstrukturen PRIV und CORP
 
->[!div class="step-by-step"] [« Schritt 4](step-4-install-mim-components-on-pam-server.md)
+>[!div class="step-by-step"]
+[!div class="step-by-step"] [« Schritt 4](step-4-install-mim-components-on-pam-server.md)
 [Schritt 6 »](step-6-transition-group-to-pam.md)
 
 
@@ -104,11 +105,12 @@ Aktivieren Sie für jede vorhandene Gesamtstruktur den Lesezugriff auf AD für P
 
 Im nächsten Schritt werden Sie eine Gruppe in PAM verschieben.
 
->[!div class="step-by-step"] [« Schritt 4](step-4-install-mim-components-on-pam-server.md)
+>[!div class="step-by-step"]
+[!div class="step-by-step"] [« Schritt 4](step-4-install-mim-components-on-pam-server.md)
 [Schritt 6 »](step-6-transition-group-to-pam.md)
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 
