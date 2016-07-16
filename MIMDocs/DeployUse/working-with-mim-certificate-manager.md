@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Arbeiten mit dem MIM-Zertifikat-Manager | Microsoft Identity Manager
-description: Erfahren Sie, wie Sie die Zertifikat-Manager-App bereitstellen, um Ihren Benutzern das Verwalten ihrer eigenen Zugriffsrechte zu ermöglichen. 
-keywords:
+description: "Erfahren Sie, wie Sie die Zertifikat-Manager-App bereitstellen, um Ihren Benutzern das Verwalten ihrer eigenen Zugriffsrechte zu ermöglichen."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: 3e0e6cea0b268836bb6347e81694deec93320ce3
+
 
 ---
 
@@ -43,7 +37,7 @@ Sie erstellen eine Zertifikatvorlage für die Zertifikat-Manager-Anwendung in de
 
 2.  Öffnen Sie die MMC.
 
-3.  Klicken Sie auf **Datei &gt; Snap-In hinzufügen/entfernen**.;
+3.  Klicken Sie auf **Datei &gt; Snap-In hinzufügen/entfernen**.
 
 4.  Klicken Sie in der Liste „Verfügbare Snap-Ins“ auf **Zertifikatvorlagen**, und klicken Sie dann auf **Hinzufügen**.
 
@@ -80,7 +74,7 @@ Wenn Sie eine Profilvorlage erstellen, müssen Sie „Virtuelle SmartCard erstel
 
 1.  Melden Sie sich beim CM-Portal (Zertifikatverwaltung) als Benutzer mit Administratorrechten an.
 
-2.  Wechseln Sie zu „Verwaltung &gt; Profilvorlagen verwalten“, und stellen Sie sicher, dass das Kontrollkästchen neben „MIM CM-Beispielsmartcard-Profilvorlage für Anmeldung“ aktiviert ist, und klicken Sie dann auf „Ausgewählte Profilvorlage kopieren“.
+2.  Wechseln Sie zu „Verwaltung &gt; Profilvorlagen verwalten“, und stellen Sie sicher, dass das Kontrollkästchen neben „MIM CM-Beispielsmartcard-Profilvorlage für Anmeldung“ aktiviert ist. Klicken Sie dann auf „Ausgewählte Profilvorlage kopieren“.
 
 3.  Geben Sie den Namen der Profilvorlage ein, und klicken Sie auf **OK**.
 
@@ -132,7 +126,7 @@ Wenn Sie eine Profilvorlage erstellen, müssen Sie „Virtuelle SmartCard erstel
 
 7.  Sie müssen ein Signaturzertifikat abrufen, bevor Sie mit diesem Abschnitt beginnen. Weitere Informationen finden Sie unten unter „Ermöglichen von SmartCard-Erneuerung für Nicht-Administratoren im MIM 2016-Zertifikat-Manager“, Schritt 1.
 
-8.  Ändern Sie im &lt;Identity&gt;-Element den Wert des Attributs „Publisher“ so, dass es mit dem Antragsteller identisch ist, der in Ihrem Signaturzertifikat aufgeführt ist, z.B. „CN=SUBJECT“.
+8.  Ändern Sie im &lt;Identity&gt;-Element den Wert des Attributs „Publisher“ so, dass er mit dem Antragsteller identisch ist, der in Ihrem Signaturzertifikat aufgeführt ist, z. B. „CN=SUBJECT“.
 
 9. Speichern Sie die Datei, und beenden Sie den Editor.
 
@@ -154,7 +148,7 @@ Wenn Sie eine Profilvorlage erstellen, müssen Sie „Virtuelle SmartCard erstel
 
     -   Öffnen Sie die Anwendung für virtuelle Smartcards. Dies erleichtert Ihnen das Finden der Werte, die für den nächsten Schritt benötigt werden.
 
-    -   Öffnen Sie auf dem AD FS-Server Windows PowerShell, und führen Sie den Befehl `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`aus, um die Anwendung als Client auf dem AD FS-Server hinzuzufügen und den CM (Zertifikat-Manager) auf dem Server zu konfigurieren.
+    -   Öffnen Sie Windows PowerShell auf dem AD FS-Server, und führen Sie folgenden Befehl aus, um die Anwendung als Client auf dem AD FS-Server hinzuzufügen und den Zertifikat-Manager auf dem Server zu konfigurieren: `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`
 
         Es folgt das Skript "ConfigureMIimCMClientAndRelyingParty.ps1":
 
@@ -255,12 +249,13 @@ Wenn Sie eine Profilvorlage erstellen, müssen Sie „Virtuelle SmartCard erstel
 
     -   Der FQDN des Servers (serverFQDN) ist nur der vollständige Computername des MIMCM-Servers.
 
-    -   Wenn Sie Hilfe zu dem Skript **ConfigureMIimCMClientAndRelyingParty.ps1** wünschen, führen Sie `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`aus.
+    -   Um Hilfe zum Skript **ConfigureMIimCMClientAndRelyingParty.ps1** zu erhalten, führen Sie folgenden Befehl aus: `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`
 
 ## Bereitstellen der App
-Wenn Sie die CM-App (Zertifikat-Manager) einrichten möchten, laden Sie aus dem Download Center die Datei „MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip“ herunter, und extrahieren Sie deren gesamten Inhalt. Die APPX-Datei ist das Installationsprogramm. Sie können diese Datei auf dieselbe Weise bereitstellen, auf die Sie normalerweise Windows Store-Apps bereitstellen. Das heißt, Sie können [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx) oder [Intune](https://technet.microsoft.com/library/dn613839.aspx) verwenden, um die App querzuladen, sodass Benutzer über das Unternehmensportal auf sie zugreifen müssen oder sie durch direktes Übertragen an ihre Computer erhalten.
+Wenn Sie die Zertifikat-Manager-App einrichten möchten, laden Sie aus dem Download Center die Datei „MIMDMModernApp_&lt;Version&gt;_AnyCPU_Test.zip“ herunter, und extrahieren Sie deren gesamten Inhalt. Die APPX-Datei ist das Installationsprogramm. Sie können diese Datei auf dieselbe Weise bereitstellen, auf die Sie normalerweise Windows Store-Apps bereitstellen. Das heißt, Sie können [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx) oder [Intune](https://technet.microsoft.com/library/dn613839.aspx) verwenden, um die App querzuladen, sodass Benutzer über das Unternehmensportal auf sie zugreifen müssen oder sie durch direktes Übertragen an ihre Computer erhalten.
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

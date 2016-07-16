@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Arbeiten mit der Identity Manager-Hybridberichterstellung | Microsoft Identity Manager
-description: Erfahren Sie, wie Sie lokale Daten und Clouddaten als Hybridberichte in Azure kombinieren und wie Sie diese Berichte verwalten und anzeigen können.
-keywords:
+description: "Erfahren Sie, wie Sie lokale Daten und Clouddaten als Hybridberichte in Azure kombinieren und wie Sie diese Berichte verwalten und anzeigen können."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: e2d0bd6120628d4fd2a14718fc205cde976c7785
+
 
 ---
 
@@ -100,7 +94,7 @@ Nachdem der Agent für die Berichterstellung installiert wurde, werden die Daten
 Falls Sie das Hochladen von Berichtsdaten von Microsoft Identity Manager in Azure Active Directory beenden möchten, deinstallieren Sie den Agent für die Hybridberichterstellung. Deinstallieren Sie die Microsoft Identity Manager-Hybridberichterstellung mithilfe des Windows-Tools **Programme hinzufügen oder entfernen**.
 
 ## Für die Hybridberichterstellung verwendete Windows-Ereignisse
-Von Microsoft Identity Manager generierte Ereignisse werden im Windows-Ereignisprotokoll protokolliert und in der Ereignisanzeige unter „Anwendungs- und Dienstprotokolle“-&gt; **Identity Manager-Anforderungsprotokoll** angezeigt. Jede MIM-Anforderung wird als Ereignis in das Windows-Ereignisprotokoll in der JSON-Struktur exportiert. Dieses kann in Ihr SIEM exportiert werden.
+Von Microsoft Identity Manager generierte Ereignisse werden im Windows-Ereignisprotokoll protokolliert und in der Ereignisanzeige unter **Anwendungs- und Dienstprotokolle-&gt; Identity Manager-Anforderungsprotokoll** angezeigt. Jede MIM-Anforderung wird als Ereignis in das Windows-Ereignisprotokoll in der JSON-Struktur exportiert. Dieses kann in Ihr SIEM exportiert werden.
 
 |Ereignistyp|ID|Ereignisdetails|
 |--------------|------|-----------------|
@@ -108,6 +102,7 @@ Von Microsoft Identity Manager generierte Ereignisse werden im Windows-Ereignisp
 |Informationen|4137|Die Erweiterung des MIM-Ereignisses 4121, für den Fall, dass für ein einzelnes Ereignis zu viele Daten vorliegen. Der Header in diesem Ereignis liegt in der folgenden Form vor: `"Request: <GUID> , message <xxx> out of <xxx>`|
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

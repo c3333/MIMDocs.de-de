@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Bereitstellen von MIM 2016 | Microsoft Identity Manager
-description: Hier erhalten Sie die vollständige Liste der für die Bereitstellung von Microsoft Identity Manager 2016 notwendigen Schritte, von der Vorbereitung der Umgebung bis zur Konfiguration der Portale.
-keywords:
+description: "Hier erhalten Sie die vollständige Liste der für die Bereitstellung von Microsoft Identity Manager 2016 notwendigen Schritte, von der Vorbereitung der Umgebung bis zur Konfiguration der Portale."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ca7fdef81eb8a68aff46df528e1989f019f5d2a4
+ms.openlocfilehash: a56ead9777f1dad1aa0d214a506cf1242f51e167
+
 
 ---
 
@@ -55,6 +49,7 @@ Nachdem Sie die Domäne und den Server eingerichtet haben, können Sie die MIM-K
 - [Synchronisieren von Active Directory mit MIM-Dienstdatenbanken](install-mim-sync-ad-service.md)
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
