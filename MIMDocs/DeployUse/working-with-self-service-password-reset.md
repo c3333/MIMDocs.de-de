@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Arbeiten mit der Self-Service-Kennwortzurücksetzung | Microsoft Identity Manager
-description: Unter „Neues zur Self-Service-Kennwortzurücksetzung in MIM 2016“ erfahren Sie u.a., wie SSPR mit der mehrstufigen Authentifizierung funktioniert. 
-keywords:
+title: "Arbeiten mit der Self-Service-Kennwortzurücksetzung | Microsoft Identity Manager"
+description: "Unter „Neues zur Self-Service-Kennwortzurücksetzung in MIM 2016“ erfahren Sie u.a., wie SSPR mit der mehrstufigen Authentifizierung funktioniert."
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: 3a4350e54383dc1098c778090bb29b435082045f
+
 
 ---
 
@@ -50,7 +44,7 @@ Für diesen Abschnitt wird davon ausgegangen, dass Sie die Bereitstellung von Mi
 
 -   MIM 2016 Synchronization Service (Sync) ist installiert und läuft auf einem Server, der in die Active Directory-Domäne eingebunden ist
 
--   Der MIM 2016-Dienst &amp; das MIM-Portal einschließlich des SSPR-Registrierungs- und des SSPR-Zurücksetzungsportals sind auf einem Server installiert und werden dort ausgeführt (sie können auf demselben Server wie Sync ausgeführt werden)
+-   Der MIM 2016-Dienst und das MIM-Portal einschließlich des SSPR-Registrierungs- und des SSPR-Zurücksetzungsportals sind auf einem Server installiert und werden dort ausgeführt (sie können auf demselben Server wie Sync ausgeführt werden)
 
 -   MIM Sync ist für die Active Directory-MIM-Identitätssynchronisierung konfiguriert, einschließlich:
 
@@ -60,7 +54,7 @@ Für diesen Abschnitt wird davon ausgegangen, dass Sie die Bereitstellung von Mi
 
     -   Konfigurieren von Synchronisierungsregeln im MIM-Portal, um für den MIM-Dienst Synchronisierung von Benutzerdaten sowie synchronisierungsbasierte Aktivitäten zu ermöglichen.
 
--   Die MIM 2016-Add-Ins &amp; -Erweiterungen inklusive des integrierten SSPR-Clients für die Windows-Anmeldung werden auf dem Server oder auf einem separaten Clientcomputer bereitgestellt.
+-   Die MIM 2016-Add-Ins und -Erweiterungen inklusive des integrierten SSPR-Clients für die Windows-Anmeldung werden auf dem Server oder auf einem separaten Clientcomputer bereitgestellt.
 
 ## Vorbereiten von MIM für das Arbeiten mit der mehrstufigen Authentifizierung
 Konfigurieren Sie MIM Sync so, dass Kennwortzurücksetzung und Kontoentsperrung unterstützt werden. Weitere Informationen finden Sie unter [Installing the FIM Add-ins and Extensions](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx) (Installieren der FIM-Add-Ins und -Erweiterungen), [Installing FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx) (Installieren von FIM SSPR), [SSPR Authentication Gates](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) (SSPR-Authentifizierungsgates) und im [SSPR Test Lab Guide](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx) (SSPR-Test Lab-Handbuch)
@@ -211,6 +205,7 @@ Indem Sie die MIM-Add-Ins und -Erweiterungen auf einem zur Domäne gehörigen Co
     ![Bild: MIM-Anmelde-Assistent für die Kennwortzurücksetzung](media/MIM-SSPR-PR1.JPG)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

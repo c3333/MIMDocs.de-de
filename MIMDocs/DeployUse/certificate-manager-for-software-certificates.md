@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Erstellen von Softwarezertifikaten | Microsoft Identity Manager
 description: Erfahren Sie, wie Sie den Zertifikat-Manager zum Erstellen und Erneuern von Softwarezertifikaten mit Profilvorlagen verwenden.
-keywords:
+keywords: 
 author: kgremban
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mwahl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f9b01ac2cee2b96f64a9fda917f4f4146ca2eeda
+ms.openlocfilehash: 6b58093744656b9bfa62c1cfcab340ea88e6e168
+
 
 ---
 
@@ -82,7 +76,7 @@ Zum Registrieren und Erneuern von Softwarezertifikaten müssen Sie kein Administ
 
 1.  Melden Sie sich beim CM-Portal (Zertifikatverwaltung) als Benutzer mit Administratorrechten an.
 
-2.  Wechseln Sie zu **Verwaltung &gt; Profilvorlagen verwalten** , und stellen Sie sicher, dass das Kontrollkästchen neben **MIM CM-Beispielsmartcard-Profilvorlage für Anmeldung** aktiviert ist, und klicken Sie dann auf **Ausgewählte Profilvorlage kopieren**.
+2.  Wechseln Sie zu **Verwaltung &gt; Profilvorlagen verwalten**, und stellen Sie sicher, dass das Kontrollkästchen neben **MIM CM-Beispielsmartcard-Profilvorlage für Anmeldung** aktiviert ist, und klicken Sie dann auf **Ausgewählte Profilvorlage kopieren**.
 
 3.  Geben Sie den Namen der Profilvorlage ein, und klicken Sie auf **OK**.
 
@@ -103,6 +97,7 @@ Zum Registrieren und Erneuern von Softwarezertifikaten müssen Sie kein Administ
 11. Wenn Sie die Zertifikatsverwaltung mithilfe der virtuellen Smartcard verwenden, müssen Sie Datensammlungselemente deaktivieren, da diese nicht mit aktivierter Datensammlung funktioniert. Deaktivieren Sie die Datensammlung für jede Richtlinie, indem Sie im linken Bereich auf die Richtlinie klicken, dann das Kontrollkästchen neben **Beispieldatenelement** deaktivieren und schließlich auf **Datensammlungselemente löschen**klicken. Klicken Sie dann auf **OK**.
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
