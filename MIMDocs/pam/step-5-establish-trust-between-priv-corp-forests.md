@@ -1,10 +1,10 @@
 ---
-title: "Schritt 5 – Einrichten einer Vertrauensstellung zwischen den Gesamtstrukturen PRIV und CORP | Microsoft Identity Manager"
-description: 
+title: "Bereitstellen von PAM Schritt 5 – Forest link | Microsoft Identity Manager"
+description: "Richten Sie eine Vertrauensstellung zwischen den Gesamtstrukturen von PRIV und CORP ein, sodass berechtigte Benutzer in PRIV weiterhin auf CORP-Ressourcen zugreifen können."
 keywords: 
-author: 
+author: kgremban
 manager: femila
-ms.date: 06/16/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -12,8 +12,9 @@ ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.sourcegitcommit: 06319438d93d8d92edc833e2d0bf6492dd5919a6
-ms.openlocfilehash: 1260b4e1792bf43a7288866cf3afa41fabe79fe9
+translationtype: Human Translation
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 3a7039f5d7c950cd0d4c8ab713a7beacc5c45526
 
 
 ---
@@ -21,8 +22,8 @@ ms.openlocfilehash: 1260b4e1792bf43a7288866cf3afa41fabe79fe9
 # Schritt 5 – Einrichten einer Vertrauensstellung zwischen den Gesamtstrukturen PRIV und CORP
 
 >[!div class="step-by-step"]
-[!div class="step-by-step"] [« Schritt 4](step-4-install-mim-components-on-pam-server.md)
-[Schritt 6 »](step-6-transition-group-to-pam.md)
+[« Schritt 4](step-4-install-mim-components-on-pam-server.md)
+[Schritt 6 »](step-6-transition-group-to-pam.md)
 
 
 Für jede CORP-Domäne, z. B. „contoso.local“, müssen die PRIV- und CONTOSO-Domänencontroller durch eine Vertrauensstellung gebunden werden. Dadurch können Benutzer in der PRIV-Domäne auf Ressourcen in der CORP-Domäne zugreifen.
@@ -106,11 +107,11 @@ Aktivieren Sie für jede vorhandene Gesamtstruktur den Lesezugriff auf AD für P
 Im nächsten Schritt werden Sie eine Gruppe in PAM verschieben.
 
 >[!div class="step-by-step"]
-[!div class="step-by-step"] [« Schritt 4](step-4-install-mim-components-on-pam-server.md)
-[Schritt 6 »](step-6-transition-group-to-pam.md)
+[« Schritt 4](step-4-install-mim-components-on-pam-server.md)
+[Schritt 6 »](step-6-transition-group-to-pam.md)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

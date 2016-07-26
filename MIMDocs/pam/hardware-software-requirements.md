@@ -1,10 +1,10 @@
 ---
-title: Hardware- und Softwareanforderungen | Microsoft Identity Manager
-description: 
+title: Softwareanforderungen von PAM | Microsoft Identity Manager
+description: "Ermitteln der Hardware- und Softwareanforderungen für eine erfolgreiche Bereitstellung von Privileged Access Management"
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/17/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -12,13 +12,18 @@ ms.technology: active-directory-domain-services
 ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
-ms.sourcegitcommit: a6bdf1b947ee3ebc4c9e89e74b2912697ebf1f60
-ms.openlocfilehash: 77e7174e94ea8032c4e57155db489f493ce18177
+translationtype: Human Translation
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 75a748f7035cfb10e833e4fdbfdc208b5245d3ea
 
 
 ---
 
-Neben den Anforderungen durch die zugrunde liegenden Softwareplattformen, der Anforderung von ausreichend Arbeitsspeicher oder Speicherplatz und Netzwerkverbindungen sind keine weiteren Hardwareanforderungen erforderlich. Dieser Artikel enthält die Mindestanforderungen für eine einfache Bereitstellung. Sie ist nicht dafür vorgesehen, die Leistung, Skalierbarkeit oder hohe Verfügbarkeit zu veranschaulichen, und sie stellt keine empfohlene Bereitstellungstopologie für große Unternehmen oder Produktionsumgebungen dar.
+# Hardware- und Softwareanforderungen
+
+Die Hardwareanforderungen von Privileged Access Management gehen nicht über diejenigen der zugrunde liegenden Softwareplattformen hinaus. Sie müssen lediglich sicherstellen, dass Sie über ausreichend Arbeitsspeicher bzw. Speicherplatz und Netzwerkkonnektivität verfügen.
+
+Dieser Artikel enthält die Mindestanforderungen für eine einfache Bereitstellung. Sie ist nicht dafür vorgesehen, die Leistung, Skalierbarkeit oder hohe Verfügbarkeit zu veranschaulichen, und sie stellt keine empfohlene Bereitstellungstopologie für große Unternehmen oder Produktionsumgebungen dar.
 
 ## Installieren von Softwarepaketen
 
@@ -70,6 +75,6 @@ Für PAMSRV:
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

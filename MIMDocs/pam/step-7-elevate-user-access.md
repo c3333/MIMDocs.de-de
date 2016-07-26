@@ -1,10 +1,10 @@
 ---
-title: "Schritt 7 – Erhöhen des Zugriffs eines Benutzers | Microsoft Identity Manager"
-description: 
+title: "Bereitstellen von PAM Schritt 7 – Benutzerzugriff | Microsoft Identity Manager"
+description: "Als letzten Schritt gewähren Sie einem privilegierten Benutzer temporären Zugriff, um zu veranschaulichen, dass die Privileged Access Management-Bereitstellung erfolgreich war."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/16/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: ee47c69788a98075372ca62943e0c4b101c5354f
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: b4b3f4c0605fabc7166e8ff8309078f80461301e
 
 
 ---
@@ -46,7 +46,7 @@ Ohne erhöhte Rechte kann Jen nicht auf die privilegierte Ressource in der CORP-
 2. Geben Sie nach der entsprechenden Aufforderung das Kennwort für das Konto PRIV.Jen ein. Es wird ein neues Eingabeaufforderungsfenster angezeigt.
 3. Wenn das PowerShell-Fenster angezeigt wird, geben Sie die folgenden Befehle ein.
 
-    > [!NOTE] 
+    > [!NOTE]
     > Alle Schritte, die auf die Ausführung dieser Befehle folgen, sind zeitempfindlich.
 
     ```
@@ -92,7 +92,7 @@ Aktivieren Sie die Rechte durch die Anforderung des privilegierten Zugriffs übe
 7. Schließen Sie das Dialogfeld **Internetoptionen** .
 8. Klicken Sie auf der linken Registerkarte auf **Aktivieren**. Wählen Sie die **PAM-Rolle** aus, und klicken Sie dann auf **Aktivieren**.
 
-> [!Note] 
+> [!Note]
 > Sie können in dieser Umgebung auch erfahren, wie Sie Anwendungen entwickeln, die die PAM-REST-API verwenden, wie in der [REST API-Referenz für Privileged Access Management ](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference.md) beschrieben.
 
 ## Zusammenfassung
@@ -103,6 +103,6 @@ Wenn Sie die Schritte in dieser exemplarischen Vorgehensweise abgeschlossen habe
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

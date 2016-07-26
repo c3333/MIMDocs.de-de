@@ -1,10 +1,10 @@
 ---
-title: Ebenenmodell zur Partitionierung von Administratorrechten | Microsoft Identity Manager
-description: 
+title: Ebenenmodell der PAM-Umgebung | Microsoft Identity Manager
+description: "Erfahren Sie mehr zum Ebenenmodell, das Ihr System auf Grundlage seiner Risikoanfälligkeit unterteilt."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 509c05bbda5f0a0b936518fb023000771c45d4f7
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 1a750bedee2aac667c84113d2d08daa20428c260
 
 
 ---
@@ -44,7 +44,7 @@ Anmeldebeschränkungen sollten erzwungen werden, um sicherzustellen, dass Konten
 - Domänenadministratoren (Ebene 0) können sich nicht bei Unternehmensservern (Ebene 1) und Standardbenutzer-Arbeitsstationen (Ebene 2) anmelden.
 - Serveradministratoren (Ebene 1) können sich nicht bei Standardbenutzer-Arbeitsstationen (Ebene 2) anmelden.
 
->[!NOTE] 
+>[!NOTE]
 > Serveradministratoren sollten nicht Mitglied der Domänenadministratorgruppe sein. Personen, die für die Verwaltung sowohl von Domänencontrollern als auch von Unternehmensservern zuständig sind, benötigen separate Konten.
 
 Anmeldebeschränkungen können durch Folgendes erzwungen werden:
@@ -62,6 +62,6 @@ Das nächste Dokument, [Planen einer geschützten Umgebung](planning-bastion-env
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

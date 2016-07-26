@@ -1,10 +1,10 @@
 ---
-title: "Hohe Verfügbarkeit und Überlegungen zur Notfallwiederherstellung für die geschützte Umgebung | Microsoft Identity Manager"
-description: 
+title: PAM-Notfallwiederherstellung | Microsoft Identity Manager
+description: "Erfahren Sie, wie Sie Privileged Access Management für Hochverfügbarkeit und die Notfallwiederherstellung konfigurieren."
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/17/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9e5f51d5ca731b3564b8262db0f4cddeb850231a
-ms.openlocfilehash: 1d9e005bfb3e26f9a2b818667f14acd3e5239523
+ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
+ms.openlocfilehash: 9164e48bf10fa27ff6c87ba3816b586a940dda69
 
 
 ---
@@ -161,7 +161,7 @@ Eine normale Produktionsbereitstellung des Privileged Access Management umfasst 
 
 Das Verfahren zum Hinzufügen eines zusätzlichen Domänencontrollers finden Sie unter [Installieren eines Windows Server 2012-Domänencontrollerreplikats in einer vorhandenen Domäne (Stufe 200)](https://technet.microsoft.com/library/jj574134.aspx).  
 
->[!NOTE] 
+>[!NOTE]
 > Wenn der Domänencontroller auf einer Virtualisierungsplattform wie Hyper-V gehostet werden soll, beachten Sie die Warnungen in [Bereitstellung und Konfiguration virtualisierter Domänencontroller](https://technet.microsoft.com/library/jj574223.aspx).
 
 #### Wiederherstellung
@@ -199,7 +199,7 @@ Informationen zu hoher Verfügbarkeit finden Sie in den Windows Server-Dokumente
 
 Für die mehrere Server übergreifende Produktionsbereitstellung können Sie den Netzwerklastenausgleich (Network Load Balancing, NLB) zum Verteilen der Verarbeitungslast verwenden.  Sie sollten auch einen einzelnen Alias (z. B. einen A- oder CNAME-Datensatz) haben, sodass den Benutzern ein einziger gängiger Name angezeigt wird.
 
->[!IMPORTANT] 
+>[!IMPORTANT]
 > Wenn Sie eine andere Lastenausgleichstechnologie als das NLB-Feature in Windows Server 2012 R2 verwenden, stellen Sie sicher, dass Ihre Lösung eine Sitzung auf dem gleichen Server und nicht auf einen beliebigen Server umleitet.
 
 Bei einer MIM-Bereitstellung mit mehreren Servern hat jeder MIM-Dienst einen externen Hostnamen, einen Dienstnamen und einen Dienstpartitionsnamen.  Der Standardwert des Dienstnamens ist der Name des Computers, und der Standardwert des externen Hostnamens und Dienstpartitionsnamens wird während der Installation des MIM-Diensts auf dem Bildschirm konfiguriert, auf dem nach der Adresse des MIM-Dienstservers gefragt wird. Diese drei Namen werden als Attribute `externalHostName`, `serviceName` und `servicePartitionName` des `resourceManagementService`-Konfigurationsknotens in der Datei „%ProgramFiles%\Microsoft Forefront Identity Manager\Service\Microsoft.ResourceManagementService.exe.config“ gespeichert.  
@@ -224,6 +224,6 @@ Wenn die Gesamtstrukturfunktionsebene der geschützten Umgebung Windows Server 2
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: Installieren von MIM 2016&#58; Synchronisieren von Active Directory und MIM-Dienst| Microsoft Identity Manager
+title: Synchronisieren von AD mit dem MIM-Dienst | Microsoft Identity Manager
 description: Verwenden Sie Verwaltungs-Agents und MIM Synchronization Service, um Ihr Active Directory und Ihre MIM-Datenbanken zu synchronisieren.
 keywords: 
 author: kgremban
-manager: stevenpo
-ms.date: 04/28/2016
+manager: femila
+ms.date: 07/21/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8fd779bcc4d41b6e67d0fa31aa0f37c4ea2b410a
-ms.openlocfilehash: f4e94980c6a03b08221fd46e19c421cce226086d
+ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
+ms.openlocfilehash: f17f256653936ffd06da9fae87dccfbf1c12a553
 
 
 ---
@@ -316,7 +316,7 @@ So erstellen Sie die Synchronisierungsregel „AD-Benutzer eingehend“:
 
     -   Metaverseressourcentyp: person
     -   Externes System: ADMA
-    -   Externer Systemressourcentyp: person
+    -   Externer Systemressourcentyp: Benutzer
 
 6. Geben Sie auf der Registerkarte **Beziehung** die folgenden Informationen an, und klicken Sie dann auf **Weiter**:
 
@@ -328,10 +328,10 @@ So erstellen Sie die Synchronisierungsregel „AD-Benutzer eingehend“:
 
     | Flussregel | Quelle | Ziel |
     |-|-|-|
-    |Regel 1|samAccountName|f|
+    |Regel 1|samAccountName|accountName|
     |Regel 2|displayName|displayName|
-    |Regel 3|EmployeeTyp|EmployeeTyp|
-    |Regel 4|givenName|givenName|
+    |Regel 3|EmployeeTyp|employeeTyp|
+    |Regel 4|givenName|firstName|
     |Regel 5|sn|lastName|
     |Regel 6|Manager|manager|
     |Regel 7|objectSID|ObjectSID|
@@ -438,6 +438,6 @@ Führen Sie diese Schritte aus, um alle drei Ausführungsprofile auszuführen.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
