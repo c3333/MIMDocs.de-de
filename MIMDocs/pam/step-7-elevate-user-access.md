@@ -13,8 +13,8 @@ ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: b4b3f4c0605fabc7166e8ff8309078f80461301e
+ms.sourcegitcommit: 9b5b7460e6307ab38b1b9356a638eb0200fd97d1
+ms.openlocfilehash: 009091a65dba31de2066e45930e438442fcd89a0
 
 
 ---
@@ -93,7 +93,7 @@ Aktivieren Sie die Rechte durch die Anforderung des privilegierten Zugriffs übe
 8. Klicken Sie auf der linken Registerkarte auf **Aktivieren**. Wählen Sie die **PAM-Rolle** aus, und klicken Sie dann auf **Aktivieren**.
 
 > [!Note]
-> Sie können in dieser Umgebung auch erfahren, wie Sie Anwendungen entwickeln, die die PAM-REST-API verwenden, wie in der [REST API-Referenz für Privileged Access Management ](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference.md) beschrieben.
+> In dieser Umgebung können Sie auch lernen, wie Sie Anwendungen entwickeln, die die in der [REST API-Referenz für Privileged Access Management ](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference) beschriebene PAM-REST-API verwenden.
 
 ## Zusammenfassung
 Wenn Sie die Schritte in dieser exemplarischen Vorgehensweise abgeschlossen haben, haben Sie ein Privileged Access Management-Szenario veranschaulicht, in dem die Benutzerrechte für einen begrenzten Zeitraum erhöht werden, wodurch der Benutzer die Möglichkeit erhält, mit einem separaten privilegierten Konto auf geschützte Ressourcen zuzugreifen. Sobald die Sitzung mit erhöhten Rechten abgelaufen ist, kann das privilegierte Konto nicht länger auf die geschützte Ressource zugreifen. Die Entscheidung, welche Sicherheitsgruppen privilegierte Rollen darstellen, wird vom PAM-Administrator koordiniert. Sobald die Zugriffsrechte zu dem Privileged Access Management-System migriert sind, ist der Zugriff, der zuvor mit dem ursprünglichen Benutzerkonto ermöglicht wurde, jetzt nur über die Anmeldung mit einem speziellen privilegierten Konto möglich und wird auf Anfrage zur Verfügung gestellt. Daher sind Gruppenmitgliedschaften für sehr privilegierte Gruppen nur für einen begrenzten Zeitraum gültig.
@@ -103,6 +103,6 @@ Wenn Sie die Schritte in dieser exemplarischen Vorgehensweise abgeschlossen habe
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
