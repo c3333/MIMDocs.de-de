@@ -4,7 +4,7 @@ description: Suchen Sie die Produkte und Versionen, die mit allen Komponenten vo
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 08/18/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: b276b1970796f3769006e2f2ef229cdb616e0675
+ms.sourcegitcommit: b4527c61dcdbef21c46414e190e0f0d0852e3aa3
+ms.openlocfilehash: d3995474ac91f109052c004ec9b84ac66efafbc7
 
 
 ---
@@ -44,13 +44,13 @@ ms.openlocfilehash: b276b1970796f3769006e2f2ef229cdb616e0675
 || Data Warehouse-Datenbank | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2 |
 | **MIM-Portale für Kennwortzurücksetzung und Registrierung** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 |
 || Webbrowser | Internet Explorer 7, 8, 9, 10 oder 11<br/>Andere Webbrowser |
-| **MIM-Add-Ins und -Erweiterungen** | Windows | Windows 7<br/>Windows 8<br/>Windows 8.1<br/>Windows 10 |
+| **MIM-Add-Ins und -Erweiterungen** | Windows | Windows 7<br/>Windows 8<br/>Windows 8.1<br/>Windows 10 |
 || Outlook-Integration (optional) | Outlook 2007 SP2<br/>Outlook 2010<br/>Outlook 2013 |
-|| PowerShell-Cmdlets für PAM-Requestor (optional) | Windows 8.1<br/>Windows 10 |
+|| PowerShell-Cmdlets für PAM-Requestor (optional) | Windows 8.1<br/>Windows 10 |
 | **MIM-Zertifikatverwaltung** (Server- und CA-Integration) | Windows server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 |
 || Zertifizierungsstelle | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 |
-|| MIM CM-Datenbank | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 |
-| **MIM-Zertifikatverwaltung** (Anwendung) | Windows | Windows 8<br/>Windows 8.1<br/>Windows 10 |
+|| MIM CM-Datenbank | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 |
+| **MIM-Zertifikatverwaltung** (Anwendung) | Windows | Windows 8<br/>Windows 8.1<br/>Windows 10 |
 | **MIM-Zertifikatverwaltung** (Client und Bulk Client) | Windows | Windows 7 |
 | **MIM BHOLD-Suite** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 |
 || BHOLD-Datenbank | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2 |
@@ -59,6 +59,6 @@ ms.openlocfilehash: b276b1970796f3769006e2f2ef229cdb616e0675
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 
