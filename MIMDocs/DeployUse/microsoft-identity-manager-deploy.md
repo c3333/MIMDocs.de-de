@@ -4,7 +4,7 @@ description: "Hier erhalten Sie die vollständige Liste der für die Bereitstell
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 08/11/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: db062cf8dafe0b480db06cd8d913583c5b709246
+ms.sourcegitcommit: 406269e3c8dc3137c2dcd625c50c6cf4eb126d86
+ms.openlocfilehash: 74d7bfd1e0c89c880b2b6a06756f84ad63d3a8cc
 
 
 ---
@@ -25,11 +25,9 @@ Die Artikel in diesem Abschnitt bieten Schritt-für-Schritt-Anleitungen für die
 > [!NOTE]
 > Die in diesem Abschnitt beschriebene Bereitstellungstopologie ist nur für die ersten Schritte und das Kennenlernen von MIM vorgesehen.  Die [Anleitung zur Kapazitätsplanung](/microsoft-identity-manager/plan-design/capacity-planning-guide) bietet weitere Informationen zu Topologien für Produktionsbereitstellungen.  Es wird empfohlen, dass Sie diese Dokumentation vor der Bereitstellung von MIM für die Produktion lesen.
 
-<!---
-Comment: Restore after PAM content is included
+Das Szenario für die privilegierte Zugriffsverwaltung wird anders als andere MIM-Szenarien bereitgestellt, da es eine dedizierte geschützte Gesamtstrukturumgebung erfordert.  Weitere Informationen zum Bereitstellen von MIM für die privilegierte Identitätsverwaltung finden Sie unter [Erste Schritte bei der privilegierten Zugriffsverwaltung](/microsoft-identity-manager/pam/privileged-access-management-get-started).
 
-The privileged access management scenario is deployed differently than other MIM scenarios, as it requires a dedicated bastion forest environment.  If you want to learn more about deploying MIM for Privileged Identity Management, see [Getting Started with Privileged Access Management](privileged-access-management-get-started.md).
---->
+Der Vorgang zum Bereitstellen von MIM 2016 ähnelt sehr dem des Vorgängers, FIM 2010 R2. Wenn Sie die Dokumentation für FIM zurate ziehen möchten, lesen Sie das [Bereitstellungshandbuch für Forefront Identity Manager 2010 R2](https://technet.microsoft.com/library/jj134310).
 
 ## Erstens: Vorbereiten einer Domäne
 MIM funktioniert über Active Directory (AD). Führen Sie daher diese Schritte aus, um Ihre Active Directory-Domänencontroller zu konfigurieren.
@@ -37,7 +35,7 @@ MIM funktioniert über Active Directory (AD). Führen Sie daher diese Schritte a
 
 ## Nächster Schritt: Vorbereiten eines Servers für die Identitätsverwaltung
 Sobald Ihre Domäne eingerichtet und konfiguriert ist, bereiten Sie den Server vor, der Ihre Corporate Identity verwaltet. Dies beinhaltet:
-- [Windows Server 2012 R2](prepare-server-ws2012r2.md)
+- [Windows Server 2012 R2](prepare-server-ws2012r2.md)
 - [SQL Server 2014](prepare-server-sql2014.md)
 - [SharePoint](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (optional)
@@ -50,6 +48,6 @@ Nachdem Sie die Domäne und den Server eingerichtet haben, können Sie die MIM-K
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO2-->
 
 

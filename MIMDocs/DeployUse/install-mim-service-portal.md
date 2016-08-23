@@ -4,7 +4,7 @@ description: "Hier finden Sie die Schritte zum Konfigurieren und Installieren Er
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 08/11/2016
 ms.topic: get-started-article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: c18ea7b0390ca11c213ed66bfd1476454cf86951
+ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
+ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
 
 
 ---
@@ -93,7 +93,7 @@ Falls Sie im letzten Schritt das MIM-Installationspaket nicht eingerichtet haben
 
 1.  Legen Sie den Namen des Dienstkontos für die SSPR-Registrierung auf *Contoso\MIMSSPRService* und das Kennwort auf *Pass@word1* fest.
 
-2.  Geben Sie *CORPIDM* als den Hostnamen für die MIM-Kennwortregistrierung an, und legen Sie den Port auf **8080** fest. Aktivieren Sie die Option **Port in der Firewall öffnen**.
+2.  Geben Sie *CORPIDM* als den Hostnamen für das MIM-Kennwortzurücksetzungsportal an, und legen Sie den Port auf **8088** fest. Aktivieren Sie die Option **Port in der Firewall öffnen**.
 
     ![Geben Sie die Konfigurationsinformationen ein, die vom IIS-Image verwendet werden](media/MIM-Install15.png)
 
@@ -152,6 +152,6 @@ Nach Abschluss der Installation stellen Sie sicher, dass das MIM-Portal aktiv is
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO2-->
 
 
