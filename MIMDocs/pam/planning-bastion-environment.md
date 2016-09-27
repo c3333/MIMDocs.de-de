@@ -4,7 +4,7 @@ description:
 keywords: 
 author: kgremban
 manager: femila
-ms.date: 06/14/2016
+ms.date: 09/16/2016
 ms.topic: article
 ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
@@ -13,8 +13,8 @@ ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b8af77d2354428da19d91d5f02b490012835f544
-ms.openlocfilehash: 0ed48d43825e1a876c4d96cafcb6c17cac26610f
+ms.sourcegitcommit: 9eefdf21d0cab3f7c488a66cbb3984d40498f4ef
+ms.openlocfilehash: fc4161f98d4367a2124e6253fe11dd1f2712d614
 
 
 ---
@@ -43,7 +43,7 @@ Gemäß dem [Ebenenmodell](tier-model-for-partitioning-administrative-privileges
 
 Die Produktionsgesamtstruktur *CORP* sollte der administrativen Gesamtstruktur *PRIV* vertrauen, aber nicht umgekehrt. Dabei kann es sich um eine Domänen- oder Gesamtstruktur-Vertrauensstellung handeln. Die administrative Gesamtstruktur muss den verwalteten Domänen und Gesamtstrukturen nicht vertrauen, um Active Directory verwalten zu können. Zusätzliche Anwendungen können jedoch eine bidirektionale Vertrauensstellung, Sicherheitsüberprüfungen und Tests erfordern.
 
-Um sicherzustellen, dass Konten in der administrativen Gesamtstruktur nur die geeigneten Produktionshosts verwenden, sollte die ausgewählte Authentifizierung verwendet werden. Zur Verwaltung von Domänencontrollern und Delegierung von Rechten in Active Directory ist hierbei in der Regel die Berechtigung für die Anmeldung auf Domänencontrollern für die jeweiligen Administratorkonten der Ebene 0 in der administrativen Gesamtstruktur erforderlich. Weitere Informationen finden Sie unter [Konfigurieren der Einstellungen für ausgewählte Authentifizierung](http://technet.microsoft.com/library/cc755844.aspx).
+Um sicherzustellen, dass Konten in der administrativen Gesamtstruktur nur die geeigneten Produktionshosts verwenden, sollte die ausgewählte Authentifizierung verwendet werden. Zur Verwaltung von Domänencontrollern und Delegierung von Rechten in Active Directory ist hierbei in der Regel die Berechtigung für die Anmeldung auf Domänencontrollern für die jeweiligen Administratorkonten der Ebene 0 in der administrativen Gesamtstruktur erforderlich. Weitere Informationen finden Sie unter [Konfigurieren der Einstellungen für ausgewählte Authentifizierung](http://technet.microsoft.com/library/cc816580.aspx).
 
 ## Verwalten der logischen Trennung
 
@@ -149,7 +149,7 @@ MIM verwendet PowerShell-Cmdlets, um Vertrauensstellungen zwischen den bestehend
 
 Bei Änderungen der bestehenden Active Directory-Topologie können mit den Cmdlets `Test-PAMTrust`, `Test-PAMDomainConfiguration`, `Remove-PAMTrust` und `Remove-PAMDomainConfiguration` die Vertrauensstellungen aktualisiert werden.
 
-### Einrichten einer Vertrauensstellung für jede Gesamtstruktur
+## Einrichten einer Vertrauensstellung für jede Gesamtstruktur
 
 Das Cmdlet `New-PAMTrust` muss einmal für jede bestehende Gesamtstruktur ausgeführt werden. Er wird auf dem Computer des MIM-Diensts in der administrativen Domäne aufgerufen. Die Parameter für diesen Befehl sind der Domänenname der obersten Domäne in der bestehenden Gesamtstruktur und die Anmeldeinformationen eines Administrators dieser Domäne.
 
@@ -159,11 +159,11 @@ New-PAMTrust -SourceForest "contoso.local" -Credentials (get-credential)
 
 Nach dem Einrichten der Vertrauensstellung konfigurieren Sie jede Domäne für die Verwaltung über die geschützte Umgebung, wie im nächsten Abschnitt beschrieben.
 
-### Aktivieren der Verwaltung jeder Domäne
+## Aktivieren der Verwaltung jeder Domäne
 
 Es gibt sieben Anforderungen für die Aktivierung der Verwaltung für eine bestehende Domäne.
 
-#### 1. Eine Sicherheitsgruppe in der lokalen Domäne
+### 1. Eine Sicherheitsgruppe in der lokalen Domäne
 
 Es muss eine Gruppe in der vorhandenen Domäne geben, deren Name dem NetBIOS-Domänennamen gefolgt von drei Dollarzeichen entspricht, z. B. *CONTOSO$$$*. Der Gruppenbereich muss *Lokal (in Domäne)* sein, und der Gruppentyp muss *Sicherheit* sein. Dies ist erforderlich, damit in der dedizierten administrativen Gesamtstruktur erstellte Gruppen dieselbe Sicherheits-ID wie Gruppen in dieser Domäne aufweisen. Die Erstellung dieser Gruppe erfolgt mit dem folgenden PowerShell-Befehl – dieser wird von einem Administrator der bestehenden Domäne auf einer Arbeitsstation ausgeführt, die der bestehenden Domäne beigetreten ist:
 
@@ -171,7 +171,7 @@ Es muss eine Gruppe in der vorhandenen Domäne geben, deren Name dem NetBIOS-Dom
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
-#### 2. Überwachung von Erfolg und Fehlern
+### 2. Überwachung von Erfolg und Fehlern
 
 Die Gruppenrichtlinieneinstellungen auf dem Domänencontroller für die Überwachung müssen sowohl Erfolgs- als auch Fehlerüberwachung für „Kontenverwaltung überwachen“ und „Verzeichniszugriff überwachen“ aufweisen. Sie können über die Gruppenrichtlinien-Verwaltungskonsole eingerichtet werden, die von einem Administrator der bestehenden Domäne auf einer Arbeitsstation ausgeführt wird, die der bestehenden Domäne beigetreten ist:
 
@@ -201,7 +201,7 @@ Die Gruppenrichtlinieneinstellungen auf dem Domänencontroller für die Überwac
 
 Die Meldung „Die Aktualisierung der Computerrichtlinie wurde erfolgreich abgeschlossen.“ sollte nach einigen Minuten angezeigt werden.
 
-#### 3. Zulassen von Verbindungen mit der lokalen Sicherheitsautorität
+### 3. Zulassen von Verbindungen mit der lokalen Sicherheitsautorität
 
 Die Domänencontroller müssen RPC über TCP/IP-Verbindungen für die lokale Sicherheitsautorität (Local Security Authority, LSA) aus der geschützten Umgebung zulassen. Auf älteren Versionen von Windows Server muss die TCP/IP-Unterstützung in LSA in der Registrierung aktiviert werden:
 
@@ -209,7 +209,7 @@ Die Domänencontroller müssen RPC über TCP/IP-Verbindungen für die lokale Sic
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
-#### 4. Erstellen der PAM-Domänenkonfiguration
+### 4. Erstellen der PAM-Domänenkonfiguration
 
 Das Cmdlet `New-PAMDomainConfiguration` muss auf dem Computer des MIM-Diensts in der administrativen Domäne ausgeführt werden. Die Parameter für diesen Befehl sind der Domänenname der bestehenden Domäne und die Anmeldeinformationen eines Administrators dieser Domäne.
 
@@ -217,7 +217,7 @@ Das Cmdlet `New-PAMDomainConfiguration` muss auf dem Computer des MIM-Diensts in
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 
-#### 5. Gewähren von Leseberechtigungen für Konten
+### 5. Gewähren von Leseberechtigungen für Konten
 
 Die Konten in der geschützten Gesamtstruktur, über die Rollen eingerichtet werden (Administratoren, die die Cmdlets `New-PAMUser` und `New-PAMGroup` verwenden) sowie das vom MIM-Überwachungsdienst verwendete Konto benötigen Leseberechtigungen in der Domäne.
 
@@ -239,11 +239,11 @@ Die folgenden Schritte aktivieren den Lesezugriff für den Benutzer *PRIV\Admini
 
 18. Schließen Sie %%amp;quot;Active Directory-Benutzer und -Computer%%amp;quot;.
 
-#### 6. Ein Notfallkonto
+### 6. Ein Notfallkonto
 
 Wenn das Ziel des Projekts für Privileged Access Management darin besteht, die Anzahl der Konten mit Domänenadministrator-Berechtigungen zu verringern, die dauerhaft der Domäne zugewiesen sind, muss es in der Domäne ein *Notfallkonto* geben, falls später ein Problem mit der Vertrauensstellung auftritt. Konten für den Notfallzugriff auf die Produktionsgesamtstruktur sollten in jeder Domäne vorhanden sein und sich ausschließlich bei Domänencontrollern anmelden können. Für Organisationen mit mehreren Standorten sind aus Redundanzgründen möglicherweise zusätzliche Konten erforderlich.
 
-#### 7. Aktualisieren von Berechtigungen in der geschützten Umgebung
+### 7. Aktualisieren von Berechtigungen in der geschützten Umgebung
 
 Überprüfen Sie die Berechtigungen im *AdminSDHolder*-Objekt im Systemcontainer dieser Domäne. Das *AdminSDHolder* -Objekt enthält eine eindeutige Zugriffssteuerungsliste (ACL), mit der die Berechtigungen von Sicherheitsprinzipalen gesteuert werden, die Mitglieder der integrierten privilegierten Active Directory-Gruppen sind. Wenn Änderungen an den Standardberechtigungen vorgenommen wurden, die Auswirkungen auf Benutzer mit Administratorrechten in der Domäne hätten, werden diese Berechtigungen nicht für Benutzer übernommen, deren Konten sich in der geschützten Umgebung befinden.
 
@@ -253,6 +253,6 @@ Der nächste Schritt besteht im Definieren der PAM-Rollen und im Zuordnen der Be
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Sep16_HO3-->
 
 
