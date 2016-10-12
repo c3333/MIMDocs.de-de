@@ -51,7 +51,7 @@ Fügen Sie die Rollen "Webserver (IIS)" und "Anwendungsserver", die .NET Framewo
 
 1.  Melden Sie sich als PRIV-Domänenadministrator (PRIV\Administrator) an, und starten Sie PowerShell.
 
-2.  Geben Sie die folgenden Befehle ein. Möglicherweise ist es notwendig, dass Sie einen anderen Speicherort für die Quelldateien für .NET Framework 3.5-Features angeben. Diese Funktionen sind in der Regel nicht vorhanden, wenn Windows Server installiert wird. Sie sind aber auf dem Betriebssystem-Installationsdatenträger im Ordner „Sources“ im parallelen Ordner (SxS) verfügbar, beispielsweise „D:\Sources\SxS“.\.
+2.  Geben Sie die folgenden Befehle ein. Möglicherweise ist es notwendig, dass Sie einen anderen Speicherort für die Quelldateien für .NET Framework 3.5-Features angeben. Diese Funktionen sind in der Regel nicht vorhanden, wenn Windows Server installiert wird. Sie sind aber auf dem Betriebssystem-Installationsdatenträger im Ordner „Sources“ im parallelen Ordner (SxS) verfügbar, beispielsweise „D:\Sources\SxS“.
 
     ```
     import-module ServerManager
@@ -212,6 +212,6 @@ In Schritt 4 installieren Sie die MIM-Komponenten auf dem PAM-Server.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 
