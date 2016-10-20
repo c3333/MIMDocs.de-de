@@ -1,0 +1,84 @@
+---
+title: "Schritt 8: Überprüfen der PAM-Bereitstellung"
+description: "Bereiten Sie die CORP-Domäne mit vorhandenen oder neuen Identitäten vor, die vom Privileged Identity Manager mithilfe von Skripts verwaltet werden sollen."
+keywords: 
+author: barclayn
+manager: MBaldwin
+ms.date: 10/04/2016
+ms.topic: article
+ms.prod: microsoft-identity-manager
+ms.service: microsoft-identity-manager
+ms.technology: active-directory-domain-services
+ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
+ms.reviewer: 
+ms.suite: ems
+translationtype: Human Translation
+ms.sourcegitcommit: 99b1ff9f622ddd357866b2a3f9f4cc8e0fc88005
+ms.openlocfilehash: 9a617d8a5fbe8bcdac40cdf3250e5efedb7a0b84
+
+
+---
+
+# Schritt 8: Überprüfen der PAM-Bereitstellung
+
+Das Bereitstellungspaket enthält Überprüfungsskripts, die ein PAM-Szenario ausführen können, um sicherzustellen, dass die PAM-Bereitstellung wie erwartet funktioniert.
+Zum Verwenden der Bereitstellungsüberprüfung ändern Sie den Abschnitt „PAMDeploymentConfig.xml“ mit dem Namen <PamValidation/>.
+
+>[!NOTE]
+>Die Überprüfung erfordert einen Clientcomputer, der mit der CORP-Domäne verknüpft ist und auf dem die PAM-Clientkomponenten installiert sind. Skripts zum Installieren von Clients finden Sie im Nachtrag.
+
+Der Name des Clientcomputers muss im <PAMValidationClient/>-Tag der Datei „PAMDeploymentConfig.xml“ aktualisiert werden. Die übrigen Daten im <PAMValidation/>-Knoten müssen nur bearbeitet werden, wenn sie zu Konflikten mit vorhandenen Benutzern/Gruppen führen, da bei dieser Überprüfung versucht wird, sie zu erstellen.
+Führen Sie die folgenden Schritte aus, um die Überprüfung durchzuführen:
+
+Schritt 1:
+
+1. Melden Sie sich als Administrator der CORP-Domäne bei CORPDC an.
+2. Führen Sie PowerShell als Administrator aus.
+3. cd $env:SYSTEMDRIVE\PAM
+4. Import-module .\PAMValidation.psm1
+5. Create-PAMValidationonCORPDCConfig
+
+Mit diesen Befehlen werden die erforderlichen Gruppen und Benutzer für die Überprüfung erstellt.
+
+Schritt 2:
+
+1. Melden Sie sich mit dem MIMAdmin-Konto auf dem PAM-Server an.
+2. Führen Sie PowerShell als Administrator aus.
+3. cd $env:SYSTEMDRIVE\PAM
+4. import-module .\PAMValidation.psm1
+5. move-PAMVAlidationUsersToPAM
+
+Mit diesem Schritt werden die Benutzer und Gruppen in die PAM-Umgebung migriert.
+
+Schritt 3:
+
+1. Melden Sie sich als lokaler Administrator auf dem CORP-Client an.
+2. Führen Sie PowerShell als Administrator aus.
+3. cd $env:SYSTEMDRIVE\PAM
+4. import-module .\PAMValidation.psm1
+5. Enable-PAMUsersCORPClientRemote
+
+
+In diesem Schritt werden Sie zur Eingabe der CORPAdmin-Anmeldeinformationen aufgefordert. Sobald diese angegeben wurden, werden den Gruppen „Remotedesktopbenutzer“ und „Remoteverwaltungsbenutzer“ die erforderlichen Benutzer hinzugefügt.
+Verwenden Sie auf dem CORP-Client den folgenden Befehl, um PowerShell als der PRIV-Benutzer zu öffnen, den Sie überprüfen. </br></br>
+**Runas /u:<PRIV domain>\PRIV.pamRequestor powershell.exe**  </br></br>
+Geben Sie im PowerShell-Fenster folgende Befehle ein:
+
+1. cd $env:SYSTEMDRIVE\PAM
+2. import-module .\PAMValidation.psm1
+3. test-PAMValidationScenarioNoApprovalRequest
+
+
+  Dadurch wird der Status der Anforderung angezeigt.
+  Zunächst hat der Benutzer keinen Zugriff auf die Ressource. Nachdem der Benutzer der Rolle Just-In-Time hinzugefügt wurde, wird ihm Zugriff gewährt. Nachdem die Anforderungsdauer abgelaufen ist, hat der Benutzer keinen Zugriff mehr.
+  Das Skript verwendet den Standardwert (11 Minuten) für die Zeit bis zum Ablauf der Anforderung.
+
+>[!div class="step-by-step"]
+[« Schritt 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+[Nachtrag »](sp1-pam-deployment-addendum.md)
+
+
+
+<!--HONumber=Oct16_HO1-->
+
+
