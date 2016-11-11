@@ -6,7 +6,7 @@ description: "Technische Dokumentation zur Microsoft Identity Manager-Dokumentat
 keywords: Identity Manager-Dokumentation, Microsoft Identity Manager, MIM
 author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 10/25/2016
 ms.topic: hubpage
 ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
@@ -14,8 +14,8 @@ ms.technology: security
 ms.suite: ems
 ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
 translationtype: Human Translation
-ms.sourcegitcommit: 455a24d3008a2ef54e1229100e7150a1090c9b2e
-ms.openlocfilehash: 0ccbac817271b01e38bfb3e84fa5fc7ece787299
+ms.sourcegitcommit: 584efc6cc60eebe69fb32e7a0bdff25f568eee7f
+ms.openlocfilehash: b857664f1065f975e6d7e95508928b679548b52c
 
 
 ---
@@ -31,20 +31,17 @@ ms.openlocfilehash: 0ccbac817271b01e38bfb3e84fa5fc7ece787299
       <ol class="action-list">
         <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-identity-manager-2016" target="\_blank" class="button-bordered button-translucent">Kostenlosen Test starten</a></li>
       </ol>
-      <ol class="action-list">
-        <li><a href="http://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=61395" target="\_blank" class="button-bordered button-translucent">Vorschau auf geplante Funktionen</a></li>
-      </ol>
     </aside>
     <section id="featured" class="container">
       <h2 class="section-heading"><span class="icon icon-warning"></span> Wichtige Inhalte</h2>
       <div class="features row">
         <ul class="column column-half">
-          <li><a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">Was ist Microsoft Identity Manager?</a></li>
-          <li><a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">Privileged Identity Management REST-API-Referenz</a></li>
+          <li><mark><b>NEU</b></mark><a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016-sp1-release-notes">Microsoft Identity Manager 2016 Service Pack 1</a></li>
+          <li><a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">Bereitstellen von MIM-Software auf einem neuen Server</a></li>
         </ul>
         <ul class="column column-half">
-          <li><a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">Bereitstellen von MIM-Software auf einem neuen Server</a></li>
-          <li><a href="/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services">Lernen Sie Privileged Access Management kennen</a></li>
+          <li><a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">Privileged Identity Management REST-API-Referenz</a></li>
+          <li><a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">MIM 2016 – Übersicht</a></li>
         </ul>
       </div>
     </section>
@@ -56,7 +53,7 @@ ms.openlocfilehash: 0ccbac817271b01e38bfb3e84fa5fc7ece787299
               <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
                 <div class="title column-third">
                   <span class="step-number">1</span>
-                  <p>Kennenlernen</p>
+                  <p>Verstehen &amp; Kennenlernen</p>
                 </div>
                 <p class="description column-two-thirds">Lernen Sie die grundlegenden Konzepte, Features und Funktionen von Microsoft Identity Manager kennen.
                 </p>
@@ -133,6 +130,11 @@ ms.openlocfilehash: 0ccbac817271b01e38bfb3e84fa5fc7ece787299
             <li><a href="/microsoft-identity-manager/reference/certificate-management-rest-api-reference">Referenz zur CM REST-API (Zertifikatsverwaltung)</a></li>
           </ul>
         </div>
+        <div class="resource-list row">
+          <ul class="column-half">
+            <li><a href="https://technet.microsoft.com/library/mt604080.aspx">Privileged Access Management-Cmdlets</a></li>
+          </ul>
+        </div>
       </section>
     </div>
     <aside class="alert alert-social">
@@ -145,6 +147,6 @@ ms.openlocfilehash: 0ccbac817271b01e38bfb3e84fa5fc7ece787299
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Oct16_HO4-->
 
 
