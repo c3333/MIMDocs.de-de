@@ -1,25 +1,25 @@
 ---
-title: Installieren des MIM-Diensts und -Portals | Microsoft Identity Manager
+title: Installieren des MIM-Diensts und -Portals | Microsoft Docs
 description: "Hier finden Sie die Schritte zum Konfigurieren und Installieren Erste Schritte zum Konfigurieren und Installieren des MIM-Diensts und -Portals für Microsoft Identity Manager 2016"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
-ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 4d0f08d84c39c982d43b2a0e0ba2f694aed508da
 
 
 ---
 
-# Installieren von MIM 2016: MIM-Dienst und -Portal
+# <a name="install-mim-2016-mim-service-and-portal"></a>Installieren von MIM 2016: MIM-Dienst und -Portal
 
 >[!div class="step-by-step"]
 [« MIM-Synchronisierungsdienst](install-mim-sync.md)
@@ -29,13 +29,13 @@ ms.openlocfilehash: 438754773057043b8560562bab0ae260fb3a4bc2
 > Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiel:
 > - Domänencontrollername: **mimservername**
 > - Domänenname: **contoso**
-> - Kennwort: **Pass@word1**
+> - Kennwort – **Pass@word1**
 > - Name des Dienstkontos: **MIMService**
 
 Falls Sie im letzten Schritt das MIM-Installationspaket nicht eingerichtet haben, kehren Sie zurück, und installieren Sie die Komponenten von Microsoft Identity Manager 2016, bevor Sie fortfahren:
 
 
-## Konfigurieren des MIM-Diensts und -Portals für die Installation
+## <a name="configure-mim-service-and-portal-for-installation"></a>Konfigurieren des MIM-Diensts und -Portals für die Installation
 
 1. Führen Sie das **Installationsprogramm für den MIM-Dienst und das -Portal** aus dem entpackten Unterordner **Dienst und Portal** aus.
 
@@ -77,9 +77,9 @@ Falls Sie im letzten Schritt das MIM-Installationspaket nicht eingerichtet haben
 
 16. Aktivieren Sie das Kontrollkästchen, um die Ports 5725 und 5726 in der Firewall zu öffnen, sowie das Kontrollkästchen, um allen authentifizierten Benutzern den Zugriff auf das MIM-Portal zu gewähren.
 
-## Konfigurieren des MIM- Kennwort-Registrierungsportals
+## <a name="configure-mim-password-registration-portal"></a>Konfigurieren des MIM- Kennwort-Registrierungsportals
 
-1.  Legen Sie den Dienstkontonamen für die SSPR-Registrierung auf *contoso\MIMSSPR* und das zugehörige Kennwort auf *Pass@word1* fest.
+1.  Legen Sie den Namen des Dienstkontos für die SSPR-Registrierung auf *contoso\MIMSSPR* und das zugehörige Kennwort auf *Pass@word1* fest.
 
 2.  Geben Sie *CORPIDM* als den Hostnamen für die MIM-Kennwortregistrierung an, und legen Sie den Port auf **8080** fest. Aktivieren Sie die Option **Port in der Firewall öffnen**.
 
@@ -89,7 +89,7 @@ Falls Sie im letzten Schritt das MIM-Installationspaket nicht eingerichtet haben
 
 4. Geben Sie im nächsten Konfigurationsbildschirm des MIM-Kennwortregistrierungsportals *http://CorpIDM.contoso.local* als Serveradresse für den MIM-Dienst für das Kennwortzurückregistrierungsportal an.
 
-## Konfigurieren des MIM-Kennwortzurücksetzungsportals
+## <a name="configure-mim-password-reset-portal"></a>Konfigurieren des MIM-Kennwortzurücksetzungsportals
 
 1.  Legen Sie den Namen des Dienstkontos für die SSPR-Registrierung auf *Contoso\MIMSSPRService* und das Kennwort auf *Pass@word1* fest.
 
@@ -101,7 +101,7 @@ Falls Sie im letzten Schritt das MIM-Installationspaket nicht eingerichtet haben
 
 4. Geben Sie im nächsten Bildschirm der Konfiguration des MIM-Kennwortregistrierungsportals *CorpIDname http://CorpIDname.domain.local* an, als Serveradresse für den MIM-Dienst für das Kennwortzurücksetzungsportal an.
 
-## Installieren des MIM-Diensts und -Portals
+## <a name="install-mim-service-and-portal"></a>Installieren des MIM-Diensts und -Portals
 
 Wenn alle Vorinstallationsdefinitionen bereit sind, klicken Sie auf **Installieren**, um mit der Installation der ausgewählten **Dienst- und Portal**-Komponenten zu beginnen.
 
@@ -152,6 +152,6 @@ Nach Abschluss der Installation stellen Sie sicher, dass das MIM-Portal aktiv is
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -1,28 +1,28 @@
 ---
-title: Erstellen von Softwarezertifikaten | Microsoft Identity Manager
+title: Erstellen von Softwarezertifikaten | Microsoft Docs
 description: Erfahren Sie, wie Sie den Zertifikat-Manager zum Erstellen und Erneuern von Softwarezertifikaten mit Profilvorlagen verwenden.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: d5c8fc4f9a3eaab95441f7a915f7e02d55042ae9
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 31385a18c0b93e5ceaf78a2b6b8d5bed5aac224a
 
 
 ---
 
-# Erstellen von Softwarezertifikaten mit dem Zertifikat-Manager
+# <a name="create-software-certificates-with-certificate-manager"></a>Erstellen von Softwarezertifikaten mit dem Zertifikat-Manager
 Zum Registrieren und Erneuern von Softwarezertifikaten müssen Sie kein Administrator sein und es ist keine virtuelle Smartcard erforderlich. Beachten Sie, dass Sie im Verlauf dazu aufgefordert werden, einen Zertifikatvorgang zuzulassen. Das ist normal.
 
-## Erstellen einer Softwarezertifikat-Profilvorlage im MIM 2016-Zertifikat-Manager
+## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>Erstellen einer Softwarezertifikat-Profilvorlage im MIM 2016-Zertifikat-Manager
 
 1.  Erstellen Sie eine Vorlage für das Zertifikat, das Sie für die virtuelle Smartcard anfordern werden. Öffnen Sie die MMC.
 
@@ -72,7 +72,7 @@ Zum Registrieren und Erneuern von Softwarezertifikaten müssen Sie kein Administ
 
     10. Wählen Sie aus der Liste die neue Vorlage, die Sie soeben erstellt haben (**Archivierte Zertifikatvorlage**), und klicken Sie dann auf **OK**.
 
-## Erstellen der Profilvorlage
+## <a name="create-the-profile-template"></a>Erstellen der Profilvorlage
 
 1.  Melden Sie sich beim CM-Portal (Zertifikatverwaltung) als Benutzer mit Administratorrechten an.
 
@@ -98,6 +98,6 @@ Zum Registrieren und Erneuern von Softwarezertifikaten müssen Sie kein Administ
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

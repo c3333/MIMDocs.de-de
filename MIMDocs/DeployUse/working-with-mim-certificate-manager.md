@@ -1,25 +1,25 @@
 ---
-title: MIM-Zertifikat-Manager | Microsoft Identity Manager
+title: MIM-Zertifikat-Manager | Microsoft Docs
 description: "Erfahren Sie, wie Sie die Zertifikat-Manager-App bereitstellen, um Ihren Benutzern das Verwalten ihrer eigenen Zugriffsrechte zu ermöglichen."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 1aea9543af4dd7f3eab4f01eab52d8c11b36191d
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: a2be6b5640dde5e2908dce36ea13d920a6643874
 
 
 ---
 
-# Arbeiten mit dem MIM-Zertifikat-Manager
+# <a name="working-with-the-mim-certificate-manager"></a>Arbeiten mit dem MIM-Zertifikat-Manager
 Nachdem Sie MIM 2016 und den Zertifikat-Manager installiert und gestartet haben, können Sie die Windows Store-Anwendung für den MIM-Zertifikat-Manager bereitstellen, sodass Benutzer ihre physischen und virtuellen Smartcards und Softwarezertifikate problemlos verwalten können. Mit folgenden Schritten stellen Sie die Anwendung für den MIM-Zertifikat-Manager (MIM Certificate Manager, MIM CM) bereit:
 
 1.  Erstellen Sie eine Zertifikatvorlage.
@@ -30,7 +30,7 @@ Nachdem Sie MIM 2016 und den Zertifikat-Manager installiert und gestartet haben,
 
 4.  Stellen Sie die Anwendung über SCCM oder Intune bereit.
 
-## Erstellen einer Zertifikatvorlage
+## <a name="create-a-certificate-template"></a>Erstellen einer Zertifikatvorlage
 Sie erstellen eine Zertifikatvorlage für die Zertifikat-Manager-Anwendung in derselben Weise, wie Sie dies normalerweise tun, mit der Ausnahme, dass Sie sicherstellen müssen, dass die Zertifikatvorlage in Version 3 oder höher vorliegt.
 
 1.  Melden Sie sich bei dem Server an, auf dem Active Directory-Zertifikatdienste (AD CS) ausgeführt wird (der Zertifikatserver).
@@ -69,7 +69,7 @@ Sie erstellen eine Zertifikatvorlage für die Zertifikat-Manager-Anwendung in de
 
 16. Wählen Sie in der Liste die neue Vorlage aus, die Sie erstellt haben, und klicken Sie auf **OK**.
 
-## Erstellen einer Profilvorlage
+## <a name="create-a-profile-template"></a>Erstellen einer Profilvorlage
 Wenn Sie eine Profilvorlage erstellen, müssen Sie „Virtuelle SmartCard erstellen/löschen“ und Entfernen der Datensammlung für diese festlegen. Die Zertifikat-Manager-Anwendung kann keine gesammelten Daten verarbeiten, daher muss dies wie folgt deaktiviert werden.
 
 1.  Melden Sie sich beim CM-Portal (Zertifikatverwaltung) als Benutzer mit Administratorrechten an.
@@ -94,7 +94,7 @@ Wenn Sie eine Profilvorlage erstellen, müssen Sie „Virtuelle SmartCard erstel
 
 11. Sie müssen die Datensammlungselemente für jede Richtlinie deaktivieren, indem Sie im linken Bereich auf die Richtlinie klicken, dann das Kontrollkästchen neben **Beispieldatenelement** aktivieren und schließlich auf **Datensammlungselemente löschen**klicken. Klicken Sie dann auf **OK**.
 
-## Vorbereiten der Zertifikat-Manager-Anwendung zur Bereitstellung
+## <a name="prepare-the-cm-app-for-deployment"></a>Vorbereiten der Zertifikat-Manager-Anwendung zur Bereitstellung
 
 1.  Führen Sie in der Eingabeaufforderung den folgenden Befehl aus, um die Anwendung zu entpacken und den Inhalt in einen neuen Unterordner namens „appx“ zu extrahieren sowie eine Kopie zu erstellen, so dass Sie nicht die ursprüngliche Datei ändern.
 
@@ -148,7 +148,7 @@ Wenn Sie eine Profilvorlage erstellen, müssen Sie „Virtuelle SmartCard erstel
 
     -   Öffnen Sie die Anwendung für virtuelle Smartcards. Dies erleichtert Ihnen das Finden der Werte, die für den nächsten Schritt benötigt werden.
 
-    -   Öffnen Sie Windows PowerShell auf dem AD FS-Server, und führen Sie folgenden Befehl aus, um die Anwendung als Client auf dem AD FS-Server hinzuzufügen und den Zertifikat-Manager auf dem Server zu konfigurieren: `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`
+    -   Öffnen Sie auf dem AD FS-Server Windows PowerShell, und führen Sie den Befehl `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`aus, um die Anwendung als Client auf dem AD FS-Server hinzuzufügen und den CM (Zertifikat-Manager) auf dem Server zu konfigurieren.
 
         Es folgt das Skript "ConfigureMIimCMClientAndRelyingParty.ps1":
 
@@ -249,13 +249,13 @@ Wenn Sie eine Profilvorlage erstellen, müssen Sie „Virtuelle SmartCard erstel
 
     -   Der FQDN des Servers (serverFQDN) ist nur der vollständige Computername des MIMCM-Servers.
 
-    -   Um Hilfe zum Skript **ConfigureMIimCMClientAndRelyingParty.ps1** zu erhalten, führen Sie folgenden Befehl aus: `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`
+    -   Wenn Sie Hilfe zu dem Skript **ConfigureMIimCMClientAndRelyingParty.ps1** wünschen, führen Sie `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`aus.
 
-## Bereitstellen der App
+## <a name="deploy-the-app"></a>Bereitstellen der App
 Wenn Sie die Zertifikat-Manager-App einrichten möchten, laden Sie aus dem Download Center die Datei „MIMDMModernApp_&lt;Version&gt;_AnyCPU_Test.zip“ herunter, und extrahieren Sie deren gesamten Inhalt. Die APPX-Datei ist das Installationsprogramm. Sie können diese Datei auf dieselbe Weise bereitstellen, auf die Sie normalerweise Windows Store-Apps bereitstellen. Das heißt, Sie können [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx) oder [Intune](https://technet.microsoft.com/library/dn613839.aspx) verwenden, um die App querzuladen, sodass Benutzer über das Unternehmensportal auf sie zugreifen müssen oder sie durch direktes Übertragen an ihre Computer erhalten.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

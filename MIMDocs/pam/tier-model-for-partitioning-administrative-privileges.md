@@ -1,35 +1,35 @@
 ---
-title: Ebenenmodell der PAM-Umgebung | Microsoft Identity Manager
+title: Ebenenmodell der PAM-Umgebung | Microsoft Docs
 description: "Erfahren Sie mehr zum Ebenenmodell, das Ihr System auf Grundlage seiner Risikoanfälligkeit unterteilt."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 1a750bedee2aac667c84113d2d08daa20428c260
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 659a9d8ff53372300c0e52432116c7c295d59a4b
 
 
 ---
 
-# Ebenenmodell zur Partitionierung von Administratorrechten
+# <a name="tier-model-for-partitioning-administrative-privileges"></a>Ebenenmodell zur Partitionierung von Administratorrechten
 
 Angesichts der heutigen Bedrohungslage lautet die Frage nicht, ob ein Angreifer sich Zugriff auf Ihre Systeme verschaffen kann, sondern wann. Das bedeutet, dass die interne Sicherheit genauso wichtig ist wie eine starke Verteidigung im Umkreis. Dieser Artikel beschreibt ein Sicherheitsmodell, das vor einer Erweiterung von Rechten schützt, indem Aktivitäten mit hohen Berechtigungen von Zonen mit hohen Risiken getrennt werden. Dieses Modell setzt bewährte Methoden und Sicherheitsprinzipien um und sorgt dennoch für ein angenehmes Benutzererlebnis.
 
-## Rechteerweiterung in Active Directory-Gesamtstrukturen
+## <a name="elevation-of-privilege-in-active-directory-forests"></a>Rechteerweiterung in Active Directory-Gesamtstrukturen
 
 Benutzer, Dienste oder Anwendungskonten, denen dauerhaft Administratorrechte für Windows Server-Active Directory-Gesamtstrukturen gewährt werden, stellen ein großes Risiko für die Arbeit und die Geschäfte von Organisationen dar. Diese Konten sind häufig das Ziel von Angreifern, da ein Angreifer im Erfolgsfall die Berechtigung zum Herstellen einer Verbindung mit anderen Servern oder Anwendungen in der Domäne erhält.
 
 Das Ebenenmodell erstellt verschiedene Abteilungen für Administratoren, je nachdem, welche Ressourcen ein Administrator verwaltet. Administratoren, die Benutzerarbeitsstationen steuern, werden von Administratoren getrennt, die Anwendungen steuern oder Unternehmensidentitäten verwalten. Informationen zu diesem Modell finden Sie unter [Securing privileged access reference material](http://aka.ms/tiermodel) (Referenzmaterial zur Sicherung des privilegierten Zugriffs).
 
-## Einschränken der Offenlegung von Anmeldeinformationen mit Anmeldeeinschränkungen
+## <a name="restricting-credential-exposure-with-logon-restrictions"></a>Einschränken der Offenlegung von Anmeldeinformationen mit Anmeldeeinschränkungen
 
 Um das Risiko zu senken, dass Anmeldeinformationen für Administratorkonten gestohlen werden, müssen in der Regel administrative Verfahren neu gestaltet werden, um die Anfälligkeit für Angriffe zu verringern. Als erste Schritte sollten Organisationen Folgendes erledigen:
 
@@ -62,6 +62,6 @@ Das nächste Dokument, [Planen einer geschützten Umgebung](planning-bastion-env
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
