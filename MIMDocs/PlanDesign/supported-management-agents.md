@@ -1,25 +1,25 @@
 ---
-title: "Unterstützte Connectors | Microsoft Identity Manager"
+title: "Unterstützte Connectors | Microsoft Docs"
 description: "Verwenden Sie Connectors, um die Datenübertragung zwischen MIM und Ihren Verzeichnissen zu verwalten."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 309011c81959971e696d70aa4ec5e1610cc8a2f0
-ms.openlocfilehash: f0842781e3730dae5548ce02a3cb247376d12dc8
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 5841f549cc7f9369943cc5b31c27005f89afcccb
 
 
 ---
 
-# Herstellen der Verbindung zu Ihren Verzeichnissen
+# <a name="connect-to-your-directories"></a>Herstellen der Verbindung zu Ihren Verzeichnissen
 
 Connectors verknüpfen bestimmte verbundene Datenquellen mit Microsoft Identity Manager (MIM). Ein Connector verschiebt Daten aus einer verbundenen Datenquelle nach MIM. Werden Daten in MIM geändert, kann der Connector die Daten auch in die verbundene Datenquelle exportieren, um diese mit MIM zu synchronisieren. In der Regel gibt es mindestens einen Connector für jedes verbundene Verzeichnis.
 
@@ -27,7 +27,7 @@ In Forefront Identity Manager wurden Connectors als Verwaltungs-Agents bezeichne
 
 Dieser Artikel behandelt die in MIM enthaltenen Connectors, aber mit dem Connector für Extensible Connectivity 2.0 können Sie sogar Verbindungen zu noch mehr Datenquellen herstellen. Einige Partner haben auf diese Weise ihre eigenen Connectors erstellt. Eine vollständige Liste finden Sie im Wiki [FIM 2010: Management Agents from Partners](http://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx).
 
-## Unterstützte Connectors im MIM 2016
+## <a name="supported-connectors-in-mim-2016"></a>Unterstützte Connectors im MIM 2016
 
 | Name | Unterstützte Versionen der verbundenen Datenquelle |
 | ---- | ----------------------------------------------- |
@@ -35,7 +35,7 @@ Dieser Artikel behandelt die in MIM enthaltenen Connectors, aber mit dem Connect
 | Active Directory Lightweight Directory Services (ADLDS) | Active Directory Lightweight Directory Services (ADLDS) |
 | Active Directory-GAL (globale Adressliste) | Active Directory-GAL (globale Adressliste) – Exchange 2000, 2003, 2007, 2010, 2013 |
 | Extensible Connectivity 2.0 | Jede aufruf- oder dateibasierte Datenquelle |
-| MIM-Dienst | Microsoft Identity Manager 2016 |
+| MIM-Dienst | Microsoft Docs 2016 |
 | IBM DB2 Universal Database | IBM DB2, Versionen 9.1, 9.5 oder 9.7; IBM DB2 OLEDB v9.5 FP5 oder v9.7 FP1 |
 | IBM-Verzeichnisserver | IBM Tivoli Directory Server 6.x |
 | Novell eDirectory | Novell eDirectory, Versionen 8.7.3, 8.8.5 und 8.8.6 |
@@ -54,12 +54,12 @@ Dieser Artikel behandelt die in MIM enthaltenen Connectors, aber mit dem Connect
 | Textdatei mit fester Breite | Textdateien mit fester Breite |
 | LDAP Data Interchange Format (LDIF) | LDAP Data Interchange Format (LDIF) |
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 [Verwaltungs-Agents in FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx)
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

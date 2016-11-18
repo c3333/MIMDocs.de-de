@@ -1,31 +1,31 @@
 ---
-title: Softwareanforderungen von PAM | Microsoft Identity Manager
+title: Softwareanforderungen von PAM | Microsoft Docs
 description: "Ermitteln der Hardware- und Softwareanforderungen für eine erfolgreiche Bereitstellung von Privileged Access Management"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 75a748f7035cfb10e833e4fdbfdc208b5245d3ea
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 2f696738d21ad4b221d7adce5f83753c6f126f86
 
 
 ---
 
-# Hardware- und Softwareanforderungen
+# <a name="hardware-and-software-requirements"></a>Hardware- und Softwareanforderungen
 
 Die Hardwareanforderungen von Privileged Access Management gehen nicht über diejenigen der zugrunde liegenden Softwareplattformen hinaus. Sie müssen lediglich sicherstellen, dass Sie über ausreichend Arbeitsspeicher bzw. Speicherplatz und Netzwerkkonnektivität verfügen.
 
 Dieser Artikel enthält die Mindestanforderungen für eine einfache Bereitstellung. Sie ist nicht dafür vorgesehen, die Leistung, Skalierbarkeit oder hohe Verfügbarkeit zu veranschaulichen, und sie stellt keine empfohlene Bereitstellungstopologie für große Unternehmen oder Produktionsumgebungen dar.
 
-## Installieren von Softwarepaketen
+## <a name="installing-from-software-packages"></a>Installieren von Softwarepaketen
 
 Die folgende Software kann aus dem TechNet Evaluation Center oder MSDN heruntergeladen werden:  
 - Microsoft Identity Manager 2016
@@ -35,28 +35,28 @@ Die folgende Software kann aus dem TechNet Evaluation Center oder MSDN herunterg
 Die folgende Software kann von GitHub heruntergeladen werden:  
 - PAMSamplePortal: Enthält eine Beispielwebanwendung für die REST-API.
 
-## Erforderliche Software
+## <a name="required-software"></a>Erforderliche Software
 
 - Windows Server 2012 R2  
 - Windows 8.1 Enterprise oder Windows 10 Enterprise  
 - SQL Server 2012 Service Pack 1 oder SQL Server 2014  
 
-## Evaluierungssoftware
+## <a name="evaluation-software"></a>Evaluierungssoftware
 
 Wenn Sie keine Lizenzen für Windows, SQL Server oder Windows Server besitzen, können Sie Evaluierungsversionen herunterladen.
 
-### TechNet-Evaluierungscenter
+### <a name="technet-evaluation-center"></a>TechNet-Evaluierungscenter
 
 - [Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2)  
-- [Windows 8,1 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-8-1-enterprise)  
+- [Windows 8.1 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-8-1-enterprise)  
 - [Windows 10 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)  
 
-### Microsoft Download Center
+### <a name="microsoft-download-center"></a>Microsoft Download Center
 
 - [SQL Server](https://www.microsoft.com/download/details.aspx?id=29066)  
-- [SharePoint Foundation 2013 SP1 und vorausgesetzte Software](https://www.microsoft.com/download/details.aspx?id=42039)
+- [SharePoint Foundation 2013 SP1 und Systemanforderungen](https://www.microsoft.com/download/details.aspx?id=42039)
 
-## Hardwareanforderungen
+## <a name="hardware-requirements"></a>Hardwareanforderungen
 
 Beachten Sie für jede PAM-Komponente die Systemanforderungen der Softwareprodukte.
 
@@ -75,6 +75,6 @@ Für PAMSRV:
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

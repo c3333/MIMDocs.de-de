@@ -1,25 +1,25 @@
 ---
-title: "Bereitstellen von PAM Schritt 2 – PRIV-Domänencontroller | Microsoft Identity Manager"
+title: "Bereitstellen von PAM – Schritt 2: PRIV-Domänencontroller | Microsoft Docs"
 description: "Bereiten Sie den PRIV-Domänencontroller vor, der die geschützte Umgebung bereitstellt, in der Privileged Access Management isoliert wird."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 048a17c6b8150501185b7a13c3d2cb292791c9e8
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: f84229908f31242b6d2f7636a7c67ca669de45b3
 
 
 ---
 
-# Schritt 2: Vorbereiten des ersten PRIV-Domänencontrollers
+# <a name="step-2-prepare-the-first-priv-domain-controller"></a>Schritt 2: Vorbereiten des ersten PRIV-Domänencontrollers
 
 >[!div class="step-by-step"]
 [« Schritt 1](step-1-prepare-corp-domain.md)
@@ -27,11 +27,11 @@ ms.openlocfilehash: 048a17c6b8150501185b7a13c3d2cb292791c9e8
 
 In diesem Schritt erstellen Sie eine neue Domäne, die die geschützte Umgebung für die Administratorauthentifizierung bereitstellt.  Diese Gesamtstruktur benötigt mindestens einen Domänencontroller und mindestens einen Mitgliedsserver. Der Mitgliedsserver wird im nächsten Schritt konfiguriert.
 
-## Erstellen eines neuen Privileged Access Management-Domänencontrollers
+## <a name="create-a-new-privileged-access-management-domain-controller"></a>Erstellen eines neuen Privileged Access Management-Domänencontrollers
 
 In diesem Abschnitt richten Sie einen virtuellen Computer ein, der als Domänencontroller für eine neue Gesamtstruktur fungiert.
 
-### Installieren von Windows Server 2012 R2
+### <a name="install-windows-server-2012-r2"></a>Installieren von Windows Server 2012 R2
 Installieren Sie Windows Server 2012 R2 auf einem anderen neuen virtuellen Computer ohne installierte Software, um den Computer „PRIVDC“ zu erstellen.
 
 1. Wählen Sie die benutzerdefinierte Installation von Windows Server (kein Upgrade). Geben Sie bei der Installation **Windows Server 2012 R2 Standard (Server mit grafischer Benutzeroberfläche) x64** an. _Wählen Sie nicht_ **Datacenter oder Server Core** aus.
@@ -44,7 +44,7 @@ Installieren Sie Windows Server 2012 R2 auf einem anderen neuen virtuellen Com
 
 5. Nachdem der Server neu gestartet wurde, melden Sie sich als Administrator an. Konfigurieren Sie den Computer mithilfe der Systemsteuerung, um nach Updates zu suchen und ggf. alle erforderlichen Updates zu installieren. Dies erfordert möglicherweise einen Neustart des Servers.
 
-### Hinzufügen von Rollen
+### <a name="add-roles"></a>Hinzufügen von Rollen
 Fügen Sie die Rollen „Active Directory-Domänendienste (AD DS)“ und „DNS-Server“ hinzu.
 
 1. Starten Sie PowerShell als Administrator.
@@ -57,7 +57,7 @@ Fügen Sie die Rollen „Active Directory-Domänendienste (AD DS)“ und „DNS-
   Install-WindowsFeature AD-Domain-Services,DNS –restart –IncludeAllSubFeature -IncludeManagementTools
   ```
 
-### Konfigurieren der Registrierungseinstellungen für die Migration des SID-Verlaufs
+### <a name="configure-registry-settings-for-sid-history-migration"></a>Konfigurieren der Registrierungseinstellungen für die Migration des SID-Verlaufs
 
 Starten Sie PowerShell, und geben Sie die folgenden Befehle ein, um die Quelldomäne so zu konfigurieren, dass RPC-Zugriff (Remote Procedure Call, Remoteprozeduraufruf) auf die SAM-Datenbank (Security Accounts Manager Sicherheitskontenverwaltung) zugelassen wird.
 
@@ -65,13 +65,13 @@ Starten Sie PowerShell, und geben Sie die folgenden Befehle ein, um die Quelldom
 New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 ```
 
-## Erstellen einer neuen Privileged Access Management-Gesamtstruktur
+## <a name="create-a-new-privileged-access-management-forest"></a>Erstellen einer neuen Privileged Access Management-Gesamtstruktur
 
 Als Nächstes stufen Sie den Server zum Domänencontroller in einer neuen Gesamtstruktur höher.
 
 In diesem Dokument wird der Name „priv.contoso.local“ als Domänenname der neuen Gesamtstruktur verwendet.  Der Name der Gesamtstruktur ist nicht wichtig, und er muss keinem Namen einer vorhandenen Gesamtstruktur in der Organisation untergeordnet werden. Sowohl der Domänen- als auch der NetBIOS-Name der neuen Gesamtstruktur muss jedoch gegenüber den anderen Domänen in der Organisation eindeutig sein.  
 
-### Erstellen einer Domäne und Gesamtstruktur
+### <a name="create-a-domain-and-forest"></a>Erstellen einer Domäne und Gesamtstruktur
 
 1. Geben Sie in einem PowerShell-Fenster folgende Befehle ein, um die neue Domäne zu erstellen.  Dadurch wird eine DNS-Delegierung in einer übergeordneten Domäne (contoso.local) erstellt, die in einem vorherigen Schritt erstellt wurde.  Wenn Sie DNS später konfigurieren möchten, lassen Sie die `CreateDNSDelegation -DNSDelegationCredential $ca`-Parameter aus.
 
@@ -87,12 +87,12 @@ In diesem Dokument wird der Name „priv.contoso.local“ als Domänenname der n
 
 Nachdem die Erstellung der Gesamtstruktur abgeschlossen ist, wird der Server automatisch neu gestartet.
 
-### Erstellen von Benutzer- und Dienstkonten
+### <a name="create-user-and-service-accounts"></a>Erstellen von Benutzer- und Dienstkonten
 Erstellen Sie die Benutzer- und Dienstkonten für die Einrichtung von MIM-Dienst und -Portal. Diese Konten werden im Benutzercontainer der Domäne „priv.contoso.local“ gespeichert.
 
 1. Melden Sie sich nach dem Neustart des Servers als Domänenadministrator („PRIV\\Administrator“) bei PRIVDC an.
 
-2. Starten Sie PowerShell, und geben Sie die folgenden Befehle ein. Das Kennwort „Pass@word1“ ist nur ein Beispiel, Sie sollten für die Konten andere Kennwörter verwenden.
+2. Starten Sie PowerShell, und geben Sie die folgenden Befehle ein. Das Kennwort 'Pass@word1' ist nur ein Beispiel. Sie sollten für die Konten andere Kennwörter verwenden.
 
   ```
   import-module activedirectory
@@ -158,7 +158,7 @@ Erstellen Sie die Benutzer- und Dienstkonten für die Einrichtung von MIM-Dienst
   Add-ADGroupMember "Domain Admins" MIMService
   ```
 
-### Konfigurieren der Berechtigungen für die Überwachung und Anmeldung
+### <a name="configure-auditing-and-logon-rights"></a>Konfigurieren der Berechtigungen für die Überwachung und Anmeldung
 
 Sie müssen die Überwachung einrichten, damit die PAM-Konfiguration in den Gesamtstrukturen eingerichtet werden kann.  
 
@@ -207,7 +207,7 @@ Sie müssen die Überwachung einrichten, damit die PAM-Konfiguration in den Gesa
   Nach einer Minute wird der Vorgang mit der Meldung beendet, dass die Aktualisierung der Computerrichtlinie erfolgreich abgeschlossen wurde.
 
 
-### Konfigurieren der Weiterleitung von DNS-Namen auf „PRIVDC“
+### <a name="configure-dns-name-forwarding-on-privdc"></a>Konfigurieren der Weiterleitung von DNS-Namen auf „PRIVDC“
 
 Verwenden Sie PowerShell auf PRIVDC, um die DNS-Namensweiterleitung zu konfigurieren, sodass die PRIV-Domäne andere vorhandene Gesamtstrukturen erkennen kann.
 
@@ -224,7 +224,7 @@ Verwenden Sie PowerShell auf PRIVDC, um die DNS-Namensweiterleitung zu konfiguri
 > [!NOTE]
 > Die anderen Gesamtstrukturen müssen DNS-Abfragen für die PRIV-Gesamtstruktur an diesen Domänencontroller weiterleiten können.  Wenn Sie über mehrere Active Directory-Gesamtstrukturen verfügen, müssen Sie jeder dieser Gesamtstrukturen auch eine bedingte DNS-Weiterleitung hinzufügen.
 
-### Konfigurieren von Kerberos
+### <a name="configure-kerberos"></a>Konfigurieren von Kerberos
 
 1. Fügen Sie mithilfe von PowerShell SPNs hinzu, sodass SharePoint, die PAM-REST-API und der MIM-Dienst die Kerberos-Authentifizierung verwenden können.
 
@@ -238,7 +238,7 @@ Verwenden Sie PowerShell auf PRIVDC, um die DNS-Namensweiterleitung zu konfiguri
 > [!NOTE]
 > Die nächsten Schritte in diesem Dokument beschreiben die Installation von MIM 2016-Serverkomponenten auf einem einzelnen Computer. Wenn Sie planen, zur Sicherstellung einer hohen Verfügbarkeit einen weiteren Server hinzuzufügen, müssen Sie zusätzliche Kerberos-Einstellungen konfigurieren, wie unter [FIM 2010: Kerberos Authentication Setup](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx) (FIM 2010: Einrichten der Kerberos-Authentifizierung) beschrieben.
 
-### Konfigurieren der Delegierung, um MIM-Dienstkonten Zugriff zu gewähren
+### <a name="configure-delegation-to-give-mim-service-accounts-access"></a>Konfigurieren der Delegierung, um MIM-Dienstkonten Zugriff zu gewähren
 
 Führen Sie die folgenden Schritte auf PRIVDC als Domänenadministrator aus.
 
@@ -253,8 +253,8 @@ Führen Sie die folgenden Schritte auf PRIVDC als Domänenadministrator aus.
 8. Geben Sie im Fenster zur Auswahl von Benutzern, Computern oder Gruppen die Zeichenfolge *MIMAdmin* ein, und klicken Sie dann auf **Namen überprüfen**. Nachdem die Namen unterstrichen sind, klicken Sie auf **OK** und dann auf **Weiter**.  
 9. Wählen Sie **Benutzerdefinierter Task**gilt für **Diesen Ordner**und **Allgemeine Berechtigungen**.    
 10. Wählen Sie in der Liste mit den Berechtigungen Folgendes aus:  
-  - **Überwachungsdaten**  
-  - **Überwachungsdaten**  
+  - **Lesen**  
+  - **Schreiben**  
   - **Alle untergeordneten Objekte erstellen**  
   - **Alle untergeordneten Objekte löschen**  
   - **Alle Eigenschaften lesen**  
@@ -271,21 +271,21 @@ Führen Sie die folgenden Schritte auf PRIVDC als Domänenadministrator aus.
 
 17. Öffnen Sie eine Eingabeaufforderung.  
 18. Überprüfen Sie die Zugriffssteuerungsliste im Objekt „AdminSDHolder“ in den PRIV-Domänen. Wenn Ihre Domäne beispielsweise „priv.contoso.local“ lautet, geben Sie folgenden Befehl ein:  
-  ```  
-  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"  
-  ```  
+  ```
+  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"
+  ```
 19. Aktualisieren Sie die Zugriffssteuerungsliste nach Bedarf, um sicherzustellen, dass der MIM-Dienst und der MIM-Komponentendienst Mitgliedschaften von Gruppen aktualisieren können, die von dieser Zugriffssteuerungsliste geschützt werden.  Geben Sie den folgenden Befehl ein:  
-  ```  
+  ```
   dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimservice:WP;"member"  
-  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"  
-  ```  
+  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local" /G priv\mimcomponent:WP;"member"
+  ```
 20. Starten Sie den PRIVDC-Server neu, damit diese Änderung wirksam werden.
 
-## Vorbereiten einer PRIV-Arbeitsstation
+## <a name="prepare-a-priv-workstation"></a>Vorbereiten einer PRIV-Arbeitsstation
 
 Wenn Sie nicht bereits über einen Arbeitsstationcomputer verfügen, der in die PRIV-Domäne eingebunden werden kann, um Wartungsmaßnahmen für PRIV-Ressourcen (wie z. B. MIM) auszuführen, befolgen Sie diese Anweisungen zur Vorbereitung einer Arbeitsstation.  
 
-### Installieren von Windows 8.1 oder Windows 10 Enterprise
+### <a name="install-windows-81-or-windows-10-enterprise"></a>Installieren von Windows 8.1 oder Windows 10 Enterprise
 
 Installieren Sie Windows Server 8.1 Enterprise oder Windows 10 Enterprise auf einem anderen neuen virtuellen Computer ohne installierte Software, um einen Computer namens *PRIVWKSTN* zu erstellen.
 
@@ -307,6 +307,6 @@ Im nächsten Schritt bereiten Sie einen PAM-Server vor.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

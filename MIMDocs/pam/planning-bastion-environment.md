@@ -1,25 +1,25 @@
 ---
-title: "Planen einer geschützten Umgebung | Microsoft Identity Manager"
+title: "Planen einer geschützten Umgebung | Microsoft Docs"
 description: 
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 09/16/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9eefdf21d0cab3f7c488a66cbb3984d40498f4ef
-ms.openlocfilehash: fc4161f98d4367a2124e6253fe11dd1f2712d614
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: d07528fd69328647ff63e4a0f0f914af7cabfb8f
 
 
 ---
 
-# Planen einer geschützten Umgebung
+# <a name="planning-a-bastion-environment"></a>Planen einer geschützten Umgebung
 
 Durch das Hinzufügen einer geschützten Umgebung mit einer dedizierten administrativen Gesamtstruktur zu Active Directory sind Organisationen in der Lage, Administratorkonten, Arbeitsstationen und Gruppen problemlos zu verwalten. Dabei weist die Umgebung stärkere Sicherheitskontrollen auf als ihre vorhandene Produktionsumgebung.
 
@@ -27,25 +27,25 @@ Diese Architektur ermöglicht eine Reihe von Kontrollmechanismen, die in einer A
 
 Zusätzlich zur dedizierten administrativen Gesamtstruktur können auch weitere Verfahren verwendet werden. Dazu gehören das Einschränken der Situationen, in denen Administratorrechte verfügbar gemacht werden, das Beschränken der Rollenberechtigungen der Benutzer in dieser Gesamtstruktur und das Sicherstellen, dass administrative Aufgaben nicht auf Hosts für Standardbenutzeraktivitäten (z. B. E-Mail oder Browsen im Internet) durchgeführt werden.
 
-## Überlegungen zu bewährten Methoden
+## <a name="best-practice-considerations"></a>Überlegungen zu bewährten Methoden
 
 Eine dedizierte administrative Gesamtstruktur ist eine Active Directory-Standardgesamtstruktur mit einer einzelnen Domäne, die der Active Directory-Verwaltung dient. Ein Vorteil bei administrativen Gesamtstrukturen und Domänen liegt darin, dass aufgrund ihrer begrenzten Anwendungsfälle mehr Sicherheitsmaßnahmen für diese angewendet werden können als für Produktionsgesamtstrukturen. Da diese Gesamtstruktur abgetrennt ist und den bestehenden Gesamtstrukturen der Organisation nicht vertraut, wirkt sich eine Sicherheitsgefährdung in einer anderen Gesamtstruktur nicht auf diese dedizierte Gesamtstruktur aus.
 
 Beim Entwurf einer administrativen Gesamtstruktur ist Folgendes zu berücksichtigen:
 
-### Eingeschränkter Gültigkeitsbereich
+### <a name="limited-scope"></a>Eingeschränkter Gültigkeitsbereich
 
 Der Wert einer administrativen Gesamtstruktur liegt in der hohen Sicherheitsstufe und der verringerten Angriffsfläche. Die Gesamtstruktur kann zusätzliche Verwaltungsfunktionen und -anwendungen enthalten, jede Erweiterung des Bereichs vergrößert jedoch die Angriffsfläche der Gesamtstruktur und ihrer Ressourcen. Das Ziel ist es, die Funktionen der Gesamtstruktur zu begrenzen, um die Angriffsfläche möglichst gering zu halten.
 
 Gemäß dem [Ebenenmodell](tier-model-for-partitioning-administrative-privileges.md) der Partitionierung administrativer Berechtigungen sollten sich die Konten in einer administrativen Gesamtstruktur auf einer einzigen Ebene befinden, in der Regel entweder auf Ebene 0 oder Ebene 1. Wenn eine Gesamtstruktur sich auf Ebene 1 befindet, sollten Sie diese auf einen bestimmten Anwendungsbereich (z. B. Finanzanwendungen) oder eine Benutzercommunity (z. B. externe IT-Anbieter) beschränken.
 
-### Eingeschränkte Vertrauensstellung
+### <a name="restricted-trust"></a>Eingeschränkte Vertrauensstellung
 
 Die Produktionsgesamtstruktur *CORP* sollte der administrativen Gesamtstruktur *PRIV* vertrauen, aber nicht umgekehrt. Dabei kann es sich um eine Domänen- oder Gesamtstruktur-Vertrauensstellung handeln. Die administrative Gesamtstruktur muss den verwalteten Domänen und Gesamtstrukturen nicht vertrauen, um Active Directory verwalten zu können. Zusätzliche Anwendungen können jedoch eine bidirektionale Vertrauensstellung, Sicherheitsüberprüfungen und Tests erfordern.
 
 Um sicherzustellen, dass Konten in der administrativen Gesamtstruktur nur die geeigneten Produktionshosts verwenden, sollte die ausgewählte Authentifizierung verwendet werden. Zur Verwaltung von Domänencontrollern und Delegierung von Rechten in Active Directory ist hierbei in der Regel die Berechtigung für die Anmeldung auf Domänencontrollern für die jeweiligen Administratorkonten der Ebene 0 in der administrativen Gesamtstruktur erforderlich. Weitere Informationen finden Sie unter [Konfigurieren der Einstellungen für ausgewählte Authentifizierung](http://technet.microsoft.com/library/cc816580.aspx).
 
-## Verwalten der logischen Trennung
+## <a name="maintain-logical-separation"></a>Verwalten der logischen Trennung
 
 Um sicherzustellen, dass die geschützte Umgebung nicht durch bestehende oder zukünftige Sicherheitsvorfälle im Active Directory der Organisation beeinträchtigt wird, sollten bei der Vorbereitung von Systemen für die geschützte Umgebung die folgenden Richtlinien berücksichtigt werden:
 
@@ -61,7 +61,7 @@ Um sicherzustellen, dass die geschützte Umgebung nicht durch bestehende oder zu
 
 - Benutzer, die die geschützte Umgebung verwalten, müssen sich von Arbeitsstationen aus anmelden, die nicht für Administratoren in der bestehenden Umgebung zugänglich sind, damit die Anmeldeinformationen für die geschützten Umgebung nicht weitergegeben werden können.
 
-## Sicherstellen der Verfügbarkeit von Verwaltungsdiensten
+## <a name="ensure-availability-of-administration-services"></a>Sicherstellen der Verfügbarkeit von Verwaltungsdiensten
 
 Während die Verwaltung von Anwendungen in die geschützte Umgebung überführt wird, muss eine ausreichende Verfügbarkeit für die Anforderungen dieser Anwendungen berücksichtigt werden. Die Methoden umfassen Folgendes:
 
@@ -73,7 +73,7 @@ Während die Verwaltung von Anwendungen in die geschützte Umgebung überführt 
 
 - Verwalten einer Sicherungskopie von AD und SQL bei jeder Änderung von Benutzern oder Rollendefinitionen in der dedizierten Gesamtstruktur.
 
-## Konfigurieren geeigneter Active Directory-Berechtigungen
+## <a name="configure-appropriate-active-directory-permissions"></a>Konfigurieren geeigneter Active Directory-Berechtigungen
 
 Die administrative Gesamtstruktur sollte anhand der geringsten erforderlichen Rechte für die Active Directory-Verwaltung konfiguriert werden.
 
@@ -91,7 +91,7 @@ Sie müssen beim Erstellen der geschützten Umgebung vor der Installation von Mi
 
 - **Dienstkonten** werden von Microsoft Identity Manager, SQL Server und anderer Software benötigt.
 
-## Absichern der Hosts
+## <a name="harden-the-hosts"></a>Absichern der Hosts
 
 Alle Hosts, einschließlich Domänencontrollern, Servern und Arbeitsstationen, die Mitglied der administrativen Gesamtstruktur sind, müssen mit den neuesten Betriebssystemen und Servicepacks ausgestattet sein und auf dem aktuellen Stand gehalten werden.
 
@@ -99,7 +99,7 @@ Alle Hosts, einschließlich Domänencontrollern, Servern und Arbeitsstationen, d
 
 - Hosts in der administrativen Gesamtstruktur sollten automatisch mit Sicherheitsupdates aktualisiert werden. Dies birgt zwar das Risiko einer Unterbrechung des Domänencontroller-Wartungsbetriebs, bietet jedoch eine erhebliche Verringerung von Sicherheitsrisiken durch nicht behobene Schwachstellen.
 
-### Identifizieren der administrativen Hosts
+### <a name="identify-administrative-hosts"></a>Identifizieren der administrativen Hosts
 
 Das Risiko eines Systems oder einer Arbeitsstation sollte nach der Aktivität mit dem höchsten Risiko bewertet werden, die auf ihm ausgeführt wird, z. B. Browsen im Internet, Senden und Empfangen von E-Mails oder Verwenden anderer Anwendungen, die unbekannte oder nicht vertrauenswürdige Inhalte verarbeiten.
 
@@ -113,7 +113,7 @@ Zu den administrativen Hosts gehören die folgenden Computer:
 
 - Server, auf denen Anwendungen gehostet werden, die verwaltet werden müssen und auf die nicht mit RDP im eingeschränkten Administratormodus oder mit Windows PowerShell-Remoting zugegriffen wird.
 
-### Bereitstellen von dedizierten administrativen Arbeitsstationen
+### <a name="deploy-dedicated-administrative-workstations"></a>Bereitstellen von dedizierten administrativen Arbeitsstationen
 
 Möglicherweise sind separate abgesicherte Arbeitsstationen speziell für Benutzer mit sehr umfassenden Anmeldeinformationen erforderlich, auch wenn dies umständlich ist. Es ist wichtig, einen Host mit einer Sicherheitsstufe bereitzustellen, die der Berechtigungsstufe der Anmeldeinformationen entspricht oder höher als diese ist. Erwägen Sie die Einrichtung folgender Maßnahmen für zusätzlichen Schutz:
 
@@ -143,13 +143,13 @@ Möglicherweise sind separate abgesicherte Arbeitsstationen speziell für Benutz
 
 Einige dieser Maßnahmen erscheinen möglicherweise extrem, doch haben viele Nachrichten in den letzten Jahren aufgezeigt, welche umfassenden Fähigkeiten erfahrene Angreifer einsetzen, um Ziele zu manipulieren.
 
-## Vorbereiten vorhandener Domänen zur Verwaltung durch die geschützte Umgebung
+## <a name="prepare-existing-domains-to-be-managed-by-the-bastion-environment"></a>Vorbereiten vorhandener Domänen zur Verwaltung durch die geschützte Umgebung
 
 MIM verwendet PowerShell-Cmdlets, um Vertrauensstellungen zwischen den bestehenden AD-Domänen und der dedizierten administrativen Gesamtstruktur in der geschützten Umgebung einzurichten. Nach der Bereitstellung der geschützten Umgebung und bevor Benutzer oder Gruppen in JIT konvertiert wurden, aktualisieren die Cmdlets `New-PAMTrust` und `New-PAMDomainConfiguration` die Vertrauensstellungen zwischen den Domänen und erstellen für AD und MIM erforderliche Artefakte.
 
 Bei Änderungen der bestehenden Active Directory-Topologie können mit den Cmdlets `Test-PAMTrust`, `Test-PAMDomainConfiguration`, `Remove-PAMTrust` und `Remove-PAMDomainConfiguration` die Vertrauensstellungen aktualisiert werden.
 
-## Einrichten einer Vertrauensstellung für jede Gesamtstruktur
+## <a name="establish-trust-for-each-forest"></a>Einrichten einer Vertrauensstellung für jede Gesamtstruktur
 
 Das Cmdlet `New-PAMTrust` muss einmal für jede bestehende Gesamtstruktur ausgeführt werden. Er wird auf dem Computer des MIM-Diensts in der administrativen Domäne aufgerufen. Die Parameter für diesen Befehl sind der Domänenname der obersten Domäne in der bestehenden Gesamtstruktur und die Anmeldeinformationen eines Administrators dieser Domäne.
 
@@ -159,11 +159,11 @@ New-PAMTrust -SourceForest "contoso.local" -Credentials (get-credential)
 
 Nach dem Einrichten der Vertrauensstellung konfigurieren Sie jede Domäne für die Verwaltung über die geschützte Umgebung, wie im nächsten Abschnitt beschrieben.
 
-## Aktivieren der Verwaltung jeder Domäne
+## <a name="enable-management-of-each-domain"></a>Aktivieren der Verwaltung jeder Domäne
 
 Es gibt sieben Anforderungen für die Aktivierung der Verwaltung für eine bestehende Domäne.
 
-### 1. Eine Sicherheitsgruppe in der lokalen Domäne
+### <a name="1-a-security-group-on-the-local-domain"></a>1. Eine Sicherheitsgruppe in der lokalen Domäne
 
 Es muss eine Gruppe in der vorhandenen Domäne geben, deren Name dem NetBIOS-Domänennamen gefolgt von drei Dollarzeichen entspricht, z. B. *CONTOSO$$$*. Der Gruppenbereich muss *Lokal (in Domäne)* sein, und der Gruppentyp muss *Sicherheit* sein. Dies ist erforderlich, damit in der dedizierten administrativen Gesamtstruktur erstellte Gruppen dieselbe Sicherheits-ID wie Gruppen in dieser Domäne aufweisen. Die Erstellung dieser Gruppe erfolgt mit dem folgenden PowerShell-Befehl – dieser wird von einem Administrator der bestehenden Domäne auf einer Arbeitsstation ausgeführt, die der bestehenden Domäne beigetreten ist:
 
@@ -171,7 +171,7 @@ Es muss eine Gruppe in der vorhandenen Domäne geben, deren Name dem NetBIOS-Dom
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
-### 2. Überwachung von Erfolg und Fehlern
+### <a name="2-success-and-failure-auditing"></a>2. Überwachung von Erfolg und Fehlern
 
 Die Gruppenrichtlinieneinstellungen auf dem Domänencontroller für die Überwachung müssen sowohl Erfolgs- als auch Fehlerüberwachung für „Kontenverwaltung überwachen“ und „Verzeichniszugriff überwachen“ aufweisen. Sie können über die Gruppenrichtlinien-Verwaltungskonsole eingerichtet werden, die von einem Administrator der bestehenden Domäne auf einer Arbeitsstation ausgeführt wird, die der bestehenden Domäne beigetreten ist:
 
@@ -201,7 +201,7 @@ Die Gruppenrichtlinieneinstellungen auf dem Domänencontroller für die Überwac
 
 Die Meldung „Die Aktualisierung der Computerrichtlinie wurde erfolgreich abgeschlossen.“ sollte nach einigen Minuten angezeigt werden.
 
-### 3. Zulassen von Verbindungen mit der lokalen Sicherheitsautorität
+### <a name="3-allow-connections-to-the-local-security-authority"></a>3. Zulassen von Verbindungen mit der lokalen Sicherheitsautorität
 
 Die Domänencontroller müssen RPC über TCP/IP-Verbindungen für die lokale Sicherheitsautorität (Local Security Authority, LSA) aus der geschützten Umgebung zulassen. Auf älteren Versionen von Windows Server muss die TCP/IP-Unterstützung in LSA in der Registrierung aktiviert werden:
 
@@ -209,7 +209,7 @@ Die Domänencontroller müssen RPC über TCP/IP-Verbindungen für die lokale Sic
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
-### 4. Erstellen der PAM-Domänenkonfiguration
+### <a name="4-create-the-pam-domain-configuration"></a>4. Erstellen der PAM-Domänenkonfiguration
 
 Das Cmdlet `New-PAMDomainConfiguration` muss auf dem Computer des MIM-Diensts in der administrativen Domäne ausgeführt werden. Die Parameter für diesen Befehl sind der Domänenname der bestehenden Domäne und die Anmeldeinformationen eines Administrators dieser Domäne.
 
@@ -217,7 +217,7 @@ Das Cmdlet `New-PAMDomainConfiguration` muss auf dem Computer des MIM-Diensts in
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 
-### 5. Gewähren von Leseberechtigungen für Konten
+### <a name="5-give-read-permissions-to-accounts"></a>5. Gewähren von Leseberechtigungen für Konten
 
 Die Konten in der geschützten Gesamtstruktur, über die Rollen eingerichtet werden (Administratoren, die die Cmdlets `New-PAMUser` und `New-PAMGroup` verwenden) sowie das vom MIM-Überwachungsdienst verwendete Konto benötigen Leseberechtigungen in der Domäne.
 
@@ -239,20 +239,20 @@ Die folgenden Schritte aktivieren den Lesezugriff für den Benutzer *PRIV\Admini
 
 18. Schließen Sie %%amp;quot;Active Directory-Benutzer und -Computer%%amp;quot;.
 
-### 6. Ein Notfallkonto
+### <a name="6-a-break-glass-account"></a>6. Ein Notfallkonto
 
 Wenn das Ziel des Projekts für Privileged Access Management darin besteht, die Anzahl der Konten mit Domänenadministrator-Berechtigungen zu verringern, die dauerhaft der Domäne zugewiesen sind, muss es in der Domäne ein *Notfallkonto* geben, falls später ein Problem mit der Vertrauensstellung auftritt. Konten für den Notfallzugriff auf die Produktionsgesamtstruktur sollten in jeder Domäne vorhanden sein und sich ausschließlich bei Domänencontrollern anmelden können. Für Organisationen mit mehreren Standorten sind aus Redundanzgründen möglicherweise zusätzliche Konten erforderlich.
 
-### 7. Aktualisieren von Berechtigungen in der geschützten Umgebung
+### <a name="7-update-permissions-in-the-bastion-environment"></a>7. Aktualisieren von Berechtigungen in der geschützten Umgebung
 
 Überprüfen Sie die Berechtigungen im *AdminSDHolder*-Objekt im Systemcontainer dieser Domäne. Das *AdminSDHolder* -Objekt enthält eine eindeutige Zugriffssteuerungsliste (ACL), mit der die Berechtigungen von Sicherheitsprinzipalen gesteuert werden, die Mitglieder der integrierten privilegierten Active Directory-Gruppen sind. Wenn Änderungen an den Standardberechtigungen vorgenommen wurden, die Auswirkungen auf Benutzer mit Administratorrechten in der Domäne hätten, werden diese Berechtigungen nicht für Benutzer übernommen, deren Konten sich in der geschützten Umgebung befinden.
 
-## Auswählen der einzuschließenden Benutzern und Gruppen
+## <a name="select-users-and-groups-for-inclusion"></a>Auswählen der einzuschließenden Benutzern und Gruppen
 
 Der nächste Schritt besteht im Definieren der PAM-Rollen und im Zuordnen der Benutzer und Gruppen, auf die diese Zugriff haben sollten. Dabei handelt es sich in der Regel um eine Teilmenge der Benutzer und Gruppen für die Ebene, bei denen erkannt wurde, dass sie in der geschützten Umgebung verwaltet werden. Weitere Informationen finden Sie unter [Definieren von Rollen für Privileged Access Management](defining-roles-for-pam.md).
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

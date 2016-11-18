@@ -1,25 +1,25 @@
 ---
-title: "Einrichten einer Domäne | Microsoft Identity Manager"
+title: "Einrichten einer Domäne | Microsoft Docs"
 description: "Einrichten eines Active Directory-Domänencontrollers vor der Installation von MIM 2016"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 80fde32862a322a7a067982d0b02c99a8b43063e
-ms.openlocfilehash: 4ee1742e388da1ccb973b64316629debe570add0
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: aa110cc31896ac08aa3f84fa48858d978efe0c63
 
 
 ---
 
-# Einrichten einer Domäne
+# <a name="set-up-a-domain"></a>Einrichten einer Domäne
 
 >[!div class="step-by-step"]
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
@@ -28,7 +28,7 @@ Microsoft Identity Manager (MIM) arbeitet mit Ihrer Active Directory-Domäne. Si
 
 Dieser Artikel führt Sie durch die Schritte, in denen Sie Ihre Domäne für eine Verwendung von MIM vorbereiten.
 
-## Erstellen von Benutzerkonten und -gruppen
+## <a name="create-user-accounts-and-groups"></a>Erstellen von Benutzerkonten und -gruppen
 
 Alle Komponenten Ihrer MIM-Bereitstellung benötigen ihre eigenen Identitäten in der Domäne. Dazu gehören sowohl die MIM-Komponenten „Service“ und „Sync“ als auch SharePoint und SQL.
 
@@ -36,7 +36,7 @@ Alle Komponenten Ihrer MIM-Bereitstellung benötigen ihre eigenen Identitäten i
 > Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiel:
 > - Domänencontrollername: **mimservername**
 > - Domänenname: **contoso**
-> - Kennwort: **Pass@word1**
+> - Kennwort – **Pass@word1**
 
 1. Melden Sie sich auf dem Domänencontroller als Domänenadministrator an (*z.B. Contoso\Administrator*).
 
@@ -71,11 +71,11 @@ Alle Komponenten Ihrer MIM-Bereitstellung benötigen ihre eigenen Identitäten i
 3.  Erstellen Sie für alle Gruppen Sicherheitsgruppen.
 
     ```
-    New-ADGroup –name MIMSyncAdmins –GroupCategory Security –GroupScope Global      –SamAccountName MIMSyncAdmins
-    New-ADGroup –name MIMSyncOperators –GroupCategory Security –GroupScope Global       –SamAccountName MIMSyncOperators
-    New-ADGroup –name MIMSyncJoiners –GroupCategory Security –GroupScope Global         –SamAccountName MIMSyncJoiners
-    New-ADGroup –name MIMSyncBrowse –GroupCategory Security –GroupScope Global      –SamAccountName MIMSyncBrowse
-    New-ADGroup –name MIMSyncPasswordReset –GroupCategory Security –GroupScope Global          –SamAccountName MIMSyncPasswordReset
+    New-ADGroup –name MIMSyncAdmins –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncAdmins
+    New-ADGroup –name MIMSyncOperators –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncOperators
+    New-ADGroup –name MIMSyncJoiners –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncJoiners
+    New-ADGroup –name MIMSyncBrowse –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncBrowse
+    New-ADGroup –name MIMSyncPasswordReset –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncPasswordReset
     Add-ADGroupMember -identity MIMSyncAdmins -Members Administrator
     Add-ADGroupmember -identity MIMSyncAdmins -Members MIMService
     ```
@@ -94,6 +94,6 @@ Alle Komponenten Ihrer MIM-Bereitstellung benötigen ihre eigenen Identitäten i
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -3,23 +3,27 @@ title: "Schritt 8: Überprüfen der PAM-Bereitstellung"
 description: "Bereiten Sie die CORP-Domäne mit vorhandenen oder neuen Identitäten vor, die vom Privileged Identity Manager mithilfe von Skripts verwaltet werden sollen."
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/04/2016
+ms.date: 10/25/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 99b1ff9f622ddd357866b2a3f9f4cc8e0fc88005
-ms.openlocfilehash: 9a617d8a5fbe8bcdac40cdf3250e5efedb7a0b84
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: 7709b4df5bb196aba6abf056830bc73e024174ef
 
 
 ---
 
-# Schritt 8: Überprüfen der PAM-Bereitstellung
+# <a name="step-8-pam-deployment-verification"></a>Schritt 8: Überprüfen der PAM-Bereitstellung
+
+>[!div class="step-by-step"]
+[« Schritt 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+[Nachtrag »](sp1-pam-deployment-addendum.md)
 
 Das Bereitstellungspaket enthält Überprüfungsskripts, die ein PAM-Szenario ausführen können, um sicherzustellen, dass die PAM-Bereitstellung wie erwartet funktioniert.
 Zum Verwenden der Bereitstellungsüberprüfung ändern Sie den Abschnitt „PAMDeploymentConfig.xml“ mit dem Namen <PamValidation/>.
@@ -79,6 +83,6 @@ Geben Sie im PowerShell-Fenster folgende Befehle ein:
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 
