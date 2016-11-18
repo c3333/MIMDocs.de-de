@@ -1,8 +1,9 @@
 ---
-title: PAM-Notfallwiederherstellung | Microsoft Identity Manager
+title: PAM-Notfallwiederherstellung | Microsoft Docs
 description: "Erfahren Sie, wie Sie Privileged Access Management für Hochverfügbarkeit und die Notfallwiederherstellung konfigurieren."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
@@ -12,8 +13,8 @@ ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 9164e48bf10fa27ff6c87ba3816b586a940dda69
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: a61d0bf5aaa263aff28a253e54e721f168ce337c
 
 
 ---
@@ -223,6 +224,6 @@ Wenn die Gesamtstrukturfunktionsebene der geschützten Umgebung Windows Server 2
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

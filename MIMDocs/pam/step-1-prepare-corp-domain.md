@@ -1,8 +1,9 @@
 ---
-title: "Bereitstellen von PAM Schritt 1 – CORP-Domäne | Microsoft Identity Manager"
+title: "Bereitstellen von PAM – Schritt 1: CORP-Domäne | Microsoft Docs"
 description: "Bereiten Sie die CORP-Domäne mit vorhandenen oder neuen Identitäten vor, die vom Privileged Identity Manager verwaltet werden sollen."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
@@ -12,8 +13,8 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 9a2fafa86c5c928339ff8d7ad1593472046ccb98
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 127d368c15cce125ba7f69302cfa329b600d9498
 
 
 ---
@@ -214,6 +215,6 @@ Im nächsten Schritt bereiten Sie den PRIV-Domänencontroller vor.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

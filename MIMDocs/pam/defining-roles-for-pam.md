@@ -1,25 +1,25 @@
 ---
-title: "Definieren von privilegierten Rollen für PAM | Microsoft Identity Manager"
+title: "Definieren von privilegierten Rollen für PAM | Microsoft Docs"
 description: "Entscheiden Sie, welche privilegierten Rollen verwaltet werden sollen, und legen Sie die Verwaltungsrichtlinie für jede fest."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 442b596107d9ade0ca466500440a32b2dd26fa14
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: ae582e6aff2449aeee8b68ebe90b22b18e5a67d2
 
 
 ---
 
-# Definieren von Rollen für Privileged Access Management
+# <a name="define-roles-for-privileged-access-management"></a>Definieren von Rollen für Privileged Access Management
 
 Mit Privileged Access Management können Sie Benutzern privilegierte Rollen zuweisen, die sie nach Bedarf für den Just-in-Time-Zugriff aktivieren können. Diese Rollen werden manuell definiert und in der geschützten Umgebung eingerichtet. Dieser Artikel führt Sie durch den Prozess der Entscheidung, welche Rollen durch PAM verwaltet werden sollen, und wie sie mit entsprechenden Berechtigungen und Einschränkungen definiert werden.
 
@@ -33,7 +33,7 @@ Die Rollenberechtigungen hängen von den verwalteten Anwendungen ab. In diesem A
 
 - Berechtigungen, die zum Verwalten der in Active Directory gespeicherten Daten erforderlich sind (z. B. Erstellen von Benutzern und Gruppen)
 
-## Identifizieren von Rollen
+## <a name="identify-roles"></a>Identifizieren von Rollen
 
 Starten Sie mit dem Identifizieren aller Rollen, die Sie möglicherweise mit PAM verwalten möchten. In der Kalkulationstabelle hat jede mögliche Rolle eine eigene Zeile.
 
@@ -57,7 +57,7 @@ Weitere Überlegungen zum Definieren der Berechtigungen für eine Rolle:
 
 - Ist es möglich, Administration und Überwachung zu trennen, sodass ein Benutzer in einer Administratorrolle nicht die Überwachungsdatensätze seiner Aktionen löschen kann?
 
-## Einrichten von Governanceanforderungen für Rollen
+## <a name="establish-role-governance-requirements"></a>Einrichten von Governanceanforderungen für Rollen
 
 Füllen Sie beim Bestimmen der möglichen Rollen die Tabelle aus. Erstellen Sie Spalten für die Anforderungen, die für Ihre Organisation relevant sind. Zu den zu berücksichtigenden Anforderungen zählen:
 
@@ -79,7 +79,7 @@ Füllen Sie beim Bestimmen der möglichen Rollen die Tabelle aus. Erstellen Sie 
 
 - Welche Anwendungsberechtigungen (siehe folgende Beispielaufstellung für AD) sind der Rolle zugeordnet?
 
-## Auswählen einer Zugriffsmethode
+## <a name="select-an-access-method"></a>Auswählen einer Zugriffsmethode
 
 Möglicherweise sind in einem Privileged Access Management-System mehrere Rollen vorhanden, denen die gleichen Berechtigungen zugewiesen sind, wenn für verschiedene Benutzergruppen unterschiedliche Governance-Anforderungen für den Zugriff vorliegen. Beispielsweise können in einer Organisation andere Richtlinien für Vollzeitmitarbeiter gelten als für externe IT-Mitarbeiter einer anderen Organisation.
 
@@ -95,7 +95,7 @@ In einigen Fällen kann ein Benutzer dauerhaft einer Rolle zugewiesen sein und d
 
 Für Organisationen, die in Bezug auf den möglichen Diebstahl oder Missbrauch von Anmeldeinformationen Bedenken haben, enthält die Anleitung [Verwenden von Azure MFA zur Aktivierung](use-azure-mfa-for-activation.md) Anweisungen dazu, wie MIM so konfiguriert werden kann, dass zum Zeitpunkt der Rollenaktivierung eine zusätzliche Out-of-Band-Prüfung erforderlich ist.
 
-## Delegieren von Berechtigungen für Active Directory
+## <a name="delegate-active-directory-permissions"></a>Delegieren von Berechtigungen für Active Directory
 
 Windows Server erstellt automatisch Standardgruppen, wie z. B. „Domänen-Admins“, wenn neue Domänen erstellt werden. Diese Gruppen vereinfachen erste Schritte und sind möglicherweise für kleinere Organisationen eignet. Allerdings sollten größere Organisationen oder diejenigen, die mehr Isolation von Administratorrechten benötigen, Gruppen wie „Domänen-Admins“ leeren und sie mit Gruppen ersetzen, die differenziertere Berechtigungen bereitstellen.
 
@@ -106,7 +106,7 @@ Eine Einschränkung der Gruppe „Domänen-Admins“ besteht darin, dass Mitglie
 
 Erstellen Sie anstelle von Standardgruppen wie „Domänen-Admins“ neue Sicherheitsgruppen, die nur die erforderlichen Berechtigungen umfassen, und stellen Sie mit MIM dynamisch Administratorkonten mit diesen Gruppenmitgliedschaften bereit.
 
-### Dienstverwaltungsberechtigungen
+### <a name="service-management-permissions"></a>Dienstverwaltungsberechtigungen
 
 Die folgende Tabelle enthält Beispiele für Berechtigungen, die relevant für Rollen zur Verwaltung von AD sind.
 
@@ -122,11 +122,11 @@ Die folgende Tabelle enthält Beispiele für Berechtigungen, die relevant für R
 | Zonen verwalten | Erstellen, Löschen und Ändern von DNS-Zonen und Objekten in Active Directory |
 | OEs der Ebene 0 ändern | Ändern der Organisationseinheiten der Ebene 0 und der darin enthaltenen Objekte in Active Directory |
 
-### Datenverwaltungsberechtigungen
+### <a name="data-management-permissions"></a>Datenverwaltungsberechtigungen
 
 Die folgende Tabelle enthält Beispiele für Berechtigungen, die relevant für Rollen zur Verwaltung oder Verwendung der in AD gespeicherten Daten sind.
 
-| Role-Eigenschaft | Beschreibung |
+| Rolle | Beschreibung |
 | ---- | ---- |
 | Admin-OE der Ebene 1 ändern                 | Ändern von Organisationseinheiten, die Admin-Objekte der Ebene 1 enthalten, in Active Directory |
 | Admin-OE der Ebene 2 ändern                 | Ändern von Organisationseinheiten, die Admin-Objekte der Ebene 2 enthalten, in Active Directory |
@@ -138,13 +138,13 @@ Die folgende Tabelle enthält Beispiele für Berechtigungen, die relevant für R
 | PC verknüpfen/lokaler Administrator                    | Lokale Administratorrechte für alle Arbeitsstationen                               |
 | Server verknüpfen/lokaler Administrator                   | Lokale Administratorrechte für alle Server                                    |
 
-## Beispiele für Rollendefinitionen
+## <a name="example-role-definitions"></a>Beispiele für Rollendefinitionen
 
 Die Auswahl der Rollendefinitionen hängt von der Ebene der Server ab, die über die privilegierten Konten verwaltet werden. Sie hängt außerdem von der Auswahl der verwalteten Anwendungen ab, da Anwendungen wie Exchange oder Enterprise-Produkte von Drittanbietern wie SAP häufig über ihre eigenen zusätzlichen Rollendefinitionen für die delegierte Administration verfügen.
 
 Die folgenden Abschnitte enthalten Beispiele für typische Enterprise-Szenarios.
 
-### Ebene 0 – administrative Gesamtstruktur
+### <a name="tier-0-administrative-forest"></a>Ebene 0 – administrative Gesamtstruktur
 
 Die für Konten in der geschützten Umgebung geeigneten Rollen können Folgendes umfassen:
 
@@ -153,7 +153,7 @@ Die für Konten in der geschützten Umgebung geeigneten Rollen können Folgendes
 - Benutzer, die Administratoren der Produktionsgesamtstruktur sind
 - Benutzer, an die eingeschränkte Administratorrechte für Anwendungen in der Produktionsgesamtstruktur delegiert werden
 
-### Ebene 0 – Enterprise-Produktionsgesamtstruktur
+### <a name="tier-0-enterprise-production-forest"></a>Ebene 0 – Enterprise-Produktionsgesamtstruktur
 
 Die zur Verwaltung von Konten und Ressourcen der Produktionsgesamtstruktur der Ebene 0 geeigneten Rollen können Folgendes umfassen:
 
@@ -170,7 +170,7 @@ Die zur Verwaltung von Konten und Ressourcen der Produktionsgesamtstruktur der E
 - Administratoren für Backup für Ebene 0
 - Benutzer von Out-of-Band- und Baseboard-Verwaltungscontrollern (für KVM- oder Lights-Out-Management), die mit Hosts der Ebene 0 verbunden sind
 
-### Ebene 1
+### <a name="tier-1"></a>Ebene 1
 
 Rollen zur Verwaltung und Sicherung von Servern auf Ebene 1 können Folgendes umfassen:
 
@@ -192,7 +192,7 @@ Zudem können Rollen zur Verwaltung von Enterprise-Anwendungen auf Ebene 1 Folge
 - Administratoren eines Cloud-Diensts, z. B. einer Website oder eines öffentlichen DNS eines Unternehmens
 - Administratoren für HCM- Finanz- oder juristische Systeme
 
-### Ebene 2
+### <a name="tier-2"></a>Ebene 2
 
 Rollen für Benutzer ohne Administratorrechte und zur Computerverwaltung können Folgendes umfassen:
 
@@ -203,6 +203,6 @@ Rollen für Benutzer ohne Administratorrechte und zur Computerverwaltung können
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

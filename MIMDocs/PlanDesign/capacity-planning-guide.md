@@ -1,25 +1,25 @@
 ---
-title: "Kapazitätsplanungshandbuch | Microsoft Identity Manager"
+title: "Kapazitätsplanungsleitfaden | Microsoft Docs"
 description: "Verwenden Sie dieses Handbuch, um die Variablen zu verstehen, die vor dem Bereitstellen von MIM 2016 berücksichtigt werden sollten, einschließlich Auslastungsgrad und Richtlinienentscheidungen."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 2aeca4630f0d6f64d012e000e5dbabec618e7b1e
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 33e7d901dcd9d8cf1bcaddcfa521625060bb3dbc
 
 
 ---
 
-# Kapazitätsplanungshandbuch
+# <a name="capacity-planning-guide"></a>Kapazitätsplanungshandbuch
 
 Microsoft Identity Manager (MIM) ermöglicht es Ihnen, Benutzerkonten in Ihrer gesamten Organisation zu erstellen, zu aktualisieren und zu entfernen. Außerdem gibt MIM Endbenutzern die Möglichkeit, ihre eigenen Konten mit Self-Service-Features zu verwalten. Selbst in einer kleinen Umgebung können Sie diese Aktionen schnell summieren.
 
@@ -27,7 +27,7 @@ Bevor Sie mit MIM beginnen, sollten Sie diese Anleitung zusammen mit Testumgebun
 
 Wenn Sie noch nicht mit MIM 2016 und den zugehörigen Komponenten vertraut sind, sollten Sie weitere Informationen zu [Microsoft Identity Manager 2016](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016) lesen, bevor Sie die nächsten Schritte ausführen.
 
-## Übersicht
+## <a name="overview"></a>Übersicht
 Es gibt eine ganze Anzahl von Variablen, die sich auf die gesamte Kapazität und Leistung Ihrer Microsoft Identity Manager-Bereitstellung auswirken können. Die Methoden, die Sie nutzen, um die MIM-Komponenten (Topologie) physisch bereitzustellen sowie die Hardware, auf der diese Komponenten laufen, sind wichtige Faktoren bei der Ermittlung der Leistung und Kapazität, die Sie von Ihrer MIM-Bereitstellung erwarten können. Die Anzahl und Komplexität der MIM-Richtlinienkonfigurationsobjekte mögen zwar weniger offensichtlich sein, jedoch sind sie weiterhin wichtige Faktoren, die beim Planen der Kapazität bedacht werden müssen. Schließlich sind die erwartete Größenordnung der Bereitstellung sowie die Auslastung, die darauf platziert werden soll, in der Regel offensichtlichere Faktoren, die die Leistung und Kapazität beeinflussen.
 
 Die wichtigsten Faktoren, die Einfluss auf die erwartete Kapazität und Leistung einer MIM 2016-Bereitstellung haben, werden in der folgenden Tabelle erläutert.
@@ -41,7 +41,7 @@ Die wichtigsten Faktoren, die Einfluss auf die erwartete Kapazität und Leistung
 | Last | Nutzungshäufigkeit. Beispielsweise Ihre Erwartung, wie oft innerhalb eines gegebenen Zeitraums neue Gruppen oder Benutzer erstellt werden, Kennwörter zurückgesetzt werden oder das Portal besucht wird. Beachten Sie, dass die Auslastung im Zeitraum von einer Stunde, einem Tag, einer Woche oder einem Jahr variieren kann. Je nach Komponente können Sie diese für Spitzenlast oder für durchschnittliche Last auslegen. |
 
 
-## Hosten von Microsoft Identity Manager-Komponenten
+## <a name="hosting-microsoft-identity-manager-components"></a>Hosten von Microsoft Identity Manager-Komponenten
 
 Die Komponenten von Microsoft Identity Manager müssen sich nicht auf demselben Computer befinden. Ein Betrachten dieser Komponenten und der physischen oder virtuellen Computer, auf denen die Komponenten gehostet werden sollen, ist ein wichtiger Bestandteil der Kapazitätsplanung.
 
@@ -52,7 +52,7 @@ Berücksichtigen Sie außerdem die externen Faktoren in Ihrer Konfiguration. Bei
 - Falls Sie ein SAN als die MIM 2016 Dienstdatenbank-Konfiguration verwenden, beachten Sie, welche anderen Anwendungen ebenfalls ein SAN verwenden. Diese Anwendungen wirken sich möglicherweise auf die Leistung der Datenbank aus, wenn sie um die freigegebenen Datenträgerressourcen im SAN konkurrieren.
 
 
-## Benutzer und Gruppen
+## <a name="users-and-groups"></a>Benutzer und Gruppen
 Die Anzahl von Benutzern und Gruppen in Ihrer Umgebung spielt eine Rolle bei den Überlegungen zur Größenordnung einer Bereitstellung. Es gibt jedoch verschiedene weitere Aspekte diesbezüglich, die Sie auch in die Planung miteinbeziehen sollten.
 
 - Können Benutzer Gruppen erstellen? Falls ja, sollten Sie abschätzen, wie dies das Wachstum von Gruppen in Ihrer Umgebung beeinflusst, wenn Benutzer neue Gruppen erstellen.
@@ -60,7 +60,7 @@ Die Anzahl von Benutzern und Gruppen in Ihrer Umgebung spielt eine Rolle bei den
 - Werden dynamische Gruppen bereitgestellt? Ermitteln Sie, wie viele und welche Arten von dynamischen Gruppen in Ihrer Umgebung zu erwarten sind.
 
 
-## Erwarteter Auslastungsgrad
+## <a name="expected-load-levels"></a>Erwarteter Auslastungsgrad
 Sie sollten auch die Art der Auslastung bedenken, die auf den MIM-Komponenten platziert wird. Diese Informationen lassen sich wahrscheinlich durch Betrachten der aktuellen Anwendungen in Ihrer Umgebung abschätzen. Berücksichtigen Sie auch die folgenden relevanten Fragen:
 
 - Wie oft erwarten Sie eine dass Einladungen zum Beitritt oder eine Aufforderung zum Verlassen einer Gruppe versendet werden?
@@ -74,7 +74,7 @@ Sie sollten auch die Art der Auslastung bedenken, die auf den MIM-Komponenten pl
 - Erwarten Sie große Variationen im Auslastungsgrad von normaler Auslastung bis Spitzenlast ? Beispielsweise gibt es die Tendenz, dass nach einer Ferienzeit viele Kennwörter zurückgesetzt werden. Stellen Sie sicher, dass Sie Ihre Systemwartung und Synchronisierungszeitpläne außerhalb der erwarteten Auslastungsspitzen laufen lassen. Wenn Sie sich mit der Kapazitätsplanung beschäftigen, stellen Sie sicher, dass Sie die Spitzenlastzeiten berücksichtigen.
 
 
-## Richtlinienkonfigurationsobjekte
+## <a name="policy-configuration-objects"></a>Richtlinienkonfigurationsobjekte
 
 Microsoft Identity Manager-Richtlinienkonfigurationsobjekte enthalten die MPRs, Sätze, Workflows und Synchronisierungsregeln für eine bestimmte Bereitstellung. MIM-Bereitstellungen sind für jeden Kunden einmalig, da Richtlinienkonfigurationen geändert werden, um den Anforderungen jeder Bereitstellung zu entsprechen. Entscheidende Überlegungen zur Leistungsfähigkeit im Zusammenhang mit MIM-Richtlinienkonfigurationsobjekten enthalten Folgendes:
 
@@ -89,12 +89,12 @@ Die Konfiguration von MIM-Richtlinien umfasst außerdem Entscheidungen zur Berei
 - Verwenden Sie die Bereitstellung ohne Code? Falls ja, wirkt sich dies auf die Anzahl der erwarteten Regeleinträge aus sowie auf zugehörige Anforderungen und Workflows im System.
 
 
-## Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen:
 - [Topologieaspekte für die Bereitstellung von MIM](topology-considerations.md)
 - Der zum Download bereitstehende [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) (Handbuch zur Kapazitätsplanung des Forefront Identity Manager (FIM) 2010) bietet weitere Informationen zu einem Test-Build und Leistungstestergebnissen.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

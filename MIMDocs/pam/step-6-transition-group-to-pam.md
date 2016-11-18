@@ -1,25 +1,25 @@
 ---
-title: "Bereitstellen von PAM Schritt 6 – Verschieben einer Gruppe | Microsoft Identity Manager"
+title: "Bereitstellen von PAM – Schritt 6: Verschieben einer Gruppe | Microsoft Docs"
 description: Migrieren Sie eine Gruppe zur Gesamtstruktur PRIV, damit sie mit Privileged Access Management verwaltet werden kann.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 603e5e28f0eee0f648ef7e00ef137f5a08b2ba34
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 9e70bdd3c586a16a9a55c91bd0e099a500950a64
 
 
 ---
 
-# Schritt 6 – Übergang eine Gruppe zur privilegierten Zugriffsverwaltung
+# <a name="step-6-transition-a-group-to-privileged-access-management"></a>Schritt 6 – Übergang eine Gruppe zur privilegierten Zugriffsverwaltung
 
 >[!div class="step-by-step"]
 [«Schritt 5 ](step-5-establish-trust-between-priv-corp-forests.md)
@@ -45,7 +45,7 @@ Die Cmdlets müssen einmal für jede Gruppe und einmal für jedes Mitglied einer
 
 3.  Erstellen Sie zu Demonstrationszwecken in PRIV ein entsprechendes Benutzerkonto für ein Benutzerkonto in einer vorhandenen Gesamtstruktur.
 
-    Geben Sie die folgenden Befehle in PowerShell ein.  Wenn Sie nicht zuvor den Namen *Jen* verwendet haben, um den Benutzer in „contoso.local“ zu erstellen, ändern Sie die Parameter des Befehls nach Bedarf. Das Kennwort „Pass@word1“ ist nur ein Beispiel und sollte durch einen eindeutigen Kennwortwert ersetzt werden.
+    Geben Sie die folgenden Befehle in PowerShell ein.  Wenn Sie nicht zuvor den Namen *Jen* verwendet haben, um den Benutzer in „contoso.local“ zu erstellen, ändern Sie die Parameter des Befehls nach Bedarf. Das Kennwort 'Pass@word1' ist nur ein Beispiel und sollte durch einen eindeutigen Kennwortwert ersetzt werden.
 
     ```
     $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
@@ -90,6 +90,6 @@ Wenn Sie veranschaulichen möchten, dass das Administratorkonto des Benutzers ü
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -1,28 +1,28 @@
 ---
-title: Self-Service-Smartcard-Erneuerung | Microsoft Identity Manager
+title: "Self-Service-Smartcard-Verlängerung | Microsoft Docs"
 description: "Erfahren Sie, wie Sie Smartcards für Benutzer ohne Administratorrechte auf ihren Computern registrieren können, damit diese den Zertifikat-Manager verwenden können."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 2fddede481b5ba677d0d463be4b14cda4b463865
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 76d72211e1dbddb2647729c796ac19eb82a3b2c6
 
 
 ---
 
-# Registrieren von Smartcards für Nichtadministratoren
+# <a name="enroll-smart-cards-for-nonadministrators"></a>Registrieren von Smartcards für Nichtadministratoren
 Wenn ein Benutzer auf seinem Computer kein lokaler Administrator ist, kann er standardmäßig keine Smartcard auf seinen eigenen Computern registrieren. Mithilfe des folgenden Verfahrens können Sie diese Einschränkung umgehen.
 
-## Ermöglichen von Smartcard-Erneuerung für Nichtadministratoren im MIM 2016-Zertifikat-Manager
+## <a name="enabling-smart-card-renewal-for-nonadmins-in-mim-2016-certificate-manager"></a>Ermöglichen von Smartcard-Erneuerung für Nichtadministratoren im MIM 2016-Zertifikat-Manager
 
 1.  **Entpacken Sie die APPX-Datei.**
 
@@ -56,7 +56,7 @@ Wenn ein Benutzer auf seinem Computer kein lokaler Administrator ist, kann er st
 
     6.  Speichern Sie die Datei, und beenden Sie den Editor.
 
-3.  **Packen Sie das Anwendungspaket (APPX-Datei) erneut, und signieren Sie es anschließend.**
+3.  **Packen Sie das App-Paket (APPX-Datei) erneut, und signieren Sie es anschließend.**
 
     Führen Sie Folgendes aus, um die APPX-Datei zu packen und zu signieren:
 
@@ -80,22 +80,22 @@ Wenn ein Benutzer auf seinem Computer kein lokaler Administrator ist, kann er st
 
     6.  Führen Sie einen Bildlauf nach unten aus, und klicken Sie auf **OK**.
 
-5.  **Erstellen Sie ein Nicht-Administratorkonto auf dem Clientcomputer.**
+5.  **Erstellen Sie ein Konto ohne Administratorberechtigungen auf dem Clientcomputer.**
 
     Benutzer ohne Administratorrechte können die virtuelle Smartcard nicht auf dem TPM erstellen, daher müssen Sie diese für sie erstellen.
 
-6.  **Erstellen Sie eine virtuelle Smartcard mithilfe von „TpmVscMgr“.**
+6.  **Erstellen Sie eine virtuelle Smartcard mithilfe von TpmVscMgr.**
 
     Führen Sie die folgenden Schritte aus (nach wie vor als Administrator), um eine leere virtuelle Smartcard auf einem Computer zu erstellen. Dies kann über Intune, SCCM oder Gruppenrichtlinien erfolgen.
 
     `TpmVscMgr create /name MyVSC /pin default /adminkey default /generate`
 
-7.  **Installieren Sie die CM-App für das Nicht-Administratorkonto.**
+7.  **Installieren Sie die CM-App für das Konto ohne Administratorberechtigungen.**
 
 8.  **Starten Sie die CM-App und Registrierung für eine virtuelle Smartcard.**
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

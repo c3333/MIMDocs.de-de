@@ -1,25 +1,25 @@
 ---
-title: Konfigurieren von Windows Server | Microsoft Identity Manager
+title: Konfigurieren von Windows Server | Microsoft Docs
 description: "Erfahren Sie mehr über die ersten Schritte und die Mindestanforderungen für die Vorbereitung von Windows Server 2012 R2 für MIM 2016."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
-ms.openlocfilehash: bdf1f4b7c5762095f4986506f9e17369dadea011
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 06d2365808858dc09d04ab37eafa9d6e3212cbcf
 
 
 ---
 
-# Einrichten eines Identitätsverwaltungsservers: Windows Server 2012 R2
+# <a name="set-up-an-identity-management-server-windows-server-2012-r2"></a>Einrichten eines Identitätsverwaltungsservers: Windows Server 2012 R2
 
 >[!div class="step-by-step"]
 [« Vorbereiten einer Domäne](preparing-domain.md)
@@ -29,9 +29,9 @@ ms.openlocfilehash: bdf1f4b7c5762095f4986506f9e17369dadea011
 > Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiel:
 > - Domänencontrollername: **mimservername**
 > - Domänenname: **contoso**
-> - Kennwort: **Pass@word1**
+> - Kennwort – **Pass@word1**
 
-## Hinzufügen von Windows Server 2012 R2 zu Ihrer Domäne
+## <a name="join-windows-server-2012-r2-to-your-domain"></a>Hinzufügen von Windows Server 2012 R2 zu Ihrer Domäne
 
 Beginnen Sie mit einem Computer mit Windows Server 2012 R2 mit mindestens 8 GB RAM. Geben Sie bei der Installation die Edition „Windows Server 2012 R2 Standard (Server mit grafischer Benutzeroberfläche) x64“ an.
 
@@ -62,7 +62,7 @@ Beginnen Sie mit einem Computer mit Windows Server 2012 R2 mit mindestens 8 GB R
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,Windows-Identity-Foundation,Server-Media-Foundation,Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-## Konfigurieren der Serversicherheitsrichtlinie
+## <a name="configure-the-server-security-policy"></a>Konfigurieren der Serversicherheitsrichtlinie
 
 Richten Sie die Serversicherheitsrichtlinien ein, damit die neu erstellten Konten als Dienste ausgeführt werden können.
 
@@ -93,7 +93,7 @@ Richten Sie die Serversicherheitsrichtlinien ein, damit die neu erstellten Konte
 12. Schließen Sie das Fenster „Lokale Sicherheitsrichtlinien“.
 
 
-## Ändern Sie den IIS-Windows-Authentifizierungsmodus.
+## <a name="change-the-iis-windows-authentication-mode"></a>Ändern Sie den IIS-Windows-Authentifizierungsmodus.
 
 1.  Öffnen Sie ein PowerShell-Fenster.
 
@@ -111,6 +111,6 @@ Richten Sie die Serversicherheitsrichtlinien ein, damit die neu erstellten Konte
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

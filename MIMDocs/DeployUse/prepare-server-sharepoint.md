@@ -1,25 +1,25 @@
 ---
-title: Konfigurieren von SharePoint | Microsoft Identity Manager
+title: Konfigurieren von SharePoint | Microsoft Docs
 description: Installieren und konfigurieren Sie SharePoint Foundation, sodass es die MIM-Portalseite hosten kann.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 9885579d9fb72dd4e73ec5a8a359b35c49d10440
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: f67bb8260f0f1e6ef491a5de7e7ef95009651cf2
 
 
 ---
 
-# Einrichten eines Identitätsverwaltungsservers: SharePoint
+# <a name="set-up-an-identity-management-server-sharepoint"></a>Einrichten eines Identitätsverwaltungsservers: SharePoint
 
 >[!div class="step-by-step"]
 [« SQL Server 2014](prepare-server-sql2014.md)
@@ -29,10 +29,10 @@ ms.openlocfilehash: 9885579d9fb72dd4e73ec5a8a359b35c49d10440
 > Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiel:
 > - Domänencontrollername: **mimservername**
 > - Domänenname: **contoso**
-> - Kennwort: **Pass@word1**
+> - Kennwort – **Pass@word1**
 
 
-## Installieren Sie **SharePoint Foundation 2013 mit SP1**
+## <a name="install-sharepoint-foundation-2013-with-sp1"></a>Installieren Sie **SharePoint Foundation 2013 mit SP1**
 
 > [!NOTE]
 > Das Installationsprogramm erfordert eine Internetverbindung, um die erforderlichen Komponenten herunterzuladen. Befindet sich der Computer in einem virtuellen Netzwerk, das keine Internetverbindung bietet, fügen Sie dem Computer eine weitere Netzwerkschnittstelle hinzu, die eine Verbindung mit dem Internet ermöglicht. Diese kann deaktiviert werden, nachdem die Installation abgeschlossen ist.
@@ -59,7 +59,7 @@ Führen Sie die folgenden Schritte aus, um SharePoint Foundation 2013 SP1 zu ins
 
 4.  Nachdem die Installation abgeschlossen ist, führen Sie den Assistenten aus.
 
-## Führen Sie den Assistenten aus, um SharePoint zu konfigurieren
+## <a name="run-the-wizard-to-configure-sharepoint"></a>Führen Sie den Assistenten aus, um SharePoint zu konfigurieren
 
 Folgen Sie den im **Konfigurations-Assistenten für SharePoint-Produkte** erläuterten Schritten, um SharePoint für die Arbeit mit MIM zu konfigurieren.
 
@@ -79,7 +79,7 @@ Folgen Sie den im **Konfigurations-Assistenten für SharePoint-Produkte** erläu
 
 8. Klicken Sie im Fenster zum **Erstellen einer Websitesammlung** auf **Überspringen**.  Klicken Sie dann auf **Fertig stellen**.
 
-## Vorbereiten von SharePoint zum Hosten des MIM-Portals
+## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>Vorbereiten von SharePoint zum Hosten des MIM-Portals
 
 > [!NOTE]
 > Zunächst wird SSL nicht konfiguriert. Achten Sie darauf, dass Sie SSL oder ähnliches konfigurieren, bevor Sie den Zugriff auf dieses Portal ermöglichen.
@@ -137,6 +137,6 @@ Folgen Sie den im **Konfigurations-Assistenten für SharePoint-Produkte** erläu
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
