@@ -1,5 +1,5 @@
 # [Verstehen und Kennenlernen](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
-# [Planung und Entwurf](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
+# [Planen und Entwerfen](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
 # [Bereitstellen und Verwenden](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
 # [Verwenden von Privileged Access Management](privileged-identity-management-for-active-directory-domain-services.md)
 ## [Informationen zu PAM](privileged-identity-management-for-active-directory-domain-services.md)
@@ -18,7 +18,7 @@
 ### [Schritt 4: Installieren von MIM auf dem PAM-Server](step-4-install-mim-components-on-pam-server.md)
 ### [Schritt 5: Einrichten einer Vertrauensstellung zwischen PRIV und CORP](step-5-establish-trust-between-priv-corp-forests.md)
 ### [Schritt 6: Erstellen von privilegierten Konten](step-6-transition-group-to-pam.md)
-### [Schritt 7: Erhöhte Rechte für den Benutzerzugriff](step-7-elevate-user-access.md)
+### [Schritt 7 – Erhöhte Rechte für den Benutzerzugriff](step-7-elevate-user-access.md)
 ### [Einrichten von Azure MFA](use-azure-mfa-for-activation.md)
 ## [Konfigurieren von PAM mithilfe von Skripts](sp1-pam-configure-using-scripts.md)
 ### [Schritt 1: Konfigurieren der PRIV-Domäne](sp1-step1-configuring-priv-domain.md)
@@ -33,6 +33,6 @@
 # [Entwicklerreferenz](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 
