@@ -1,11 +1,11 @@
 ---
-title: Upgrade von FIM 2010 R2 | Microsoft Docs
+title: Aktualisieren von FIM 2010 R2 auf Microsoft Identity Manager 2016 | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie die FIM 2010 R2-Komponenten upgraden, und daraufhin die neuen MIM 2016-Komponenten installieren.
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: ef272ffe665aa5753fa2bf02d26f2ce73efa025b
+ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
+ms.openlocfilehash: 16966d970365c13a3530020234208e72c0e8823f
 
 
 ---
@@ -23,7 +23,7 @@ ms.openlocfilehash: ef272ffe665aa5753fa2bf02d26f2ce73efa025b
 
 Wenn Sie eine Umgebung mit Forefront Identity Manager (FIM) 2010 R2 haben und Microsoft Identity Manager (MIM) 2016 ausprobieren möchten, verwenden Sie diesen Artikel als Anleitung. Es gibt drei Phasen in diesem Upgrade:
 
-1.  Installieren Sie MIM 2016 Synchronization Service (Sync) auf einem Server, der Bestandteil Ihrer Active Directory-Domäne ist. Dadurch wird die FIM 2010 R2-Instanz von Sync ersetzt.
+1.  Installieren Sie MIM&2016; Synchronization Service (Sync) auf einem Server, der Bestandteil Ihrer Active Directory-Domäne ist. Dadurch wird die FIM 2010 R2-Instanz von Sync ersetzt.
 
 2.  Installieren Sie MIM-Dienst und -Portal. An diesem Punkt haben Sie auch die Wahl, das Registrierungsportal und Dienstportal für Self-Service-Kennwortzurücksetzung (Self-Service Password Reset, SSPR) zu installieren. Anschließend wird die Privileged Access Management-Featuregruppe installiert.
 
@@ -202,6 +202,6 @@ Hinweis: Wenn die FIM-Add-Ins und -Erweiterungen derzeit auf den Computern der B
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
