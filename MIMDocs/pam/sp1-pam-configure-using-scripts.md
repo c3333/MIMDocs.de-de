@@ -1,11 +1,11 @@
 ---
 title: Konfigurieren von PAM mithilfe von Skripts
-description: "Bereiten Sie die CORP-Domäne mit vorhandenen oder neuen Identitäten vor, die vom Privileged Identity Manager mithilfe von Skripts verwaltet werden sollen."
+description: "Dieser Artikel ist Teil der Reihe über die PAM-Konfiguration mithilfe von Skripts. Darin werden die Änderungen an der XML-Datei erläutert, die von den PAM-Bereitstellungsskripts verwendet wird."
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/04/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,15 +13,16 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
-ms.openlocfilehash: 3aca2fb513280f118e760bdbc2ba471151c41b17
+ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
+ms.openlocfilehash: bd73f43a096d58e1f7250e28b59e33f4411e88a3
+ms.lasthandoff: 01/10/2017
 
 
 ---
 
 # <a name="configure-pam-using-scripts"></a>Konfigurieren von PAM mithilfe von Skripts
 
-Wenn Sie SQL und SharePoint auf unterschiedlichen Servern installieren, müssen sie mithilfe der folgenden Anleitung konfiguriert werden. Wenn SQL, SharePoint und die PAM-Komponenten auf demselben Computer installiert werden, müssen auf diesem Computer die folgenden Schritte ausgeführt werden.
+Wenn Sie SQL und SharePoint auf unterschiedlichen Servern installieren, müssen beide Anwendungen mithilfe der unten stehenden Anleitung konfiguriert werden. Wenn SQL, SharePoint und die PAM-Komponenten auf demselben Computer installiert werden, müssen auf diesem Computer die folgenden Schritte ausgeführt werden.
 
 Bei den folgenden Schritten wird davon ausgegangen, dass bereits eine PRIV-Domäne eingerichtet ist. Anweisungen zum Konfigurieren einer PRIV-Domäne finden Sie im Nachtrag am Ende des Dokuments.
 
@@ -68,9 +69,4 @@ Bevor Sie fortfahren aktualisieren Sie die Datei „PAMDeploymentConfig.xml“ u
 
 >[!div class="step-by-step"]
 [Start »](sp1-step1-configuring-priv-domain.md)
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

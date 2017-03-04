@@ -1,11 +1,11 @@
 ---
-title: Microsoft Identity Manager 2016 | Microsoft Docs
+title: Microsoft Identity Manager 2016 Service Pack 1 | Microsoft-Dokumentation
 description: "Erfahren Sie, wie MIM 2016 eine sicherere und einfachere Erfahrung bei der Identitätsverwaltung in der Cloud und lokal bietet."
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/28/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,9 @@ ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: ed477de53abbf646f47efb90e617b04184bc29a9
+ms.sourcegitcommit: f0947f186b5206d06a67140706ada33a5bc0e016
+ms.openlocfilehash: 4f293a349916ae1a55d8551ef949758cab851b74
+ms.lasthandoff: 01/11/2017
 
 
 ---
@@ -24,7 +25,7 @@ Wir freuen uns, im Rahmen des normalen Veröffentlichungszyklus für die Wartung
 
 Wenn bei einer Produktionsbereitstellung von MIM SP1 Probleme auftreten, wenden Sie sich an den Microsoft-Kundensupport.
 
-Wir möchten auch von Ihnen hören! Wenn Sie Feedback, Kommentare oder Anliegen für das Produktteam haben, senden Sie uns eine E-Mail an [mim2016@microsoft.com.](mailto:mim2016@microsoft.com).
+Wir möchten auch von Ihnen hören! Wenn Sie Feedback, Kommentare oder Anliegen für das Produktteam haben, senden Sie uns eine E-Mail an [mim2016@microsoft.com.](mailto:mim2016@microsoft.com)
 
 
 
@@ -82,9 +83,4 @@ Sie müssen die MIM-Dienst- und MIM-Synchronisierungsdatenbanken sichern.
   3. Wählen Sie die zu aktualisierende MIM-Komponente aus.
   4. Setzen Sie die Installation fort und befolgen Sie die Aufforderungen.
     * Installation von MIM-Dienst und -Portal: Wenn Sie Exchange Online als E-Mail-Konto auswählen, geben Sie auf dem nächsten Bildschirm die E-Mail-Adresse und die Anmeldeinformationen des Exchange Online-Kontos ein.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
