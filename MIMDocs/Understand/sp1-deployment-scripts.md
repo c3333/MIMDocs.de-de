@@ -1,11 +1,11 @@
 ---
 title: "Bereitstellungsskripts für MIM2016 SP1 PAM"
-description: "Bereiten Sie die CORP-Domäne mit vorhandenen oder neuen Identitäten vor, die vom Privileged Identity Manager mithilfe von Skripts verwaltet werden sollen."
+description: "Diese Seite ist Teil einer Reihe von Artikeln über die Konfiguration des Privileged Identity Managers mithilfe von Skripts. Sie umfasst eine Liste mit Annahmen zur Umgebung."
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/26/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
-ms.openlocfilehash: 2bf445f2103c2793d613e001f15e06bdc8b9ad54
+ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
+ms.openlocfilehash: 10d06ae573e378797467ab1eb91e977d59b821d1
+ms.lasthandoff: 01/10/2017
 
 
 ---
@@ -34,9 +35,4 @@ Wichtige Annahmen:
 >Wenn bei der Skriptausführung ein Problem auftritt, müssen Sie u. U. in den Protokollen nachsehen. Alle Skriptprotokolle werden in „% AppData%\MIMPAMInstall“ gespeichert. Komprimieren Sie den Ordner als ZIP-Datei, und senden Sie ihn zusammen mit Details zum Vorgang und dem Fehler per E-Mail an mim2016@microsoft.com.
 
 Sind Sie bereit, mit den Bereitstellungsskripts von PAM zu beginnen? Beginnen Sie mit dem Artikel [Configure PAM using scripts (Konfigurieren von PAM mithilfe von Skripts)](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts).
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

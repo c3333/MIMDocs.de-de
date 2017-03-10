@@ -1,11 +1,11 @@
 ---
-title: "Was ist PAM für Active Directory-Domänendienste? | Microsoft Docs"
+title: "Privileged Access Management für Active Directory Domain Services | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über Privileged Access Management und wie es Sie bei der Verwaltung und dem Schutz Ihrer Active Directory-Umgebung unterstützen kann."
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 10/25/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -15,8 +15,9 @@ ms.suite: ems
 experimental: true
 experiment_id: kgremban_images
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 4b3779f33a8bbd2ad62c88343ef3611b17fc81a2
+ms.sourcegitcommit: f0947f186b5206d06a67140706ada33a5bc0e016
+ms.openlocfilehash: cea5a2fc162870c1125b35b75376881eb15cd2e9
+ms.lasthandoff: 01/11/2017
 
 ---
 
@@ -95,9 +96,4 @@ Bei Genehmigung der Anforderung kommuniziert der Aktionsworkflow direkt mit der 
 > Ein abgelaufener Link dagegen wird von der Sicherheitskontenverwaltung (Security Accounts Manager, SAM) in Echtzeit ausgewertet. Obwohl das Hinzufügen eines Gruppenmitglieds vom Domänencontroller, der die Zugriffsanforderung empfängt, repliziert werden muss, wird das Entfernen eines Gruppenmitglieds sofort auf einem beliebigen Domänencontroller ausgewertet.
 
 Dieser Workflow ist speziell für diese Administratorkonten vorgesehen. Administratoren (oder sogar Skripts), die nur gelegentlich Zugriff auf privilegierte Gruppen benötigen, können genau diesen Zugriff anfordern. MIM protokolliert die Anforderung und die Änderungen in Active Directory. Sie können die Daten in der Ereignisanzeige anzeigen oder an Lösungen für die Unternehmensüberwachung wie System Center 2012 - Operations Manager-Überwachungssammeldienste oder an Drittanbietertools senden.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

@@ -1,5 +1,5 @@
 ---
-title: Versionsanmerkungen zu MIM 2016 | Microsoft Docs
+title: Versionsanmerkungen zu Microsoft Identity Manager 2016 | Microsoft-Dokumentation
 description: "Erfahren Sie mehr über die neuesten MIM-Releases."
 keywords: 
 author: kgremban
@@ -14,8 +14,8 @@ ms.assetid: 297e25a5-668b-45a4-b2de-7767ebc59100
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 22982f6bf5d925d7c0ca0d83157bd93f8808783a
+ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
+ms.openlocfilehash: bc2dfd7ff8dcc6da85ad4e5c32a10f1741fe0c14
 
 
 ---
@@ -25,6 +25,6 @@ Zum aktuellen Zeitpunkt gibt es keine Anmerkungen zur aktuellen Version.
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

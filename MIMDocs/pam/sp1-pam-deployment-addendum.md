@@ -1,11 +1,11 @@
 ---
 title: Nachtrag
-description: "Bereiten Sie die CORP-Domäne mit vorhandenen oder neuen Identitäten vor, die vom Privileged Identity Manager mithilfe von Skripts verwaltet werden sollen."
+description: "Hierbei handelt es sich um den Nachtrag zu den Dokumenten zur skriptgesteuerten PAM-Bereitstellung. Der Nachtrag erläutert die Konfiguration der Domänen PRIV und CORP sowie die Einrichtung eines Clients zur Durchführung der Überprüfung und stellt Informationen zur Anforderung von Unterstützung bereit."
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/27/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
-ms.openlocfilehash: 7f859a74d13a6741dbaf08a1641a73ae986c8343
+ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
+ms.openlocfilehash: f69fe68dc63323c0945a4902e34ea8153f938c02
+ms.lasthandoff: 01/10/2017
 
 
 ---
@@ -71,9 +72,4 @@ Fahren Sie mit Schritt 8 (siehe oben) fort.
 ## <a name="addendum-4-if-something-goes-wrong"></a>Anhang 4: Beim Auftreten von Problemen
 
 Alle Skriptprotokolle werden in „% AppData%\MIMPAMInstall“ gespeichert. Komprimieren Sie den Ordner als ZIP-Datei, und senden Sie ihn zusammen mit Details zum Vorgang und dem Fehler per E-Mail an [mim2016@microsoft.com](mailto:mim2016@microsoft.com).
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 
