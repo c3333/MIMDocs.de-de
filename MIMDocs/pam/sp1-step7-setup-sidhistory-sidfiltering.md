@@ -1,11 +1,11 @@
 ---
 title: 'Schritt 7: Einrichten des SID-Verlaufs/der SID-Filterung'
-description: "Bereiten Sie die CORP-Domäne mit vorhandenen oder neuen Identitäten vor, die vom Privileged Identity Manager mithilfe von Skripts verwaltet werden sollen."
+description: "Dies ist Schritt 7 der Konfiguration des Privileged Identity Managers mithilfe von Skripts. In diesem Schritt wird die Einrichtung des SID-Verlaufs bzw. der SID-Filterung erläutert."
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/25/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
-ms.openlocfilehash: a98d83a22c61ef534fcc02725e4cd500be10cc8a
+ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
+ms.openlocfilehash: e608593f40759e3bc995daa56c4575510a71e987
+ms.lasthandoff: 01/10/2017
 
 
 ---
@@ -42,9 +43,4 @@ Für SID-Verlauf: </br></br>
 >[!div class="step-by-step"]
 [« Schritt 6](sp1-step6-setup-pam-trust.md)
 [Schritt 8 »](sp1-step8-pam-deployment-verification.md)
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

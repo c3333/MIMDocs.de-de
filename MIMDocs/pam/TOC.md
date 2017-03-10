@@ -19,6 +19,7 @@
 ### [Schritt 5: Einrichten einer Vertrauensstellung zwischen PRIV und CORP](step-5-establish-trust-between-priv-corp-forests.md)
 ### [Schritt 6: Erstellen von privilegierten Konten](step-6-transition-group-to-pam.md)
 ### [Schritt 7 – Erhöhte Rechte für den Benutzerzugriff](step-7-elevate-user-access.md)
+### [Bereitstellen von MIM PAM mit Windows Server 2016](deploy-pam-with-windows-server-2016.md)
 ### [Einrichten von Azure MFA](use-azure-mfa-for-activation.md)
 ## [Konfigurieren von PAM mithilfe von Skripts](sp1-pam-configure-using-scripts.md)
 ### [Schritt 1: Konfigurieren der PRIV-Domäne](sp1-step1-configuring-priv-domain.md)
@@ -33,6 +34,6 @@
 # [Entwicklerreferenz](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 
