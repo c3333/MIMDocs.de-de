@@ -35,13 +35,13 @@ In dieser Tabelle sind die unterstützten Plattformen und Versionen für die ein
 | | Zusätzliches verbundenes System (optional) | Active Directory-Domänendienste<br/>Active Directory<br/>Lightweight Directory Services<br/>SQL Server 2000 oder höher<br/>SharePoint Server 2013<br/> SharePoint Server 2016 * <br/> Andere Produkte von Drittanbietern |
 | **MIM-Dienst** (ohne PAM-Szenario) | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | MIM-Dienstdatenbank | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
-| | Exchange für Bestätigungs- und Gruppenverwaltungs-E-Mails vom MIM-Dienst (optional) | Exchange Server 2007 SP3 (mit installierter Exchange-Verwaltungskonsole)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * |
+| | Exchange für Bestätigungs- und Gruppenverwaltungs-E-Mails vom MIM-Dienst (optional) | Exchange Server 2007 SP3 (mit installierter Exchange-Verwaltungskonsole)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 *<br/> Exchange Online* |
 | **MIM-Dienst und -Portal** (nur für PAM-Szenario)| Windows Server | Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Active Directory für die geschützte Umgebung der PAM-Gesamtstruktur | Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | Active Directory für die vorhandene Gesamtstrukturen | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * |
+| | Active Directory für die vorhandene Gesamtstrukturen | Windows Server 2008 <br/> Windows Server 2008 R2 *<br/> Windows Server 2012* <br/> Windows Server 2012 R2 *<br/> Windows Server 2016* |
 | | MIM-Dienstdatenbank | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
 | | SharePoint | SharePoint Foundation 2010<br/>SharePoint Foundation 2013 SP1 <br/> SharePoint 2016 * |
-| | E-Mail-Server für Bestätigungs- und Gruppenverwaltungs-E-Mails vom MIM-Dienst (optional) | Exchange Server 2007 SP3 (mit installierter Exchange-Verwaltungskonsole)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * |
+| | E-Mail-Server für Bestätigungs- und Gruppenverwaltungs-E-Mails vom MIM-Dienst (optional) | Exchange Server 2007 SP3 (mit installierter Exchange-Verwaltungskonsole)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 *<br/> Exchange Online* |
 | | Browser | Alle gängigen Browser |
 | **MIM-Dienstberichterstellung** | Windows Server | Windows Server 2012 <br/> Windows Server 2016 * |
 | | Data Warehouse | System Center 2012 Service Manager SP1 |
