@@ -13,6 +13,7 @@ ms.assetid:
 translationtype: Human Translation
 ms.sourcegitcommit: 18accbf24fc7af1a27e2e88059a9a8371dfd2c4d
 ms.openlocfilehash: 49be7f3bd364e9202b177ead1fbe2607be91a323
+ms.lasthandoff: 02/16/2017
 
 
 ---
@@ -49,7 +50,7 @@ Führen Sie die Installation wie im [Leitfaden für erste Schritte](/microsoft-i
      ```
         Install-ADDSForest –DomainMode 7 –ForestMode 7 –DomainName contoso.local –DomainNetbiosName contoso –Force –NoDnsOnNetwork
         ```
-    -   Der letzte Befehl (New-ADGroup -name 'CONTOSO\$\$\$' …) ** unter „Erstellen neuer Benutzer und Gruppen“ ist nicht erforderlich, wenn CORP- und PRIV-Domänencontroller sich auf der Windows Server 2016-Domänenfunktionsebene befinden**.
+    -   Der letzte Befehl (New-ADGroup -name 'CONTOSO\$\$\$' …) **unter „Erstellen neuer Benutzer und Gruppen“ ist nicht erforderlich, wenn CORP- und PRIV-Domänencontroller sich auf der Windows Server 2016-Domänenfunktionsebene befinden**.
 
     -   Die unter „Konfigurieren der Überwachung“ (Punkt 8) und „Konfigurieren der Registrierungseinträge“ Punkt 10) beschrieben Änderungen **werden empfohlen, sind jedoch nicht erforderlich**, wenn CORP- und PRIV-Domänencontroller sich auf der Windows Server 2016-Domänenfunktionsebene befinden.
 
@@ -149,9 +150,4 @@ Führen Sie die Installation wie im [Leitfaden für erste Schritte](/microsoft-i
 - [Privileged Access Management für Active Directory-Domänendienste](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md)
 - [Konfigurieren der MIM-Umgebung für Privileged Access Management](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam.md)
 - [Konfigurieren von PAM mithilfe von Skripts](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
