@@ -5,15 +5,15 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 02/15/2017
+ms.date: 03/24/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
 translationtype: Human Translation
-ms.sourcegitcommit: 18accbf24fc7af1a27e2e88059a9a8371dfd2c4d
-ms.openlocfilehash: 49be7f3bd364e9202b177ead1fbe2607be91a323
-ms.lasthandoff: 02/16/2017
+ms.sourcegitcommit: 77ecdb91ccfdb1afec830e9662163ab9a7ef250c
+ms.openlocfilehash: dc68c4dcf2ae2d347e10930613bd32ca02031f8b
+ms.lasthandoff: 03/24/2017
 
 
 ---
@@ -74,7 +74,7 @@ Führen Sie die Installation wie im [Leitfaden für erste Schritte](/microsoft-i
 
     ```
     $of = get-ADOptionalFeature -filter "name -eq 'privileged access management feature'"
-    Enable-ADOptionalFeature \$of -scope ForestOrConfigurationSet -target "priv.contoso.local"
+    Enable-ADOptionalFeature $of -scope ForestOrConfigurationSet -target "priv.contoso.local"
     ```
 
   -   Nach dem Konfigurieren der Delegierung und vor dem Neustart des Servers autorisieren Sie die MIM-Administratoren und MIM-Dienstkonten zur Erstellung und Aktualisierung von Schattenprinzipalen.
@@ -95,7 +95,7 @@ Führen Sie die Installation wie im [Leitfaden für erste Schritte](/microsoft-i
 
  -   Nach dem Konfigurieren der Delegierung und vor dem Neustart des Servers autorisieren Sie die MIM-Administratoren zur Erstellung und Aktualisierung von Authentifizierungsrichtlinien.
 
-     a.  Starten Sie ein PowerShell-Fenster, und geben Sie die folgenden Befehle ein, wobei Sie „mimadmin“ in allen vier Zeilen durch den Namen Ihres MIM-Administratorkontos ersetzen:
+     a.  Starten Sie eine erhöhte **Eingabeaufforderung**, und geben Sie die folgenden Befehle ein, wobei Sie „mimadmin“ in allen vier Zeilen durch den Namen Ihres MIM-Administratorkontos ersetzen:
     ```
        dsacls "CN=AuthN Policies,CN=AuthN Policy
        Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g
