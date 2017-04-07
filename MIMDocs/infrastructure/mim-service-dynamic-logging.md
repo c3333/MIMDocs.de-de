@@ -11,9 +11,9 @@ ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
 translationtype: Human Translation
-ms.sourcegitcommit: 90a0f144b7674bbfaf13138dfd926dbfc3c74f28
-ms.openlocfilehash: ddd707210d5cd6b618709a477d40e7771d73cfa1
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 1ff73d0bdfcbcb4ab79d0d81feca9abdc33f9213
+ms.openlocfilehash: 1e2fb9a9ae508ab601ebad1dec7acc21dc44d13e
+ms.lasthandoff: 04/04/2017
 
 
 
@@ -27,7 +27,7 @@ Nach der Installation sehen Sie die folgenden neuen Zeile in der Datei Microsoft
 *    Zeile 8: ``<dynamicLogging mode="true" loggingLevel="Verbose" />``
 *    Zeile 266: ``</system.diagnostics> ``
 
-![Die hervorgehobenen Abschnitte zeigen die neuen Einträge der dynamischen Protokollierung.](/media/mim-service-dynamic-logging/screen01.png)
+![Die hervorgehobenen Abschnitte zeigen die neuen Einträge der dynamischen Protokollierung.](media/mim-service-dynamic-logging/screen01.png)
 
 Protokollierungsstufen der dynamischen Protokollierung finden Sie [hier](https://msdn.microsoft.com/library/ms733025(v=vs.110).aspx#Anchor_3).
 
@@ -36,11 +36,11 @@ Protokollierungsstufen der dynamischen Protokollierung finden Sie [hier](https:/
 
 Die config-Datei der dynamischen Protokollierung befindet sich in Zeile 266: „Microsoft.ResourceManagement.Service.exe.config“
 
-![Hervorgehobene Abschnitte zeigen die Zeilen mit den verschiedenen verfügbaren Protokollierungsbereichen](/media/mim-service-dynamic-logging/screen02.png)
+![Hervorgehobene Abschnitte zeigen die Zeilen mit den verschiedenen verfügbaren Protokollierungsbereichen](media/mim-service-dynamic-logging/screen02.png)
 
 Standardmäßig finden Sie den Protokollierungsbereich unter **C:\Programme\Microsoft Forefront Identity Manager\2010\Service**. Das FIM Service-Konto benötigt Berechtigungen für diesen Speicherort, um das dynamische Protokoll generieren zu können.
 
-![Speicherort des Ordners der Protokollierungen](/media/mim-service-dynamic-logging/screen03.png)
+![Speicherort des Ordners der Protokollierungen](media/mim-service-dynamic-logging/screen03.png)
 
  >[!NOTE]
  Bei einem unerwarteten Fehler (Syntaxfehler in der config-Datei „Microsoft.ResourceManagement.Service.exe.config“ oder andere Fehler) werden entsprechende Fehlermeldung in die Datei „Microsoft.ResourceManagement.Service.exe_Emergency.log“ unter folgenden Pfad geschrieben: %TMP% oder %TEMP% oder %USERPROFILE% (der erste, der vorhanden ist).  
@@ -50,5 +50,5 @@ Standardmäßig finden Sie den Protokollierungsbereich unter **C:\Programme\Micr
 
 Um die Nachverfolgung anzuzeigen, können Sie das [Service Trace Viewer-Tool](https://msdn.microsoft.com//library/aa751795(v=vs.110).aspx) verwenden.
 
- ![Screenshot des Service Trace Viewer-Tools](/media/mim-service-dynamic-logging/screen04.png)
+ ![Screenshot des Service Trace Viewer-Tools](media/mim-service-dynamic-logging/screen04.png)
 
