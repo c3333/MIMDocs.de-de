@@ -112,3 +112,5 @@
 #### [Abrufen ausstehender PAM-Anforderungen](/microsoft-identity-manager/reference/privileged-access-management-get-pending-requests)
 #### [Genehmigen oder Ablehnen einer ausstehenden PAM-Anforderung](/microsoft-identity-manager/reference/privileged-access-management-approve-reject-pending-request)
 #### [Abrufen von PAM-Sitzungsinformationen](/microsoft-identity-manager/reference/privileged-access-management-get-session-info)
+## [Technische Referenz]
+### [XML-Referenz für die Ressourcensteuerungs-Anzeigekonfiguration](/microsoft-identity-manager/reference/rcd-configuration-xml-reference)
