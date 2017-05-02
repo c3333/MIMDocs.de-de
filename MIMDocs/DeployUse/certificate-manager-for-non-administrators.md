@@ -2,10 +2,10 @@
 title: "Microsoft Identity Manager: Smartcardverlängerung per Self-Service ohne Administratorzugriff | Microsoft-Dokumentation"
 description: "Erfahren Sie, wie Sie Smartcards für Benutzer ohne Administratorrechte auf ihren Computern registrieren können, damit diese den Zertifikat-Manager verwenden können."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: 89e095cff66984140cdcef3617dd0ccc3d3714d8
+ms.lasthandoff: 02/07/2017
 
 
 ---
@@ -93,9 +94,4 @@ Wenn ein Benutzer auf seinem Computer kein lokaler Administrator ist, kann er st
 7.  **Installieren Sie die CM-App für das Konto ohne Administratorberechtigungen.**
 
 8.  **Starten Sie die CM-App und Registrierung für eine virtuelle Smartcard.**
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

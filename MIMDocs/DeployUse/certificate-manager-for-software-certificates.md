@@ -2,10 +2,10 @@
 title: Anfordern von Zertifikaten im Zertifikat-Manager mithilfe von Vorlagen | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie den Zertifikat-Manager zum Erstellen und Erneuern von Softwarezertifikaten mit Profilvorlagen verwenden.
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: 23cfb1134d1cbf2cf838354cb7d915084803cd41
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -38,7 +39,7 @@ Zum Registrieren und Erneuern von Softwarezertifikaten müssen Sie kein Administ
 
     1.  Geben Sie auf der Registerkarte **Allgemein** im Feld „Anzeigename“ die Zeichenfolge **Archivierte Zertifikatvorlage**ein.
 
-    2.  b.  Auf der Registerkarte **Anforderungsbehandlung** :
+    2.  b.    Auf der Registerkarte **Anforderungsbehandlung** :
 
         1.  Legen Sie für **Zweck** „Signatur und Verschlüsselung“ fest.
 
@@ -95,9 +96,4 @@ Zum Registrieren und Erneuern von Softwarezertifikaten müssen Sie kein Administ
 10. Wenn Sie archivierte Zertifikate neu ausstellen möchten, aktivieren Sie die Kontrollkästchen auf der linken Seite von **Archivierte Zertifikate erneut ausstellen** , und klicken Sie auf **OK**.
 
 11. Wenn Sie die Zertifikatsverwaltung mithilfe der virtuellen Smartcard verwenden, müssen Sie Datensammlungselemente deaktivieren, da diese nicht mit aktivierter Datensammlung funktioniert. Deaktivieren Sie die Datensammlung für jede Richtlinie, indem Sie im linken Bereich auf die Richtlinie klicken, dann das Kontrollkästchen neben **Beispieldatenelement** deaktivieren und schließlich auf **Datensammlungselemente löschen**klicken. Klicken Sie dann auf **OK**.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

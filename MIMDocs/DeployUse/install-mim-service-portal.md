@@ -2,10 +2,10 @@
 title: Installieren des Microsoft Identity Manager-Diensts und -Portals | Microsoft-Dokumentation
 description: "Hier finden Sie die Schritte zum Konfigurieren und Installieren Erste Schritte zum Konfigurieren und Installieren des MIM-Diensts und -Portals für Microsoft Identity Manager 2016"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: eb572bc3f062763265a9f24910a82be0cac77a5e
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -149,9 +150,4 @@ Nach Abschluss der Installation stellen Sie sicher, dass das MIM-Portal aktiv is
 >[!div class="step-by-step"]  
 [« MIM-Synchronisierungsdienst](install-mim-sync.md)
 [Datenbanken synchronisieren »](install-mim-sync-ad-service.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -2,10 +2,10 @@
 title: "Privileged Access Management für Active Directory Domain Services | Microsoft-Dokumentation"
 description: "Erfahren Sie mehr über Privileged Access Management und wie es Sie bei der Verwaltung und dem Schutz Ihrer Active Directory-Umgebung unterstützen kann."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/10/2017
+ms.date: 03/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
