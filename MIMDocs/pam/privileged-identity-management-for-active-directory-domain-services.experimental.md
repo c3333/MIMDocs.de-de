@@ -2,10 +2,10 @@
 title: "Was ist PAM für Active Directory-Domänendienste? | Microsoft Docs"
 description: "Mit der privilegierten Zugriffsverwaltung (PAM) können Organisationen den privilegierten Zugriff innerhalb einer vorhandenen Active Directory-Umgebung einschränken."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/10/2017
+ms.date: 03/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -16,6 +16,7 @@ experiment_id: kgremban_images
 translationtype: Human Translation
 ms.sourcegitcommit: f0947f186b5206d06a67140706ada33a5bc0e016
 ms.openlocfilehash: 9a047644d07e3ee3c2d1abfde7753849b5ddc63b
+ms.lasthandoff: 01/11/2017
 
 ---
 
@@ -93,9 +94,4 @@ Bei Genehmigung der Anforderung kommuniziert der Aktionsworkflow direkt mit der 
 > Ein abgelaufener Link dagegen wird von der Sicherheitskontenverwaltung (Security Accounts Manager, SAM) in Echtzeit ausgewertet. Obwohl das Hinzufügen eines Gruppenmitglieds vom Domänencontroller, der die Zugriffsanforderung empfängt, repliziert werden muss, wird das Entfernen eines Gruppenmitglieds sofort auf einem beliebigen Domänencontroller ausgewertet.
 
 Dieser Workflow ist speziell für diese Administratorkonten vorgesehen. Administratoren (oder sogar Skripts), die nur gelegentlich Zugriff auf privilegierte Gruppen benötigen, können genau diesen Zugriff anfordern. MIM protokolliert die Anforderung und die Änderungen in Active Directory. Sie können die Daten in der Ereignisanzeige anzeigen oder an Lösungen für die Unternehmensüberwachung wie System Center 2012 - Operations Manager-Überwachungssammeldienste oder an Drittanbietertools senden.
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

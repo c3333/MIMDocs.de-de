@@ -2,8 +2,8 @@
 title: "Unterstützte Softwareplattformen | Microsoft Docs"
 description: Suchen Sie die Produkte und Versionen, die mit allen Komponenten von MIM 2016 kompatibel sind
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 03/28/2017
 ms.topic: article

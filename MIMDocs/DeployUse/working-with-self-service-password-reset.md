@@ -2,10 +2,10 @@
 title: "Arbeiten mit dem Self-Service-Portal für die Kennwortzurücksetzung | Microsoft-Dokumentation"
 description: "Unter „Neues zur Self-Service-Kennwortzurücksetzung in MIM 2016“ erfahren Sie u.a., wie SSPR mit der mehrstufigen Authentifizierung funktioniert."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: 72c773601cd722290b6e7a9d5d13458f0409cfdc
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -203,9 +204,4 @@ Indem Sie die MIM-Add-Ins und -Erweiterungen auf einem zur Domäne gehörigen Co
 6.  Wenn der Benutzer sich für das Zurücksetzen seines Kennworts entscheidet, muss er sein neues Kennwort zweimal eingeben und auf **Weiter** klicken, um das Kennwort zu ändern.
 
     ![Bild: MIM-Anmelde-Assistent für die Kennwortzurücksetzung](media/MIM-SSPR-PR1.JPG)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
