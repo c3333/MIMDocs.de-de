@@ -2,10 +2,10 @@
 title: Verstehen der PAM-Komponenten | Microsoft Docs
 description: "Privileged Access Management verfügt über einige der Komponenten von MIM, besitzt aber auch ein paar eigene. Erfahren Sie, wie diese zusammenarbeiten."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 043d617bcd2addf7c6dc7ecd210790fc55f12c28
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 53fe79f251c3b18426f16b4007cda49e67d7b028
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -40,9 +41,4 @@ Nach der Installation und Konfiguration ist jede durch das Migrationsverfahren i
 Wenn ein Benutzer daher eine Rechteerweiterung mithilfe von PowerShell-Cmdlets anfordert und seine Anforderung genehmigt wird, fügt der MIM-Dienst sein Konto in der Gesamtstruktur „PRIV“ zu einer Gruppe in der Gesamtstruktur „PRIV“ hinzu. Wenn sich der Benutzer mit seinem privilegierten Konto anmeldet, enthält sein Kerberos-Token eine SID (Sicherheits-ID), die mit der SID der Gruppe in der Gesamtstruktur „CORP“ übereinstimmt. Da die Gesamtstruktur „CORP“ so konfiguriert ist, dass sie der Gesamtstruktur „PRIV“ vertraut, scheint das Konto mit Rechteerweiterung, das für den Zugriff auf eine Ressource verwendet wird, in der Gesamtstruktur „CORP“ für eine Ressource, die die Kerberos-Gruppenmitgliedschaft überprüft, ein Mitglied der Sicherheitsgruppen dieser Ressource zu sein. Dies wird über die gesamtstrukturübergreifende Kerberos-Authentifizierung bereitgestellt.
 
 Darüber hinaus sind diese Mitgliedschaften zeitlich begrenzt, damit das Administratorkonto des Benutzers nach einem vorkonfigurierten Zeitintervall kein Mitglied der Gruppe in der Gesamtstruktur „PRIV“ mehr ist. Dieses Konto kann daher nicht mehr für den Zugriff auf weitere Ressourcen verwendet werden.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
