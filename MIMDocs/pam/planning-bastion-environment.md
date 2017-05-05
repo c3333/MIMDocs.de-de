@@ -2,10 +2,10 @@
 title: "Planen einer geschützten Umgebung | Microsoft Docs"
 description: 
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 09/16/2016
+ms.date: 03/16/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: d07528fd69328647ff63e4a0f0f914af7cabfb8f
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: b459906f0c8d2c631e9b63813e208c9098ea5a4e
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -250,9 +251,4 @@ Wenn das Ziel des Projekts für Privileged Access Management darin besteht, die 
 ## <a name="select-users-and-groups-for-inclusion"></a>Auswählen der einzuschließenden Benutzern und Gruppen
 
 Der nächste Schritt besteht im Definieren der PAM-Rollen und im Zuordnen der Benutzer und Gruppen, auf die diese Zugriff haben sollten. Dabei handelt es sich in der Regel um eine Teilmenge der Benutzer und Gruppen für die Ebene, bei denen erkannt wurde, dass sie in der geschützten Umgebung verwaltet werden. Weitere Informationen finden Sie unter [Definieren von Rollen für Privileged Access Management](defining-roles-for-pam.md).
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

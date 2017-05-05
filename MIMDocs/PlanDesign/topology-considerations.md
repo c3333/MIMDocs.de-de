@@ -2,10 +2,10 @@
 title: "Topologieleitfaden für die Bereitstellung | Microsoft Docs"
 description: "Grundlegendes zu den Komponenten von MIM 2016 und Vorschläge, wie Sie diese in Ihrer Umgebung bereitstellen können."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/21/2016
+ms.date: 03/21/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,9 @@ ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 23ef8843201790bc758e9ef6def5d77d175bfcf0
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: f7e4dc737444df70de3a8a78eb518e9e6f26aadc
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -26,7 +27,7 @@ Sie können MIM-Komponenten (Microsoft Identity Manager) auf demselben Server od
 ## <a name="mim-components"></a>MIM-Komponenten
 Beim Entwerfen der Bereitstellungstopologie sollten Sie wissen, was die einzelnen Komponenten bewirken und wie sie alle interagieren.
 
-- <a name="mim-portal-an-interface-for-password-resets-group-management-and-administrative-operations"></a>**MIM-Portal** – eine Schnittstelle für das Zurücksetzen von Kennwörtern, die Gruppenverwaltung und administrative Vorgänge.
+- <a name="mim-portal---an-interface-for-password-resets-group-management-and-administrative-operations"></a>**MIM-Portal** – eine Schnittstelle für das Zurücksetzen von Kennwörtern, die Gruppenverwaltung und administrative Vorgänge.
     -
 - **MIM-Dienst** – ein Webdienst, der MIM 2016-Identitätsverwaltungsfunktionen implementiert.
 - **MIM Synchronization Service** – synchronisiert Daten mit anderen Identitätssystemen.
@@ -63,9 +64,4 @@ Die Gesamtleistung Ihrer MIM-Bereitstellung hängt stark von den Computern ab, a
 
 ## <a name="see-also"></a>Weitere Informationen:
 - Der zum Download bereitstehende [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) (Handbuch zur Kapazitätsplanung des Forefront Identity Manager (FIM) 2010) bietet weitere Informationen zu einem Test-Build und Leistungstestergebnissen.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
