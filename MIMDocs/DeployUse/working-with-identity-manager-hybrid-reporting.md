@@ -13,8 +13,9 @@ ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 9e64f930a8fe8422c7f6c8d98e558961ae8b88f2
+ms.sourcegitcommit: 3144ee195675df5dc120896cc801a7124ee12214
+ms.openlocfilehash: 6b3fda2cb78ec885d986462dcf0edb8843811095
+ms.lasthandoff: 04/27/2017
 
 
 ---
@@ -26,7 +27,7 @@ Die ersten drei in Azure AD verfügbaren Microsoft Identity Manager-Berichte (MI
 
 -   Die Aktivität „Zurücksetzen des Kennworts“ zeigt jede Instanz an, wenn ein Benutzer mithilfe von SSPR die Kennwortzurücksetzung durchgeführt hat und die für die Authentifizierung verwendeten Gates oder **Methoden** bereitstellt.
 
-    ![Bild: Azure-Hybridberichterstellung – Aktivität „Zurücksetzen des Kennworts“](media/MIM-Hybrid-passwordreset.jpg)
+    ![Bild: Azure-Hybridberichterstellung – Aktivität „Zurücksetzen des Kennworts“](media/MIM-Hybrid-passwordreset2.jpg)
 
 -   Die Aktivität „Registrierung für Zurücksetzen des Kennworts“ wird jedes Mal angezeigt, wenn sich ein Benutzer für SSPR registriert und die **Methoden** zum Authentifizieren verwendet wurden, z. B. eine Mobiltelefonnummer oder Fragen und Antworten.
     Beachten Sie, dass bei der Registrierung für das Zurücksetzen des Kennworts kein Unterschied zwischen SMS-Gate und MFA-Gate gemacht wird. Beide werden als **Mobiltelefon**betrachtet.
@@ -40,13 +41,13 @@ Die ersten drei in Azure AD verfügbaren Microsoft Identity Manager-Berichte (MI
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-1.  Installieren Sie Microsoft Identity Manager 2016 einschließlich des MIM-Diensts.
+1.  Installieren Sie den Microsoft Identity Manager 2016 RTM oder den Service Pack 1 MIM-Dienst.
 
 2.  Stellen Sie sicher, dass Sie über einen Azure AD Premium-Mandanten mit lizenziertem Administrator in Ihrem Verzeichnis verfügen.
 
 3.  Stellen Sie sicher, dass Sie über eine ausgehende Internetverbindung vom Microsoft Identity Manager-Server zu Azure verfügen.
 
-## <a name="install-microsoft-identity-manager-reporting-in-azure-ad"></a>Installieren der Microsoft Identity Manager-Berichterstellung in Azure AD
+## <a name="install-microsoft-identity-manager-reporting-agent-in-azure-ad"></a>Installieren des Microsoft Identity Manager-Berichterstellungs-Agents in Azure AD
 Nachdem der Agent für die Berichterstellung installiert wurde, werden die Daten der Microsoft Identity Manager-Aktivität von MIM in das Windows-Ereignisprotokoll exportiert. Der MIM-Berichterstellungs-Agent verarbeitet die Ereignisse und lädt diese in Azure hoch. Die Ereignisse werden in Azure hinsichtlich der erforderlichen Berichte analysiert, entschlüsselt und gefiltert.
 
 1.  Installieren Sie Microsoft Identity Manager 2016.
@@ -61,10 +62,8 @@ Nachdem der Agent für die Berichterstellung installiert wurde, werden die Daten
 
 3.  Installieren Sie den Microsoft Identity Manager-Agent für die Berichterstellung:
 
-    1.  Erstellen Sie ein Verzeichnis auf dem Computer.
-
-    2.  Extrahieren Sie die Dateien `MIMHybridReportingAgent.msi` und `tenant.cert` in diesem Verzeichnis.
-
+    1.  Laden Sie [mimhreportingagentsetup.exe](http://download.microsoft.com/download/7/3/1/731D81E1-8C1D-4382-B8EB-E7E7367C0BF2/MIMHReportingAgentSetup.exe) auf den MIM-Dienstserver herunter.
+    2.  Ausführen von `MIMHReportingAgentSetup.exe` 
     3.  Führen Sie das Installationsprogramm des Agents aus.
 
     4.  Stellen Sie sicher, dass der Agent-Dienst für die MIM-Berichterstellung ausgeführt wird
@@ -77,21 +76,21 @@ Nachdem der Agent für die Berichterstellung installiert wurde, werden die Daten
 
 ## <a name="view-hybrid-reports-in-the-azure-classic-portal"></a>Anzeigen von Hybridberichten im klassischen Azure-Portal
 
-1.  Melden Sie sich mit Ihrem globalen Administratorkonto für den Mandanten beim [klassischen Azure-Portal](https://manage.windowsazure.com/) an.
+1.  Melden Sie sich mit Ihrem globalen Administratorkonto für den Mandanten im [Azure-Portal](https://portal.azure.com/) an.
 
-2.  Klicken Sie auf das **Active Directory** -Symbol.
+2.  Klicken Sie auf das **Azure Active Directory**-Symbol.
 
 3.  Wählen Sie das Mandantenverzeichnis aus der Liste der verfügbaren Verzeichnisse für Ihr Abonnement aus.
 
-4.  Klicken Sie auf **Berichte** und dann auf die **Aktivität „Zurücksetzen des Kennworts“**.
+4.  Klicken Sie auf **Audit Logs** (Überwachungsprotokolle).
 
-5.  Stellen Sie sicher, dass Sie **Identity Manager** im Dropdownmenü der Quelle auswählen.
+5.  Achten Sie darauf, dass Sie **MIM Service** (MIM-Dienst) im Dropdownmenü „Category“ (Kategorie) auswählen.
 
 > [!WARNING]
-> Es kann einige Zeit dauern, bis Microsoft Identity Manager-Daten in Azure AD angezeigt werden.
+> Es kann einige Zeit dauern, bis Überwachungsdaten von Microsoft Identity Manager in Azure AD angezeigt werden.
 
 ## <a name="stop-creating-hybrid-reports"></a>Beenden der Hybridberichterstellung
-Falls Sie das Hochladen von Berichtsdaten von Microsoft Identity Manager in Azure Active Directory beenden möchten, deinstallieren Sie den Agent für die Hybridberichterstellung. Deinstallieren Sie die Microsoft Identity Manager-Hybridberichterstellung mithilfe des Windows-Tools **Programme hinzufügen oder entfernen**.
+Falls Sie das Hochladen von Überwachungsberichtdaten von Microsoft Identity Manager in Azure Active Directory beenden möchten, deinstallieren Sie den Agent für die hybride Berichterstellung. Deinstallieren Sie die Microsoft Identity Manager-Hybridberichterstellung mithilfe des Windows-Tools **Programme hinzufügen oder entfernen**.
 
 ## <a name="windows-events-used-for-hybrid-reporting"></a>Für die Hybridberichterstellung verwendete Windows-Ereignisse
 Von Microsoft Identity Manager generierte Ereignisse werden im Windows-Ereignisprotokoll protokolliert und in der Ereignisanzeige unter **Anwendungs- und Dienstprotokolle-&gt; Identity Manager-Anforderungsprotokoll** angezeigt. Jede MIM-Anforderung wird als Ereignis in das Windows-Ereignisprotokoll in der JSON-Struktur exportiert. Dieses kann in Ihr SIEM exportiert werden.
@@ -100,9 +99,4 @@ Von Microsoft Identity Manager generierte Ereignisse werden im Windows-Ereignisp
 |--------------|------|-----------------|
 |Informationen|4121|Die MIM-Ereignisdaten, die alle Anforderungsdaten beinhalten.|
 |Informationen|4137|Die Erweiterung des MIM-Ereignisses 4121, für den Fall, dass für ein einzelnes Ereignis zu viele Daten vorliegen. Der Header in diesem Ereignis liegt in der folgenden Form vor: `"Request: <GUID> , message <xxx> out of <xxx>`|
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
