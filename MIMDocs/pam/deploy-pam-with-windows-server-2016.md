@@ -5,15 +5,16 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 03/24/2017
+ms.date: 05/08/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
-translationtype: Human Translation
-ms.sourcegitcommit: 77ecdb91ccfdb1afec830e9662163ab9a7ef250c
-ms.openlocfilehash: dc68c4dcf2ae2d347e10930613bd32ca02031f8b
-ms.lasthandoff: 03/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
+ms.openlocfilehash: fbdebd59249667a0e60d3a248f183bcb6a75085a
+ms.contentlocale: de-de
+ms.lasthandoff: 05/09/2017
 
 
 ---
@@ -40,9 +41,9 @@ Für die Laborumgebung sind mindestens zwei virtuelle Computer erforderlich:
 Wenn Sie in der Laborumgebung nicht bereits über eine CORP-Domäne verfügen, ist für diese Domäne ein zusätzlicher Domänencontroller erforderlich. Der CORP-Domänencontroller kann entweder Windows Server 2016 oder Windows Server 2012 R2 ausführen.
 
 
-Führen Sie die Installation wie im [Leitfaden für erste Schritte](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md) beschrieben aus, **aber nehmen Sie die folgenden Anpassungen vor**:
+Führen Sie die Installation wie im [Leitfaden für erste Schritte](privileged-identity-management-for-active-directory-domain-services.md) beschrieben aus, **aber nehmen Sie die folgenden Anpassungen vor**:
 
--   Wenn Sie eine neue CORP-Domäne erstellen, können Sie beim Ausführen der Anweisungen in [Schritt 1: Vorbereiten des CORP-Domänencontrollers](/microsoft-identity-manager/pam/step-1-prepare-corp-domain.md) die CORP-Domäne optional auf der Funktionsebene von Windows Server 2016 konfigurieren. **Wenn Sie diese Option wählen, nehmen Sie folgende Anpassungen vor**:
+-   Wenn Sie eine neue CORP-Domäne erstellen, können Sie beim Ausführen der Anweisungen in [Schritt 1: Vorbereiten des CORP-Domänencontrollers](step-1-prepare-corp-domain.md) die CORP-Domäne optional auf der Funktionsebene von Windows Server 2016 konfigurieren. **Wenn Sie diese Option wählen, nehmen Sie folgende Anpassungen vor**:
 
     -   Wenn Sie Windows Server 2016-Medien verwenden, heißt die Installationsoption „Windows Server 2016 (Server mit Desktopdarstellung)“.
 
@@ -50,13 +51,13 @@ Führen Sie die Installation wie im [Leitfaden für erste Schritte](/microsoft-i
      ```
         Install-ADDSForest –DomainMode 7 –ForestMode 7 –DomainName contoso.local –DomainNetbiosName contoso –Force –NoDnsOnNetwork
         ```
-    -   Der letzte Befehl (New-ADGroup -name 'CONTOSO\$\$\$' …) **unter „Erstellen neuer Benutzer und Gruppen“ ist nicht erforderlich, wenn CORP- und PRIV-Domänencontroller sich auf der Windows Server 2016-Domänenfunktionsebene befinden**.
+    -   Der letzte Befehl (New-ADGroup -name 'CONTOSO\$\$\$' …)  **unter „Erstellen neuer Benutzer und Gruppen“ ist nicht erforderlich, wenn CORP- und PRIV-Domänencontroller sich auf der Windows Server 2016-Domänenfunktionsebene befinden**.
 
     -   Die unter „Konfigurieren der Überwachung“ (Punkt 8) und „Konfigurieren der Registrierungseinträge“ Punkt 10) beschrieben Änderungen **werden empfohlen, sind jedoch nicht erforderlich**, wenn CORP- und PRIV-Domänencontroller sich auf der Windows Server 2016-Domänenfunktionsebene befinden.
 
 -   Wenn Sie Windows Server 2012 R2 als Betriebssystem für CORPDC verwenden, müssen Sie die Hotfixes 2919442, 2919355, [und das Update 3155495](http://support.microsoft.com/kb/3156418) auf CORPDC installieren.
 
--   Folgen Sie den Anweisungen unter [Schritt 2: Vorbereiten des PRIV-Domänencontrollers](/microsoft-identity-manager/pam/step-2-prepare-priv-domain-controller.md), aber nehmen Sie die folgenden Anpassungen vor:
+-   Folgen Sie den Anweisungen unter [Schritt 2: Vorbereiten des PRIV-Domänencontrollers](step-2-prepare-priv-domain-controller.md), aber nehmen Sie die folgenden Anpassungen vor:
 
     -   Führen Sie die Installation unter Verwendung von Windows Server 2016-Medien aus. Die Installationsoption heißt „Windows Server 2016 (Server mit Desktopdarstellung)“.
 
@@ -115,19 +116,19 @@ Führen Sie die Installation wie im [Leitfaden für erste Schritte](/microsoft-i
     ```
 
 
--   Folgen Sie den Anweisungen in [Schritt 3: Vorbereiten eines PAM-Servers](/microsoft-identity-manager/pam/step-3-prepare-pam-server.md), aber nehmen Sie die folgenden Anpassungen vor:
+-   Folgen Sie den Anweisungen in [Schritt 3: Vorbereiten eines PAM-Servers](step-3-prepare-pam-server.md), aber nehmen Sie die folgenden Anpassungen vor:
 
     -   Beachten Sie bei der Installation auf Windows Server 2016, dass die Rolle „ApplicationServer“ nicht verfügbar ist.
 
     -   Wenn Sie MIM auf Windows Server 2016 installieren, **kann SharePoint 2013 nicht installiert werden**.
 
--   Folgen Sie den Anweisungen in [Schritt 4: Installieren von MIM-Komponenten auf PAM-Server und -Arbeitsstation](/microsoft-identity-manager/pam/step-4-install-mim-components-on-pam-server.md), aber nehmen Sie die folgenden Anpassungen vor:
+-   Folgen Sie den Anweisungen in [Schritt 4: Installieren von MIM-Komponenten auf PAM-Server und -Arbeitsstation](step-4-install-mim-components-on-pam-server.md), aber nehmen Sie die folgenden Anpassungen vor:
 
     -   Der Benutzer, der den MIM-Dienst und die PAM-Komponenten installiert, **muss über Schreibzugriff für die PRIV-Domäne in AD verfügen**, da die MIM-Installation eine neue Active Directory-Organisationseinheit („PAM-Objekte“) erstellt.
 
     -   Wenn SharePoint nicht installiert ist, installieren Sie das MIM-Portal nicht.
 
--   Folgen Sie den Anweisungen in [Schritt 5: Herstellen der Vertrauensstellung](/microsoft-identity-manager/pam/step-5-establish-trust-between-priv-corp-forests.md), aber nehmen Sie die folgenden Anpassungen vor:
+-   Folgen Sie den Anweisungen in [Schritt 5: Herstellen der Vertrauensstellung](step-5-establish-trust-between-priv-corp-forests.md), aber nehmen Sie die folgenden Anpassungen vor:
 
     -   Beim Herstellen der unidirektionalen Vertrauensstellung führen Sie nur die ersten beiden PowerShell-Befehle („get-credential“ und „New-PAMTrust“) aus. **Führen Sie den Befehl „New-PAMDomainConfiguration“ nicht aus**.
 
@@ -147,7 +148,7 @@ Führen Sie die Installation wie im [Leitfaden für erste Schritte](/microsoft-i
 
 ## <a name="more-information"></a>Weitere Informationen
 
-- [Privileged Access Management für Active Directory-Domänendienste](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md)
-- [Konfigurieren der MIM-Umgebung für Privileged Access Management](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam.md)
-- [Konfigurieren von PAM mithilfe von Skripts](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts.md)
+- [Privileged Access Management für Active Directory-Domänendienste](privileged-identity-management-for-active-directory-domain-services.md)
+- [Konfigurieren der MIM-Umgebung für Privileged Access Management](configuring-mim-environment-for-pam.md)
+- [Konfigurieren von PAM mithilfe von Skripts](sp1-pam-configure-using-scripts.md)
 
