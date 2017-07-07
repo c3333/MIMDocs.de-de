@@ -40,8 +40,3 @@
 #### [Abrufen ausstehender PAM-Anforderungen](privileged-access-management-get-pending-requests.md)
 #### [Genehmigen oder Ablehnen einer ausstehenden PAM-Anforderung](privileged-access-management-approve-reject-pending-request.md)
 #### [Abrufen von PAM-Sitzungsinformationen](privileged-access-management-get-session-info.md)
-
-
-<!--HONumber=Jan17_HO3-->
-
-
