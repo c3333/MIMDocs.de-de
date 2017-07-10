@@ -16,11 +16,12 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: 69d44af5eaef3665f3a55ea91f48d3658cd5e65c
 ms.contentlocale: de-de
-ms.lasthandoff: 05/09/2017
+ms.lasthandoff: 07/10/2017
 
 
 ---
-# <a name="whats-new-for-microsoft-identity-manager-2016-service-pack-1"></a>Neuheiten in Microsoft Identity Manager 2016 Service Pack 1 #
+<a id="whats-new-for-microsoft-identity-manager-2016-service-pack-1" class="xliff"></a>
+# Neuheiten in Microsoft Identity Manager 2016 Service Pack 1 #
 
 Wir freuen uns, im Rahmen des normalen Veröffentlichungszyklus für die Wartung und Aktualisierung von Microsoft Identity Manager die Einführung von [Microsoft Identity Manager (MIM) 2016 Servicepack 1 (SP1)](https://msdn.microsoft.com/subscriptions/downloads/?fileid=70212#searchTerm=&Languages=en&PageSize=10&PageIndex=0&FileId=70212) bekanntgeben zu können. In diesem Dokument werden die Aktualisierungen, Verbesserungen, Funktionen und Änderungen in dieser Version erläutert.
 
@@ -30,9 +31,11 @@ Wir möchten auch von Ihnen hören! Wenn Sie Feedback, Kommentare oder Anliegen 
 
 
 
-## <a name="updates-in-this-service-pack"></a>Aktualisierungen in diesem Servicepack #
+<a id="updates-in-this-service-pack" class="xliff"></a>
+## Aktualisierungen in diesem Servicepack #
 
-### <a name="mim"></a>MIM
+<a id="mim" class="xliff"></a>
+### MIM
 
 - **Browserübergreifende Kompatibilität des MIM-Portals für Endbenutzer-Self-Service:** In diesem Service Pack wird die Unterstützung der meisten gängigen Browser eingeführt. Benutzer können jetzt in Microsoft Edge, Chrome oder Safari auf das MIM-Portal zugreifen und Gruppen sowie Profile selbst verwalten.
 
@@ -40,7 +43,8 @@ Wir möchten auch von Ihnen hören! Wenn Sie Feedback, Kommentare oder Anliegen 
 
 - **Überprüfung des Bildformats beim Upload:** MIM kann jetzt das Dateiformat von Bildern überprüfen, die auf das Portal hochgeladen werden.
 
-### <a name="privileged-access-managementpam"></a>Privileged Access Management (PAM)
+<a id="privileged-access-managementpam" class="xliff"></a>
+### Privileged Access Management (PAM)
 
 - **Unterstützung der Funktionsebene „Windows Server 2016“ durch die PAM „PRIV“-Gesamtstruktur (geschützt) :** Der MIM PAM-Dienst kann in einer Umgebung mit Domänencontrollern konfiguriert werden, die auf der Active Directory Domain Services-Funktionsebene „Windows Server 2016“ ausgeführt werden. Bei Konfiguration ist das Kerberos-Ticket eines Benutzers auf die verbleibende Zeit seiner Rollenaktivierung zeitlich begrenzt.
 
@@ -57,17 +61,21 @@ Wir möchten auch von Ihnen hören! Wenn Sie Feedback, Kommentare oder Anliegen 
     Diese Cmdlets werden automatisch als Teil der Bereitstellungsskripts ausgeführt.
 
 
-## <a name="platform-support"></a>Plattformunterstützung
+<a id="platform-support" class="xliff"></a>
+## Plattformunterstützung
 Aktualisierte Informationen zur Plattformunterstützung finden Sie im Dokument [Unterstützte Plattformen für MIM 2016](microsoft-identity-manager-2016-supported-platforms.md).  Zu den neuen Plattformen, die in diesem Servicepack unterstützt werden, gehören SQL Server 2016 und SharePoint 2016.
 
-## <a name="issues-fixed-in-this-release-from-mim-2016-general-availability"></a>In dieser Version behobene Probleme aus der allgemein verfügbaren Version von MIM 2016
+<a id="issues-fixed-in-this-release-from-mim-2016-general-availability" class="xliff"></a>
+## In dieser Version behobene Probleme aus der allgemein verfügbaren Version von MIM 2016
 
-### <a name="pam"></a>PAM
+<a id="pam" class="xliff"></a>
+### PAM
 - „New-PAMGroup“ hat in der PRIV-Gesamtstruktur keine MIM-Objekte für lokale Domänengruppen erstellt.
 - „New-PAMDomainConfiguration“ ist mit einer „netdom“-Fehlermeldung fehlgeschlagen.
 - PAM-Überwachungsdienst hat Warnungen für Gruppen in der PRIV-Gesamtstruktur protokolliert.
 
-## <a name="how-to-upgrade-to-service-pack-1"></a>Upgrade auf Service Pack 1
+<a id="how-to-upgrade-to-service-pack-1" class="xliff"></a>
+## Upgrade auf Service Pack 1
 
 Kunden, die ein Upgrade auf Microsoft Identity Manager 2016 Service Pack 1 durchführen, sollten die folgende Anleitung für alle Dienste in ihrer Bereitstellung beachten.
 

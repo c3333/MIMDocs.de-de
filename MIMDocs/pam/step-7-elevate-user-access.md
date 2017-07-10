@@ -12,15 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 89d9b38177b91f64e746fea583684abcecc9d7ff
-ms.lasthandoff: 05/02/2017
+ms.contentlocale: de-de
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="step-7--elevate-a-users-access"></a>Schritt 7 – Erhöhte Rechte für den Benutzerzugriff
+<a id="step-7--elevate-a-users-access" class="xliff"></a>
+# Schritt 7 – Erhöhte Rechte für den Benutzerzugriff
 
 >[!div class="step-by-step"]
 [« Schritt 6 ](step-6-transition-group-to-pam.md)
@@ -28,7 +30,8 @@ ms.lasthandoff: 05/02/2017
 
 Dieser Schritt veranschaulicht, dass ein Benutzer über MIM den Zugriff auf eine Rolle anfordern kann.
 
-## <a name="verify-that-jen-cannot-access-the-privileged-resource"></a>Sicherstellen, dass Jen nicht auf privilegierte Ressourcen zugreifen kann
+<a id="verify-that-jen-cannot-access-the-privileged-resource" class="xliff"></a>
+## Sicherstellen, dass Jen nicht auf privilegierte Ressourcen zugreifen kann
 Ohne erhöhte Rechte kann Jen nicht auf die privilegierte Ressource in der CORP-Gesamtstruktur zugreifen.
 
 1. Melden Sie sich bei CORPWKSTN ab, um alle zwischengespeicherten offenen Verbindungen zu entfernen.
@@ -37,7 +40,8 @@ Ohne erhöhte Rechte kann Jen nicht auf die privilegierte Ressource in der CORP-
 4. Geben Sie den Befehl `dir \\corpwkstn\corpfs` ein. Die Fehlermeldung **Zugriff verweigert** sollte angezeigt werden.
 5. Lassen Sie das Eingabeaufforderungsfenster geöffnet.
 
-## <a name="request-privileged-access-from-mim"></a>Fordern Sie privilegierten Zugriff von MIM an.
+<a id="request-privileged-access-from-mim" class="xliff"></a>
+## Fordern Sie privilegierten Zugriff von MIM an.
 1. Geben Sie auf CORPWKSTN – weiterhin als CONTOSO\Jen – den folgenden Befehl ein.
 
     ```
@@ -66,7 +70,8 @@ Ohne erhöhte Rechte kann Jen nicht auf die privilegierte Ressource in der CORP-
 
 6. Geben Sie das Kennwort für das Konto PRIV.Jen ein. Es wird ein neues Eingabeaufforderungsfenster angezeigt.
 
-## <a name="validate-the-elevated-access"></a>Überprüfen Sie die erhöhten Zugriffsrechte.
+<a id="validate-the-elevated-access" class="xliff"></a>
+## Überprüfen Sie die erhöhten Zugriffsrechte.
 Geben Sie im neu geöffneten Fenster die folgenden Befehle ein.
 
 ```
@@ -76,7 +81,8 @@ dir \\corpwkstn\corpfs
 
 Wenn bei dem Befehl „dir“ ein Fehler auftritt und die Fehlermeldung **Zugriff verweigert** angezeigt wird, sollten Sie die Vertrauensstellung erneut überprüfen.
 
-## <a name="activate-the-privileged-role"></a>Aktivieren der privilegierten Rolle
+<a id="activate-the-privileged-role" class="xliff"></a>
+## Aktivieren der privilegierten Rolle
 Aktivieren Sie die Rechte durch die Anforderung des privilegierten Zugriffs über das PAM-Beispielportal.
 
 1. Stellen Sie auf CORPWKSTN sicher, dass Sie als CORP\Jen angemeldet sind.
@@ -96,7 +102,8 @@ Aktivieren Sie die Rechte durch die Anforderung des privilegierten Zugriffs übe
 > [!Note]
 > In dieser Umgebung können Sie auch lernen, wie Sie Anwendungen entwickeln, die die in der [REST API-Referenz für Privileged Access Management ](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference) beschriebene PAM-REST-API verwenden.
 
-## <a name="summary"></a>Zusammenfassung
+<a id="summary" class="xliff"></a>
+## Zusammenfassung
 Wenn Sie die Schritte in dieser exemplarischen Vorgehensweise abgeschlossen haben, haben Sie ein Privileged Access Management-Szenario veranschaulicht, in dem die Benutzerrechte für einen begrenzten Zeitraum erhöht werden, wodurch der Benutzer die Möglichkeit erhält, mit einem separaten privilegierten Konto auf geschützte Ressourcen zuzugreifen. Sobald die Sitzung mit erhöhten Rechten abgelaufen ist, kann das privilegierte Konto nicht länger auf die geschützte Ressource zugreifen. Die Entscheidung, welche Sicherheitsgruppen privilegierte Rollen darstellen, wird vom PAM-Administrator koordiniert. Sobald die Zugriffsrechte zu dem Privileged Access Management-System migriert sind, ist der Zugriff, der zuvor mit dem ursprünglichen Benutzerkonto ermöglicht wurde, jetzt nur über die Anmeldung mit einem speziellen privilegierten Konto möglich und wird auf Anfrage zur Verfügung gestellt. Daher sind Gruppenmitgliedschaften für sehr privilegierte Gruppen nur für einen begrenzten Zeitraum gültig.
 
 >[!div class="step-by-step"]
