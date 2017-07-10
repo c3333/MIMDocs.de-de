@@ -13,15 +13,17 @@ ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 3a1ec9db6da0a77f963dde76a3efe8d92f89078d
-ms.lasthandoff: 05/02/2017
+ms.contentlocale: de-de
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Schritt 4 – Installieren von MIM-Komponenten auf PAM-Server und Arbeitsstation
+<a id="step-4--install-mim-components-on-pam-server-and-workstation" class="xliff"></a>
+# Schritt 4 – Installieren von MIM-Komponenten auf PAM-Server und Arbeitsstation
 
 >[!div class="step-by-step"]
 [« Schritt 3](step-3-prepare-pam-server.md)
@@ -35,7 +37,8 @@ Melden Sie sich bei PAMSRV als PRIV\Administrator an, damit Sie den MIM-Dienst, 
 
 Wenn Sie MIM heruntergeladen haben, entpacken Sie das MIM-Installationsarchiv in einem neuen Ordner.
 
-##  <a name="run-the-service-and-portal-install-program"></a>Führen Sie das Installationsprogramm für den Dienst und das Portal aus.  
+<a id="run-the-service-and-portal-install-program" class="xliff"></a>
+##  Führen Sie das Installationsprogramm für den Dienst und das Portal aus.  
 
 Befolgen Sie die Anweisungen des Installationsprogramms, und schließen Sie die Installation ab.
 
@@ -99,7 +102,8 @@ Befolgen Sie die Anweisungen des Installationsprogramms, und schließen Sie die 
 
 Nach Abschluss der Installation wird der Server neu gestartet. Überprüfen Sie dann, ob das MIM-Portal aktiv ist, und ermöglichen Sie es Benutzern, ihre eigene Objektressource in MIM anzuzeigen.
 
-## <a name="set-up-mim-portal-management-policy-rules"></a>Einrichten von Verwaltungsrichtlinienregeln für das MIM-Portal
+<a id="set-up-mim-portal-management-policy-rules" class="xliff"></a>
+## Einrichten von Verwaltungsrichtlinienregeln für das MIM-Portal
 
 1. Melden Sie sich nach dem Neustart von PAMSRV als „PRIV\Administrator“ an.
 
@@ -115,7 +119,8 @@ Nach Abschluss der Installation wird der Server neu gestartet. Überprüfen Sie 
 
 7. Wählen Sie diese Verwaltungsrichtlinienregel aus, deaktivieren Sie **Richtlinie ist deaktiviert**, klicken Sie auf **OK** und dann auf **Absenden**.
 
-## <a name="verify-the-firewall-connections"></a>Überprüfen der Firewallverbindungen
+<a id="verify-the-firewall-connections" class="xliff"></a>
+## Überprüfen der Firewallverbindungen
 
 Die Firewall sollte eingehende Verbindungen an den TCP-Ports 5725, 5726, 8086 und 8090 zulassen.
 
@@ -132,7 +137,8 @@ Die Firewall sollte eingehende Verbindungen an den TCP-Ports 5725, 5726, 8086 un
 8.  Stellen Sie sicher, dass das aktive Netzwerk „priv.contoso.local“ und ein Domänennetzwerk aufgeführt wird.  
 9. Schließen Sie die **Systemsteuerung**.
 
-## <a name="set-up-the-sample-web-application"></a>Einrichten der Beispielwebanwendung
+<a id="set-up-the-sample-web-application" class="xliff"></a>
+## Einrichten der Beispielwebanwendung
 
 In diesem Abschnitt installieren und konfigurieren Sie die Beispielwebanwendung für die MIM PAM REST-API.
 
@@ -168,7 +174,8 @@ In diesem Abschnitt installieren und konfigurieren Sie die Beispielwebanwendung 
 
 7.  (Optional) Überprüfen Sie, ob sich der Benutzer für die REST-API authentifizieren kann. Öffnen Sie als Administrator einen Webbrowser auf PAMSRV.  Navigieren Sie zur Website-URL http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, authentifizieren Sie sich, falls erforderlich, und stellen Sie dann sicher, dass ein Download erfolgt.
 
-## <a name="install-the-mim-pam-requestor-cmdlets"></a>Installieren der MIM PAM-Requestor-Cmdlets
+<a id="install-the-mim-pam-requestor-cmdlets" class="xliff"></a>
+## Installieren der MIM PAM-Requestor-Cmdlets
 
 Installieren Sie die MIM PAM-Requestor-Cmdlets auf der Arbeitsstation, die Sie in Schritt 1 konfiguriert haben.
 

@@ -10,22 +10,24 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 1ff73d0bdfcbcb4ab79d0d81feca9abdc33f9213
 ms.openlocfilehash: 1e2fb9a9ae508ab601ebad1dec7acc21dc44d13e
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: de-de
+ms.lasthandoff: 07/10/2017
 
 
 
 ---
-# <a name="mim-sp1-4414360--service-dynamic-logging"></a>Dynamische Protokollierung des MIM SP1-Diensts (4.4.1436.0)
+<a id="mim-sp1-4414360--service-dynamic-logging" class="xliff"></a>
+# Dynamische Protokollierung des MIM SP1-Diensts (4.4.1436.0)
 In 4.4.1436.0 haben wir eine neue Protokollierungsfunktion eingeführt. Dadurch können Administratoren und Supporttechniker die Protokollierung aktivieren, ohne den Verwaltungsdienst neu starten zu müssen.
 
 Nach der Installation sehen Sie die folgenden neuen Zeile in der Datei Microsoft.ResourceManagement.Service.exe.config, die wie folgt heißen:
 
-*    Zeile 6: ``<section name="dynamicLogging" type="Microsoft.ResourceManagement.Utilities.DynamicLoggingSection, Microsoft.ResourceManagement.Service" />``
-*    Zeile 8: ``<dynamicLogging mode="true" loggingLevel="Verbose" />``
-*    Zeile 266: ``</system.diagnostics> ``
+*   Zeile 6: ``<section name="dynamicLogging" type="Microsoft.ResourceManagement.Utilities.DynamicLoggingSection, Microsoft.ResourceManagement.Service" />``
+*   Zeile 8: ``<dynamicLogging mode="true" loggingLevel="Verbose" />``
+*   Zeile 266: ``</system.diagnostics> ``
 
 ![Die hervorgehobenen Abschnitte zeigen die neuen Einträge der dynamischen Protokollierung.](media/mim-service-dynamic-logging/screen01.png)
 

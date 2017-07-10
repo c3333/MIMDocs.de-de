@@ -15,13 +15,14 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 1ef7b9816d265d17ef68fc54e010e655535dcdc8
 ms.openlocfilehash: 0a5a3f28af58dd59ab805f2836ffeb88f3508ae0
 ms.contentlocale: de-de
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
 
-# <a name="microsoft-identity-manager-2016-password-management"></a>Kennwortverwaltung mit Microsoft Identity Manager 2016
+<a id="microsoft-identity-manager-2016-password-management" class="xliff"></a>
+# Kennwortverwaltung mit Microsoft Identity Manager 2016
 
 Das Verwalten von Kennwörtern mehrerer Benutzerkonten gehört zu den komplexeren Aspekten der Verwaltung einer Unternehmensumgebung mit mehreren Datenquellen. Microsoft Identity Manager 2016 (MIM) bietet zwei Lösungen zum Verwalten von Kennwörtern:
 
@@ -43,7 +44,8 @@ Durch die Kennwortsynchronisierung und die Verwaltung von vom Benutzer ausgehend
 
 -   Kennwortverwaltungsvorgänge in Echtzeit ausführen, und zwar unabhängig von MIM-Vorgängen
 
-## <a name="password-extensions"></a>Kennworterweiterungen
+<a id="password-extensions" class="xliff"></a>
+## Kennworterweiterungen
 
 Verwaltungs-Agents für Verzeichnisserver unterstützen standardmäßig Kennwortänderungen und Festlegungsvorgänge. Sie können für dateibasierte und Datenbankverwaltungs-Agents und für Verwaltungs-Agents für Extensible Connectivity eine DLL der .NET-Kennworterweiterung erstellen, wenn diese Agents Kennwortänderungen und Festlegungsvorgänge nicht standardmäßig unterstützen.
 Die DLL der .NET-Kenntworterweiterung wird immer dann aufgerufen, wenn ein Aufruf zur Kennwortänderung oder -festlegung für einen dieser Verwaltungs-Agents vorgenommen wird. Die Kennworterweiterungseinstellungen für diese Verwaltungs-Agents können in Synchronization Service Manager konfiguriert werden. Weitere Informationen zum Konfigurieren von Kennworterweiterungen finden Sie in der Referenz zum FIM-Entwickler.
@@ -60,7 +62,8 @@ Die DLL der .NET-Kenntworterweiterung wird immer dann aufgerufen, wenn ein Aufru
 |                                                                           | Microsoft SQL Server                                                                               |
 |                                                                           | Oracle-Datenbank                                                                                    |
 
-## <a name="password-synchronization"></a>Kennwortsynchronisierung
+<a id="password-synchronization" class="xliff"></a>
+## Kennwortsynchronisierung
 
 
 Die Kennwortsynchronisierung funktioniert mit dem Benachrichtigungsdienst für Kennwortänderungen (PCNS) in einer AD-Domäne. Dadurch ist es möglich, Kennwortänderungen, die von AD ausgehen, an andere verknüpfte Datenquellen zu verteilen. Dies ist möglich, da MIM als RPC-Server (Remote Procedure Call) ausgeführt wird, der auf Benachrichtigungen zu Kennwortänderungen von einem AD-Domänencontroller lauscht. Sobald die Anforderung für eine Kennwortänderung erfasst und authentifiziert wurde, wird diese von MIM verarbeitet und an die entsprechenden Verwaltungs-Agents verteilt.
@@ -86,7 +89,8 @@ Dies sind die Komponenten, die in den Kennwortsynchronisierungsprozess involvier
 -   **DLL der Kennworterweiterung**: Mit der DLL der Kennworterweiterung können Sie Vorgänge zum Festlegen und Ändern von Kennwörtern mithilfe einer Regelerweiterung für jeden dateibasierten oder Datenbankverwaltungs-Agent und Verwaltungs-Agent für Extensible Connectivity implementieren.
     Dafür müssen Sie ein verschlüsseltes Attribut mit dem Namen „export_password“ erstellen, das nur für den Export verwendet wird. Dieses Attribut darf im verknüpften Verzeichnis nicht vorhanden sein. Außerdem sollte es in einer Regelerweiterung zur Bereitstellung erreichbar bzw. festlegbar sein. Zusätzlich sollte es während des Export-Attributflusses verwendet werden können. Weiter Informationen zum Konfigurieren von Kennworterweiterungen finden Sie in der [Referenz zum FIM-Entwickler](https://msdn.microsoft.com/library/windows/desktop/ee652263(v=vs.100).aspx).
 
-## <a name="preparing-for-password-synchronization"></a>Vorbereiten der Kennwortsynchronisierung
+<a id="preparing-for-password-synchronization" class="xliff"></a>
+## Vorbereiten der Kennwortsynchronisierung
 
 Überprüfen Sie vor dem Einrichten der Kennwortsynchronisierung für Ihre MIM- und AD-Umgebung Folgendes:
 
@@ -110,7 +114,8 @@ Einrichten der Kennwortsynchronisierung:
 
 Weitere Informationen zum Einrichten der Kennwortsynchronisierung finden Sie unter „Using Password Synchronization“ (Verwenden der Kennwortsynchronisierung).
 
-## <a name="password-synchronization-process"></a>Kennwortsynchronisierungsprozess
+<a id="password-synchronization-process" class="xliff"></a>
+## Kennwortsynchronisierungsprozess
 
 In folgendem Diagramm ist der Prozess der Anforderung einer Kennwortänderung von einem AD-Domänencontroller an andere verknüpfte Datenquellen dargestellt:
 
@@ -126,7 +131,8 @@ In folgendem Diagramm ist der Prozess der Anforderung einer Kennwortänderung vo
 
 6.  Mithilfe der Informationen der Verknüpfungstabelle bestimmt MIM die Verwaltungs-Agents, die die Kennwortänderung erhalten, und übermittelt die Kennwortänderung an diese.
 
-## <a name="password-synchronization-security"></a>Sicherheit bei der Kennwortsynchronisierung
+<a id="password-synchronization-security" class="xliff"></a>
+## Sicherheit bei der Kennwortsynchronisierung
 
 Folgende Sicherheitsbedenken wurden für die Kennwortsynchronisierung geäußert:
 
@@ -140,7 +146,8 @@ Folgende Sicherheitsbedenken wurden für die Kennwortsynchronisierung geäußert
 
 -   Sichere Kennwortwarteschlangen: In Kennwortwarteschlangen des PCNS gespeicherte Kennwörter werden verschlüsselt, bis sie gesendet werden.
 
-## <a name="password-synchronization-error-recovery-scenarios"></a>Wiederherstellungsszenarios nach Fehlern bei der Kennwortsynchronisierung
+<a id="password-synchronization-error-recovery-scenarios" class="xliff"></a>
+## Wiederherstellungsszenarios nach Fehlern bei der Kennwortsynchronisierung
 
 Idealerweise werden Änderungen ohne Fehler synchronisiert, wenn ein Benutzer ein Kennwort ändert. Folgende Szenarios beschreiben die Wiederherstellung von MIM nach häufig auftretenden Synchronisierungsfehlern:
 
@@ -162,7 +169,8 @@ Wenn der Vorgang fehlschlägt, kann dies derartig schwerwiegende Gründe haben, 
 | 6927  | Fehler       | Der Festlegungsvorgang zur Kennwortsynchronisierung ist fehlgeschlagen, weil das Kennwort nicht den Kennwortrichtlinien des Zielsystems entspricht.                                      |
 | 6928  | Fehler       | Der Festlegungsvorgang zur Kennwortsynchronisierung ist fehlgeschlagen, weil die Kennworterweiterung des Zielverwaltungs-Agents nicht so konfiguriert wurde, dass sie Kennwortfestlegungsvorgänge unterstützt. |
 
-## <a name="user-based-password-change-management"></a>Verwaltung von vom Benutzer ausgehenden Kennwortänderungen
+<a id="user-based-password-change-management" class="xliff"></a>
+## Verwaltung von vom Benutzer ausgehenden Kennwortänderungen
 
 MIM stellt zwei Webanwendungen bereit, die Windows-Verwaltungsinstrumentation (WMI) für das Zurücksetzen von Kennwörtern verwenden. Genauso wie bei der Kennwortsynchronisierung aktivieren Sie die Kennwortverwaltung, wenn Sie den Verwaltungs-Agent im Management Agent Designer konfigurieren. Weitere Informationen zur Kennwortverwaltung und WMI finden Sie in der Referenz zum MIM-Entwickler.
 
