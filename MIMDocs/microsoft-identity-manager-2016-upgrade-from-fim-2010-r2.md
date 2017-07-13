@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2d3092d7d41090e4e03b971fb62ca896cc8db282
 ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
-ms.lasthandoff: 02/13/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Upgrade aus Forefront Identity Manager 2010 R2
+# Upgrade aus Forefront Identity Manager 2010 R2
+<a id="upgrade-from-forefront-identity-manager-2010-r2" class="xliff"></a>
 
 Wenn Sie eine Umgebung mit Forefront Identity Manager (FIM) 2010 R2 haben und Microsoft Identity Manager (MIM) 2016 ausprobieren möchten, verwenden Sie diesen Artikel als Anleitung. Es gibt drei Phasen in diesem Upgrade:
 
@@ -37,7 +36,8 @@ In dieser Anleitung wird davon ausgegangen, dass Sie Folgendes bereits eingerich
 - Lokale und umgebungsbezogene Voraussetzungen (SQL Server, Exchange Server, SharePoint Services usw.), die für FIM 2010 R2 konfiguriert sind
 
 
-## <a name="preparation"></a>Vorbereitung
+## Vorbereitung
+<a id="preparation" class="xliff"></a>
 
 1.  Sichern Sie die Datenbank des FIM-Diensts, die FIM Sync-Datenbank, FIM Sync sowie die Dienstkonfiguration und die Software.
 
@@ -45,7 +45,8 @@ In dieser Anleitung wird davon ausgegangen, dass Sie Folgendes bereits eingerich
 
 3.  Laden Sie die MIM-Software herunter, oder entpacken Sie diese.
 
-## <a name="upgrade-the-synchronization-service"></a>Upgraden von Synchronization Service
+## Upgraden von Synchronization Service
+<a id="upgrade-the-synchronization-service" class="xliff"></a>
 
 1.  Melden Sie sich als Administrator bei einem Server an, auf dem der FIM 2010 R2-Synchronisierungsdienst (Sync) bereitgestellt wird.
 
@@ -83,7 +84,8 @@ In dieser Anleitung wird davon ausgegangen, dass Sie Folgendes bereits eingerich
 
 13. Beachten Sie, dass der **Synchronisierungsdienst** neu gestartet wurde.
 
-## <a name="upgrade-the-service-and-portal"></a>Upgraden des Diensts und des Portals
+## Upgraden des Diensts und des Portals
+<a id="upgrade-the-service-and-portal" class="xliff"></a>
 
 1.  Melden Sie sich als Administrator bei einem Server an, auf dem der FIM 2010 R2-Dienst und das FIM 2010 R2-Portal bereitgestellt werden.
 
@@ -139,7 +141,8 @@ In dieser Anleitung wird davon ausgegangen, dass Sie Folgendes bereits eingerich
 
 14. Bei der Installation des MIM-Portals geben Sie die URL der SharePoint-Websitesammlung an, in der das FIM-Portal derzeit gehostet wird. Klicken Sie auf **Weiter**.
 
-## <a name="install-the-mim-password-registration-portal"></a>Installieren des MIM-Kennwortregistrierungsportals
+## Installieren des MIM-Kennwortregistrierungsportals
+<a id="install-the-mim-password-registration-portal" class="xliff"></a>
 
 1. Wenn Sie das MIM-Kennwortregistrierungsportal installieren, geben Sie die angeforderte URL für das Kennwortregistrierungsportal an. Klicken Sie auf **Weiter**.
 
@@ -169,7 +172,8 @@ In dieser Anleitung wird davon ausgegangen, dass Sie Folgendes bereits eingerich
 
     2.  Bestimmen Sie, ob Extranet- und Intranetbenutzer oder, wie dies zuvor für FIM-Kennwortzurücksetzung konfiguriert war, nur Intranetbenutzer auf dieses Portal zugreifen können.
 
-## <a name="install-the-mim-password-reset-portal"></a>Installation des Portals zum Zurücksetzen des MIM-Kennworts
+## Installation des Portals zum Zurücksetzen des MIM-Kennworts
+<a id="install-the-mim-password-reset-portal" class="xliff"></a>
 
 1. Wenn Sie das MIM-Kennwortzurücksetzungsportal installieren, geben Sie die Zugriffsdetails und Anmeldeinformationen für die MIM-Kennwortzurücksetzung an.
 
@@ -189,7 +193,8 @@ In dieser Anleitung wird davon ausgegangen, dass Sie Folgendes bereits eingerich
 
     2.  Geben Sie an, ob Extranet- und Intranetbenutzer oder nur Intranetbenutzer auf dieses Portal zugreifen können.
 
-## <a name="finish-installation-and-upgrade"></a>Installation und Upgrade abschließen
+## Installation und Upgrade abschließen
+<a id="finish-installation-and-upgrade" class="xliff"></a>
 
 1. Sobald alle Konfigurationsdefinitionen erfolgreich beendet wurden, wird eine Installationsseite aufgerufen. Klicken Sie auf **Installieren** , damit die Installation von MIM-Dienst und -Portal begonnen wird.
 
@@ -202,4 +207,3 @@ In dieser Anleitung wird davon ausgegangen, dass Sie Folgendes bereits eingerich
 Hinweis: Wenn die FIM-Add-Ins und -Erweiterungen derzeit auf den Computern der Benutzer für SSPR bereitgestellt werden, konfigurieren Sie auf keinen Fall die neuen MFA-Telefongates zur Kennwortzurücksetzung. Dies darf erst geschehen, nachdem alle FIM-Add-Ins und -Erweiterungen auf MIM 2016 aktualisiert wurden.  Da die FIM 2010 und FIM 2010 R2-Add-ins und -Erweiterungen die neuen Telefongates nicht erkennen, geben sie einen Fehler zurück. Ein Benutzer ist dann nicht in der Lage, die Zurücksetzung des Kennworts abzuschließen.
 
 Hilfe zum Microsoft Identity Manager 2016 SP1-Upgrade finden Sie im folgenden [Microsoft Identity Manager 2016 Service Pack 1-Updatepaket](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/).
-

@@ -1,4 +1,3 @@
-
 ---
 title: "Microsoft Identity Manager 2016 – Empfohlene Vorgehensweisen | Microsoft-Dokumentation"
 description: 
@@ -12,21 +11,19 @@ ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1ef7b9816d265d17ef68fc54e010e655535dcdc8
-ms.openlocfilehash: 8a572f06b220f055efb68c5e1b82e379ad3bec8f
-ms.contentlocale: de-de
-ms.lasthandoff: 05/11/2017
-
-
+ms.openlocfilehash: a0d00c7e5d99e43d3fb0b3011a3851f7194bfdf2
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/13/2017
 ---
-
-
-# <a name="microsoft-identity-manager-2016-best-practices"></a>Microsoft Identity Manager 2016 – Empfohlene Vorgehensweisen
+# Microsoft Identity Manager 2016 – Empfohlene Vorgehensweisen
+<a id="microsoft-identity-manager-2016-best-practices" class="xliff"></a>
 
 In diesem Thema werden empfohlene Vorgehensweisen für die Bereitstellung und den Betrieb von Microsoft Identity Manager 2016 (MIM) beschrieben.
 
-## <a name="sql-setup"></a>SQL Setup
+## SQL Setup
+<a id="sql-setup" class="xliff"></a>
 >[!NOTE]
 Die folgenden Empfehlungen für das Einrichten eines Servers mit SQL gehen von je einer SQL-Instanz aus, die nur für die FIMService-Datenbank bzw. die FIMSynchronizationService-Datenbank vorgesehen ist. Wenn Sie die FIMService-Datenbank in einer konsolidierten Umgebung ausführen, müssen Sie Anpassungen entsprechend Ihrer Konfiguration vornehmen.
 
@@ -40,11 +37,13 @@ Die Konfiguration des Structured Query Language-Servers (SQL) ist entscheidend f
 
 -   [Reorganizing and Rebuilding Indexes (Neuorganisieren und Neuerstellen von Indizes)](http://go.microsoft.com/fwlink/?LinkID=188269)
 
-### <a name="presize-data-and-log-files"></a>Voreinstellen der Größe von Daten- und Protokolldateien
+### Voreinstellen der Größe von Daten- und Protokolldateien
+<a id="presize-data-and-log-files" class="xliff"></a>
 
 Verlassen Sie sich nicht auf die automatische Vergrößerung. Verwalten Sie die Größe dieser Dateien stattdessen manuell. Sie können die automatische Vergrößerung aus Sicherheitsgründen aktiviert lassen, sollten die Vergrößerung der Datendateien jedoch proaktiv verwalten. Beispielgrößen der MIM-Datenbank finden Sie unter [FIM Capacity Planning Guide (Richtlinien zur FIM-Kapazitätsplanung)](http://go.microsoft.com/fwlink/?LinkID=185246).
 
-### <a name="to-presize-sql-data-and-log-files"></a>So stellen Sie die Größe von SQL-Datendateien und -Protokolldateien ein
+### So stellen Sie die Größe von SQL-Datendateien und -Protokolldateien ein
+<a id="to-presize-sql-data-and-log-files" class="xliff"></a>
 
 1.  Starten Sie SQL Server Management Studio.
 
@@ -52,7 +51,8 @@ Verlassen Sie sich nicht auf die automatische Vergrößerung. Verwalten Sie die 
 
 3.  Vergrößern Sie auf der Seite „Dateien“ die Datenbankdateien wie erforderlich.
 
-### <a name="isolate-log-from-data-files"></a>Trennen von Protokoll- und Datendateien
+### Trennen von Protokoll- und Datendateien
+<a id="isolate-log-from-data-files" class="xliff"></a>
 
 Befolgen Sie die empfohlenen Vorgehensweisen für SQL Server, um die Daten- und Transaktionsprotokolldateien für die Datenbanken auf separaten physischen Datenträgern zu speichern.
 
@@ -60,7 +60,8 @@ Erstellen zusätzlicher tempdb-Dateien
 
 Für optimale Leistung wird empfohlen, dass Sie eine Datendatei pro CPU-Kern in der tempdb-Datei erstellen.
 
-### <a name="to-create-additional-tempdb-files"></a>So erstellen Sie zusätzliche tempdb-Dateien
+### So erstellen Sie zusätzliche tempdb-Dateien
+<a id="to-create-additional-tempdb-files" class="xliff"></a>
 
 1.  Starten Sie SQL Server Management Studio.
 
@@ -68,11 +69,13 @@ Für optimale Leistung wird empfohlen, dass Sie eine Datendatei pro CPU-Kern in 
 
 3.  Erstellen Sie auf der Seite „Dateien“ eine Datendatei für jeden CPU-Kern. Achten Sie darauf, dass Sie die tempdb-Datendateien und die Protokolldateien auf verschiedenen Laufwerken und Spindeln speichern.
 
-### <a name="ensure-adequate-space-for-log-files"></a>Genügend Speicherplatz für Protokolldateien sicherstellen
+### Genügend Speicherplatz für Protokolldateien sicherstellen
+<a id="ensure-adequate-space-for-log-files" class="xliff"></a>
 
 Es ist wichtig, die Datenträgeranforderungen des Wiederherstellungsmodells zu kennen. Der einfache Wiederherstellungsmodus kann beim ersten Laden des Systems geeignet sein, um die Speicherplatznutzung zu beschränken. Allerdings gehen so die Daten, die nach der letzten Sicherung erstellt wurden, verloren. Bei Verwendung des vollständigen Wiederherstellungsmodus müssen Sie die Datenträgerverwendung über Sicherungen verwalten, darunter häufige Sicherungen des Transaktionsprotokolls, um hohe Speicherplatznutzung zu verhindern. Weitere Informationen finden Sie unter [Übersicht über Wiederherstellungsmodelle](http://go.microsoft.com/fwlink/?LinkID=185370).
 
-### <a name="limit-sql-server-memory"></a>Beschränken von SQL Server-Arbeitsspeicher
+### Beschränken von SQL Server-Arbeitsspeicher
+<a id="limit-sql-server-memory" class="xliff"></a>
 
 Je nachdem, über wie viel Arbeitsspeicher Sie auf dem Server mit SQL Server verfügen und ob Sie den Server mit SQL Server für andere Dienste (d.h. MIM 2016-Dienst und MIM 2016-Synchronisierungsdienst) freigeben, sollten Sie den Speicherverbrauch von SQL beschränken. Dies können Sie mit folgenden Schritten erreichen.
 
@@ -111,26 +114,31 @@ Je nachdem, über wie viel Arbeitsspeicher Sie auf dem Server mit SQL Server ver
   RECONFIGURE WITH OVERRIDE
   ```
 
-### <a name="backup-and-recovery-configuration"></a>Konfigurieren von Sicherung und Wiederherstellung
+### Konfigurieren von Sicherung und Wiederherstellung
+<a id="backup-and-recovery-configuration" class="xliff"></a>
 
 Im Allgemeinen empfiehlt es sich, Datenbanksicherungen gemäß der Sicherungsrichtlinie der Organisation vorzunehmen. Wenn keine inkrementellen Protokollsicherungen geplant sind, sollte für die Datenbank das einfache Wiederherstellungsmodell festgelegt werden. Stellen Sie vor der Implementierung Ihrer Sicherungsstrategie sicher, dass Sie die Auswirkungen und Speicherplatzanforderungen der unterschiedlichen Wiederherstellungsmodelle kennen. Das vollständige Wiederherstellungsmodell erfordert regelmäßige Protokollsicherungen, um hohe Speicherplatznutzung zu vermeiden. Weitere Informationen finden Sie unter [Übersicht über Wiederherstellungsmodelle](http://go.microsoft.com/fwlink/?LinkID=185370) und [FIM 2010 Backup and Restore Guide (FIM 2010-Handbuch zur Sicherung und Wiederherstellung)](http://go.microsoft.com/fwlink/?LinkID=165864).
 
-## <a name="create-a-backup-administrator-account-for-the-fimservice-after-installation"></a>Erstellen eines Sicherungsadministratorkontos für FIMService nach der Installation
+## Erstellen eines Sicherungsadministratorkontos für FIMService nach der Installation
+<a id="create-a-backup-administrator-account-for-the-fimservice-after-installation" class="xliff"></a>
 
 
 >[!IMPORTANT]
 Mitglieder der Gruppe von FIMService-Administratoren verfügen über eindeutige Berechtigungen, die für die FIM-Bereitstellung entscheidend sind. Wenn Sie sich als Mitglied der Administratorgruppe nicht anmelden können, ist die einzige Lösung das Zurücksetzen auf eine vorherige Sicherung des Systems. Zur Verbesserung dieser Situation sollten Sie der Gruppe von FIM-Administratoren als Teil der Konfiguration nach der Installation andere Benutzer hinzufügen.
 
-## <a name="fim-service"></a>FIM-Dienst
+## FIM-Dienst
+<a id="fim-service" class="xliff"></a>
 
 
-### <a name="configuring-fim-service-service-exchange-mailbox"></a>Konfigurieren des Exchange-Postfachs des FIM-Diensts
+### Konfigurieren des Exchange-Postfachs des FIM-Diensts
+<a id="configuring-fim-service-service-exchange-mailbox" class="xliff"></a>
 
 Im Folgenden werden empfohlene Vorgehensweisen für die Konfiguration von Microsoft Exchange Server für das Dienstkonto des MIM 2016-Diensts beschrieben.
 
 - Konfigurieren Sie das Dienstkonto so, dass es nur E-Mails von internen Adressen akzeptiert. Insbesondere sollte das Postfach des Dienstkontos nie E-Mails von externen SMTP-Servern empfangen können.
 
-#### <a name="to-configure-the-service-account"></a>So konfigurieren Sie das Dienstkonto
+#### So konfigurieren Sie das Dienstkonto
+<a id="to-configure-the-service-account" class="xliff"></a>
 
 1.  Wählen Sie in der Exchange-Verwaltungskonsole das **Dienstkonto des FIM-Diensts** aus.
 
@@ -144,10 +152,12 @@ Weitere Informationen finden Sie unter [Konfigurieren von Einschränkungen für 
 
 -   Konfigurieren Sie das Dienstkonto so, dass es über ein Speicherplatzkontingent von 5 GB für das Postfach verfügt. Befolgen Sie für optimale Ergebnisse die empfohlenen Vorgehensweisen unter [Configure Storage Quotas for a Mailbox (Konfigurieren von Speicherkontingenten für ein Postfach)](http://go.microsoft.com/fwlink/?LinkID=156929).
 
-## <a name="mim-portal"></a>MIM-Portal
+## MIM-Portal
+<a id="mim-portal" class="xliff"></a>
 
 
-### <a name="disable-sharepoint-indexing"></a>Deaktivieren der SharePoint-Indizierung
+### Deaktivieren der SharePoint-Indizierung
+<a id="disable-sharepoint-indexing" class="xliff"></a>
 
 Es wird empfohlen, dass Sie die Indizierung von Microsoft Office SharePoint® deaktivieren. Es gibt keine Dokumente, die indiziert werden müssen. Indizierung führt häufig zu fehlerhaften Protokolleinträgen und eventuell zu Leistungsproblemen im Zusammenhang mit FIM 2010. So deaktivieren Sie die SharePoint-Indizierung
 
@@ -167,7 +177,8 @@ Es wird empfohlen, dass Sie die Indizierung von Microsoft Office SharePoint® de
 
 8.  Klicken Sie auf der Seite „Zeitgeberauftrag bearbeiten“ auf „Deaktivieren“.
 
-## <a name="mim-2016-initial-data-load"></a>MIM 2016 – Erster Datenladevorgang
+## MIM 2016 – Erster Datenladevorgang
+<a id="mim-2016-initial-data-load" class="xliff"></a>
 
 Dieser Abschnitt enthält eine Reihe von Schritten, um die Leistung des ersten Datenladevorgangs aus einem externen System zu FIM 2010 zu erhöhen. Einige dieser Schritte werden nur vorübergehend während der ersten Auffüllung des Systems ausgeführt und müssen danach zurückgesetzt werden. Dies ist ein einmaliger Vorgang und keine fortlaufende Synchronisierung.
 
@@ -177,7 +188,8 @@ Weitere Informationen zum Synchronisieren von Benutzern zwischen FIM 2010 und Ac
 >[!IMPORTANT]
 Stellen Sie sicher, dass Sie die empfohlenen Vorgehensweisen aus dem Abschnitt zur Installation von SQL in dieser Anleitung angewendet haben.                                                                                                                                                      |
 
-### <a name="step-1-configure-the-sql-server-for-initial-data-load"></a>Schritt 1: Konfigurieren des Servers mit SQL Server für den ersten Datenladevorgang
+### Schritt 1: Konfigurieren des Servers mit SQL Server für den ersten Datenladevorgang
+<a id="step-1-configure-the-sql-server-for-initial-data-load" class="xliff"></a>
 Wenn Sie am Anfang große Datenmengen laden möchten, können Sie die Zeit für das Auffüllen der Datenbank verkürzen, indem Sie die Volltextsuche vorübergehend deaktivieren und sie nach dem Abschluss des Exports auf dem MIM 2016-Verwaltungs-Agent (FIM-MA) wieder aktivieren.
 
 So deaktivieren Sie die Volltextsuche vorübergehend
@@ -200,18 +212,21 @@ Bei Verwendung des vollständigen Wiederherstellungsmodus müssen Sie die Datent
 >[!IMPORTANT]
 Wenn diese Vorgehensweisen nicht umgesetzt werden, kann dies dazu führen, dass nicht mehr genügend Speicherplatz vorhanden ist. Weitere Details zu diesem Thema finden Sie unter [Übersicht über Wiederherstellungsmodelle](http://go.microsoft.com/fwlink/?LinkID=185370). Weitere Informationen finden Sie unter [FIM 2010 Backup and Restore Guide (FIM 2010-Handbuch zur Sicherung und Wiederherstellung)](http://go.microsoft.com/fwlink/?LinkID=165864).
 
-### <a name="step-2-apply-the-minimum-necessary-mim-configuration-during-the-load-process"></a>Schritt 2: Anwenden der Mindestanforderungen für die MIM-Konfiguration während des Ladevorgangs
+### Schritt 2: Anwenden der Mindestanforderungen für die MIM-Konfiguration während des Ladevorgangs
+<a id="step-2-apply-the-minimum-necessary-mim-configuration-during-the-load-process" class="xliff"></a>
 
 Beim ersten Laden sollten Sie nur die Mindestkonfiguration anwenden, die erforderlich ist, um FIM für die Management-Richtlinienregeln (Management Policy Rules, MPRs) und Set-Definitionen zu konfigurieren. Erstellen Sie nach Abschluss des Datenladevorgangs die zusätzlichen Sets, die für die Bereitstellung erforderlich sind. Verwenden Sie die Einstellung zum Aktualisieren der Run-On-Richtlinie auf den Aktionsworkflows, um diese Richtlinien nachträglich auf die geladenen Daten anzuwenden.
 
-### <a name="step-3-configure-and-populate-the-fim-service-with-external-identity-data"></a>Schritt 3: Konfigurieren und Auffüllen des FIM-Diensts mit externen Identitätsdaten
+### Schritt 3: Konfigurieren und Auffüllen des FIM-Diensts mit externen Identitätsdaten
+<a id="step-3-configure-and-populate-the-fim-service-with-external-identity-data" class="xliff"></a>
 
 
 An diesem Punkt sollten Sie die Richtlinien unter „How Do I Synchronize Users from Active Directory Domain Services to FIM (Synchronisieren von Benutzern aus Active Directory-Domänendiensten zu FIM)“ befolgen,
 
 um Ihr System mit Nutzern aus Active Directory zu konfigurieren und zu synchronisieren. Wenn Gruppeninformationen synchronisiert werden sollen, finden Sie dazu Informationen unter „How Do I Synchronize Groups from Active Directory Domain Services to FIM (Synchronisieren von Gruppen aus Active Directory-Domänendiensten zu FIM)“.
 
-#### <a name="synchronization-and-export-sequences"></a>Synchronisierung und Exportsequenzen
+#### Synchronisierung und Exportsequenzen
+<a id="synchronization-and-export-sequences" class="xliff"></a>
 
 Führen Sie zum Optimieren der Leistung nach einem Synchronisierungsvorgang, der zu einer hohen Anzahl ausstehender Exportvorgänge in einem Connectorbereich führt, einen Export durch.
 
@@ -227,14 +242,16 @@ Führen Sie für jeden Quellverwaltungs-Agent, der Teil des Initialisierungszykl
 
 4.  Führen Sie auf allen betroffenen Zielverwaltungs-Agents mit Stagingexport einen Deltaimport durch.
 
-### <a name="step-4-apply-your-full-mim-configuration"></a>Schritt 4: Anwenden der vollständigen MIM-Konfiguration
+### Schritt 4: Anwenden der vollständigen MIM-Konfiguration
+<a id="step-4-apply-your-full-mim-configuration" class="xliff"></a>
 
 
 Wenden Sie nach Abschluss des ersten Datenladevorgangs die vollständige MIM-Konfiguration für die Bereitstellung an.
 
 Je nach Szenarios kann dies die Erstellung weiterer Sets, MPRs und Workflows umfassen. Verwenden Sie für alle Richtlinien, die Sie rückwirkend auf alle Objekte im System anwenden müssen, die Einstellung für die Ausführung für Richtlinienaktualisierung auf Aktionsworkflows, um diese Richtlinien rückwirkend auf die geladenen Daten anzuwenden.
 
-### <a name="step-5-reconfigure-sql-to-previous-settings"></a>Schritt 5: Zurücksetzen von SQL auf vorherige Einstellungen
+### Schritt 5: Zurücksetzen von SQL auf vorherige Einstellungen
+<a id="step-5-reconfigure-sql-to-previous-settings" class="xliff"></a>
 
 
 Denken Sie daran, die SQL-Einstellungen in die normalen Einstellungen zu ändern. Dies umfasst u. a.:
@@ -253,31 +270,38 @@ ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = AUTO
 
 Wenn Sie in den einfachen Wiederherstellungsmodus wechseln müssen, sollten Sie sicherstellen, dass Sie den Sicherungszeitplan gemäß der Sicherungsrichtlinie Ihrer Organisation neu konfigurieren. Zusätzliche Details zu FIM-Sicherungszeitplänen finden Sie im [FIM 2010 Backup and Restore Guide (FIM 2010-Handbuch zur Sicherung und Wiederherstellung)](http://go.microsoft.com/fwlink/?LinkID=165864).
 
-## <a name="configuration-migration"></a>Migration der Konfiguration
+## Migration der Konfiguration
+<a id="configuration-migration" class="xliff"></a>
 
 
-### <a name="avoid-changing-display-names"></a>Vermeiden von Änderungen von Anzeigenamen
+### Vermeiden von Änderungen von Anzeigenamen
+<a id="avoid-changing-display-names" class="xliff"></a>
 
 Für viele Objekttypen wie zum Beispiel MPRs verwendet das Skript „syncproduction.ps1“ den Anzeigenamen als einziges Ankerattribut zwischen zwei Systemen. Daher führt eine Änderung am Anzeigenamen einer vorhandenen MPR zur Löschung der vorhandenen MPR und der anschließenden Erstellung einer neuen MPR. Dies geschieht, da bei der Migration keine MPRs zusammengeführt werden können, deren Verknüpfungskriterien sich geändert haben. Um dieses Problem zu vermeiden, können Sie ein benutzerdefiniertes Attribut an alle Objekttypen für die Konfiguration binden und dieses Attribut als Verknüpfungskriterium verwenden. Dadurch können Sie Anzeigenamen ändern, ohne den Migrationsvorgang zu beeinträchtigen.
 
-### <a name="avoid-changing-the-content-of-intermediate-files"></a>Vermeiden von Änderungen des Inhalts von temporären Dateien
+### Vermeiden von Änderungen des Inhalts von temporären Dateien
+<a id="avoid-changing-the-content-of-intermediate-files" class="xliff"></a>
 
 Während das Dateiformat und die Anwendungsprogrammierschnittstelle (API, Application Programming Interface) der Objekte niedriger Ebene öffentlich sind und von Entwicklern geändert werden können, sollten Sie die Inhalte der Zwischenformate während der Migration nicht ändern. Allerdings kann es erforderlich sein, ganze ImportObjects-Knoten aus „changes.xml“ zu entfernen oder mithilfe von Suchen und Ersetzen in „pilot.xml“ Versionsnummern oder DNS-Informationen von Pilotsystemen durch die von Produktionssystemen zu ersetzen.
 
-### <a name="ensure-that-the-version-number-is-correct-in-pilotxml-when-migrating-across-versions"></a>Überprüfen der Versionsnummer in „pilot.xml“ bei der Migration zwischen Versionen
+### Überprüfen der Versionsnummer in „pilot.xml“ bei der Migration zwischen Versionen
+<a id="ensure-that-the-version-number-is-correct-in-pilotxml-when-migrating-across-versions" class="xliff"></a>
 
 Die Migration zwischen Versionsnummern wird zwar weder empfohlen noch unterstützt, Sie können dies aber häufig erreichen, indem Sie in „pilot.xml“ die Pilotversionsnummer durch die Produktionsversionsnummer ersetzen. Insbesondere die Objekte „WorkflowDefinition“ und
 
 „ActivityInformationConfiguration“ erfordern, dass die Versionsnummer genau auf die Workflowaktivitäten in der Produktionsumgebung verweist. Wenn die Versionsnummer nicht ersetzt wird, identifiziert das Cmdlet „Compare-FIMConfig“ Unterschiede zwischen den Attributen der Extensible Object Markup Language (XOML) auf „WorkflowDefinition“-Objekten und migriert die Pilotversionsnummer. Der FIM-Dienst der Produktionsversion kann Workflowaktivitäten mit der falschen Versionsnummer möglicherweise nicht starten.
 
-### <a name="avoid-cyclic-references"></a>Vermeiden zyklischer Verweise
+### Vermeiden zyklischer Verweise
+<a id="avoid-cyclic-references" class="xliff"></a>
 
 Im Allgemeinen werden zyklische Verweise in einer MIM-Konfiguration nicht empfohlen.
 Zyklen treten jedoch manchmal auf, wenn Set A auf Set B verweist und Set B zudem auf Set A verweist. Um Probleme mit zyklischen Verweisen zu vermeiden, sollten Sie die Definition von Set A oder Set B so ändern, sodass nicht beide aufeinander verweisen. Starten Sie den Migrationsvorgang anschließend neu. Wenn zyklische Verweise vorhanden sind und das Cmdlet „Compare-FIMConfig“ deshalb zu einem Fehler führt, muss der Zyklus manuell unterbrochen werden. Da das Cmdlet „Compare-FIMConfig“ eine Liste der Änderungen nach Rangfolge ausgibt, dürfen unter den Verweisen von Konfigurationsobjekten keine Zyklen vorhanden sind.
 
-## <a name="security"></a>Sicherheit
+## Sicherheit
+<a id="security" class="xliff"></a>
 
-### <a name="mim-ma-account"></a>MIM-MA-Konto
+### MIM-MA-Konto
+<a id="mim-ma-account" class="xliff"></a>
 
 Das MIM-MA-Konto wird nicht als Dienstkonto angesehen und sollte ein normales Benutzerkonto sein. Die Konten müssen zur lokalen Anmeldung fähig sein, damit das Dienstkonto des FIM-Synchronisierungsdiensts es annehmen kann.
 
@@ -289,7 +313,8 @@ So aktivieren Sie das MIM-MA-Konto für die lokale Anmeldung
 
 3.  Stellen Sie sicher, dass das FIM-MA-Konto in der Richtlinie „Lokale Anmeldung zulassen“ explizit angegeben wird, oder fügen Sie es einer der Gruppen hinzu, denen bereits Zugriff gewährt wurde.
 
-### <a name="fim-synchronization-service-and-fim-services-accounts"></a>FIM-Synchronisierungsdienst und Konten von FIM-Diensten
+### FIM-Synchronisierungsdienst und Konten von FIM-Diensten
+<a id="fim-synchronization-service-and-fim-services-accounts" class="xliff"></a>
 
 Um die Server, auf denen die MIM-Serverkomponenten ausgeführt werden, auf sichere Weise zu konfigurieren, sollte die Dienstkonten beschränkt werden. Legen Sie mithilfe der vorherigen Vorgehensweise zur Aktivierung des MIM-MA-Kontos die folgenden Einschränkungen für den FIM-Synchronisierungsdienst und Konten von FIM-Diensten fest:
 
@@ -306,11 +331,13 @@ Das Dienstkonto des FIM-Synchronisierungsdiensts sollte kein Mitglied der Sicher
 >[!IMPORTANT]
  Wenn Sie dasselbe Konto für beide Dienstkonten verwenden und den FIM-Dienst und den FIM-Synchronisierungsdienst trennen, können Sie für diesen Computer nicht den Zugriff vom Netzwerk auf dem MMS-Synchronisierungsdienst-Server aus verweigern. Wenn der Zugriff verweigert wird, kann der FIM-Dienst keine Verbindung zum FIM-Synchronisierungsdienst herstellen, um die Konfiguration zu ändern und Kennwörter zu verwalten.
 
-### <a name="password-reset-deployed-to-kiosk-like-computers-should-set-local-security-to-clear-virtual-memory-pagefile"></a>Bei Kennwortzurücksetzungen an Kiosk-Computern Auslagerungsdatei des virtuellen Arbeitsspeichers löschen
+### Bei Kennwortzurücksetzungen an Kiosk-Computern Auslagerungsdatei des virtuellen Arbeitsspeichers löschen
+<a id="password-reset-deployed-to-kiosk-like-computers-should-set-local-security-to-clear-virtual-memory-pagefile" class="xliff"></a>
 
 Beim Bereitstellen einer FIM-Kennwortzurücksetzung auf einer als Kiosk gedachten Arbeitsstation sollte die lokale Sicherheitsrichtlinieneinstellung „Herunterfahren: Auslagerungsdatei des virtuellen Arbeitsspeichers löschen“ aktiviert werden, damit vertrauliche Informationen aus dem Arbeitsspeicher für nicht autorisierte Benutzer nicht verfügbar sind.
 
-### <a name="implementing-ssl-for-the-fim-portal"></a>Implementieren von SSL für das FIM-Portal
+### Implementieren von SSL für das FIM-Portal
+<a id="implementing-ssl-for-the-fim-portal" class="xliff"></a>
 
 Es wird dringend empfohlen, dass Sie auf dem FIM-Portalserver Secure Sockets Layer (SSL) verwenden, um den Datenverkehr zwischen Clients und Server zu sichern.
 
@@ -378,7 +405,8 @@ So implementieren Sie SSL
 
 31. Klicken Sie auf „Start“ und dann auf „Ausführen“. Geben Sie „iisreset“ ein, und klicken Sie dann auf „OK“.
 
-## <a name="performance"></a>Leistung
+## Leistung
+<a id="performance" class="xliff"></a>
 
 So erreichen Sie eine optimale Leistungskonfiguration:
 
@@ -386,16 +414,20 @@ So erreichen Sie eine optimale Leistungskonfiguration:
 
 -   Deaktivieren Sie die SharePoint-Indizierung auf der FIM 2010 R2-Portalseite. Weitere Informationen finden Sie im Abschnitt „Deaktivieren der SharePoint-Indizierung“ in diesem Artikel.
 
-## <a name="feature-specific-best-practices--i-want-to-remove-this-and-collapse-this-section-and-just-have-the-specific-features-at-header-2-level-versus-3"></a>Funktionsspezifische empfohlenen Vorgehensweisen
+## Funktionsspezifische empfohlenen Vorgehensweisen
+<a id="feature-specific-best-practices--i-want-to-remove-this-and-collapse-this-section-and-just-have-the-specific-features-at-header-2-level-versus-3" class="xliff"></a>
 
 
-### <a name="request-management"></a>Anforderungsverwaltung
+### Anforderungsverwaltung
+<a id="request-management" class="xliff"></a>
 
 Standardmäßig löscht MIM 2016 abgelaufene Systemobjekte einschließlich abgeschlossene Anforderungen mit zugehörigen Genehmigungen, Genehmigungsantworten und Workflowinstanzen im Abstand von 30 Tagen. Wenn Ihre Organisation einen längeren Anforderungsverlauf benötigt, sollten Sie Anfragen aus MIM exportieren und in einer zusätzlichen Datenbank speichern, um sie über dieses 30-Tage-Fenster hinaus zu erhalten. Das 30-Tage-Fenster für die Löschung von Anforderungen kann zwar konfiguriert werden, aber eine Erweiterung dieses Fensters kann durch die zusätzlichen Objekte im System die Leistung beeinträchtigen.
 
-### <a name="management-policy-rules"></a>Verwaltungsrichtlinienregeln
+### Verwaltungsrichtlinienregeln
+<a id="management-policy-rules" class="xliff"></a>
 
-#### <a name="use-the-appropriate-mpr-type"></a>Verwenden der passenden MPR-Art
+#### Verwenden der passenden MPR-Art
+<a id="use-the-appropriate-mpr-type" class="xliff"></a>
 
 MIM bietet zwei Arten von MPRs, eine für Anforderungen und eine für den Listenübergang:
 
@@ -413,44 +445,53 @@ MIM bietet zwei Arten von MPRs, eine für Anforderungen und eine für den Listen
 
 >[HINWEIS] Weitere Informationen finden Sie unter [Designing Business Policy Rules (Entwerfen von Regeln für die Geschäftsrichtlinie)](http://go.microsoft.com/fwlink/?LinkID=183691).
 
-#### <a name="only-enable-mprs-as-necessary"></a>Aktivieren von MPRs nur nach Bedarf
+#### Aktivieren von MPRs nur nach Bedarf
+<a id="only-enable-mprs-as-necessary" class="xliff"></a>
 
 Verwenden Sie das Prinzip der geringsten Rechte, wenn Sie Ihre Konfiguration anwenden. MPRs kontrollieren die Zugriffsrichtlinie für die FIM-Bereitstellung. Aktivieren Sie nur die Funktionen, die von den meisten Benutzern verwendet werden. Nicht alle Benutzer verwenden zum Beispiel FIM für die Verwaltung von Gruppen, weshalb die entsprechenden MPRs für die Gruppenverwaltung deaktiviert werden sollten. Standardmäßig sind in FIM die meisten Nicht-Administratorberechtigungen deaktiviert.
 
-#### <a name="duplicate-built-in-mprs-instead-of-directly-modifying"></a>Duplizieren integrierter MPRs anstatt direkter Änderung
+#### Duplizieren integrierter MPRs anstatt direkter Änderung
+<a id="duplicate-built-in-mprs-instead-of-directly-modifying" class="xliff"></a>
 
 Wenn Sie die integrierten MPRs ändern müssen, sollten Sie eine neue MPR mit der erforderlichen Konfiguration erstellen und die integrierte MPR deaktivieren. Dadurch wird sichergestellt, dass zukünftige Änderungen an den integrierten MPRs im Rahmen des Upgradevorgangs nicht die Systemkonfiguration beeinträchtigen.
 
-#### <a name="end-user-permissions-should-use-explicit-attribute-lists-scoped-to-users-business-needs"></a>Endbenutzerberechtigungen mit expliziten Attributlisten
+#### Endbenutzerberechtigungen mit expliziten Attributlisten
+<a id="end-user-permissions-should-use-explicit-attribute-lists-scoped-to-users-business-needs" class="xliff"></a>
 
 Mit expliziten Attributlisten kann verhindert werden, dass versehentlich Berechtigungen an nicht berechtigte Benutzer erteilt werden, wenn Attribute zu Objekten hinzugefügt werden.
 Administratoren sollten explizit Zugriff auf neue Attribute gewähren müssen, anstatt zu versuchen, den Zugriff aufzuheben.
 
 Der Datenzugriff sollte entsprechend den geschäftlichen Anforderungen der Benutzer begrenzt werden. Zum Beispiel sollten Mitglieder einer Gruppe keinen Zugriff auf das Filterattribut der Gruppe haben, in der sie Mitglied sind. Der Filter kann versehentlich Unternehmensdaten enthüllen, auf die der Benutzer normalerweise keinen Zugriff hätte.
 
-#### <a name="mprs-should-reflect-effective-permissions-in-the-system"></a>MPRs sollten effektiven Berechtigungen entsprechen
+#### MPRs sollten effektiven Berechtigungen entsprechen
+<a id="mprs-should-reflect-effective-permissions-in-the-system" class="xliff"></a>
 
 Vermeiden Sie es, Berechtigungen für Attribute zu erteilen, die der Benutzer nie verwenden kann. Sie sollten zum Beispiel keine Berechtigung zum Ändern von Kernressourcenattributen wie „objectType“ erteilen. Trotz der MPR wird vom System jeder Versuch verweigert, den Typ einer Ressource nach der Erstellung zu ändern.
 
-#### <a name="read-permissions-should-be-separate-from-modify-and-create-permissions-when-using-explicit-attributes-in-mprs"></a>Trennung von Leseberechtigungen und Berechtigungen zum Ändern und Erstellen
+#### Trennung von Leseberechtigungen und Berechtigungen zum Ändern und Erstellen
+<a id="read-permissions-should-be-separate-from-modify-and-create-permissions-when-using-explicit-attributes-in-mprs" class="xliff"></a>
 
 Wenn Attribute in MPRs explizit aufgelistet werden, sind für das Erstellen und Ändern in der Regel andere Attribute als für den Lesezugriff erforderlich. Zum Beispiel kann der Lesezugriff über Systemattribute wie „Creator“ oder „objectId“ gewährt werden, während das Erstellen oder Ändern für Systemattribute nicht angegeben werden kann.
 
-#### <a name="create-permissions-should-be-separate-from-modify-permissions-when-using-explicit-attributes-in-rules"></a>Trennung von Berechtigungen zum Erstellen und Ändern
+#### Trennung von Berechtigungen zum Erstellen und Ändern
+<a id="create-permissions-should-be-separate-from-modify-permissions-when-using-explicit-attributes-in-rules" class="xliff"></a>
 
 Für den Erstellungsvorgang muss der Benutzer „objectType“ als Teil des Vorgangs auswählen. Dies ist ein Kernsystemattribut, das nach einem Erstellungsvorgang nicht mehr geändert werden kann.
 
-#### <a name="use-one-request-mpr-for-all-attributes-with-the-same-access-requirements"></a>Verwendung einer MPR für Anforderungen für alle Attribute mit gleichen erforderlichen Zugriffsberechtigungen
+#### Verwendung einer MPR für Anforderungen für alle Attribute mit gleichen erforderlichen Zugriffsberechtigungen
+<a id="use-one-request-mpr-for-all-attributes-with-the-same-access-requirements" class="xliff"></a>
 
 Für alle Attribute mit den gleichen erforderlichen Zugriffsberechtigungen, die sich voraussichtlich nicht ändern werden, können Sie aus Gründen der Effizienz eine einzige MPR für Anforderungen verwenden.
 
-#### <a name="avoid-giving-unrestricted-access-even-to-selected-principal-groups"></a>Vermeiden von uneingeschränktem Zugriff selbst für ausgewählte Prinzipalgruppen
+#### Vermeiden von uneingeschränktem Zugriff selbst für ausgewählte Prinzipalgruppen
+<a id="avoid-giving-unrestricted-access-even-to-selected-principal-groups" class="xliff"></a>
 
-In FIM werden Berechtigungen als positive Assertion definiert. FIM unterstützt das Verweigern von Berechtigungen nicht. Wenn uneingeschränkter Zugriff auf eine Ressource gewährt wird, können deshalb nur sehr schwer Ausnahmen in den Berechtigungen gemacht werden. Als bewährte Methode nur die erforderlichen Berechtigungen zu gewähren. 
+In FIM werden Berechtigungen als positive Assertion definiert. FIM unterstützt das Verweigern von Berechtigungen nicht. Wenn uneingeschränkter Zugriff auf eine Ressource gewährt wird, können deshalb nur sehr schwer Ausnahmen in den Berechtigungen gemacht werden. Deshalb wird empfohlen, nur die erforderlichen Berechtigungen zu gewähren.
 
 >[!NOTE]
-Berechtigungen im Abschnitt beschrieben.  Ich würde gerne wissen, wie zusammengeführt werden, um zu vermeiden, Erstellen von Ebene 5-Header
-#### <a name="use-tmprs-to-define-custom-entitlements"></a>Verwenden von TMPRs zum Definieren benutzerdefinierter Berechtigungen
+Ein Abschnitt zu Berechtigungen folgt weiter unten. Ich habe, um zu vermeiden, Erstellen von 5 Ebene Headern Zusammenführen von Fragen
+#### Verwenden von TMPRs zum Definieren benutzerdefinierter Berechtigungen
+<a id="use-tmprs-to-define-custom-entitlements" class="xliff"></a>
 
 Verwenden Sie MPRs für den Listenübergang (TMPRs) anstatt RMPRs, um benutzerdefinierte Berechtigungen zu definieren.
 TMPRs bieten ein zustandsbasiertes Modell zum Zuweisen oder Entfernen von Berechtigungen, die auf der Mitgliedschaft in den definierten Übergangslisten oder -rollen sowie den zugehörigen Workflowaktivitäten basieren. TMPRs sollten immer paarweise definiert werden, eine für jede Richtung des Ressourcenübergangs. Darüber hinaus sollte jede MPR für den Übergang getrennte Workflows für die Bereitstellung und Aufhebung von Aktivitäten enthalten.
@@ -458,26 +499,31 @@ TMPRs bieten ein zustandsbasiertes Modell zum Zuweisen oder Entfernen von Berech
 >[!NOTE]
 Jeder Aufhebungsworkflow sollte sicherstellen, dass das Attribut „Für Richtlinienaktualisierung ausführen“ auf „TRUE“ festgelegt ist.
 
-#### <a name="enable-the-set-transition-in-mpr-last"></a>TMPR für den Eingang zuletzt aktivieren
+#### TMPR für den Eingang zuletzt aktivieren
+<a id="enable-the-set-transition-in-mpr-last" class="xliff"></a>
 
 Wenn Sie ein TMPR-Paar erstellen, sollten Sie die TMPR für den Eingang zuletzt aktivieren. Durch diese Reihenfolge wird sichergestellt, dass keine Ressource mit der Berechtigung zurückbleibt, wenn sie dem Set hinzugefügt und aus dem Set entfernt wird, während die TMPR für den Eingang bereits aktiviert, die TMPR für den Ausgang aber noch deaktiviert ist.
 
-#### <a name="workflows-in-tmpr-should-check-target-resource-state-first"></a>Workflows in der TMPR sollten Zielressource zuerst überprüfen
+#### Workflows in der TMPR sollten Zielressource zuerst überprüfen
+<a id="workflows-in-tmpr-should-check-target-resource-state-first" class="xliff"></a>
 
 Bereitstellungsworkflows sollten zunächst überprüfen, ob bereits eine Bereitstellung an die Zielressource gemäß der Berechtigung erfolgt ist. Wenn dies der Fall ist, sollte der Workflow nichts unternehmen.
 
 Aufhebungsworkflows sollten zunächst überprüfen, ob eine Bereitstellung an die Zielressource erfolgt ist. Wenn dies der Fall ist, sollte der Workflow die Bereitstellung an die Zielressource aufheben.
 Andernfalls sollte der Workflow nichts unternehmen.
 
-#### <a name="select-run-on-policy-update-for-tmprs"></a>Auswählen von „Für Richtlinienaktualisierung ausführen“ für TMPRs
+#### Auswählen von „Für Richtlinienaktualisierung ausführen“ für TMPRs
+<a id="select-run-on-policy-update-for-tmprs" class="xliff"></a>
 
 Dadurch wird sichergestellt, dass das richtige Bereitstellungsverhalten angewendet wird, wenn Aktualisierungen implementiert werden, und das Flag „Für Richtlinienaktualisierung ausführen“ auf den TMPRs zugeordneten Aktionsworkflows verwendet wird. Dadurch wird sichergestellt, dass durch Änderungen an den Richtliniendefinitionen die Aktionsworkflows auf neue Mitglieder der Übergangsliste angewendet werden.
 
-#### <a name="avoid-associating-the-same-entitlement-with-two-different-transition-sets"></a>Vermeiden derselben Berechtigung für zwei verschiedene Übergangslisten
+#### Vermeiden derselben Berechtigung für zwei verschiedene Übergangslisten
+<a id="avoid-associating-the-same-entitlement-with-two-different-transition-sets" class="xliff"></a>
 
 Wenn dieselbe Berechtigung zwei verschiedenen Übergangslisten zugeordnet wird, kann dies dazu führen, dass Berechtigungen unnötigerweise aufgehoben und erneut erteilt werden, wenn die Ressource von einem Set zu einem anderen verschoben wird. Es wird empfohlen sicherzustellen, dass in einem Set alle Ressourcen enthalten sind, die die zugeordnete Berechtigung erfordern. Dadurch wird eine 1: 1-Beziehung zwischen der Übergangsliste und der Berechtigung durch den Workflow sichergestellt.
 
-#### <a name="use-an-appropriate-sequence-of-operations-when-removing-entitlements-in-the-system"></a>Richtige Reihenfolge beim Entfernen von Berechtigungen
+#### Richtige Reihenfolge beim Entfernen von Berechtigungen
+<a id="use-an-appropriate-sequence-of-operations-when-removing-entitlements-in-the-system" class="xliff"></a>
 
 Die Reihenfolge der Schritte beim Entfernen von Berechtigungen im System kann zu zwei verschiedenen Ergebnissen führen. Vergewissern Sie sich, welche Reihenfolge Sie für das gewünschte Ergebnis benötigen.
 
@@ -497,7 +543,8 @@ So entfernen Sie eine Berechtigung ohne Auswirkung auf die derzeitigen Mitgliede
 
 3.  Löschen Sie den Filter der Übergangsliste, oder ändern Sie ihn so, dass sie leer ist. Da das Set nicht mehr an eine TMPR gebunden ist, werden keine Aufhebungsworkflows angewendet.
 
-### <a name="sets"></a>Festlegungen
+### Festlegungen
+<a id="sets" class="xliff"></a>
 
 Wenn Sie die empfohlenen Vorgehensweisen für Sets anwenden, sollten Sie die Auswirkung der Optimierungen auf die zukünftige Verwaltbarkeit berücksichtigen.
 Bevor diese Empfehlungen angewendet werden, sollten entsprechende Tests für die erwartete Produktion durchgeführt werden, um das richtige Gleichgewicht zwischen Leistung und Verwaltbarkeit zu finden.
@@ -506,69 +553,85 @@ Bevor diese Empfehlungen angewendet werden, sollten entsprechende Tests für die
 Alle folgenden Richtlinien gelten für dynamische Sets und dynamische Gruppen.
 
 
-#### <a name="minimize-the-use-of-dynamic-nesting"></a>Minimieren dynamischer Schachtelung
+#### Minimieren dynamischer Schachtelung
+<a id="minimize-the-use-of-dynamic-nesting" class="xliff"></a>
 
 Dies bezieht sich auf den Filter eines Sets, das auf das Attribut „ComputedMember“ eines anderen Sets verweist. Häufig werden Sets geschachtelt, um das Duplizieren einer Mitgliedschaftsbedingung für mehrere Sets zu vermeiden. Dieser Ansatz kann zwar eine bessere Verwaltung der Sets ermöglichen, beeinträchtigt aber auch die Leistung. Sie können die Leistung optimieren, indem Sie die Mitgliedschaftsbedingungen eines geschachtelten Sets duplizieren, anstatt das Set selbst zu verschachteln.
 
 Es kann jedoch vorkommen, dass Sie Sets verschachteln müssen, um eine funktionale Anforderung zu erfüllen. Dies sind die vorrangigen Situationen, in denen Sie Sets schachteln sollten. Wenn Sie zum Beispiel das Set aller Gruppen ohne Vollzeitmitarbeiter definieren, muss die Schachtelung der Sets wie folgt verwendet werden: `/Group[not(Owner =
 /Set[ObjectID = ‘X’]/ComputedMember]`, wobei „X“ die ObjectID des Sets aller Vollzeitmitarbeiter ist.
 
-#### <a name="minimize-the-use-of-negative-conditions"></a>Minimieren negativer Bedingungen
+#### Minimieren negativer Bedingungen
+<a id="minimize-the-use-of-negative-conditions" class="xliff"></a>
 
 Negative Bedingungen sind die Mitgliedschaftsbedingungen, die die folgenden Operatoren oder Funktionen verwenden: `!=`, `not()`, `\<` ,`\<=`. Um die Leistung zu optimieren, können Sie wenn möglich die gewünschte Bedingung mit mehreren positiven Bedingungen anstatt als negative Bedingung ausdrücken.
 
-#### <a name="minimize-the-use-of-membership-conditions-based-on-multivalued-reference-attributes"></a>Minimieren von Mitgliedschaftsbedingungen, die auf mehrwertigen Verweisattributen basieren
+#### Minimieren von Mitgliedschaftsbedingungen, die auf mehrwertigen Verweisattributen basieren
+<a id="minimize-the-use-of-membership-conditions-based-on-multivalued-reference-attributes" class="xliff"></a>
 
 Es sollten möglichst wenige Bedingungen verwendet werden, die auf mehrwertigen Verweisattributen basieren, da große Mengen solcher Sets die Leistung von Vorgängen auf den Attributen, die in der Mitgliedschaftsbedingung verwendet werden, beeinträchtigen können.
 
-### <a name="password-reset"></a>Kennwortzurücksetzung
+### Kennwortzurücksetzung
+<a id="password-reset" class="xliff"></a>
 
-#### <a name="kiosk-like-computers-that-are-used-for-password-reset-should-set-local-security-to-clear-the-virtual-memory-pagefile"></a>Bei Kennwortzurücksetzungen an Kiosk-Computern Auslagerungsdatei des virtuellen Arbeitsspeichers löschen
+#### Bei Kennwortzurücksetzungen an Kiosk-Computern Auslagerungsdatei des virtuellen Arbeitsspeichers löschen
+<a id="kiosk-like-computers-that-are-used-for-password-reset-should-set-local-security-to-clear-the-virtual-memory-pagefile" class="xliff"></a>
 
 Beim Bereitstellen einer FIM 2010-Kennwortzurücksetzung auf einer als Kiosk gedachten Arbeitsstation sollte die lokale Sicherheitsrichtlinieneinstellung „Herunterfahren: Auslagerungsdatei des virtuellen Arbeitsspeichers löschen“ aktiviert werden, damit vertrauliche Informationen aus dem Arbeitsspeicher für nicht autorisierte Benutzer nicht verfügbar sind.
 
-#### <a name="users-should-always-register-for-a-password-reset-on-a-computer-that-they-are-logged-on-to"></a>Registrierung für Kennwortzurücksetzung auf Anmeldecomputer
+#### Registrierung für Kennwortzurücksetzung auf Anmeldecomputer
+<a id="users-should-always-register-for-a-password-reset-on-a-computer-that-they-are-logged-on-to" class="xliff"></a>
 
 Wenn ein Benutzer versucht, sich über ein Webportal für eine Kennwortzurücksetzung zu registrieren, initiiert FIM 2010 immer eine Registrierung im Namen des angemeldeten Benutzers, unabhängig davon, wer auf der Website angemeldet ist. Benutzer sollten sich immer für eine Kennwortzurücksetzung registrieren, wenn sie an einem Computer angemeldet sind.
 
-#### <a name="do-not-set-the-avoidpdconwan-registry-key-to-true"></a>AvoidPdcOnWan-Registrierungsschlüssel nicht auf „TRUE“ festlegen
+#### AvoidPdcOnWan-Registrierungsschlüssel nicht auf „TRUE“ festlegen
+<a id="do-not-set-the-avoidpdconwan-registry-key-to-true" class="xliff"></a>
 
 Wenn Sie die MIM 2016-Kennwortzurücksetzung verwenden, sollten Sie den Registrierungsschlüssel „AvoidPdcOnWan“ nicht auf „TRUE“ festlegen.
 
 Wenn dieser Registrierungsschlüssel auf „TRUE“ festgelegt ist, gelangt der Benutzer sehr wahrscheinlich durch das Kennwort-Gate, lässt sein Kennwort auf dem primären Domänencontroller (PDC, Primary Domain Controller) ändern und versucht, sich anzumelden. Aufgrund dieses Registrierungsschlüssels führt der lokale Domänencontroller die sekundäre Validierung mit dem PDC nicht durch, weshalb die Anmeldung verweigert wird. Wenn dem Benutzer die Anmeldung zu oft verweigert wird, wird er für die Domäne gesperrt und muss sich an den Support wenden.
 
-#### <a name="do-not-turn-on-logging-of-clear-text-passwords"></a>Kennwörter nicht im Klartext eingeben
+#### Kennwörter nicht im Klartext eingeben
+<a id="do-not-turn-on-logging-of-clear-text-passwords" class="xliff"></a>
 
 Es ist möglich, Klartextkennwörter einzugeben, wenn das Servicelevel mit Diagnoseablaufverfolgung in Windows aktiviert wird.
 
 Communication Foundation (WCF) aktiviert wurde. Diese Option ist standardmäßig nicht aktiviert, und es wird davon abgeraten, sie in Produktionsumgebungen zu aktivieren. Diese Kennwörter werden in einer verschlüsselten Simple Object Access-Protokollnachricht (SOAP, Simple Object Access Protocol) als Klartext angezeigt, wenn sich Benutzer für die Kennwortzurücksetzung registrieren. Weitere Informationen finden Sie unter [Konfigurieren der Nachrichtenprotokollierung](http://go.microsoft.com/fwlink/?LinkID=168572).
 
-#### <a name="do-not-map-an-authorization-workflow-to-the-password-reset-process"></a>Keinen Autorisierungsworkflow bei Kennwortzurücksetzung verwenden
+#### Keinen Autorisierungsworkflow bei Kennwortzurücksetzung verwenden
+<a id="do-not-map-an-authorization-workflow-to-the-password-reset-process" class="xliff"></a>
 
 Sie sollten einer Kennwortzurücksetzung keinen Autorisierungsworkflow anhängen.
 Für die Kennwortzurücksetzung ist eine synchrone Antwort erforderlich, Autorisierungsworkflows mit Aktivitäten wie der Genehmigungsaktivität sind jedoch asynchron.
 
-#### <a name="do-not-map-multiple-action-activities-to-password-reset"></a>Der Kennwortzurücksetzung nicht mehrere Aktionsaktivitäten zuordnen
+#### Der Kennwortzurücksetzung nicht mehrere Aktionsaktivitäten zuordnen
+<a id="do-not-map-multiple-action-activities-to-password-reset" class="xliff"></a>
 
 Sie sollten einer Kennwortzurücksetzung keinen Workflow anhängen, der mehr als eine Aktionsaktivität enthält. Ein Beispielszenario wäre, wenn einer MPR zur Kennwortzurücksetzung eine zweite AD DS-Kennwortzurücksetzungsaktivität zugeordnet würde. Dieses Szenario wird nicht unterstützt.
 
-#### <a name="require-reregistration-when-adding-removing-or-changing-the-order-of-activities-in-an-existing-workflow"></a>Fordern erneuter Registrierung beim Hinzufügen, Entfernen oder Ändern der Reihenfolge der Aktivitäten in einem vorhandenen Workflow
+#### Fordern erneuter Registrierung beim Hinzufügen, Entfernen oder Ändern der Reihenfolge der Aktivitäten in einem vorhandenen Workflow
+<a id="require-reregistration-when-adding-removing-or-changing-the-order-of-activities-in-an-existing-workflow" class="xliff"></a>
 
 Wählen Sie beim Hinzufügen, Entfernen oder Ändern der Reihenfolge der Authentifizierungsaktivitäten in einem vorhandenen Workflow immer die Option aus, eine erneute Registrierung zu fordern. Wenn Benutzer versuchen, eine Authentifizierung für eine Kennwortzurücksetzung durchzuführen, nachdem eine Aktivität zu einem Workflow hinzugefügt oder daraus entfernt wurde, sie sich aber noch nicht erneut registriert haben, können unerwünschte Auswirkungen auftreten.
 
-### <a name="portal-configuration-and-resource-control-display-configuration"></a>Portalkonfiguration und Ressourcensteuerungs-Anzeigekonfiguration
+### Portalkonfiguration und Ressourcensteuerungs-Anzeigekonfiguration
+<a id="portal-configuration-and-resource-control-display-configuration" class="xliff"></a>
 
-#### <a name="consider-adding-a-privacy-disclaimer-to-the-user-profile-page"></a>Eventuell Datenschutz-Haftungsausschluss zu Benutzerprofilseite hinzufügen
+#### Eventuell Datenschutz-Haftungsausschluss zu Benutzerprofilseite hinzufügen
+<a id="consider-adding-a-privacy-disclaimer-to-the-user-profile-page" class="xliff"></a>
 
 In MIM werden möglicherweise einige Informationen zum Benutzerprofil standardmäßig für andere Benutzer angezeigt. Als freundliche Geste gegenüber Benutzern sollten Administratoren darüber nachdenken, der Benutzerprofilseite entsprechend den Richtlinien ihres Unternehmens einen benutzerdefinierten Text hinzuzufügen. Weitere Informationen über das Hinzufügen von benutzerdefiniertem Text zu einer MIM-Portalseite finden Sie unter [Introduction to Configuring and Customizing the FIM Portal (Einführung in das Konfigurieren und Anpassen des FIM-Portals)](http://go.microsoft.com/fwlink/?LinkID=165848).
 
-### <a name="schema"></a>Schema
+### Schema
+<a id="schema" class="xliff"></a>
 
-#### <a name="do-not-delete-person-or-group-resource-types"></a>Ressourcentypen „Person“ und „Gruppe“ nicht löschen
+#### Ressourcentypen „Person“ und „Gruppe“ nicht löschen
+<a id="do-not-delete-person-or-group-resource-types" class="xliff"></a>
 
 Auch wenn die Ressourcentypen „Person“ und „Gruppe“ nicht als Core-Ressourcentypen gekennzeichnet sind, sollten weder die Ressourcen selbst noch die ihnen zugewiesenen Attribute gelöscht werden. Die Benutzeroberfläche (UI) im MIM-Portal erfordert, dass die Ressourcentypen „Person“ und „Gruppe“ und deren Attribute vorhanden sind.
 
-#### <a name="do-not-modify-the-core-attributes"></a>Nicht die Core-Attribute verändern
+#### Nicht die Core-Attribute verändern
+<a id="do-not-modify-the-core-attributes" class="xliff"></a>
 
 Es gibt 13 Core-Attribute, die allen Ressourcentypen zugewiesen werden. Sie sollten deren Beziehung zu einem Ressourcentyp in keiner Weise ändern. Die 13 Core-Attribute sind:
 
@@ -600,27 +663,33 @@ Löschen Sie keine Schemaressource, die von Überwachungsanforderungen abhängt
 
 Sie sollten Ihre Schemaressourcen nicht löschen, während dafür noch Überwachungsanforderungen vorhanden sind.
 
-#### <a name="making-regular-expressions-case-insensitive"></a>Bei regulären Ausdrücken Groß-/Kleinschreibung nicht berücksichtigen
+#### Bei regulären Ausdrücken Groß-/Kleinschreibung nicht berücksichtigen
+<a id="making-regular-expressions-case-insensitive" class="xliff"></a>
 
 In FIM kann es hilfreich sein, bei einigen regulären Ausdrücken die Groß-/Kleinschreibung nicht zu berücksichtigen. Sie können die Groß-/Kleinschreibung innerhalb einer Gruppe ignorieren, indem Sie ?!: verwenden. Zum Beispiel können Sie für Employee Type (Mitarbeitertyp) Folgendes verwenden:
 
 `\^(?!:contractor\|full time employee)%.`
 
-#### <a name="calculation-of-the-member-attribute"></a>Berechnung des Mitgliedsattributs
+#### Berechnung des Mitgliedsattributs
+<a id="calculation-of-the-member-attribute" class="xliff"></a>
 
 Das Mitgliedsattribut, das an das Synchronisierungsmodul bereitgestellt wird, wird eigentlich ComputedMembers zugeordnet. Es ist eine Kombination aus kriterienbasierten und manuell ausgewählten Mitgliedern. Auch wenn Sie alle drei Attribute (Filter, ExplicitMembers und ComputedMembers) hinzufügen, findet die dynamische Berechnung des Mitgliedsattributs nicht für andere Ressourcentypen als Gruppe und Set statt.
 
-#### <a name="leading-and-trailing-spaces-in-strings-are-ignored"></a>Vorangestellte und nachfolgende Leerzeichen in Zeichenfolgen werden ignoriert
+#### Vorangestellte und nachfolgende Leerzeichen in Zeichenfolgen werden ignoriert
+<a id="leading-and-trailing-spaces-in-strings-are-ignored" class="xliff"></a>
 
 In FIM können Sie Zeichenfolgen mit vorangestellten und nachfolgenden Leerzeichen eingeben, diese Leerzeichen werden jedoch vom FIM-System ignoriert. Wenn Sie eine Zeichenfolge mit einem vorangestellten und nachfolgenden Leerzeichen übermitteln, werden diese Leerzeichen vom Synchronisierungsmodul und Webdiensten ignoriert.
 
-#### <a name="empty-strings-do-not-equal-null"></a>Leere Zeichenfolgen sind nicht gleich null
+#### Leere Zeichenfolgen sind nicht gleich null
+<a id="empty-strings-do-not-equal-null" class="xliff"></a>
 
 In dieser Version von FIM sind leere Zeichenfolgen nicht gleich null. Die Eingabe einer leeren Zeichenfolge wird als gültiger Wert betrachtet. Keine Eingabe wird als Null betrachtet.
 
-### <a name="workflow-and-request-processing"></a>Workflow und Verarbeitung von Anforderungen
+### Workflow und Verarbeitung von Anforderungen
+<a id="workflow-and-request-processing" class="xliff"></a>
 
-#### <a name="do-not-delete-default-workflows-that-are-shipped-with-mim-2016"></a>Keine Standardworkflows löschen, die mit MIM 2016 geliefert werden
+#### Keine Standardworkflows löschen, die mit MIM 2016 geliefert werden
+<a id="do-not-delete-default-workflows-that-are-shipped-with-mim-2016" class="xliff"></a>
 
 Die folgenden Workflows werden mit FIM 2010 geliefert und sollten nicht gelöscht werden:
 
@@ -646,15 +715,17 @@ Die folgenden Workflows werden mit FIM 2010 geliefert und sollten nicht gelösch
 
 -   Für die Registrierung erforderlicher Systemworkflow
 
-#### <a name="do-not-run-two-or-more-approvalactivities-in-parallel"></a>Nicht mehrere ApprovalActivities parallel ausführen
+#### Nicht mehrere ApprovalActivities parallel ausführen
+<a id="do-not-run-two-or-more-approvalactivities-in-parallel" class="xliff"></a>
 
 Sie sollten nicht zwei oder mehr ApprovalActivities parallel ausführen. Dies kann dazu führen, dass die Anforderung in der Autorisierungsphase hängenbleibt. Um mehrere Genehmigungen zu erhalten, können Sie entweder eine umfangreichere Liste von genehmigenden Personen in die Genehmigung einschließen oder die beiden Aktivitäten aufeinander folgend sequenzieren.
 
-#### <a name="authorization-activities-should-not-modify-mim-resources-data"></a>Autorisierung sollte MIM-Ressourcendaten nicht verändern
+#### Autorisierung sollte MIM-Ressourcendaten nicht verändern
+<a id="authorization-activities-should-not-modify-mim-resources-data" class="xliff"></a>
 
 Vermeiden Sie als Teil der Workflows in Autorisierungsworkflows Aktivitäten wie die Funktionsauswertung, die die MIM-Ressourcen verändern. Da für die Anforderung am Punkt der Autorisierung bei der Verarbeitung kein Commit ausgeführt wurde, können alle an den Identitätsinformationen vorgenommenen Änderungen angewendet werden, obwohl die Anforderung möglicherweise zurückgewiesen wird.
 
-### <a name="understanding-fim-service-partitions"></a>Grundlegendes zu FIM-Dienstpartitionen
+### Grundlegendes zu FIM-Dienstpartitionen
+<a id="understanding-fim-service-partitions" class="xliff"></a>
 
 Das Ziel von FIM ist die Verarbeitung von Anforderungen, die von verschiedenen FIM-Clients wie z.B. dem FIM-Synchronisierungsdienst und den Self-Service-Komponenten gemäß den konfigurierten Geschäftsrichtlinien initiiert werden können. Standardmäßig gehört jede FIM-Dienstinstanz zu einer logischen Gruppe, die aus einer oder mehreren FIM-Dienstinstanzen besteht, was auch als FIM-Dienstpartition bezeichnet wird. Wenn Sie nur eine FIM-Dienstinstanz zur Verarbeitung aller Anforderungen bereitstellen lassen, kann es bei der Verarbeitung zu Verzögerungen kommen. Einige Vorgänge können sogar die standardmäßigen Timeoutwerte überschreiten, die für Self-Service-Vorgänge angemessen sind. FIM-Dienstpartitionen können Ihnen bei der Behebung dieses Problems helfen. Weitere Informationen finden Sie unter „Understanding FIM Service Partitions (Grundlegendes zu FIM-Dienstpartitionen)“.
-

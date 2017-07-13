@@ -12,18 +12,18 @@ ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: 89e095cff66984140cdcef3617dd0ccc3d3714d8
-ms.lasthandoff: 02/07/2017
-
-
+ms.openlocfilehash: f8de75a0027371b7ff88b90d3097adc63c02d933
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="enroll-smart-cards-for-non-administrators"></a>Registrieren von Smartcards für Nichtadministratoren
+# Registrieren von Smartcards für Nichtadministratoren
+<a id="enroll-smart-cards-for-non-administrators" class="xliff"></a>
 Wenn ein Benutzer auf seinem Computer kein lokaler Administrator ist, kann er standardmäßig keine Smartcard auf seinen eigenen Computern registrieren. Mithilfe des folgenden Verfahrens können Sie diese Einschränkung umgehen.
 
-## <a name="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager"></a>Ermöglichen von Smartcard-Erneuerung für Nichtadministratoren im MIM 2016-Zertifikat-Manager
+## Ermöglichen von Smartcard-Erneuerung für Nichtadministratoren im MIM 2016-Zertifikat-Manager
+<a id="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager" class="xliff"></a>
 
 1.  **Entpacken Sie die APPX-Datei.**
 
@@ -94,4 +94,3 @@ Wenn ein Benutzer auf seinem Computer kein lokaler Administrator ist, kann er st
 7.  **Installieren Sie die CM-App für das Konto ohne Administratorberechtigungen.**
 
 8.  **Starten Sie die CM-App und Registrierung für eine virtuelle Smartcard.**
-

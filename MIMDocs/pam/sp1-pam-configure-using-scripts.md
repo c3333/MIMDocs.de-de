@@ -12,15 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
 ms.openlocfilehash: bd73f43a096d58e1f7250e28b59e33f4411e88a3
-ms.lasthandoff: 01/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="configure-pam-using-scripts"></a>Konfigurieren von PAM mithilfe von Skripts
+# Konfigurieren von PAM mithilfe von Skripts
+<a id="configure-pam-using-scripts" class="xliff"></a>
 
 Wenn Sie SQL und SharePoint auf unterschiedlichen Servern installieren, müssen beide Anwendungen mithilfe der unten stehenden Anleitung konfiguriert werden. Wenn SQL, SharePoint und die PAM-Komponenten auf demselben Computer installiert werden, müssen auf diesem Computer die folgenden Schritte ausgeführt werden.
 
@@ -40,11 +39,13 @@ Schritte:
 5. Kopieren Sie die gleiche PAMDeploymentConfig.xml-Datei auf allen Computern, CORP-DCs, PRIV-DCs, PAM-Servern, SQL-Servern und SharePoint-Servern in den Ordner „%SYSTEMDRIVE%\PAM“.
 
 
-## <a name="deployment-worksheet"></a>Arbeitsblatt für die Bereitstellung
+## Arbeitsblatt für die Bereitstellung
+<a id="deployment-worksheet" class="xliff"></a>
 
 Bevor Sie fortfahren aktualisieren Sie die Datei „PAMDeploymentConfig.xml“ und legen die aktualisierte Kopie auf allen Computern ab.
 
-### <a name="setup"></a>Setup
+### Setup
+<a id="setup" class="xliff"></a>
 
 |Computer   | Ausführung als   |Befehle   |
 |---|---|---|
@@ -56,7 +57,8 @@ Bevor Sie fortfahren aktualisieren Sie die Datei „PAMDeploymentConfig.xml“ u
 | PAM-Server  | Lokaler Administrator (MIM-Administrator nach dem Domänenbeitritt)  | .\PAMDeployment.ps1; Wählen Sie Menüoption 5 (MIM PAM-Einrichtung)   |
 |  PAM-Server |MIM-Administrator   | .\PAMDeployment.ps1; Wählen Sie Menüoption 6 (Einrichten der PAM-Vertrauensstellung) .\PAMDeployment.ps1; Wählen Sie Menüoption 6 (Einrichten der PAM-Vertrauensstellung) |
 
-### <a name="validation"></a>Validation
+### Validation
+<a id="validation" class="xliff"></a>
 
 |  Computer | Ausführung als   | Befehle   |
 |---|---|---|
@@ -69,4 +71,3 @@ Bevor Sie fortfahren aktualisieren Sie die Datei „PAMDeploymentConfig.xml“ u
 
 >[!div class="step-by-step"]
 [Start »](sp1-step1-configuring-priv-domain.md)
-

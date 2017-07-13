@@ -12,17 +12,14 @@ ms.technology: security
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: fa200bb18871387420743af64ca196565397e5d5
-ms.contentlocale: de-de
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="deploy-mim-2016" class="xliff"></a>
 # Bereitstellen MIM 2016
+<a id="deploy-mim-2016" class="xliff"></a>
 Die Artikel in diesem Abschnitt bieten Schritt-für-Schritt-Anleitungen für die Bereitstellung von Microsoft Identity Manager (MIM) 2016 für Endbenutzer-Self-Service-Szenarien. Es wird dabei von einer Bereitstellung auf einem neuen Server ausgegangen, auf dem zuvor weder FIM noch MIM bereitgestellt wurden.
 
 > [!NOTE]
@@ -32,23 +29,22 @@ Das Szenario für die privilegierte Zugriffsverwaltung wird anders als andere MI
 
 Der Vorgang zum Bereitstellen von MIM 2016 ähnelt sehr dem des Vorgängers, FIM 2010 R2. Wenn Sie die Dokumentation für FIM zurate ziehen möchten, lesen Sie das [Bereitstellungshandbuch für Forefront Identity Manager 2010 R2](https://technet.microsoft.com/library/jj134310).
 
-<a id="first-prepare-a-domain" class="xliff"></a>
 ## Erstens: Vorbereiten einer Domäne
+<a id="first-prepare-a-domain" class="xliff"></a>
 MIM funktioniert über Active Directory (AD). Führen Sie daher diese Schritte aus, um Ihre Active Directory-Domänencontroller zu konfigurieren.
 - [Einrichten der Domäne](preparing-domain.md)
 
-<a id="next-prepare-an-identity-management-server" class="xliff"></a>
 ## Nächster Schritt: Vorbereiten eines Servers für die Identitätsverwaltung
+<a id="next-prepare-an-identity-management-server" class="xliff"></a>
 Sobald Ihre Domäne eingerichtet und konfiguriert ist, bereiten Sie den Server vor, der Ihre Corporate Identity verwaltet. Dies beinhaltet:
 - [Windows Server 2012 R2](prepare-server-ws2012r2.md)
 - [SQL Server 2014](prepare-server-sql2014.md)
 - [SharePoint](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (optional)
 
-<a id="finally-install-microsoft-identity-manager-2016-components" class="xliff"></a>
 ## Installieren Sie zu guter Letzt die Komponenten von Microsoft Identity Manager 2016.
+<a id="finally-install-microsoft-identity-manager-2016-components" class="xliff"></a>
 Nachdem Sie die Domäne und den Server eingerichtet haben, können Sie die MIM-Komponenten installieren und konfigurieren, um sie mit Active Directory zu synchronisieren.
 - [MIM-Synchronisierungsdienst](install-mim-sync.md)
 - [MIM-Dienst und -Portal](install-mim-service-portal.md)
 - [Synchronisieren von Active Directory und MIM-Dienstdatenbanken](install-mim-sync-ad-service.md)
-

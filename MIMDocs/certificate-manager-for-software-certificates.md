@@ -12,18 +12,18 @@ ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: 23cfb1134d1cbf2cf838354cb7d915084803cd41
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 274039a6866c5c0fda807e4326220ecf785ca3bb
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="create-software-certificates-with-certificate-manager"></a>Erstellen von Softwarezertifikaten mit dem Zertifikat-Manager
+# Erstellen von Softwarezertifikaten mit dem Zertifikat-Manager
+<a id="create-software-certificates-with-certificate-manager" class="xliff"></a>
 Zum Registrieren und Erneuern von Softwarezertifikaten müssen Sie kein Administrator sein und es ist keine virtuelle Smartcard erforderlich. Beachten Sie, dass Sie im Verlauf dazu aufgefordert werden, einen Zertifikatvorgang zuzulassen. Das ist normal.
 
-## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>Erstellen einer Softwarezertifikat-Profilvorlage im MIM 2016-Zertifikat-Manager
+## Erstellen einer Softwarezertifikat-Profilvorlage im MIM 2016-Zertifikat-Manager
+<a id="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager" class="xliff"></a>
 
 1.  Erstellen Sie eine Vorlage für das Zertifikat, das Sie für die virtuelle Smartcard anfordern werden. Öffnen Sie die MMC.
 
@@ -39,7 +39,7 @@ Zum Registrieren und Erneuern von Softwarezertifikaten müssen Sie kein Administ
 
     1.  Geben Sie auf der Registerkarte **Allgemein** im Feld „Anzeigename“ die Zeichenfolge **Archivierte Zertifikatvorlage**ein.
 
-    2.  b.    Auf der Registerkarte **Anforderungsbehandlung** :
+    2.  b.  Auf der Registerkarte **Anforderungsbehandlung** :
 
         1.  Legen Sie für **Zweck** „Signatur und Verschlüsselung“ fest.
 
@@ -73,7 +73,8 @@ Zum Registrieren und Erneuern von Softwarezertifikaten müssen Sie kein Administ
 
     10. Wählen Sie aus der Liste die neue Vorlage, die Sie soeben erstellt haben (**Archivierte Zertifikatvorlage**), und klicken Sie dann auf **OK**.
 
-## <a name="create-the-profile-template"></a>Erstellen der Profilvorlage
+## Erstellen der Profilvorlage
+<a id="create-the-profile-template" class="xliff"></a>
 
 1.  Melden Sie sich beim CM-Portal (Zertifikatverwaltung) als Benutzer mit Administratorrechten an.
 
@@ -96,4 +97,3 @@ Zum Registrieren und Erneuern von Softwarezertifikaten müssen Sie kein Administ
 10. Wenn Sie archivierte Zertifikate neu ausstellen möchten, aktivieren Sie die Kontrollkästchen auf der linken Seite von **Archivierte Zertifikate erneut ausstellen** , und klicken Sie auf **OK**.
 
 11. Wenn Sie die Zertifikatsverwaltung mithilfe der virtuellen Smartcard verwenden, müssen Sie Datensammlungselemente deaktivieren, da diese nicht mit aktivierter Datensammlung funktioniert. Deaktivieren Sie die Datensammlung für jede Richtlinie, indem Sie im linken Bereich auf die Richtlinie klicken, dann das Kontrollkästchen neben **Beispieldatenelement** deaktivieren und schließlich auf **Datensammlungselemente löschen**klicken. Klicken Sie dann auf **OK**.
-

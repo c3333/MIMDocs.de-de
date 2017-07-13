@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 1cb0d6cd310372ecaeff47c9cc4461ebc43b3390
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: a0241964edb21ca4bf938ae84693b9947f6e2efb
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="set-up-an-identity-management-server-windows-server-2012-r2"></a>Einrichten eines Identitätsverwaltungsservers: Windows Server 2012 R2
+# Einrichten eines Identitätsverwaltungsservers: Windows Server 2012 R2
+<a id="set-up-an-identity-management-server-windows-server-2012-r2" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Vorbereiten einer Domäne](preparing-domain.md)
@@ -32,7 +31,8 @@ ms.lasthandoff: 01/24/2017
 > - Domänenname: **contoso**
 > - Kennwort – **Pass@word1**
 
-## <a name="join-windows-server-2012-r2-to-your-domain"></a>Hinzufügen von Windows Server 2012 R2 zu Ihrer Domäne
+## Hinzufügen von Windows Server 2012 R2 zu Ihrer Domäne
+<a id="join-windows-server-2012-r2-to-your-domain" class="xliff"></a>
 
 Beginnen Sie mit einem Computer mit Windows Server 2012 R2 mit mindestens 8 GB RAM. Geben Sie bei der Installation die Edition „Windows Server 2012 R2 Standard (Server mit grafischer Benutzeroberfläche) x64“ an.
 
@@ -63,7 +63,8 @@ Beginnen Sie mit einem Computer mit Windows Server 2012 R2 mit mindestens 8 GB R
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,Windows-Identity-Foundation,Server-Media-Foundation,Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-## <a name="configure-the-server-security-policy"></a>Konfigurieren der Serversicherheitsrichtlinie
+## Konfigurieren der Serversicherheitsrichtlinie
+<a id="configure-the-server-security-policy" class="xliff"></a>
 
 Richten Sie die Serversicherheitsrichtlinien ein, damit die neu erstellten Konten als Dienste ausgeführt werden können.
 
@@ -94,7 +95,8 @@ Richten Sie die Serversicherheitsrichtlinien ein, damit die neu erstellten Konte
 12. Schließen Sie das Fenster „Lokale Sicherheitsrichtlinien“.
 
 
-## <a name="change-the-iis-windows-authentication-mode"></a>Ändern Sie den IIS-Windows-Authentifizierungsmodus.
+## Ändern Sie den IIS-Windows-Authentifizierungsmodus.
+<a id="change-the-iis-windows-authentication-mode" class="xliff"></a>
 
 1.  Öffnen Sie ein PowerShell-Fenster.
 
@@ -109,4 +111,3 @@ Richten Sie die Serversicherheitsrichtlinien ein, damit die neu erstellten Konte
 >[!div class="step-by-step"]  
 [« Vorbereiten einer Domäne](preparing-domain.md)
 [SQL Server 2014 »](prepare-server-sql2014.md)
-

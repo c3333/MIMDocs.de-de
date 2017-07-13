@@ -1,84 +1,42 @@
-
 # [Verstehen und Kennenlernen](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
-
 # [Planen und Entwerfen](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
-
 # [Bereitstellen und Verwenden](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
-
 # [Verwenden von Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)
-
 # [Entwicklerreferenz](microsoft-identity-manager-2016-developer-reference.md)
-
 ## [Entwicklerreferenz zu Microsoft Identity Manager 2016](microsoft-identity-manager-2016-developer-reference.md)
-
 ### [Referenz zur REST-API für die Zertifikatverwaltung](certificate-management-rest-api-reference.md)
-
 #### [CM REST-API-Dienstdetails](certificate-management-rest-api-service-details.md)
-
 #### [Exemplarische Vorgehensweise bei der Beispielregistrierung](sample-enrollment-walkthrough.md)
-
 #### [Abrufen von Profilvorlagen](get-profile-templates.md)
-
 #### [Richtlinienvorgänge](policy-operations.md)
-
 ##### [Abrufen von Workflowrichtlinien](get-workflow-policy.md)
-
 ##### [Abrufen von Smartcardrichtlinien](get-smartcard-policy.md)
-
 #### [Anforderungsvorgänge](request-operations.md)
-
 ##### [Erstellen von Anforderungen](create-request.md)
-
 ##### [Abrufen von Anforderungen](get-request.md)
-
 ##### [Abbrechen, Verwerfen oder Abschließen von Anforderungen](cancel-abandon-complete-request.md)
-
 #### [Zertifikatanforderungsvorgänge](certificate-request-operations.md)
-
 ##### [Abrufen von Generierungsoptionen für Zertifikatanforderungen](get-certificate-request-generation-options.md)
-
 ##### [Abrufen von Zertifikatantworten](get-certificate-responses.md)
-
 #### [Smartcardvorgänge](smartcard-operations.md)
-
 ##### [Zuweisen einer Smartcard zu einer Anforderung](assign-smartcard-to-request.md)
-
 ##### [Abrufen von Smartcarddaten](get-smartcard-data.md)
-
 ##### [Abrufen einer Smartcard-Authentifizierungsantwort](get-smartcard-authentication-response.md)
-
 ##### [Abrufen eines per Smartcard diversifizierten Admininistratorschlüssels](get-smartcard-diversified-admin-key.md)
-
 ##### [Abrufen einer per Smartcard vorgeschlagenen PIN](get-smartcard-proposed-pin.md)
-
 ##### [Aktualisieren des Smartcardstatus](update-smartcard-status.md)
-
 #### [Profilvorgänge](profile-operations.md)
-
 ##### [Abrufen von Profildaten](get-profile-data.md)
-
 ##### [Abrufen von Profilzustandsvorgängen](get-profile-state-operations.md)
-
 #### [Zertifikatvorgänge](certificate-operations.md)
-
 ##### [Abrufen von Smartcard- oder Profilzertifikaten](get-smartcard-profile-certificates.md)
-
 ##### [Abrufen von Benutzerzertifikaten](get-user-certificates.md)
-
 ### [Referenz zur PAM-REST-API (privilegierte Zugriffsverwaltung)](privileged-access-management-rest-api-reference.md)
-
 #### [PAM-REST-API-Dienstdetails](privileged-access-management-rest-api-service-details.md)
-
 #### [Abrufen von PAM-Rollen](privileged-access-management-get-roles.md)
-
 #### [Erstellen von PAM-Anforderungen](privileged-access-management-create-request.md)
-
 #### [Abrufen von PAM-Anforderungen](privileged-access-management-get-requests.md)
-
 #### [Schließen von PAM-Anforderungen](privileged-access-management-close-request.md)
-
 #### [Abrufen ausstehender PAM-Anforderungen](privileged-access-management-get-pending-requests.md)
-
 #### [Genehmigen oder Ablehnen einer ausstehenden PAM-Anforderung](privileged-access-management-approve-reject-pending-request.md)
-
 #### [Abrufen von PAM-Sitzungsinformationen](privileged-access-management-get-session-info.md)
