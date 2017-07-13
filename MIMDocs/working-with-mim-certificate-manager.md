@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: d714a58796d3a86fc82ed1eb6dc29bdc45920933
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 8a4582695d41ea605f2de4e336c3a780b2b2559f
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="working-with-the-mim-certificate-manager"></a>Arbeiten mit dem MIM-Zertifikat-Manager
+# Arbeiten mit dem MIM-Zertifikat-Manager
+<a id="working-with-the-mim-certificate-manager" class="xliff"></a>
 Nachdem Sie MIM 2016 und den Zertifikat-Manager installiert und gestartet haben, können Sie die Windows Store-Anwendung für den MIM-Zertifikat-Manager bereitstellen, sodass Benutzer ihre physischen und virtuellen Smartcards und Softwarezertifikate problemlos verwalten können. Mit folgenden Schritten stellen Sie die Anwendung für den MIM-Zertifikat-Manager (MIM Certificate Manager, MIM CM) bereit:
 
 1.  Erstellen Sie eine Zertifikatvorlage.
@@ -31,7 +30,8 @@ Nachdem Sie MIM 2016 und den Zertifikat-Manager installiert und gestartet haben,
 
 4.  Stellen Sie die Anwendung über SCCM oder Intune bereit.
 
-## <a name="create-a-certificate-template"></a>Erstellen einer Zertifikatvorlage
+## Erstellen einer Zertifikatvorlage
+<a id="create-a-certificate-template" class="xliff"></a>
 Sie erstellen eine Zertifikatvorlage für die Zertifikat-Manager-Anwendung in derselben Weise, wie Sie dies normalerweise tun, mit der Ausnahme, dass Sie sicherstellen müssen, dass die Zertifikatvorlage in Version 3 oder höher vorliegt.
 
 1.  Melden Sie sich bei dem Server an, auf dem Active Directory-Zertifikatdienste (AD CS) ausgeführt wird (der Zertifikatserver).
@@ -70,7 +70,8 @@ Sie erstellen eine Zertifikatvorlage für die Zertifikat-Manager-Anwendung in de
 
 16. Wählen Sie in der Liste die neue Vorlage aus, die Sie erstellt haben, und klicken Sie auf **OK**.
 
-## <a name="create-a-profile-template"></a>Erstellen einer Profilvorlage
+## Erstellen einer Profilvorlage
+<a id="create-a-profile-template" class="xliff"></a>
 Wenn Sie eine Profilvorlage erstellen, müssen Sie „Virtuelle SmartCard erstellen/löschen“ und Entfernen der Datensammlung für diese festlegen. Die Zertifikat-Manager-Anwendung kann keine gesammelten Daten verarbeiten, daher muss dies wie folgt deaktiviert werden.
 
 1.  Melden Sie sich beim CM-Portal (Zertifikatverwaltung) als Benutzer mit Administratorrechten an.
@@ -95,7 +96,8 @@ Wenn Sie eine Profilvorlage erstellen, müssen Sie „Virtuelle SmartCard erstel
 
 11. Sie müssen die Datensammlungselemente für jede Richtlinie deaktivieren, indem Sie im linken Bereich auf die Richtlinie klicken, dann das Kontrollkästchen neben **Beispieldatenelement** aktivieren und schließlich auf **Datensammlungselemente löschen**klicken. Klicken Sie dann auf **OK**.
 
-## <a name="prepare-the-cm-app-for-deployment"></a>Vorbereiten der Zertifikat-Manager-Anwendung zur Bereitstellung
+## Vorbereiten der Zertifikat-Manager-Anwendung zur Bereitstellung
+<a id="prepare-the-cm-app-for-deployment" class="xliff"></a>
 
 1.  Führen Sie in der Eingabeaufforderung den folgenden Befehl aus, um die Anwendung zu entpacken und den Inhalt in einen neuen Unterordner namens „appx“ zu extrahieren sowie eine Kopie zu erstellen, so dass Sie nicht die ursprüngliche Datei ändern.
 
@@ -252,6 +254,6 @@ Wenn Sie eine Profilvorlage erstellen, müssen Sie „Virtuelle SmartCard erstel
 
     -   Wenn Sie Hilfe zu dem Skript **ConfigureMIimCMClientAndRelyingParty.ps1** wünschen, führen Sie `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`aus.
 
-## <a name="deploy-the-app"></a>Bereitstellen der App
+## Bereitstellen der App
+<a id="deploy-the-app" class="xliff"></a>
 Wenn Sie die Zertifikat-Manager-App einrichten möchten, laden Sie aus dem Download Center die Datei „MIMDMModernApp_&lt;Version&gt;_AnyCPU_Test.zip“ herunter, und extrahieren Sie deren gesamten Inhalt. Die APPX-Datei ist das Installationsprogramm. Sie können diese Datei auf dieselbe Weise bereitstellen, auf die Sie normalerweise Windows Store-Apps bereitstellen. Das heißt, Sie können [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx) oder [Intune](https://technet.microsoft.com/library/dn613839.aspx) verwenden, um die App querzuladen, sodass Benutzer über das Unternehmensportal auf sie zugreifen müssen oder sie durch direktes Übertragen an ihre Computer erhalten.
-

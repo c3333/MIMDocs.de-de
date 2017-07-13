@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 72c773601cd722290b6e7a9d5d13458f0409cfdc
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: bbcfee70c71bc2f1a637327721d015434600c5e0
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="working-with-self-service-password-reset"></a>Arbeiten mit der Self-Service-Kennwortzurücksetzung
+# Arbeiten mit der Self-Service-Kennwortzurücksetzung
+<a id="working-with-self-service-password-reset" class="xliff"></a>
 Microsoft Identity Manager 2016 stellt zusätzliche Funktionalität für das Feature Self-Service-Kennwortzurücksetzung bereit. Diese Funktionalität wurde um einige wichtige Funktionen erweitert:
 
 -   Im Portal für die Self-Service-Kennwortzurücksetzung und im Windows-Anmeldebildschirm können Benutzer nun ihre Konten entsperren, ohne ihre Kennwörter zu ändern oder Supportadministratoren anzurufen. Es gibt viele berechtigte Gründe, warum Konten für Benutzer gesperrt werden können, etwa wenn sie ein altes Kennwort eingeben, zweisprachige Computer verwenden und die Tastatur auf die falsche Sprache eingerichtet ist, oder versuchen, sich bei einer gemeinsam genutzten Arbeitsstation anzumelden, die bereits über das Konto einer anderen Person geöffnet ist.
@@ -29,14 +28,16 @@ Microsoft Identity Manager 2016 stellt zusätzliche Funktionalität für das Fea
 
 -   Es wurde Unterstützung für den Microsoft Azure Multi-Factor Authentication-Dienst (MFA-Dienst) hinzugefügt. Dieser Dienst kann sowohl für das vorhandene SMS-Einmalkennwort-Gate als auch für das neue Telefongate verwendet werden.
 
-## <a name="azure-for-multi-factor-authentication"></a>Azure für Multi-Factor Authentication
+## Azure für Multi-Factor Authentication
+<a id="azure-for-multi-factor-authentication" class="xliff"></a>
 Microsoft Azure Multi-Factor Authentication ist ein Authentifizierungsdienst, der von Benutzern verlangt, ihre Anmeldeversuche über eine mobile App, einen Telefonanruf oder eine SMS zu bestätigen. Der Dienst kann mit Microsoft Azure Active Directory sowie als Dienst für Cloud- und lokale Unternehmensanwendungen verwendet werden.
 
 Azure MFA bietet einen zusätzlichen Authentifizierungsmechanismus, der vorhandene Authentifizierungsprozesse unterstützen kann, so beispielsweise den Prozess, der von MIM für die Self-Service-Anmeldeunterstützung ausgeführt wird.
 
 Bei der Verwendung von MFA authentifizieren sich Benutzer zur Bestätigung ihrer Identität beim System, wenn sie versuchen, wieder Zugriff auf ihre Konten und Ressourcen zu erhalten. Eine Authentifizierung kann per SMS oder per Telefonanruf erfolgen.   Je stärker die Authentifizierung ist, desto größer ist die Gewissheit, dass es sich bei der Person, die Zugriff erhalten möchte, tatsächlich um den Besitzer dieser Identität handelt. Sobald der Benutzer authentifiziert ist, kann er ein neues Kennwort wählen, durch das das alte ersetzt wird.
 
-## <a name="prerequisites-to-set-up-self-service-account-unlock-and-password-reset-using-mfa"></a>Voraussetzungen für das Einrichten der Self-Service-Kontoentsperrung und -Kennwortzurücksetzung mithilfe von MFA
+## Voraussetzungen für das Einrichten der Self-Service-Kontoentsperrung und -Kennwortzurücksetzung mithilfe von MFA
+<a id="prerequisites-to-set-up-self-service-account-unlock-and-password-reset-using-mfa" class="xliff"></a>
 Für diesen Abschnitt wird davon ausgegangen, dass Sie die Bereitstellung von Microsoft Identity Manager 2016 heruntergeladen und abgeschlossen haben, einschließlich den folgenden Komponenten und Diensten:
 
 -   Ein Windows Server 2008 R2 oder höher wurde als Active Directory-Server eingerichtet, einschließlich Active Directory-Domänendienste und -Domänencontroller mit einer designierten Domäne (einer „Firmen“-Domäne)
@@ -57,12 +58,14 @@ Für diesen Abschnitt wird davon ausgegangen, dass Sie die Bereitstellung von Mi
 
 -   Die MIM 2016-Add-Ins und -Erweiterungen inklusive des integrierten SSPR-Clients für die Windows-Anmeldung werden auf dem Server oder auf einem separaten Clientcomputer bereitgestellt.
 
-## <a name="prepare-mim-to-work-with-multi-factor-authentication"></a>Vorbereiten von MIM für das Arbeiten mit der mehrstufigen Authentifizierung
+## Vorbereiten von MIM für das Arbeiten mit der mehrstufigen Authentifizierung
+<a id="prepare-mim-to-work-with-multi-factor-authentication" class="xliff"></a>
 Konfigurieren Sie MIM Sync so, dass Kennwortzurücksetzung und Kontoentsperrung unterstützt werden. Weitere Informationen finden Sie unter [Installing the FIM Add-ins and Extensions](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx) (Installieren der FIM-Add-Ins und -Erweiterungen), [Installing FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx) (Installieren von FIM SSPR), [SSPR Authentication Gates](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) (SSPR-Authentifizierungsgates) und im [SSPR Test Lab Guide](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx) (SSPR-Test Lab-Handbuch)
 
 Im nächsten Abschnitt richten Sie Ihren Azure MFA-Anbieter in Microsoft Azure Active Directory ein. Bei diesem Vorgang generieren Sie eine Datei, die die von der MFA zum Kontaktieren von Azure MFA benötigten Authentifizierungsdaten enthält.  Um fortfahren zu können, benötigen Sie ein Azure-Abonnement.
 
-### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Registrieren Sie Ihren Anbieter für die mehrstufige Authentifizierung in Azure
+### Registrieren Sie Ihren Anbieter für die mehrstufige Authentifizierung in Azure
+<a id="register-your-multi-factor-authentication-provider-in-azure" class="xliff"></a>
 
 1.  Melden Sie sich beim [klassischen Azure-Portal](http://manage.windowsazure.com) als Azure-Abonnementadministrator an.
 
@@ -94,7 +97,8 @@ Im nächsten Abschnitt richten Sie Ihren Azure MFA-Anbieter in Microsoft Azure A
 
 11. Kopieren Sie die resultierende ZIP-Datei auf alle Systeme, auf denen der MIM-Dienst installiert ist.  Bedenken Sie dabei, dass die ZIP-Datei Schlüsselmaterial enthält, das zur Authentifizierung beim Azure MFA-Dienst verwendet wird.
 
-### <a name="update-the-configuration-file"></a>Aktualisieren Sie die Konfigurationsdatei.
+### Aktualisieren Sie die Konfigurationsdatei.
+<a id="update-the-configuration-file" class="xliff"></a>
 
 1. Melden Sie sich auf dem Computer, auf dem der MIM-Dienst installiert ist, als der Benutzer an, der MIM installiert hat.
 
@@ -120,7 +124,8 @@ Im nächsten Abschnitt richten Sie Ihren Azure MFA-Anbieter in Microsoft Azure A
 
 11. Speichern Sie die Datei „MfaSettings.xml“ unter demselben Namen am gleichen Speicherort.
 
-#### <a name="configure-the-phone-gate-or-the-one-time-password-sms-gate"></a>Konfigurieren des Telefongates oder des SMS-Gates für das Einmalkennwort
+#### Konfigurieren des Telefongates oder des SMS-Gates für das Einmalkennwort
+<a id="configure-the-phone-gate-or-the-one-time-password-sms-gate" class="xliff"></a>
 
 1.  Starten Sie Internet Explorer, und navigieren Sie zum MIM-Portal. Authentifizieren Sie sich als MIM-Administrator, und klicken Sie auf der linken Navigationsleiste auf  **Workflows** .
 
@@ -136,7 +141,8 @@ Im nächsten Abschnitt richten Sie Ihren Azure MFA-Anbieter in Microsoft Azure A
 
 Benutzer in Ihrer Organisation können sich jetzt für das Zurücksetzen von Kennwörtern registrieren.  Im Verlauf dieses Vorgangs müssen sie ihre Telefonnummer oder Mobiltelefonnummer eingeben, damit das System weiß, wie es sie anrufen oder ihnen SMS-Nachrichten senden kann.
 
-#### <a name="register-users-for-password-reset"></a>Registrieren von Benutzern für das Zurücksetzen von Kennwörtern
+#### Registrieren von Benutzern für das Zurücksetzen von Kennwörtern
+<a id="register-users-for-password-reset" class="xliff"></a>
 
 1.  Ein Benutzer startet einen Webbrowser und navigiert zum MIM-Portal zum Registrieren für das Zurücksetzen von Kennwörtern.  (In der Regel wird dieses Portal mit Windows-Authentifizierung konfiguriert).  Im Portal geben sie ihren Benutzernamen und ihr Kennwort an, um ihre Identität zu bestätigen.
 
@@ -148,14 +154,16 @@ Benutzer in Ihrer Organisation können sich jetzt für das Zurücksetzen von Ken
 
     ![Bild: MIM-Mobiltelefonüberprüfung](media/MIM-SSPR-mobilephoneverification.JPG)
 
-## <a name="how-does-it-work-for-your-users"></a>Wie funktioniert dies für die Benutzer?
+## Wie funktioniert dies für die Benutzer?
+<a id="how-does-it-work-for-your-users" class="xliff"></a>
 Nachdem die Konfiguration abgeschlossen und das Gate aktiv ist, möchten Sie möglicherweise wissen, welche Schritte die Benutzer durchlaufen müssen, wenn sie ihre Kennwörter direkt vor dem Urlaub zurücksetzen, um dann zurückzukehren und festzustellen, dass sie ihre Kennwörter vollständig vergessen haben.
 
 Es gibt zwei Möglichkeiten, wie ein Benutzer die Kennwortzurücksetzungs- und die Kontoentsperrungsfunktion nutzen kann: entweder vom Windows-Anmeldebildschirm oder vom Self-Service-Portal aus.
 
 Indem Sie die MIM-Add-Ins und -Erweiterungen auf einem zur Domäne gehörigen Computer installieren, der über das Netzwerk Ihrer Organisation mit dem MIM-Dienst verbunden ist, können Benutzer ein vergessenes Kennwort in der Desktop-Anmeldungsumgebung wiederherstellen.  Die folgenden Schritte begleiten Sie durch diesen Vorgang.
 
-#### <a name="windows-desktop-login-integrated-password-reset"></a>In die Windows-Desktopanmeldung integrierte Kennwortzurücksetzung
+#### In die Windows-Desktopanmeldung integrierte Kennwortzurücksetzung
+<a id="windows-desktop-login-integrated-password-reset" class="xliff"></a>
 
 1.  Falls Ihr Benutzer mehrmals ein falsches Kennwort eingibt, kann er im Anmeldebildschirm auf **Probleme bei der Anmeldung?** klicken. .
 
@@ -180,7 +188,8 @@ Indem Sie die MIM-Add-Ins und -Erweiterungen auf einem zur Domäne gehörigen Co
 
 6.  Der Benutzer muss dann ein neues Kennwort zweimal eingeben, damit das Kennwort zurückgesetzt wird.
 
-#### <a name="access-from-the-self-service-portal"></a>Zugreifen aus dem Self-Service-Portal
+#### Zugreifen aus dem Self-Service-Portal
+<a id="access-from-the-self-service-portal" class="xliff"></a>
 
 1.  Benutzer können einen Webbrowser öffnen, zum **Portal für die Kennwortzurücksetzung** navigieren, ihren Benutzernamen eingeben und auf **Weiter**klicken.
 
@@ -204,4 +213,3 @@ Indem Sie die MIM-Add-Ins und -Erweiterungen auf einem zur Domäne gehörigen Co
 6.  Wenn der Benutzer sich für das Zurücksetzen seines Kennworts entscheidet, muss er sein neues Kennwort zweimal eingeben und auf **Weiter** klicken, um das Kennwort zu ändern.
 
     ![Bild: MIM-Anmelde-Assistent für die Kennwortzurücksetzung](media/MIM-SSPR-PR1.JPG)
-

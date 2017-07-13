@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 3e6c5a70c6b9ed140a56135676bbd14a84504317
-ms.contentlocale: de-de
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="environment-overview" class="xliff"></a>
 # Übersicht über die Umgebung
+<a id="environment-overview" class="xliff"></a>
 
 Privileged Access Management (PAM) arbeitet mit virtuellen Computern (VMs) mit separaten Laufwerken, die in einem gemeinsamen Netzwerk miteinander verbunden sind. Diese virtuellen Computer können von Windows 8.1, Windows Server 2012 R2 oder anderen Betriebssystemplattformen gehostet werden.
 
@@ -34,4 +31,3 @@ Die Laufwerke, auf denen die Datenträgerimages der virtuellen Computer gespeich
 
 > [!NOTE]
 > Diese MIM-CTP-Version (Customer Technical Preview, technische Vorschau für Kunden) ist nicht mit den Datenbank- oder Verzeichnisinhalten der vorherigen CTP-Version kompatibel. Wenn Sie zuvor bereits MIM für PAM oder andere Szenarien ausgewertet haben, sichern und archivieren Sie die für diesen Test verwendeten virtuellen Computer, und starten Sie die Bereitstellung mit neuen Images von virtuellen Computern, die nicht bereits für MIM-Szenarien verwendet wurden.
-

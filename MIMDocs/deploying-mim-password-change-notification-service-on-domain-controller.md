@@ -12,17 +12,17 @@ ms.technology: security
 ms.assetid: 97edae12-6f86-4f9f-8620-a95a096e482a
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: 1929703baffad4177ea7ea058cb07f44a9c71667
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: d7f054d8d82dcc0ac71a94f6e44407b0c41a75af
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/13/2017
 ---
+# Bereitstellen des MIM-Benachrichtigungsdiensts für Kennwortänderungen auf einem Domänencontroller
+<a id="deploy-the-mim-password-change-notification-service-on-a-domain-controller" class="xliff"></a>
 
-# <a name="deploy-the-mim-password-change-notification-service-on-a-domain-controller"></a>Bereitstellen des MIM-Benachrichtigungsdiensts für Kennwortänderungen auf einem Domänencontroller
-
-## <a name="install-the-password-change-notification-service"></a>Installieren des Benachrichtigungsdiensts für Kennwortänderungen
+## Installieren des Benachrichtigungsdiensts für Kennwortänderungen
+<a id="install-the-password-change-notification-service" class="xliff"></a>
 Der Benachrichtigungsdienst für Kennwortänderungen (Password Change Notification Service; PCNS) ist ein Dienst, den Sie auf den Domänencontrollern installieren. Er ermöglicht MIM die Synchronisierung von Kennwörtern mit anderen Systemen, etwa dem Verzeichnisserver eines anderen Anbieters. Zur Kennwortsynchronisierung installieren Sie den Benachrichtigungsdienst für Kennwortänderungen auf jedem Domänencontoller.
 
 1.  Melden Sie sich als Domänenadministrator bei einem Server unter Windows Server mit der Rolle eines Active Directory-Domänendiensts an.
@@ -57,6 +57,6 @@ Der Benachrichtigungsdienst für Kennwortänderungen (Password Change Notificati
 
 14. Starten Sie den Computer neu, damit die Konfigurationsänderungen wirksam werden, die Sie am MIM-Benachrichtigungsdienst für Kennwortänderungen vorgenommen haben. Sie können dazu in dem angezeigten Popupfenster auf **Ja** klicken, oder Sie können den Neustart später ausführen.
 
-## <a name="configuring-the-password-change-notification-service"></a>Konfigurieren des Benachrichtigungsdiensts für Kennwortänderungen
+## Konfigurieren des Benachrichtigungsdiensts für Kennwortänderungen
+<a id="configuring-the-password-change-notification-service" class="xliff"></a>
 Nachdem Sie sich beim Domänencontroller erneut als Domänenadministrator angemeldet haben, wechseln Sie in *C:\Programme\Microsoft Password Change Notification.* Führen Sie *pcnscfg.exe* aus.
-

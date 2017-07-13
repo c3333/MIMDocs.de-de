@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: b26fe7bc56ab8229054afb1409c3652e81464a3d
-ms.lasthandoff: 05/02/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="connect-to-your-directories"></a>Herstellen der Verbindung zu Ihren Verzeichnissen
+# Herstellen der Verbindung zu Ihren Verzeichnissen
+<a id="connect-to-your-directories" class="xliff"></a>
 
 Connectors verknüpfen bestimmte verbundene Datenquellen mit Microsoft Identity Manager (MIM). Ein Connector verschiebt Daten aus einer verbundenen Datenquelle nach MIM. Werden Daten in MIM geändert, kann der Connector die Daten auch in die verbundene Datenquelle exportieren, um diese mit MIM zu synchronisieren. In der Regel gibt es mindestens einen Connector für jedes verbundene Verzeichnis.
 
@@ -28,7 +27,8 @@ In Forefront Identity Manager wurden Connectors als Verwaltungs-Agents bezeichne
 
 Dieser Artikel behandelt die in MIM enthaltenen Connectors, aber mit dem Connector für Extensible Connectivity 2.0 können Sie sogar Verbindungen zu noch mehr Datenquellen herstellen. Einige Partner haben auf diese Weise ihre eigenen Connectors erstellt. Eine vollständige Liste finden Sie im Wiki [FIM 2010: Management Agents from Partners](http://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx).
 
-## <a name="supported-connectors-in-mim-2016"></a>Unterstützte Connectors im MIM 2016
+## Unterstützte Connectors im MIM 2016
+<a id="supported-connectors-in-mim-2016" class="xliff"></a>
 
 | Name | Unterstützte Versionen der verbundenen Datenquelle |
 | ---- | ----------------------------------------------- |
@@ -55,7 +55,7 @@ Dieser Artikel behandelt die in MIM enthaltenen Connectors, aber mit dem Connect
 | Textdatei mit fester Breite | Textdateien mit fester Breite |
 | LDAP Data Interchange Format (LDIF) | LDAP Data Interchange Format (LDIF) |
 
-## <a name="related-topics"></a>Verwandte Themen
+## Verwandte Themen
+<a id="related-topics" class="xliff"></a>
 
 [Verwaltungs-Agents in FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx)
-
