@@ -489,7 +489,7 @@ Für alle Attribute mit den gleichen erforderlichen Zugriffsberechtigungen, die 
 In FIM werden Berechtigungen als positive Assertion definiert. FIM unterstützt das Verweigern von Berechtigungen nicht. Wenn uneingeschränkter Zugriff auf eine Ressource gewährt wird, können deshalb nur sehr schwer Ausnahmen in den Berechtigungen gemacht werden. Deshalb wird empfohlen, nur die erforderlichen Berechtigungen zu gewähren.
 
 >[!NOTE]
-Ein Abschnitt zu Berechtigungen folgt weiter unten. Ich habe, um zu vermeiden, Erstellen von 5 Ebene Headern Zusammenführen von Fragen
+Ein Abschnitt zu Berechtigungen folgt weiter unten. zusammenführen
 #### Verwenden von TMPRs zum Definieren benutzerdefinierter Berechtigungen
 <a id="use-tmprs-to-define-custom-entitlements" class="xliff"></a>
 
