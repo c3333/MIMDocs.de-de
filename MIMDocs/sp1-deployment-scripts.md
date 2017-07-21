@@ -5,21 +5,20 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 01/10/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 12c60e12dc5662ff0313e21bb9180b3709969af6
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: ae8f6a87f57c95e073b40d3cda944c71f1bf7247
+ms.sourcegitcommit: 0cb8269f07a5f419d2d1cd760d9cc78b8a1c8aa9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/14/2017
 ---
-# Bereitstellungsskripts für MIM2016 SP1 PAM
-<a id="mim2016-sp1-pam-deployment-scripts" class="xliff"></a>
+# <a name="mim2016-sp1-pam-deployment-scripts"></a>Bereitstellungsskripts für MIM2016 SP1 PAM
 
 In diesem Servicepack werden eine Reihe von Bereitstellungsskripts für eine einfachere Bereitstellung von PAM eingeführt. Diese Skripts sind im Downloadcenter verfügbar. Bevor Sie die Skripts verwenden, müssen Sie sicherstellen, dass die folgenden Annahmen für Ihre Umgebung zutreffen.
 
@@ -31,6 +30,6 @@ Wichtige Annahmen:
 5. Für die Überprüfungsoption wird davon ausgegangen, dass ein dedizierter Clientcomputer für diesen Schritt vorhanden ist.
 
 >[!NOTE]
->Wenn bei der Skriptausführung ein Problem auftritt, müssen Sie u. U. in den Protokollen nachsehen. Alle Skriptprotokolle werden in „% AppData%\MIMPAMInstall“ gespeichert. Komprimieren Sie den Ordner als ZIP-Datei, und senden Sie ihn zusammen mit Details zum Vorgang und dem Fehler per E-Mail an mim2016@microsoft.com.
+>Wenn bei der Skriptausführung ein Problem auftritt, müssen Sie u. U. in den Protokollen nachsehen. Alle Skriptprotokolle werden in „% AppData%\MIMPAMInstall“ gespeichert. Komprimieren Sie den Ordner als ZIP-Datei, und senden Sie ihn zusammen mit Details zu Vorgang und Fehler im Rahmen Ihres Supportfalls ein.
 
 Sind Sie bereit, mit den Bereitstellungsskripts von PAM zu beginnen? Beginnen Sie mit dem Artikel [Configure PAM using scripts (Konfigurieren von PAM mithilfe von Skripts)](./pam/sp1-pam-configure-using-scripts.md).
