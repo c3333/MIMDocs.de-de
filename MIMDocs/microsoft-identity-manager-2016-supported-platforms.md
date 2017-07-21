@@ -5,7 +5,7 @@ keywords:
 author: fimguy
 ms.author: fimguy
 manager: femila
-ms.date: 06/06/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,14 +13,13 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: mwahl
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: e8f1d72930cd5998b5d9957e8b8f5dbd958f8342
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: f2b2bb2c9144e8624bf2a7780093f3d4e553747f
+ms.sourcegitcommit: 0cb8269f07a5f419d2d1cd760d9cc78b8a1c8aa9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/14/2017
 ---
-# Unterstützte Plattformen für MIM 2016
-<a id="supported-platforms-for-mim-2016" class="xliff"></a>
+# <a name="supported-platforms-for-mim-2016"></a>Unterstützte Plattformen für MIM 2016
 
 In dieser Tabelle sind die unterstützten Plattformen und Versionen für die einzelnen Komponenten von Microsoft Identity Manager 2016 beschrieben. Die mit einem Sternchen (*) gekennzeichneten Versionen werden nur in MIM 2016 Servicepack 1 unterstützt.
 
@@ -32,10 +31,10 @@ In dieser Tabelle sind die unterstützten Plattformen und Versionen für die ein
 | | Active Directory für die Benutzerbereitstellung, PCNS und GAL-Synchronisierung (optional)|Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Exchange für die Bereitstellung von Postfächern und GAL-Synchronisierung (optional)|Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1<br/>Exchange Server 2016* |
 | | Entwicklungsumgebung (optional) | Visual Studio 2012<br/>Visual Studio 2013 <br/> Visual Studio 2015 <br/> Visual Studio 2017* |
-| | Zusätzliches verbundenes System (optional) | Active Directory-Domänendienste<br/>Active Directory<br/>Lightweight Directory Services<br/>SQL Server 2000 oder höher<br/>SharePoint Server 2013<br/> SharePoint Server 2016 * <br/> Andere Produkte von Drittanbietern |
+| | Zusätzliches verbundenes System (optional) | Active Directory-Domänendienste<br/>Active Directory<br/>Lightweight Directory Services<br/>SQL Server 2008 oder höher<br/>SharePoint Server 2013<br/> SharePoint Server 2016 * <br/> Andere Produkte von Drittanbietern |
 | **MIM-Dienst und -Portal** | Windows Server | Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Active Directory für die geschützte Umgebung der PAM-Gesamtstruktur | Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | Active Directory für die vorhandene Gesamtstrukturen | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * |
+| | Active Directory für vorhandene PAM-Szenario-Gesamtstrukturen | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * |
 | | MIM-Dienstdatenbank | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
 | | SharePoint | SharePoint Foundation 2010<br/>SharePoint Foundation 2013 SP1 <br/> SharePoint 2016 * |
 | | E-Mail-Server für Bestätigungs- und Gruppenverwaltungs-E-Mails vom MIM-Dienst (optional) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (nur Benachrichtigung) |
@@ -46,7 +45,7 @@ In dieser Tabelle sind die unterstützten Plattformen und Versionen für die ein
 | **MIM-Portale für Kennwortzurücksetzung und Registrierung** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Webbrowser | Alle gängigen Browser |
 | **MIM-Add-Ins und -Erweiterungen** | Windows | Windows 7<br/>Windows 8<br/>Windows 8.1<br/>Windows 10 |
-| | Outlook-Integration (optional) | Outlook 2007 SP2<br/>Outlook 2010<br/>Outlook 2013 <br/> Outlook 2016 (unter Windows 10) * |
+| | Outlook-Integration (optional) | Outlook 2010<br/>Outlook 2013 <br/> Outlook 2016 (unter Windows 10) * |
 | | PowerShell-Cmdlets für PAM-Requestor (optional) | Windows 8.1<br/>Windows 10 |
 | **MIM-Zertifikatverwaltung** (Server- und CA-Integration) | Windows server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Zertifizierungsstelle | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
