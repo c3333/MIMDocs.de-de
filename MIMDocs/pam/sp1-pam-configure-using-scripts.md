@@ -5,21 +5,20 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 01/10/2017
+ms.date: 07/20/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: bd73f43a096d58e1f7250e28b59e33f4411e88a3
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 5718ec64fff049cb8717e4cbb36784c8f4ee4db3
+ms.sourcegitcommit: c13f814ce753e1fdacc7d0814087f59542e5098f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/26/2017
 ---
-# Konfigurieren von PAM mithilfe von Skripts
-<a id="configure-pam-using-scripts" class="xliff"></a>
+# <a name="configure-pam-using-scripts"></a>Konfigurieren von PAM mithilfe von Skripts
 
 Wenn Sie SQL und SharePoint auf unterschiedlichen Servern installieren, müssen beide Anwendungen mithilfe der unten stehenden Anleitung konfiguriert werden. Wenn SQL, SharePoint und die PAM-Komponenten auf demselben Computer installiert werden, müssen auf diesem Computer die folgenden Schritte ausgeführt werden.
 
@@ -27,25 +26,24 @@ Bei den folgenden Schritten wird davon ausgegangen, dass bereits eine PRIV-Domä
 
 Schritte:
 
-1. Extrahieren Sie die komprimierte Datei „PAMDeploymentScripts.zip“ auf allen Computern im Ordner „%SYSTEMDRIVE%\PAM“.
-2. Öffnen Sie auf einem Computer die Datei **PAMDeploymentConfig.xml**, und aktualisieren Sie die Details mithilfe des folgenden Diagramms oder der Anleitung in der XML-Datei selbst. Wenn die CORP- und PRIV-Gesamtstrukturen bereits eingerichtet sind, müssen Sie nur den **DNS-Namen** und den **NetBIOS-Namen** aktualisieren.
-3. Aktualisieren Sie im Abschnitt „Rollen“ das **Dienstkonto**, die **Computerdetails**, und den **Speicherort der Binärdateien der Installation** für SQL, SharePoint und MIM-Rollen.
+1. Herunterladen [Bereitstellungsskripts für PAM](https://www.microsoft.com/download/details.aspx?id=53941)
+2. Extrahieren Sie die komprimierte Datei „PAMDeploymentScripts.zip“ auf allen Computern im Ordner „%SYSTEMDRIVE%\PAM“.
+3. Öffnen Sie auf einem Computer die Datei **PAMDeploymentConfig.xml**, und aktualisieren Sie die Details mithilfe des folgenden Diagramms oder der Anleitung in der XML-Datei selbst. Wenn die CORP- und PRIV-Gesamtstrukturen bereits eingerichtet sind, müssen Sie nur den **DNS-Namen** und den **NetBIOS-Namen** aktualisieren.
+4. Aktualisieren Sie im Abschnitt „Rollen“ das **Dienstkonto**, die **Computerdetails**, und den **Speicherort der Binärdateien der Installation** für SQL, SharePoint und MIM-Rollen.
     1. Der MIM-Speicherort für Binärdateien muss auf den Ordner „Dienst und Portal“ verweisen. Der Client-Speicherort für Binärdateien muss auf das Verzeichnis mit der Datei „Add-ins and Extensions.msi“ verweisen.
 
-4. Wenn es sich um eine PRIVOnly-Umgebung handelt, muss das PRIVOnly-Tag auf „true“ festgelegt werden.
+5. Wenn es sich um eine PRIVOnly-Umgebung handelt, muss das PRIVOnly-Tag auf „true“ festgelegt werden.
     1. Aktualisieren Sie für PRIVOnly Umgebungen den **DNS-Namen** und den **NetBIOS-Namen** der PRIV-Domäne so, dass sie mit der CORP-Domäne übereinstimmen. Stellen Sie sicher, dass die Suffixe für die Computer, auf denen SQL, SharePoint und MIM installiert werden, korrekt sind, da in der Standardvorlagedatei von einer CORP- und PRIV-Konfiguration ausgegangen wird.
     2. Klicken Sie hier, um weitere Informationen zu PRIVOnly-Umgebungen anzuzeigen.
 
-5. Kopieren Sie die gleiche PAMDeploymentConfig.xml-Datei auf allen Computern, CORP-DCs, PRIV-DCs, PAM-Servern, SQL-Servern und SharePoint-Servern in den Ordner „%SYSTEMDRIVE%\PAM“.
+6. Kopieren Sie die gleiche PAMDeploymentConfig.xml-Datei auf allen Computern, CORP-DCs, PRIV-DCs, PAM-Servern, SQL-Servern und SharePoint-Servern in den Ordner „%SYSTEMDRIVE%\PAM“.
 
 
-## Arbeitsblatt für die Bereitstellung
-<a id="deployment-worksheet" class="xliff"></a>
+## <a name="deployment-worksheet"></a>Arbeitsblatt für die Bereitstellung
 
 Bevor Sie fortfahren aktualisieren Sie die Datei „PAMDeploymentConfig.xml“ und legen die aktualisierte Kopie auf allen Computern ab.
 
-### Setup
-<a id="setup" class="xliff"></a>
+### <a name="setup"></a>Setup
 
 |Computer   | Ausführung als   |Befehle   |
 |---|---|---|
@@ -57,8 +55,7 @@ Bevor Sie fortfahren aktualisieren Sie die Datei „PAMDeploymentConfig.xml“ u
 | PAM-Server  | Lokaler Administrator (MIM-Administrator nach dem Domänenbeitritt)  | .\PAMDeployment.ps1; Wählen Sie Menüoption 5 (MIM PAM-Einrichtung)   |
 |  PAM-Server |MIM-Administrator   | .\PAMDeployment.ps1; Wählen Sie Menüoption 6 (Einrichten der PAM-Vertrauensstellung) .\PAMDeployment.ps1; Wählen Sie Menüoption 6 (Einrichten der PAM-Vertrauensstellung) |
 
-### Validation
-<a id="validation" class="xliff"></a>
+### <a name="validation"></a>Validation
 
 |  Computer | Ausführung als   | Befehle   |
 |---|---|---|
