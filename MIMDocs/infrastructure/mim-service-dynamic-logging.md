@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/13/2017
 ---
-# Dynamische Protokollierung des MIM SP1-Diensts (4.4.1436.0)
-<a id="mim-sp1-4414360--service-dynamic-logging" class="xliff"></a>
+# <a name="mim-sp1-4414360--service-dynamic-logging"></a>Dynamische Protokollierung des MIM SP1-Diensts (4.4.1436.0)
 In 4.4.1436.0 haben wir eine neue Protokollierungsfunktion eingeführt. Dadurch können Administratoren und Supporttechniker die Protokollierung aktivieren, ohne den Verwaltungsdienst neu starten zu müssen.
 
 Nach der Installation sehen Sie die folgenden neuen Zeile in der Datei Microsoft.ResourceManagement.Service.exe.config, die wie folgt heißen:

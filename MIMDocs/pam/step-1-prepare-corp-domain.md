@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/13/2017
 ---
-# Schritt 1: Vorbereiten des Hosts und der CORP-Domäne
-<a id="step-1---prepare-the-host-and-the-corp-domain" class="xliff"></a>
+# <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Schritt 1: Vorbereiten des Hosts und der CORP-Domäne
 
 >[!div class="step-by-step"]
 [Schritt 2 »](step-2-prepare-priv-domain-controller.md)
@@ -29,13 +28,11 @@ In diesem Schritt bereiten Sie das Hosten der geschützten Umgebung vor. Bei Bed
 
 Wenn Sie bereits über eine Active Directory-Domäne mit einem Domänencontroller unter Windows Server 2012 R2 oder höher verfügen, in der Sie Domänenadministrator sind, können Sie stattdessen diese Domäne verwenden.  
 
-## Vorbereiten des CORP-Domänencontrollers
-<a id="prepare-the-corp-domain-controller" class="xliff"></a>
+## <a name="prepare-the-corp-domain-controller"></a>Vorbereiten des CORP-Domänencontrollers
 
 Dieser Abschnitt erläutert, wie Sie einen Domänencontroller für eine CORP-Domäne einrichten. In der CORP-Domäne werden Administratoren von der geschützten Umgebung verwaltet. Der in diesem Beispiel verwendete DNS-Name (Domain Name System) der CORP-Domäne lautet *contoso.local*.
 
-### Installieren von Windows Server
-<a id="install-windows-server" class="xliff"></a>
+### <a name="install-windows-server"></a>Installieren von Windows Server
 
 Installieren Sie auf einem virtuellen Computer Windows Server 2012 R2 oder Windows Server 2016 Technical Preview 4 oder höher, um einen Computer namens *CORPDC* zu erstellen.
 
@@ -49,8 +46,7 @@ Installieren Sie auf einem virtuellen Computer Windows Server 2012 R2 oder Win
 
 5. Nachdem der Server neu gestartet wurde, melden Sie sich als Administrator an. Wechseln Sie zur Systemsteuerung. Konfigurieren Sie den Computer für die Suche nach Updates, und installieren Sie alle erforderlichen Updates. Starten Sie den Server neu.
 
-### Hinzufügen von Rollen zum Einrichten eines Domänencontrollers
-<a id="add-roles-to-establish-a-domain-controller" class="xliff"></a>
+### <a name="add-roles-to-establish-a-domain-controller"></a>Hinzufügen von Rollen zum Einrichten eines Domänencontrollers
 
 In diesem Abschnitt fügen Sie die Rollen „Active Directory-Domänendienste (AD DS)“, „DNS-Server“ und „Dateiserver“ (Teil des Abschnitts „Datei- und Speicherdienste“) hinzu und stufen diesen Server zu einem Domänencontroller der neuen Gesamtstruktur „contoso.local“ hoch.
 
@@ -75,8 +71,7 @@ In diesem Abschnitt fügen Sie die Rollen „Active Directory-Domänendienste (A
 
 4. Nachdem der Server neu gestartet wurde, melden Sie sich als Administrator der Domäne bei CORPDC an. Dies ist üblicherweise der Benutzer „CONTOSO\\Administrator“ mit dem Kennwort, das während der Installation von Windows auf CORPDC angegeben wurde.
 
-### Erstellen einer Gruppe
-<a id="create-a-group" class="xliff"></a>
+### <a name="create-a-group"></a>Erstellen einer Gruppe
 
 Erstellen Sie eine Gruppe zur Überwachung durch Active Directory, wenn diese Gruppe nicht bereits vorhanden ist. Der Name der Gruppe muss der NetBIOS-Domänenname gefolgt von drei Dollarzeichen sein, z. B. *CONTOSO$$$*.
 
@@ -94,8 +89,7 @@ Melden Sie sich in jeder Domäne als Domänenadministrator bei einem Domänencon
 
 In einigen Fällen ist die Gruppe möglicherweise bereits vorhanden. Dies ist normal, wenn die Domäne auch in AD-Migrationsszenarien verwendet wurde.
 
-### Erstellen weiterer Benutzer und Gruppen zu Demonstrationszwecken
-<a id="create-additional-users-and-groups-for-demonstration-purposes" class="xliff"></a>
+### <a name="create-additional-users-and-groups-for-demonstration-purposes"></a>Erstellen weiterer Benutzer und Gruppen zu Demonstrationszwecken
 
 Wenn Sie eine neue CORP-Domäne erstellt haben, sollten Sie zur Demonstration des PAM-Szenarios weitere Benutzer und Gruppen erstellen. Die zu Demonstrationszwecken erstellten Benutzer und Gruppen dürfen keine Domänenadministratoren sein und nicht durch die adminSDHolder-Einstellungen in AD gesteuert werden.
 
@@ -124,8 +118,7 @@ Wir erstellen eine Sicherheitsgruppe namens *CorpAdmins* und einen Benutzer name
   Set-ADUser –identity Jen –Enabled 1 -DisplayName "Jen"
   ```
 
-### Konfigurieren der Überwachung
-<a id="configure-auditing" class="xliff"></a>
+### <a name="configure-auditing"></a>Konfigurieren der Überwachung
 
 Sie müssen die Überwachung in vorhandenen Gesamtstrukturen aktivieren, um die PAM-Konfiguration in diesen Gesamtstrukturen einzurichten.  
 
@@ -153,8 +146,7 @@ Melden Sie sich in jeder Domäne als Domänenadministrator bei einem Domänencon
 
 Nach wenigen Minuten sollte die Meldung **Die Aktualisierung der Computerrichtlinie wurde erfolgreich abgeschlossen** angezeigt werden.
 
-### Konfigurieren der Registrierungseinstellungen
-<a id="configure-registry-settings" class="xliff"></a>
+### <a name="configure-registry-settings"></a>Konfigurieren der Registrierungseinstellungen
 
 In diesem Abschnitt konfigurieren Sie die Registrierungseinträge für die Migration des SID-Verlaufs, der zum Erstellen der Gruppe für das Privileged Access Management verwendet wird.
 
@@ -170,16 +162,14 @@ In diesem Abschnitt konfigurieren Sie die Registrierungseinträge für die Migra
 
 Dadurch wird der Domänencontroller CORPDC neu gestartet. Weitere Informationen zu dieser Registrierungseinstellung finden Sie unter [How to troubleshoot inter-forest sIDHistory migration with ADMTv2](http://support.microsoft.com/kb/322970) (Problembehandlung der sIDHistory-Migration zwischen Gesamtstrukturen mit ADMTv2).
 
-## Vorbereiten einer CORP-Arbeitsstation und -Ressourcen
-<a id="prepare-a-corp-workstation-and-resource" class="xliff"></a>
+## <a name="prepare-a-corp-workstation-and-resource"></a>Vorbereiten einer CORP-Arbeitsstation und -Ressourcen
 
 Wenn Sie noch nicht über einen in die Domäne eingebundenen Arbeitsstationcomputer verfügen, befolgen Sie diese Anweisungen, um einen solchen Computer zu erstellen.  
 
 > [!NOTE]
 > Wenn Sie bereits eine Arbeitsstation in die Domäne eingebunden haben, fahren Sie mit [Erstellen einer Ressource zu Demonstrationszwecken](#create-a-resource-for-demonstration-purposes) fort.
 
-### Installieren von Windows 8.1 oder Windows 10 Enterprise als VM
-<a id="install-windows-81-or-windows-10-enterprise-as-a-vm" class="xliff"></a>
+### <a name="install-windows-81-or-windows-10-enterprise-as-a-vm"></a>Installieren von Windows 8.1 oder Windows 10 Enterprise als VM
 
 Installieren Sie Windows Server 8.1 Enterprise oder Windows 10 Enterprise auf einem anderen neuen virtuellen Computer ohne installierte Software, um einen Computer namens *CORPWKSTN* zu erstellen.
 
@@ -191,8 +181,7 @@ Installieren Sie Windows Server 8.1 Enterprise oder Windows 10 Enterprise auf 
 
 4. Binden Sie in der Systemsteuerung den Computer „CORPWKSTN“ in die Domäne „contoso.local“ ein. Sie müssen die Anmeldeinformationen des Contoso-Domänenadministrators angeben. Nachdem dies abgeschlossen ist, starten Sie den Computer „CORPWKSTN“ neu.
 
-### Erstellen einer Ressource zu Demonstrationszwecken
-<a id="create-a-resource-for-demonstration-purposes" class="xliff"></a>
+### <a name="create-a-resource-for-demonstration-purposes"></a>Erstellen einer Ressource zu Demonstrationszwecken
 
 Sie benötigen eine Ressource, um die sicherheitsgruppenbasierte Zugriffskontrolle mit PAM zu demonstrieren.  Wenn Sie noch nicht über eine Ressource verfügen, können Sie zu Demonstrationszwecken einen Dateiordner verwenden.  Hierbei werden die AD-Objekte „Jen“ und „CorpAdmins“ verwendet, die Sie in der Domäne „contoso.local“ erstellt haben.
 

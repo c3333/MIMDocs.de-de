@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/13/2017
 ---
-# Herstellen der Verbindung zu Ihren Verzeichnissen
-<a id="connect-to-your-directories" class="xliff"></a>
+# <a name="connect-to-your-directories"></a>Herstellen der Verbindung zu Ihren Verzeichnissen
 
 Connectors verknüpfen bestimmte verbundene Datenquellen mit Microsoft Identity Manager (MIM). Ein Connector verschiebt Daten aus einer verbundenen Datenquelle nach MIM. Werden Daten in MIM geändert, kann der Connector die Daten auch in die verbundene Datenquelle exportieren, um diese mit MIM zu synchronisieren. In der Regel gibt es mindestens einen Connector für jedes verbundene Verzeichnis.
 
@@ -27,8 +26,7 @@ In Forefront Identity Manager wurden Connectors als Verwaltungs-Agents bezeichne
 
 Dieser Artikel behandelt die in MIM enthaltenen Connectors, aber mit dem Connector für Extensible Connectivity 2.0 können Sie sogar Verbindungen zu noch mehr Datenquellen herstellen. Einige Partner haben auf diese Weise ihre eigenen Connectors erstellt. Eine vollständige Liste finden Sie im Wiki [FIM 2010: Management Agents from Partners](http://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx).
 
-## Unterstützte Connectors im MIM 2016
-<a id="supported-connectors-in-mim-2016" class="xliff"></a>
+## <a name="supported-connectors-in-mim-2016"></a>Unterstützte Connectors im MIM 2016
 
 | Name | Unterstützte Versionen der verbundenen Datenquelle |
 | ---- | ----------------------------------------------- |
@@ -55,7 +53,6 @@ Dieser Artikel behandelt die in MIM enthaltenen Connectors, aber mit dem Connect
 | Textdatei mit fester Breite | Textdateien mit fester Breite |
 | LDAP Data Interchange Format (LDIF) | LDAP Data Interchange Format (LDIF) |
 
-## Verwandte Themen
-<a id="related-topics" class="xliff"></a>
+## <a name="related-topics"></a>Verwandte Themen
 
 [Verwaltungs-Agents in FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx)

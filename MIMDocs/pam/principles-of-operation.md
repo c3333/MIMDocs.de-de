@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/13/2017
 ---
-# Verstehen der Komponenten von PAM
-<a id="understand-the-components-of-pam" class="xliff"></a>
+# <a name="understand-the-components-of-pam"></a>Verstehen der Komponenten von PAM
 
 Durch Privileged Access Management lässt sich der administrative Zugriff von täglich verwendeten Benutzerkonten trennen. Diese Lösung basiert auf parallelen Gesamtstrukturen:
 

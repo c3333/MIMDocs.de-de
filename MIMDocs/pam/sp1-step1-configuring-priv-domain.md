@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/13/2017
 ---
-# Schritt 1: Konfigurieren der PRIV-Domäne
-<a id="step-1-configuring-the-priv-domain" class="xliff"></a>
+# <a name="step-1-configuring-the-priv-domain"></a>Schritt 1: Konfigurieren der PRIV-Domäne
 
 >[!div class="step-by-step"]
 [Schritt 2 »](sp1-step2-configuring-corp-domain.md)

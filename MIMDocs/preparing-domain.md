@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/13/2017
 ---
-# Einrichten einer Domäne
-<a id="set-up-a-domain" class="xliff"></a>
+# <a name="set-up-a-domain"></a>Einrichten einer Domäne
 
 >[!div class="step-by-step"]
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
@@ -28,8 +27,7 @@ Microsoft Identity Manager (MIM) arbeitet mit Ihrer Active Directory-Domäne. Si
 
 Dieser Artikel führt Sie durch die Schritte, in denen Sie Ihre Domäne für eine Verwendung von MIM vorbereiten.
 
-## Erstellen von Benutzerkonten und -gruppen
-<a id="create-user-accounts-and-groups" class="xliff"></a>
+## <a name="create-user-accounts-and-groups"></a>Erstellen von Benutzerkonten und -gruppen
 
 Alle Komponenten Ihrer MIM-Bereitstellung benötigen ihre eigenen Identitäten in der Domäne. Dazu gehören sowohl die MIM-Komponenten „Service“ und „Sync“ als auch SharePoint und SQL.
 

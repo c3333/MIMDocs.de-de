@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/13/2017
 ---
-# Bereitstellen von MIM PAM mit Windows Server 2016
-<a id="deploy-mim-pam-with-windows-server-2016" class="xliff"></a>
+# <a name="deploy-mim-pam-with-windows-server-2016"></a>Bereitstellen von MIM PAM mit Windows Server 2016
 
 
 In diesem Szenario können Features von Windows Server 2016 als Domänencontroller für die Gesamtstruktur „PRIV“ durch MIM 2016 SP1 genutzt werden.  Beim Konfigurieren dieses Szenarios ist das Kerberos-Ticket eines Benutzers auf die verbleibende Dauer seiner Rollenaktivierungen zeitlich begrenzt. 
@@ -25,8 +24,7 @@ In diesem Szenario können Features von Windows Server 2016 als Domänencontroll
 >[!Note]
 Technical Preview-Versionen von Windows Server 2016 vor Technical Preview 5 können mit dieser MIM-Version nicht verwendet werden.
 
-## Vorbereitung
-<a id="preparation" class="xliff"></a>
+## <a name="preparation"></a>Vorbereitung
 
 Für die Laborumgebung sind mindestens zwei virtuelle Computer erforderlich:
 
@@ -143,8 +141,7 @@ Führen Sie die Installation wie im [Leitfaden für erste Schritte](privileged-i
 
 -   Punkt 5 (Überprüfung der Vertrauensstellung) **ist nicht erforderlich, wenn CORP- und PRIV-Domänen sich auf der Windows Server 2016-Domänenfunktionsebene befinden**.
 
-## Weitere Informationen
-<a id="more-information" class="xliff"></a>
+## <a name="more-information"></a>Weitere Informationen
 
 - [Privileged Access Management für Active Directory-Domänendienste](privileged-identity-management-for-active-directory-domain-services.md)
 - [Konfigurieren der MIM-Umgebung für Privileged Access Management](configuring-mim-environment-for-pam.md)

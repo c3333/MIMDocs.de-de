@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/13/2017
 ---
-# Bereitstellen von Benutzern in AD DS
-<a id="how-do-i-provision-users-to-ad-ds" class="xliff"></a>
+# <a name="how-do-i-provision-users-to-ad-ds"></a>Bereitstellen von Benutzern in AD DS
 
 Gilt für: Microsoft Identity Manager 2016 SP1 (MIM)
 
@@ -25,20 +24,17 @@ Eine grundlegende Anforderung für ein Identitätsverwaltungssystem ist die Fäh
 
 Dieses Handbuch führt Sie durch die wichtigsten Bausteine, die während der Bereitstellung von Active Directory®-Domänendiensten (AD DS) für Benutzer von Microsoft® Identity Manager (MIM) 2016 beteiligt sind, und beschreibt, wie Sie überprüfen können, ob Ihr Szenario wie erwartet funktioniert. Außerdem werden Vorschläge für die Verwaltung von Active Directory-Benutzern mit MIM 2016 gemacht und zusätzliche Quellen für Informationen aufgeführt.
 
-## Vorbereitungen
-<a id="before-you-begin" class="xliff"></a>
+## <a name="before-you-begin"></a>Vorbereitungen
 
 
 In diesem Abschnitt finden Sie Informationen zum Umfang dieses Dokuments. Im Allgemeinen richten sich die "Wie kann ich..."-Handbücher an Leser, die bereits Erfahrung mit dem Synchronisierungsprozess von Objekten mit MIM haben, wie es in den zugehörigen [Handbüchern mit ersten Schritten](http://go.microsoft.com/FWLink/p/?LinkId=190486) beschrieben ist.
 
-### Zielgruppe
-<a id="audience" class="xliff"></a>
+### <a name="audience"></a>Zielgruppe
 
 
 Dieses Handbuch ist für IT-Experten (information technology) gedacht, die bereits ein grundlegendes Verständnis der Funktionsweise des MIM-Synchronisierungsprozesses haben und an praktischer Erfahrung und konzeptionellen Informationen zu spezifischen Szenarien interessiert sind.
 
-### Vorwissen
-<a id="prerequisite-knowledge" class="xliff"></a>
+### <a name="prerequisite-knowledge"></a>Vorwissen
 
 
 In diesem Dokument wird davon ausgegangen, dass Sie Zugriff auf eine ausgeführte Instanz von MIM und Erfahrung in der Konfiguration von einfachen Synchronisierungsszenarios haben, wie in den folgenden Dokumenten beschrieben:
@@ -49,37 +45,32 @@ In diesem Dokument wird davon ausgegangen, dass Sie Zugriff auf eine ausgeführt
 
 Der Inhalt in diesem Dokument ist als Erweiterung für die einführenden Dokumente gedacht.
 
-### Bereich
-<a id="scope" class="xliff"></a>
+### <a name="scope"></a>Bereich
 
 
 Das in diesem Dokument beschriebene Szenario wurde vereinfacht, um die Anforderungen an eine grundlegende Testumgebung zu erfüllen. Der Fokus ist es, Ihnen einen Überblick über die erläuterten Konzepte und Technologien zu geben.
 
 Dieses Dokument unterstützt Sie bei der Entwicklung einer Lösung, die die Verwaltung von Gruppen in AD DS mithilfe von MIM beinhaltet.
 
-### Zeitaufwand
-<a id="time-requirements" class="xliff"></a>
+### <a name="time-requirements"></a>Zeitaufwand
 
 
 Die Verfahren in diesem Dokument nehmen zwischen 90 und 120 Minuten in Anspruch.
 
 Bei dieser Zeitschätzung wird davon ausgegangen, dass die Testumgebung bereits konfiguriert ist. Sie beinhaltet nicht den Zeitaufwand für die Einrichtung der Testumgebung.
 
-### Unterstützung erhalten
-<a id="getting-support" class="xliff"></a>
+### <a name="getting-support"></a>Unterstützung erhalten
 
 
 Wenn Sie Fragen zum Inhalt dieses Dokuments oder allgemeines Feedback haben, über das Sie diskutieren möchten, senden Sie uns gerne eine Nachricht im [Forefront Identity Manager 2010-Forum](http://go.microsoft.com/FWLink/p/?LinkId=189654).
 
-## Szenariobeschreibung
-<a id="scenario-description" class="xliff"></a>
+## <a name="scenario-description"></a>Szenariobeschreibung
 
 
 Fabrikam, ein fiktives Unternehmen, plant MIM zu verwenden, um die Benutzerkonten des Unternehmens in AD DS mithilfe von MIM zu verwalten. Als Teil dieses Prozesses muss Fabrikam Benutzer in AD DS bereitstellen. Fabrikam hat eine grundlegende Testumgebung installiert, die aus MIM und AD DS besteht, um die ersten Tests zu starten.
 In dieser Testumgebung testet Fabrikam ein Szenario mit einem Benutzer, der im MIM-Portal manuell erstellt wurde. Dieses Szenario soll den Benutzer als einen aktivierten Benutzer mit einem vordefinierten Kennwort in AD DS bereitstellen.
 
-## Szenarioentwurf
-<a id="scenario-design" class="xliff"></a>
+## <a name="scenario-design"></a>Szenarioentwurf
 
 
 Sie benötigen drei Komponenten, um dieses Handbuch verwenden zu können:
@@ -99,8 +90,7 @@ Sie können alle Komponenten auf einem Computer ausführen.
 >[!NOTE]
 Weitere Informationen zum Einrichten von MIM finden Sie unter [FIM Installation Guide (FIM-Installationshandbuch)](http://go.microsoft.com/FWLink/p/?LinkId=165845).
 
-## Liste der Szenariokomponenten
-<a id="scenario-components-list" class="xliff"></a>
+## <a name="scenario-components-list"></a>Liste der Szenariokomponenten
 
 
 Die folgende Tabelle enthält die Komponenten, die Teil des Szenarios in diesem Handbuch sind.
@@ -118,8 +108,7 @@ Die folgende Tabelle enthält die Komponenten, die Teil des Szenarios in diesem 
 
 
 
-## Szenarioschritte
-<a id="scenario-steps" class="xliff"></a>
+## <a name="scenario-steps"></a>Szenarioschritte
 
 
 Das in diesem Handbuch beschriebene Szenario besteht aus den folgenden Bausteinen.
@@ -127,22 +116,19 @@ Das in diesem Handbuch beschriebene Szenario besteht aus den folgenden Bausteine
 ![Szenarioschritte](media/how-provision-users-adds/image013.png)
 
 
-## Konfigurieren der externen Systeme
-<a id="configuring-the-external-systems" class="xliff"></a>
+## <a name="configuring-the-external-systems"></a>Konfigurieren der externen Systeme
 
 
 In diesem Abschnitt finden Sie eine Anleitung für die Ressourcen, die Sie erstellen müssen und sich außerhalb Ihrer MIM-Umgebung befinden.
 
-### Schritt 1: Erstellen Sie die Organisationseinheit
-<a id="step-1-create-the-ou" class="xliff"></a>
+### <a name="step-1-create-the-ou"></a>Schritt 1: Erstellen Sie die Organisationseinheit
 
 
 Sie benötigen die Organisationseinheit als Container für den bereitgestellten Beispielbenutzer. Weitere Informationen zum Erstellen von Organisationseinheiten finden Sie unter [Erstellen einer neuen Organisationseinheit](http://go.microsoft.com/FWLink/p/?LinkId=189655).
 
 Erstellen Sie eine Organisationseinheit mit dem Namen „MIMObjects“ in Ihrer AD DS.
 
-### Schritt 2: Erstellen der Active Directory-Benutzerkonten
-<a id="step-2-create-the-active-directory-user-accounts" class="xliff"></a>
+### <a name="step-2-create-the-active-directory-user-accounts"></a>Schritt 2: Erstellen der Active Directory-Benutzerkonten
 
 Für das Szenario in diesem Handbuch benötigen Sie zwei Active Directory-Benutzerkonten:
 
@@ -153,14 +139,12 @@ Für das Szenario in diesem Handbuch benötigen Sie zwei Active Directory-Benutz
 In beiden Fällen ist es ausreichend, normale Benutzerkonten zu erstellen. Weitere Informationen zu den spezifischen Anforderungen der beiden Konten finden Sie weiter unten in diesem Dokument. Weitere Informationen zum Erstellen von Benutzern finden Sie unter [Erstellen eines neuen Benutzerkontos](http://go.microsoft.com/FWLink/p/?LinkId=189656).
 
 
-## Konfigurieren des FIM-Synchronisierungsdiensts
-<a id="configuring-the-fim-synchronization-service" class="xliff"></a>
+## <a name="configuring-the-fim-synchronization-service"></a>Konfigurieren des FIM-Synchronisierungsdiensts
 
 
 Für die Konfigurationsschritte in diesem Abschnitt müssen Sie den FIM-Synchronisierungsdienst-Manager starten.
 
-### Erstellen des Verwaltungs-Agents
-<a id="creating-the-management-agents" class="xliff"></a>
+### <a name="creating-the-management-agents"></a>Erstellen des Verwaltungs-Agents
 
 Für das Szenario in diesem Handbuch müssen Sie zwei Verwaltung-Agents erstellen:
 
@@ -168,8 +152,7 @@ Für das Szenario in diesem Handbuch müssen Sie zwei Verwaltung-Agents erstelle
 
 -   **Fabrikam FIMMA**: Verwaltungs-Agent für FIM-Dienstverwaltungs-Agent
 
-### Schritt 3: Erstellen Sie den Fabrikam ADMA-Verwaltungs-Agent
-<a id="step-3-create-the-fabrikam-adma-management-agent" class="xliff"></a>
+### <a name="step-3-create-the-fabrikam-adma-management-agent"></a>Schritt 3: Erstellen Sie den Fabrikam ADMA-Verwaltungs-Agent
 
 Wenn Sie einen Verwaltungs-Agent für AD DS konfigurieren, müssen Sie ein Konto angeben, die vom Verwaltungs-Agent im Datenaustausch mit AD DS verwendet wird. Sie sollten ein normales Benutzerkonto verwenden. Zum Importieren von Daten aus AD DS muss das Konto jedoch über das Recht zum Abrufen von Änderungen aus dem DirSync-Steuerelement verfügen. Wenn Ihr Verwaltungs-Agent Daten in AD DS exportieren soll, müssen Sie dem Konto ausreichende Rechte für die Zielorganisationseinheiten gewähren. Weitere Informationen zu diesem Thema finden Sie unter [Configuring the ADMA Account (Konfigurieren des ADMA-Kontos)](http://go.microsoft.com/FWLink/p/?LinkId=189657).
 
@@ -200,8 +183,7 @@ Weitere Informationen finden Sie unter den folgenden Themen in der Hilfe:
 >[!Note]
 Stellen Sie sicher, dass Sie eine Attribut-Importflussregel für das Attribut „ExpectedRulesList“ konfiguriert haben.
 
-### Schritt 4: Erstellen Sie den Fabrikam FIMMA-Verwaltungs-Agent
-<a id="step-4-create-the-fabrikam-fimma-management-agent" class="xliff"></a>
+### <a name="step-4-create-the-fabrikam-fimma-management-agent"></a>Schritt 4: Erstellen Sie den Fabrikam FIMMA-Verwaltungs-Agent
 
 Wenn Sie einen FIM-Dienstverwaltungs-Agent konfigurieren, müssen Sie ein Konto angeben, das vom Verwaltungs-Agent im Datenaustausch mit dem FIM-Dienst verwendet wird.
 
@@ -232,8 +214,7 @@ Weitere Informationen finden Sie unter den folgenden Themen in der Hilfe:
 >[!NOTE]
  Stellen Sie sicher, dass Sie eine Attribut-Importflussregel für das Attribut „ExpectedRulesList“ konfiguriert haben.
 
-### Schritt 5: Erstellen Sie die Ausführungsprofile
-<a id="step-5-create-the-run-profiles" class="xliff"></a>
+### <a name="step-5-create-the-run-profiles"></a>Schritt 5: Erstellen Sie die Ausführungsprofile
 
 Die folgende Tabelle enthält die Ausführungsprofile, die Sie für das Szenario in diesem Handbuch erstellen müssen.
 
@@ -253,8 +234,7 @@ Weitere Informationen finden Sie unter der Hilfe zum Erstellen eines Ausführung
  Stellen Sie sicher, dass die Bereitstellung in Ihrer Umgebung aktiviert ist. Sie können dies tun, indem das Skript mithilfe von Windows PowerShell zur Aktivierung der Bereitstellung (http://go.microsoft.com/FWLink/p/?LinkId=189660) ausführen.
 
 
-## Konfigurieren des FIM-Diensts
-<a id="configuring-the-fim-service" class="xliff"></a>
+## <a name="configuring-the-fim-service"></a>Konfigurieren des FIM-Diensts
 
 
 Für das Szenario in diesem Handbuch müssen Sie eine Bereitstellungsrichtlinie konfigurieren, wie in der folgenden Abbildung dargestellt.
@@ -265,8 +245,7 @@ Das Ziel dieser Bereitstellungsrichtlinie ist es, Gruppen im Bereich der ausgehe
 
 Navigieren Sie im Windows Internet Explorer® zu http://localhost/identitymanagement, um den FIM-Dienst zu konfigurieren. Navigieren Sie zum Erstellen der Bereitstellungsrichtlinie auf der Seite des MIM-Portals zu den verknüpften Seiten aus dem Abschnitt „Verwaltung“. Sie sollten das Skript in [Using Windows PowerShell to document your provisioning policy configuration (Mithilfe von Windows PowerShell Ihre Bereitstellungsrichtlinienkonfiguration dokumentieren)](http://go.microsoft.com/FWLink/p/?LinkId=189661) ausführen, um die Konfiguration zu überprüfen.
 
-### Schritt 6: Erstellen Sie die Synchronisierungsregel
-<a id="step-6-create-the-synchronization-rule" class="xliff"></a>
+### <a name="step-6-create-the-synchronization-rule"></a>Schritt 6: Erstellen Sie die Synchronisierungsregel
 
 In den folgenden Tabellen wird die Konfiguration der erforderlichen Fabrikam-Synchronisierungsregel für die Bereitstellung gezeigt. Erstellen Sie die Synchronisierungsregel anhand der Daten in den folgenden Tabellen.
 
@@ -317,8 +296,7 @@ In den folgenden Tabellen wird die Konfiguration der erforderlichen Fabrikam-Syn
  >[!NOTE]
  Wichtig Stellen Sie sicher, dass Sie „Nur erster Fluss“ für den Attributfluss ausgewählt haben, der den definierten Namen als Ziel hat.                                                                          
 
-### Schritt 7: Erstellen des Workflows
-<a id="step-7-create-the-workflow" class="xliff"></a>
+### <a name="step-7-create-the-workflow"></a>Schritt 7: Erstellen des Workflows
 
 Das Ziel des AD-Bereitstellungsworkflow ist das Hinzufügen der Fabrikam-Synchronisierungsregel für die Bereitstellung an eine Ressource. Die folgenden Tabellen zeigen die Konfiguration.  Erstellen Sie ein Workflow anhand der Daten in den folgenden Tabellen.
 
@@ -337,8 +315,7 @@ Das Ziel des AD-Bereitstellungsworkflow ist das Hinzufügen der Fabrikam-Synchro
 
 
 
-### Schritt 8: Erstellen Sie die MPR
-<a id="step-8-create-the-mpr" class="xliff"></a>
+### <a name="step-8-create-the-mpr"></a>Schritt 8: Erstellen Sie die MPR
 
 Die erforderliche MPR ist vom Typ „Listenübergang“ und wird ausgelöst, wenn eine Ressource Mitglied der Gruppe „Alle Vertragsnehmer“ wird. Die folgenden Tabellen zeigen die Konfiguration.  Erstellen Sie eine MPR anhand der Daten in den folgenden Tabellen.
 
@@ -363,8 +340,7 @@ Die erforderliche MPR ist vom Typ „Listenübergang“ und wird ausgelöst, wen
 
 
 
-## Ihre Umgebung initialisieren
-<a id="initializing-your-environment" class="xliff"></a>
+## <a name="initializing-your-environment"></a>Ihre Umgebung initialisieren
 
 
 Die Ziele der Initialisierungsphase lauten wie folgt:
@@ -373,8 +349,7 @@ Die Ziele der Initialisierungsphase lauten wie folgt:
 
 -   Binden Sie die Active Directory-Struktur in den Active Directory-Connectorbereich ein.
 
-### Schritt 9: Führen Sie die Ausführungsprofile aus
-<a id="step-9-run-the-run-profiles" class="xliff"></a>
+### <a name="step-9-run-the-run-profiles"></a>Schritt 9: Führen Sie die Ausführungsprofile aus
 
 Die folgende Tabelle führt die Ausführungsprofile auf, die Teil der Initialisierungsphase sind.  Führen Sie die Ausführungsprofile gemäß der folgenden Tabelle aus.
 
@@ -393,8 +368,7 @@ Die folgende Tabelle führt die Ausführungsprofile auf, die Teil der Initialisi
 >[!NOTE]
 Sie sollten sicherstellen, dass Ihre ausgehende Synchronisierungsregel erfolgreich in die Metaverse projiziert wurde.
 
-## Konfiguration testen
-<a id="testing-the-configuration" class="xliff"></a>
+## <a name="testing-the-configuration"></a>Konfiguration testen
 
 
 Ziel dieses Abschnitts ist der Test der tatsächlichen Konfiguration. So testen Sie die Konfiguration:
@@ -407,8 +381,7 @@ Ziel dieses Abschnitts ist der Test der tatsächlichen Konfiguration. So testen 
 
 4.  Überprüfen Sie, ob der Benutzer in AD DS vorhanden ist.
 
-### Schritt 10: Erstellen Sie einen Beispielbenutzer in MIM
-<a id="step-10-create-a-sample-user-in-mim" class="xliff"></a>
+### <a name="step-10-create-a-sample-user-in-mim"></a>Schritt 10: Erstellen Sie einen Beispielbenutzer in MIM
 
 
 Die folgende Tabelle listet die Eigenschaften des Beispielbenutzers auf. Erstellen Sie einen Beispielbenutzer gemäß den Daten in der folgenden Tabelle.
@@ -424,8 +397,7 @@ Die folgende Tabelle listet die Eigenschaften des Beispielbenutzers auf. Erstell
 
 
 
-### Die Bereitstellungsvoraussetzungen des Beispielbenutzers überprüfen
-<a id="verify-the-provisioning-requisites-of-the-sample-user" class="xliff"></a>
+### <a name="verify-the-provisioning-requisites-of-the-sample-user"></a>Die Bereitstellungsvoraussetzungen des Beispielbenutzers überprüfen
 
 
 Wenn Sie den Beispielbenutzer in AD DS bereitstellen möchten, müssen zwei erforderliche Voraussetzungen berücksichtigt werden:
@@ -434,16 +406,14 @@ Wenn Sie den Beispielbenutzer in AD DS bereitstellen möchten, müssen zwei erfo
 
 2.  Der festgelegte Benutzer muss sich im Bereich der ausgehenden Synchronisierungsregel befinden.
 
-### Schritt 11: Stellen Sie sicher, dass der Benutzer ein Mitglied von „Alle Vertragsnehmer“ ist
-<a id="step-11-verify-the-user-is-a-member-of-all-contractors" class="xliff"></a>
+### <a name="step-11-verify-the-user-is-a-member-of-all-contractors"></a>Schritt 11: Stellen Sie sicher, dass der Benutzer ein Mitglied von „Alle Vertragsnehmer“ ist
 
 Öffnen Sie die Gruppe, und klicken Sie dann auf „Mitglieder anzeigen“, um zu überprüfen, ob der Benutzer ein Mitglied der Gruppe „Alle Vertragsnehmer“ ist.
 
 ![Überprüfen Sie, ob der Benutzer ein Mitglied aller Vertragsnehmer ist](media/how-provision-users-adds/image022.jpg)
 
 
-### Schritt 12: Überprüfen Sie, ob sich der festgelegte Benutzer im Bereich der ausgehenden Synchronisierungsregel befindet
-<a id="step-12-verify-the-user-is-in-the-scope-of-the-outbound-synchronization-rule" class="xliff"></a>
+### <a name="step-12-verify-the-user-is-in-the-scope-of-the-outbound-synchronization-rule"></a>Schritt 12: Überprüfen Sie, ob sich der festgelegte Benutzer im Bereich der ausgehenden Synchronisierungsregel befindet
 
 Öffnen Sie die Eigenschaftenseite des Benutzers, und überprüfen Sie das Attribut der Erwartungsregelliste auf der Registerkarte „Bereitstellung“, um zu überprüfen, ob sich der Benutzer im Bereich der Synchronisierungsregel befindet. Das Attribut der Erwartungsregelliste sollte den AD-Benutzer auflisten.
 
@@ -455,8 +425,7 @@ An diesem Punkt im Prozess ist der Status der Synchronisierungsregel „Ausstehe
 
 
 
-### Schritt 13: Synchronisieren Sie die Beispielgruppe
-<a id="step-13-synchronize-the-sample-group" class="xliff"></a>
+### <a name="step-13-synchronize-the-sample-group"></a>Schritt 13: Synchronisieren Sie die Beispielgruppe
 
 
 Bevor Sie den ersten Synchronisierungszyklus für ein Testobjekt beginnen, sollten Sie den erwarteten Zustand des Objekts nach jedem Ausführungsprofil nachverfolgen, das Sie in einem Testplan ausführen. Ihr Testplan sollte neben dem allgemeinen Zustand des Objekts (Erstellt, Aktualisiert oder Gelöscht) auch die Attributwerte umfassen, die Sie erwarten.
@@ -528,15 +497,13 @@ Führen Sie die Ausführungsprofile gemäß den Anweisungen in diesem Abschnitt 
 >[!IMPORTANT]
 Jede Ausführung von Ausführungsprofilen muss ohne Fehler erfolgen.
 
-### Schritt 14: Überprüfen Sie die bereitgestellten Benutzer in AD DS
-<a id="step-14-verify-the-provisioned-user-in-ad-ds" class="xliff"></a>
+### <a name="step-14-verify-the-provisioned-user-in-ad-ds"></a>Schritt 14: Überprüfen Sie die bereitgestellten Benutzer in AD DS
 
 Öffnen Sie die Organisationseinheit „FIMObjects“, um sicherzustellen, dass Ihr Beispielbenutzer in AD DS bereitgestellt wurde. Britta Simon sollte sich in der Organisationseinheit „FIMObjects“ befinden.
 
 ![Überprüfen, ob der Benutzer in der Organisationseinheit FIMObjects ist](media/how-provision-users-adds/image033.jpg)
 
-Zusammenfassung
-<a id="summary" class="xliff"></a>
+<a name="summary"></a>Zusammenfassung
 =======
 
 Das Ziel dieses Dokuments ist es, Ihnen die wichtigsten Bausteine für die Synchronisierung eines Benutzers in MIM mit AD DS vorzustellen. Während der ersten Testphase sollten Sie zunächst mit einem Minimum an Attributen beginnen, die zum Durchführen einer Aufgabe nötig sind, und weitere Attribute für Ihr Szenario hinzufügen, wenn die allgemeinen Schritte erwartungsgemäß funktionieren. Wenn Sie die Komplexität auf einem Mindestlevel halten, vereinfacht dies die Problembehandlung.
@@ -549,12 +516,10 @@ Eine Beschreibung, wie Sie diese Objekte aus Ihrer Testumgebung entfernen könne
 In einem typischen Szenario mit Synchronisierung, die AD DS als Synchronisierungsziel enthält, ist MIM nicht autoritativ für alle Attribute eines Objekts. Wenn Sie z.B. Benutzerobjekte in AD DS mithilfe von FIM verwalten, müssen zumindest die Domäne und die Attribute „objectSID“ durch den Verwaltungs-Agent von AD DS bereitgestellt werden.
 Die Attribute des Kontonamens, die Domänenattribute und die Attribute „objectSID“ sind erforderlich, damit sich ein Benutzer im FIM-Portal anmelden kann. Es ist eine weitere eingehende Synchronisierungsregel für den AD DS-Connectorbereich erforderlich, um diese Attribute aus AD DS zu füllen. Beim Verwalten von Objekten mit mehreren Quellen für Attributwerte müssen Sie sicherstellen, dass Sie die Attributflussrangfolge ordnungsgemäß konfigurieren. Wenn die Attributflussrangfolge nicht ordnungsgemäß konfiguriert ist, verhindert das Synchronisierungsmodul das Auffüllen der Attributwerte. Weitere Informationen zur Attributflussrangfolge finden Sie im Artikel [About Attribute Flow Precedence (Informationen zur Attributflussrangfolge)](http://go.microsoft.com/FWLink/p/?LinkId=189675).
 
-Weitere Informationen
-<a id="see-also" class="xliff"></a>
+<a name="see-also"></a>Weitere Informationen
 =========
 
-Weitere Ressourcen
-<a id="other-resources" class="xliff"></a>
+<a name="other-resources"></a>Weitere Ressourcen
 ---------------
 
 [Using FIM to Enable or Disable Accounts in Active Directory (Aktivieren oder Deaktivieren von Konten in Active Directory mithilfe von FIM)](http://go.microsoft.com/FWLink/p/?LinkId=189670)

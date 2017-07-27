@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/13/2017
 ---
-# Schritt 7: Einrichten des SID-Verlaufs/der SID-Filterung
-<a id="step-7-set-up-sid-historysid-filtering" class="xliff"></a>
+# <a name="step-7-set-up-sid-historysid-filtering"></a>Schritt 7: Einrichten des SID-Verlaufs/der SID-Filterung
 
 >[!div class="step-by-step"]
 [« Schritt 6](sp1-step6-setup-pam-trust.md)

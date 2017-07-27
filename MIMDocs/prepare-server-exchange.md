@@ -18,15 +18,13 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/13/2017
 ---
-# Einrichten eines Identitätsverwaltungsservers: Exchange
-<a id="set-up-an-identity-management-server-exchange" class="xliff"></a>
+# <a name="set-up-an-identity-management-server-exchange"></a>Einrichten eines Identitätsverwaltungsservers: Exchange
 
 >[!div class="step-by-step"]
 [« SharePoint](prepare-server-sharepoint.md)
 [MIM Synchronization Service »](install-mim-sync.md)
 
-## Bereitstellen von Microsoft Exchange Server
-<a id="deploy-microsoft-exchange-server" class="xliff"></a>
+## <a name="deploy-microsoft-exchange-server"></a>Bereitstellen von Microsoft Exchange Server
 Wenn Sie MIM zum Senden und Empfangen von E-Mails oder Bereitstellen von Postfächern konfigurieren möchten, ist es notwendig, dass Exchange in der Umgebung vorhanden ist. Wenn Exchange noch nicht bereitgestellt wurde, können Sie zu Evaluierungszwecken eine Testversion installieren:
 
 1. Laden Sie Microsoft Office 2010 Filter Packs, Version 2.0, und Microsoft Office 2010 Filter Packs, Version 2.0 SP1, herunter, und installieren Sie diese anschließend.
