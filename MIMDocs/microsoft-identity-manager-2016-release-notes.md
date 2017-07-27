@@ -19,6 +19,5 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/13/2017
 ---
-# Anmerkungen zu dieser Version von MIM 2016
-<a id="release-notes-for-mim-2016" class="xliff"></a>
+# <a name="release-notes-for-mim-2016"></a>Anmerkungen zu dieser Version von MIM 2016
 Zum aktuellen Zeitpunkt gibt es keine Anmerkungen zur aktuellen Version.

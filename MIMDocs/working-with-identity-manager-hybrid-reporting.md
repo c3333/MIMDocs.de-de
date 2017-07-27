@@ -18,11 +18,9 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/13/2017
 ---
-# Arbeiten mit der Identity Manager-Hybridberichterstellung – öffentliche Vorschau (aktualisiert)
-<a id="working-with-identity-manager-hybrid-reporting---public-preview-refresh" class="xliff"></a>
+# <a name="working-with-identity-manager-hybrid-reporting---public-preview-refresh"></a>Arbeiten mit der Identity Manager-Hybridberichterstellung – öffentliche Vorschau (aktualisiert)
 
-## Verfügbare Hybridberichte
-<a id="available-hybrid-reports" class="xliff"></a>
+## <a name="available-hybrid-reports"></a>Verfügbare Hybridberichte
 Die ersten drei in Azure AD verfügbaren Microsoft Identity Manager-Berichte (MIM) sind die **Aktivität „Zurücksetzen des Kennworts“**, die **Registrierung für das Zurücksetzen des Kennworts** und die **Self-Service-Gruppenaktivität**.
 
 -   Die Aktivität „Zurücksetzen des Kennworts“ zeigt jede Instanz an, wenn ein Benutzer mithilfe von SSPR die Kennwortzurücksetzung durchgeführt hat und die für die Authentifizierung verwendeten Gates oder **Methoden** bereitstellt.
@@ -39,8 +37,7 @@ Die ersten drei in Azure AD verfügbaren Microsoft Identity Manager-Berichte (MI
 > Der vorherige Hybrid-Agent muss deinstalliert werden.</br>
 > Wenn Sie Hybridberichte deinstallieren möchten, deinstallieren Sie den Agent „MIMreportingAgent.msi“.
 
-## Voraussetzungen
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>Voraussetzungen
 
 1.  Installieren Sie den Microsoft Identity Manager 2016 RTM oder den Service Pack 1 MIM-Dienst.
 
@@ -48,8 +45,7 @@ Die ersten drei in Azure AD verfügbaren Microsoft Identity Manager-Berichte (MI
 
 3.  Stellen Sie sicher, dass Sie über eine ausgehende Internetverbindung vom Microsoft Identity Manager-Server zu Azure verfügen.
 
-## Anforderungen
-<a id="requirements" class="xliff"></a>
+## <a name="requirements"></a>Anforderungen
 In der folgenden Tabelle werden die Anforderungen zum Verwenden der Microsoft Identity Manager-Hybridberichterstellung aufgelistet.
 
 | Anforderung | Beschreibung |
@@ -64,8 +60,7 @@ In der folgenden Tabelle werden die Anforderungen zum Verwenden der Microsoft Id
 | Bei aktivierter verstärkter Sicherheit für IE folgende Websites zulassen |Wenn die verstärkte Sicherheitskonfiguration für Internet Explorer auf dem Server aktiviert ist, auf dem der Agent installiert wird, müssen die folgenden Websites zugelassen werden.</br></br><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li><li>https://login.windows.net</li><li>Der Verbundserver für Ihre Organisation, dem Azure Active Directory vertraut. Beispiel: https://sts.contoso.com</li> |
 </BR>
 
-## Installieren des Microsoft Identity Manager-Berichterstellungs-Agents in Azure AD
-<a id="install-microsoft-identity-manager-reporting-agent-in-azure-ad" class="xliff"></a>
+## <a name="install-microsoft-identity-manager-reporting-agent-in-azure-ad"></a>Installieren des Microsoft Identity Manager-Berichterstellungs-Agents in Azure AD
 Nachdem der Agent für die Berichterstellung installiert wurde, werden die Daten der Microsoft Identity Manager-Aktivität von MIM in das Windows-Ereignisprotokoll exportiert. Der MIM-Berichterstellungs-Agent verarbeitet die Ereignisse und lädt diese in Azure hoch. Die Ereignisse werden in Azure hinsichtlich der erforderlichen Berichte analysiert, entschlüsselt und gefiltert.
 
 1.  Installieren Sie Microsoft Identity Manager 2016.
@@ -92,8 +87,7 @@ Nachdem der Agent für die Berichterstellung installiert wurde, werden die Daten
 
     Sie können die Berichtsdaten über das Self-Service-Portal zum Zurücksetzen von Kennwörtern von Microsoft Identity Manager erstellen, um das Kennwort eines Benutzers zurückzusetzen. Stellen Sie sicher, dass das Zurücksetzen des Kennworts erfolgreich abgeschlossen wurde, und überprüfen Sie dann, ob die Daten im Azure AD-Verwaltungsportal angezeigt werden.
 
-## Anzeigen von Hybridberichten im Azure-Portal
-<a id="view-hybrid-reports-in-the-azure-portal" class="xliff"></a>
+## <a name="view-hybrid-reports-in-the-azure-portal"></a>Anzeigen von Hybridberichten im Azure-Portal
 
 1.  Melden Sie sich mit Ihrem globalen Administratorkonto für den Mandanten im [Azure-Portal](https://portal.azure.com/) an.
 
@@ -108,12 +102,10 @@ Nachdem der Agent für die Berichterstellung installiert wurde, werden die Daten
 > [!WARNING]
 > Es kann einige Zeit dauern, bis Microsoft Identity Manager-Überwachungsdaten im Azure-Portal angezeigt werden.
 
-## Beenden der Hybridberichterstellung
-<a id="stop-creating-hybrid-reports" class="xliff"></a>
+## <a name="stop-creating-hybrid-reports"></a>Beenden der Hybridberichterstellung
 Falls Sie das Hochladen von Überwachungsberichtdaten von Microsoft Identity Manager in Azure Active Directory beenden möchten, deinstallieren Sie den Agent für die hybride Berichterstellung. Deinstallieren Sie die Microsoft Identity Manager-Hybridberichterstellung mithilfe des Windows-Tools **Programme hinzufügen oder entfernen**.
 
-## Für die Hybridberichterstellung verwendete Windows-Ereignisse
-<a id="windows-events-used-for-hybrid-reporting" class="xliff"></a>
+## <a name="windows-events-used-for-hybrid-reporting"></a>Für die Hybridberichterstellung verwendete Windows-Ereignisse
 Von Microsoft Identity Manager generierte Ereignisse werden im Windows-Ereignisprotokoll protokolliert und in der Ereignisanzeige unter **Anwendungs- und Dienstprotokolle-&gt; Identity Manager-Anforderungsprotokoll** angezeigt. Jede MIM-Anforderung wird als Ereignis in das Windows-Ereignisprotokoll in der JSON-Struktur exportiert. Dieses kann in Ihr SIEM exportiert werden.
 
 |Ereignistyp|ID|Ereignisdetails|

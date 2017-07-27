@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/13/2017
 ---
-# Einrichten eines Identitätsverwaltungsservers: SQL Server 2014
-<a id="set-up-an-identity-management-server-sql-server-2014" class="xliff"></a>
+# <a name="set-up-an-identity-management-server-sql-server-2014"></a>Einrichten eines Identitätsverwaltungsservers: SQL Server 2014
 
 >[!div class="step-by-step"]
 [« Windows Server 2012 R2](prepare-server-ws2012r2.md)
@@ -31,8 +30,7 @@ ms.lasthandoff: 07/13/2017
 > - Domänenname: **contoso**
 > - Kennwort – **Pass@word1**
 
-## Installieren von **SQL Server 2014 Standard Edition**
-<a id="install-sql-server-2014-standard-edition" class="xliff"></a>
+## <a name="install-sql-server-2014-standard-edition"></a>Installieren von **SQL Server 2014 Standard Edition**
 
 1. Starten Sie **PowerShell** als Domänenadministrator.
 

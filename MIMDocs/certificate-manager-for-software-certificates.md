@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/13/2017
 ---
-# Erstellen von Softwarezertifikaten mit dem Zertifikat-Manager
-<a id="create-software-certificates-with-certificate-manager" class="xliff"></a>
+# <a name="create-software-certificates-with-certificate-manager"></a>Erstellen von Softwarezertifikaten mit dem Zertifikat-Manager
 Zum Registrieren und Erneuern von Softwarezertifikaten müssen Sie kein Administrator sein und es ist keine virtuelle Smartcard erforderlich. Beachten Sie, dass Sie im Verlauf dazu aufgefordert werden, einen Zertifikatvorgang zuzulassen. Das ist normal.
 
-## Erstellen einer Softwarezertifikat-Profilvorlage im MIM 2016-Zertifikat-Manager
-<a id="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager" class="xliff"></a>
+## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>Erstellen einer Softwarezertifikat-Profilvorlage im MIM 2016-Zertifikat-Manager
 
 1.  Erstellen Sie eine Vorlage für das Zertifikat, das Sie für die virtuelle Smartcard anfordern werden. Öffnen Sie die MMC.
 
@@ -73,8 +71,7 @@ Zum Registrieren und Erneuern von Softwarezertifikaten müssen Sie kein Administ
 
     10. Wählen Sie aus der Liste die neue Vorlage, die Sie soeben erstellt haben (**Archivierte Zertifikatvorlage**), und klicken Sie dann auf **OK**.
 
-## Erstellen der Profilvorlage
-<a id="create-the-profile-template" class="xliff"></a>
+## <a name="create-the-profile-template"></a>Erstellen der Profilvorlage
 
 1.  Melden Sie sich beim CM-Portal (Zertifikatverwaltung) als Benutzer mit Administratorrechten an.
 

@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/13/2017
 ---
-# Schritt 8: Überprüfen der PAM-Bereitstellung
-<a id="step-8-pam-deployment-verification" class="xliff"></a>
+# <a name="step-8-pam-deployment-verification"></a>Schritt 8: Überprüfen der PAM-Bereitstellung
 
 >[!div class="step-by-step"]
 [« Schritt 7](sp1-step7-setup-sidhistory-sidfiltering.md)

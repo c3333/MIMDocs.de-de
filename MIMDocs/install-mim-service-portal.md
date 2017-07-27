@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/13/2017
 ---
-# Installieren von MIM 2016: MIM-Dienst und -Portal
-<a id="install-mim-2016-mim-service-and-portal" class="xliff"></a>
+# <a name="install-mim-2016-mim-service-and-portal"></a>Installieren von MIM 2016: MIM-Dienst und -Portal
 
 >[!div class="step-by-step"]
 [« MIM-Synchronisierungsdienst](install-mim-sync.md)
@@ -35,8 +34,7 @@ ms.lasthandoff: 07/13/2017
 Falls Sie im letzten Schritt das MIM-Installationspaket nicht eingerichtet haben, kehren Sie zurück, und installieren Sie die Komponenten von Microsoft Identity Manager 2016, bevor Sie fortfahren:
 
 
-## Konfigurieren des MIM-Diensts und -Portals für die Installation
-<a id="configure-mim-service-and-portal-for-installation" class="xliff"></a>
+## <a name="configure-mim-service-and-portal-for-installation"></a>Konfigurieren des MIM-Diensts und -Portals für die Installation
 
 1. Führen Sie das **Installationsprogramm für den MIM-Dienst und das -Portal** aus dem entpackten Unterordner **Dienst und Portal** aus.
 
@@ -78,8 +76,7 @@ Falls Sie im letzten Schritt das MIM-Installationspaket nicht eingerichtet haben
 
 16. Aktivieren Sie das Kontrollkästchen, um die Ports 5725 und 5726 in der Firewall zu öffnen, sowie das Kontrollkästchen, um allen authentifizierten Benutzern den Zugriff auf das MIM-Portal zu gewähren.
 
-## Konfigurieren des MIM- Kennwort-Registrierungsportals
-<a id="configure-mim-password-registration-portal" class="xliff"></a>
+## <a name="configure-mim-password-registration-portal"></a>Konfigurieren des MIM- Kennwort-Registrierungsportals
 
 1.  Legen Sie den Namen des Dienstkontos für die SSPR-Registrierung auf *contoso\MIMSSPR* und das zugehörige Kennwort auf *Pass@word1* fest.
 
@@ -91,8 +88,7 @@ Falls Sie im letzten Schritt das MIM-Installationspaket nicht eingerichtet haben
 
 4. Geben Sie im nächsten Konfigurationsbildschirm des MIM-Kennwortregistrierungsportals *http://CorpIDM.contoso.local* als Serveradresse für den MIM-Dienst für das Kennwortzurückregistrierungsportal an.
 
-## Konfigurieren des MIM-Kennwortzurücksetzungsportals
-<a id="configure-mim-password-reset-portal" class="xliff"></a>
+## <a name="configure-mim-password-reset-portal"></a>Konfigurieren des MIM-Kennwortzurücksetzungsportals
 
 1.  Legen Sie den Namen des Dienstkontos für die SSPR-Registrierung auf *Contoso\MIMSSPRService* und das Kennwort auf *Pass@word1* fest.
 
@@ -104,8 +100,7 @@ Falls Sie im letzten Schritt das MIM-Installationspaket nicht eingerichtet haben
 
 4. Geben Sie im nächsten Bildschirm der Konfiguration des MIM-Kennwortregistrierungsportals *CorpIDname http://CorpIDname.domain.local* an, als Serveradresse für den MIM-Dienst für das Kennwortzurücksetzungsportal an.
 
-## Installieren des MIM-Diensts und -Portals
-<a id="install-mim-service-and-portal" class="xliff"></a>
+## <a name="install-mim-service-and-portal"></a>Installieren des MIM-Diensts und -Portals
 
 Wenn alle Vorinstallationsdefinitionen bereit sind, klicken Sie auf **Installieren**, um mit der Installation der ausgewählten **Dienst- und Portal**-Komponenten zu beginnen.
 

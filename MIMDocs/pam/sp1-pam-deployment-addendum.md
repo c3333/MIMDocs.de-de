@@ -18,11 +18,9 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/13/2017
 ---
-# Nachtrag für Bereitstellungsskripts für PAM:
-<a id="pam-deployment-scripts-addendum" class="xliff"></a>
+# <a name="pam-deployment-scripts-addendum"></a>Nachtrag für Bereitstellungsskripts für PAM:
 
-## Nachtrag 1: Einrichten der PRIV-Domäne
-<a id="addendum-1-setting-up-the-priv-domain" class="xliff"></a>
+## <a name="addendum-1-setting-up-the-priv-domain"></a>Nachtrag 1: Einrichten der PRIV-Domäne
 
 Nach dem Entpacken der komprimierten Datei im Ordner „$env:SYSTEMDRIVE\PAM“ bearbeiten Sie die Datei „PAMDeploymentConfig.xml“, um Details zur PRIV-Gesamtstruktur hinzuzufügen. Aktualisieren Sie den DNS-Namen, den NetBIOS-Namen, den DC-Namen, den Datenbank-/Protokollpfad und den SYSVOL-Pfad. Aktualisieren Sie auch die Domänen- und den Gesamtstrukturmodus. Wenn Sie Windows Server Technical Preview 5 testen, legen Sie den Domänen- und Gesamtstrukturmodus auf „WinThreshold“ fest.
 
@@ -40,8 +38,7 @@ Nach Abschluss des Vorgangs wird der DC automatisch neu gestartet. Das Administr
   * Das Kennwort enthält mindestens einen GROSSBUCHSTABEN.
   * Das Kennwort enthält mindestens eine Ziffer bzw. ein Sonderzeichen.
 
-## Nachtrag 2: Einrichten der CORP-Domäne
-<a id="addendum-2-setting-up-the-corp-domain" class="xliff"></a>
+## <a name="addendum-2-setting-up-the-corp-domain"></a>Nachtrag 2: Einrichten der CORP-Domäne
 
 Wenn Sie zunächst nur mit PAM beginnen und eine Testumgebung einrichten möchten, ermöglicht das Skript auch die Konfiguration einer CORP-Domäne. Nach dem Entpacken der komprimierten Datei im Ordner „$env:SYSTEMDRIVE\PAM“ bearbeiten Sie die Datei „PAMDeploymentConfig.xml“ und fügen die Details der Unternehmensgesamtstruktur hinzu. Aktualisieren Sie den DNS-Namen, den NetBIOS-Namen, den DC-Namen, den Datenbank-/Protokollpfad und den SYSVOL-Pfad. Die Funktionsebene sollte mindestens „Windows Server 2012 R2“.
 
@@ -53,8 +50,7 @@ Wenn Sie zunächst nur mit PAM beginnen und eine Testumgebung einrichten möchte
 
 Der Domänencontroller wird nach Abschluss des Vorgangs automatisch neu gestartet.
 
-## Nachtrag 3: Einrichten eines CORP-Clients für die Überprüfung
-<a id="addendum-3-setting-up-a-corp-client-to-do-the-validation" class="xliff"></a>
+## <a name="addendum-3-setting-up-a-corp-client-to-do-the-validation"></a>Nachtrag 3: Einrichten eines CORP-Clients für die Überprüfung
 
 Der Speicherort für Binärdateien des Clients in der Konfigurationsdatei muss auf den Speicherort von „setup.exe“ verweisen.
 Melden Sie sich als lokaler Administrator auf dem Client an, und führen Sie in einem PowerShell-Fenster mit erhöhten Rechten die folgenden Befehle aus:
@@ -72,7 +68,6 @@ Wenn der Computer nicht mit einer Domäne verknüpft ist, werden Sie zur Eingabe
 
 Fahren Sie mit Schritt 8 (siehe oben) fort.
 
-## Anhang 4: Beim Auftreten von Problemen
-<a id="addendum-4-if-something-goes-wrong" class="xliff"></a>
+## <a name="addendum-4-if-something-goes-wrong"></a>Anhang 4: Beim Auftreten von Problemen
 
 Alle Skriptprotokolle werden in „% AppData%\MIMPAMInstall“ gespeichert. Komprimieren Sie den Ordner als ZIP-Datei, und senden Sie ihn zusammen mit Details zum Vorgang und dem Fehler per E-Mail an [mim2016@microsoft.com](mailto:mim2016@microsoft.com).
