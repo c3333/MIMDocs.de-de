@@ -5,18 +5,18 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 03/23/2017
+ms.date: 08/16/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 974015bbba3a36e1107da33655eedf94e2938582
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 03a0e6e90c1d0059872c4d37c88cb6f4f4095bac
+ms.sourcegitcommit: 451c3ddda84758c87b8eb0359dac4043af52865f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Installieren von MIM 2016: MIM-Dienst und -Portal
 
@@ -62,13 +62,13 @@ Falls Sie im letzten Schritt das MIM-Installationspaket nicht eingerichtet haben
 
 10. Beachten Sie, dass eine Warnung angezeigt werden kann, dass das Dienstkonto in seiner aktuellen Konfiguration nicht sicher ist.
 
-11. Akzeptieren Sie die Standardeinstellungen für den Standort des Synchronisierungsservers, und geben Sie für das Konto „MIM-Verwaltungs-Agent“ *contoso\MIMsync* an.
+11. Akzeptieren Sie die Standardeinstellungen für den Standort des Synchronisierungsservers, und geben Sie für das Konto „MIM-Verwaltungs-Agent“ *contoso\MIMMA* an.
 
     ![Bild: Konfigurieren des MIM-Diensts und -Portals](media/MIM-Install13.png)
 
 12. Geben Sie *CORPIDM* (den Namen dieses Computers) als MIM-Dienstserveradresse für das MIM-Portal an.
 
-13. Geben Sie *http://CorpIDM.contoso.local:82* als URL für die SharePoint-Websitesammlung an.
+13. Geben Sie *http://CorpIDM.contoso.local* als URL für die SharePoint-Websitesammlung an.
 
 14. Geben Sie *http://CorpIDM.contoso.local:8080* als die URL zur Kennwortregistrierung an.
 
@@ -106,7 +106,7 @@ Wenn alle Vorinstallationsdefinitionen bereit sind, klicken Sie auf **Installier
 
 Nach Abschluss der Installation stellen Sie sicher, dass das MIM-Portal aktiv ist.
 
-1. Starten Sie den Internet Explorer, und stellen Sie über *http://corpidm.contoso.local:82/identitymanagement* eine Verbindung mit dem MIM-Portal her. Beachten Sie, dass es beim ersten Besuch der Seite möglicherweise zu einer kurzen Verzögerung kommen kann.
+1. Starten Sie den Internet Explorer, und stellen Sie über *http://corpidm.contoso.local/identitymanagement* eine Verbindung mit dem MIM-Portal her. Beachten Sie, dass es beim ersten Besuch der Seite möglicherweise zu einer kurzen Verzögerung kommen kann.
 
     - Authentifizieren Sie sich in Internet Explorer bei Bedarf als *contoso\Administrator*.
 
