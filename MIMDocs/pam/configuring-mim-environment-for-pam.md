@@ -2,30 +2,31 @@
 title: "Konfigurieren von MIM 2016 für Privileged Access Management | Microsoft-Dokumentation"
 description: "Die Roadmap für die Installation und Konfiguration von MIM für Privileged Access Management."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 08/31/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: c4ca5b58-ad0c-48af-a9eb-b71b22d0c67c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ce1ce0c67dfd39433ff01dabd542e862c557c787
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 79de8ef08b49a41638a09e829efbd8c17301004b
+ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="configure-the-mim-environment-for-privileged-access-management"></a>Konfigurieren der MIM-Umgebung für Privileged Access Management
+
 Das Einrichten der Umgebung für den gesamtstrukturübergreifenden Zugriff umfasst sieben Schritte, das Installieren und Konfigurieren von Active Directory und Microsoft Identity Manager sowie die Veranschaulichung einer bedarfsorientierten Zugriffsanforderung.
 
 Diese Schritte sind so ausgelegt, dass Sie von Grund auf neu starten und eine Testumgebung erstellen können. Wenn Sie PAM auf eine vorhandene Umgebung anwenden, können Sie Ihre eigenen Domänencontroller oder Benutzerkonten verwenden, statt neue zu erstellen, die den Beispielen entsprechen.
 
-1.  Bereiten Sie den Server *CORPDC* als Domänencontroller und *CORPWKSTN* als Mitglied der Domäne/Arbeitsgruppe vor.
+1. Bereiten Sie den Server *CORPDC* als Domänencontroller und *CORPWKSTN* als Mitglied der Domäne/Arbeitsgruppe vor.
 
-2.  Bereiten Sie den Server *PRIVDC* als Domänencontroller vor.
+2. Bereiten Sie den Server *PRIVDC* als Domänencontroller vor.
 
 3.  Bereiten Sie den Server *PAMSRV* in der Gesamtstruktur *PRIV* vor.
 
