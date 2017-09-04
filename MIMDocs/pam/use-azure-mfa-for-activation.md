@@ -2,31 +2,32 @@
 title: Verwenden von Azure MFA zur Aktivierung von PAM | Microsoft Docs
 description: Richten Sie Azure MFA als zweite Sicherheitsebene ein, wenn Benutzer Rollen in Privileged Access Management aktivieren.
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 08/31/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: b937b30da2dff9bbfeabf7dceb43fcaca99a1b63
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: dd77c0135bee40a90f3ea9fd5c1b2771cbc21793
+ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="using-azure-mfa-for-activation"></a>Verwenden von Azure MFA zur Aktivierung
+
 Beim Konfigurieren einer PAM-Rolle können Sie auswählen, wie Benutzer, die eine Aktivierung der Rolle anfordern, sich autorisieren müssen. Die PAM-Autorisierungsaktivität implementiert diese Wahlmöglichkeiten:
 
 - Rolle Besitzergenehmigung
-- Azure Multi-Factor Authentication (Azure MFA)
+- [Azure Multi-Factor Authentication (MFA)](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 
 Wenn keine Option aktiviert ist, werden Kandidatenbenutzer automatisch für ihre Rolle aktiviert.
 
-Microsoft Azure Multi-Factor Authentication (MFA) ist ein Authentifizierungsdienst, der von Benutzern verlangt, ihre Anmeldeversuche über eine mobile App, einen Telefonanruf oder eine Textnachricht zu verifizieren. Der Dienst kann mit Microsoft Azure Active Directory sowie als Dienst für Cloud- und lokale Unternehmensanwendungen verwendet werden. Für das PAM-Szenario stellt Azure MFA einen zusätzlichen Authentifizierungsmechanismus bereit, der bei der Autorisierung verwendet werden kann, unabhängig davon, wie sich ein Kandidatenbenutzer zuvor bei der Windows PRIV-Domäne authentifiziert hat.
+Microsoft Azure Multi-Factor Authentication (MFA) ist ein Authentifizierungsdienst, der von Benutzern verlangt, ihre Anmeldeversuche über eine mobile App, einen Telefonanruf oder eine Textnachricht zu verifizieren. Der Dienst kann mit Microsoft Azure Active Directory sowie als Dienst für Cloud- und lokale Unternehmensanwendungen verwendet werden. Für das PAM-Szenario bietet Azure MFA einen zusätzlichen Authentifizierungsmechanismus. Azure MFA kann für die Autorisierung verwendet werden, unabhängig davon, wie ein Benutzer in der Windows PRIV-Domäne authentifiziert ist.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -76,27 +77,27 @@ Im nächsten Schritt generieren Sie eine Datei mit den Authentifizierungsdaten, 
 
 1.  Melden Sie sich bei dem Computer, auf dem der MIM-Dienst installiert ist, als Administrator oder als der Benutzer an, der MIM installiert hat.
 
-2.  Erstellen Sie einen neuen Verzeichnisordner unterhalb des Verzeichnisses, in dem der MIM-Dienst installiert ist, z. B. `C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Service\\MfaCerts`.
+2.  Erstellen Sie einen neuen Verzeichnisordner unterhalb des Verzeichnisses, in dem der MIM-Dienst installiert ist, z. B. ```C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\MfaCerts```.
 
-3.  Navigieren Sie in Windows Explorer zum Ordner **pf\\certs** der ZIP-Datei, die Sie im vorherigen Abschnitt heruntergeladen haben, und kopieren Sie die Datei **cert\_key.p12** in das neue Verzeichnis.
+3.  Navigieren Sie in Windows Explorer zum ```pf\certs```-Ordner der ZIP-Datei, die Sie im vorherigen Abschnitt heruntergeladen haben. Kopieren Sie die Datei „```cert\_key.p12```“ in das neue Verzeichnis.
 
-4.  Navigieren Sie in Windows Explorer in den Ordner **pf** der ZIP-Datei, und öffnen Sie die Datei **pf\_auth.cs** in einem Text-Editor wie z. B. WordPad.
+4.  Navigieren Sie in Windows Explorer zum ```pf```-Ordner der ZIP-Datei, und öffnen Sie die Datei „```pf\_auth.cs```“ in einem Text-Editor wie z B. WordPad.
 
-5.  Suchen Sie diese drei Parameter: **LICENSE\_KEY**, **GROUP\_KEY**, **CERT\_PASSWORD**.
+5. Suchen Sie diese drei Parameter: ```LICENSE\_KEY```, ```GROUP\_KEY``` und ```CERT\_PASSWORD```.
 
 ![Kopieren der Werte aus der Datei „pf\_auth.cs“ – Screenshot](media/PAM-Azure-MFA-Activation-Image-2.png)
 
-6.  Öffnen Sie in einem Editor die Datei **MfaSettings.xml**, die sich in `C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Service` befindet.
+6. Öffnen Sie in einem Editor die Datei **MfaSettings.xml**, die sich in ```C:\Program Files\Microsoft Forefront Identity Manager\2010\Service``` befindet.
 
-7.  Kopieren Sie die Werte aus den Parametern LICENSE\_KEY, GROUP\_KEY und CERT\_PASSWORD der Datei „pf\_auth.cs“ in die zugehörigen XML-Elemente in der Datei „MfaSettings.xml“.
+7. Kopieren Sie die Werte aus den Parametern LICENSE\_KEY, GROUP\_KEY und CERT\_PASSWORD der Datei „pf\_auth.cs“ in die zugehörigen XML-Elemente in der Datei „MfaSettings.xml“.
 
-8.  Geben Sie im XML-Element **<CertFilePath>** den vollständigen Pfadnamen der zuvor extrahierten Datei „cert\_key.p12“ an.
+8. Geben Sie im XML-Element **<CertFilePath>** den vollständigen Pfadnamen der zuvor extrahierten Datei „cert\_key.p12“ an.
 
-9.  Geben Sie im Element **<username>** einen beliebigen Benutzernamen ein.
+9. Geben Sie im Element **<username>** einen beliebigen Benutzernamen ein.
 
-10.  Geben Sie im Element **<DefaultCountryCode>** die Landesvorwahl für Anrufe bei Ihren Benutzern an, z. B. „49“ für Deutschland. Dieser Wert wird für den Fall verwendet, dass Benutzer mit Telefonnummern registriert werden, die keine Landesvorwahl enthalten. Wenn die Telefonnummer eines Benutzers eine internationale Landesvorwahl aufweist, die sich von der für die Organisation konfigurierten unterscheidet, muss die betreffende Landesvorwahl in der registrierten Telefonnummer enthalten sein.
+10. Geben Sie im Element **<DefaultCountryCode>** die Landesvorwahl für Anrufe bei Ihren Benutzern an, z. B. „49“ für Deutschland. Dieser Wert wird für den Fall verwendet, dass Benutzer mit Telefonnummern registriert werden, die keine Landesvorwahl enthalten. Wenn die Telefonnummer eines Benutzers eine internationale Landesvorwahl aufweist, die sich von der für die Organisation konfigurierten unterscheidet, muss die betreffende Landesvorwahl in der registrierten Telefonnummer enthalten sein.
 
-11.  Speichern und überschreiben Sie die Datei **MfaSettings.xml** im MIM-Dienstordner `C:\\Program Files\\Microsoft Forefront Identity Manager\\2010\\Service`. 
+11. Speichern und überschreiben Sie die Datei **MfaSettings.xml** im MIM-Dienstordner ```C:\Program Files\Microsoft Forefront Identity Manager\2010\\Service```.
 
 > [!NOTE]
 > Stellen Sie am Ende des Vorgangs sicher, dass weder die Datei **MfaSettings.xml** noch alle Kopien von ihr oder die ZIP-Datei öffentlich lesbar sind.
@@ -109,16 +110,15 @@ Beim ersten Verfahren kopiert der Befehl `New-PAMUser` ein Telefonnummerattribut
 
 Beim zweiten Verfahren aktualisiert der Befehl `Set-PAMUser` das Telefonnummerattribut in der MIM-Dienstdatenbank. Beispielsweise ersetzt der folgende Befehl die Telefonnummer eines vorhandenen PAM-Benutzers im MIM-Dienst. Der Verzeichniseintrag bleibt unverändert.
 
-```
+```PowerShell
 Set-PAMUser (Get-PAMUser -SourceDisplayName Jen) -SourcePhoneNumber 12135551212
 ```
-
 
 ## <a name="configure-pam-roles-for-azure-mfa"></a>Konfigurieren von PAM-Rollen für Azure MFA
 
 Sobald die Telefonnummern aller Kandidatenbenutzer für eine PAM-Rolle in der MIM-Dienstdatenbank gespeichert ist, kann die Rolle für die Anforderung von Azure MFA aktiviert werden. Dies erfolgt mithilfe der Befehle `New-PAMRole` oder `Set-PAMRole`. Beispiel:
 
-```
+```PowerShell
 Set-PAMRole (Get-PAMRole -DisplayName "R") -MFAEnabled 1
 ```
 
@@ -147,3 +147,8 @@ Wenn Sie weitere Informationen zu Fehlern bei Telefonanrufen (Ereignis 101) ben�
 5.  Wählen Sie den Zeitraum aus, und aktivieren Sie das Kontrollkästchen neben dem **Namen** in der Spalte für weitere Berichte. Klicken Sie auf **Als CSV exportieren**.
 
 6.  Wenn der MFA-Bericht generiert wurde, können Sie ihn im Portal anzeigen oder, wenn er sehr umfangreich ist, als CSV-Datei herunterladen. Die **SDK**-Werte in der Spalte **AUTH TYPE** zeigen Zeilen an, die als PAM-Aktivierungsanforderungen relevant sind: Dies sind Ereignisse, die von MIM oder anderer lokal ausgeführter Software stammen. Das Feld **USERNAME** stellt die GUID des Benutzerobjekts in der MIM-Dienstdatenbank dar. Wenn ein Aufruf nicht erfolgreich war, steht in der Spalte **AUTHD** der Wert**No**, und der Wert der Spalte **CALL RESULT** enthält die Details der Fehlerursache.
+
+## <a name="next-steps"></a>Nächste Schritte
+
+- [Was ist Azure Multi-Factor Authentication?](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
+- [Erstellen Sie noch heute Ihr kostenloses Azure-Konto.](https://azure.microsoft.com/free/)

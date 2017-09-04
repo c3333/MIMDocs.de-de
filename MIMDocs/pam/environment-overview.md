@@ -2,21 +2,21 @@
 title: "Übersicht über die PAM-Umgebung | Microsoft Docs"
 description: "Ermitteln der erforderlichen Anzahl und der erforderlichen Konfiguration virtueller Computer für eine erfolgreiche Bereitstellung von Privileged Access Management"
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 08/31/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3e6c5a70c6b9ed140a56135676bbd14a84504317
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 3be2e19673a863098739e830d9c83ce264abf412
+ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="environment-overview"></a>Übersicht über die Umgebung
 
@@ -24,9 +24,14 @@ Privileged Access Management (PAM) arbeitet mit virtuellen Computern (VMs) mit s
 
 ![PAM-Server: Beziehungen und unterstützte Plattformen – Diagramm](media/pam-test-lab-architecture.png)
 
-Sie benötigen mindestens drei virtuelle Computer.  Wenn Sie nicht bereits eine AD-Domäne haben, die PAM verwalten kann, benötigen Sie einen zusätzlichen virtuellen Computer als CORP-Domänencontroller.  Wenn Sie die PRIV-Software für hohe Verfügbarkeit konfigurieren möchten, benötigen Sie außerdem zwei zusätzliche virtuelle Computer.
+Sie benötigen mindestens drei virtuelle Computer.  Wenn Sie noch nicht über eine AD-Domäne verfügen, die über PAM verwaltet werden kann, benötigen Sie einen zusätzlichen virtuellen Computer als CORP-Domänencontroller.  Wenn Sie die PRIV-Software für hohe Verfügbarkeit konfigurieren möchten, benötigen Sie zwei zusätzliche virtuelle Computer.
 
-Die Laufwerke, auf denen die Datenträgerimages der virtuellen Computer gespeichert werden, müssen mindestens 120 GB freien Speicherplatz haben, um alle virtuellen Computer aufzunehmen.  Stellen Sie bei einer Bereitstellung für hohe Verfügbarkeit sicher, dass das Datenträgersubsystem die Anforderungen für freigegebenen SQL-Speicher erfüllt.  Der freigegebene Speicher kann in Form von Windows Server Failover Clustering-Clusterdatenträgern, Datenträgern auf einem Storage Area Network (SAN) oder Dateifreigaben auf einem SMB-Server vorliegen. Beachten Sie, dass diese der geschützten Umgebung zugewiesen werden müssen. Freigeben von Speicher für andere Workloads außerhalb der geschützten Umgebung wird nicht empfohlen, da die Integrität der geschützten Umgebung gefährdet werden könnte.
+Auf den Laufwerken, auf denen die Datenträgerimages der virtuellen Computer gespeichert werden, müssen mindestens 120 GB Speicherplatz verfügbar sein.  Stellen Sie bei einer Bereitstellung für hohe Verfügbarkeit sicher, dass das Datenträgersubsystem die Anforderungen für freigegebenen SQL-Speicher erfüllt.  Der freigegebene Speicher kann in Form von Windows Server Failover Clustering-Clusterdatenträgern, Datenträgern auf einem Storage Area Network (SAN) oder Dateifreigaben auf einem SMB-Server vorliegen.
 
-> [!NOTE]
-> Diese MIM-CTP-Version (Customer Technical Preview, technische Vorschau für Kunden) ist nicht mit den Datenbank- oder Verzeichnisinhalten der vorherigen CTP-Version kompatibel. Wenn Sie zuvor bereits MIM für PAM oder andere Szenarien ausgewertet haben, sichern und archivieren Sie die für diesen Test verwendeten virtuellen Computer, und starten Sie die Bereitstellung mit neuen Images von virtuellen Computern, die nicht bereits für MIM-Szenarien verwendet wurden.
+>[!IMPORTANT]
+Der geschützten Umgebung muss Speicher zugewiesen sein. Das Freigeben von Speicher für andere Workloads außerhalb der geschützten Umgebung wird nicht empfohlen, da die Integrität der geschützten Umgebung gefährdet werden könnte.
+
+## <a name="next-steps"></a>Nächste Schritte
+
+- [Privileged Access Management für Active Directory Domain Services](privileged-identity-management-for-active-directory-domain-services.md) ist eine Übersicht über PAM und dessen Funktionsweise.
+- [Verstehen der Komponenten von PAM](principles-of-operation.md) bietet eine Übersicht über die verschiedenen PAM-Komponenten.

@@ -2,21 +2,21 @@
 title: "Definieren von privilegierten Rollen für PAM | Microsoft Docs"
 description: "Entscheiden Sie, welche privilegierten Rollen verwaltet werden sollen, und legen Sie die Verwaltungsrichtlinie für jede fest."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 08/31/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 807ee44c23f367c33b820251012008324bb2c005
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: cfd7c5bee0038740db0ad526072ec248ed9f221d
+ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Definieren von Rollen für Privileged Access Management
 
@@ -24,7 +24,11 @@ Mit Privileged Access Management können Sie Benutzern privilegierte Rollen zuwe
 
 Ein einfaches Verfahren zum Definieren von Rollen für Privileged Access Management ist, alle Informationen in einer Kalkulationstabelle zu kompilieren. Listen Sie die Rollen in den Rollen auf, und verwenden Sie die Spalten, um Berechtigungen und Governanceanforderungen zu identifizieren.
 
-Die Governanceanforderungen variieren je nach bestehender Identität und bestehenden Zugriffsrichtlinien oder Complianceanforderungen. Die für jede Rolle zu identifizierenden Parameter umfassen beispielsweise den Besitzer der Rolle und der Kandidatenbenutzer, denen diese Rolle zugewiesen werden kann, und welche Steuerelemente zur Authentifizierung, Genehmigung oder Benachrichtigung mit der Verwendung der Rolle verknüpft werden sollen.
+Die Governanceanforderungen variieren je nach vorhandener Identität und bestehenden Zugriffsrichtlinien oder Complianceanforderungen. Folgende Parameter müssen u.a. für jede Rolle identifiziert werden:
+
+- Der Besitzer der Rolle.
+- Die Kandidatenbenutzer, die sich in der Rolle befinden können.
+- Die Steuerelemente für Authentifizierung, Genehmigung oder Benachrichtigung, die der Verwendung der Rolle zugeordnet werden sollten.
 
 Die Rollenberechtigungen hängen von den verwalteten Anwendungen ab. In diesem Artikel wird Active Directory als Beispielanwendung verwendet. Die Berechtigungen sind hier in zwei Kategorien unterteilt:
 
@@ -38,9 +42,9 @@ Starten Sie mit dem Identifizieren aller Rollen, die Sie möglicherweise mit PAM
 
 Berücksichtigen Sie jede Anwendung im Bereich der Verwaltung, um die entsprechenden Rollen zu suchen:
 
-- Befindet sich die Anwendung in Ebene 0, 1 oder 2?  
-- Welche Berechtigungen beeinflussen die Vertraulichkeit, Integrität oder Verfügbarkeit der Anwendung?  
-- Bestehen möglicherweise Abhängigkeiten zwischen der Anwendung und anderen Komponenten des Systems, z. B. Datenbanken, Netzwerk- oder Sicherheitsinfrastruktur bzw. Virtualisierungs- oder Hostingplattform?
+- Befindet sich die Anwendung auf [Ebene 0, 1 oder 2](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)?
+- Welche Berechtigungen beeinflussen die Vertraulichkeit, Integrität oder Verfügbarkeit der Anwendung?
+- Bestehen für die Anwendung Abhängigkeiten mit anderen Komponenten des Systems? Bestehen z.B. Abhängigkeiten mit Datenbanken, Netzwerkfunktionen, Sicherheitsinfrastrukturen, Virtualisierung oder der Hostingplattform?
 
 Bestimmen Sie, wie diese zu berücksichtigenden Aspekte der App gruppiert werden sollen. Sie wünschen Rollen, die klare Grenzen aufweisen, und nur genügend Berechtigungen zum Ausführen von Verwaltungsaufgaben innerhalb der App bieten.
 
@@ -80,15 +84,15 @@ Füllen Sie beim Bestimmen der möglichen Rollen die Tabelle aus. Erstellen Sie 
 
 ## <a name="select-an-access-method"></a>Auswählen einer Zugriffsmethode
 
-Möglicherweise sind in einem Privileged Access Management-System mehrere Rollen vorhanden, denen die gleichen Berechtigungen zugewiesen sind, wenn für verschiedene Benutzergruppen unterschiedliche Governance-Anforderungen für den Zugriff vorliegen. Beispielsweise können in einer Organisation andere Richtlinien für Vollzeitmitarbeiter gelten als für externe IT-Mitarbeiter einer anderen Organisation.
+In einem PAM-System können mehrere Rollen mit den gleichen Berechtigungen existieren. Dies kann vorkommen, wenn in verschiedenen Benutzergruppen unterschiedliche Governanceanforderungen in Bezug auf den Zugriff vorliegen. Beispielsweise können in einer Organisation andere Richtlinien für Vollzeitmitarbeiter gelten als für externe IT-Mitarbeiter einer anderen Organisation.
 
-In einigen Fällen kann ein Benutzer dauerhaft einer Rolle zugewiesen sein und daher keine Rollenzuweisung anfordern oder aktivieren müssen. Beispiele für Szenarios mit dauerhafter Rollenzuweisung:
+In einigen Fällen kann ein Benutzer dauerhaft einer Rolle zugewiesen sein. In diesem Fall müssen diese Benutzer keine Rollenzuweisung anfordern oder aktivieren. Beispiele für Szenarios mit dauerhafter Rollenzuweisung:
 
-- Ein verwaltetes Dienstkonto in einer vorhandenen Gesamtstruktur
+- Ein verwaltetes Dienstkonto in einer vorhandenen Gesamtstruktur.
 
-- Ein Benutzerkonto in der vorhandenen Gesamtstruktur, dessen Anmeldeinformationen außerhalb von PAM verwaltet werden (z. B. ein Notfallkonto („Break-Glass-Konto“), dem eine Rolle wie „Wartung Domäne/DC“ für die Behebung von Vertrauensstellungs- und DC-Integritätsproblemen mit einem physisch gesicherten Kennwort dauerhaft zugewiesen ist)
+- Ein Benutzerkonto in der vorhandenen Gesamtstruktur mit Anmeldeinformationen, die außerhalb von PAM verwaltet werden. Hierbei kann es sich um ein Notfallkonto handeln. Das Notfallkonto benötigt möglicherweise eine Rolle wie z.B. „Domänen-/Domänencontrollerverwaltung“, um Probleme mit der Vertrauensstellung und Domänencontrollerintegrität zu beheben. Als Notfallkonto wird diesem die Rolle mit einem physisch gesicherten Kennwort dauerhaft zugewiesen.
 
-- Ein Benutzerkonto in der administrativen Gesamtstruktur, bei dem die Authentifizierung mit einem Kennwort erfolgt (z. B. ein Benutzer, der Administratorberechtigungen rund um die Uhr benötigt und sich über ein Gerät anmeldet, das keine strenge Authentifizierung unterstützt)
+- Ein Benutzerkonto in der administrativen Gesamtstruktur, das sich mit einem Kennwort authentifiziert. Hierbei kann es sich um einen Benutzer handeln, der dauerhaft rund um die Uhr Administratorrechte benötigt und sich über ein Gerät anmeldet, das keine starke Authentifizierung unterstützt.
 
 - Ein Benutzerkonto in der administrativen Gesamtstruktur mit einer Smartcard oder virtuellen Smartcard (z. B. ein Konto mit einer Offline-Smartcard für seltene Wartungsaufgaben)
 
@@ -96,14 +100,15 @@ Für Organisationen, die in Bezug auf den möglichen Diebstahl oder Missbrauch v
 
 ## <a name="delegate-active-directory-permissions"></a>Delegieren von Berechtigungen für Active Directory
 
-Windows Server erstellt automatisch Standardgruppen, wie z. B. „Domänen-Admins“, wenn neue Domänen erstellt werden. Diese Gruppen vereinfachen erste Schritte und sind möglicherweise für kleinere Organisationen eignet. Allerdings sollten größere Organisationen oder diejenigen, die mehr Isolation von Administratorrechten benötigen, Gruppen wie „Domänen-Admins“ leeren und sie mit Gruppen ersetzen, die differenziertere Berechtigungen bereitstellen.
+Windows Server erstellt automatisch Standardgruppen, wie z. B. „Domänen-Admins“, wenn neue Domänen erstellt werden. Diese Gruppen vereinfachen erste Schritte und sind möglicherweise für kleinere Organisationen eignet. Größere Organisationen oder Organisationen, die mehr Isolation von Administratorrechten benötigen, sollten diese Gruppen leeren und durch Gruppen ersetzen, die differenziertere Berechtigungen bereitstellen.
 
-Eine Einschränkung der Gruppe „Domänen-Admins“ besteht darin, dass Mitglieder einer externen Domäne nicht zulässig sind. Eine weitere Einschränkung ist, dass Berechtigungen für drei separate Funktionen gewährt werden:  
-- Verwalten des Active Directory-Diensts selbst  
-- Verwalten der in Active Directory gespeicherten Daten  
+Eine Einschränkung der Gruppe „Domänen-Admins“ besteht darin, dass Mitglieder einer externen Domäne nicht zulässig sind. Eine weitere Einschränkung ist, dass Berechtigungen für drei separate Funktionen gewährt werden:
+
+- Verwalten des Active Directory-Diensts selbst
+- Verwalten der in Active Directory gespeicherten Daten
 - Ermöglichen der Remoteanmeldung bei Computern, die in die Domäne eingebunden sind.
 
-Erstellen Sie anstelle von Standardgruppen wie „Domänen-Admins“ neue Sicherheitsgruppen, die nur die erforderlichen Berechtigungen umfassen, und stellen Sie mit MIM dynamisch Administratorkonten mit diesen Gruppenmitgliedschaften bereit.
+Erstellen Sie anstatt der Standardgruppen wie „Domänenadministratoren“ neue Sicherheitsgruppen, die nur die erforderlichen Berechtigungen bereitstellen. Dann sollten Sie MIM verwenden, um Administratorkonten mit diesen Gruppenmitgliedschaften dynamisch bereitzustellen.
 
 ### <a name="service-management-permissions"></a>Dienstverwaltungsberechtigungen
 
@@ -111,7 +116,7 @@ Die folgende Tabelle enthält Beispiele für Berechtigungen, die relevant für R
 
 | Role-Eigenschaft | Beschreibung |
 | ---- | ---- |
-| Wartung Domäne/DC | Mitgliedschaft in der Gruppe „Domäne\Administratoren“ mit folgenden Berechtigungen: Problembehandlung und Ändern des Domänencontroller-Betriebssystems, Heraufstufen eines neuen Domänencontrollers in einer vorhandenen Domäne in der Gesamtstruktur und Delegierung der Active Directory-Rollen.
+| Wartung Domäne/DC | Die Mitgliedschaft in der Gruppe „Domäne\Administratoren“ ermöglicht die Problembehandlung und die Änderung des Betriebssystems auf dem Domänencontroller. Vorgänge wie das Höherstufen eines neuen Domänencontrollers in eine vorhandene Domäne in der Gesamtstruktur und das Delegieren von AD-Rollen.
 |Virtuelle DCs verwalten | Verwalten der virtuellen Computer (VMs) des Domänencontrollers (DC) mithilfe der Virtualization Management-Software. Diese Berechtigung kann über Vollzugriff auf alle virtuellen Computer im Management-Tool oder mit der Funktion der rollenbasierten Zugriffskontrolle (RBAC) gewährt werden. |
 | Schema erweitern | Verwalten des Schemas, z. B. Hinzufügen neuer Objektdefinitionen, Ändern von Berechtigungen für Schemaobjekte und Ändern von Schemastandardberechtigungen für Objekttypen |
 | Active Directory-Datenbank sichern | Erstellen einer Sicherungskopie der gesamten Active Directory-Datenbank, einschließlich aller geheimen Schlüssel für den Domänencontroller und die Domäne. |
@@ -125,7 +130,7 @@ Die folgende Tabelle enthält Beispiele für Berechtigungen, die relevant für R
 
 Die folgende Tabelle enthält Beispiele für Berechtigungen, die relevant für Rollen zur Verwaltung oder Verwendung der in AD gespeicherten Daten sind.
 
-| Rolle | Beschreibung |
+| Role-Eigenschaft | Beschreibung |
 | ---- | ---- |
 | Admin-OE der Ebene 1 ändern                 | Ändern von Organisationseinheiten, die Admin-Objekte der Ebene 1 enthalten, in Active Directory |
 | Admin-OE der Ebene 2 ändern                 | Ändern von Organisationseinheiten, die Admin-Objekte der Ebene 2 enthalten, in Active Directory |
@@ -139,7 +144,7 @@ Die folgende Tabelle enthält Beispiele für Berechtigungen, die relevant für R
 
 ## <a name="example-role-definitions"></a>Beispiele für Rollendefinitionen
 
-Die Auswahl der Rollendefinitionen hängt von der Ebene der Server ab, die über die privilegierten Konten verwaltet werden. Sie hängt außerdem von der Auswahl der verwalteten Anwendungen ab, da Anwendungen wie Exchange oder Enterprise-Produkte von Drittanbietern wie SAP häufig über ihre eigenen zusätzlichen Rollendefinitionen für die delegierte Administration verfügen.
+Die Auswahl der Rollendefinitionen richtet sich nach der Ebene der Server, die verwaltet werden. Auch die Auswahl der verwalteten Anwendungen spielt eine Rolle. Anwendungen wie Exchange oder Unternehmensprodukte von Drittanbietern wie SAP verfügen häufig über ihre eigenen zusätzlichen Rollendefinitionen für die delegierte Verwaltung.
 
 Die folgenden Abschnitte enthalten Beispiele für typische Enterprise-Szenarios.
 
@@ -199,3 +204,8 @@ Rollen für Benutzer ohne Administratorrechte und zur Computerverwaltung können
 - Helpdesk
 - Administratoren für Sicherheitsgruppen
 - Deskside-Support für Arbeitsstationen
+
+## <a name="next-steps"></a>Nächste Schritte
+
+- [Schützen des privilegierten Zugriffs – Referenzmaterial](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)
+- [Verwenden von Azure MFA zur Aktivierung](use-azure-mfa-for-activation.md)

@@ -2,29 +2,29 @@
 title: Ebenenmodell der PAM-Umgebung | Microsoft Docs
 description: "Erfahren Sie mehr zum Ebenenmodell, das Ihr System auf Grundlage seiner Risikoanfälligkeit unterteilt."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 08/30/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 4c3b43e50403890572e77773191a821cf247269c
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: b6598857d5704accbee461366838bb8efb9b2fc0
+ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="tier-model-for-partitioning-administrative-privileges"></a>Ebenenmodell zur Partitionierung von Administratorrechten
 
-Angesichts der heutigen Bedrohungslage lautet die Frage nicht, ob ein Angreifer sich Zugriff auf Ihre Systeme verschaffen kann, sondern wann. Das bedeutet, dass die interne Sicherheit genauso wichtig ist wie eine starke Verteidigung im Umkreis. Dieser Artikel beschreibt ein Sicherheitsmodell, das vor einer Erweiterung von Rechten schützt, indem Aktivitäten mit hohen Berechtigungen von Zonen mit hohen Risiken getrennt werden. Dieses Modell setzt bewährte Methoden und Sicherheitsprinzipien um und sorgt dennoch für ein angenehmes Benutzererlebnis.
+Dieser Artikel beschreibt ein Sicherheitsmodell, das vor einer Erweiterung von Rechten schützt, indem Aktivitäten mit hohen Berechtigungen von Zonen mit hohen Risiken getrennt werden. Dieses Modell setzt bewährte Methoden und Sicherheitsprinzipien um und sorgt dennoch für ein angenehmes Benutzererlebnis.
 
 ## <a name="elevation-of-privilege-in-active-directory-forests"></a>Rechteerweiterung in Active Directory-Gesamtstrukturen
 
-Benutzer, Dienste oder Anwendungskonten, denen dauerhaft Administratorrechte für Windows Server-Active Directory-Gesamtstrukturen gewährt werden, stellen ein großes Risiko für die Arbeit und die Geschäfte von Organisationen dar. Diese Konten sind häufig das Ziel von Angreifern, da ein Angreifer im Erfolgsfall die Berechtigung zum Herstellen einer Verbindung mit anderen Servern oder Anwendungen in der Domäne erhält.
+Benutzer, Dienste oder Anwendungskonten, denen dauerhaft Administratorrechte für Windows Server-Active Directory-Gesamtstrukturen gewährt werden, stellen ein großes Risiko für die Arbeit und die Geschäfte von Organisationen dar. Diese Konten sind häufig das Ziel von Angreifern, da ein Angreifer im Erfolgsfall Berechtigungen zum Herstellen einer Verbindung mit anderen Servern oder Anwendungen in der Domäne erhält.
 
 Das Ebenenmodell erstellt verschiedene Abteilungen für Administratoren, je nachdem, welche Ressourcen ein Administrator verwaltet. Administratoren, die Benutzerarbeitsstationen steuern, werden von Administratoren getrennt, die Anwendungen steuern oder Unternehmensidentitäten verwalten. Informationen zu diesem Modell finden Sie unter [Securing privileged access reference material](http://aka.ms/tiermodel) (Referenzmaterial zur Sicherung des privilegierten Zugriffs).
 
@@ -48,13 +48,16 @@ Anmeldebeschränkungen sollten erzwungen werden, um sicherzustellen, dass Konten
 
 Anmeldebeschränkungen können durch Folgendes erzwungen werden:
 
-- Einschränkungen für Anmeldungen per Gruppenrichtlinie, einschließlich der folgenden:  
-    - Zugriff vom Netzwerk auf diesen Computer verweigern  
-    - Anmelden als Batchauftrag verweigern  
-    - Anmelden als Dienst verweigern  
-    - Lokal anmelden verweigern  
+- Einschränkungen für Anmeldungen per Gruppenrichtlinie, einschließlich der folgenden:
+    - Zugriff vom Netzwerk auf diesen Computer verweigern
+    - Anmelden als Batchauftrag verweigern
+    - Anmelden als Dienst verweigern
+    - Lokal anmelden verweigern
     - Anmelden über Remotedesktopeinstellungen verweigern  
 - Authentifizierungsrichtlinien und Silos bei Verwendung von Windows Server 2012 oder höher
 - Ausgewählte Authentifizierung, wenn das Konto Mitglied einer dedizierten administrativen Gesamtstruktur ist
 
-Das nächste Dokument, [Planen einer geschützten Umgebung](planning-bastion-environment.md), beschreibt das Hinzufügen einer dedizierten administrativen Gesamtstruktur für Microsoft Identity Manager zum Einrichten administrativer Konten.
+## <a name="next-steps"></a>Nächste Schritte
+
+- Das nächste Dokument, [Planen einer geschützten Umgebung](planning-bastion-environment.md), beschreibt das Hinzufügen einer dedizierten administrativen Gesamtstruktur für Microsoft Identity Manager zum Einrichten administrativer Konten.
+- [Arbeitsstationen mit privilegiertem Zugriff](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) (Privileged Access Workstations, PAWs) stellen ein dediziertes Betriebssystem für sensible Aufgaben bereit, das vor Angriffen aus dem Internet und Bedrohungsvektoren geschützt ist.
