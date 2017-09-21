@@ -5,15 +5,15 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/06/2017
+ms.date: 09/14/2017
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 0db8c2ebaee204c929dc7345ac6858fff6b0993b
-ms.sourcegitcommit: f29f02fa8437fa55e86afd7b0b99a36d2306b96b
+ms.openlocfilehash: 45054799cdc8bbe6d39fa2beb28e69d13cace031
+ms.sourcegitcommit: ed8dd5563e77ef4a3345b2a52a1426859c95576a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="microsoft-bhold-suite-concepts-guide"></a>Konzepthandbuch für Microsoft BHOLD Suite
 
@@ -23,14 +23,14 @@ Microsoft BHOLD Suite erweitert diese Funktionen von MIM durch Hinzufügen der r
 
 Dieser Leitfaden bietet Ihnen einen Überblick darüber, wie BHOLD Suite mit MIM arbeitet und umfasst die folgenden Themen:
 
-- Rollenbasierte Zugriffsteuerung
+- Rollenbasierte Zugriffssteuerung
 - Nachweis
 - Analyse
 - Berichterstellung
 - Zugriffsverwaltungsconnector
 - MIM-Integration
 
-## <a name="role-based-access-control"></a>Rollenbasierte Zugriffsteuerung
+## <a name="role-based-access-control"></a>Rollenbasierte Zugriffssteuerung
 
 Die häufigste Methode für das Steuern von Benutzerzugriff auf Daten und Anwendungen ist die besitzverwaltete Zugriffskontrolle (Discretionary Access Control, DAC). In den am häufigsten verwendeten Implementierungen verfügt jedes wichtige Objekt über einen festgelegten Besitzer. Der Besitzer kann den Zugriff auf das Objekt basierend auf einzelnen Identitäten oder Gruppenmitgliedschaften für andere Benutzer gewähren oder verweigern. In der Praxis resultiert DAC üblicherweise in einer Fülle von Sicherheitsgruppen. Einige davon stellen Organisationsstrukturen dar, andere funktionale Gruppierungen (z.B. Auftragstypen oder Projektzuweisungen) und andere bestehen aus provisorischen Sammlungen von Benutzern und Geräten, die für temporäre Zwecke verknüpft sind. Wenn Organisationen wachsen, wird die Verwaltung der Mitgliedschaft in diesen Gruppen zunehmend schwieriger. Wenn ein Mitarbeiter zum Beispiel von einem Projekt auf ein anderes übertragen wird, müssen die Gruppen, die für das Steuern des Zugriffs auf die Projektressourcen verwendet werden, manuell aktualisiert werden. In solchen Fällen ist es nicht ungewöhnlich, dass Fehler auftreten, die die Projektsicherheit oder Produktivität beeinträchtigen können.
 
@@ -47,7 +47,7 @@ Ein zusätzlicher Vorteil von RBAC ist die Möglichkeit, die Trennung von Aufgab
 Mit BHOLD Suite können Sie Rollen innerhalb Ihrer Organisation angeben und organisieren, Benutzern Rollen zuweisen und Rollen die geeigneten Berechtigungen zuweisen. Diese Struktur wird als Rollenmodell bezeichnet. Es enthält und verbindet fünf Objekttypen: 
 
 - Organisationseinheiten
-- Benutzer
+- Users
 - Rollen
 - Berechtigungen
 - Anwendungen
@@ -73,7 +73,7 @@ In diesem Beispiel gehört jeder Verkaufsmitarbeiter zu zwei Organisationseinhei
 
 OrgUnits können in BHOLD Suite erstellt werden, indem das BHOLD Core-Webportal oder der BHOLD-Modellgenerator verwendet wird.
 
-#### <a name="users"></a>Benutzer
+#### <a name="users"></a>Users
 
 Wie bereits erwähnt, muss jeder Benutzer mindestens einer Organisationseinheit (OrgUnit) angehören. Da Organisationseinheiten den wichtigsten Mechanismus darstellen, um einem Benutzer Rollen zuzuweisen, gehört ein bestimmter Benutzer in den meisten Organisationen mehreren OrgUnits an, um das Zuweisen von Rollen zu diesem Benutzer zu vereinfachen. In einigen Fällen kann es jedoch erforderlich sein, einem Benutzer eine Rolle zuzuweisen, die von den OrgUnits, denen der Benutzer angehört, ausgenommen ist. Folglich kann ein Benutzer direkt einer Rolle zugewiesen werden und Rollen von den OrgUnits erhalten, denen dieser angehört.
 
@@ -213,7 +213,7 @@ Das BHOLD-Analyseportal ermöglicht es Ihnen, Regelsätze zu erstellen, die aus 
 
 Eine Regel kann folgende Elementgruppen testen:
 
-- Benutzer
+- Users
 - Organisationseinheiten
 - Rollen
 - Berechtigungen
@@ -232,7 +232,7 @@ Jeder Filter besteht aus einem Typ, einem Operator (der typabhängig ist), einem
 |   |   |   |   |   |
 |---|---|---|---|---|
 |**Typ:**   | Anzahl von   |
-| **Schlüssel:**  | Benutzer  |
+| **Schlüssel:**  | Users  |
 | **Operator**  | >  |
 | **Wert:** | 10 |
 
@@ -260,7 +260,7 @@ Wenn Sie beispielsweise die Implementierung einer Richtlinie für die Trennung v
 |   |  |
 |---|--|
 |Name:| SoD-Test für Zahlungen|
-|Element:| Benutzer|
+|Element:| Users|
 |Teilmengenfilter:| Besitzt eine Berechtigung für das Anfordern von Zahlungen|
 |Regelfilter: | Kann keine Berechtigung für das Genehmigen von Zahlungen besitzen|
 
@@ -276,7 +276,7 @@ Wenn Ihre Geschäftsrichtlinie beispielsweise erfordert, dass Manager entweder �
 |  |  |
 |--|--|
 |Name: | Ändern des SoD-Tests für Zahlungen|
-|Element: | Benutzer |
+|Element: | Users |
 |Teilmengenfilter: | Besitzt einen Rollen-Manager|
 | Regelfilter: |Muss eine Berechtigung zum Ändern von Zahlungen besitzen </br> Muss eine Berechtigung zum Genehmigen von Zahlungen besitzen|
 
@@ -287,7 +287,7 @@ Im Gegensatz zu anderen Operatoren geben die Operatoren **Besitzt exklusiv eins*
 |  |  |
 |--|--|
 |Name: | Test zum Genehmigen von Reviews|
-|Element: | Benutzer|
+|Element: | Users|
 | Teilmengenfilter: | Besitzt einen Rollen-Manager
 |Regelfilter: | Besitzt exklusiv eine Berechtigung zum Genehmigen von Reviews|
 
@@ -310,7 +310,7 @@ Folgende Kategorien werden von den integrierten Berichten abgedeckt:
 - Nachweis
 - Steuerelemente
 - Innere Zugriffsteuerung
-- Protokollierung
+- Logging
 - Modell
 - Statistiken
 - Workflow
@@ -341,3 +341,7 @@ Ein wichtiges und effektives Feature von Forefront Identity Manager 2010 und For
 Beachten Sie, dass die BHOLD-Erweiterungen für das MIM-Portal die Self-Service-Rollenverwaltung und -Workflowverwaltung sowie die Berichterstellung unterstützt. Andere BHOLD-Verwaltungsfunktionen und der Nachweis werden von den Webportalen der BHOLD-Module bereitgestellt, die separat vom MIM-Portal gehostet werden.
 
 ## <a name="next-steps"></a>Nächste Schritte
+
+- [BHOLD-Installationshandbuch](../deploy-use/bhold-installation-guide.md)
+- [BHOLD-Entwicklerreferenz](../reference/mim2016-bhold-developer-reference.md)
+- [BHOLD-Versionsverlauf](../reference/version-bhold-history.md)

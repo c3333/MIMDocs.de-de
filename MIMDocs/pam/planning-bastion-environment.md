@@ -2,21 +2,21 @@
 title: "Planen einer geschützten Umgebung | Microsoft Docs"
 description: 
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/16/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 402c690b514dce62024f13014c1491433fbd8816
-ms.sourcegitcommit: a0e206fd67245f02d94d5f6c9d606970117dd8ed
+ms.openlocfilehash: 16ad83ab9a0fbe2b93428cf318b5ef138e2f3783
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="planning-a-bastion-environment"></a>Planen einer geschützten Umgebung
 
@@ -166,7 +166,7 @@ Es gibt sieben Anforderungen für die Aktivierung der Verwaltung für eine beste
 
 Es muss eine Gruppe in der vorhandenen Domäne geben, deren Name dem NetBIOS-Domänennamen gefolgt von drei Dollarzeichen entspricht, z. B. *CONTOSO$$$*. Der Gruppenbereich muss *Lokal (in Domäne)* sein, und der Gruppentyp muss *Sicherheit* sein. Dies ist erforderlich, damit in der dedizierten administrativen Gesamtstruktur erstellte Gruppen dieselbe Sicherheits-ID wie Gruppen in dieser Domäne aufweisen. Die Erstellung dieser Gruppe erfolgt mit dem folgenden PowerShell-Befehl – dieser wird von einem Administrator der bestehenden Domäne auf einer Arbeitsstation ausgeführt, die der bestehenden Domäne beigetreten ist:
 
-```
+```PowerShell
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
@@ -194,7 +194,7 @@ Die Gruppenrichtlinieneinstellungen auf dem Domänencontroller für die Überwac
 
 7. Schließen Sie die Fenster „Gruppenrichtlinienverwaltungs-Editor“ und „Gruppenrichtlinienverwaltung“. Wenden Sie dann die Überwachungseinstellungen an, indem Sie ein PowerShell-Fenster starten und Folgendes eingeben:
 
-    ```
+    ```cmd
     gpupdate /force /target:computer
     ```
 
@@ -204,7 +204,7 @@ Die Meldung „Die Aktualisierung der Computerrichtlinie wurde erfolgreich abges
 
 Die Domänencontroller müssen RPC über TCP/IP-Verbindungen für die lokale Sicherheitsautorität (Local Security Authority, LSA) aus der geschützten Umgebung zulassen. Auf älteren Versionen von Windows Server muss die TCP/IP-Unterstützung in LSA in der Registrierung aktiviert werden:
 
-```
+```PowerShell
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
@@ -212,7 +212,7 @@ New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipC
 
 Das Cmdlet `New-PAMDomainConfiguration` muss auf dem Computer des MIM-Diensts in der administrativen Domäne ausgeführt werden. Die Parameter für diesen Befehl sind der Domänenname der bestehenden Domäne und die Anmeldeinformationen eines Administrators dieser Domäne.
 
-```
+```PowerShell
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 

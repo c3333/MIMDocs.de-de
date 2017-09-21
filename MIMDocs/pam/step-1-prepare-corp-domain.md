@@ -2,27 +2,26 @@
 title: "Bereitstellen von PAM – Schritt 1: CORP-Domäne | Microsoft Docs"
 description: "Bereiten Sie die CORP-Domäne mit vorhandenen oder neuen Identitäten vor, die vom Privileged Identity Manager verwaltet werden sollen."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1164e7efb70d911497b08248b68f8d929bc6d3fb
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: d14d2f40972686305abea2426e20f4c13e3e267b
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Schritt 1: Vorbereiten des Hosts und der CORP-Domäne
 
 >[!div class="step-by-step"]
 [Schritt 2 »](step-2-prepare-priv-domain-controller.md)
-
 
 In diesem Schritt bereiten Sie das Hosten der geschützten Umgebung vor. Bei Bedarf erstellen Sie auch einen Domänencontroller und eine Mitgliedsarbeitsstation in einer neuen Domäne und Gesamtstruktur (der Gesamtstruktur *CORP*) mit Identitäten, die durch die geschützte Umgebung verwaltet werden. Die CORP-Gesamtstruktur simuliert eine vorhandene Gesamtstruktur, die zu verwaltende Ressourcen enthält. Dieses Dokument enthält eine Beispielressource, die geschützt werden soll: eine Dateifreigabe.
 
@@ -57,7 +56,7 @@ In diesem Abschnitt fügen Sie die Rollen „Active Directory-Domänendienste (A
 
 2. Geben Sie die folgenden Befehle ein.
 
-  ```
+  ```PowoerShell
   import-module ServerManager
 
   Add-WindowsFeature AD-Domain-Services,DNS,FS-FileServer –restart –IncludeAllSubFeature -IncludeManagementTools
@@ -81,7 +80,7 @@ Melden Sie sich in jeder Domäne als Domänenadministrator bei einem Domänencon
 
 2. Geben Sie die folgenden Befehle ein, aber ersetzen Sie „CONTOSO“ durch den NetBIOS-Namen Ihrer Domäne.
 
-  ```
+  ```PowerShell
   import-module activedirectory
 
   New-ADGroup –name 'CONTOSO$$$' –GroupCategory Security –GroupScope DomainLocal –SamAccountName 'CONTOSO$$$'
@@ -102,7 +101,7 @@ Wir erstellen eine Sicherheitsgruppe namens *CorpAdmins* und einen Benutzer name
 
 2. Geben Sie die folgenden Befehle ein. Ersetzen Sie das Kennwort „Pass@word1“ durch eine andere Kennwortzeichenfolge.
 
-  ```
+  ```PowerShell
   import-module activedirectory
 
   New-ADGroup –name CorpAdmins –GroupCategory Security –GroupScope Global –SamAccountName CorpAdmins
@@ -140,7 +139,7 @@ Melden Sie sich in jeder Domäne als Domänenadministrator bei einem Domänencon
 
 8. Wenden Sie die Überwachungseinstellungen an, indem Sie ein PowerShell-Fenster starten und Folgendes eingeben:
 
-  ```
+  ```cmd
   gpupdate /force /target:computer
   ```
 
@@ -154,7 +153,7 @@ In diesem Abschnitt konfigurieren Sie die Registrierungseinträge für die Migra
 
 2. Geben Sie die folgenden Befehle ein, um die Quelldomäne so zu konfigurieren, dass RPC-Zugriff (Remote Procedure Call, Remoteprozeduraufruf) auf die SAM-Datenbank (Security Accounts Manager, Sicherheitskontenverwaltung) zugelassen wird.
 
-  ```
+  ```PowerShell
   New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 
   Restart-Computer
@@ -193,7 +192,7 @@ Sie benötigen eine Ressource, um die sicherheitsgruppenbasierte Zugriffskontrol
 
 4. Geben Sie die folgenden Befehle ein.
 
-  ```
+  ```PowerShell
   mkdir c:\corpfs
 
   New-SMBShare –Name corpfs –Path c:\corpfs –ChangeAccess CorpAdmins
