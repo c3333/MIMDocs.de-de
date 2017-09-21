@@ -2,21 +2,21 @@
 title: Verstehen der PAM-Komponenten | Microsoft Docs
 description: "Privileged Access Management verfügt über einige der Komponenten von MIM, besitzt aber auch ein paar eigene. Erfahren Sie, wie diese zusammenarbeiten."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 53fe79f251c3b18426f16b4007cda49e67d7b028
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: a129088989bb977c191e9dc372fed07044314403
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="understand-the-components-of-pam"></a>Verstehen der Komponenten von PAM
 
@@ -27,7 +27,7 @@ Durch Privileged Access Management lässt sich der administrative Zugriff von t�
 
 Die für PAM konfigurierte MIM-Lösung umfasst die folgenden Komponenten:  
 
-- **MIM-Dienst**: Implementiert Geschäftslogik zum Ausführen von Identitäts- und Zugriffsverwaltungsvorgängen, einschließlich der privilegierten Kontoverwaltung und Behandlung von Anforderungen zur Rechteerweiterung.   
+- **MIM-Dienst**: Implementiert Geschäftslogik zum Ausführen von Identitäts- und Zugriffsverwaltungsvorgängen, einschließlich der privilegierten Kontoverwaltung und Behandlung von Anforderungen zur Rechteerweiterung.
 - **MIM-Portal**: Ein auf SharePoint basierendes Portal, das von SharePoint 2013 gehostet wird und eine Benutzeroberfläche für die Administratorverwaltung und -konfiguration bereitstellt.
 - **MIM-Dienstdatenbank**: Diese wird in SQL Server 2012 oder 2014 gespeichert und enthält Identitätsdaten und Metadaten, die für den MIM-Dienst erforderlich sind.
 - **PAM-Überwachungsdienst** und **PAM-Komponentendienst**: Zwei Dienste, die den Lebenszyklus von privilegierten Konten verwalten und das PRIV AD hinsichtlich des Lebenszyklus der Gruppenmitgliedschaft unterstützen.

@@ -2,28 +2,27 @@
 title: "Bereitstellen von PAM – Schritt 5: Verknüpfen der Gesamtstrukturen | Microsoft Docs"
 description: "Richten Sie eine Vertrauensstellung zwischen den Gesamtstrukturen von PRIV und CORP ein, sodass berechtigte Benutzer in PRIV weiterhin auf CORP-Ressourcen zugreifen können."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1239ca2c0c6d376420723da01d7aa42821f5980f
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 6d57b09508d4c0834619be0281fb373d9d3d361e
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Schritt 5 – Einrichten einer Vertrauensstellung zwischen den Gesamtstrukturen PRIV und CORP
 
 >[!div class="step-by-step"]
 [« Schritt 4](step-4-install-mim-components-on-pam-server.md)
 [Schritt 6 »](step-6-transition-group-to-pam.md)
-
 
 Für jede CORP-Domäne, z. B. „contoso.local“, müssen die PRIV- und CONTOSO-Domänencontroller durch eine Vertrauensstellung gebunden werden. Dadurch können Benutzer in der PRIV-Domäne auf Ressourcen in der CORP-Domäne zugreifen.
 
@@ -36,7 +35,7 @@ Vor dem Einrichten von Vertrauensstellungen muss jeder Domänencontroller für s
 
 2.  Stellen Sie sicher, dass jeder vorhandene CORP-Domänencontroller Namen an die PRIV-Gesamtstruktur weiterleiten kann. Starten Sie PowerShell auf jedem Domänencontroller außerhalb der PRIV-Gesamtstruktur, z. B. CORPDC, und geben Sie den folgenden Befehl ein:
 
-    ```
+    ```cmd
     nslookup -qt=ns priv.contoso.local.
     ```
     Überprüfen Sie, ob die Ausgabe einen Namenserverdatensatz für die PRIV-Domäne mit der richtigen IP-Adresse anzeigt.
@@ -55,14 +54,14 @@ Richten Sie auf PAMSRV eine unidirektionale Vertrauensstellung mit jeder Domäne
 
 3.  Geben Sie die folgenden PowerShell-Befehle für jede vorhandene Gesamtstruktur ein. Geben Sie nach Aufforderung die Anmeldeinformationen für den CORP-Domänenadministrator (CONTOSO\Administrator) ein.
 
-    ```
+    ```PowerShell
     $ca = get-credential
     New-PAMTrust -SourceForest "contoso.local" -Credentials $ca
     ```
 
 4.  Geben Sie die folgenden PowerShell-Befehle für jede Domäne in den vorhandenen Gesamtstrukturen ein. Geben Sie nach Aufforderung die Anmeldeinformationen für den CORP-Domänenadministrator (CONTOSO\Administrator) ein.
 
-    ```
+    ```PowerShell
     $ca = get-credential
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
@@ -80,9 +79,9 @@ Aktivieren Sie für jede vorhandene Gesamtstruktur den Lesezugriff auf AD für P
 7.  Wählen Sie in der Liste der allgemeinen Aufgaben **Liest alle Benutzerinformationen** aus, und klicken Sie auf **Weiter** und dann auf **Fertig stellen**.  
 8.  Schließen Sie %%amp;quot;Active Directory-Benutzer und -Computer%%amp;quot;.
 
-9.  Öffnen Sie ein PowerShell-Fenster.  
-10.  Verwenden Sie `netdom`, um sicherzustellen, dass der SID-Verlauf aktiviert und die SID-Filterung deaktiviert ist. Typ:  
-    ```
+9.  Öffnen Sie ein PowerShell-Fenster.
+10.  Verwenden Sie `netdom`, um sicherzustellen, dass der SID-Verlauf aktiviert und die SID-Filterung deaktiviert ist. Typ:
+    ```cmd
     netdom trust contoso.local /quarantine /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
     ```
@@ -98,7 +97,7 @@ Aktivieren Sie für jede vorhandene Gesamtstruktur den Lesezugriff auf AD für P
 
 3.  Geben Sie die folgenden PowerShell-Befehle ein.
 
-    ```
+    ```cmd
     net start "PAM Component service"
     net start "PAM Monitoring service"
     ```
