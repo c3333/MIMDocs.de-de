@@ -125,6 +125,7 @@
 #### [Genehmigen oder Ablehnen einer ausstehenden PAM-Anforderung](./reference/privileged-access-management-approve-reject-pending-request.md)
 #### [Abrufen von PAM-Sitzungsinformationen](./reference/privileged-access-management-get-session-info.md)
 ## Technische Referenz
+### [Microsoft Identity Manager 2016 SP1 – Terminologie](./reference/mim-2016-sp1-terms.md)
 ### [XML-Referenz für die Ressourcensteuerungs-Anzeigekonfiguration](./reference/rcd-configuration-xml-reference.md)
 ### [Fehlercodes für den Verwaltungs-Agent](./reference/maerrorcodes.md)
 ### [Funktionsreferenz für Microsoft Identity Manager 2016](./reference/mim2016-functions-reference.md)
