@@ -10,11 +10,11 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 21a2fb4459f46fe0dea89ff016aa77358f940c24
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: 0e039c0b05cc9088a6934c07ead09fb5250f8a81
+ms.sourcegitcommit: 81ad3ede52c3a4308b806c0c8a3fd42b5f5965b0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Bereitstellen von Benutzern in AD DS
 
@@ -294,7 +294,7 @@ In den folgenden Tabellen wird die Konfiguration der erforderlichen Fabrikam-Syn
 
 
  >[!NOTE]
- Wichtig Stellen Sie sicher, dass Sie „Nur erster Fluss“ für den Attributfluss ausgewählt haben, der den definierten Namen als Ziel hat.                                                                          
+Stellen Sie sicher, dass Sie „Nur erster Flow“ für den Attributflow ausgewählt haben, der den definierten Namen als Ziel hat.                                                                          
 
 ### <a name="step-7-create-the-workflow"></a>Schritt 7: Erstellen des Workflows
 
