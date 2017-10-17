@@ -63,7 +63,7 @@ Wenn Sie einen MIM-Verwaltungs-Agent konfigurieren, müssen Sie ein Benutzerkont
 
     -   Benutzername: mimma
 
-    -   Kennwort: Pass@word
+    -   Kennwort: Pass@word 
 
     -   Domäne: contoso
 
