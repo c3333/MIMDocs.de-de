@@ -11,11 +11,11 @@ ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 694ec1e0d6577c4335fd75ab0984aed9a0e4f220
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: fe361c3f6dd85a478d655a910f0f3ec9802128b0
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Microsoft Identity Manager 2016 – Empfohlene Vorgehensweisen
 
@@ -189,8 +189,7 @@ MANUAL
 ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 ```
 
-Es ist wichtig, dass Sie die Datenträgeranforderungen für das Wiederherstellungsmodell des Servers mit SQL Server kennen. Je nach Ihrem Sicherungszeitplan kann der einfache Wiederherstellungsmodus beim ersten Laden des Systems geeignet sein, um die Speicherplatznutzung zu beschränken. Allerdings können so Daten verloren gehen.
-Bei Verwendung des vollständigen Wiederherstellungsmodus müssen Sie die Datenträgerverwendung über Sicherungen verwalten, darunter häufige Sicherungen des Transaktionsprotokolls, um hohe Speicherplatznutzung zu verhindern.
+Es ist wichtig, dass Sie die Datenträgeranforderungen für das Wiederherstellungsmodell des Servers mit SQL Server kennen. Je nach Ihrem Sicherungszeitplan kann der einfache Wiederherstellungsmodus beim ersten Laden des Systems geeignet sein, um die Speicherplatznutzung zu beschränken. Allerdings können so Daten verloren gehen. Bei Verwendung des vollständigen Wiederherstellungsmodus müssen Sie die Datenträgerverwendung über Sicherungen verwalten, darunter häufige Sicherungen des Transaktionsprotokolls, um hohe Speicherplatznutzung zu verhindern.
 
 >[!IMPORTANT]
 Wenn diese Vorgehensweisen nicht umgesetzt werden, kann dies dazu führen, dass nicht mehr genügend Speicherplatz vorhanden ist. Weitere Details zu diesem Thema finden Sie unter [Übersicht über Wiederherstellungsmodelle](http://go.microsoft.com/fwlink/?LinkID=185370). Weitere Informationen finden Sie unter [FIM 2010 Backup and Restore Guide (FIM 2010-Handbuch zur Sicherung und Wiederherstellung)](http://go.microsoft.com/fwlink/?LinkID=165864).
@@ -200,7 +199,6 @@ Wenn diese Vorgehensweisen nicht umgesetzt werden, kann dies dazu führen, dass 
 Beim ersten Laden sollten Sie nur die Mindestkonfiguration anwenden, die erforderlich ist, um FIM für die Management-Richtlinienregeln (Management Policy Rules, MPRs) und Set-Definitionen zu konfigurieren. Erstellen Sie nach Abschluss des Datenladevorgangs die zusätzlichen Sets, die für die Bereitstellung erforderlich sind. Verwenden Sie die Einstellung zum Aktualisieren der Run-On-Richtlinie auf den Aktionsworkflows, um diese Richtlinien nachträglich auf die geladenen Daten anzuwenden.
 
 ### <a name="step-3-configure-and-populate-the-fim-service-with-external-identity-data"></a>Schritt 3: Konfigurieren und Auffüllen des FIM-Diensts mit externen Identitätsdaten
-
 
 An diesem Punkt sollten Sie die Richtlinien unter „How Do I Synchronize Users from Active Directory Domain Services to FIM (Synchronisieren von Benutzern aus Active Directory-Domänendiensten zu FIM)“ befolgen,
 
@@ -224,13 +222,11 @@ Führen Sie für jeden Quellverwaltungs-Agent, der Teil des Initialisierungszykl
 
 ### <a name="step-4-apply-your-full-mim-configuration"></a>Schritt 4: Anwenden der vollständigen MIM-Konfiguration
 
-
 Wenden Sie nach Abschluss des ersten Datenladevorgangs die vollständige MIM-Konfiguration für die Bereitstellung an.
 
 Je nach Szenarios kann dies die Erstellung weiterer Sets, MPRs und Workflows umfassen. Verwenden Sie für alle Richtlinien, die Sie rückwirkend auf alle Objekte im System anwenden müssen, die Einstellung für die Ausführung für Richtlinienaktualisierung auf Aktionsworkflows, um diese Richtlinien rückwirkend auf die geladenen Daten anzuwenden.
 
 ### <a name="step-5-reconfigure-sql-to-previous-settings"></a>Schritt 5: Zurücksetzen von SQL auf vorherige Einstellungen
-
 
 Denken Sie daran, die SQL-Einstellungen in die normalen Einstellungen zu ändern. Dies umfasst u. a.:
 
@@ -267,8 +263,7 @@ Die Migration zwischen Versionsnummern wird zwar weder empfohlen noch unterstüt
 
 ### <a name="avoid-cyclic-references"></a>Vermeiden zyklischer Verweise
 
-Im Allgemeinen werden zyklische Verweise in einer MIM-Konfiguration nicht empfohlen.
-Zyklen treten jedoch manchmal auf, wenn Set A auf Set B verweist und Set B zudem auf Set A verweist. Um Probleme mit zyklischen Verweisen zu vermeiden, sollten Sie die Definition von Set A oder Set B so ändern, sodass nicht beide aufeinander verweisen. Starten Sie den Migrationsvorgang anschließend neu. Wenn zyklische Verweise vorhanden sind und das Cmdlet „Compare-FIMConfig“ deshalb zu einem Fehler führt, muss der Zyklus manuell unterbrochen werden. Da das Cmdlet „Compare-FIMConfig“ eine Liste der Änderungen nach Rangfolge ausgibt, dürfen unter den Verweisen von Konfigurationsobjekten keine Zyklen vorhanden sind.
+Im Allgemeinen werden zyklische Verweise in einer MIM-Konfiguration nicht empfohlen. Zyklen treten jedoch manchmal auf, wenn Set A auf Set B verweist und Set B zudem auf Set A verweist. Um Probleme mit zyklischen Verweisen zu vermeiden, sollten Sie die Definition von Set A oder Set B so ändern, sodass nicht beide aufeinander verweisen. Starten Sie den Migrationsvorgang anschließend neu. Wenn zyklische Verweise vorhanden sind und das Cmdlet „Compare-FIMConfig“ deshalb zu einem Fehler führt, muss der Zyklus manuell unterbrochen werden. Da das Cmdlet „Compare-FIMConfig“ eine Liste der Änderungen nach Rangfolge ausgibt, dürfen unter den Verweisen von Konfigurationsobjekten keine Zyklen vorhanden sind.
 
 ## <a name="security"></a>Sicherheit
 
@@ -394,17 +389,16 @@ Standardmäßig löscht MIM 2016 abgelaufene Systemobjekte einschließlich abges
 
 MIM bietet zwei Arten von MPRs, eine für Anforderungen und eine für den Listenübergang:
 
--   MPR für Anforderungen (RMPR, Request MPR)
+-  MPR für Anforderungen (RMPR, Request MPR)
 
- - Wird verwendet, um die Zugriffssteuerungsrichtlinie (Authentifizierung, Autorisierung und Aktion) für das Erstellen, Lesen, Aktualisieren oder Löschen (CRUD, Create, Read, Update, oder Delete) von Ressourcen zu definieren.
- - Wird angewendet, wenn ein CRUD-Vorgang für eine Zielressource in FIM ausgegeben wird.
-   - Wird begrenzt durch die Auswahlkriterien, die in der Regel definiert sind und angeben, für welche CRUD-Anforderungen die Regel gilt.
+  - Wird verwendet, um die Zugriffssteuerungsrichtlinie (Authentifizierung, Autorisierung und Aktion) für das Erstellen, Lesen, Aktualisieren oder Löschen (CRUD, Create, Read, Update, oder Delete) von Ressourcen zu definieren.
+  - Wird angewendet, wenn ein CRUD-Vorgang für eine Zielressource in FIM ausgegeben wird.
+  - Wird begrenzt durch die Auswahlkriterien, die in der Regel definiert sind und angeben, für welche CRUD-Anforderungen die Regel gilt.
 
-
--   MPR für den Listenübergang (TMPR, Set Transition MPR)
- - Wird verwendet, um Richtlinien zu definieren, und zwar unabhängig davon, wie das Objekt in den aktuellen Status gelangt ist, der durch die Übergangsliste dargestellt wird. Sollte zum Modellieren von Berechtigungsrichtlinien verwendet werden.
- - Wird angewendet, wenn eine Ressource ein zugeordnetes Set betritt oder verlässt.
- - Ist begrenzt auf die Mitglieder des Sets.
+- MPR für den Listenübergang (TMPR, Set Transition MPR)
+  - Wird verwendet, um Richtlinien zu definieren, und zwar unabhängig davon, wie das Objekt in den aktuellen Status gelangt ist, der durch die Übergangsliste dargestellt wird. Sollte zum Modellieren von Berechtigungsrichtlinien verwendet werden.
+  - Wird angewendet, wenn eine Ressource ein zugeordnetes Set betritt oder verlässt.
+  - Ist begrenzt auf die Mitglieder des Sets.
 
 >[HINWEIS] Weitere Informationen finden Sie unter [Designing Business Policy Rules (Entwerfen von Regeln für die Geschäftsrichtlinie)](http://go.microsoft.com/fwlink/?LinkID=183691).
 
@@ -413,18 +407,14 @@ MIM bietet zwei Arten von MPRs, eine für Anforderungen und eine für den Listen
 Verwenden Sie das Prinzip der geringsten Rechte, wenn Sie Ihre Konfiguration anwenden. MPRs kontrollieren die Zugriffsrichtlinie für die FIM-Bereitstellung. Aktivieren Sie nur die Funktionen, die von den meisten Benutzern verwendet werden. Nicht alle Benutzer verwenden zum Beispiel FIM für die Verwaltung von Gruppen, weshalb die entsprechenden MPRs für die Gruppenverwaltung deaktiviert werden sollten. Standardmäßig sind in FIM die meisten Nicht-Administratorberechtigungen deaktiviert.
 
 #### <a name="duplicate-built-in-mprs-instead-of-directly-modifying"></a>Duplizieren integrierter MPRs anstatt direkter Änderung
-
 Wenn Sie die integrierten MPRs ändern müssen, sollten Sie eine neue MPR mit der erforderlichen Konfiguration erstellen und die integrierte MPR deaktivieren. Dadurch wird sichergestellt, dass zukünftige Änderungen an den integrierten MPRs im Rahmen des Upgradevorgangs nicht die Systemkonfiguration beeinträchtigen.
 
 #### <a name="end-user-permissions-should-use-explicit-attribute-lists-scoped-to-users-business-needs"></a>Endbenutzerberechtigungen mit expliziten Attributlisten
-
-Mit expliziten Attributlisten kann verhindert werden, dass versehentlich Berechtigungen an nicht berechtigte Benutzer erteilt werden, wenn Attribute zu Objekten hinzugefügt werden.
-Administratoren sollten explizit Zugriff auf neue Attribute gewähren müssen, anstatt zu versuchen, den Zugriff aufzuheben.
+Mit expliziten Attributlisten kann verhindert werden, dass versehentlich Berechtigungen an nicht berechtigte Benutzer erteilt werden, wenn Attribute zu Objekten hinzugefügt werden. Administratoren sollten explizit Zugriff auf neue Attribute gewähren müssen, anstatt zu versuchen, den Zugriff aufzuheben.
 
 Der Datenzugriff sollte entsprechend den geschäftlichen Anforderungen der Benutzer begrenzt werden. Zum Beispiel sollten Mitglieder einer Gruppe keinen Zugriff auf das Filterattribut der Gruppe haben, in der sie Mitglied sind. Der Filter kann versehentlich Unternehmensdaten enthüllen, auf die der Benutzer normalerweise keinen Zugriff hätte.
 
 #### <a name="mprs-should-reflect-effective-permissions-in-the-system"></a>MPRs sollten effektiven Berechtigungen entsprechen
-
 Vermeiden Sie es, Berechtigungen für Attribute zu erteilen, die der Benutzer nie verwenden kann. Sie sollten zum Beispiel keine Berechtigung zum Ändern von Kernressourcenattributen wie „objectType“ erteilen. Trotz der MPR wird vom System jeder Versuch verweigert, den Typ einer Ressource nach der Erstellung zu ändern.
 
 #### <a name="read-permissions-should-be-separate-from-modify-and-create-permissions-when-using-explicit-attributes-in-mprs"></a>Trennung von Leseberechtigungen und Berechtigungen zum Ändern und Erstellen
@@ -443,12 +433,9 @@ Für alle Attribute mit den gleichen erforderlichen Zugriffsberechtigungen, die 
 
 In FIM werden Berechtigungen als positive Assertion definiert. FIM unterstützt das Verweigern von Berechtigungen nicht. Wenn uneingeschränkter Zugriff auf eine Ressource gewährt wird, können deshalb nur sehr schwer Ausnahmen in den Berechtigungen gemacht werden. Deshalb wird empfohlen, nur die erforderlichen Berechtigungen zu gewähren.
 
->[!NOTE]
-Ein Abschnitt zu Berechtigungen folgt weiter unten. zusammenführen
 #### <a name="use-tmprs-to-define-custom-entitlements"></a>Verwenden von TMPRs zum Definieren benutzerdefinierter Berechtigungen
 
-Verwenden Sie MPRs für den Listenübergang (TMPRs) anstatt RMPRs, um benutzerdefinierte Berechtigungen zu definieren.
-TMPRs bieten ein zustandsbasiertes Modell zum Zuweisen oder Entfernen von Berechtigungen, die auf der Mitgliedschaft in den definierten Übergangslisten oder -rollen sowie den zugehörigen Workflowaktivitäten basieren. TMPRs sollten immer paarweise definiert werden, eine für jede Richtung des Ressourcenübergangs. Darüber hinaus sollte jede MPR für den Übergang getrennte Workflows für die Bereitstellung und Aufhebung von Aktivitäten enthalten.
+Verwenden Sie MPRs für den Listenübergang (TMPRs) anstatt RMPRs, um benutzerdefinierte Berechtigungen zu definieren. TMPRs bieten ein zustandsbasiertes Modell zum Zuweisen oder Entfernen von Berechtigungen, die auf der Mitgliedschaft in den definierten Übergangslisten oder -rollen sowie den zugehörigen Workflowaktivitäten basieren. TMPRs sollten immer paarweise definiert werden, eine für jede Richtung des Ressourcenübergangs. Darüber hinaus sollte jede MPR für den Übergang getrennte Workflows für die Bereitstellung und Aufhebung von Aktivitäten enthalten.
 
 >[!NOTE]
 Jeder Aufhebungsworkflow sollte sicherstellen, dass das Attribut „Für Richtlinienaktualisierung ausführen“ auf „TRUE“ festgelegt ist.
@@ -461,8 +448,7 @@ Wenn Sie ein TMPR-Paar erstellen, sollten Sie die TMPR für den Eingang zuletzt 
 
 Bereitstellungsworkflows sollten zunächst überprüfen, ob bereits eine Bereitstellung an die Zielressource gemäß der Berechtigung erfolgt ist. Wenn dies der Fall ist, sollte der Workflow nichts unternehmen.
 
-Aufhebungsworkflows sollten zunächst überprüfen, ob eine Bereitstellung an die Zielressource erfolgt ist. Wenn dies der Fall ist, sollte der Workflow die Bereitstellung an die Zielressource aufheben.
-Andernfalls sollte der Workflow nichts unternehmen.
+Aufhebungsworkflows sollten zunächst überprüfen, ob eine Bereitstellung an die Zielressource erfolgt ist. Wenn dies der Fall ist, sollte der Workflow die Bereitstellung an die Zielressource aufheben. Andernfalls sollte der Workflow nichts unternehmen.
 
 #### <a name="select-run-on-policy-update-for-tmprs"></a>Auswählen von „Für Richtlinienaktualisierung ausführen“ für TMPRs
 
@@ -494,19 +480,17 @@ So entfernen Sie eine Berechtigung ohne Auswirkung auf die derzeitigen Mitgliede
 
 ### <a name="sets"></a>Festlegungen
 
-Wenn Sie die empfohlenen Vorgehensweisen für Sets anwenden, sollten Sie die Auswirkung der Optimierungen auf die zukünftige Verwaltbarkeit berücksichtigen.
-Bevor diese Empfehlungen angewendet werden, sollten entsprechende Tests für die erwartete Produktion durchgeführt werden, um das richtige Gleichgewicht zwischen Leistung und Verwaltbarkeit zu finden.
+Wenn Sie die empfohlenen Vorgehensweisen für Sets anwenden, sollten Sie die Auswirkung der Optimierungen auf die zukünftige Verwaltbarkeit berücksichtigen. Bevor diese Empfehlungen angewendet werden, sollten entsprechende Tests für die erwartete Produktion durchgeführt werden, um das richtige Gleichgewicht zwischen Leistung und Verwaltbarkeit zu finden.
 
 >[!NOTE]
-Alle folgenden Richtlinien gelten für dynamische Sets und dynamische Gruppen.
+> Alle folgenden Richtlinien gelten für dynamische Sets und dynamische Gruppen.
 
 
 #### <a name="minimize-the-use-of-dynamic-nesting"></a>Minimieren dynamischer Schachtelung
 
 Dies bezieht sich auf den Filter eines Sets, das auf das Attribut „ComputedMember“ eines anderen Sets verweist. Häufig werden Sets geschachtelt, um das Duplizieren einer Mitgliedschaftsbedingung für mehrere Sets zu vermeiden. Dieser Ansatz kann zwar eine bessere Verwaltung der Sets ermöglichen, beeinträchtigt aber auch die Leistung. Sie können die Leistung optimieren, indem Sie die Mitgliedschaftsbedingungen eines geschachtelten Sets duplizieren, anstatt das Set selbst zu verschachteln.
 
-Es kann jedoch vorkommen, dass Sie Sets verschachteln müssen, um eine funktionale Anforderung zu erfüllen. Dies sind die vorrangigen Situationen, in denen Sie Sets schachteln sollten. Wenn Sie zum Beispiel das Set aller Gruppen ohne Vollzeitmitarbeiter definieren, muss die Schachtelung der Sets wie folgt verwendet werden: `/Group[not(Owner =
-/Set[ObjectID = ‘X’]/ComputedMember]`, wobei „X“ die ObjectID des Sets aller Vollzeitmitarbeiter ist.
+Es kann jedoch vorkommen, dass Sie Sets verschachteln müssen, um eine funktionale Anforderung zu erfüllen. Dies sind die vorrangigen Situationen, in denen Sie Sets schachteln sollten. Wenn Sie zum Beispiel das Set aller Gruppen ohne Vollzeitmitarbeiter definieren, muss die Schachtelung der Sets wie folgt verwendet werden: `/Group[not(Owner = /Set[ObjectID = ‘X’]/ComputedMember]`, wobei „X“ die ObjectID des Sets aller Vollzeitmitarbeiter ist.
 
 #### <a name="minimize-the-use-of-negative-conditions"></a>Minimieren negativer Bedingungen
 
@@ -540,8 +524,7 @@ Communication Foundation (WCF) aktiviert wurde. Diese Option ist standardmäßig
 
 #### <a name="do-not-map-an-authorization-workflow-to-the-password-reset-process"></a>Keinen Autorisierungsworkflow bei Kennwortzurücksetzung verwenden
 
-Sie sollten einer Kennwortzurücksetzung keinen Autorisierungsworkflow anhängen.
-Für die Kennwortzurücksetzung ist eine synchrone Antwort erforderlich, Autorisierungsworkflows mit Aktivitäten wie der Genehmigungsaktivität sind jedoch asynchron.
+Sie sollten einer Kennwortzurücksetzung keinen Autorisierungsworkflow anhängen. Für die Kennwortzurücksetzung ist eine synchrone Antwort erforderlich, Autorisierungsworkflows mit Aktivitäten wie der Genehmigungsaktivität sind jedoch asynchron.
 
 #### <a name="do-not-map-multiple-action-activities-to-password-reset"></a>Der Kennwortzurücksetzung nicht mehrere Aktionsaktivitäten zuordnen
 
