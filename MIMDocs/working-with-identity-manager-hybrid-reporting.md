@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: cf8395583dcfcc2a84237bad80b6a4ca40ce166c
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 17745bfdba831364d32bc2786cc2a38191fe6cc7
+ms.sourcegitcommit: e52bab207117390997c6fa8450de24335b502673
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="working-with-identity-manager-hybrid-reporting---public-preview-refresh"></a>Arbeiten mit der Identity Manager-Hybridberichterstellung – öffentliche Vorschau (aktualisiert)
 
@@ -48,13 +48,13 @@ Die ersten drei in Azure AD verfügbaren Microsoft Identity Manager-Berichte (MI
 ## <a name="requirements"></a>Anforderungen
 In der folgenden Tabelle werden die Anforderungen zum Verwenden der Microsoft Identity Manager-Hybridberichterstellung aufgelistet.
 
-| Anforderung | Beschreibung |
+| Anforderungen | Beschreibung |
 | --- | --- |
-| Azure AD Premium | Die Hybridberichterstellung ist eine Funktion von Azure AD Premium und erfordert Azure AD Premium. </br></br>Weitere Informationen finden Sie unter [Erste Schritte mit Azure AD Premium](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-get-started-premium). </br>Informationen zum Starten einer 30-Tage-Testversion finden Sie im Abschnitt zum[Starten einer Testversion](https://azure.microsoft.com/trial/get-started-active-directory/). |
-| Sie müssen zum Ausführen der ersten Schritte ein globaler Administrator Ihres Azure AD-Systems sein. |Standardmäßig können nur globale Administratoren die Agents installieren und konfigurieren, die zum Einstieg, für den Portalzugriff und zum Ausführen von Vorgängen in Azure erforderlich sind. </br></br>**Wichtig:** Für die Installation der Agents muss ein Geschäfts- oder Schul-/Unikonto verwendet werden. Ein Microsoft-Konto kann nicht verwendet werden. Weitere Informationen finden Sie unter [Als Unternehmen für Azure registrieren](https://docs.microsoft.com/en-us/azure/active-directory/sign-up-organization). |
+| Azure AD Premium | Die Hybridberichterstellung ist eine Funktion von Azure AD Premium und erfordert Azure AD Premium. </br></br>Weitere Informationen finden Sie unter [Erste Schritte mit Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium). </br>Informationen zum Starten einer 30-Tage-Testversion finden Sie im Abschnitt zum[Starten einer Testversion](https://azure.microsoft.com/trial/get-started-active-directory/). |
+| Sie müssen zum Ausführen der ersten Schritte ein globaler Administrator Ihres Azure AD-Systems sein. |Standardmäßig können nur globale Administratoren die Agents installieren und konfigurieren, die zum Einstieg, für den Portalzugriff und zum Ausführen von Vorgängen in Azure erforderlich sind. </br></br>**Wichtig:** Für die Installation der Agents muss ein Geschäfts- oder Schul-/Unikonto verwendet werden. Ein Microsoft-Konto kann nicht verwendet werden. Weitere Informationen finden Sie unter [Als Unternehmen für Azure registrieren](https://docs.microsoft.com/azure/active-directory/sign-up-organization). |
 | Der Microsoft Identity Manager-Hybrid-Agent ist auf jedem MIM-Zieldienstserver installiert. | Für die Hybridberichterstellung müssen die Agents auf den Zielservern installiert und konfiguriert sein, um die Daten zu empfangen und Überwachungs- und Analysefunktionen bereitzustellen. </br>|
 | Ausgehende Verbindungen zu den Azure-Dienstendpunkten | Während der Installation und der Laufzeit benötigt der Agent Konnektivität mit den Azure-Dienstendpunkten. Wenn die ausgehende Konnektivität durch Firewalls blockiert wird, stellen Sie sicher, dass die folgenden Endpunkte der Zulassungsliste hinzugefügt werden: </br></br><li>&#42;.blob.core.windows.net </li><li>&#42;.servicebus.windows.net – Port: 5671 </li><li>&#42;.adhybridhealth.azure.com/</li><li>https://management.azure.com </li><li>https://policykeyservice.dc.ad.msft.net/</li><li>https://login.windows.net</li><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li> |
-|Ausgehende Konnektivität basierend auf IP-Adresse | Informationen zu einer auf IP-Adressen basierenden Firewallfilterung finden Sie unter [Azure-IP-Bereiche](https://www.microsoft.com/en-us/download/details.aspx?id=41653).|
+|Ausgehende Konnektivität basierend auf IP-Adresse | Informationen zu einer auf IP-Adressen basierenden Firewallfilterung finden Sie unter [Azure-IP-Bereiche](https://www.microsoft.com/download/details.aspx?id=41653).|
 | Die SSL-Inspektion für ausgehenden Datenverkehr wird gefiltert oder ist deaktiviert. | Bei der Agent-Registrierung oder bei Vorgängen zum Hochladen von Daten kann es zu Fehlern kommen, wenn auf der Netzwerkebene eine SSL-Inspektion oder -Terminierung für ausgehenden Datenverkehr erfolgt. |
 | Firewallports auf dem Server, der den Agent ausführt |Der Agent erfordert, dass die folgenden Firewallports geöffnet sind, damit der Agent mit den Azure-Dienstendpunkten kommunizieren kann.</br></br><li>TCP-Port 443</li><li>TCP-Port 5671</li> |
 | Bei aktivierter verstärkter Sicherheit für IE folgende Websites zulassen |Wenn die verstärkte Sicherheitskonfiguration für Internet Explorer auf dem Server aktiviert ist, auf dem der Agent installiert wird, müssen die folgenden Websites zugelassen werden.</br></br><li>https://login.microsoftonline.com</li><li>https://secure.aadcdn.microsoftonline-p.com</li><li>https://login.windows.net</li><li>Der Verbundserver für Ihre Organisation, dem Azure Active Directory vertraut. Beispiel: https://sts.contoso.com</li> |
