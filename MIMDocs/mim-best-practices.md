@@ -5,17 +5,17 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 11/15/2017
+ms.date: 01/05/2018
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 7f56882bf005de6c888997c1bf6a9e2feaea410c
-ms.sourcegitcommit: 42253562ac2f9ed689e9db9d0c470213b7926883
+ms.openlocfilehash: bb967bfb43218384044e324c270d3d6b35d33afe
+ms.sourcegitcommit: b4513f0f72ac6efd5c2610863f4e3e8c8e65c860
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Microsoft Identity Manager 2016 – Empfohlene Vorgehensweisen
 
@@ -371,7 +371,7 @@ So erreichen Sie eine optimale Leistungskonfiguration:
 
 -   Deaktivieren Sie die SharePoint-Indizierung auf der MIM-Portalwebsite. Weitere Informationen finden Sie im Abschnitt „Deaktivieren der SharePoint-Indizierung“ in diesem Artikel.
 
-## <a name="feature-specific-best-practices--i-want-to-remove-this-and-collapse-this-section-and-just-have-the-specific-features-at-header-2-level-versus-3"></a>Funktionsspezifische empfohlenen Vorgehensweisen
+## <a name="feature-specific-best-practices"></a>Featurespezifische bewährte Methoden 
 
 
 ### <a name="request-management"></a>Anforderungsverwaltung
