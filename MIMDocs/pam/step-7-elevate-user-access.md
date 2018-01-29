@@ -1,22 +1,19 @@
 ---
 title: "Bereitstellen von PAM – Schritt 7: Benutzerzugriff | Microsoft Docs"
 description: "Als letzten Schritt gewähren Sie einem privilegierten Benutzer temporären Zugriff, um zu veranschaulichen, dass die Privileged Access Management-Bereitstellung erfolgreich war."
-keywords: 
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/13/2017
+ms.date: 01/17/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-ms.reviewer: mwahl
-ms.suite: ems
-ms.openlocfilehash: f8ad03bc072dbf6df36a9ef737479dce60b70b8b
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 2d92be315547da1c352c0e60732f9aeecf0c2d90
+ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="step-7--elevate-a-users-access"></a>Schritt 7 – Erhöhte Rechte für den Benutzerzugriff
 
@@ -38,7 +35,12 @@ Ohne erhöhte Rechte kann Jen nicht auf die privilegierte Ressource in der CORP-
 
 ## <a name="request-privileged-access-from-mim"></a>Fordern Sie privilegierten Zugriff von MIM an.
 
-1. Geben Sie auf CORPWKSTN – weiterhin als CONTOSO\Jen – den folgenden Befehl ein.
+> [!NOTE]
+> Bei der Workstation sollte es sich um eine Workstation mit privilegiertem Zugriff handeln.  Weitere Informationen finden Sie unter [Arbeitsstationen mit privilegiertem Zugriff](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations).
+
+1. Melden Sie sich bei „PRIVWKSTN“ als „PRIV\priv.jen“ an.
+2. Klicken Sie auf **Start** und **Ausführen**, und geben Sie **PowerShell.exe** ein.
+3. Geben Sie folgenden Befehl ein:
 
     ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell

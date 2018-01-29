@@ -1,6 +1,6 @@
 ---
-title: Was ist hybride Berichterstellung? | Microsoft Docs
-description: "Mit hybriden Aktivitätsüberwachungsberichte in Azure Active Directory können Sie sowohl lokale als auch überwachte Ereignisse der Cloud anzeigen."
+title: Was ist die Hybridberichterstellung in Azure AD? | Microsoft-Dokumentation
+description: "Mit Hybridberichten zur Überwachung von Aktivitäten in Azure Active Directory können Sie überwachte Ereignisse sowohl lokal als auch in der Cloud anzeigen."
 keywords: 
 author: fimguy
 ms.author: fimguy
@@ -12,38 +12,39 @@ ms.technology: security
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
 ms.reviewer: fimguy
 ms.suite: ems
-ms.openlocfilehash: ffe372c273aae55278f9b18b45b65425734aa6f7
-ms.sourcegitcommit: e52bab207117390997c6fa8450de24335b502673
+ms.openlocfilehash: e2391be3d05f61335c134c104673a31ad7fc3830
+ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/20/2018
 ---
-# <a name="hybrid-identity-management-audit-reports-in-azure-active-directory---public-previewrefresh"></a>Überwachungsberichte für die Hybrididentitätsverwaltung in Azure Active Directory – öffentliche Vorschau (aktualisiert)
-Mit Überwachungsberichten in Azure Active Directory (AD) können Sie einen einzigen Bericht anzeigen, um Identitätsverwaltungsaktivitäten zu überwachen, die entweder lokal oder in der Cloud erfolgen. Über diese Funktionalität können Sie sämtliche Ihrer Identitäts- und Zugriffsdaten an einem Ort verwalten, wodurch Zeit gespart wird und die Gesamtkosten verringert werden.
+# <a name="hybrid-identity-management-audit-reporting-in-azure-active-directory-public-preview-refresh"></a>Hybridberichterstellung für die Überwachung der Identitätsverwaltung in Azure Active Directory – öffentliche Vorschau (aktualisiert)
+Mit Überwachungsberichten in Azure Active Directory (Azure AD) können Sie Identitätsverwaltungsaktivitäten lokal oder in der Cloud überwachen. Sparen Sie Zeit, und senken Sie die Gesamtkosten, indem Sie sämtliche Identitäts- und Zugriffsdaten in einem einzigen Bericht verwalten.
 
 ## <a name="what-is-azure-active-directory-hybrid-reporting"></a>Was ist die hybride Berichterstellung in Azure Active Directory?
-Die hybride Überwachungsberichterstellung hilft IT-Experten dabei, häufige Herausforderungen bei der Berichterstellung für die Identitätsverwaltung zu meistern.
+Die Hybridberichterstellung für die Überwachung unterstützt IT-Experten dabei, häufige Herausforderungen bei der Berichterstellung für die Identitätsverwaltung zu meistern, wie z.B. folgende:
 
-1. **Sammeln von Identitätsverwaltungsaktivitäten über verschiedene Systeme hinweg.** In Hybridberichten sehen Sie die Identitätsverwaltungsaktivitäten von Azure AD und Identity Manager.
+* **Erfassen von Identitätsverwaltungsaktivitäten über verschiedene Systeme hinweg**. In Hybridberichten sehen Sie die Identitätsverwaltungsaktivitäten von Azure AD und Identity Manager.
 
-2. **Exportieren von Berichtsdaten und Erstellen von benutzerdefinierten Berichten.** Zusätzlich zum Anzeigen der Berichte im Azure-Portal können Sie die Daten exportieren, um Ihre eigenen benutzerdefinierten Ansichten zu generieren.
+* **Exportieren von Berichtdaten und Erstellen von benutzerdefinierten Berichten**. Zusätzlich zum Anzeigen der Berichte im Azure-Portal können Sie die Daten exportieren, um Ihre eigenen benutzerdefinierten Ansichten zu generieren.
 
-3. **Verringern der Kosten für die Infrastruktur des Berichterstellungssystems.** Durch eine Hybridberichterstellung in der Cloud wird keine lokale Data Warehouse-Infrastruktur für die Berichterstellung mehr benötigt.
+* **Verringern der Kosten für die Infrastruktur des Berichterstellungssystems**. Dank der Hybridberichterstellung in der Cloud können Sie Kosten in Zusammenhang mit Ihrer lokalen Data Warehouse-Infrastruktur vermeiden.
 
 ## <a name="how-does-it-work"></a>Wie funktioniert es?
 
-Um die lokalen Daten zu sammeln, installieren Sie zunächst einen Berichterstellungs-Agent auf dem Identity Manager 2016-Server. Sie können den Berichterstellungs-Agent [hier](https://www.microsoft.com/download/details.aspx?id=55112) im Downloadbereich auf der Microsoft-Webseite herunterladen.
+Um die lokalen Daten zu sammeln, installieren Sie zunächst einen Berichterstellungs-Agent auf dem Identity Manager 2016-Server. [Laden Sie den Identity Manager-Agent für die Berichterstellung herunter](https://www.microsoft.com/download/details.aspx?id=55112).
 
-Für die Hybridberichterstellung werden die folgenden Schritte ausgeführt:
-1. Nachdem der Berichterstellungs-Agent installiert ist, werden die Identity Manager-Aktivitätsdaten an das Windows-Ereignisprotokoll gesendet.
-2. Der Berichterstellungs-Agent verarbeitet alle 10 Minuten oder beim Dienstneustart die Deltaereignisse im Windows-Ereignisprotokoll und lädt diese in das Azure-Portal hoch.
-3. Das Azure-Portal verarbeitet die abgerufenen Daten innerhalb 1 Stunde nach Datenempfang.
+Die Hybridberichterstellung durchläuft folgenden Prozess:
+1. Nachdem Sie den Berichterstellungs-Agent installiert haben, werden die Identity Manager-Aktivitätsdaten an das Windows-Ereignisprotokoll gesendet.
+2. Der Berichterstellungs-Agent verarbeitet die Deltaereignisse alle 10 Minuten oder beim Neustart des Windows-Ereignisprotokolldiensts. Danach lädt der Agent die Ereignisse in das Azure-Portal hoch.
+3. Das Azure-Portal verarbeitet die erhaltenen Daten innerhalb einer Stunde nach dem Empfang.
 4. Die Aktivitätsdaten werden in Azure für einen Monat gespeichert.
-5. Das Azure-Portal ruft die Überwachungsberichtsdaten ab und stellt diese als Überwachung auf dem Blatt für Azure-Überwachungsberichte dar.
+5. Das Azure-Portal ruft die Überwachungsberichtdaten ab und zeigt sie im Fenster der Azure-Überwachungsberichterstellung an.
 
 ## <a name="next-steps"></a>Nächste Schritte
-- Lesen Sie weitere Details zum [Arbeiten mit der Identity Manager-Hybridberichterstellung](working-with-identity-manager-hybrid-reporting.md).
-- [Hier](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-activity-audit-logs) erhalten Sie weitere Informationen zu Überwachungsaktivitätsberichten im Azure AD-Portal
-- Lesen Sie weitere Details zu [Aufbewahrungsrichtlinien für Berichte](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-retention).
-- Lesen Sie weitere Details zur [Microsoft Azure-Protokollintegration (SIEM)](https://docs.microsoft.com/azure/security/security-azure-log-integration-overview).
-- Lesen Sie weitere Details zur [Berichterstellungs-API von Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-api-getting-started).
+Weitere Informationen:
+- [Arbeiten mit der Identity Manager-Hybridberichterstellung](working-with-identity-manager-hybrid-reporting.md)
+- [Überwachungsaktivitätsberichte im Azure Active Directory-Portal](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-activity-audit-logs)
+- [Aufbewahrungsrichtlinien für die Berichterstellung](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-retention)
+- [Microsoft Azure-Protokollintegration (SIEM)](https://docs.microsoft.com/azure/security/security-azure-log-integration-overview)
+- [Azure Active Directory-Berichterstellungs-API](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-api-getting-started)
