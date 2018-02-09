@@ -11,6 +11,7 @@
 ## [Bereitstellungstopologie](topology-considerations.md)
 ## [Planen der PAM-Bereitstellung](./pam/environment-overview.md)
 # [Bereitstellen und Verwenden](microsoft-identity-manager-deploy.md)
+## [Veraltete Features](microsoft-identity-manager-2016-deprecated-features.md)
 ## [Erstmalige Bereitstellung](microsoft-identity-manager-deploy.md)
 ### [Einrichten der Domäne](preparing-domain.md)
 ### [Servereinrichtung: Windows Server](prepare-server-ws2012r2.md)
