@@ -3,22 +3,21 @@ title: Arbeiten mit der Hybridberichterstellung in Azure mit Identity Manager 20
 description: "Erfahren Sie, wie Sie lokale Daten und Clouddaten als Hybridberichte in Azure kombinieren und wie Sie diese Berichte verwalten und anzeigen können."
 keywords: 
 author: fimguy
-ms.author: barclayn
+ms.author: davidste
 manager: mbaldwin
-ms.date: 10/12/2017
+ms.date: 2/20/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
-ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: a96d79d6773a72c813d0cd76de26ea40d28769e1
-ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
+ms.openlocfilehash: e135cc5066220765d97568b3a1e1b984a876b2a2
+ms.sourcegitcommit: b4a39928c5fa1d7718046563c0809bcbf11d833d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/20/2018
 ---
-# <a name="work-with-hybrid-reporting-in-identity-manager-public-preview-refresh"></a>Arbeiten mit der Hybridberichterstellung in Identity Manager – aktualisierte öffentliche Vorschau
+# <a name="work-with-hybrid-reporting-in-identity-manager"></a>Arbeiten mit der Hybridberichterstellung im Identity Manager
 
 Dieser Artikel erläutert, wie Sie lokale Daten und Clouddaten in Azure in Hybridberichte kombinieren und wie Sie diese Berichte verwalten und anzeigen können.
 
@@ -42,7 +41,7 @@ Dies sind die ersten drei Microsoft Identity Manager-Berichte, die in Azure Acti
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-* Identity Manager 2016 RTM oder der Identity Manager SP1-Dienst.
+* Identity Manager-Dienst in Identity Manager 2016 SP1, empfohlener Build: [4.4.1749.0](https://support.microsoft.com/en-us/help/4050936/hotfix-rollup-package-build-4-4-1749-0-for-microsoft-identity-manager)
 
 * Ein Azure AD Premium-Mandant mit lizenziertem Administrator in Ihrem Verzeichnis.
 
@@ -70,7 +69,7 @@ Nachdem der Agent für die Berichterstellung installiert wurde, werden die Daten
 
 2.  Laden Sie den Identity Manager-Berichterstellungs-Agent herunter, und führen Sie folgende Schritte aus:
 
-    a. Melden Sie sich beim Azure AD-Verwaltungsportal an, und wählen Sie **Active Directory** aus.
+    ein. Melden Sie sich beim Azure AD-Verwaltungsportal an, und wählen Sie **Active Directory** aus.
 
     b. Doppelklicken Sie auf das Verzeichnis, für das Sie globaler Administrator sind und ein Azure AD Premium-Abonnement besitzen.
 
@@ -78,7 +77,7 @@ Nachdem der Agent für die Berichterstellung installiert wurde, werden die Daten
 
 3.  Installieren Sie den Berichterstellungs-Agent, indem Sie folgende Schritte ausführen:
 
-    a.  Laden Sie die Datei [MIMHReportingAgentSetup.exe](http://download.microsoft.com/download/7/3/1/731D81E1-8C1D-4382-B8EB-E7E7367C0BF2/MIMHReportingAgentSetup.exe) auf den Identity Manager-Dienstserver herunter.
+    ein.  Laden Sie die Datei [MIMHReportingAgentSetup.exe](http://download.microsoft.com/download/7/3/1/731D81E1-8C1D-4382-B8EB-E7E7367C0BF2/MIMHReportingAgentSetup.exe) auf den Identity Manager-Dienstserver herunter.
 
     b.  Führen Sie `MIMHReportingAgentSetup.exe` aus. 
 
