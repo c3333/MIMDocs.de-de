@@ -1,7 +1,7 @@
 ---
 title: Bereitstellen von MIM Privileged Access Management mit Windows Server 2016 | Microsoft-Dokumentation
 description: Informationen zum Bereitstellen von Privileged Access Management mit Windows Server 2016
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,12 @@ ms.date: 08/18/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
-ms.assetid: 
-ms.openlocfilehash: 8827a8b6d49672a7860c9265efac5f0881a2c018
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.assetid: ''
+ms.openlocfilehash: 6088afccec45d1353233a32828353149bcf24740
+ms.sourcegitcommit: 48f89d555c0ac7caa97d149ee42e0b9ef6ccc5f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="deploy-mim-pam-with-windows-server-2016"></a>Bereitstellen von MIM PAM mit Windows Server 2016
 
@@ -75,7 +75,7 @@ Führen Sie die Installation wie im [Leitfaden für erste Schritte](privileged-i
 
   -   Nach dem Konfigurieren der Delegierung und vor dem Neustart des Servers autorisieren Sie die MIM-Administratoren und MIM-Dienstkonten zur Erstellung und Aktualisierung von Schattenprinzipalen.
 
-     a. Starten Sie ein PowerShell-Fenster, und geben Sie „ADSIEdit“ ein.
+     ein. Starten Sie ein PowerShell-Fenster, und geben Sie „ADSIEdit“ ein.
 
      b. Klicken Sie im Menü „Aktion“ auf „Verbinden mit“. Ändern Sie für die Verbindungspunkteinstellung den Namenskontext von „Standardnamenskontext“ in „Konfiguration“, und klicken Sie auf „OK“.
 
@@ -91,7 +91,7 @@ Führen Sie die Installation wie im [Leitfaden für erste Schritte](privileged-i
 
  -   Nach dem Konfigurieren der Delegierung und vor dem Neustart des Servers autorisieren Sie die MIM-Administratoren zur Erstellung und Aktualisierung von Authentifizierungsrichtlinien.
 
-     a.  Starten Sie eine erhöhte **Eingabeaufforderung**, und geben Sie die folgenden Befehle ein, wobei Sie „mimadmin“ in allen vier Zeilen durch den Namen Ihres MIM-Administratorkontos ersetzen:
+     ein.  Starten Sie eine erhöhte **Eingabeaufforderung**, und geben Sie die folgenden Befehle ein, wobei Sie „mimadmin“ in allen vier Zeilen durch den Namen Ihres MIM-Administratorkontos ersetzen:
     ```
        dsacls "CN=AuthN Policies,CN=AuthN Policy
        Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g
@@ -130,13 +130,13 @@ Führen Sie die Installation wie im [Leitfaden für erste Schritte](privileged-i
     -   Nach dem Einrichten der Vertrauensstellung melden Sie sich bei PRIVDC als PRIV\\Administrator an, starten Sie PowerShell, und geben Sie die folgenden Befehle ein:
   ```
     netdom trust contoso.local /domain:priv.contoso.local /enablesidhistory:yes
-     /usero:contoso\\administrator /passwordo:Pass\@word1
+     /usero:contoso\administrator /passwordo:Pass@word1
 
      netdom trust contoso.local /domain:priv.contoso.local /quarantine:no
-     /usero:contoso\\administrator /passwordo:Pass\@word1  
+     /usero:contoso\administrator /passwordo:Pass@word1  
 
      netdom trust contoso.local /domain:priv.contoso.local /enablepimtrust:yes
-     /usero:contoso\\administrator /passwordo:Pass\@word1
+     /usero:contoso\administrator /passwordo:Pass@word1
   ```
 
 -   Punkt 5 (Überprüfung der Vertrauensstellung) **ist nicht erforderlich, wenn CORP- und PRIV-Domänen sich auf der Windows Server 2016-Domänenfunktionsebene befinden**.
