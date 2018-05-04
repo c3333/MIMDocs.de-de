@@ -1,7 +1,7 @@
 ---
 title: Verwenden der Microsoft Identity Manager-Synchronisierung mit AD | Microsoft-Dokumentation
 description: Verwenden Sie Verwaltungs-Agents und MIM Synchronization Service, um Ihr Active Directory und Ihre MIM-Datenbanken zu synchronisieren.
-keywords: 
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 31cc9a61bbcb309dae4ee4d09654432d08bf1e28
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 736d933f2c62d440abafdab27f82b3b1ba0f9a06
+ms.sourcegitcommit: 48f89d555c0ac7caa97d149ee42e0b9ef6ccc5f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Installieren von MIM 2016: Synchronisieren von Active Directory und MIM-Dienst
 
@@ -43,7 +43,7 @@ Wenn Sie einen MIM-Verwaltungs-Agent konfigurieren, müssen Sie ein Benutzerkont
 
 1.  Öffnen Sie den Synchronisierungsdienst-Manager.
 
-2.  Um den Assistenten zum Erstellen des Verwaltungs-Agents zu öffnen, wechseln Sie zur Seite **Verwaltungsaktionen**, klicken Sie dann im Menü **Aktionen** auf **Erstellen**.
+2.  Um den Assistenten zum Erstellen des Verwaltungs-Agents zu öffnen, wechseln Sie zur Seite **Verwaltungs-Agents**, klicken Sie dann im Menü **Aktionen** auf **Erstellen**.
 
 3.  Geben Sie auf der Seite **Verwaltungs-Agent erstellen** die folgenden Einstellungen an, und klicken Sie dann auf **Weiter**.
 
@@ -146,7 +146,7 @@ Wenn Sie einen MIM-Verwaltungs-Agent konfigurieren, müssen Sie ein Benutzerkont
     | Mitglied | Exportieren | Element |
     | ObjectSID | Exportieren | objectSid |
     | Bereich | Exportieren | scope |
-    | Typ | Exportieren | type |
+    | Typ | Exportieren | Typ |
     | MitgliedshipAddWorkflow | Exportieren | membershipAddWorkflow |
     | MitgliedshipLocked | Exportieren | membershipLocked |
     | AccountName | importieren | accountName |
@@ -155,7 +155,7 @@ Wenn Sie einen MIM-Verwaltungs-Agent konfigurieren, müssen Sie ein Benutzerkont
     | MailNickName | importieren | mailNickName |
     | Mitglied | importieren | Element |
     | Bereich | importieren | scope |
-    | Typ | importieren | type |
+    | Typ | importieren | Typ |
 
 10.  Klicken Sie auf der Seite **Aufheben der Bereitstellung konfigurieren** auf **Weiter**
 
