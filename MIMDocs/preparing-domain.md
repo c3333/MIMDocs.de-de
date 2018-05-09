@@ -1,7 +1,7 @@
 ---
-title: "Einrichten einer Domäne für Microsoft Identity Manager 2016 | Microsoft-Dokumentation"
-description: "Einrichten eines Active Directory-Domänencontrollers vor der Installation von MIM 2016"
-keywords: 
+title: Einrichten einer Domäne für Microsoft Identity Manager 2016 | Microsoft-Dokumentation
+description: Einrichten eines Active Directory-Domänencontrollers vor der Installation von MIM 2016
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,16 +12,16 @@ ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 816e816111b27d1cc7dd4f7da2c5a810e7aa22fd
-ms.sourcegitcommit: 9e854a39128a5f81cdbb1379e1fa95ef3a88cdd2
+ms.openlocfilehash: ff8d8a6f66212b006e2c17186dc299a5bcf3f68b
+ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="set-up-a-domain"></a>Einrichten einer Domäne
 
 >[!div class="step-by-step"]
-[Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
+[Windows Server 2016 »](prepare-server-ws2016.md)
 
 Microsoft Identity Manager (MIM) arbeitet mit Ihrer Active Directory-Domäne. Sie müssen Active Directory bereits installiert haben und sicherstellen, dass Sie in Ihrer Umgebung über einen Domänencontroller für eine Domäne verfügen, die Sie verwalten können.
 
@@ -33,8 +33,11 @@ Alle Komponenten Ihrer MIM-Bereitstellung benötigen ihre eigenen Identitäten i
 
 > [!NOTE]
 > Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiel:
-> - Domänencontrollername: **mimservername**
+> - Name des Domänencontrollers: **corpdc**
 > - Domänenname: **contoso**
+> - Servername des MIM-Diensts: **corpservice**
+> - Servername der MIM-Synchronisierung: **corpsync**
+> - SQL-Servername: **corpsql**
 > - Kennwort – **Pass@word1**
 
 1. Melden Sie sich auf dem Domänencontroller als Domänenadministrator an (*z.B. Contoso\Administrator*).
@@ -44,6 +47,9 @@ Alle Komponenten Ihrer MIM-Bereitstellung benötigen ihre eigenen Identitäten i
     ```PowerShell
     import-module activedirectory
     $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+    New-ADUser –SamAccountName MIMINSTALL –name MIMMA
+    Set-ADAccountPassword –identity MIMINSTALL –NewPassword $sp
+    Set-ADUser –identity MIMINSTALL –Enabled 1 –PasswordNeverExpires 1
     New-ADUser –SamAccountName MIMMA –name MIMMA
     Set-ADAccountPassword –identity MIMMA –NewPassword $sp
     Set-ADUser –identity MIMMA –Enabled 1 –PasswordNeverExpires 1
@@ -65,6 +71,9 @@ Alle Komponenten Ihrer MIM-Bereitstellung benötigen ihre eigenen Identitäten i
     New-ADUser –SamAccountName BackupAdmin –name BackupAdmin
     Set-ADAccountPassword –identity BackupAdmin –NewPassword $sp
     Set-ADUser –identity BackupAdmin –Enabled 1 -PasswordNeverExpires 1
+    New-ADUser –SamAccountName MIMpool –name BackupAdmin
+    Set-ADAccountPassword –identity MIMPool –NewPassword $sp
+    Set-ADUser –identity MIMPool –Enabled 1 -PasswordNeverExpires 1
     ```
 
 3.  Erstellen Sie für alle Gruppen Sicherheitsgruppen.
@@ -77,15 +86,24 @@ Alle Komponenten Ihrer MIM-Bereitstellung benötigen ihre eigenen Identitäten i
     New-ADGroup –name MIMSyncPasswordReset –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncPasswordReset
     Add-ADGroupMember -identity MIMSyncAdmins -Members Administrator
     Add-ADGroupmember -identity MIMSyncAdmins -Members MIMService
+    Add-ADGroupmember -identity MIMSyncAdmins -Members MIMInstall
     ```
 
 4.  Fügen Sie SPNs hinzu, um die Kerberos-Authentifizierung für Dienstkonten zu aktivieren.
 
     ```CMD
-    setspn -S http/mimservername.contoso.local Contoso\SharePoint
-    setspn -S http/mimservername Contoso\SharePoint
-    setspn -S FIMService/mimservername.contoso.local Contoso\MIMService    
+    setspn -S http/mim.contoso.com Contoso\mimpool
+    setspn -S http/mim Contoso\mimpool
+    setspn -S http/passwordreset.contoso.com Contoso\mimsspr
+    setspn -S http/passwordregistration.contoso.com Contoso\mimsspr
+    setspn -S FIMService/mim.contoso.com Contoso\MIMService
+    setspn -S FIMService/corpservice.contoso.com Contoso\MIMService
     ```
+5.  Während des Setups müssen Sie die folgenden A-Datensätze von DNS für die richtige Namensauflösung hinzufügen.
+
+- mim.contoso.com als Punkt auf physische IP-Adresse von corpservice
+- passwordreset.contoso.com als Punkt auf physische IP-Adresse von corpservice
+- passwordregistration.contoso.com als Punkt auf physische IP-Adresse von corpservice
 
 >[!div class="step-by-step"]
-[Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
+[Windows Server 2016 »](prepare-server-ws2016.md)
