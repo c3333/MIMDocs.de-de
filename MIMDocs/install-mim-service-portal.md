@@ -5,18 +5,18 @@ keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldiwn
-ms.date: 10/12/2017
+ms.date: 04/30/2018
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 204aa33cb21ed3998d9085fc56f0c7bea7afec58
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: fcc137527d8326c82bf3b201039926699bd4e342
+ms.sourcegitcommit: a98a4c1aee12016d480c400f4ff2c6aadb6518ee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Installieren von MIM 2016: MIM-Dienst und -Portal
 
@@ -48,23 +48,23 @@ Falls Sie im letzten Schritt das MIM-Installationspaket nicht eingerichtet haben
 
 6. Wählen Sie auf der Seite **Konfigurieren der MIM-Datenbankverbindung** die Option **Neue Datenbank erstellen** aus.
 
-    ![Bild: Konfigurieren der MIM-Datenbankverbindung](media/MIM-Install10.png)
+    ![Bild: Konfigurieren der MIM-Datenbankverbindung](media/install-mim-service-portal/MIM_Install10.png)
 
-7. Geben Sie bei **Configure mail server connection** (Konfigurieren der E-Mail-Server-Verbindung) den Namen Ihres Exchange-Servers als **Mailserver** an. Alternativ können Sie das Office 365-Postfach verwenden. Falls Sie keinen E-Mail-Server konfiguriert haben, verwenden Sie **localhost** als Namen für den E-Mail-Server, und deaktivieren Sie die oberen zwei Kontrollkästchen. Klicken Sie auf **Weiter**.
+7. Geben Sie bei **Configure mail server connection** (Konfigurieren der E-Mail-Server-Verbindung) den Namen Ihres Exchange-Servers als **Mailserver** an. Alternativ können Sie das **Office 365-Postfach** verwenden. Falls Sie keinen E-Mail-Server konfiguriert haben, verwenden Sie **localhost** als Namen für den E-Mail-Server, und deaktivieren Sie die oberen zwei Kontrollkästchen. Klicken Sie auf **Weiter**.
 
-    ![Bild: Konfigurieren der E-Mail-Server-Verbindung](media/MIM-Install11.png)
+    ![Bild: Konfigurieren der E-Mail-Server-Verbindung](media/install-mim-service-portal/MIM_Install11.png)
 
 8. Geben Sie an, dass Sie ein neues selbstsigniertes Zertifikat generieren möchten, oder wählen Sie das entsprechende Zertifikat.
 
 9. Geben Sie den zu verwendenden Dienstkontonamen an, z.B. *MIMService*, sowie das Dienstkontokennwort, z.B. *Pass@word1*, Ihre Dienstkontodomäne, z.B. *contoso*, und das Dienst-E-Mail-Konto, z.B. *contoso*.
 
-    ![Bild: Konfigurieren des MIM-Dienstkontos](media/MIM-Install12.png)
+    ![Bild: Konfigurieren des MIM-Dienstkontos](media/install-mim-service-portal/MIM_Install12.png)
 
 10. Beachten Sie, dass eine Warnung angezeigt werden kann, dass das Dienstkonto in seiner aktuellen Konfiguration nicht sicher ist.
 
 11. Akzeptieren Sie die Standardeinstellungen für den Standort des Synchronisierungsservers, und geben Sie für das Konto „MIM-Verwaltungs-Agent“ *contoso\MIMMA* an.
 
-    ![Bild: Konfigurieren des MIM-Diensts und -Portals](media/MIM-Install13.png)
+    ![Bild: Konfigurieren des MIM-Diensts und -Portals](media/install-mim-service-portal/MIM_Install13.png)
 
 12. Geben Sie *CORPIDM* (den Namen dieses Computers) als MIM-Dienstserveradresse für das MIM-Portal an.
 
@@ -82,7 +82,7 @@ Falls Sie im letzten Schritt das MIM-Installationspaket nicht eingerichtet haben
 
 2.  Geben Sie *passwordregistration.contoso.com* als Hostnamen für die MIM-Kennwortregistrierung an, und legen Sie den Port auf **80** fest. Aktivieren Sie die Option **Port in der Firewall öffnen**.
 
-    ![Geben Sie die Konfigurationsinformationen ein, die vom IIS-Image verwendet werden](media/MIM-Install14.png)
+    ![Geben Sie die Konfigurationsinformationen ein, die vom IIS-Image verwendet werden](media/install-mim-service-portal/MIM_Install14.png)
 
 3.  Eine Warnung wird angezeigt – lesen Sie sie, und klicken Sie auf **Weiter**.
 
@@ -94,7 +94,7 @@ Falls Sie im letzten Schritt das MIM-Installationspaket nicht eingerichtet haben
 
 2.  Geben Sie *passwordreset.contoso.com* als Hostnamen für das MIM-Kennwortzurücksetzungsportal an, und legen Sie den Port auf **80** fest. Aktivieren Sie die Option **Port in der Firewall öffnen**.
 
-    ![Geben Sie die Konfigurationsinformationen ein, die vom IIS-Image verwendet werden](media/MIM-Install15.png)
+    ![Geben Sie die Konfigurationsinformationen ein, die vom IIS-Image verwendet werden](media/install-mim-service-portal/MIM_Install15.png)
 
 3.  Eine Warnung wird angezeigt – lesen Sie sie, und klicken Sie auf **Weiter**.
 
