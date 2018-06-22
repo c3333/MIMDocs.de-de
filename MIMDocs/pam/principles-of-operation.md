@@ -1,7 +1,7 @@
 ---
 title: Verstehen der PAM-Komponenten | Microsoft Docs
-description: "Privileged Access Management verfügt über einige der Komponenten von MIM, besitzt aber auch ein paar eigene. Erfahren Sie, wie diese zusammenarbeiten."
-keywords: 
+description: Privileged Access Management verfügt über einige der Komponenten von MIM, besitzt aber auch ein paar eigene. Erfahren Sie, wie diese zusammenarbeiten.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/14/2017
+ms.locfileid: "22052364"
 ---
 # <a name="understand-the-components-of-pam"></a>Verstehen der Komponenten von PAM
 

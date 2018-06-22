@@ -1,7 +1,7 @@
 ---
-title: "Definieren von privilegierten Rollen für PAM | Microsoft Docs"
-description: "Entscheiden Sie, welche privilegierten Rollen verwaltet werden sollen, und legen Sie die Verwaltungsrichtlinie für jede fest."
-keywords: 
+title: Definieren von privilegierten Rollen für PAM | Microsoft Docs
+description: Entscheiden Sie, welche privilegierten Rollen verwaltet werden sollen, und legen Sie die Verwaltungsrichtlinie für jede fest.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/01/2017
+ms.locfileid: "21943756"
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Definieren von Rollen für Privileged Access Management
 

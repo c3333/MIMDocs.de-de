@@ -17,6 +17,7 @@ ms.sourcegitcommit: 8316fa41f06f137dba0739a8700910116b5575d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33079005"
 ---
 # <a name="deploy-microsoft-identity-manager-2016-sp1"></a>Bereitstellen von Microsoft Identity Manager 2016 SP1
 Die Artikel in diesem Abschnitt bieten Schritt-für-Schritt-Anleitungen für die Bereitstellung von Microsoft Identity Manager (MIM) 2016 für Endbenutzer-Self-Service-Szenarien. Es wird dabei von einer Bereitstellung auf einem neuen Server ausgegangen, auf dem zuvor weder FIM noch MIM bereitgestellt wurden.

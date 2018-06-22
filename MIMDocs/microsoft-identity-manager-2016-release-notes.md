@@ -1,7 +1,7 @@
 ---
 title: Versionsanmerkungen zu Microsoft Identity Manager 2016 | Microsoft-Dokumentation
-description: "Erfahren Sie mehr über die neuesten MIM-Releases."
-keywords: 
+description: Erfahren Sie mehr über die neuesten MIM-Releases.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -18,6 +18,7 @@ ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/12/2017
+ms.locfileid: "23137573"
 ---
 # <a name="release-notes-for-mim-2016"></a>Anmerkungen zu dieser Version von MIM 2016
 Zum aktuellen Zeitpunkt gibt es keine Anmerkungen zur aktuellen Version.

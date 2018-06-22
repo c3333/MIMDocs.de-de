@@ -1,7 +1,7 @@
 ---
 title: PAM-Notfallwiederherstellung | Microsoft Docs
-description: "Erfahren Sie, wie Sie Privileged Access Management für Hochverfügbarkeit und die Notfallwiederherstellung konfigurieren."
-keywords: 
+description: Erfahren Sie, wie Sie Privileged Access Management für Hochverfügbarkeit und die Notfallwiederherstellung konfigurieren.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/14/2017
+ms.locfileid: "22052313"
 ---
 # <a name="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment"></a>Hohe Verfügbarkeit und Überlegungen zur Notfallwiederherstellung für die geschützte Umgebung
 

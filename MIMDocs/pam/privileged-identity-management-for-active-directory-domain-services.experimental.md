@@ -1,7 +1,7 @@
 ---
-title: "Was ist PAM für Active Directory-Domänendienste? | Microsoft Docs"
-description: "Mit der privilegierten Zugriffsverwaltung (PAM) können Organisationen den privilegierten Zugriff innerhalb einer vorhandenen Active Directory-Umgebung einschränken."
-keywords: 
+title: Was ist PAM für Active Directory-Domänendienste? | Microsoft Docs
+description: Mit der privilegierten Zugriffsverwaltung (PAM) können Organisationen den privilegierten Zugriff innerhalb einer vorhandenen Active Directory-Umgebung einschränken.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/14/2017
+ms.locfileid: "22052398"
 ---
 # <a name="privileged-access-management-for-active-directory-domain-services"></a>Privileged Access Management für Active Directory-Domänendienste
 
