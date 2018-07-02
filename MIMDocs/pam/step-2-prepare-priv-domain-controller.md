@@ -1,7 +1,7 @@
 ---
-title: "Bereitstellen von PAM – Schritt 2: PRIV-Domänencontroller | Microsoft Docs"
-description: "Bereiten Sie den PRIV-Domänencontroller vor, der die geschützte Umgebung bereitstellt, in der Privileged Access Management isoliert wird."
-keywords: 
+title: 'Bereitstellen von PAM – Schritt 2: PRIV-Domänencontroller | Microsoft Docs'
+description: Bereiten Sie den PRIV-Domänencontroller vor, der die geschützte Umgebung bereitstellt, in der Privileged Access Management isoliert wird.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,17 +12,18 @@ ms.technology: active-directory-domain-services
 ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: de3392648f187ce6007bba332c0f191d32980c94
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 960ec81d822e02a848c3ef9ac1b65f5fa0d9e61a
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289454"
 ---
 # <a name="step-2---prepare-the-first-priv-domain-controller"></a>Schritt 2: Vorbereiten des ersten PRIV-Domänencontrollers
 
->[!div class="step-by-step"]
-[« Schritt 1](step-1-prepare-corp-domain.md)
-[Schritt 3 »](step-3-prepare-pam-server.md)
+> [!div class="step-by-step"]
+> [« Schritt 1](step-1-prepare-corp-domain.md)
+> [Schritt 3 »](step-3-prepare-pam-server.md)
 
 In diesem Schritt erstellen Sie eine neue Domäne, die die geschützte Umgebung für die Administratorauthentifizierung bereitstellt.  Diese Gesamtstruktur benötigt mindestens einen Domänencontroller und mindestens einen Mitgliedsserver. Der Mitgliedsserver wird im nächsten Schritt konfiguriert.
 
@@ -52,11 +53,11 @@ Fügen Sie die Rollen „Active Directory-Domänendienste (AD DS)“ und „DNS-
 
 2. Geben Sie die folgenden Befehle ein, um eine Windows Server Active Directory-Installation vorzubereiten.
 
-  ```PowerShell
-  import-module ServerManager
+   ```PowerShell
+   import-module ServerManager
 
-  Install-WindowsFeature AD-Domain-Services,DNS –restart –IncludeAllSubFeature -IncludeManagementTools
-  ```
+   Install-WindowsFeature AD-Domain-Services,DNS –restart –IncludeAllSubFeature -IncludeManagementTools
+   ```
 
 ### <a name="configure-registry-settings-for-sid-history-migration"></a>Konfigurieren der Registrierungseinstellungen für die Migration des SID-Verlaufs
 
@@ -76,10 +77,10 @@ In diesem Dokument wird der Name „priv.contoso.local“ als Domänenname der n
 
 1. Geben Sie in einem PowerShell-Fenster folgende Befehle ein, um die neue Domäne zu erstellen.  Dadurch wird eine DNS-Delegierung in einer übergeordneten Domäne (contoso.local) erstellt, die in einem vorherigen Schritt erstellt wurde.  Wenn Sie DNS später konfigurieren möchten, lassen Sie die `CreateDNSDelegation -DNSDelegationCredential $ca`-Parameter aus.
 
-  ```PowerShell
-  $ca= get-credential
-  Install-ADDSForest –DomainMode 6 –ForestMode 6 –DomainName priv.contoso.local –DomainNetbiosName priv –Force –CreateDNSDelegation –DNSDelegationCredential $ca
-  ```
+   ```PowerShell
+   $ca= get-credential
+   Install-ADDSForest –DomainMode 6 –ForestMode 6 –DomainName priv.contoso.local –DomainNetbiosName priv –Force –CreateDNSDelegation –DNSDelegationCredential $ca
+   ```
 
 2. Wenn das Popupfenster angezeigt wird, stellen Sie die Anmeldeinformationen für den Administrator der CORP-Gesamtstruktur bereit (z. B. den Benutzernamen „CONTOSO\\Administrator“ und das entsprechende Kennwort aus Schritt 1).
 
@@ -95,69 +96,69 @@ Erstellen Sie die Benutzer- und Dienstkonten für die Einrichtung von MIM-Dienst
 
 2. Starten Sie PowerShell, und geben Sie die folgenden Befehle ein. Das Kennwort 'Pass@word1' ist nur ein Beispiel. Sie sollten für die Konten andere Kennwörter verwenden.
 
-  ```PowerShell
-  import-module activedirectory
+   ```PowerShell
+   import-module activedirectory
 
-  $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+   $sp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
 
-  New-ADUser –SamAccountName MIMMA –name MIMMA
+   New-ADUser –SamAccountName MIMMA –name MIMMA
 
-  Set-ADAccountPassword –identity MIMMA –NewPassword $sp
+   Set-ADAccountPassword –identity MIMMA –NewPassword $sp
 
-  Set-ADUser –identity MIMMA –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity MIMMA –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName MIMMonitor –name MIMMonitor -DisplayName MIMMonitor
+   New-ADUser –SamAccountName MIMMonitor –name MIMMonitor -DisplayName MIMMonitor
 
-  Set-ADAccountPassword –identity MIMMonitor –NewPassword $sp
+   Set-ADAccountPassword –identity MIMMonitor –NewPassword $sp
 
-  Set-ADUser –identity MIMMonitor –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity MIMMonitor –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName MIMComponent –name MIMComponent -DisplayName MIMComponent
+   New-ADUser –SamAccountName MIMComponent –name MIMComponent -DisplayName MIMComponent
 
-  Set-ADAccountPassword –identity MIMComponent –NewPassword $sp
+   Set-ADAccountPassword –identity MIMComponent –NewPassword $sp
 
-  Set-ADUser –identity MIMComponent –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity MIMComponent –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName MIMSync –name MIMSync
+   New-ADUser –SamAccountName MIMSync –name MIMSync
 
-  Set-ADAccountPassword –identity MIMSync –NewPassword $sp
+   Set-ADAccountPassword –identity MIMSync –NewPassword $sp
 
-  Set-ADUser –identity MIMSync –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity MIMSync –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName MIMService –name MIMService
+   New-ADUser –SamAccountName MIMService –name MIMService
 
-  Set-ADAccountPassword –identity MIMService –NewPassword $sp
+   Set-ADAccountPassword –identity MIMService –NewPassword $sp
 
-  Set-ADUser –identity MIMService –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity MIMService –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName SharePoint –name SharePoint
+   New-ADUser –SamAccountName SharePoint –name SharePoint
 
-  Set-ADAccountPassword –identity SharePoint –NewPassword $sp
+   Set-ADAccountPassword –identity SharePoint –NewPassword $sp
 
-  Set-ADUser –identity SharePoint –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity SharePoint –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName SqlServer –name SqlServer
+   New-ADUser –SamAccountName SqlServer –name SqlServer
 
-  Set-ADAccountPassword –identity SqlServer –NewPassword $sp
+   Set-ADAccountPassword –identity SqlServer –NewPassword $sp
 
-  Set-ADUser –identity SqlServer –Enabled 1 –PasswordNeverExpires 1
+   Set-ADUser –identity SqlServer –Enabled 1 –PasswordNeverExpires 1
 
-  New-ADUser –SamAccountName BackupAdmin –name BackupAdmin
+   New-ADUser –SamAccountName BackupAdmin –name BackupAdmin
 
-  Set-ADAccountPassword –identity BackupAdmin –NewPassword $sp
+   Set-ADAccountPassword –identity BackupAdmin –NewPassword $sp
 
-  Set-ADUser –identity BackupAdmin –Enabled 1 -PasswordNeverExpires 1
+   Set-ADUser –identity BackupAdmin –Enabled 1 -PasswordNeverExpires 1
 
-  New-ADUser -SamAccountName MIMAdmin -name MIMAdmin
+   New-ADUser -SamAccountName MIMAdmin -name MIMAdmin
 
-  Set-ADAccountPassword –identity MIMAdmin  -NewPassword $sp
+   Set-ADAccountPassword –identity MIMAdmin  -NewPassword $sp
 
-  Set-ADUser -identity MIMAdmin -Enabled 1 -PasswordNeverExpires 1
+   Set-ADUser -identity MIMAdmin -Enabled 1 -PasswordNeverExpires 1
 
-  Add-ADGroupMember "Domain Admins" SharePoint
+   Add-ADGroupMember "Domain Admins" SharePoint
 
-  Add-ADGroupMember "Domain Admins" MIMService
-  ```
+   Add-ADGroupMember "Domain Admins" MIMService
+   ```
 
 ### <a name="configure-auditing-and-logon-rights"></a>Konfigurieren der Berechtigungen für die Überwachung und Anmeldung
 
@@ -201,11 +202,11 @@ Sie müssen die Überwachung einrichten, damit die PAM-Konfiguration in den Gesa
 
 19. Starten Sie ein PowerShell-Fenster als Administrator, und geben Sie den folgenden Befehl ein, um den Domänencontroller mit den Gruppenrichtlinieneinstellungen zu aktualisieren.
 
-  ```cmd
-  gpupdate /force /target:computer
-  ```
+    ```cmd
+    gpupdate /force /target:computer
+    ```
 
-  Nach einer Minute wird der Vorgang mit der Meldung beendet, dass die Aktualisierung der Computerrichtlinie erfolgreich abgeschlossen wurde.
+    Nach einer Minute wird der Vorgang mit der Meldung beendet, dass die Aktualisierung der Computerrichtlinie erfolgreich abgeschlossen wurde.
 
 
 ### <a name="configure-dns-name-forwarding-on-privdc"></a>Konfigurieren der Weiterleitung von DNS-Namen auf „PRIVDC“
@@ -216,11 +217,11 @@ Verwenden Sie PowerShell auf PRIVDC, um die DNS-Namensweiterleitung zu konfiguri
 
 2. Geben Sie für jede Domäne auf oberster Ebene jeder vorhandenen Gesamtstruktur den folgenden Befehl ein, und geben Sie dabei die vorhandene DNS-Domäne (z. B. contoso.local) sowie die IP-Adresse des Masterservers dieser Domäne an.  
 
-  Wenn Sie im vorherigen Schritt eine Domäne „contoso.local“ erstellt haben, geben Sie *10.1.1.31* als virtuelle IP-Netzwerkadresse des CORPDC-Computers an.
+   Wenn Sie im vorherigen Schritt eine Domäne „contoso.local“ erstellt haben, geben Sie *10.1.1.31* als virtuelle IP-Netzwerkadresse des CORPDC-Computers an.
 
-  ```PowerShell
-  Add-DnsServerConditionalForwarderZone –name "contoso.local" –masterservers 10.1.1.31
-  ```
+   ```PowerShell
+   Add-DnsServerConditionalForwarderZone –name "contoso.local" –masterservers 10.1.1.31
+   ```
 
 > [!NOTE]
 > Die anderen Gesamtstrukturen müssen DNS-Abfragen für die PRIV-Gesamtstruktur an diesen Domänencontroller weiterleiten können.  Wenn Sie über mehrere Active Directory-Gesamtstrukturen verfügen, müssen Sie jeder dieser Gesamtstrukturen auch eine bedingte DNS-Weiterleitung hinzufügen.
@@ -229,15 +230,15 @@ Verwenden Sie PowerShell auf PRIVDC, um die DNS-Namensweiterleitung zu konfiguri
 
 1. Fügen Sie mithilfe von PowerShell SPNs hinzu, sodass SharePoint, die PAM-REST-API und der MIM-Dienst die Kerberos-Authentifizierung verwenden können.
 
-  ```cmd
-  setspn -S http/pamsrv.priv.contoso.local PRIV\SharePoint
-  setspn -S http/pamsrv PRIV\SharePoint
-  setspn -S FIMService/pamsrv.priv.contoso.local PRIV\MIMService
-  setspn -S FIMService/pamsrv PRIV\MIMService
-  ```
+   ```cmd
+   setspn -S http/pamsrv.priv.contoso.local PRIV\SharePoint
+   setspn -S http/pamsrv PRIV\SharePoint
+   setspn -S FIMService/pamsrv.priv.contoso.local PRIV\MIMService
+   setspn -S FIMService/pamsrv PRIV\MIMService
+   ```
 
 > [!NOTE]
-> Die nächsten Schritte in diesem Dokument beschreiben die Installation von MIM 2016-Serverkomponenten auf einem einzelnen Computer. Wenn Sie planen, zur Sicherstellung einer hohen Verfügbarkeit einen weiteren Server hinzuzufügen, müssen Sie zusätzliche Kerberos-Einstellungen konfigurieren, wie unter [FIM 2010: Kerberos Authentication Setup](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx) (FIM 2010: Einrichten der Kerberos-Authentifizierung) beschrieben.
+> Die nächsten Schritte in diesem Dokument beschreiben die Installation von MIM 2016-Serverkomponenten auf einem einzelnen Computer. Wenn Sie planen, zur Sicherstellung von Hochverfügbarkeit einen weiteren Server hinzuzufügen, müssen Sie zusätzliche Kerberos-Einstellungen konfigurieren, wie unter [FIM 2010: Kerberos Authentication Setup](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx) (FIM 2010: Einrichten der Kerberos-Authentifizierung) beschrieben.
 
 ### <a name="configure-delegation-to-give-mim-service-accounts-access"></a>Konfigurieren der Delegierung, um MIM-Dienstkonten Zugriff zu gewähren
 
@@ -254,13 +255,13 @@ Führen Sie die folgenden Schritte auf PRIVDC als Domänenadministrator aus.
 8. Geben Sie im Fenster zur Auswahl von Benutzern, Computern oder Gruppen die Zeichenfolge *MIMAdmin* ein, und klicken Sie dann auf **Namen überprüfen**. Nachdem die Namen unterstrichen sind, klicken Sie auf **OK** und dann auf **Weiter**.
 9. Wählen Sie **Benutzerdefinierter Task**gilt für **Diesen Ordner**und **Allgemeine Berechtigungen**.
 10. Wählen Sie in der Liste mit den Berechtigungen Folgendes aus:
-  - **Lesen**
-  - **Schreiben**
-  - **Alle untergeordneten Objekte erstellen**
-  - **Alle untergeordneten Objekte löschen**
-  - **Alle Eigenschaften lesen**
-  - **Alle Eigenschaften schreiben**
-  - **Migrieren des SID-Verlaufs** Klicken Sie auf **Weiter** und dann auf **Fertig stellen**.
+    - **Lesen**
+    - **Schreiben**
+    - **Alle untergeordneten Objekte erstellen**
+    - **Alle untergeordneten Objekte löschen**
+    - **Alle Eigenschaften lesen**
+    - **Alle Eigenschaften schreiben**
+    - **Migrieren des SID-Verlaufs** Klicken Sie auf **Weiter** und dann auf **Fertig stellen**.
 
 11. Klicken Sie erneut mit der rechten Maustaste auf die Domäne **priv.contoso.local**, und wählen Sie **Objektverwaltung zuweisen** aus.  
 12. Klicken Sie auf der Registerkarte „Ausgewählte Benutzer und Gruppen“ auf **Hinzufügen**.  
@@ -271,9 +272,9 @@ Führen Sie die folgenden Schritte auf PRIVDC als Domänenadministrator aus.
 
 17. Öffnen Sie eine Eingabeaufforderung.  
 18. Überprüfen Sie die Zugriffssteuerungsliste im Objekt „AdminSDHolder“ in den PRIV-Domänen. Wenn Ihre Domäne beispielsweise „priv.contoso.local“ lautet, geben Sie folgenden Befehl ein:
-  ```cmd
-  dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"
-  ```
+    ```cmd
+    dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"
+    ```
 19. Aktualisieren Sie die Zugriffssteuerungsliste nach Bedarf, um sicherzustellen, dass der MIM-Dienst und der MIM-Komponentendienst Mitgliedschaften von Gruppen aktualisieren können, die von dieser Zugriffssteuerungsliste geschützt werden.  Geben Sie den folgenden Befehl ein:
 
 ```cmd
@@ -299,10 +300,10 @@ Installieren Sie Windows Server 8.1 Enterprise oder Windows 10 Enterprise auf 
 
 4. Binden Sie in der Systemsteuerung den Computer „PRIVWKSTN“ in die Domäne „priv.contoso.local“ ein. Dies erfordert die Bereitstellung der Anmeldeinformationen des PRIV-Domänenadministrators. Nachdem dies abgeschlossen ist, starten Sie den Computer „PRIVWKSTN“ neu.
 
-Weitere Details finden Sie unter [Securing privileged access workstations](https://technet.microsoft.com/en-us/library/mt634654.aspx) (Sichern von Arbeitsstationen mit privilegiertem Zugriff).
+Weitere Details finden Sie unter [Securing privileged access workstations](https://technet.microsoft.com/library/mt634654.aspx) (Sichern von Arbeitsstationen mit privilegiertem Zugriff).
 
 Im nächsten Schritt bereiten Sie einen PAM-Server vor.
 
->[!div class="step-by-step"]
-[« Schritt 1](step-1-prepare-corp-domain.md)
-[Schritt 3 »](step-3-prepare-pam-server.md)
+> [!div class="step-by-step"]
+> [« Schritt 1](step-1-prepare-corp-domain.md)
+> [Schritt 3 »](step-3-prepare-pam-server.md)

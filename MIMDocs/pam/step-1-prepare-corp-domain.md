@@ -1,7 +1,7 @@
 ---
-title: "Bereitstellen von PAM – Schritt 1: CORP-Domäne | Microsoft Docs"
-description: "Bereiten Sie die CORP-Domäne mit vorhandenen oder neuen Identitäten vor, die vom Privileged Identity Manager verwaltet werden sollen."
-keywords: 
+title: 'Bereitstellen von PAM – Schritt 1: CORP-Domäne | Microsoft Docs'
+description: Bereiten Sie die CORP-Domäne mit vorhandenen oder neuen Identitäten vor, die vom Privileged Identity Manager verwaltet werden sollen.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,16 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: d14d2f40972686305abea2426e20f4c13e3e267b
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: f0d2ebd198ad6aee2b2b6ba07c83f5147243f598
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289600"
 ---
 # <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Schritt 1: Vorbereiten des Hosts und der CORP-Domäne
 
->[!div class="step-by-step"]
-[Schritt 2 »](step-2-prepare-priv-domain-controller.md)
+> [!div class="step-by-step"]
+> [Schritt 2 »](step-2-prepare-priv-domain-controller.md)
 
 In diesem Schritt bereiten Sie das Hosten der geschützten Umgebung vor. Bei Bedarf erstellen Sie auch einen Domänencontroller und eine Mitgliedsarbeitsstation in einer neuen Domäne und Gesamtstruktur (der Gesamtstruktur *CORP*) mit Identitäten, die durch die geschützte Umgebung verwaltet werden. Die CORP-Gesamtstruktur simuliert eine vorhandene Gesamtstruktur, die zu verwaltende Ressourcen enthält. Dieses Dokument enthält eine Beispielressource, die geschützt werden soll: eine Dateifreigabe.
 
@@ -56,15 +57,15 @@ In diesem Abschnitt fügen Sie die Rollen „Active Directory-Domänendienste (A
 
 2. Geben Sie die folgenden Befehle ein.
 
-  ```PowoerShell
-  import-module ServerManager
+   ```PowoerShell
+   import-module ServerManager
 
-  Add-WindowsFeature AD-Domain-Services,DNS,FS-FileServer –restart –IncludeAllSubFeature -IncludeManagementTools
+   Add-WindowsFeature AD-Domain-Services,DNS,FS-FileServer –restart –IncludeAllSubFeature -IncludeManagementTools
 
-  Install-ADDSForest –DomainMode Win2008R2 –ForestMode Win2008R2 –DomainName contoso.local –DomainNetbiosName contoso –Force -NoDnsOnNetwork
-  ```
+   Install-ADDSForest –DomainMode Win2008R2 –ForestMode Win2008R2 –DomainName contoso.local –DomainNetbiosName contoso –Force -NoDnsOnNetwork
+   ```
 
-  Dies führt zu der Aufforderung, ein Administratorkennwort für den abgesicherten Modus zu verwenden. Beachten Sie, dass Fehlermeldungen für die DNS-Delegierung und Kryptografieeinstellungen angezeigt werden. Diese sind normal.
+   Dies führt zu der Aufforderung, ein Administratorkennwort für den abgesicherten Modus zu verwenden. Beachten Sie, dass Fehlermeldungen für die DNS-Delegierung und Kryptografieeinstellungen angezeigt werden. Diese sind normal.
 
 3. Wenn die Erstellung der Gesamtstruktur abgeschlossen ist, melden Sie sich ab. Der Server wird automatisch neu gestartet.
 
@@ -80,11 +81,11 @@ Melden Sie sich in jeder Domäne als Domänenadministrator bei einem Domänencon
 
 2. Geben Sie die folgenden Befehle ein, aber ersetzen Sie „CONTOSO“ durch den NetBIOS-Namen Ihrer Domäne.
 
-  ```PowerShell
-  import-module activedirectory
+   ```PowerShell
+   import-module activedirectory
 
-  New-ADGroup –name 'CONTOSO$$$' –GroupCategory Security –GroupScope DomainLocal –SamAccountName 'CONTOSO$$$'
-  ```
+   New-ADGroup –name 'CONTOSO$$$' –GroupCategory Security –GroupScope DomainLocal –SamAccountName 'CONTOSO$$$'
+   ```
 
 In einigen Fällen ist die Gruppe möglicherweise bereits vorhanden. Dies ist normal, wenn die Domäne auch in AD-Migrationsszenarien verwendet wurde.
 
@@ -101,21 +102,21 @@ Wir erstellen eine Sicherheitsgruppe namens *CorpAdmins* und einen Benutzer name
 
 2. Geben Sie die folgenden Befehle ein. Ersetzen Sie das Kennwort „Pass@word1“ durch eine andere Kennwortzeichenfolge.
 
-  ```PowerShell
-  import-module activedirectory
+   ```PowerShell
+   import-module activedirectory
 
-  New-ADGroup –name CorpAdmins –GroupCategory Security –GroupScope Global –SamAccountName CorpAdmins
+   New-ADGroup –name CorpAdmins –GroupCategory Security –GroupScope Global –SamAccountName CorpAdmins
 
-  New-ADUser –SamAccountName Jen –name Jen
+   New-ADUser –SamAccountName Jen –name Jen
 
-  Add-ADGroupMember –identity CorpAdmins –Members Jen
+   Add-ADGroupMember –identity CorpAdmins –Members Jen
 
-  $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+   $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
 
-  Set-ADAccountPassword –identity Jen –NewPassword $jp
+   Set-ADAccountPassword –identity Jen –NewPassword $jp
 
-  Set-ADUser –identity Jen –Enabled 1 -DisplayName "Jen"
-  ```
+   Set-ADUser –identity Jen –Enabled 1 -DisplayName "Jen"
+   ```
 
 ### <a name="configure-auditing"></a>Konfigurieren der Überwachung
 
@@ -139,9 +140,9 @@ Melden Sie sich in jeder Domäne als Domänenadministrator bei einem Domänencon
 
 8. Wenden Sie die Überwachungseinstellungen an, indem Sie ein PowerShell-Fenster starten und Folgendes eingeben:
 
-  ```cmd
-  gpupdate /force /target:computer
-  ```
+   ```cmd
+   gpupdate /force /target:computer
+   ```
 
 Nach wenigen Minuten sollte die Meldung **Die Aktualisierung der Computerrichtlinie wurde erfolgreich abgeschlossen** angezeigt werden.
 
@@ -153,11 +154,11 @@ In diesem Abschnitt konfigurieren Sie die Registrierungseinträge für die Migra
 
 2. Geben Sie die folgenden Befehle ein, um die Quelldomäne so zu konfigurieren, dass RPC-Zugriff (Remote Procedure Call, Remoteprozeduraufruf) auf die SAM-Datenbank (Security Accounts Manager, Sicherheitskontenverwaltung) zugelassen wird.
 
-  ```PowerShell
-  New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
+   ```PowerShell
+   New-ItemProperty –Path HKLM:SYSTEM\CurrentControlSet\Control\Lsa –Name TcpipClientSupport –PropertyType DWORD –Value 1
 
-  Restart-Computer
-  ```
+   Restart-Computer
+   ```
 
 Dadurch wird der Domänencontroller CORPDC neu gestartet. Weitere Informationen zu dieser Registrierungseinstellung finden Sie unter [How to troubleshoot inter-forest sIDHistory migration with ADMTv2](http://support.microsoft.com/kb/322970) (Problembehandlung der sIDHistory-Migration zwischen Gesamtstrukturen mit ADMTv2).
 
@@ -192,21 +193,21 @@ Sie benötigen eine Ressource, um die sicherheitsgruppenbasierte Zugriffskontrol
 
 4. Geben Sie die folgenden Befehle ein.
 
-  ```PowerShell
-  mkdir c:\corpfs
+   ```PowerShell
+   mkdir c:\corpfs
 
-  New-SMBShare –Name corpfs –Path c:\corpfs –ChangeAccess CorpAdmins
+   New-SMBShare –Name corpfs –Path c:\corpfs –ChangeAccess CorpAdmins
 
-  $acl = Get-Acl c:\corpfs
+   $acl = Get-Acl c:\corpfs
 
-  $car = New-Object System.Security.AccessControl.FileSystemAccessRule( "CONTOSO\CorpAdmins", "FullControl", "Allow")
+   $car = New-Object System.Security.AccessControl.FileSystemAccessRule( "CONTOSO\CorpAdmins", "FullControl", "Allow")
 
-  $acl.SetAccessRule($car)
+   $acl.SetAccessRule($car)
 
-  Set-Acl c:\corpfs $acl
-  ```
+   Set-Acl c:\corpfs $acl
+   ```
 
 Im nächsten Schritt bereiten Sie den PRIV-Domänencontroller vor.
 
->[!div class="step-by-step"]
-[Schritt 2 »](step-2-prepare-priv-domain-controller.md)
+> [!div class="step-by-step"]
+> [Schritt 2 »](step-2-prepare-priv-domain-controller.md)

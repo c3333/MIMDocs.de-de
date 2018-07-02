@@ -12,22 +12,23 @@ ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 736d933f2c62d440abafdab27f82b3b1ba0f9a06
-ms.sourcegitcommit: 48f89d555c0ac7caa97d149ee42e0b9ef6ccc5f5
+ms.openlocfilehash: 119dca043ec478e68317c14103204da2482eb001
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290151"
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Installieren von MIM 2016: Synchronisieren von Active Directory und MIM-Dienst
 
->[!div class="step-by-step"]
-[« MIM-Dienst und -Portal](install-mim-service-portal.md)
-
+> [!div class="step-by-step"]
+> [« MIM-Dienst und -Portal](install-mim-service-portal.md)
+> 
 > [!NOTE]
 > Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiel:
 > - Domänencontrollername: **mimservername**
 > - Domänenname: **contoso**
-> - Kennwort – **Pass@word1**
+> - Kennwort – <strong>Pass@word1</strong>
 
 Standardmäßig sind für MIM Synchronization Service (Sync) keine Connectors konfiguriert.  Ein typischer erster Schritt besteht darin, die MIM-Dienstdatenbank mithilfe von MIM Sync mit vorhandenen Active Directory-Konten aufzufüllen. Dazu verwenden Sie die MIM-Synchronisierungsdienstanwendung.
 
@@ -39,7 +40,7 @@ Wenn Sie einen MIM-Verwaltungs-Agent konfigurieren, müssen Sie ein Benutzerkont
 > [!NOTE]
 > Das Konto, das Sie für Ihren MIM-Verwaltungs-Agent verwenden, muss dasselbe Konto wie das sein, das Sie während der Installation des MIM-Diensts angegeben haben.
 
-###<a name="to-create-the-mim-ma"></a>So erstellen Sie den MIM MA
+### <a name="to-create-the-mim-ma"></a>So erstellen Sie den MIM MA
 
 1.  Öffnen Sie den Synchronisierungsdienst-Manager.
 
@@ -429,5 +430,5 @@ Führen Sie diese Schritte aus, um alle drei Ausführungsprofile auszuführen.
     - Wählen Sie aus der Liste **Ausführungsprofile** das Ausführungsprofil aus, das Sie ausführen möchten.
     - Klicken Sie auf **OK**, um das Ausführungsprofil zu starten.
 
->[!div class="step-by-step"]
-[« MIM-Dienst und -Portal](install-mim-service-portal.md)
+> [!div class="step-by-step"]
+> [« MIM-Dienst und -Portal](install-mim-service-portal.md)

@@ -11,19 +11,20 @@ ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 50f7b135ce0d5a46ea08068a7658b229759d2b50
-ms.sourcegitcommit: 24bb3e82f55971696bdefa6c240f1a27f856e110
+ms.openlocfilehash: a4239f1d69d8a43d70dd38af16e9ef8be62bd33c
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288910"
 ---
 # <a name="deprecated-features"></a>Veraltete Features
 
 In diesem Artikel werden veraltete Features von Microsoft Identity Manager 2016 SP1 beschrieben. Wenn das Feature in Microsoft Identity Manager noch vorhanden ist, wird es auch weiterhin unterstützt. Es wird nicht empfohlen, diese Features in neuen Bereitstellungen zu verwenden, da Sie möglicherweise in einem kommenden Release entfernt werden.  Für Entwickler wird vom Verwenden von veralteten Features in neuen Anwendungen oder Projektmappen abgeraten.
 
->[!NOTE]
-Features und Funktionen, die in MIM SP1 entfernt wurden, werden mit ** gekennzeichnet. <br>
-Weitere Informationen finden Sie im Artikel zum [Supportlebenszyklus für Microsoft Identity Manager](https://support.microsoft.com/en-us/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010).
+> [!NOTE]
+> Features und Funktionen, die in MIM SP1 entfernt wurden, werden mit ** gekennzeichnet. <br>
+> Weitere Informationen finden Sie im Artikel zum [Supportlebenszyklus für Microsoft Identity Manager](https://support.microsoft.com/en-us/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010).
 
 
 ## <a name="bhold"></a>BHOLD 
@@ -31,6 +32,7 @@ Weitere Informationen finden Sie im Artikel zum [Supportlebenszyklus für Micros
 Es wird nicht empfohlen, neue Bereitstellungen von Microsoft BHOLD Suite-Komponenten vorzunehmen. Vorhandene BHOLD-Bereitstellungen werden weiterhin unterstützt. Azure AD bietet jetzt [Zugriffsüberprüfungen](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview), die einige der Nachweisfeatures von BHOLD ersetzen.
 
 ## <a name="certificate-management"></a>Zertifikatverwaltung 
+
 | **Kategorie**                | **Veraltetes Feature**              | **Ersatz und Kommentar**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
 | Verwaltungs-Agents | **FIM-Zertifikatverwaltung | Der FIM-Zertifikatverwaltungs-Agent wurde aus MIM 2016 entfernt.                                                             |
@@ -53,8 +55,8 @@ Es wird nicht empfohlen, neue Bereitstellungen von Microsoft BHOLD Suite-Kompone
 | Verwaltungs-Agents           | Konfiguration des Anzeigenamens    | Dieses Feature wird nicht ersetzt. Diese Option wurde nur zum Bereitstellen eines alternativen Namens für eine Partition in der WMI-Schnittstelle verwendet.                                                                                                                                                                       |
 | Ausführungsprofile                | Kombinierte Profile                   | Die kombinierten Profile „delta import/sync“, „full import/delta sync“ und „full import/sync“ werden entfernt. Es wird empfohlen, stattdessen Ausführungsprofile mit zwei Schritten zu verwenden. 
 
->[!NOTE]
-Kombinierte Ausführungsprofile sollten nur in Umgebungen verwendet werden, in denen viele Disconnectors die Leistung beeinträchtigen würden.
+> [!NOTE]
+> Kombinierte Ausführungsprofile sollten nur in Umgebungen verwendet werden, in denen viele Disconnectors die Leistung beeinträchtigen würden.
 
 
 | **Kategorie**                | **Veraltetes Feature**              | **Ersatz und Kommentar**           |

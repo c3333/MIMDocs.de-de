@@ -10,12 +10,12 @@ ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: 101f4110d6439cfc17f25c8880531e18f51920da
-ms.sourcegitcommit: 19ed53fa6af61086774a0429fd1520067caf4e93
+ms.openlocfilehash: 834343243dfeefa8d1874414fa369751288fd64d
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34462897"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288869"
 ---
 # <a name="supported-languages"></a>Unterstützte Sprachen
 
@@ -31,41 +31,41 @@ Das Microsoft-Sprachpaket für den MIM-Dienst und -Portal unterstützt folgende 
 > [!IMPORTANT]
 > Der Text im SSPR-Add-In und -Portal wird lokalisiert, die Lokalisierung der Fragen erfordert jedoch zusätzliche Arbeit. Sie müssen AuthN-Workflows (und zugehörige Datensätze und MPRs, um diese anzuzielen) erstellen, um Fragen in jeder Sprache dem Zielstandort zuzuordnen.
 
-|Sprache|FIM (4.3.x.x)/MIM (4.4.xx)|MIM (4.5.x.x)
-|-----|-----|-----|
-|Bulgarisch|bg-BG|bg|
-|Chinesisch (vereinfacht)|zh-CN|zh-HANS|
-|Chinesisch (Taiwan)|zh-TW|zh-HANT|
-|Kroatisch|hr-HR|HR|
-|Tschechisch|cs-CZ|cs|
-|Dänisch|da-DK|da|
-|Niederländisch|nl-NL|nl|
-|Estnisch|et-EE|et|
-|Französisch|fr-FR|fr|
-|Finnisch|fi-FI|fi|
-|Deutsch|de-DE|de|
-|Griechisch|el-GR|el|
-|Hindi|hi-IN|hi|
-|Ungarisch|hu-HU|hu|
-|Italienisch|it-IT|it|
-|Japanisch|ja-JP|ja|
-|Koreanisch|ko-KR|ko|
-|Litauisch|lt-LT|lt|
-|Lettisch|lv-LV|lv|
-|Norwegisch|nb-NO|nb-NO|
-|Polnisch|pl-PL|pl|
-|Portugiesisch (Portugal)|pt-PT|pt|
-|Portugiesisch (Brasilien)|pt-BR|pt-BR|
-|Russisch|ru-RU|ru||sv|
-|Rumänisch|ro-RO|ro|
-|Spanisch|es-ES|es|
-|Slowakisch|sk-SK|sk|
-|Schwedisch|sv-SE|sv|
-|Slowenisch|sl-SI|sl|
-|Serbisch (Serbien) |sr-latn-CS (veraltet)|sr-Latn-RS|
-|Thai|th-TH|th|
-|Türkisch|tr-TR|tr|
-|Ukrainisch|uk-UA|uk|
+|       Sprache        | FIM (4.3.x.x)/MIM (4.4.xx) | MIM (4.5.x.x) |
+|-----------------------|--------------------------|--------------|
+|       Bulgarisch       |          bg-BG           |      bg      |
+| Chinesisch (vereinfacht)  |          zh-CN           |   zh-HANS    |
+|   Chinesisch (Taiwan)    |          zh-TW           |   zh-HANT    |
+|       Kroatisch        |          hr-HR           |      HR      |
+|         Tschechisch         |          cs-CZ           |      cs      |
+|        Dänisch         |          da-DK           |      da      |
+|         Niederländisch         |          nl-NL           |      nl      |
+|       Estnisch        |          et-EE           |      et      |
+|        Französisch         |          fr-FR           |      fr      |
+|        Finnisch        |          fi-FI           |      fi      |
+|        Deutsch         |          de-DE           |      de      |
+|         Griechisch         |          el-GR           |      el      |
+|         Hindi         |          hi-IN           |      hi      |
+|       Ungarisch       |          hu-HU           |      hu      |
+|        Italienisch        |          it-IT           |      it      |
+|       Japanisch        |          ja-JP           |      ja      |
+|        Koreanisch         |          ko-KR           |      ko      |
+|      Litauisch       |          lt-LT           |      lt      |
+|        Lettisch        |          lv-LV           |      lv      |
+|       Norwegisch       |          nb-NO           |    nb-NO     |
+|        Polnisch         |          pl-PL           |      pl      |
+| Portugiesisch (Portugal) |          pt-PT           |      pt      |
+|  Portugiesisch (Brasilien)  |          pt-BR           |    pt-BR     |
+|        Russisch        |          ru-RU           |      ru      |
+|       Rumänisch        |          ro-RO           |      ro      |
+|        Spanisch        |          es-ES           |      es      |
+|        Slowakisch         |          sk-SK           |      sk      |
+|        Schwedisch        |          sv-SE           |      sv      |
+|       Slowenisch       |          sl-SI           |      sl      |
+|   Serbisch (Serbien)    |  sr-latn-CS (veraltet)  |  sr-Latn-RS  |
+|         Thai          |          th-TH           |      th      |
+|        Türkisch        |          tr-TR           |      tr      |
+|       Ukrainisch       |          uk-UA           |      uk      |
 
 ## <a name="certificate-management"></a>Zertifikatverwaltung 
 Die Microsoft-Zertifikatverwaltung unterstützt folgende 9 Sprachen: 
