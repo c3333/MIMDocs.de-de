@@ -1,7 +1,7 @@
 ---
 title: Installation von BHOLD Core | Microsoft-Dokumentation
 description: Dokumentation zur Installation von BHOLD Core
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,13 @@ ms.date: 09/07/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 33fbe63528d5d7c543ae286f934654538782b4d5
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: 752605be1392e514f5b132a654134185b38e2cef
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290134"
 ---
 # <a name="bhold-core-installation"></a>Installation von BHOLD Core
 
@@ -98,8 +99,8 @@ Bevor Sie mit der Installation des BHOLD Core-Moduls beginnen, müssen Sie darau
 |---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Verwenden eines Sicherheitsanbieters auf einer Domäne/einem Computer** | Bei der Auswahl dieser Option wird angegeben, dass die Active Directory Domain Services-Sicherheit den Zugriff auf BHOLD Core steuert.                                                                                                                                                                                                  | Aktivieren Sie das Kontrollkästchen. **Wichtig:** Die Installation schlägt fehl, wenn dieses Kontrollkästchen nicht aktiviert ist.                                                                 |
 | **Domäne**                                  | Gibt die Domäne an, die den BHOLD-Server, das BHOLD-Dienstkonto und die BHOLD-Anwendungsgruppe enthält. **Wichtig:** Geben Sie den Domänennamen an, indem Sie den kurzen NetBIOS-Namen verwenden, nicht den vollqualifizierten Domänennamen (FQDN). Wenn der FQDN der Domäne beispielsweise „fabrikam.com“ ist, geben Sie den Domänennamen als „FABRIKAM“ an. | Geben Sie den Domänennamen hier ein:                                                                                                                                        |
-| **Anwendungsgruppe**                       | Gibt den Namen der Sicherheitsgruppe an, die Sie zuvor in [Erforderliche Benutzer und Gruppen](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx#rug) erstellt haben.                                                                                                                                  | Geben Sie den Gruppennamen hier ein:                                                                                                                                         |
-| **Dienstbenutzer**                            | Gibt den Anmeldenamen des Dienstbenutzerkontos an, das Sie zuvor in [Erforderliche Benutzer und Gruppen](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx#rug) erstellt haben.                                                                                                                      | Geben Sie den Benutzerkontonamen hier ein:                                                                                                                                  |
+| **Anwendungsgruppe**                       | Gibt den Namen der Sicherheitsgruppe an, die Sie zuvor in [Erforderliche Benutzer und Gruppen](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx#rug) erstellt haben.                                                                                                                                  | Geben Sie den Gruppennamen hier ein:                                                                                                                                         |
+| **Dienstbenutzer**                            | Gibt den Anmeldenamen des Dienstbenutzerkontos an, das Sie zuvor in [Erforderliche Benutzer und Gruppen](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx#rug) erstellt haben.                                                                                                                      | Geben Sie den Benutzerkontonamen hier ein:                                                                                                                                  |
 | **Passwort**                                | Gibt das Kennwort des BHOLD Core-Dienstbenutzerkontos an.                                                                                                                                                                                                                                              | Geben Sie das Kennwort hier ein: **Wichtig:** Achten Sie darauf, dieses Kennwort an einem verborgenen, sicheren Ort aufzubewahren.                                                                |
 | **IP/Port der Website**                         | Gibt die IP-Adresse und Portnummer der Website an, die auf dem Intranetserver erstellt werden soll. Ändern Sie den Standardwert (\*) nur, wenn Sie nicht dieselbe IP-Adresse wie die der Standardwebsite verwenden. Ändern Sie die Portnummer nur zu einem verfügbaren Port, wenn der Standardport (5151) bereits verwendet wird.             | Wenn die Standardwebsite eine IP-Adresse verwendet, die nicht dem Standard entspricht, geben Sie diese hier ein: Wenn die Standardportnummer bereits verwendet wird, geben Sie die Portnummer der BHOLD-Website hier ein: |
 
@@ -168,8 +169,8 @@ Damit IIS ordnungsgemäß mit dem BHOLD Core-Modul funktioniert, müssen Sie den
 
 Wenn der Netzwerkname, der zum Herstellen einer Verbindung mit der BHOLD-Website verwendet wird, nicht der gleiche wie der Serverhostname ist, müssen Sie einen Dienstprinzipalnamen (Service Principal Name, SPN) für HTTP einrichten. Wenn Sie beispielsweise einen CNAME-Ressourceneintrag in DNS verwenden, um einen Alias für den Server anzugeben. Wenn Sie den Netzwerklastenausgleich verwenden, müssen Sie diese zusätzlichen Netzwerkadressen in Active Directory registrieren. Wenn Sie dies nicht tun, kann Internet Explorer das Kerberos-Protokoll beim Herstellen einer Verbindung mit der BHOLD-Website nicht verwenden.
 
->[!IMPORTANT]
-Wenn das BHOLD Core-Modul auf demselben Computer wie das FIM-Portal installiert ist, müssen Sie DNS-Ressourceneinträge (CNAME oder A) mit unterschiedlichen Hostnamen für die Server, die BHOLD Core ausführen und den Server, der das FIM-Portal ausführt, erstellen. Nur ein SPN kann für ein bestimmtes Servertyp/Serveralias-Paar eingerichtet werden. Darum erfordern BHOLD Core und das FIM-Portal separate SPNs, da sie in der Regel unter verschiedenen Konten ausgeführt werden. Der Befehl „setspn“ meldet einen Fehler, wenn ein SPN bereits unter einem anderen Konto eingerichtet wurde.
+> [!IMPORTANT]
+> Wenn das BHOLD Core-Modul auf demselben Computer wie das FIM-Portal installiert ist, müssen Sie DNS-Ressourceneinträge (CNAME oder A) mit unterschiedlichen Hostnamen für die Server, die BHOLD Core ausführen und den Server, der das FIM-Portal ausführt, erstellen. Nur ein SPN kann für ein bestimmtes Servertyp/Serveralias-Paar eingerichtet werden. Darum erfordern BHOLD Core und das FIM-Portal separate SPNs, da sie in der Regel unter verschiedenen Konten ausgeführt werden. Der Befehl „setspn“ meldet einen Fehler, wenn ein SPN bereits unter einem anderen Konto eingerichtet wurde.
 
 Zum Durchführen dieses Verfahrens ist mindestens die Mitgliedschaft in **Domänenadministratoren** oder eine entsprechende Berechtigung erforderlich.
 
@@ -213,9 +214,9 @@ Zum Ausführen dieses Verfahrens müssen Sie als Mitglied der Gruppe „Domänen
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nachdem Sie BHOLD Core installiert und überprüft haben, dass die Installation erfolgreich war, können Sie zusätzliche Module installieren. An diesem Punkt ist die BHOLD-Datenbank praktisch leer. Sie enthält nur ein Benutzerkonto, das Stammkonto und eine Organisationseinheit, die Stammorganisationseinheit. Zum Hinzufügen weiterer Benutzer zur BHOLD-Datenbank können Sie abhängig von Ihren Anforderungen entweder das Modul des Zugriffsverwaltungsconnectors oder das BHOLD-Modellgeneratormodul installieren. Sie können das Modul des Zugriffsverwaltungsconnectors verwenden, um Benutzerdaten aus dem FIM-Synchronisierungsdienst zu importieren, oder Sie können den BHOLD-Modellgenerator verwenden, um Benutzerdaten aus einem Satz von strukturierten Dateien zu importieren. Weitere Informationen zum Verwenden des Moduls des Zugriffsverwaltungsconnectors finden Sie unter [Test Lab Guide: BHOLD Access Management Connector (Testlaboranleitung: BHOLD-Zugriffsverwaltungsconnector)](https://technet.microsoft.com/en-us/library/jj853085(v=ws.10).aspx).
+Nachdem Sie BHOLD Core installiert und überprüft haben, dass die Installation erfolgreich war, können Sie zusätzliche Module installieren. An diesem Punkt ist die BHOLD-Datenbank praktisch leer. Sie enthält nur ein Benutzerkonto, das Stammkonto und eine Organisationseinheit, die Stammorganisationseinheit. Zum Hinzufügen weiterer Benutzer zur BHOLD-Datenbank können Sie abhängig von Ihren Anforderungen entweder das Modul des Zugriffsverwaltungsconnectors oder das BHOLD-Modellgeneratormodul installieren. Sie können das Modul des Zugriffsverwaltungsconnectors verwenden, um Benutzerdaten aus dem FIM-Synchronisierungsdienst zu importieren, oder Sie können den BHOLD-Modellgenerator verwenden, um Benutzerdaten aus einem Satz von strukturierten Dateien zu importieren. Weitere Informationen zum Verwenden des Moduls des Zugriffsverwaltungsconnectors finden Sie unter [Test Lab Guide: BHOLD Access Management Connector (Testlaboranleitung: BHOLD-Zugriffsverwaltungsconnector)](https://technet.microsoft.com/library/jj853085(v=ws.10).aspx).
 
 Weitere Informationen zur Verwendung des BHOLD-Modellgeneratormoduls finden Sie unter:
 
-- [Microsoft BHOLD Suite Concepts Guide (Konzepthandbuch für Microsoft BHOLD Suite)](https://technet.microsoft.com/en-us/library/jj134102(v=ws.10).aspx)
-- [Microsoft BHOLD Suite Technical Reference (Technische Referenz zu Microsoft BHOLD Suite)](https://technet.microsoft.com/en-us/library/jj134935(v=ws.10).aspx).
+- [Microsoft BHOLD Suite Concepts Guide (Konzepthandbuch für Microsoft BHOLD Suite)](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx)
+- [Microsoft BHOLD Suite Technical Reference (Technische Referenz zu Microsoft BHOLD Suite)](https://technet.microsoft.com/library/jj134935(v=ws.10).aspx).

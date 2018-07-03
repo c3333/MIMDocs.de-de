@@ -1,7 +1,7 @@
 ---
 title: Verwenden von Azure MFA zur Aktivierung von PAM | Microsoft Docs
 description: Richten Sie Azure MFA als zweite Sicherheitsebene ein, wenn Benutzer Rollen in Privileged Access Management aktivieren.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: fimguy
 manager: mbaldwin
@@ -12,15 +12,16 @@ ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1fb012034685257d35ba4f8a79468145187ae5b6
-ms.sourcegitcommit: 27a23142393bbb0f66a3d533d89a5a8366a29e41
+ms.openlocfilehash: 30e683a0bd13d911f73eca19c847a2c9cd10f36d
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289828"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Verwenden von Azure MFA zur Aktivierung
->[!IMPORTANT]
-Zur Ankündigung der Außerkraftsetzung des Azure MFA SDK (Multi-Factor Authentication Software Development Kit): Das Azure MFA SDK wird für Bestandskunden bis zur Ausmusterung am 14. November 2018 unterstützt. Neue Kunden und aktuelle Kunden können das SDK nicht mehr über das klassische Azure-Portal herunterladen. Zum Herunterzuladen müssen Sie sich an den Azure-Kundensupport wenden, um ein für Sie generiertes Paket mit MFA-Dienstanmeldeinformationen zu erhalten. <br> Das Microsoft-Entwicklungsteam plant zurzeit Änderungen an der MFA durch die Integration des MFA-Server-SDK. Dieses wird in einem zukünftigen Hotfix im Frühjahr 2018 enthalten sein.
+> [!IMPORTANT]
+> Zur Ankündigung der Außerkraftsetzung des Azure MFA SDK (Multi-Factor Authentication Software Development Kit): Das Azure MFA SDK wird für Bestandskunden bis zur Ausmusterung am 14. November 2018 unterstützt. Neue Kunden und aktuelle Kunden können das SDK nicht mehr über das klassische Azure-Portal herunterladen. Zum Herunterzuladen müssen Sie sich an den Azure-Kundensupport wenden, um ein für Sie generiertes Paket mit MFA-Dienstanmeldeinformationen zu erhalten. <br> Das Microsoft-Entwicklungsteam plant zurzeit Änderungen an der MFA durch die Integration des MFA-Server-SDK. Dieses wird in einem zukünftigen Hotfix im Frühjahr 2018 enthalten sein.
 
 
 

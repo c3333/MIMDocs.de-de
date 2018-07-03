@@ -1,7 +1,7 @@
 ---
 title: Microsoft Identity Manager 2016 Service Pack 1 | Microsoft-Dokumentation
-description: "Erfahren Sie, wie MIM 2016 eine sicherere und einfachere Erfahrung bei der Identitätsverwaltung in der Cloud und lokal bietet."
-keywords: 
+description: Erfahren Sie, wie MIM 2016 eine sicherere und einfachere Erfahrung bei der Identitätsverwaltung in der Cloud und lokal bietet.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,12 @@ ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 98d21076801bbe60b7a2d2d5b7e1c41d4bce1b4a
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: 9b12f8bebf44847d76e94fe083266b1b32b608a9
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290287"
 ---
 # <a name="whats-new-for-microsoft-identity-manager-2016-service-pack-1"></a>Neuheiten in Microsoft Identity Manager 2016 Service Pack 1 #
 
@@ -42,8 +43,8 @@ Wir möchten auch von Ihnen hören! Wenn Sie Feedback, Kommentare oder Anliegen 
 
 - **Unterstützung der Funktionsebene „Windows Server 2016“ durch die PAM „PRIV“-Gesamtstruktur (geschützt) :** Der MIM PAM-Dienst kann in einer Umgebung mit Domänencontrollern konfiguriert werden, die auf der Active Directory Domain Services-Funktionsebene „Windows Server 2016“ ausgeführt werden. Bei Konfiguration ist das Kerberos-Ticket eines Benutzers auf die verbleibende Zeit seiner Rollenaktivierung zeitlich begrenzt.
 
-    >[!Note]
-    Wenn Sie die Gesamtstruktur-Funktionsebene „Windows Server 2012 R2“ in Ihrer CORP-Domäne beibehalten möchten, wird empfohlen, auf dem Domänencontroller der CORP-Domäne [KB 2919442](https://support.microsoft.com/en-us/kb/2919442) und [KB 2919355](https://support.microsoft.com/en-us/kb/2919355) zu installieren.
+  > [!Note]
+  >   Wenn Sie die Gesamtstruktur-Funktionsebene „Windows Server 2012 R2“ in Ihrer CORP-Domäne beibehalten möchten, wird empfohlen, auf dem Domänencontroller der CORP-Domäne [KB 2919442](https://support.microsoft.com/en-us/kb/2919442) und [KB 2919355](https://support.microsoft.com/en-us/kb/2919355) zu installieren.
 
 - **Heraufstufung von privilegierten Konten in exklusive Gruppen für die Gesamtstruktur „PRIV“ (geschützt):** Administratoren können jetzt den MIM-Dienst über Gruppen und Benutzer informieren, die ausschließlich in der Gesamtstruktur „PRIV“ vorhanden sind. Auf diese Weise können diese Gruppen und Benutzer in PAM-Rollen eingeschlossen werden.  Sie können dann für eine Rolle aktiviert werden und eine Gruppenmitgliedschaft in der Gesamtstruktur „PRIV“ zugewiesen bekommen.
 
@@ -51,8 +52,8 @@ Wir möchten auch von Ihnen hören! Wenn Sie Feedback, Kommentare oder Anliegen 
 
 - **PAM-Cmdlets für die Konfiguration des Authentifizierungsrichtliniensilos:** Servicepack 1 führt neue Cmdlets ein, um die Sicherheit Ihrer geschützten Gesamtstruktur zu verbessern. Diese Cmdlets erstellen automatisch ein Authentifizierungsrichtliniensilo, das an eine Authentifizierungsrichtlinienvorlage gebunden ist.
 
-    >[!Note]
-    Diese Cmdlets werden automatisch als Teil der Bereitstellungsskripts ausgeführt.
+  > [!Note]
+  >   Diese Cmdlets werden automatisch als Teil der Bereitstellungsskripts ausgeführt.
 
 
 ## <a name="platform-support"></a>Plattformunterstützung
@@ -74,11 +75,11 @@ Kunden, die ein Upgrade auf Microsoft Identity Manager 2016 Service Pack 1 durch
 
 Vorbereitung
 
-Vor dem Upgrade des MIM-Dienstes und -Portals müssen Sie das MIM-Synchronisierung-Modul aktualisieren.
+Vor dem Upgrade des MIM-Dienstes und -Portals müssen Sie die MIM-Synchronisierung-Engine aktualisieren.
 Sie müssen die MIM-Dienst- und MIM-Synchronisierungsdatenbanken sichern.
 
-  1. Deinstallieren Sie die Microsoft Identity Manager-Komponente, die Sie aktualisieren möchten.
-  2. Nachdem die Deinstallation abgeschlossen ist, öffnen Sie die Splash-Seite auf dem Installationsmedium „FIMSplash.htm“.
-  3. Wählen Sie die zu aktualisierende MIM-Komponente aus.
-  4. Setzen Sie die Installation fort und befolgen Sie die Aufforderungen.
-    * Installation von MIM-Dienst und -Portal: Wenn Sie Exchange Online als E-Mail-Konto auswählen, geben Sie auf dem nächsten Bildschirm die E-Mail-Adresse und die Anmeldeinformationen des Exchange Online-Kontos ein.
+1. Deinstallieren Sie die Microsoft Identity Manager-Komponente, die Sie aktualisieren möchten.
+2. Nachdem die Deinstallation abgeschlossen ist, öffnen Sie die Splash-Seite auf dem Installationsmedium „FIMSplash.htm“.
+3. Wählen Sie die zu aktualisierende MIM-Komponente aus.
+4. Setzen Sie die Installation fort und befolgen Sie die Aufforderungen.
+   * Installation von MIM-Dienst und -Portal: Wenn Sie Exchange Online als E-Mail-Konto auswählen, geben Sie auf dem nächsten Bildschirm die E-Mail-Adresse und die Anmeldeinformationen des Exchange Online-Kontos ein.

@@ -1,7 +1,7 @@
 ---
 title: Softwareanforderungen von PAM | Microsoft Docs
-description: "Ermitteln der Hardware- und Softwareanforderungen für eine erfolgreiche Bereitstellung von Privileged Access Management"
-keywords: 
+description: Ermitteln der Hardware- und Softwareanforderungen für eine erfolgreiche Bereitstellung von Privileged Access Management
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,18 +12,19 @@ ms.technology: active-directory-domain-services
 ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 2ff6fd997dc5bc7e4a4949520e978ae2d8283d4b
-ms.sourcegitcommit: f29f02fa8437fa55e86afd7b0b99a36d2306b96b
+ms.openlocfilehash: c53d8cc815f792d1a1246a7434350f1cfb087844
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288961"
 ---
 # <a name="hardware-and-software-requirements"></a>Hardware- und Softwareanforderungen
 
 Die Hardwareanforderungen von Privileged Access Management gehen nicht über diejenigen der zugrunde liegenden Softwareplattformen hinaus. Sie müssen lediglich sicherstellen, dass Sie über ausreichend Arbeitsspeicher bzw. Speicherplatz und Netzwerkkonnektivität verfügen.
 
->[!IMPORTANT]
-Dieser Artikel enthält die Mindestanforderungen für eine einfache Bereitstellung. Er soll nicht die Leistung, Skalierbarkeit oder Hochverfügbarkeit demonstrieren. Der Artikel stellt keine empfohlene Bereitstellungstopologie für große Unternehmen oder Produktionsumgebungen bereit.
+> [!IMPORTANT]
+> Dieser Artikel enthält die Mindestanforderungen für eine einfache Bereitstellung. Er soll nicht die Leistung, Skalierbarkeit oder Hochverfügbarkeit demonstrieren. Der Artikel stellt keine empfohlene Bereitstellungstopologie für große Unternehmen oder Produktionsumgebungen bereit.
 
 ## <a name="installing-from-software-packages"></a>Installieren von Softwarepaketen
 
@@ -39,7 +40,7 @@ Die folgende Software kann von GitHub heruntergeladen werden:
 
 ## <a name="required-software"></a>Erforderliche Software
 
-- Windows Server 2012 R2
+- Windows Server 2012 R2
 - Windows 10 Enterprise
 - SQL Server 2012 Service Pack 1 oder SQL Server 2014
 
@@ -76,4 +77,4 @@ Für PRIVDC:
 Für PAMSRV:
 
 - [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418.aspx)
-- [SQL Server 2012](https://msdn.microsoft.com/library/ms143506(sql.110).aspx) oder [SQL Server 2014](https://msdn.microsoft.com/en-us/library/ms143506(v=sql.120).aspx)
+- [SQL Server 2012](https://msdn.microsoft.com/library/ms143506(sql.110).aspx) oder [SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)

@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 6922c3c2f66b6dbb0b0751420be9dd778206a3cf
-ms.sourcegitcommit: 8316fa41f06f137dba0739a8700910116b5575d8
+ms.openlocfilehash: f69648e7e4229ca7c8de895cdf10ccb2c5f368e2
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289532"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Einrichten eines Identitätsverwaltungsservers: SharePoint
 
->[!div class="step-by-step"]
-[« SQL Server 2016](prepare-server-sql2016.md)
-[Exchange Server »](prepare-server-exchange.md)
-
+> [!div class="step-by-step"]
+> [« SQL Server 2016](prepare-server-sql2016.md)
+> [Exchange Server »](prepare-server-exchange.md)
+> 
 > [!NOTE]
 > Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiel:
 > - Name des Domänencontrollers: **corpdc**
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/04/2018
 > - Servername des MIM-Diensts: **corpservice**
 > - Servername der MIM-Synchronisierung: **corpsync**
 > - SQL-Servername: **corpsql**
-> - Kennwort – **Pass@word1**
+> - Kennwort – <strong>Pass@word1</strong>
 
 
 ## <a name="install-sharepoint-2016"></a>Installieren von **SharePoint 2016**
@@ -97,25 +98,25 @@ Folgen Sie den im **Konfigurations-Assistenten für SharePoint-Produkte** erläu
 
 2. Starten Sie „SharePoint 2016-Verwaltungsshell“, und führen Sie das folgende PowerShell-Skript aus, um eine **SharePoint-Websitesammlung** zu erstellen, die dieser Webanwendung zugeordnet ist.
 
-  ```
+   ```
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
     $w = Get-SPWebApplication http://mim.contoso.com/
     New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\miminstall -CompatibilityLevel 15 -Name "MIM Portal"
     $s = SpSite($w.Url)
     $s.CompatibilityLevel
-  ```
+   ```
 
-  > [!NOTE]
-  > Vergewissern Sie sich, dass die Variable *CompatibilityLevel* das Ergebnis „15“ hat. Wenn das Ergebnis von „15“ abweicht, wurde die Websitesammlung nicht für die korrekte Umgebungsversion erstellt. Löschen Sie die Websitesammlung, und erstellen Sie diese neu.
+   > [!NOTE]
+   > Vergewissern Sie sich, dass die Variable *CompatibilityLevel* das Ergebnis „15“ hat. Wenn das Ergebnis von „15“ abweicht, wurde die Websitesammlung nicht für die korrekte Umgebungsversion erstellt. Löschen Sie die Websitesammlung, und erstellen Sie diese neu.
 
 3. Deaktivieren Sie den **serverseitigen SharePoint-Ansichtszustand** und die SharePoint-Aufgabe „Integritätsanalyseauftrag (Stündlich, Microsoft SharePoint Foundation-Timer, Alle Server)“, indem Sie die folgenden PowerShell-Befehle in der **SharePoint 2016-Verwaltungsshell** ausführen:
 
-  ```
-  $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
-  $contentService.ViewStateOnServer = $false;
-  $contentService.Update();
-  Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
-  ```
+   ```
+   $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
+   $contentService.ViewStateOnServer = $false;
+   $contentService.Update();
+   Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
+   ```
 
 4. Öffnen Sie auf Ihrem Identitätsverwaltungsserver eine neue Registerkarte des Webbrowsers, navigieren Sie zu http://mim.contoso.com/, und melden Sie sich als *contoso\miminstall* an.  Eine leere SharePoint-Website namens *MIM-Portal* wird angezeigt.
 
@@ -129,6 +130,6 @@ Folgen Sie den im **Konfigurations-Assistenten für SharePoint-Produkte** erläu
 
 7. Öffnen Sie das Programm **Verwaltungstools**, und navigieren Sie zu **Dienste**. Suchen Sie den SharePoint-Verwaltungsdienst, und starten Sie ihn, sofern dieser nicht bereits ausgeführt wird.
 
->[!div class="step-by-step"]  
-[« SQL Server 2016](prepare-server-sql2016.md)
-[Exchange Server »](prepare-server-exchange.md)
+> [!div class="step-by-step"]  
+> [« SQL Server 2016](prepare-server-sql2016.md)
+> [Exchange Server »](prepare-server-exchange.md)

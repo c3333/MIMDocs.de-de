@@ -1,7 +1,7 @@
 ---
 title: Installation der BHOLD-Analyse | Microsoft-Dokumentation
-description: "Das BHOLD-Analysemodul ermöglicht das regelbasierte Testen des Datenzugriffs."
-keywords: 
+description: Das BHOLD-Analysemodul ermöglicht das regelbasierte Testen des Datenzugriffs.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,13 @@ ms.date: 09/07/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 631e08667e5d1535d8f63cc297aad360080f8b20
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: 24e43d8ad886fcd7bfa7a9e694754b956f1659cd
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290270"
 ---
 # <a name="bhold-analytics-installation"></a>Installation der BHOLD-Analyse
 
@@ -22,7 +23,7 @@ Das BHOLD-Analysemodul ermöglicht das regelbasierte Testen des Datenzugriffs, u
 
 ## <a name="bhold-analytics-installation-requirements"></a>BHOLD-Analyse – Installationsanforderungen
 
-Vor der Installation des BHOLD-Analysemoduls müssen Sie das BHOLD Core-Modul auf dem Server installieren, auf dem Sie das BHOLD-Analysemodul installieren möchten. Weitere Informationen zum Installieren des BHOLD Core-Moduls finden Sie unter [BHOLD Core Installation (Installation von BHOLD Core)](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx).
+Vor der Installation des BHOLD-Analysemoduls müssen Sie das BHOLD Core-Modul auf dem Server installieren, auf dem Sie das BHOLD-Analysemodul installieren möchten. Weitere Informationen zum Installieren des BHOLD Core-Moduls finden Sie unter [BHOLD Core Installation (Installation von BHOLD Core)](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx).
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
@@ -31,7 +32,7 @@ Bevor Sie mit der Installation des BHOLD-Analysemoduls beginnen, müssen Sie dar
 | **Element**                                    | **Beschreibung**                                                                                                                                                                                                           | **Wert**                                                                                                                                                                                                                                                                                                            |
 |---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Verwenden eines Sicherheitsanbieters auf einer Domäne/einem Computer** | Bei der Auswahl dieser Option wird angegeben, dass die Active Directory Domain Services-Sicherheit den Zugriff auf BHOLD Core steuert.                                                                                                                | Aktivieren Sie das Kontrollkästchen. **Wichtig:** Die Installation schlägt fehl, wenn dieses Kontrollkästchen nicht aktiviert ist.                                                                                                                                                                                                                   |
-| **Domäne**                                  | Gibt die Domäne an, die das Dienstkonto enthält, das Sie bei der Installation von BHOLD Core erstellt haben. Weitere Informationen finden Sie unter [BHOLD Core Installation (Installation von BHOLD Core)](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx). | Der Domänenname wird automatisch vom Assistenten bereitgestellt. Ändern Sie den Namen nur, wenn dieser falsch ist. **Wichtig:** Geben Sie den Domänennamen an, indem Sie den kurzen NetBIOS-Namen verwenden, nicht den vollqualifizierten Domänennamen (FQDN). Wenn der FQDN der Domäne beispielsweise „fabrikam.com“ ist, geben Sie den Domänennamen als „FABRIKAM“ an. |
+| **Domäne**                                  | Gibt die Domäne an, die das Dienstkonto enthält, das Sie bei der Installation von BHOLD Core erstellt haben. Weitere Informationen finden Sie unter [BHOLD Core Installation (Installation von BHOLD Core)](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | Der Domänenname wird automatisch vom Assistenten bereitgestellt. Ändern Sie den Namen nur, wenn dieser falsch ist. **Wichtig:** Geben Sie den Domänennamen an, indem Sie den kurzen NetBIOS-Namen verwenden, nicht den vollqualifizierten Domänennamen (FQDN). Wenn der FQDN der Domäne beispielsweise „fabrikam.com“ ist, geben Sie den Domänennamen als „FABRIKAM“ an. |
 | **Benutzer**                                    | Gibt den Anmeldenamen des BHOLD Core-Dienstbenutzerkontos an.                                                                                                                                                          | Geben Sie den Benutzerkontonamen hier ein:                                                                                                                                                                                                                                                                                    |
 | **Passwort**                                | Gibt das Kennwort des Dienstbenutzerkontos an.                                                                                                                                                                       | Geben Sie das Kennwort hier ein: **Wichtig:** Achten Sie darauf, dieses Kennwort an einem verborgenen, sicheren Ort aufzubewahren.                                                                                                                                                                                                                  |
 
@@ -39,7 +40,7 @@ Bevor Sie mit der Installation des BHOLD-Analysemoduls beginnen, müssen Sie dar
 
 Melden Sie sich zum Installieren des BHOLD-Analysemoduls als Mitglied der Gruppe „Domänenadministratoren“ an, laden Sie folgende Datei herunter, und führen Sie diese als Administrator auf dem Server aus, auf dem Sie das BHOLD-Analysemodul installieren möchten:
 
-- BholdAnalytics*\<Version\>*\_Release.msi
+- BholdAnalytics<em>\<Version\></em>\_Release.msi
 
 Ersetzen Sie *\<Version\>* durch die Versionsnummer der Version des BHOLD-Analysemoduls, die Sie installieren.
 
@@ -47,6 +48,6 @@ Klicken Sie mit der rechten Maustaste auf die Datei, und klicken Sie dann auf **
 
 # <a name="next-steps"></a>Nächste Schritte
 
-- [BHOLD core installation (Installation von BHOLD Core)](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx)
+- [BHOLD core installation (Installation von BHOLD Core)](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx)
 - [BHOLD-Installationshandbuch](bhold-installation-guide.md)
 - [BHOLD-Versionsverlauf](../reference/version-bhold-history.md)

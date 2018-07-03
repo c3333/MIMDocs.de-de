@@ -1,7 +1,7 @@
 ---
-title: "Unterstützte Connectors | Microsoft Docs"
-description: "Verwenden Sie Connectors, um die Datenübertragung zwischen MIM und Ihren verknüpften Datenquellen zu verwalten."
-keywords: 
+title: Unterstützte Connectors | Microsoft Docs
+description: Verwenden Sie Connectors, um die Datenübertragung zwischen MIM und Ihren verknüpften Datenquellen zu verwalten.
+keywords: ''
 author: fimguy
 ms.author: fimguy
 manager: bhu
@@ -10,13 +10,14 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 1e100a686f009d1a2290d7965fe36eea819148be
-ms.sourcegitcommit: fab9f21eea15d2024f11a59fc9e43db15bd215c7
+ms.openlocfilehash: 7b685ffb6f2a52bd2782395e4c1f26501ffe3101
+ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34479345"
 ---
 # <a name="connect-to-your-directories"></a>Herstellen der Verbindung zu Ihren Verzeichnissen
 
@@ -41,18 +42,18 @@ Dieser Artikel behandelt die in MIM enthaltenen und unterstützte Connectors, ab
 | Oracle-Datenbank | Oracle Database 10g oder 11g; 64-Bit-Client |
 | Microsoft SQL Server | SQL Server 2012, 2014, 2016 |
 | Verzeichnisserver für Oracle (zuvor Sun und Netscape) | Sun Directory Server 6.x, 7.x und Oracle 11 |
-| [Windows PowerShell-Connector für FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn640417.aspx) | Windows PowerShell 2.0 oder höher |
-| [Microsoft Azure Active Directory Connector für FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn511001.aspx) | Microsoft Azure Active Directory |
-| [Generischer LDAP-Connector für FIM 2010 R2](https://msdn.microsoft.com/en-us/library/dn510997.aspx) | [LDAP v3-Server (RFC 4510-konform)](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericldap) |
-| [Generischer SQL-Connector für FIM 2010 R2 / MIM](https://msdn.microsoft.com/en-us/library/dn510997.aspx) | [Der Connector wird mit allen 64-Bit-ODBC-Treibern unterstützt](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql) |
-| [Connector für Lotus Domino](https://msdn.microsoft.com/en-us/library/hh859750.aspx) | Lotus Notes Release v8.5.x |
-| [SharePoint Services-Connector-UPA](https://msdn.microsoft.com/en-us/library/dn511003.aspx) | SharePoint Server 2013 oder 2016 mit Benutzerprofildienst-Anwendung (UPA) |
-| [Connector für Webdienste](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5.0 oder 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1](https://docs.microsoft.com/en-us/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |
-| [Attribut-Wert-Paar-Textdatei](https://technet.microsoft.com/en-us/library/cc708644(v=ws.10).aspx) | Attribut-Wert-Paar-Textdateien |
-| [Textdatei mit Trennzeichen](https://technet.microsoft.com/en-us/library/cc720612(v=ws.10).aspx) | Textdateien mit Trennzeichen |
-| [Directory Services Markup Language (DSML)](https://technet.microsoft.com/en-us/library/cc720660(v=ws.10).aspx) | Directory Services Markup Language (DSML) 2.0 |
-| [Textdatei mit fester Breite](https://technet.microsoft.com/en-us/library/cc720633(v=ws.10).aspx) | Textdateien mit fester Breite |
-| [LDAP-Datenaustauschformat (LDIF)](https://technet.microsoft.com/en-us/library/cc708662(v=ws.10).aspx) | LDAP Data Interchange Format (LDIF) |
+| [Windows PowerShell-Connector für FIM 2010 R2](https://msdn.microsoft.com/library/dn640417.aspx) | Windows PowerShell 2.0 oder höher |
+| [Microsoft Azure Active Directory Connector für FIM 2010 R2](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory |
+| [Generischer LDAP-Connector für FIM 2010 R2](https://msdn.microsoft.com/library/dn510997.aspx) | [LDAP v3-Server (RFC 4510-konform)](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericldap) |
+| [Generischer SQL-Connector für FIM 2010 R2 / MIM](https://msdn.microsoft.com/library/dn510997.aspx) | [Der Connector wird mit allen 64-Bit-ODBC-Treibern unterstützt](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql) |
+| [Connector für Lotus Domino](https://msdn.microsoft.com/library/hh859750.aspx) | Lotus Notes Release v8.5.x |
+| [SharePoint Services-Connector-UPA](https://msdn.microsoft.com/library/dn511003.aspx) | SharePoint Server 2013 oder 2016 mit Benutzerprofildienst-Anwendung (UPA) |
+| [Connector für Webdienste](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5.0 oder 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1](https://docs.microsoft.com/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |
+| [Attribut-Wert-Paar-Textdatei](https://technet.microsoft.com/library/cc708644(v=ws.10).aspx) | Attribut-Wert-Paar-Textdateien |
+| [Textdatei mit Trennzeichen](https://technet.microsoft.com/library/cc720612(v=ws.10).aspx) | Textdateien mit Trennzeichen |
+| [Directory Services Markup Language (DSML)](https://technet.microsoft.com/library/cc720660(v=ws.10).aspx) | Directory Services Markup Language (DSML) 2.0 |
+| [Textdatei mit fester Breite](https://technet.microsoft.com/library/cc720633(v=ws.10).aspx) | Textdateien mit fester Breite |
+| [LDAP-Datenaustauschformat (LDIF)](https://technet.microsoft.com/library/cc708662(v=ws.10).aspx) | LDAP Data Interchange Format (LDIF) |
 
 ## <a name="related-topics"></a>Verwandte Themen
 

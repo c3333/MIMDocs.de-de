@@ -1,7 +1,7 @@
 ---
-title: "Bereitstellen von PAM – Schritt 6: Verschieben einer Gruppe | Microsoft Docs"
+title: 'Bereitstellen von PAM – Schritt 6: Verschieben einer Gruppe | Microsoft Docs'
 description: Migrieren Sie eine Gruppe zur Gesamtstruktur PRIV, damit sie mit Privileged Access Management verwaltet werden kann.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,17 +12,18 @@ ms.technology: active-directory-domain-services
 ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 550ad1e68ed8464dc7361e7a35ef35ee97753a9a
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 3a7359c664e1c4aeacbc571242c2b348be186a89
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289583"
 ---
 # <a name="step-6--transition-a-group-to-privileged-access-management"></a>Schritt 6 – Übergang eine Gruppe zur privilegierten Zugriffsverwaltung
 
->[!div class="step-by-step"]
-[«Schritt 5 ](step-5-establish-trust-between-priv-corp-forests.md)
-[Schritt 7»](step-7-elevate-user-access.md)
+> [!div class="step-by-step"]
+> [«Schritt 5 ](step-5-establish-trust-between-priv-corp-forests.md)
+> [Schritt 7»](step-7-elevate-user-access.md)
 
 Die Erstellung des privilegierten Kontos in der PRIV-Gesamtstruktur erfolgt mit PowerShell-Cmdlets. Diese Cmdlets führen die Funktionen aus:
 
@@ -42,26 +43,26 @@ Die Cmdlets müssen einmal für jede Gruppe und einmal für jedes Mitglied einer
    Import-Module ActiveDirectory
 ```
 
-3.  Erstellen Sie zu Demonstrationszwecken in PRIV ein entsprechendes Benutzerkonto für ein Benutzerkonto in einer vorhandenen Gesamtstruktur.
+3. Erstellen Sie zu Demonstrationszwecken in PRIV ein entsprechendes Benutzerkonto für ein Benutzerkonto in einer vorhandenen Gesamtstruktur.
 
-    Geben Sie die folgenden Befehle in PowerShell ein.  Wenn Sie nicht zuvor den Namen *Jen* verwendet haben, um den Benutzer in „contoso.local“ zu erstellen, ändern Sie die Parameter des Befehls nach Bedarf. Das Kennwort 'Pass@word1' ist nur ein Beispiel und sollte durch einen eindeutigen Kennwortwert ersetzt werden.
+   Geben Sie die folgenden Befehle in PowerShell ein.  Wenn Sie nicht zuvor den Namen *Jen* verwendet haben, um den Benutzer in „contoso.local“ zu erstellen, ändern Sie die Parameter des Befehls nach Bedarf. Das Kennwort 'Pass@word1' ist nur ein Beispiel und sollte durch einen eindeutigen Kennwortwert ersetzt werden.
 
- ```PowerShell
-        $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
-        $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
-        Set-ADAccountPassword –identity priv.Jen –NewPassword $jp
-        Set-ADUser –identity priv.Jen –Enabled 1
-  ```
+   ```PowerShell
+       $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
+       $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+       Set-ADAccountPassword –identity priv.Jen –NewPassword $jp
+       Set-ADUser –identity priv.Jen –Enabled 1
+   ```
 
 4. Kopieren Sie zu Demonstrationszwecken eine Gruppe und deren Mitglied, Jen, von CONTOSO in die PRIV-Domäne.
 
     Führen Sie die folgenden Befehle aus, wobei Sie das Kennwort des CORP-Domänenadministrators (CONTOSO\Administrator) bei entsprechender Aufforderung angeben:
 
- ```PowerShell
+   ```PowerShell
         $ca = get-credential –UserName CONTOSO\Administrator –Message "CORP forest domain admin credentials"
         $pg = New-PAMGroup –SourceGroupName "CorpAdmins" –SourceDomain CONTOSO.local                 –SourceDC CORPDC.contoso.local –Credentials $ca
         $pr = New-PAMRole –DisplayName "CorpAdmins" –Privileges $pg –Candidates $sj
- ```
+   ```
 
     Der Befehl **New-PAMGroup** übernimmt die beiden folgenden Parameter als Referenz:
 
@@ -70,19 +71,19 @@ Die Cmdlets müssen einmal für jede Gruppe und einmal für jedes Mitglied einer
      -   Den NetBIOS-Namen des Domänencontrollers der Gesamtstruktur „CORP“.  
      -   Die Anmeldeinformationen eines Domänenadministrators in der Gesamtstruktur „CORP“.  
 
-5.  (Optional) Entfernen Sie auf CORPDC das Konto von Jen aus der Gruppe **CONTOSO CorpAdmins**, sofern dieses noch vorhanden ist.  Dies ist nur für Demonstrationszwecke erforderlich, um zu veranschaulichen, wie Berechtigungen mit Konten verknüpft werden können, die in der PRIV-Gesamtstruktur erstellt werden.
+5. (Optional) Entfernen Sie auf CORPDC das Konto von Jen aus der Gruppe **CONTOSO CorpAdmins**, sofern dieses noch vorhanden ist.  Dies ist nur für Demonstrationszwecke erforderlich, um zu veranschaulichen, wie Berechtigungen mit Konten verknüpft werden können, die in der PRIV-Gesamtstruktur erstellt werden.
 
-    1.  Melden Sie sich bei CORPDC als *CONTOSO\Administrator* an.
+   1.  Melden Sie sich bei CORPDC als *CONTOSO\Administrator* an.
 
-    2.  Starten Sie PowerShell, führen Sie den folgenden Befehl aus, und bestätigen Sie anschließend die Änderung.
+   2.  Starten Sie PowerShell, führen Sie den folgenden Befehl aus, und bestätigen Sie anschließend die Änderung.
 
-        ```PowerShell
-        Remove-ADGroupMember -identity "CorpAdmins" -Members "Jen"
-        ```
+       ```PowerShell
+       Remove-ADGroupMember -identity "CorpAdmins" -Members "Jen"
+       ```
 
 
 Wenn Sie veranschaulichen möchten, dass das Administratorkonto des Benutzers über die Gesamtstruktur übergreifende Zugriffsrechte verfügt, fahren Sie mit dem nächsten Schritt fort.
 
->[!div class="step-by-step"]
-[«Schritt 5 ](step-5-establish-trust-between-priv-corp-forests.md)
-[Schritt 7»](step-7-elevate-user-access.md)
+> [!div class="step-by-step"]
+> [«Schritt 5 ](step-5-establish-trust-between-priv-corp-forests.md)
+> [Schritt 7»](step-7-elevate-user-access.md)

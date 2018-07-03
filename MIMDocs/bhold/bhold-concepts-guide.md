@@ -1,19 +1,20 @@
 ---
-title: "Konzepthandbuch für Microsoft BHOLD Suite | Microsoft-Dokumentation"
+title: Konzepthandbuch für Microsoft BHOLD Suite | Microsoft-Dokumentation
 description: Erste Schritte mit MIM 2016-Komponenten durch Installation und Konfiguration von Synchronization Service
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
 ms.date: 09/14/2017
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 0d814dd27fe53ee7cfc46eac24ec577b05f78e52
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: 521025de3dc16a9bda02aed8287faeb3449192c1
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290066"
 ---
 # <a name="microsoft-bhold-suite-concepts-guide"></a>Konzepthandbuch für Microsoft BHOLD Suite
 
@@ -50,14 +51,14 @@ Mit BHOLD Suite können Sie Rollen innerhalb Ihrer Organisation angeben und orga
 - Users
 - Rollen
 - Berechtigungen
-- Anwendungen
+- Applications
 
 #### <a name="organizational-units"></a>Organisationseinheiten
 
 Organisationseinheiten (OrgUnits) sind das wichtigste Mittel, mit dem Benutzer im BHOLD-Rollenmodell organisiert werden. Jeder Benutzer muss mindestens einer OrgUnit angehören. (Wenn ein Benutzer aus der letzten Organisationseinheit in BHOLD gelöscht wird, wird der Datensatz des Benutzers aus der BHOLD-Datenbank gelöscht.)
 
->[!Important]
-Organisationseinheiten im BHOLD-Rollenmodell dürfen nicht mit Organisationseinheiten in Active Directory Domain Services (AD DS) verwechselt werden. In der Regel basiert die Struktur der Organisationseinheit in BHOLD auf der Organisation und den Richtlinien Ihres Unternehmens, nicht auf den Anforderungen Ihrer Netzwerkinfrastruktur.
+> [!Important]
+> Organisationseinheiten im BHOLD-Rollenmodell dürfen nicht mit Organisationseinheiten in Active Directory Domain Services (AD DS) verwechselt werden. In der Regel basiert die Struktur der Organisationseinheit in BHOLD auf der Organisation und den Richtlinien Ihres Unternehmens, nicht auf den Anforderungen Ihrer Netzwerkinfrastruktur.
 
 Obwohl es nicht erforderlich ist, werden Organisationseinheiten meistens in BHOLD strukturiert, um die hierarchische Struktur der tatsächlichen Organisation etwa folgendermaßen darzustellen:
 
@@ -110,7 +111,7 @@ Eine Berechtigung in BHOLD entspricht einer Autorisierung, die von einer Zielanw
 
 Berechtigungen sind anwendungsspezifisch. BHOLD stellt eine einzige, einheitliche Sicht der Berechtigungen bereit, sodass Berechtigungen Rollen zugeordnet werden können, ohne dass Rollen-Manager erforderlich sind, um die Implementierungsdetails der Berechtigungen zu verstehen. In der Praxis können verschiedene Systemen eine Berechtigung auf unterschiedliche Arten erzwingen. Der anwendungsspezifische Connector des FIM-Synchronisierungsdiensts für die Anwendung bestimmt, wie Änderungen an den Berechtigungen eines Benutzers für diese Anwendung bereitgestellt werden. 
 
-#### <a name="applications"></a>Anwendungen
+#### <a name="applications"></a>Applications
 
 BHOLD implementiert eine Methode für das Anwenden der rollenbasierten Zugriffssteuerung (RBAC) auf externe Anwendungen. Wenn die Benutzer und Berechtigungen einer Anwendung für BHOLD bereitgestellt werden, kann BHOLD diese Berechtigungen den Benutzern zuordnen, indem die Rollen den Benutzern zugewiesen und anschließend die Berechtigungen mit den Rollen verknüpft werden. Der Hintergrundprozess der Anwendung kann dann die richtigen Berechtigungen basierend auf der Zuordnung der Rollen/Berechtigungen in BHOLD zu deren Benutzern zuordnen.
 
@@ -127,8 +128,8 @@ Der erste Schritt beim Verwenden des BHOLD-Modellgenerators ist das Importieren 
 - Vorgeschlagene Rollen, die mit einer Organisationseinheit verknüpft sind, aber für bestimmte Benutzer aktiviert werden müssen
 - Besitzerrollen, die einem Benutzer die Steuerung über Organisationseinheiten und Rollen gewähren, für die kein Besitzer in den importierten Dateien angegeben ist
 
->[!Important]
-Aktivieren Sie das Kontrollkästchen **Retain Existing Model** (Vorhandenes Modell beibehalten) beim Hochladen von Dateien nur in Testumgebungen. In Produktionsumgebungen müssen Sie den Modellgenerator verwenden, um das ursprüngliche Rollenmodell zu erstellen. Sie können diesen jedoch nicht benutzen, um ein bestehendes Rollenmodell in der BHOLD-Datenbank zu ändern.
+> [!Important]
+> Aktivieren Sie das Kontrollkästchen **Retain Existing Model** (Vorhandenes Modell beibehalten) beim Hochladen von Dateien nur in Testumgebungen. In Produktionsumgebungen müssen Sie den Modellgenerator verwenden, um das ursprüngliche Rollenmodell zu erstellen. Sie können diesen jedoch nicht benutzen, um ein bestehendes Rollenmodell in der BHOLD-Datenbank zu ändern.
 
 Nachdem der Modellgenerator diese Rollen im Rollenmodell erstellt hat, können Sie das Rollenmodell in Form einer XML-Datei in die BHOLD-Datenbank exportieren.
 
@@ -217,7 +218,7 @@ Eine Regel kann folgende Elementgruppen testen:
 - Organisationseinheiten
 - Rollen
 - Berechtigungen
-- Anwendungen
+- Applications
 - Konten
 
 Das folgende Diagramm veranschaulicht eine einfache Regel, die aus je zwei Regeln für Teilmengen und Filter besteht:
@@ -252,8 +253,8 @@ Es gibt drei Typen von Regelfiltern. Diese verwenden, wie angegeben, für ihren 
   - **„Kann nur eins besitzen“ und „Kann nur alle besitzen“**
   - **„Besitzt exklusiv eins“ und „Besitzt exklusiv alle“**
 
->[!Note]
-Restriktive Filter können die angezeigten Operatoren verwenden, um einen Schlüssel auf mehrere Werte zu testen.
+> [!Note]
+> Restriktive Filter können die angezeigten Operatoren verwenden, um einen Schlüssel auf mehrere Werte zu testen.
 
 Wenn Sie beispielsweise die Implementierung einer Richtlinie für die Trennung von Aufgaben (SoD) testen möchten, die angibt, dass kein Benutzer, der über die Berechtigung für das Anfordern von Zahlungen verfügt, auch über die Berechtigung für das Genehmigen von Zahlungen verfügen darf, können Sie eine Regel wie die folgende erstellen:
 

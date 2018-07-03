@@ -1,7 +1,7 @@
 ---
 title: Kennwortverwaltung mit Microsoft Identity Manager 2016 | Microsoft-Dokumentation
-description: 
-keywords: 
+description: ''
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -10,12 +10,13 @@ ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 156551f4083c71ee7059e817213751393db5833e
-ms.sourcegitcommit: 5ba5d916c0ca1e5aa501592af0cef714bfdc8afe
+ms.assetid: ''
+ms.openlocfilehash: 86b8b9bdf5c6441d0708cd874742fa48b65177fa
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289362"
 ---
 # <a name="microsoft-identity-manager-2016-password-management"></a>Kennwortverwaltung mit Microsoft Identity Manager 2016
 
@@ -61,8 +62,8 @@ Die DLL der .NET-Kenntworterweiterung wird immer dann aufgerufen, wenn ein Aufru
 
 Die Kennwortsynchronisierung funktioniert mit dem Benachrichtigungsdienst für Kennwortänderungen (PCNS) in einer AD-Domäne. Dadurch ist es möglich, Kennwortänderungen, die von AD ausgehen, an andere verknüpfte Datenquellen zu verteilen. Dies ist möglich, da MIM als RPC-Server (Remote Procedure Call) ausgeführt wird, der auf Benachrichtigungen zu Kennwortänderungen von einem AD-Domänencontroller lauscht. Sobald die Anforderung für eine Kennwortänderung erfasst und authentifiziert wurde, wird diese von MIM verarbeitet und an die entsprechenden Verwaltungs-Agents verteilt.
 
->[!IMPORTANT]
-Die bidirektionale Kennwortsynchronisierung wird von MIM nicht unterstützt. Durch das Konfigurieren der bidirektionalen Kennwortsynchronisierung kann es zu einer Schleife kommen, die Serverressourcen beansprucht und möglicherweise AD und MIM beeinträchtigt.
+> [!IMPORTANT]
+> Die bidirektionale Kennwortsynchronisierung wird von MIM nicht unterstützt. Durch das Konfigurieren der bidirektionalen Kennwortsynchronisierung kann es zu einer Schleife kommen, die Serverressourcen beansprucht und möglicherweise AD und MIM beeinträchtigt.
 
 Der PCNS wird auf jedem AD-Domänencontroller ausgeführt. Die Systeme, die die Kennwortbenachrichtigungen erhalten, werden als Ziele bezeichnet. Ihr MIM-Server muss als PCNS-Ziel in AD konfiguriert sein, bevor Kennwortbenachrichtigungen gesendet werden können. Die PCNS-Konfigurierung muss eine Einschlussgruppe definieren. Optional kann sie auch eine Ausschlussgruppe definieren. Diese Gruppen werden verwendet, um die Bewegung vertraulicher Kennwörter aus der Domäne einzuschränken. Wenn Sie z.B. die Kennwörter aller Benutzer, aber nicht die der Administratoren, versenden möchten, können Sie die Domänenbenutzer als Einschluss- und die Domänenadministratoren als Ausschlussgruppe festlegen. Weiter Informationen zur Konfigurierung des PCNS finden Sie unter [Using Password Synchronization (Verwenden der Kennwortsynchronisierung)](https://technet.microsoft.com/library/jj590288(v=ws.10).aspx).
 

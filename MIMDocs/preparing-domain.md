@@ -12,16 +12,17 @@ ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ff8d8a6f66212b006e2c17186dc299a5bcf3f68b
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: ddab5b1ab57d3d332d5cd36ecc5a29abd83222ec
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289029"
 ---
 # <a name="set-up-a-domain"></a>Einrichten einer Domäne
 
->[!div class="step-by-step"]
-[Windows Server 2016 »](prepare-server-ws2016.md)
+> [!div class="step-by-step"]
+> [Windows Server 2016 »](prepare-server-ws2016.md)
 
 Microsoft Identity Manager (MIM) arbeitet mit Ihrer Active Directory-Domäne. Sie müssen Active Directory bereits installiert haben und sicherstellen, dass Sie in Ihrer Umgebung über einen Domänencontroller für eine Domäne verfügen, die Sie verwalten können.
 
@@ -38,7 +39,7 @@ Alle Komponenten Ihrer MIM-Bereitstellung benötigen ihre eigenen Identitäten i
 > - Servername des MIM-Diensts: **corpservice**
 > - Servername der MIM-Synchronisierung: **corpsync**
 > - SQL-Servername: **corpsql**
-> - Kennwort – **Pass@word1**
+> - Kennwort – <strong>Pass@word1</strong>
 
 1. Melden Sie sich auf dem Domänencontroller als Domänenadministrator an (*z.B. Contoso\Administrator*).
 
@@ -105,5 +106,5 @@ Alle Komponenten Ihrer MIM-Bereitstellung benötigen ihre eigenen Identitäten i
 - passwordreset.contoso.com als Punkt auf physische IP-Adresse von corpservice
 - passwordregistration.contoso.com als Punkt auf physische IP-Adresse von corpservice
 
->[!div class="step-by-step"]
-[Windows Server 2016 »](prepare-server-ws2016.md)
+> [!div class="step-by-step"]
+> [Windows Server 2016 »](prepare-server-ws2016.md)

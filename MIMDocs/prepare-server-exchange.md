@@ -1,7 +1,7 @@
 ---
-title: "Konfigurieren von Exchange für MIM für E-Mails und Erstellen von Postfächern | Microsoft-Dokumentation"
-description: "Sie können optional Exchange Server zum Aktivieren von MIM 2016 bereitstellen, damit MIM E-Mails versenden und Postfächer einrichten kann."
-keywords: 
+title: Konfigurieren von Exchange für MIM für E-Mails und Erstellen von Postfächern | Microsoft-Dokumentation
+description: Sie können optional Exchange Server zum Aktivieren von MIM 2016 bereitstellen, damit MIM E-Mails versenden und Postfächer einrichten kann.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,17 +12,18 @@ ms.technology: security
 ms.assetid: 34a8c16e-3bed-4e16-939b-b9fe17dd834b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: cdb425938f7458f74cf06b76d33f557d6a38beeb
-ms.sourcegitcommit: 362475d4018e74e5a17ba574ccaec47a2caebaff
+ms.openlocfilehash: c5fb54c870d750cdf675dd91c1b27dc9bed7d963
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289073"
 ---
 # <a name="set-up-an-identity-management-server-exchange"></a>Einrichten eines Identitätsverwaltungsservers: Exchange
 
->[!div class="step-by-step"]
-[« SharePoint](prepare-server-sharepoint.md)
-[MIM Synchronization Service »](install-mim-sync.md)
+> [!div class="step-by-step"]
+> [« SharePoint](prepare-server-sharepoint.md)
+> [MIM Synchronization Service »](install-mim-sync.md)
 
 ## <a name="deploy-microsoft-exchange-server"></a>Bereitstellen von Microsoft Exchange Server
 Wenn Sie MIM zum Senden und Empfangen von E-Mails oder Bereitstellen von Postfächern konfigurieren möchten, ist es notwendig, dass Exchange in der Umgebung vorhanden ist. Wenn Exchange noch nicht bereitgestellt wurde, können Sie zu Evaluierungszwecken eine Testversion installieren:
@@ -37,6 +38,6 @@ Wenn Sie MIM zum Senden und Empfangen von E-Mails oder Bereitstellen von Postfä
 
 3. Herunterladen und Installieren von [MS Exchange Server 2013 180-Tage-Testversion](http://www.microsoft.com/evalcenter/evaluate-exchange-server-2013)
 
->[!div class="step-by-step"]  
-[« SharePoint](prepare-server-sharepoint.md)
-[MIM Synchronization Service »](install-mim-sync.md)
+> [!div class="step-by-step"]  
+> [« SharePoint](prepare-server-sharepoint.md)
+> [MIM Synchronization Service »](install-mim-sync.md)

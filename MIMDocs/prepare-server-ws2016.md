@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 7c77ed0ceb541b9b00ebb9954ce65a53f0f44442
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: bfc79d27f015ee3d57c33c26ecae0f5b8ff38370
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289488"
 ---
 # <a name="set-up-an-identity-management-servers-windows-server-2016"></a>Einrichten eines Identitätsverwaltungsservers: Windows Server 2016
 
->[!div class="step-by-step"]
-[« Vorbereiten einer Domäne](preparing-domain.md)
-[SQL Server 2016 »](prepare-server-sql2016.md)
-
+> [!div class="step-by-step"]
+> [« Vorbereiten einer Domäne](preparing-domain.md)
+> [SQL Server 2016 »](prepare-server-sql2016.md)
+> 
 > [!NOTE]
 > Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiel:
 > - Name des Domänencontrollers: **corpdc**
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/27/2018
 > - Servername des MIM-Diensts: **corpservice**
 > - Servername der MIM-Synchronisierung: **corpsync**
 > - SQL-Servername: **corpsql**
-> - Kennwort – **Pass@word1**
+> - Kennwort – <strong>Pass@word1</strong>
 
 ## <a name="join-windows-server-2016-to-your-domain"></a>Hinzufügen von Windows Server 2016 zu Ihrer Domäne
 
@@ -112,6 +113,6 @@ Richten Sie die Serversicherheitsrichtlinien ein, damit die neu erstellten Konte
     iisreset /START
     ```
 
->[!div class="step-by-step"]  
-[« Vorbereiten einer Domäne](preparing-domain.md)
-[SQL Server 2016 »](prepare-server-sql2016.md)
+> [!div class="step-by-step"]  
+> [« Vorbereiten einer Domäne](preparing-domain.md)
+> [SQL Server 2016 »](prepare-server-sql2016.md)

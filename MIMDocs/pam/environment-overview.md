@@ -1,7 +1,7 @@
 ---
-title: "Übersicht über die PAM-Umgebung | Microsoft Docs"
-description: "Ermitteln der erforderlichen Anzahl und der erforderlichen Konfiguration virtueller Computer für eine erfolgreiche Bereitstellung von Privileged Access Management"
-keywords: 
+title: Übersicht über die PAM-Umgebung | Microsoft Docs
+description: Ermitteln der erforderlichen Anzahl und der erforderlichen Konfiguration virtueller Computer für eine erfolgreiche Bereitstellung von Privileged Access Management
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3be2e19673a863098739e830d9c83ce264abf412
-ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
+ms.openlocfilehash: e83c326d32645ce80541d5c415cd9c0e9d1dae54
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288791"
 ---
 # <a name="environment-overview"></a>Übersicht über die Umgebung
 
@@ -26,10 +27,10 @@ Privileged Access Management (PAM) arbeitet mit virtuellen Computern (VMs) mit s
 
 Sie benötigen mindestens drei virtuelle Computer.  Wenn Sie noch nicht über eine AD-Domäne verfügen, die über PAM verwaltet werden kann, benötigen Sie einen zusätzlichen virtuellen Computer als CORP-Domänencontroller.  Wenn Sie die PRIV-Software für hohe Verfügbarkeit konfigurieren möchten, benötigen Sie zwei zusätzliche virtuelle Computer.
 
-Auf den Laufwerken, auf denen die Datenträgerimages der virtuellen Computer gespeichert werden, müssen mindestens 120 GB Speicherplatz verfügbar sein.  Stellen Sie bei einer Bereitstellung für hohe Verfügbarkeit sicher, dass das Datenträgersubsystem die Anforderungen für freigegebenen SQL-Speicher erfüllt.  Der freigegebene Speicher kann in Form von Windows Server Failover Clustering-Clusterdatenträgern, Datenträgern auf einem Storage Area Network (SAN) oder Dateifreigaben auf einem SMB-Server vorliegen.
+Auf den Laufwerken, auf denen die Datenträgerimages der virtuellen Computer gespeichert werden, müssen mindestens 120 GB Speicherplatz verfügbar sein.  Stellen Sie bei einer Bereitstellung für Hochverfügbarkeit sicher, dass das Datenträgersubsystem die Anforderungen für freigegebenen SQL-Speicher erfüllt.  Der freigegebene Speicher kann in Form von Windows Server Failover Clustering-Clusterdatenträgern, Datenträgern auf einem Storage Area Network (SAN) oder Dateifreigaben auf einem SMB-Server vorliegen.
 
->[!IMPORTANT]
-Der geschützten Umgebung muss Speicher zugewiesen sein. Das Freigeben von Speicher für andere Workloads außerhalb der geschützten Umgebung wird nicht empfohlen, da die Integrität der geschützten Umgebung gefährdet werden könnte.
+> [!IMPORTANT]
+> Der geschützten Umgebung muss Speicher zugewiesen sein. Das Freigeben von Speicher für andere Workloads außerhalb der geschützten Umgebung wird nicht empfohlen, da die Integrität der geschützten Umgebung gefährdet werden könnte.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

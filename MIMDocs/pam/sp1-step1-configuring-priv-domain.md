@@ -1,7 +1,7 @@
 ---
-title: "Schritt 1: Konfigurieren der PRIV-Domäne"
-description: "Bereiten Sie die CORP-Domäne mit vorhandenen oder neuen Identitäten vor, die vom Privileged Identity Manager mithilfe von Skripts verwaltet werden sollen."
-keywords: 
+title: 'Schritt 1: Konfigurieren der PRIV-Domäne'
+description: Bereiten Sie die CORP-Domäne mit vorhandenen oder neuen Identitäten vor, die vom Privileged Identity Manager mithilfe von Skripts verwaltet werden sollen.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,21 +10,22 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 40822bb7702cf3d7ac23ecd6e98ac392f2d3a480
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: e5be140e7ffea7b0c7cacbc1c82d3b2883804203
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290304"
 ---
 # <a name="step-1-configuring-the-priv-domain"></a>Schritt 1: Konfigurieren der PRIV-Domäne
 
->[!div class="step-by-step"]
-[Schritt 2 »](sp1-step2-configuring-corp-domain.md)
+> [!div class="step-by-step"]
+> [Schritt 2 »](sp1-step2-configuring-corp-domain.md)
 
 1. Melden Sie sich als Administrator auf dem PRIV-DC an.
-  * Wenn dies nur eine Nur-PRIV-Umgebung ist, melden Sie sich auf dem CORP-DC an.
+   * Wenn dies nur eine Nur-PRIV-Umgebung ist, melden Sie sich auf dem CORP-DC an.
 2. Führen Sie PowerShell als Administrator aus.
 3. cd $env:SYSTEMDRIVE\PAM
 4. .\PAMDeployment.ps1
@@ -41,5 +42,5 @@ Für Funktionsebenen unter Windows Server 2016 schließen Sie die Warnung, dass 
 Kopieren Sie die Datei „SIDs.txt“, die in „$env:SYSTEMDRIVE\PAM“ erzeugt wird, in den entsprechenden Ordner auf dem CORP-DC. Diese wird vom CORP-DC benötigt, um Berechtigungen für PRIV-Benutzer zum Lesen der CORP-Benutzereigenschaften einzurichten.
 Nach Abschluss des Skripts werden Sie zum Neustart des Computers aufgefordert, damit die Änderungen wirksam werden.
 
->[!div class="step-by-step"]
-[Schritt 2 »](sp1-step2-configuring-corp-domain.md)
+> [!div class="step-by-step"]
+> [Schritt 2 »](sp1-step2-configuring-corp-domain.md)

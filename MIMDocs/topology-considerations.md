@@ -1,7 +1,7 @@
 ---
-title: "Topologieleitfaden für die Bereitstellung | Microsoft Docs"
-description: "Grundlegendes zu den Komponenten von MIM 2016 und Vorschläge, wie Sie diese in Ihrer Umgebung bereitstellen können."
-keywords: 
+title: Topologieleitfaden für die Bereitstellung | Microsoft Docs
+description: Grundlegendes zu den Komponenten von MIM 2016 und Vorschläge, wie Sie diese in Ihrer Umgebung bereitstellen können.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: e257a2e64225a4bc545d8a9384167819412e939b
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: f67068709cf9910fa04110fce75623fd2f94ca4a
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289811"
 ---
 # <a name="topology-considerations"></a>Überlegungen zur Topologie
 Sie können MIM-Komponenten (Microsoft Identity Manager) auf demselben Server oder auf mehreren Servern in mehreren Konfigurationen bereitstellen. Die für die Bereitstellung ausgewählte Topologie hat Auswirkungen auf die Leistung, die Sie in MIM erreichen können. In diesem Artikel werden mehrere Bereitstellungstopologien vorgestellt, die Sie implementieren können.
 
 
->[!NOTE]
-Diese Optionen gelten für Bereitstellungen, die ausschließlich MIM Sync, MIM-Dienst und MIM-Portal zur Identitätsverwaltung verwenden.  Bereitstellungen mithilfe von MIM CM, MIM BHOLD-Suite oder für privilegierte Zugriffsverwaltung haben andere Bereitstellungsoptionen.
+> [!NOTE]
+> Diese Optionen gelten für Bereitstellungen, die ausschließlich MIM Sync, MIM-Dienst und MIM-Portal zur Identitätsverwaltung verwenden.  Bereitstellungen mithilfe von MIM CM, MIM BHOLD-Suite oder für privilegierte Zugriffsverwaltung haben andere Bereitstellungsoptionen.
 
 
 ## <a name="mim-components"></a>MIM-Komponenten
@@ -39,10 +40,10 @@ In der folgenden Tabelle sind die Optionen zum Hosten der einzelnen MIM-Komponen
 
 | | MIM-Portal | MIM-Dienst | MIM Synchronization Service | SQL Server |
 | --- | --- | --- | --- | --- |
-| Derselbe Computer | Ja | Ja | Ja | Ja |
-| Separater Server | Ja | Ja | Ja | Ja |
-| Netzwerklastenausgleichs-Cluster | Ja | Ja | | |
-| Server-Cluster | | | | Ja |
+| Derselbe Computer | Ja  | Ja  | Ja  | Ja  |
+| Separater Server | Ja  | Ja  | Ja  | Ja  |
+| Netzwerklastenausgleichs-Cluster | Ja  | Ja  | | |
+| Server-Cluster | | | | Ja  |
 
 
 ## <a name="multitier-topology"></a>Mehrschichtige Topologie
@@ -64,5 +65,5 @@ Wie bei der standardmäßigen mehrschichtigen Topologie können Sie die Leistung
 
 Die Gesamtleistung Ihrer MIM-Bereitstellung hängt stark von den Computern ab, auf denen SQL Server installiert ist und die als Host für MIM Synchronization Service und die MIM-Dienstdatenbank fungieren. Befolgen Sie daher die Ratschläge in der SQL Server-Dokumentation zum Optimieren der Datenbankleistung. Weitere Informationen finden Sie in folgenden Dokumenten:
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 - Der zum Download bereitstehende [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) (Handbuch zur Kapazitätsplanung des Forefront Identity Manager (FIM) 2010) bietet weitere Informationen zu einem Test-Build und Leistungstestergebnissen.

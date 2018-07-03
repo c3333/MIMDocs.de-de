@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren von PAM mithilfe von Skripts
-description: "Dieser Artikel ist Teil der Reihe über die PAM-Konfiguration mithilfe von Skripts. Darin werden die Änderungen an der XML-Datei erläutert, die von den PAM-Bereitstellungsskripts verwendet wird."
-keywords: 
+description: Dieser Artikel ist Teil der Reihe über die PAM-Konfiguration mithilfe von Skripts. Darin werden die Änderungen an der XML-Datei erläutert, die von den PAM-Bereitstellungsskripts verwendet wird.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,13 +10,14 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 5718ec64fff049cb8717e4cbb36784c8f4ee4db3
-ms.sourcegitcommit: c13f814ce753e1fdacc7d0814087f59542e5098f
+ms.openlocfilehash: 741d722ce315b7265278997275d05981f44826e8
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289420"
 ---
 # <a name="configure-pam-using-scripts"></a>Konfigurieren von PAM mithilfe von Skripts
 
@@ -66,5 +67,5 @@ Bevor Sie fortfahren aktualisieren Sie die Datei „PAMDeploymentConfig.xml“ u
 |  CORP-Client | Benutzer: <PRIV>\PRIV.pamRequestor und bei PRIVOnly : <CORP>\pamrequestor   | Import-module .\PAMValidation.psm1 ; Test-PAMValidationScenarioNoApprovalRequest  |
 
 
->[!div class="step-by-step"]
-[Start »](sp1-step1-configuring-priv-domain.md)
+> [!div class="step-by-step"]
+> [Start »](sp1-step1-configuring-priv-domain.md)

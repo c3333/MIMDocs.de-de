@@ -1,7 +1,7 @@
 ---
-title: "Bereitstellen von PAM – Schritt 5: Verknüpfen der Gesamtstrukturen | Microsoft Docs"
-description: "Richten Sie eine Vertrauensstellung zwischen den Gesamtstrukturen von PRIV und CORP ein, sodass berechtigte Benutzer in PRIV weiterhin auf CORP-Ressourcen zugreifen können."
-keywords: 
+title: 'Bereitstellen von PAM – Schritt 5: Verknüpfen der Gesamtstrukturen | Microsoft Docs'
+description: Richten Sie eine Vertrauensstellung zwischen den Gesamtstrukturen von PRIV und CORP ein, sodass berechtigte Benutzer in PRIV weiterhin auf CORP-Ressourcen zugreifen können.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,17 +12,18 @@ ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ba4b94c1f0f0879436e370a7f2f041c720bd1f60
-ms.sourcegitcommit: 362475d4018e74e5a17ba574ccaec47a2caebaff
+ms.openlocfilehash: df4294ca6dbc98ec684e690d3ce66765d27cc359
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289090"
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Schritt 5 – Einrichten einer Vertrauensstellung zwischen den Gesamtstrukturen PRIV und CORP
 
->[!div class="step-by-step"]
-[« Schritt 4](step-4-install-mim-components-on-pam-server.md)
-[Schritt 6 »](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Schritt 4](step-4-install-mim-components-on-pam-server.md)
+> [Schritt 6 »](step-6-transition-group-to-pam.md)
 
 Für jede CORP-Domäne, z. B. „contoso.local“, müssen die PRIV- und CONTOSO-Domänencontroller durch eine Vertrauensstellung gebunden werden. Dadurch können Benutzer in der PRIV-Domäne auf Ressourcen in der CORP-Domäne zugreifen.
 
@@ -70,17 +71,17 @@ Richten Sie auf PAMSRV eine unidirektionale Vertrauensstellung mit jeder Domäne
 
 Aktivieren Sie für jede vorhandene Gesamtstruktur den Lesezugriff auf AD für PRIV-Administratoren und den Überwachungsdienst.
 
-1.  Melden Sie sich bei dem vorhandenen CORP-Gesamtstrukturdomänencontroller (CORPDC) als Domänenadministrator für die Domäne der obersten Ebene in dieser Gesamtstruktur an (Contoso\Administrator).  
-2.  Starten Sie **Active Directory-Benutzer und -Computer**.  
-3.  Klicken Sie mit der rechten Maustaste auf die Domäne **contoso.local**, und wählen Sie **Objektverwaltung zuweisen** aus.  
-4.  Klicken Sie auf der Registerkarte „Ausgewählte Benutzer und Gruppen“ auf **Hinzufügen**.  
-5.  Klicken Sie im Fenster zur Auswahl von Benutzern, Computern oder Gruppen auf **Speicherorte** , und ändern Sie den Speicherort in *priv.contoso.local*.  Geben Sie für den Objektnamen *Domänen-Admins* ein, und klicken Sie dann auf **Namen überprüfen**. Wenn ein Popupfenster angezeigt wird, geben Sie den Benutzernamen *priv\administrator* sowie das Kennwort ein.  
-6.  Fügen Sie hinter „Domänen-Admins“ die Zeichenfolge „*; MIMMonitor*“ hinzu. Nachdem die Namen **Domänen-Admins** und **MIMMonitor** unterstrichen sind, klicken Sie auf **OK** und dann auf **Weiter**.  
-7.  Wählen Sie in der Liste der allgemeinen Aufgaben **Liest alle Benutzerinformationen** aus, und klicken Sie auf **Weiter** und dann auf **Fertig stellen**.  
-8.  Schließen Sie %%amp;quot;Active Directory-Benutzer und -Computer%%amp;quot;.
+1. Melden Sie sich bei dem vorhandenen CORP-Gesamtstrukturdomänencontroller (CORPDC) als Domänenadministrator für die Domäne der obersten Ebene in dieser Gesamtstruktur an (Contoso\Administrator).  
+2. Starten Sie **Active Directory-Benutzer und -Computer**.  
+3. Klicken Sie mit der rechten Maustaste auf die Domäne **contoso.local**, und wählen Sie **Objektverwaltung zuweisen** aus.  
+4. Klicken Sie auf der Registerkarte „Ausgewählte Benutzer und Gruppen“ auf **Hinzufügen**.  
+5. Klicken Sie im Fenster zur Auswahl von Benutzern, Computern oder Gruppen auf **Speicherorte** , und ändern Sie den Speicherort in *priv.contoso.local*.  Geben Sie für den Objektnamen *Domänen-Admins* ein, und klicken Sie dann auf **Namen überprüfen**. Wenn ein Popupfenster angezeigt wird, geben Sie den Benutzernamen *priv\administrator* sowie das Kennwort ein.  
+6. Fügen Sie hinter „Domänen-Admins“ die Zeichenfolge „*; MIMMonitor*“ hinzu. Nachdem die Namen **Domänen-Admins** und **MIMMonitor** unterstrichen sind, klicken Sie auf **OK** und dann auf **Weiter**.  
+7. Wählen Sie in der Liste der allgemeinen Aufgaben **Liest alle Benutzerinformationen** aus, und klicken Sie auf **Weiter** und dann auf **Fertig stellen**.  
+8. Schließen Sie %%amp;quot;Active Directory-Benutzer und -Computer%%amp;quot;.
 
-9.  Öffnen Sie ein PowerShell-Fenster.
-10.  Verwenden Sie `netdom`, um sicherzustellen, dass der SID-Verlauf aktiviert und die SID-Filterung deaktiviert ist. Typ:
+9. Öffnen Sie ein PowerShell-Fenster.
+10. Verwenden Sie `netdom`, um sicherzustellen, dass der SID-Verlauf aktiviert und die SID-Filterung deaktiviert ist. Typ:
     ```cmd
     netdom trust contoso.local /quarantine:no /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
@@ -104,6 +105,6 @@ Aktivieren Sie für jede vorhandene Gesamtstruktur den Lesezugriff auf AD für P
 
 Im nächsten Schritt werden Sie eine Gruppe in PAM verschieben.
 
->[!div class="step-by-step"]
-[« Schritt 4](step-4-install-mim-components-on-pam-server.md)
-[Schritt 6 »](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Schritt 4](step-4-install-mim-components-on-pam-server.md)
+> [Schritt 6 »](step-6-transition-group-to-pam.md)

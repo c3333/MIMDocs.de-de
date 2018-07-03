@@ -1,7 +1,7 @@
 ---
-title: "Microsoft Identity Manager: Smartcardverlängerung per Self-Service ohne Administratorzugriff | Microsoft-Dokumentation"
-description: "Erfahren Sie, wie Sie Smartcards für Benutzer ohne Administratorrechte auf ihren Computern registrieren können, damit diese den Zertifikat-Manager verwenden können."
-keywords: 
+title: 'Microsoft Identity Manager: Smartcardverlängerung per Self-Service ohne Administratorzugriff | Microsoft-Dokumentation'
+description: Erfahren Sie, wie Sie Smartcards für Benutzer ohne Administratorrechte auf ihren Computern registrieren können, damit diese den Zertifikat-Manager verwenden können.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -13,10 +13,11 @@ ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 39becb555d2efe17e60789453dbaf448c90a8b60
-ms.sourcegitcommit: 362475d4018e74e5a17ba574ccaec47a2caebaff
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289161"
 ---
 # <a name="enroll-smart-cards-for-non-administrators"></a>Registrieren von Smartcards für Nichtadministratoren
 Wenn ein Benutzer auf seinem Computer kein lokaler Administrator ist, kann er standardmäßig keine Smartcard auf seinen eigenen Computern registrieren. Mithilfe des folgenden Verfahrens können Sie diese Einschränkung umgehen.

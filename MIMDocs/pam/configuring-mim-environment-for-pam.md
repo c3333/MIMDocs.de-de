@@ -1,7 +1,7 @@
 ---
-title: "Konfigurieren von MIM 2016 für Privileged Access Management | Microsoft-Dokumentation"
-description: "Die Roadmap für die Installation und Konfiguration von MIM für Privileged Access Management."
-keywords: 
+title: Konfigurieren von MIM 2016 für Privileged Access Management | Microsoft-Dokumentation
+description: Die Roadmap für die Installation und Konfiguration von MIM für Privileged Access Management.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: c4ca5b58-ad0c-48af-a9eb-b71b22d0c67c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 79de8ef08b49a41638a09e829efbd8c17301004b
-ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
+ms.openlocfilehash: 5180d487dcaabcf024ba76cb86c9d849bdf1adc1
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289549"
 ---
 # <a name="configure-the-mim-environment-for-privileged-access-management"></a>Konfigurieren der MIM-Umgebung für Privileged Access Management
 
@@ -38,5 +39,5 @@ Diese Schritte sind so ausgelegt, dass Sie von Grund auf neu starten und eine Te
 
 7.  Veranschaulichen Sie die Anforderung, den Erhalt und die Verwendung des privilegierten Zugriffs mit Rechteerweiterung auf eine geschützte Ressource.
 
->[!div class="step-by-step"]
-[Start »](step-1-prepare-corp-domain.md)
+> [!div class="step-by-step"]
+> [Start »](step-1-prepare-corp-domain.md)
