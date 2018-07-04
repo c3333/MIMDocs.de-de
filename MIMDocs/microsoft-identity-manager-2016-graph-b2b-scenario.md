@@ -10,20 +10,21 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 77d322f447546897ad18f0981e5faad12efafef1
-ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
+ms.openlocfilehash: ac11a4dfb23944d50dbbcf0b0d70c915f186c159
+ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34479161"
 ---
 <a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy-public-preview"></a>Azure AD-Business-to-Business-Kollaboration (B2B) mit Microsoft Identity Manager(MIM) 2016 SP1 mit Azure-Anwendungsproxy (öffentliche Vorschau)
 ============================================================================================================================
 
-Das Anfangsszenario in der Vorschau ist die Lebenszyklusverwaltung für externe AD-Benutzerkonten.   In diesem Szenario hat eine Organisation Gäste in ihr Azure AD-Verzeichnis eingeladen und möchte diesen Gästen über den [Azure AD-Anwendungsproxy](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish) oder andere Gatewaymechanismen Zugriff auf die lokale integrierte Windows-Authentifizierung oder Kerberos-basierte Anwendungen gewähren. Der Azure AD-Anwendungsproxy erfordert, dass jeder Benutzer zur Identifikation und Delegierung ein eigenes AD DS-Konto hat.
+Das Anfangsszenario in der Vorschau ist die Lebenszyklusverwaltung für externe AD-Benutzerkonten.   In diesem Szenario hat eine Organisation Gäste in ihr Azure AD-Verzeichnis eingeladen und möchte diesen Gästen über den [Azure AD-Anwendungsproxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) oder andere Gatewaymechanismen Zugriff auf die lokale integrierte Windows-Authentifizierung oder Kerberos-basierte Anwendungen gewähren. Der Azure AD-Anwendungsproxy erfordert, dass jeder Benutzer zur Identifikation und Delegierung ein eigenes AD DS-Konto hat.
 
 ## <a name="scenario-specific-supported-guidance"></a>Anweisungen zu bestimmten Szenarien
 
-In diesem Szenario hat eine Organisation Gäste in ihr Azure AD-Verzeichnis eingeladen und möchte diesen Gästen Zugriff auf die lokale integrierte Windows-Authentifizierung oder Kerberos-basierte Anwendungen über den [Azure AD-Anwendungsproxy](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-publish) oder andere Gatewaymechanismen gewähren. Der Azure AD-Anwendungsproxy erfordert, dass jeder Benutzer zur Identifikation und Delegierung ein eigenes AD DS-Konto hat.
+In diesem Szenario hat eine Organisation Gäste in ihr Azure AD-Verzeichnis eingeladen und möchte diesen Gästen Zugriff auf die lokale integrierte Windows-Authentifizierung oder Kerberos-basierte Anwendungen über den [Azure AD-Anwendungsproxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) oder andere Gatewaymechanismen gewähren. Der Azure AD-Anwendungsproxy erfordert, dass jeder Benutzer zur Identifikation und Delegierung ein eigenes AD DS-Konto hat.
 
 Einige Annahmen bei der Konfiguration von B2B mit MIM und dem Azure-Anwendungsproxy
 
@@ -33,14 +34,14 @@ Einige Annahmen bei der Konfiguration von B2B mit MIM und dem Azure-Anwendungspr
 
     -   Office-Gruppen steuern den Anwendungszugriff mit [Azure AD Connect](http://robsgroupsblog.com/blog/how-to-write-back-an-office-group-in-azure-active-directory-to-a-mail-enabled-security-group-in-an-on-premises-active-directory).
 
--   Anwendungsproxyconnectors und Connectorgruppen sind bereits eingerichtet. Falls dies nicht der Fall ist, finden Sie [hier](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-enable#install-and-register-a-connector) Unterstützung für die Installation und Konfiguration.
+-   Anwendungsproxyconnectors und Connectorgruppen sind bereits eingerichtet. Falls dies nicht der Fall ist, finden Sie [hier](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-enable#install-and-register-a-connector) Unterstützung für die Installation und Konfiguration.
 
 -   Eine oder mehrere Anwendungen wurden veröffentlicht, die auf der integrierten Windows-Authentifizierung oder auf individuellen AD-Konten via Azure AD-Anwendungsproxy basieren.
 
--   Sie haben einen oder mehrere Gäste, die in Azure AD erstellt wurden, eingeladen und laden diese ein. (<https://docs.microsoft.com/en-us/azure/active-directory/active-directory-b2b-self-service-portal>)
+-   Sie haben einen oder mehrere Gäste, die in Azure AD erstellt wurden, eingeladen und laden diese ein. (<https://docs.microsoft.com/azure/active-directory/active-directory-b2b-self-service-portal>)
 
 -   Microsoft Identity Manager ist installiert, und die Basiskonfiguration von Dienst, Portal und Active Directory-Verwaltungs-Agent ist erfolgt.
-    <https://docs.microsoft.com/en-us/microsoft-identity-manager/microsoft-identity-manager-deploy>
+    <https://docs.microsoft.com/microsoft-identity-manager/microsoft-identity-manager-deploy>
 
 ## <a name="b2b-end-to-end-deployment"></a>B2B-End-to-End-Bereitstellung
 
@@ -188,7 +189,7 @@ Indiziert = **True**
 
 Die nächsten Schritte erfordern die minimale Konfiguration des FIM-Dienstverwaltungs-Agents und des Active Directory Domain Services-Verwaltungs-Agents.
 
-Weitere Details zur Konfiguration finden Sie hier: <https://technet.microsoft.com/en-us/library/ff686263(v=ws.10).aspx> – How Do I Provision Users to AD DS (Bereitstellen von Benutzern in AD DS).
+Weitere Details zur Konfiguration finden Sie hier: <https://technet.microsoft.com/library/ff686263(v=ws.10).aspx> – How Do I Provision Users to AD DS (Bereitstellen von Benutzern in AD DS).
 
 ### <a name="synchronization-rule-import-guest-user-to-mv-to-synchronization-service-metaverse-from-azure-active-directorybr"></a>Synchronisierungsregel: Gastbenutzer in Metaverse importieren, um Dienst-Metaverse aus Azure Active Directory zu synchronisieren<br>
 
@@ -292,10 +293,10 @@ Schließlich verfügen Sie über die Anmeldeinformationen des B2B-Benutzers und 
 <a name="next-steps"></a>Nächste Schritte
 ----------
 
-[Bereitstellen von Benutzern in AD DS](https://technet.microsoft.com/en-us/library/ff686263(v=ws.10).aspx)
+[Bereitstellen von Benutzern in AD DS](https://technet.microsoft.com/library/ff686263(v=ws.10).aspx)
 
-[Funktionenreferenz für FIM 2010](https://technet.microsoft.com/en-us/library/ff800820(v=ws.10).aspx)
+[Funktionenreferenz für FIM 2010](https://technet.microsoft.com/library/ff800820(v=ws.10).aspx)
 
-[Bereitstellen von sicherem Remotezugriff auf lokale Anwendungen](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-application-proxy-get-started)
+[Bereitstellen von sicherem Remotezugriff auf lokale Anwendungen](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
 
 [Download des Microsoft Identity Manager-Verwaltungs-Agents für Microsoft Graph (Vorschau)](http://go.microsoft.com/fwlink/?LinkId=717495)
