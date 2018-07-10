@@ -1,7 +1,7 @@
 ---
 title: Installation der BHOLD FIM/MIM-Integration | Microsoft-Dokumentation
-description: "Das BHOLD-Integrationsmodul fügt MIM und FIM eine Self-Service-Rollenverwaltung hinzu."
-keywords: 
+description: Das BHOLD-Integrationsmodul fügt MIM und FIM eine Self-Service-Rollenverwaltung hinzu.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,13 @@ ms.date: 09/12/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: ef68de19bd0eabd6d9203469ecc991d496f05846
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: 08a0aaa60891727482e80c8998cc075eacf042cf
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290168"
 ---
 # <a name="bhold-fimmim-integration-installation"></a>Installation der BHOLD FIM/MIM-Integration
 
@@ -30,10 +31,10 @@ Folgende Softwarekomponenten müssen auf dem Computer vorhanden sein, bevor Sie 
 - Internetinformationsdienste und ASP.NET
 - Microsoft Silverlight-Tools
 
-Darüber hinaus müssen die Module von BHOLD Core und dem Zugriffsverwaltungsconnector bereits auf einem Server in der Umgebung bereitgestellt sein, und FIM muss mit einem oder mehreren Verwaltungs-Agents für BHOLD konfiguriert sein. Weitere Informationen zum Installieren und Konfigurieren des BHOLD Core-Moduls finden Sie unter [BHOLD Core Installation (Installation von BHOLD Core)](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx). Weitere Informationen zum Installieren und Verwenden des Moduls des Zugriffsverwaltungsconnectors finden Sie unter [Access Management Connector Installation (Installation des Zugriffsverwaltungsconnectors)](https://technet.microsoft.com/en-us/library/jj874042(v=ws.10).aspx) und [Test Lab Guide: BHOLD Access Management Connector (Testlaboranleitung: BHOLD-Zugriffsverwaltungsconnector)](https://technet.microsoft.com/en-us/library/jj853085(v=ws.10).aspx).
+Darüber hinaus müssen die Module von BHOLD Core und dem Zugriffsverwaltungsconnector bereits auf einem Server in der Umgebung bereitgestellt sein, und FIM muss mit einem oder mehreren Verwaltungs-Agents für BHOLD konfiguriert sein. Weitere Informationen zum Installieren und Konfigurieren des BHOLD Core-Moduls finden Sie unter [BHOLD Core Installation (Installation von BHOLD Core)](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). Weitere Informationen zum Installieren und Verwenden des Moduls des Zugriffsverwaltungsconnectors finden Sie unter [Access Management Connector Installation (Installation des Zugriffsverwaltungsconnectors)](https://technet.microsoft.com/library/jj874042(v=ws.10).aspx) und [Test Lab Guide: BHOLD Access Management Connector (Testlaboranleitung: BHOLD-Zugriffsverwaltungsconnector)](https://technet.microsoft.com/library/jj853085(v=ws.10).aspx).
 
->[!IMPORTANT]
-Der Name der FIM-Dienstdatenbank muss FIMService lauten. Das Setup für die BHOLD FIM-Integration schlägt fehl, wenn FIM nicht mit dem Standardnamen für die FIM-Dienstdatenbank installiert wurde.
+> [!IMPORTANT]
+> Der Name der FIM-Dienstdatenbank muss FIMService lauten. Das Setup für die BHOLD FIM-Integration schlägt fehl, wenn FIM nicht mit dem Standardnamen für die FIM-Dienstdatenbank installiert wurde.
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
@@ -46,7 +47,7 @@ Darüber hinaus müssen Sie darauf vorbereitet sein, die Informationen bereitzus
 | **Element**                            | **Beschreibung**                                                                                                                                                                                                               | **Wert**                                                                                                                                                                                                                                                                                                            |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Verwenden eines Sicherheitsanbieters auf einer Domäne** | Bei der Auswahl dieser Option wird angegeben, dass die Active Directory Domain Services-Sicherheit den Zugriff auf BHOLD Core steuert.                                                                                                                    | Aktivieren Sie das Kontrollkästchen. **Wichtig:** Die Installation schlägt fehl, wenn dieses Kontrollkästchen nicht aktiviert ist.                                                                                                                                                                                                                   |
-| **Domäne**                          | Gibt die Domäne an, die das **Dienstkonto** enthält, das Sie bei der Installation von BHOLD Core erstellt haben. Weitere Informationen finden Sie unter [BHOLD Core Installation (Installation von BHOLD Core)](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx). | Der Domänenname wird automatisch vom Assistenten bereitgestellt. Ändern Sie den Namen nur, wenn dieser falsch ist. **Wichtig:** Geben Sie den Domänennamen an, indem Sie den kurzen NetBIOS-Namen verwenden, nicht den vollqualifizierten Domänennamen (FQDN). Wenn der FQDN der Domäne beispielsweise „fabrikam.com“ ist, geben Sie den Domänennamen als „FABRIKAM“ an. |
+| **Domäne**                          | Gibt die Domäne an, die das **Dienstkonto** enthält, das Sie bei der Installation von BHOLD Core erstellt haben. Weitere Informationen finden Sie unter [BHOLD Core Installation (Installation von BHOLD Core)](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | Der Domänenname wird automatisch vom Assistenten bereitgestellt. Ändern Sie den Namen nur, wenn dieser falsch ist. **Wichtig:** Geben Sie den Domänennamen an, indem Sie den kurzen NetBIOS-Namen verwenden, nicht den vollqualifizierten Domänennamen (FQDN). Wenn der FQDN der Domäne beispielsweise „fabrikam.com“ ist, geben Sie den Domänennamen als „FABRIKAM“ an. |
 | **Benutzername**                        | Gibt den Anmeldenamen des BHOLD Core-Dienstbenutzerkontos an.                                                                                                                                                              | Geben Sie den Benutzerkontonamen hier ein:                                                                                                                                                                                                                                                                                    |
 | **Passwort**                        | Gibt das Kennwort des Dienstbenutzerkontos an.                                                                                                                                                                           | Geben Sie das Kennwort hier ein: **Wichtig:** Achten Sie darauf, dieses Kennwort an einem verborgenen, sicheren Ort aufzubewahren.                                                                                                                                                                                                                  |
 
@@ -73,7 +74,7 @@ Darüber hinaus müssen Sie darauf vorbereitet sein, die Informationen bereitzus
 
 Melden Sie sich zum Installieren des BHOLD FIM-Integrationsmoduls als Mitglied der Gruppe „Domänenadministratoren“ an, laden Sie folgende Datei herunter, und führen Sie diese als Administrator auf dem Server aus, auf dem Sie das BHOLD FIM-Integrationsmodul installieren möchten:
 
-- BholdFIMIntegration*\<Version\>*\_Release.msi
+- BholdFIMIntegration<em>\<Version\></em>\_Release.msi
 
 Ersetzen Sie *\<Version\>* mit der Versionsnummer der Version der BHOLD FIM-Integration, die Sie installieren.
 
@@ -95,7 +96,7 @@ Für eine ordnungsgemäße Funktionsweise erfordert die BHOLD FIM-Integration, d
 
 2.  Klicken Sie auf **Starten** und dann auf **Internet Explorer**.
 
-3.  Geben Sie in der Adressleiste <https://localhost> ein, wenn SharePoint für die Verwendung von SSL-Sicherheit konfiguriert ist. Geben Sie andernfalls <http://localhost> ein.
+3.  Geben Sie in der Adressleiste „<https://localhost>“ ein, wenn SharePoint für die Verwendung von SSL-Sicherheit konfiguriert ist. Geben Sie andernfalls „<http://localhost>“ ein.
 
 4.  Klicken Sie auf der linken Seite der Seite **Teamwebsite** auf **Personen und Gruppen**.
 
@@ -157,7 +158,7 @@ Wenn keine genehmigende Person für eine Self-Service-Rollenanforderungen durch 
 
 2.  Klicken Sie auf **Starten** und dann auf **Internet Explorer**.
 
-3.  Geben Sie in der Internet Explorer-Adressleiste <http://localhost:5151/bhold/core> ein, und drücken Sie dann die EINGABETASTE.
+3.  Geben Sie in der Internet Explorer-Adressleiste „<http://localhost:5151/bhold/core>“ ein, und drücken Sie dann die Eingabetaste.
 
 4.  Klicken Sie auf der BHOLD Core-Homepage unter **Attribute def** (Attributdefinition) auf **Attributtypen**.
 
@@ -192,20 +193,20 @@ Wenn keine genehmigende Person für eine Self-Service-Rollenanforderungen durch 
 19. Geben Sie auf der Seite **Modify organizational unit attributes/root** (Attribute/Stamm der Organisationseinheit ändern) unter **Genehmigende Person** die Domäne und den Benutzernamen des Benutzers, der die Anforderungen für Rollenzuweisungen genehmigt, im Format *\<Domäne\>*\\*\<Benutzer\>* ein. Hierbei entspricht *\<Domäne\>* dem kurzen NetBIOS-Domänennamen und *\<Benutzer\>* dem Anmeldenamen des Benutzers.
 20. Klicken Sie auf **OK**.
 
->[!IMPORTANT]
-Der Domänen- und der Benutzername müssen mit dem Standardalias eines Benutzers in der BHOLD Core-Datenbank übereinstimmen.
+> [!IMPORTANT]
+> Der Domänen- und der Benutzername müssen mit dem Standardalias eines Benutzers in der BHOLD Core-Datenbank übereinstimmen.
 
 Alternativ zum Angeben einer genehmigenden Person für Organisationseinheiten können Sie auch eine genehmigende Person für die vorgeschlagenen Rollen in der BHOLD Core-Datenbank angeben. Erstellen Sie dazu das Attribut „approver1“, fügen Sie dieses zu einer Attributtypmenge hinzu, die dem Objekttyp der Rolle zugeordnet ist, und ändern Sie dann jede vorgeschlagene Rolle, um die genehmigende Person anzugeben.
 
 Für eine verbesserte Workflowsicherheit sollten Sie zusätzlich zu einer genehmigenden Person Modi und Benutzer für die Genehmigung hinzufügen, indem Sie folgende Attribute für Organisationseinheiten und Rollen erstellen und füllen:
 
-- Eskalationsverantwortlicher*\<n\>*
+- escalator<em>\<n\></em>
 
-- Besitzer*\<n\>*
+- owner<em>\<n\></em>
 
-- Sicherheitsbeauftragter*\<n\>*
+- securityOfficer<em>\<n\></em>
 
-- Benachrichtigung*\<n\>*
+- notification<em>\<n\></em>
 
 *\<n\>* gibt hier ein optionales numerisches Suffix an, um mehrere Attribute vom gleichen Typ bereitzustellen.
 
@@ -213,8 +214,8 @@ Für eine verbesserte Workflowsicherheit sollten Sie zusätzlich zu einer genehm
 
 Die Installation der BHOLD FIM-Integration erstellt Sätze, Workflowdefinitionen und Verwaltungsrichtlinien (Management Policy Rules, MPRs) für den FIM-Dienst. Wenn Sie Ihre FIM-Bereitstellung dafür angepasst haben, die Administratoren oder Benutzer zu ändern, die Anforderungen senden können, sollten Sie sicherstellen, dass die MPRs auf die richtigen Benutzer verweisen.
 
->[!NOTE]
-Bevor Benutzer des FIM-Portals die von BHOLD bereitgestellten Self-Service-Funktionen verwenden können, müssen deren Benutzerkonten über den FIM-Synchronisierungsdienst mit der BHOLD-Datenbank synchronisiert werden. Insbesondere muss ein Benutzerdatensatz in der BHOLD Core-Datenbank und in der FIM-Dienstdatenbank für jeden Benutzer vorhanden sein, der Self-Service-Anforderungen senden kann oder als genehmigende Person oder Eskalationsverantwortlicher für Self-Service-Anforderungen angegeben ist.
+> [!NOTE]
+> Bevor Benutzer des FIM-Portals die von BHOLD bereitgestellten Self-Service-Funktionen verwenden können, müssen deren Benutzerkonten über den FIM-Synchronisierungsdienst mit der BHOLD-Datenbank synchronisiert werden. Insbesondere muss ein Benutzerdatensatz in der BHOLD Core-Datenbank und in der FIM-Dienstdatenbank für jeden Benutzer vorhanden sein, der Self-Service-Anforderungen senden kann oder als genehmigende Person oder Eskalationsverantwortlicher für Self-Service-Anforderungen angegeben ist.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

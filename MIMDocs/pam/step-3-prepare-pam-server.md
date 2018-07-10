@@ -1,7 +1,7 @@
 ---
-title: "Bereitstellen von PAM – Schritt 3: PAM-Server | Microsoft Docs"
-description: "Bereiten Sie einen PAM-Server vor, der SQL und SharePoint für Ihre Bereitstellung von Privileged Access Management hostet."
-keywords: 
+title: 'Bereitstellen von PAM – Schritt 3: PAM-Server | Microsoft Docs'
+description: Bereiten Sie einen PAM-Server vor, der SQL und SharePoint für Ihre Bereitstellung von Privileged Access Management hostet.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -13,17 +13,18 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: fd52a191a0592441131249451011c4e2f026ea48
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 3eb79847baed69ef53a27e09443ff9bf4647b347
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289913"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Schritt 3: Vorbereiten eines PAM-Servers
 
->[!div class="step-by-step"]
-[« Schritt 2](step-2-prepare-priv-domain-controller.md)
-[Schritt 4 »](step-4-install-mim-components-on-pam-server.md)
+> [!div class="step-by-step"]
+> [« Schritt 2](step-2-prepare-priv-domain-controller.md)
+> [Schritt 4 »](step-4-install-mim-components-on-pam-server.md)
 
 ## <a name="install-windows-server-2012-r2"></a>Installieren von Windows Server 2012 R2
 
@@ -93,13 +94,13 @@ Es gibt zwei Möglichkeiten, die IIS-Konfiguration zu ändern, um es Anwendungen
 
 Wenn Sie PowerShell verwenden möchten, gehen Sie folgendermaßen vor:
 
-1.  Klicken Sie mit der rechten Maustaste auf „PowerShell“, und wählen Sie **Als Administrator ausführen** aus.
-2.  Beenden Sie IIS, und verwenden Sie die folgenden Befehle, um die Hosteinstellungen der Anwendung zu entsperren:
-    ```CMD
-    iisreset /STOP
-    C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
-    iisreset /START
-    ```
+1. Klicken Sie mit der rechten Maustaste auf „PowerShell“, und wählen Sie **Als Administrator ausführen** aus.
+2. Beenden Sie IIS, und verwenden Sie die folgenden Befehle, um die Hosteinstellungen der Anwendung zu entsperren:
+   ```CMD
+   iisreset /STOP
+   C:\Windows\System32\inetsrv\appcmd.exe unlock config /section:windowsAuthentication -commit:apphost
+   iisreset /START
+   ```
 
 Wenn Sie einen Text-Editor, beispielsweise den Editor von Windows verwenden möchten, gehen Sie folgendermaßen vor:
 
@@ -215,6 +216,6 @@ Starten Sie in den Verwaltungstools unter **Dienste** den Dienst **SharePoint-Ad
 
 In Schritt 4 installieren Sie die MIM-Komponenten auf dem PAM-Server.
 
->[!div class="step-by-step"]
-[« Schritt 2](step-2-prepare-priv-domain-controller.md)
-[Schritt 4 »](step-4-install-mim-components-on-pam-server.md)
+> [!div class="step-by-step"]
+> [« Schritt 2](step-2-prepare-priv-domain-controller.md)
+> [Schritt 4 »](step-4-install-mim-components-on-pam-server.md)

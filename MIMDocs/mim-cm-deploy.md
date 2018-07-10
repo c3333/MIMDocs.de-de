@@ -10,11 +10,12 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 241ad68d3f4a692c87d0d2a0069781ad042453c7
-ms.sourcegitcommit: 39f34a38967baa9c0da6ae5b57734b222f5771a5
+ms.openlocfilehash: 25a511dc590b02019c65a688c9b2c8dc821fff50
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290083"
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Bereitstellen der Microsoft Identity Manager-Zertifikatverwaltung 2016 (MIM CIM)
 
@@ -80,13 +81,13 @@ Der Prozess der Erweiterung des Schemas ist unkompliziert, aber er muss mit Vors
     ![Diagramm](media/mim-cm-deploy/image005.png)
 
 3. Führen Sie das Skript „resourceForestModifySchema.vbs“ in einem Ein-Struktur-Szenario aus. Führen Sie für das Szenario mit einer Ressourcengesamtstruktur folgende Skripts aus:
-    - DomainA: Benutzer wurden gefunden (userForestModifySchema.vbs)
-    - ResourceForestB: Speicherort der CM-Installation (resourceForestModifySchema.vbs)
+   - DomainA: Benutzer wurden gefunden (userForestModifySchema.vbs)
+   - ResourceForestB: Speicherort der CM-Installation (resourceForestModifySchema.vbs)
 
-    >[!NOTE]
-    >Schemaänderungen sind ein unidirektionaler Vorgang und erfordern eine Wiederherstellung der Gesamtstruktur, damit ein Rollback ausgeführt werden kann. Stellen Sie daher sicher, dass Sie die nötigen Sicherungen vorgenommen haben. Weitere Informationen zu Änderungen des Schemas, die durch diesen Vorgang vorgenommen werden, finden Sie im Artikel [Forefront Identity Manager 2010 Certificate Management Schema Changes (Schemaänderungen von Forefront Identity Manager 2010 Certificate Management)](https://technet.microsoft.com/library/jj159298(v=ws.10).aspx).
+     >[!NOTE]
+     >Schemaänderungen sind ein unidirektionaler Vorgang und erfordern eine Wiederherstellung der Gesamtstruktur, damit ein Rollback ausgeführt werden kann. Stellen Sie daher sicher, dass Sie die nötigen Sicherungen vorgenommen haben. Weitere Informationen zu Änderungen des Schemas, die durch diesen Vorgang vorgenommen werden, finden Sie im Artikel [Forefront Identity Manager 2010 Certificate Management Schema Changes (Schemaänderungen von Forefront Identity Manager 2010 Certificate Management)](https://technet.microsoft.com/library/jj159298(v=ws.10).aspx).
 
-    ![Diagramm](media/mim-cm-deploy/image007.png)
+     ![Diagramm](media/mim-cm-deploy/image007.png)
 
 4. Wenn Sie das Skript ausführen, sollten eine Erfolgsmeldung erhalten, sobald das Skript abgeschlossen wurde.
 
@@ -355,7 +356,6 @@ Das Konto „MIMCMWebAgent“ führt das MIM CM-Portal aus. In IIS und höher is
 SETSPN -S http/cm.contoso.com contoso\MIMCMWebAgent
 #Delegation for certificate authority
 Get-ADUser CONTOSO\MIMCMWebAgent | Set-ADObject -Add @{"msDS-AllowedToDelegateTo"="rpcss/CORPCA","rpcss/CORPCA.contoso.com"}
-
 ```
 
 **Aktualisieren von IIS auf CORPCM**
@@ -368,7 +368,6 @@ add-pssnapin WebAdministration
 Set-WebConfigurationProperty -Filter System.webServer/security/authentication/WindowsAuthentication -Location 'Default Web Site' -Name enabled -Value $true
 Set-WebConfigurationProperty -Filter System.webServer/security/authentication/WindowsAuthentication -Location 'Default Web Site' -Name useKernelMode -Value $false
 Set-WebConfigurationProperty -Filter System.webServer/security/authentication/WindowsAuthentication -Location 'Default Web Site' -Name useAppPoolCredentials -Value $true
-
 ```
 
 >[!NOTE]
@@ -465,10 +464,10 @@ Fügen Sie MIMINSTALL für den Konfigurationsassistenten vor der Registrierung i
 
    - Vorhandenen Benutzer verwenden: **Aktiviert**
 
-    >[!NOTE]
-    >Diese Konten haben Sie zuvor erstellt. Stellen Sie sicher, dass die Prozeduren in Schritt 8 für alle sechs Agentkontoregisterkarten wiederholt werden.
+     >[!NOTE]
+     >Diese Konten haben Sie zuvor erstellt. Stellen Sie sicher, dass die Prozeduren in Schritt 8 für alle sechs Agentkontoregisterkarten wiederholt werden.
 
-    ![MIM CM-Konten](media/mim-cm-deploy/image030.png)
+     ![MIM CM-Konten](media/mim-cm-deploy/image030.png)
 
 10. Wenn alle Agentkontoinformationen abgeschlossen sind, klicken Sie auf **OK**.
 
@@ -602,9 +601,9 @@ In diesem Schritt installieren und konfigurieren Sie die FIM CM-Zertifizierungss
 
 6. Klicken Sie im Dialogfeld **Eigenschaften von contoso-CORPCA-CA** auf **OK**.
 
-7. Klicken Sie mit der rechten Maustaste auf *contoso-CORPCA-CA****, zeigen Sie auf **Alle Tasks**, und klicken Sie anschließend auf **Dienst beenden**. Warten Sie, bis die Active Directory-Zertifikatdienste beendet werden.
+7. Klicken Sie mit der rechten Maustaste auf **contoso-CORPCA-CA** *,* zeigen Sie auf **Alle Tasks**, und klicken Sie anschließend auf **Dienst beenden**. Warten Sie, bis die Active Directory-Zertifikatdienste beendet werden.
 
-8. Klicken Sie mit der rechten Maustaste auf *contoso-CORPCA-CA****, zeigen Sie auf **Alle Tasks**, und klicken Sie anschließend auf **Dienst starten**.
+8. Klicken Sie mit der rechten Maustaste auf **contoso-CORPCA-CA** *,* zeigen Sie auf **Alle Tasks**, und klicken Sie anschließend auf **Dienst starten**.
 
 9. Minimieren Sie die Konsole **Zertifizierungsstelle**.
 
@@ -668,7 +667,7 @@ In diesem Schritt installieren und konfigurieren Sie die FIM CM-Zertifizierungss
     - Klicken Sie im Dialogfeld „Zertifikat“ mit der rechten Maustaste auf das Feld **Geben Sie den hexadezimal-codierten Zertifikathash an**, und klicken Sie anschließend auf **Einfügen**.
 
     - Klicken Sie im Dialogfeld **Zertifikat** auf **OK**.
-    
+
         >[!Note]
         >Wenn die Schaltfläche **OK** nicht aktiviert ist, haben Sie versehentlich ein ausgeblendetes Zeichen in der Fingerabdruckzeichenfolge eingeschlossen, als Sie den Fingerabdruck aus dem clmAgent-Zertifikat kopiert haben. Wiederholen Sie ab **Aufgabe 4: Kopieren Sie den MIMCMAgent-Zertifikatfingerabdruck in die Windows-Zwischenablage** alle Schritte in dieser Übung.
 
@@ -678,11 +677,11 @@ In diesem Schritt installieren und konfigurieren Sie die FIM CM-Zertifizierungss
 
 6. Klicken Sie im Dialogfeld **Eigenschaften von contoso-CORPCA-CA** auf **OK**.
 
-7. Klicken Sie mit der rechten Maustaste auf *contoso-CORPCA-CA****, zeigen Sie auf **Alle Tasks**, und klicken Sie anschließend auf **Dienst beenden**.
+7. Klicken Sie mit der rechten Maustaste auf **contoso-CORPCA-CA** *,* zeigen Sie auf **Alle Tasks**, und klicken Sie anschließend auf **Dienst beenden**.
 
 8. Warten Sie, bis die Active Directory-Zertifikatdienste beendet werden.
 
-9. Klicken Sie mit der rechten Maustaste auf *contoso-CORPCA-CA****, zeigen Sie auf **Alle Tasks**, und klicken Sie anschließend auf **Dienst starten**.
+9. Klicken Sie mit der rechten Maustaste auf **contoso-CORPCA-CA** *,* zeigen Sie auf **Alle Tasks**, und klicken Sie anschließend auf **Dienst starten**.
 
 10. Schließen Sie die Konsole **Zertifizierungsstelle**.
 
@@ -736,7 +735,7 @@ Erste Schritte: **Konfigurieren des Dienstverbindungspunkts und von Zielgruppenb
 6. Klicken Sie im Dialogfeld **Berechtigungseintrag für Contoso** in der Liste **Übernehmen für** auf **Untergeordnete Benutzerobjekte**, und aktivieren Sie anschließend das Kontrollkästchen **Zulassen** für die folgenden **Berechtigungen**:
 
     - **Alle Eigenschaften lesen**
-    
+
     - **Berechtigungen lesen**
 
     - **FIM CM Audit**
@@ -904,7 +903,7 @@ $adace.GetEnumerator() | **Foreach-Object** {
 $acl = **Get-Acl** *-Path* $_.Value
 $sid=(**Get-ADGroup** "MIMCM-Managers").SID
 $p = **New-Object** System.Security.Principal.SecurityIdentifier($sid)
-##https://msdn.microsoft.com/en-us/library/system.directoryservices.activedirectorysecurityinheritance(v=vs.110).aspx
+##https://msdn.microsoft.com/library/system.directoryservices.activedirectorysecurityinheritance(v=vs.110).aspx
 $ace = **New-Object** System.DirectoryServices.ActiveDirectoryAccessRule
 ($p,[System.DirectoryServices.ActiveDirectoryRights]"GenericAll",[System.Security.AccessControl.AccessControlType]::Allow,
 [DirectoryServices.ActiveDirectorySecurityInheritance]::All)

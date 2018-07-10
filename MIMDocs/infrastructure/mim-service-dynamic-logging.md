@@ -1,20 +1,21 @@
 ---
-title: "MIM-Dienst – Dynamische Protokollierung | Microsoft-Dokumentation"
-description: "Aktivieren der dynamischen Protokollierung des MIM-Diensts ohne den Verwaltungsdienst erneut starten zu müssen"
-keywords: 
-author: barclayn
-ms.author: barclayn
+title: MIM-Dienst – Dynamische Protokollierung | Microsoft-Dokumentation
+description: Aktivieren der dynamischen Protokollierung des MIM-Diensts ohne den Verwaltungsdienst erneut starten zu müssen
+keywords: ''
+author: fimguy
+ms.author: davidste
 manager: mbaldwin
-ms.date: 08/18/2017
+ms.date: 06/25/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
-ms.assetid: 
-ms.openlocfilehash: 96dcd03616a0b63fc7cc9806446ebb36b3c81fa0
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.assetid: ''
+ms.openlocfilehash: 35d210b06a1e58b3b8f4f08677c2a4151f540246
+ms.sourcegitcommit: 88d4e41d8d57f44f4c6c4468fdbd37c2d7e91fd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957538"
 ---
 # <a name="mim-sp1-4414360--service-dynamic-logging"></a>Dynamische Protokollierung des MIM SP1-Diensts (4.4.1436.0)
 In 4.4.1436.0 haben wir eine neue Protokollierungsfunktion eingeführt. Dadurch können Administratoren und Supporttechniker die Protokollierung aktivieren, ohne den Verwaltungsdienst neu starten zu müssen.
@@ -36,16 +37,28 @@ Die config-Datei der dynamischen Protokollierung befindet sich in Zeile 266: „
 
 ![Hervorgehobene Abschnitte zeigen die Zeilen mit den verschiedenen verfügbaren Protokollierungsbereichen](media/mim-service-dynamic-logging/screen02.png)
 
-Standardmäßig finden Sie den Protokollierungsbereich unter **C:\Programme\Microsoft Forefront Identity Manager\2010\Service**. Das FIM Service-Konto benötigt Berechtigungen für diesen Speicherort, um das dynamische Protokoll generieren zu können.
+Standardmäßig finden Sie den Protokollierungsbereich unter C:\Programme\Microsoft Forefront Identity Manager\2010\Service. Das FIM Service-Konto benötigt Schreibberechtigungen für diesen Speicherort, um das dynamische Protokoll generieren zu können.
 
 ![Speicherort des Ordners der Protokollierungen](media/mim-service-dynamic-logging/screen03.png)
 
- >[!NOTE]
- Bei einem unerwarteten Fehler (Syntaxfehler in der config-Datei „Microsoft.ResourceManagement.Service.exe.config“ oder andere Fehler) werden entsprechende Fehlermeldung in die Datei „Microsoft.ResourceManagement.Service.exe_Emergency.log“ unter folgenden Pfad geschrieben: %TMP% oder %TEMP% oder %USERPROFILE% (der erste, der vorhanden ist).  
-1. „%TMP%\Microsoft.ResourceManagement.Service.exe_Emergency.log“
-2. „%TEMP%\Microsoft.ResourceManagement.Service.exe_Emergency.log“
-3. „%USERPROFILE%\Microsoft.ResourceManagement.Service.exe_Emergency.log“
+> [!NOTE]
+>  Bei einem unerwarteten Fehler (Syntaxfehler in der config-Datei „Microsoft.ResourceManagement.Service.exe.config“ oder andere Fehler) werden entsprechende Fehlermeldung in die Datei „Microsoft.ResourceManagement.Service.exe_Emergency.log“ unter folgenden Pfad geschrieben: %TMP% oder %TEMP% oder %USERPROFILE% (der erste, der vorhanden ist).  
+> 1. „%TMP%\Microsoft.ResourceManagement.Service.exe_Emergency.log“
+> 2. „%TEMP%\Microsoft.ResourceManagement.Service.exe_Emergency.log“
+> 3. „%USERPROFILE%\Microsoft.ResourceManagement.Service.exe_Emergency.log“
 
 Um die Nachverfolgung anzuzeigen, können Sie das [Service Trace Viewer-Tool](https://msdn.microsoft.com//library/aa751795(v=vs.110).aspx) verwenden.
 
  ![Screenshot des Service Trace Viewer-Tools](media/mim-service-dynamic-logging/screen04.png)
+
+# <a name="updates-build-45xx-or-greater"></a>Updates: Build 4.5.x.x oder höher
+
+Im Build 4.5.x.x wurde das Protokollierungsfeature überarbeitet, sodass der Standardprotokolliergrad **„Warnung“** lautet. Der Dienst schreibt Meldungen in zwei Dateien („00“- und „01“-Indizes werden vor der Erweiterung hinzugefügt). Die Dateien befinden sich im Verzeichnis „C:\Programme\Microsoft Forefront Identity Manager\2010\Service“. Wenn die Datei die maximale Größe überschreitet, beginnt der Dienst, in eine andere Datei zu schreiben. Wenn eine andere Datei vorhanden ist, wird sie überschrieben. Die standardmäßige maximale Größe der Datei ist 1 GB. Um die standardmäßige maximale Größe zu ändern, muss der Parameter **maxOutputFileSizeKB** mit dem Wert der maximalen Dateigröße in KB dem Listener hinzugefügt werden (siehe folgendes Beispiel) und der MIM-Dienst neu gestartet werden. Wenn der Dienst gestartet wird, fügt er der neueren Datei Protokolle hinzu (bei Überschreitung der Speicherplatzbegrenzung wird die älteste Datei überschreiben). 
+
+> [!NOTE] Wie die Größe der Dienstüberprüfungsdatei vor dem Schreiben der Nachricht könnte die Größe der Datei über der maximale Größe für die Größe einer Nachricht liegen. Standardmäßig können die Protokolle ungefähr 6 GB groß sein (drei Listener mit zwei Dateien mit einer Größe von 1 GB).
+
+> [!NOTE] Das Dienstkonto benötigt Berechtigungen zum Schreiben in das Verzeichnis „C:\Programme\Microsoft Forefront Identity Manager\2010\Service“. Falls das Dienstkonto nicht über solche Rechte verfügt, werden die Dateien nicht erstellt.
+
+Beispiel zum Festlegen der maximalen Dateigröße auf 200 MB (200 * 1.024 KB) für SVCLOG-Dateien und 100 MB (100 * 1.024 KB) für TXT-Dateien
+
+`<add initializeData="Microsoft.ResourceManagement.Service_tracelog.svclog" type="Microsoft.IdentityManagement.CircularTraceListener.CircularXmlTraceListener, Microsoft.IdentityManagement.CircularTraceListener, PublicKeyToken=31bf3856ad364e35" name="ServiceModelTraceListener" traceOutputOptions="LogicalOperationStack, DateTime, Timestamp, ProcessId, ThreadId, Callstack" maxOutputFileSizeKB="204800">`

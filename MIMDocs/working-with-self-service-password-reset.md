@@ -3,30 +3,31 @@ title: Arbeiten mit dem Self-Service-Portal für die Kennwortzurücksetzung | Mi
 description: Unter „Neues zur Self-Service-Kennwortzurücksetzung in MIM 2016“ erfahren Sie u.a., wie SSPR mit der mehrstufigen Authentifizierung funktioniert.
 keywords: ''
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
-ms.date: 10/12/2017
+ms.author: billmath
+manager: mtillman
+ms.reviewer: davidste
+ms.date: 06/26/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.reviewer: mwahl
-ms.suite: ems
-ms.openlocfilehash: 18c3e4ea623b4b092bbd9236c5fa1b2a63af0486
-ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
+ms.openlocfilehash: b1b30b744a5f735512f31d98184a561ce3f9b047
+ms.sourcegitcommit: 03617b441135a55b664e0d81cce4d17541bee93b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36963374"
 ---
->[!IMPORTANT]
-Zur Ankündigung der Außerkraftsetzung des Azure MFA SDK (Multi-Factor Authentication Software Development Kit): Das Azure MFA SDK wird für Bestandskunden bis zur Ausmusterung am 14. November 2018 unterstützt. Neue Kunden und aktuelle Kunden können das SDK nicht mehr über das klassische Azure-Portal herunterladen. Zum Herunterzuladen müssen Sie sich an den Azure-Kundensupport wenden, um ein für Sie generiertes Paket mit MFA-Dienstanmeldeinformationen zu erhalten. <br> Das Microsoft-Entwicklungsteam plant zurzeit Änderungen an der MFA durch die Integration des MFA-Server-SDK. Dieses wird in einem zukünftigen Hotfix im Frühjahr 2018 enthalten sein.
-
 # <a name="working-with-self-service-password-reset"></a>Arbeiten mit der Self-Service-Kennwortzurücksetzung
+
+> [!IMPORTANT]
+> Zur Ankündigung der Außerkraftsetzung des Azure MFA SDK (Multi-Factor Authentication Software Development Kit): Das Azure MFA SDK wird für Bestandskunden bis zur Ausmusterung am 14. November 2018 unterstützt. Neue Kunden und aktuelle Kunden können das SDK nicht mehr über das klassische Azure-Portal herunterladen. Zum Herunterzuladen müssen Sie sich an den Azure-Kundensupport wenden, um ein für Sie generiertes Paket mit MFA-Dienstanmeldeinformationen zu erhalten. <br> Das Microsoft-Entwicklungsteam arbeitet an Änderungen der MFA durch die Integration in MFA Server SDK.  Dies wird in einem zukünftigen Hotfix enthalten sein. Ankündigungen finden Sie im [Versionsverlauf](/reference/version-history.md).
+
 Microsoft Identity Manager 2016 stellt zusätzliche Funktionalität für das Feature Self-Service-Kennwortzurücksetzung bereit. Diese Funktionalität wurde um einige wichtige Funktionen erweitert:
 
 -   Im Portal für die Self-Service-Kennwortzurücksetzung und im Windows-Anmeldebildschirm können Benutzer nun ihre Konten entsperren, ohne ihre Kennwörter zu ändern oder Supportadministratoren anzurufen. Es gibt viele berechtigte Gründe, warum Konten für Benutzer gesperrt werden können, etwa wenn sie ein altes Kennwort eingeben, zweisprachige Computer verwenden und die Tastatur auf die falsche Sprache eingerichtet ist, oder versuchen, sich bei einer gemeinsam genutzten Arbeitsstation anzumelden, die bereits über das Konto einer anderen Person geöffnet ist.
 
--   Es wurde das neue Authentifizierungsgate Telefongate hinzugefügt. Dieses ermöglicht Benutzerauthentifizierung per Telefonanruf.
+-   Es wurde das neue Authentifizierungsgate Telefongate hinzugefügt. Dieses Gate ermöglicht die Benutzerauthentifizierung per Telefonanruf.
 
 -   Es wurde Unterstützung für den Microsoft Azure Multi-Factor Authentication-Dienst (MFA-Dienst) hinzugefügt. Dieser Dienst kann sowohl für das vorhandene SMS-Einmalkennwort-Gate als auch für das neue Telefongate verwendet werden.
 
@@ -61,11 +62,11 @@ Für diesen Abschnitt wird davon ausgegangen, dass Sie die Bereitstellung von Mi
 ## <a name="prepare-mim-to-work-with-multi-factor-authentication"></a>Vorbereiten von MIM für das Arbeiten mit der mehrstufigen Authentifizierung
 Konfigurieren Sie MIM Sync so, dass Kennwortzurücksetzung und Kontoentsperrung unterstützt werden. Weitere Informationen finden Sie unter [Installing the FIM Add-ins and Extensions](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx) (Installieren der FIM-Add-Ins und -Erweiterungen), [Installing FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx) (Installieren von FIM SSPR), [SSPR Authentication Gates](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) (SSPR-Authentifizierungsgates) und im [SSPR Test Lab Guide](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx) (SSPR-Test Lab-Handbuch)
 
-Im nächsten Abschnitt richten Sie Ihren Azure MFA-Anbieter in Microsoft Azure Active Directory ein. Bei diesem Vorgang generieren Sie eine Datei, die die von der MFA zum Kontaktieren von Azure MFA benötigten Authentifizierungsdaten enthält.  Um fortfahren zu können, benötigen Sie ein Azure-Abonnement.
+Im nächsten Abschnitt richten Sie Ihren Azure MFA-Anbieter in Microsoft Azure Active Directory ein. Sie generieren eine Datei, die die von der MFA zum Kontaktieren von Azure MFA benötigten Authentifizierungsdaten enthält.  Um fortfahren zu können, benötigen Sie ein Azure-Abonnement.
 
 ### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Registrieren Sie Ihren Anbieter für die mehrstufige Authentifizierung in Azure
 
-1.  Erstellen Sie einen [MFA-Anbieter](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
+1.  Erstellen Sie einen [MFA-Anbieter](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
 
 2. Öffnen Sie einen Supportfall, und fordern Sie das direkte SDK für ASP.NET 2.0 C# an. Das SDK wird nur aktuellen MIM-Benutzern mit MFA bereitgestellt, da das direkte SDK als veraltet gilt. Neue Kunden sollten die nächste MIM-Version verwenden, die in den MFA-Server integriert ist.
 
@@ -85,7 +86,7 @@ Im nächsten Abschnitt richten Sie Ihren Azure MFA-Anbieter in Microsoft Azure A
 
 7.  Klicken Sie im neuen Fenster im linken Bereich unter **Konfigurieren**auf **Einstellungen**.
 
-8.  Deaktivieren Sie unter **Betrugswarnung** die Option **Benutzer bei Betrugsmeldung sperren**. Dies geschieht, um zu verhindern, dass der gesamte Dienst blockiert wird.
+8.  Deaktivieren Sie unter **Betrugswarnung** die Option **Benutzer bei Betrugsmeldung sperren**. Das Deaktivieren des Kontrollkästchens soll verhindern, dass der gesamte Dienst blockiert wird.
 
 9. Klicken Sie in dem sich öffnenden Fenster **Azure Multi-Factor Authentication** im linken Menü unter **Downloads** auf **SDK** .
 
@@ -117,13 +118,13 @@ Im nächsten Abschnitt richten Sie Ihren Azure MFA-Anbieter in Microsoft Azure A
 
 9. Geben Sie im „ `<username>` “-Element einen beliebigen Benutzernamen ein.
 
-10. Geben Sie im `<DefaultCountryCode>`-Element Ihren standardmäßigen Ländercode ein. Sind für Benutzer Telefonnummern ohne einen Ländercode registriert, ist dies der Ländercode, den die Benutzer erhalten. Hat ein Benutzer einen internationalen Ländercode, muss dieser in die registrierte Telefonnummer einbezogen werden.
+10. Geben Sie im `<DefaultCountryCode>`-Element Ihren standardmäßigen Ländercode ein. Sind für Benutzer Telefonnummern ohne einen Ländercode registriert, erhalten Benutzer diesen Code. Hat ein Benutzer einen internationalen Ländercode, muss dieser in die registrierte Telefonnummer einbezogen werden.
 
 11. Speichern Sie die Datei „MfaSettings.xml“ unter demselben Namen am gleichen Speicherort.
 
 #### <a name="configure-the-phone-gate-or-the-one-time-password-sms-gate"></a>Konfigurieren des Telefongates oder des SMS-Gates für das Einmalkennwort
 
-1.  Starten Sie Internet Explorer, und navigieren Sie zum MIM-Portal. Authentifizieren Sie sich als MIM-Administrator, und klicken Sie auf der linken Navigationsleiste auf  **Workflows** .
+1.  Starten Sie Internet Explorer, und navigieren Sie zum MIM-Portal. Authentifizieren Sie sich als MIM-Administrator, und klicken Sie auf der linken Navigationsleiste auf **Workflows**.
 
     ![Bild: MIM-Portal-Navigation](media/MIM-SSPR-workflow.jpg)
 

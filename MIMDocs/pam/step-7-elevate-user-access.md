@@ -1,6 +1,6 @@
 ---
-title: "Bereitstellen von PAM – Schritt 7: Benutzerzugriff | Microsoft Docs"
-description: "Als letzten Schritt gewähren Sie einem privilegierten Benutzer temporären Zugriff, um zu veranschaulichen, dass die Privileged Access Management-Bereitstellung erfolgreich war."
+title: 'Bereitstellen von PAM – Schritt 7: Benutzerzugriff | Microsoft Docs'
+description: Als letzten Schritt gewähren Sie einem privilegierten Benutzer temporären Zugriff, um zu veranschaulichen, dass die Privileged Access Management-Bereitstellung erfolgreich war.
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,16 +9,17 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-ms.openlocfilehash: 2d92be315547da1c352c0e60732f9aeecf0c2d90
-ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
+ms.openlocfilehash: 9515d17767a75b349b0d3150fb90c136c478baa2
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289845"
 ---
 # <a name="step-7--elevate-a-users-access"></a>Schritt 7 – Erhöhte Rechte für den Benutzerzugriff
 
->[!div class="step-by-step"]
-[« Schritt 6 ](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Schritt 6 ](step-6-transition-group-to-pam.md)
 
 
 Dieser Schritt veranschaulicht, dass ein Benutzer über MIM den Zugriff auf eine Rolle anfordern kann.
@@ -90,7 +91,7 @@ Aktivieren Sie die Rechte durch die Anforderung des privilegierten Zugriffs übe
     ```
 
 3. Geben Sie nach der entsprechenden Aufforderung das Kennwort für das Konto PRIV.Jen ein. Ein neues Webbrowserfenster wird angezeigt.
-4. Navigieren Sie zu http://pamsrv.priv.contoso.local:8090, und stellen Sie sicher, dass eine Webseite des Beispielportals angezeigt wird.
+4. Navigieren Sie zu „http://pamsrv.priv.contoso.local:8090“, und stellen Sie sicher, dass eine Webseite des Beispielportals angezeigt wird.
 5. Wählen Sie in Internet Explorer **Extras** > **Internetoptionen** aus, und klicken Sie dann auf die Registerkarte **Sicherheit**.
 6. Klicken Sie auf die Zone **Lokales Intranet** > **Sites** > **Erweitert**, und fügen Sie anschließend die Website der Zone hinzu.
 7. Schließen Sie das Dialogfeld **Internetoptionen** .
@@ -103,5 +104,5 @@ Aktivieren Sie die Rechte durch die Anforderung des privilegierten Zugriffs übe
 
 Wenn Sie die Schritte in dieser exemplarischen Vorgehensweise abgeschlossen haben, haben Sie ein Privileged Access Management-Szenario veranschaulicht, in dem die Benutzerrechte für einen begrenzten Zeitraum erhöht werden, wodurch der Benutzer die Möglichkeit erhält, mit einem separaten privilegierten Konto auf geschützte Ressourcen zuzugreifen. Sobald die Sitzung mit erhöhten Rechten abgelaufen ist, kann das privilegierte Konto nicht länger auf die geschützte Ressource zugreifen. Die Entscheidung, welche Sicherheitsgruppen privilegierte Rollen darstellen, wird vom PAM-Administrator koordiniert. Sobald die Zugriffsrechte zu dem Privileged Access Management-System migriert sind, ist der Zugriff, der zuvor mit dem ursprünglichen Benutzerkonto ermöglicht wurde, jetzt nur über die Anmeldung mit einem speziellen privilegierten Konto möglich und wird auf Anfrage zur Verfügung gestellt. Daher sind Gruppenmitgliedschaften für sehr privilegierte Gruppen nur für einen begrenzten Zeitraum gültig.
 
->[!div class="step-by-step"]
-[« Schritt 6 ](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Schritt 6 ](step-6-transition-group-to-pam.md)

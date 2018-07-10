@@ -1,7 +1,7 @@
 ---
 title: Microsoft Identity Manager 2016 | Microsoft Docs
 description: Durchgehen des Einstellungsprozesses von Benutzern in AD DS mit Microsoft Identity Manager 2016
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,13 @@ ms.date: 08/18/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 171aa1a2e19ea9f78f9fadbc7368404702095d71
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: a12a8436d70b3ae866df0f615e10a3d76f791168
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290100"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Bereitstellen von Benutzern in AD DS
 
@@ -87,8 +88,8 @@ Die folgende Abbildung beschreibt die erforderliche Umgebung.
 
 Sie können alle Komponenten auf einem Computer ausführen.
 
->[!NOTE]
-Weitere Informationen zum Einrichten von MIM finden Sie unter [FIM Installation Guide (FIM-Installationshandbuch)](http://go.microsoft.com/FWLink/p/?LinkId=165845).
+> [!NOTE]
+> Weitere Informationen zum Einrichten von MIM finden Sie unter [FIM Installation Guide (FIM-Installationshandbuch)](http://go.microsoft.com/FWLink/p/?LinkId=165845).
 
 ## <a name="scenario-components-list"></a>Liste der Szenariokomponenten
 
@@ -160,8 +161,8 @@ Zum Erstellen eines Benutzers in AD DS müssen Sie den definierten Namen des Obj
 
 In AD DS verwenden Benutzer immer noch häufig das Attribut SAMAccountName, um sich im Verzeichnisdienst anzumelden. Wenn Sie keinen Wert für dieses Attribut angeben, generiert der Verzeichnisdienst einen zufälligen Wert. Diese zufälligen Werte sind jedoch nicht benutzerfreundlich, daher ist eine benutzerfreundliche Version dieses Attributs in der Regel Teil des Exports in AD DS. Damit sich ein Benutzer in AD DS anmelden kann, müssen Sie auch ein Kennwort mit dem Attribut „unicodePwd“ in der Exportlogik erstellen.
 
->[!Note]                                
-Stellen Sie sicher, dass der Wert, den Sie als „unicodePwd“ angeben, den Kennwortrichtlinien des Ziel-AD DS entspricht.
+> [!Note]
+> Stellen Sie sicher, dass der Wert, den Sie als „unicodePwd“ angeben, den Kennwortrichtlinien des Ziel-AD DS entspricht.
 
 Wenn Sie ein Kennwort für AD DS-Konten festlegen, müssen Sie auch ein Konto als ein aktiviertes Konto erstellen. Dies erreichen Sie, indem das Attribut „userAccountControl“ festlegen. Weitere Informationen zum Attribut „userAccountControl“ finden Sie unter [Using FIM to Enable or Disable Accounts in Active Directory (Aktivieren oder Deaktivieren von Konten in Active Directory mithilfe von FIM)](http://go.microsoft.com/FWLink/p/?LinkId=189658).
 
@@ -180,8 +181,8 @@ Weitere Informationen finden Sie unter den folgenden Themen in der Hilfe:
 - Verwaltungs-Agent für Active Directory verwenden
 - Verzeichnispartitionen konfigurieren
 
->[!Note]
-Stellen Sie sicher, dass Sie eine Attribut-Importflussregel für das Attribut „ExpectedRulesList“ konfiguriert haben.
+> [!Note]
+> Stellen Sie sicher, dass Sie eine Attribut-Importflussregel für das Attribut „ExpectedRulesList“ konfiguriert haben.
 
 ### <a name="step-4-create-the-fabrikam-fimma-management-agent"></a>Schritt 4: Erstellen Sie den Fabrikam FIMMA-Verwaltungs-Agent
 
@@ -211,8 +212,8 @@ Weitere Informationen finden Sie unter den folgenden Themen in der Hilfe:
 
 -   Verzeichnispartitionen konfigurieren
 
->[!NOTE]
- Stellen Sie sicher, dass Sie eine Attribut-Importflussregel für das Attribut „ExpectedRulesList“ konfiguriert haben.
+> [!NOTE]
+>  Stellen Sie sicher, dass Sie eine Attribut-Importflussregel für das Attribut „ExpectedRulesList“ konfiguriert haben.
 
 ### <a name="step-5-create-the-run-profiles"></a>Schritt 5: Erstellen Sie die Ausführungsprofile
 
@@ -226,12 +227,12 @@ Die folgende Tabelle enthält die Ausführungsprofile, die Sie für das Szenario
 Erstellen Sie Ausführungsprofile für jeden Verwaltungs-Agent gemäß der vorherigen Tabelle.
 
 
->[!Note]
-Weitere Informationen finden Sie unter der Hilfe zum Erstellen eines Ausführungsprofils des Verwaltungs-Agents in MIM.                                                                                                                  
-
-
->[!Important]
- Stellen Sie sicher, dass die Bereitstellung in Ihrer Umgebung aktiviert ist. Sie können dies tun, indem das Skript mithilfe von Windows PowerShell zur Aktivierung der Bereitstellung (http://go.microsoft.com/FWLink/p/?LinkId=189660) ausführen.
+> [!Note]
+> Weitere Informationen finden Sie unter der Hilfe zum Erstellen eines Ausführungsprofils des Verwaltungs-Agents in MIM.                                                                                                                  
+> 
+> 
+> [!Important]
+>  Stellen Sie sicher, dass die Bereitstellung in Ihrer Umgebung aktiviert ist. Sie können dies tun, indem Sie das Skript mithilfe von Windows PowerShell zur Aktivierung der Bereitstellung ausführen („http://go.microsoft.com/FWLink/p/?LinkId=189660)“).
 
 
 ## <a name="configuring-the-fim-service"></a>Konfigurieren des FIM-Diensts
@@ -241,9 +242,9 @@ Für das Szenario in diesem Handbuch müssen Sie eine Bereitstellungsrichtlinie 
 
 ![Bereitstellungsrichtlinie](media/how-provision-users-adds/image019.png)
 
-Das Ziel dieser Bereitstellungsrichtlinie ist es, Gruppen im Bereich der ausgehenden Synchronisierungsregel von AD-Benutzern einzubinden. Durch das Einbinden der Ressource in den Bereich der Synchronisierungsregel ermöglichen Sie dem Synchronisierungsmodul, Ihre Ressource in AD DS gemäß Ihrer Konfiguration bereitzustellen.
+Das Ziel dieser Bereitstellungsrichtlinie ist es, Gruppen im Bereich der ausgehenden Synchronisierungsregel von AD-Benutzern einzubinden. Durch das Einbinden der Ressource in den Bereich der Synchronisierungsregel ermöglichen Sie der Synchronisierungs-Engine, Ihre Ressource in AD DS gemäß Ihrer Konfiguration bereitzustellen.
 
-Navigieren Sie im Windows Internet Explorer® zu http://localhost/identitymanagement, um den FIM-Dienst zu konfigurieren. Navigieren Sie zum Erstellen der Bereitstellungsrichtlinie auf der Seite des MIM-Portals zu den verknüpften Seiten aus dem Abschnitt „Verwaltung“. Sie sollten das Skript in [Using Windows PowerShell to document your provisioning policy configuration (Mithilfe von Windows PowerShell Ihre Bereitstellungsrichtlinienkonfiguration dokumentieren)](http://go.microsoft.com/FWLink/p/?LinkId=189661) ausführen, um die Konfiguration zu überprüfen.
+Navigieren Sie im Windows Internet Explorer® zu „http://localhost/identitymanagement“, um den FIM-Dienst zu konfigurieren. Navigieren Sie zum Erstellen der Bereitstellungsrichtlinie auf der Seite des MIM-Portals zu den verknüpften Seiten aus dem Abschnitt „Verwaltung“. Sie sollten das Skript in [Using Windows PowerShell to document your provisioning policy configuration (Mithilfe von Windows PowerShell Ihre Bereitstellungsrichtlinienkonfiguration dokumentieren)](http://go.microsoft.com/FWLink/p/?LinkId=189661) ausführen, um die Konfiguration zu überprüfen.
 
 ### <a name="step-6-create-the-synchronization-rule"></a>Schritt 6: Erstellen Sie die Synchronisierungsregel
 
@@ -293,8 +294,8 @@ In den folgenden Tabellen wird die Konfiguration der erforderlichen Fabrikam-Syn
 
 
 
- >[!NOTE]
- Wichtig Stellen Sie sicher, dass Sie „Nur erster Fluss“ für den Attributfluss ausgewählt haben, der den definierten Namen als Ziel hat.                                                                          
+> [!NOTE]
+>  Wichtig Stellen Sie sicher, dass Sie „Nur erster Fluss“ für den Attributfluss ausgewählt haben, der den definierten Namen als Ziel hat.                                                                          
 
 ### <a name="step-7-create-the-workflow"></a>Schritt 7: Erstellen des Workflows
 
@@ -365,8 +366,8 @@ Die folgende Tabelle führt die Ausführungsprofile auf, die Teil der Initialisi
 
 
 
->[!NOTE]
-Sie sollten sicherstellen, dass Ihre ausgehende Synchronisierungsregel erfolgreich in die Metaverse projiziert wurde.
+> [!NOTE]
+> Sie sollten sicherstellen, dass Ihre ausgehende Synchronisierungsregel erfolgreich in die Metaverse projiziert wurde.
 
 ## <a name="testing-the-configuration"></a>Konfiguration testen
 
@@ -490,8 +491,8 @@ In FIM benötigt jede Exportausführung einen Deltaimport für den Abschluss des
 
 Führen Sie die Ausführungsprofile gemäß den Anweisungen in diesem Abschnitt aus.
 
->[!IMPORTANT]
-Jede Ausführung von Ausführungsprofilen muss ohne Fehler erfolgen.
+> [!IMPORTANT]
+> Jede Ausführung von Ausführungsprofilen muss ohne Fehler erfolgen.
 
 ### <a name="step-14-verify-the-provisioned-user-in-ad-ds"></a>Schritt 14: Überprüfen Sie die bereitgestellten Benutzer in AD DS
 
@@ -510,7 +511,7 @@ aufgefüllten Attribut ExpectedRulesList können dadurch verwaiste ERE-Objekte e
 Eine Beschreibung, wie Sie diese Objekte aus Ihrer Testumgebung entfernen können, finden Sie unter [A Method to Remove Orphaned ExpectedRuleEntry Objects from Your Environment (Eine Methode zum Entfernen von verwaisten ExpectedRuleEntry-Objekten aus Ihrer Umgebung)](http://go.microsoft.com/FWLink/p/?LinkId=189667).
 
 In einem typischen Szenario mit Synchronisierung, die AD DS als Synchronisierungsziel enthält, ist MIM nicht autoritativ für alle Attribute eines Objekts. Wenn Sie z.B. Benutzerobjekte in AD DS mithilfe von FIM verwalten, müssen zumindest die Domäne und die Attribute „objectSID“ durch den Verwaltungs-Agent von AD DS bereitgestellt werden.
-Die Attribute des Kontonamens, die Domänenattribute und die Attribute „objectSID“ sind erforderlich, damit sich ein Benutzer im FIM-Portal anmelden kann. Es ist eine weitere eingehende Synchronisierungsregel für den AD DS-Connectorbereich erforderlich, um diese Attribute aus AD DS zu füllen. Beim Verwalten von Objekten mit mehreren Quellen für Attributwerte müssen Sie sicherstellen, dass Sie die Attributflussrangfolge ordnungsgemäß konfigurieren. Wenn die Attributflussrangfolge nicht ordnungsgemäß konfiguriert ist, verhindert das Synchronisierungsmodul das Auffüllen der Attributwerte. Weitere Informationen zur Attributflussrangfolge finden Sie im Artikel [About Attribute Flow Precedence (Informationen zur Attributflussrangfolge)](http://go.microsoft.com/FWLink/p/?LinkId=189675).
+Die Attribute des Kontonamens, die Domänenattribute und die Attribute „objectSID“ sind erforderlich, damit sich ein Benutzer im FIM-Portal anmelden kann. Es ist eine weitere eingehende Synchronisierungsregel für den AD DS-Connectorbereich erforderlich, um diese Attribute aus AD DS zu füllen. Beim Verwalten von Objekten mit mehreren Quellen für Attributwerte müssen Sie sicherstellen, dass Sie die Attributflussrangfolge ordnungsgemäß konfigurieren. Wenn die Attributflussrangfolge nicht ordnungsgemäß konfiguriert ist, verhindert die Synchronisierungs-Engine das Auffüllen der Attributwerte. Weitere Informationen zur Attributflussrangfolge finden Sie im Artikel [About Attribute Flow Precedence (Informationen zur Attributflussrangfolge)](http://go.microsoft.com/FWLink/p/?LinkId=189675).
 
 <a name="see-also"></a>Weitere Informationen
 =========

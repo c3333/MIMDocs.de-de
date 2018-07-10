@@ -1,7 +1,7 @@
 ---
-title: "Microsoft Identity Manager 2016 – Empfohlene Vorgehensweisen | Microsoft-Dokumentation"
-description: 
-keywords: 
+title: Microsoft Identity Manager 2016 – Empfohlene Vorgehensweisen | Microsoft-Dokumentation
+description: ''
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -10,20 +10,21 @@ ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: bb967bfb43218384044e324c270d3d6b35d33afe
-ms.sourcegitcommit: b4513f0f72ac6efd5c2610863f4e3e8c8e65c860
+ms.assetid: ''
+ms.openlocfilehash: 9ef96b88942fd33107d9021ddddb90d0d80dbed1
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290117"
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Microsoft Identity Manager 2016 – Empfohlene Vorgehensweisen
 
 In diesem Thema werden empfohlene Vorgehensweisen für die Bereitstellung und den Betrieb von Microsoft Identity Manager 2016 (MIM) beschrieben.
 
 ## <a name="sql-setup"></a>SQL Setup
->[!NOTE]
-Die folgenden Empfehlungen für das Einrichten eines Servers mit SQL gehen von je einer SQL-Instanz aus, die nur für die FIMService-Datenbank bzw. die FIMSynchronizationService-Datenbank vorgesehen ist. Wenn Sie die FIMService-Datenbank in einer konsolidierten Umgebung ausführen, müssen Sie Anpassungen entsprechend Ihrer Konfiguration vornehmen.
+> [!NOTE]
+> Die folgenden Empfehlungen für das Einrichten eines Servers mit SQL gehen von je einer SQL-Instanz aus, die nur für die FIMService-Datenbank bzw. die FIMSynchronizationService-Datenbank vorgesehen ist. Wenn Sie die FIMService-Datenbank in einer konsolidierten Umgebung ausführen, müssen Sie Anpassungen entsprechend Ihrer Konfiguration vornehmen.
 
 Die Konfiguration des Structured Query Language-Servers (SQL) ist entscheidend für eine optimale Systemleistung. Für das Erreichen der optimalen Leistung von MIM in umfangreichen Implementierungen sind die empfohlenen Vorgehensweisen für einen Server mit SQL von großer Bedeutung. Weitere Informationen finden Sie in folgenden Themen zu empfohlenen Vorgehensweisen für SQL:
 
@@ -71,40 +72,40 @@ Es ist wichtig, die Datenträgeranforderungen des Wiederherstellungsmodells zu k
 
 Je nachdem, über wie viel Arbeitsspeicher Sie auf dem Server mit SQL Server verfügen und ob Sie den Server mit SQL Server für andere Dienste (d.h. MIM 2016-Dienst und MIM 2016-Synchronisierungsdienst) freigeben, sollten Sie den Speicherverbrauch von SQL beschränken. Dies können Sie mit folgenden Schritten erreichen.
 
-1.  Starten Sie SQL Server Enterprise Manager.
+1. Starten Sie SQL Server Enterprise Manager.
 
-2.  Wählen Sie „Neue Abfrage“ aus.
+2. Wählen Sie „Neue Abfrage“ aus.
 
-3.  Führen Sie die folgende Abfrage aus:
+3. Führen Sie die folgende Abfrage aus:
 
-  ```SQL
-  USE master
+   ```SQL
+   USE master
 
-  EXEC sp_configure 'show advanced options', 1
+   EXEC sp_configure 'show advanced options', 1
 
-  RECONFIGURE WITH OVERRIDE
+   RECONFIGURE WITH OVERRIDE
 
-  USE master
+   USE master
 
-  EXEC sp_configure 'max server memory (MB)', 12000--- max=12G RECONFIGURE
-  WITH OVERRIDE
-  ```
+   EXEC sp_configure 'max server memory (MB)', 12000--- max=12G RECONFIGURE
+   WITH OVERRIDE
+   ```
 
-  In diesem Beispiel wird der SQL-Server so konfiguriert, dass er nicht mehr als 12 GB (Gigabyte) Arbeitsspeicher verwendet.
+   In diesem Beispiel wird der SQL-Server so konfiguriert, dass er nicht mehr als 12 GB (Gigabyte) Arbeitsspeicher verwendet.
 
-4.  Überprüfen Sie die Einstellung unter Verwendung der folgenden Abfrage:
+4. Überprüfen Sie die Einstellung unter Verwendung der folgenden Abfrage:
 
-  ```SQL
-  USE master
+   ```SQL
+   USE master
 
-  EXEC sp_configure 'max server memory (MB)'--- verify the setting
+   EXEC sp_configure 'max server memory (MB)'--- verify the setting
 
-  USE master
+   USE master
 
-  EXEC sp_configure 'show advanced options', 0
+   EXEC sp_configure 'show advanced options', 0
 
-  RECONFIGURE WITH OVERRIDE
-  ```
+   RECONFIGURE WITH OVERRIDE
+   ```
 
 ### <a name="backup-and-recovery-configuration"></a>Konfigurieren von Sicherung und Wiederherstellung
 
@@ -169,11 +170,11 @@ Es wird empfohlen, dass Sie die Indizierung von Microsoft Office SharePoint® de
 
 Dieser Abschnitt enthält eine Reihe von Schritten, um die Leistung des ersten Datenladevorgangs aus einem externen System zu MIM zu erhöhen. Beachten Sie, dass einige dieser Schritte nur bei der ersten Auffüllung des Systems ausgeführt werden. Sie sollten nach dem Abschluss des Ladens zurückgesetzt werden. Dies ist ein einmaliger Vorgang und keine fortlaufende Synchronisierung.
 
->[!NOTE]
-Weitere Informationen zum Synchronisieren von Benutzern zwischen MIM und Active Directory-Domänendiensten (AD DS) finden Sie in der FIM-Dokumentation unter [How do I Synchronize Users from Active Directory to FIM (Synchronisieren von Benutzern aus Active Directory zu FIM)](http://go.microsoft.com/fwlink/?LinkID=188277).
-
->[!IMPORTANT]
-Stellen Sie sicher, dass Sie die empfohlenen Vorgehensweisen aus dem Abschnitt zur Installation von SQL in dieser Anleitung angewendet haben. 
+> [!NOTE]
+> Weitere Informationen zum Synchronisieren von Benutzern zwischen MIM und Active Directory-Domänendiensten (AD DS) finden Sie in der FIM-Dokumentation unter [How do I Synchronize Users from Active Directory to FIM (Synchronisieren von Benutzern aus Active Directory zu FIM)](http://go.microsoft.com/fwlink/?LinkID=188277).
+> 
+> [!IMPORTANT]
+> Stellen Sie sicher, dass Sie die empfohlenen Vorgehensweisen aus dem Abschnitt zur Installation von SQL in dieser Anleitung angewendet haben. 
 
 ### <a name="step-1-configure-the-sql-server-for-initial-data-load"></a>Schritt 1: Konfigurieren des Servers mit SQL Server für den ersten Datenladevorgang
 Das erste Laden der Daten kann ein lang andauernder Vorgang sein. Wenn Sie am Anfang große Datenmengen laden möchten, können Sie die Zeit für das Auffüllen der Datenbank verkürzen, indem Sie die Volltextsuche vorübergehend deaktivieren und sie nach dem Abschluss des Exports auf dem MIM 2016-Verwaltungs-Agent (FIM-MA) wieder aktivieren.
@@ -191,8 +192,8 @@ ALTER FULLTEXT INDEX ON [fim].[ObjectValueString] SET CHANGE_TRACKING = MANUAL
 ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 ```
 
->[!IMPORTANT]
-Wenn diese Vorgehensweisen nicht umgesetzt werden, kann dies dazu führen, dass nicht mehr genügend Speicherplatz vorhanden ist. Weitere Details zu diesem Thema finden Sie unter [Übersicht über Wiederherstellungsmodelle](http://go.microsoft.com/fwlink/?LinkID=185370). Weitere Informationen finden Sie unter [FIM 2010 Backup and Restore Guide (FIM 2010-Handbuch zur Sicherung und Wiederherstellung)](http://go.microsoft.com/fwlink/?LinkID=165864).
+> [!IMPORTANT]
+> Wenn diese Vorgehensweisen nicht umgesetzt werden, kann dies dazu führen, dass nicht mehr genügend Speicherplatz vorhanden ist. Weitere Details zu diesem Thema finden Sie unter [Übersicht über Wiederherstellungsmodelle](http://go.microsoft.com/fwlink/?LinkID=185370). Weitere Informationen finden Sie unter [FIM 2010 Backup and Restore Guide (FIM 2010-Handbuch zur Sicherung und Wiederherstellung)](http://go.microsoft.com/fwlink/?LinkID=165864).
 
 ### <a name="step-2-apply-the-minimum-necessary-mim-configuration-during-the-load-process"></a>Schritt 2: Anwenden der Mindestanforderungen für die MIM-Konfiguration während des Ladevorgangs
 
@@ -288,8 +289,8 @@ Die Dienstkonten sollten kein Mitglied der lokalen Administratorgruppe sein.
 
 Das Dienstkonto des FIM-Synchronisierungsdiensts sollte kein Mitglied der Sicherheitsgruppen sein, mit denen der Zugriff auf den FIM-Synchronisierungsdienst kontrolliert wird (diese Gruppen beginnen mit „FIMSync“ wie z.B. „FIMSyncAdmins“ usw.).
 
->[!IMPORTANT]
- Wenn Sie dasselbe Konto für beide Dienstkonten verwenden und den FIM-Dienst und den FIM-Synchronisierungsdienst trennen, können Sie für diesen Computer nicht den Zugriff vom Netzwerk auf dem MMS-Synchronisierungsdienst-Server aus verweigern. Wenn der Zugriff verweigert wird, kann der FIM-Dienst keine Verbindung zum FIM-Synchronisierungsdienst herstellen, um die Konfiguration zu ändern und Kennwörter zu verwalten.
+> [!IMPORTANT]
+>  Wenn Sie dasselbe Konto für beide Dienstkonten verwenden und den FIM-Dienst und den FIM-Synchronisierungsdienst trennen, können Sie für diesen Computer nicht den Zugriff vom Netzwerk auf dem MMS-Synchronisierungsdienst-Server aus verweigern. Wenn der Zugriff verweigert wird, kann der FIM-Dienst keine Verbindung zum FIM-Synchronisierungsdienst herstellen, um die Konfiguration zu ändern und Kennwörter zu verwalten.
 
 ### <a name="password-reset-deployed-to-kiosk-like-computers-should-set-local-security-to-clear-virtual-memory-pagefile"></a>Bei Kennwortzurücksetzungen an Kiosk-Computern Auslagerungsdatei des virtuellen Arbeitsspeichers löschen
 
@@ -357,9 +358,9 @@ So implementieren Sie SSL
 
 28. Klicken Sie auf „Vorgänge“ und dann auf „Alternative Zugriffszuordnungen“.
 
-29. Klicken Sie auf „http://servername“.
+29. Klicken Sie auf http://servername.
 
-30. Ändern Sie „http://servername“ in „https://servername“, und klicken Sie dann auf „OK“.
+30. Ändern Sie http://servername in https://servername, und klicken Sie dann auf „OK“.
 
 31. Klicken Sie auf „Start“ und dann auf „Ausführen“. Geben Sie „iisreset“ ein, und klicken Sie dann auf „OK“.
 
@@ -384,7 +385,7 @@ Standardmäßig löscht MIM 2016 abgelaufene Systemobjekte einschließlich abges
 
 MIM bietet zwei Arten von MPRs, eine für Anforderungen und eine für den Listenübergang:
 
--  MPR für Anforderungen (RMPR, Request MPR)
+- MPR für Anforderungen (RMPR, Request MPR)
 
   - Wird verwendet, um die Zugriffssteuerungsrichtlinie (Authentifizierung, Autorisierung und Aktion) für das Erstellen, Lesen, Aktualisieren oder Löschen (CRUD, Create, Read, Update, oder Delete) von Ressourcen zu definieren.
   - Wird angewendet, wenn ein CRUD-Vorgang für eine Zielressource in MIM ausgegeben wird.
@@ -432,8 +433,8 @@ In MIM werden Berechtigungen als positive Assertion definiert. MIM unterstützt 
 
 Verwenden Sie MPRs für den Listenübergang (TMPRs) anstatt RMPRs, um benutzerdefinierte Berechtigungen zu definieren. TMPRs bieten ein zustandsbasiertes Modell zum Zuweisen oder Entfernen von Berechtigungen, die auf der Mitgliedschaft in den definierten Übergangslisten oder -rollen sowie den zugehörigen Workflowaktivitäten basieren. TMPRs sollten immer paarweise definiert werden, eine für jede Richtung des Ressourcenübergangs. Darüber hinaus sollte jede MPR für den Übergang getrennte Workflows für die Bereitstellung und Aufhebung von Aktivitäten enthalten.
 
->[!NOTE]
-Jeder Aufhebungsworkflow sollte sicherstellen, dass das Attribut „Für Richtlinienaktualisierung ausführen“ auf „TRUE“ festgelegt ist.
+> [!NOTE]
+> Jeder Aufhebungsworkflow sollte sicherstellen, dass das Attribut „Für Richtlinienaktualisierung ausführen“ auf „TRUE“ festgelegt ist.
 
 #### <a name="enable-the-set-transition-in-mpr-last"></a>TMPR für den Eingang zuletzt aktivieren
 
@@ -581,11 +582,11 @@ In MIM kann es hilfreich sein, bei einigen regulären Ausdrücken die Groß-/Kle
 
 #### <a name="calculation-of-the-member-attribute"></a>Berechnung des Mitgliedsattributs
 
-Das Mitgliedsattribut, das an das Synchronisierungsmodul bereitgestellt wird, wird eigentlich ComputedMembers zugeordnet. Es ist eine Kombination aus kriterienbasierten und manuell ausgewählten Mitgliedern. Auch wenn Sie alle drei Attribute (Filter, ExplicitMembers und ComputedMembers) hinzufügen, findet die dynamische Berechnung des Mitgliedsattributs nicht für andere Ressourcentypen als Gruppe und Set statt.
+Das Mitgliedsattribut, das an die Synchronisierungs-Engine bereitgestellt wird, wird eigentlich ComputedMembers zugeordnet. Es ist eine Kombination aus kriterienbasierten und manuell ausgewählten Mitgliedern. Auch wenn Sie alle drei Attribute (Filter, ExplicitMembers und ComputedMembers) hinzufügen, findet die dynamische Berechnung des Mitgliedsattributs nicht für andere Ressourcentypen als Gruppe und Set statt.
 
 #### <a name="leading-and-trailing-spaces-in-strings-are-ignored"></a>Vorangestellte und nachfolgende Leerzeichen in Zeichenfolgen werden ignoriert
 
-In MIM können Sie Zeichenfolgen mit vorangestellten und nachfolgenden Leerzeichen eingeben, diese Leerzeichen werden jedoch vom MIM-System ignoriert. Wenn Sie eine Zeichenfolge mit einem vorangestellten und nachfolgenden Leerzeichen übermitteln, werden diese Leerzeichen vom Synchronisierungsmodul und Webdiensten ignoriert.
+In MIM können Sie Zeichenfolgen mit vorangestellten und nachfolgenden Leerzeichen eingeben, diese Leerzeichen werden jedoch vom MIM-System ignoriert. Wenn Sie eine Zeichenfolge mit einem vorangestellten und nachfolgenden Leerzeichen übermitteln, werden diese Leerzeichen von der Synchronisierungs-Engine und Webdiensten ignoriert.
 
 #### <a name="empty-strings-do-not-equal-null"></a>Leere Zeichenfolgen sind nicht gleich null
 

@@ -1,7 +1,7 @@
 ---
-title: "Schritt 8: Überprüfen der PAM-Bereitstellung"
-description: "Die skriptgesteuerte PAM-Bereitstellung umfasst Überprüfungsskripts, die ein PAM-Szenario ausführen können, um zu überprüfen, ob die PAM-Bereitstellung wie erwartet funktioniert."
-keywords: 
+title: 'Schritt 8: Überprüfen der PAM-Bereitstellung'
+description: Die skriptgesteuerte PAM-Bereitstellung umfasst Überprüfungsskripts, die ein PAM-Szenario ausführen können, um zu überprüfen, ob die PAM-Bereitstellung wie erwartet funktioniert.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,19 +10,20 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 28fcbe10366df749796be76f83f608561b5f39d3
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: b01980c020b1027c3b40eaf49b4431631ee041be
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289471"
 ---
 # <a name="step-8-pam-deployment-verification"></a>Schritt 8: Überprüfen der PAM-Bereitstellung
 
->[!div class="step-by-step"]
-[« Schritt 7](sp1-step7-setup-sidhistory-sidfiltering.md)
-[Nachtrag »](sp1-pam-deployment-addendum.md)
+> [!div class="step-by-step"]
+> [« Schritt 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [Nachtrag »](sp1-pam-deployment-addendum.md)
 
 Das Bereitstellungspaket enthält Überprüfungsskripts, die ein PAM-Szenario ausführen können, um sicherzustellen, dass die PAM-Bereitstellung wie erwartet funktioniert.
 Zum Verwenden der Bereitstellungsüberprüfung ändern Sie den Abschnitt „PAMDeploymentConfig.xml“ mit dem Namen <PamValidation/>.
@@ -76,6 +77,6 @@ Geben Sie im PowerShell-Fenster folgende Befehle ein:
   Zunächst hat der Benutzer keinen Zugriff auf die Ressource. Nachdem der Benutzer der Rolle Just-In-Time hinzugefügt wurde, wird ihm Zugriff gewährt. Nachdem die Anforderungsdauer abgelaufen ist, hat der Benutzer keinen Zugriff mehr.
   Das Skript verwendet den Standardwert (11 Minuten) für die Zeit bis zum Ablauf der Anforderung.
 
->[!div class="step-by-step"]
-[« Schritt 7](sp1-step7-setup-sidhistory-sidfiltering.md)
-[Nachtrag »](sp1-pam-deployment-addendum.md)
+> [!div class="step-by-step"]
+> [« Schritt 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [Nachtrag »](sp1-pam-deployment-addendum.md)
