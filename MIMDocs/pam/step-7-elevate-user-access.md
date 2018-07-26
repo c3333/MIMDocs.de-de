@@ -91,7 +91,7 @@ Aktivieren Sie die Rechte durch die Anforderung des privilegierten Zugriffs übe
     ```
 
 3. Geben Sie nach der entsprechenden Aufforderung das Kennwort für das Konto PRIV.Jen ein. Ein neues Webbrowserfenster wird angezeigt.
-4. Navigieren Sie zu „http://pamsrv.priv.contoso.local:8090“, und stellen Sie sicher, dass eine Webseite des Beispielportals angezeigt wird.
+4. Navigieren Sie zu „ http://pamsrv.priv.contoso.local:8090 “, und stellen Sie sicher, dass eine Webseite des Beispielportals angezeigt wird.
 5. Wählen Sie in Internet Explorer **Extras** > **Internetoptionen** aus, und klicken Sie dann auf die Registerkarte **Sicherheit**.
 6. Klicken Sie auf die Zone **Lokales Intranet** > **Sites** > **Erweitert**, und fügen Sie anschließend die Website der Zone hinzu.
 7. Schließen Sie das Dialogfeld **Internetoptionen** .
