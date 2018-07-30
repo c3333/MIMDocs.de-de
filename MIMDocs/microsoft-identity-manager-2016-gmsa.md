@@ -8,12 +8,12 @@ ms.date: 06/27/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.openlocfilehash: 090e82cac6c734beb9767e2d2e6230320e44c26f
-ms.sourcegitcommit: c6cb2556bb9f2256b959a3c95db7ca5bbfc2b437
+ms.openlocfilehash: ca1dacdd32a025bc08c00bde6088d85d6444be99
+ms.sourcegitcommit: 8b2623f6247621098d386cbe84e10b5b5373abfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37065141"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39149912"
 ---
 # <a name="conversion-of-mim-specific-services-to-gmsa"></a>Konvertierung von MIM-spezifischen Diensten in gMSA
 
@@ -48,7 +48,7 @@ Das Lesen dieser Informationen ist zum Durchführen der Einrichtung und zum Vers
 
 -   <https://technet.microsoft.com/en-us/library/jj128430(v=ws.11).aspx>
 
-Erster Schritt auf Ihrem Windows-Domänencontroller
+Schritt eins auf Ihrem Windows-Domänencontroller
 
 1.  Erstellen Sie den Stammschlüssel der Schlüsselverteilungsdienste (Key Distribution Services, KDS), falls erforderlich (nur einmal pro Domäne). Der Stammschlüssel wird (zusammen mit anderen Informationen) vom KDS-Dienst auf Domänencontrollern zum Generieren von Kennwörtern verwendet.
 
@@ -61,7 +61,7 @@ Erster Schritt auf Ihrem Windows-Domänencontroller
 ## <a name="synchronization-service"></a>Synchronisierungsdienst
 -----------------------
 
-1.  Im ersten Schritt wird eine Gruppe namens „MIMSync_Servers“ erstellt, und alle Synchronisierungsserver werden dieser Gruppe hinzugefügt.
+1.  Erstellen Sie eine Gruppe namens „MIMSync_Servers“, und fügen Sie dieser Gruppe alle Synchronisierungsserver hinzu.
 
 ![](media/a4dc3f6c0cb1f715ba690744f54dce5c.png)
 
