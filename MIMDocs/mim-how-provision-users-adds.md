@@ -232,7 +232,7 @@ Erstellen Sie Ausführungsprofile für jeden Verwaltungs-Agent gemäß der vorhe
 > 
 > 
 > [!Important]
->  Stellen Sie sicher, dass die Bereitstellung in Ihrer Umgebung aktiviert ist. Sie können dies tun, indem Sie das Skript mithilfe von Windows PowerShell zur Aktivierung der Bereitstellung ausführen („http://go.microsoft.com/FWLink/p/?LinkId=189660)“).
+>  Stellen Sie sicher, dass die Bereitstellung in Ihrer Umgebung aktiviert ist. Sie können dies tun, indem Sie das Skript mithilfe von Windows PowerShell zur Aktivierung der Bereitstellung ausführen („ http://go.microsoft.com/FWLink/p/?LinkId=189660) “).
 
 
 ## <a name="configuring-the-fim-service"></a>Konfigurieren des FIM-Diensts
@@ -244,7 +244,7 @@ Für das Szenario in diesem Handbuch müssen Sie eine Bereitstellungsrichtlinie 
 
 Das Ziel dieser Bereitstellungsrichtlinie ist es, Gruppen im Bereich der ausgehenden Synchronisierungsregel von AD-Benutzern einzubinden. Durch das Einbinden der Ressource in den Bereich der Synchronisierungsregel ermöglichen Sie der Synchronisierungs-Engine, Ihre Ressource in AD DS gemäß Ihrer Konfiguration bereitzustellen.
 
-Navigieren Sie im Windows Internet Explorer® zu „http://localhost/identitymanagement“, um den FIM-Dienst zu konfigurieren. Navigieren Sie zum Erstellen der Bereitstellungsrichtlinie auf der Seite des MIM-Portals zu den verknüpften Seiten aus dem Abschnitt „Verwaltung“. Sie sollten das Skript in [Using Windows PowerShell to document your provisioning policy configuration (Mithilfe von Windows PowerShell Ihre Bereitstellungsrichtlinienkonfiguration dokumentieren)](http://go.microsoft.com/FWLink/p/?LinkId=189661) ausführen, um die Konfiguration zu überprüfen.
+Navigieren Sie im Windows Internet Explorer® zu http://localhost/identitymanagement, um den FIM-Dienst zu konfigurieren. Navigieren Sie zum Erstellen der Bereitstellungsrichtlinie auf der Seite des MIM-Portals zu den verknüpften Seiten aus dem Abschnitt „Verwaltung“. Sie sollten das Skript in [Using Windows PowerShell to document your provisioning policy configuration (Mithilfe von Windows PowerShell Ihre Bereitstellungsrichtlinienkonfiguration dokumentieren)](http://go.microsoft.com/FWLink/p/?LinkId=189661) ausführen, um die Konfiguration zu überprüfen.
 
 ### <a name="step-6-create-the-synchronization-rule"></a>Schritt 6: Erstellen Sie die Synchronisierungsregel
 
