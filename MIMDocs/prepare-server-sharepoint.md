@@ -12,12 +12,12 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f69648e7e4229ca7c8de895cdf10ccb2c5f368e2
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: a64ee79897ce73242d0f8510842fdcb6758fab2c
+ms.sourcegitcommit: 28834821cbddd6384613d8ba45424c35f4c39ce6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289532"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45538573"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Einrichten eines Identitätsverwaltungsservers: SharePoint
 
@@ -71,7 +71,7 @@ Folgen Sie den im **Konfigurations-Assistenten für SharePoint-Produkte** erläu
 2. Geben Sie diesen Server als Datenbankserver wie **corpsql** für die Konfigurationsdatenbank und *Contoso\SharePoint* als Datenbankzugriffskonto für SharePoint an.
 3. Erstellen Sie ein Kennwort für die Passphrase der Farmsicherheit.
 
-4. Der Konfigurations-Assistent empfiehlt die Auswahl des Typs [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) von **Front-end**.
+4. Der Konfigurations-Assistent empfiehlt die Auswahl des Typs [MinRole](https://docs.microsoft.com/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) von **Front-end**.
 
 5. Wenn der Konfigurations-Assistent die Konfigurationsaufgabe 10 von 10 abgeschlossen hat, klicken Sie auf „Fertig stellen“. Daraufhin wird ein Webbrowser geöffnet.
 
