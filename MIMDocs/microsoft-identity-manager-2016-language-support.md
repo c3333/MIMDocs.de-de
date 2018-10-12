@@ -10,12 +10,12 @@ ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: 834343243dfeefa8d1874414fa369751288fd64d
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: bb0287b894786d13398819b04bdb089f0f36b33e
+ms.sourcegitcommit: acb2c61831cb634278acc439d6d9496ff51a6a54
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36288869"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43694638"
 ---
 # <a name="supported-languages"></a>Unterstützte Sprachen
 
@@ -26,7 +26,7 @@ In diesem Artikel werden die unterstützten Sprachen und die Zuordnung von Updat
 Das Microsoft-Sprachpaket für den MIM-Dienst und -Portal unterstützt folgende 33 Sprachen.  
 
 > [!NOTE]
-> In Version [4.4.1642.0](https://support.microsoft.com/en-us/help/4021562/hotfix-rollup-package-build-4-4-1642-0-is-available-for-microsoft) wurde ein Registrierungsschlüssel namens „OverrideDefaultUILocale“ zum Sprachpaket für MIM-Add-Ins und -Erweiterungen hinzugefügt, durch den alle Sprachen einer ähnlichen unterstützten Sprache zugeordnet werden. Wenn die Windows-Anzeigesprache beispielsweise es-CL (Spanisch (Chile)) oder es-** ist, wird versucht, diese es-ES (Spanisch (Spanien)) zuzuordnen.
+> In Version [4.4.1642.0](https://support.microsoft.com/en-us/help/4021562/hotfix-rollup-package-build-4-4-1642-0-is-available-for-microsoft) wurde ein Registrierungsschlüssel namens „OverrideDefaultUILocale“ zum Sprachpaket für MIM-Add-Ins und -Erweiterungen hinzugefügt, durch den alle Sprachen einer ähnlichen unterstützten Sprache zugeordnet werden. Wenn die Windows-Anzeigesprache beispielsweise ES-CL (Spanisch (Chile)) oder ES-\* ist, wird versucht, diese ES-ES (Spanisch (Spanien)) zuzuordnen.
 
 > [!IMPORTANT]
 > Der Text im SSPR-Add-In und -Portal wird lokalisiert, die Lokalisierung der Fragen erfordert jedoch zusätzliche Arbeit. Sie müssen AuthN-Workflows (und zugehörige Datensätze und MPRs, um diese anzuzielen) erstellen, um Fragen in jeder Sprache dem Zielstandort zuzuordnen.
