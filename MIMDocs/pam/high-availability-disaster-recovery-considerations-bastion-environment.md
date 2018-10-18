@@ -7,27 +7,27 @@ ms.author: barclayn
 manager: mbaldwin
 ms.date: 09/13/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
+ms.prod: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: e6e603a4d827639c30880f6997f949d0d1732421
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 5af801ae3b5077d39bbe3957b0288e24c33ce551
+ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2017
-ms.locfileid: "22052313"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49333954"
 ---
 # <a name="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment"></a>Hohe Verfügbarkeit und Überlegungen zur Notfallwiederherstellung für die geschützte Umgebung
 
-Dieser Artikel beschreibt Überlegungen zur hohen Verfügbarkeit und Notfallwiederherstellung bei der Bereitstellung von Active Directory-Domänendiensten (AD DS, Active Directory Domain Services) und Microsoft Identity Manager 2016 (MIM) für Privileged Access Management (PAM).
+Dieser Artikel beschreibt Überlegungen zu Hochverfügbarkeit und Notfallwiederherstellung bei der Bereitstellung von Active Directory Domain Services (AD DS) und Microsoft Identity Manager 2016 (MIM) für Privileged Access Management (PAM).
 
-Unternehmen konzentrieren sich auf Hochverfügbarkeit und Notfallwiederherstellung für Workloads in Windows Server, SQL Server und Active Directory. Aber die zuverlässige Verfügbarkeit der geschützten Umgebung für Privileged Access Management ist auch wichtig. Die geschützte Umgebung ist ein wichtiger Bestandteil der IT-Infrastruktur der Organisation, da Benutzer mit ihren Komponenten interagieren, um administrative Rollen zu übernehmen. Um weitere Informationen zur hohen Verfügbarkeit im Allgemeinen zu erhalten, können Sie das Whitepaper [Microsoft High Availability Overview](http://download.microsoft.com/download/3/B/5/3B51A025-7522-4686-AA16-8AE2E536034D/Microsoft%20High%20Availability%20Strategy%20White%20Paper.doc) (Übersicht von Microsoft zur hohen Verfügbarkeit) herunterladen.
+Unternehmen konzentrieren sich auf Hochverfügbarkeit und Notfallwiederherstellung für Workloads in Windows Server, SQL Server und Active Directory. Aber die zuverlässige Verfügbarkeit der geschützten Umgebung für Privileged Access Management ist auch wichtig. Die geschützte Umgebung ist ein wichtiger Bestandteil der IT-Infrastruktur der Organisation, da Benutzer mit ihren Komponenten interagieren, um administrative Rollen zu übernehmen. Um weitere Informationen zu Hochverfügbarkeit im Allgemeinen zu erhalten, können Sie das Whitepaper [Microsoft High Availability Overview](http://download.microsoft.com/download/3/B/5/3B51A025-7522-4686-AA16-8AE2E536034D/Microsoft%20High%20Availability%20Strategy%20White%20Paper.doc) (Übersicht von Microsoft zu Hochverfügbarkeit) herunterladen.
 
 ## <a name="high-availability-and-disaster-recovery-scenarios"></a>Szenarien zu Hochverfügbarkeit und Notfallwiederherstellung
 
-Berücksichtigen Sie bei der Planung für hohe Verfügbarkeit und Wiederherstellung im Notfall folgende Fragen:
+Berücksichtigen Sie bei der Planung für Hochverfügbarkeit und Wiederherstellung im Notfall folgende Fragen:
 
 - Welche Funktionen können von einem Ausfall betroffen sein?
 - Welche Funktionen sind unternehmenswichtig und/oder für den IT-Betrieb kritisch?
@@ -84,7 +84,7 @@ Die Überwachung erfordert sowohl, dass der vorhandene Gesamtstruktur-Domänenco
 
 ## <a name="deployment-options"></a>Bereitstellungsoptionen
 
-Die [Übersicht über die Umgebung](environment-overview.md) veranschaulicht eine einfache Topologie zum Erlernen der Technologie, die nicht für hohe Verfügbarkeit konzipiert ist. Dieser Abschnitt beschreibt, wie Sie die Topologie für die Bereitstellung hoher Verfügbarkeit ausweiten – sowohl für Organisationen mit einem einzigen Standort als auch solche mit mehreren Standorten.
+Die [Übersicht über die Umgebung](environment-overview.md) veranschaulicht eine einfache Topologie zum Erlernen der Technologie, die nicht für Hochverfügbarkeit konzipiert ist. Dieser Abschnitt beschreibt, wie Sie die Topologie für die Bereitstellung von Hochverfügbarkeit ausweiten – sowohl für Organisationen mit einem einzigen Standort als auch solche mit mehreren Standorten.
 
 ### <a name="networking"></a>Netzwerk
 
@@ -100,11 +100,11 @@ Die Computer, die die Active Directory-Domänendienste hosten, und diejenigen, d
 
 ### <a name="minimal-high-availability-topologies"></a>Minimale Hochverfügbarkeitstopologien
 
-Eine Organisation kann auswählen, welche Funktionen in ihrer geschützten Umgebung hohe Verfügbarkeit erfordern – mit den folgenden Einschränkungen:
+Eine Organisation kann auswählen, welche Funktionen in ihrer geschützten Umgebung Hochverfügbarkeit erfordern – mit den folgenden Einschränkungen:
 
 - Hohe Verfügbarkeit für eine beliebige Funktion, die von der geschützten Umgebung bereitgestellt wird, erfordert mindestens zwei Domänencontroller.  
-- Hohe Verfügbarkeit für Aktivierungsanforderungen erfordert mindestens zwei Computer, die den MIM-Dienst hosten, und außerdem hohe Verfügbarkeit für SQL Server.
-- Hohe Verfügbarkeit für SQL Server mit Failoverclustern erfordert mindestens zwei Server, die SQL Server bereitstellen, und diese dürfen nicht mit dem Domänencontroller identisch sein.
+- Hochverfügbarkeit für Aktivierungsanforderungen erfordert mindestens zwei Computer, die den MIM-Dienst hosten, und außerdem Hochverfügbarkeit für SQL Server.
+- Hochverfügbarkeit für SQL Server mit Failoverclustern erfordert mindestens zwei Server, die SQL Server bereitstellen, und diese dürfen nicht mit dem Domänencontroller identisch sein.
 - Der MIM-Dienst darf nicht auf dem Domänencontroller installiert werden, um die Angriffsfläche der einzelnen Server zu minimieren.
 
 Die kleinste Hochverfügbarkeitstopologie für alle Funktionen in einer geschützten Umgebung besteht aus mindestens vier Servern und freigegebenem Speicher. Zwei der Server müssen als Domänencontroller konfiguriert werden, die Active Directory-Domänendienste bereitstellen. Die anderen beiden Server können als Failovercluster konfiguriert werden, die SQL Server und den MIM-Dienst bereitstellen.
@@ -121,7 +121,7 @@ Für jede dieser Funktionen können zusätzliche Server konfiguriert werden, um 
 
 Die Auswahl der richtigen Bereitstellungstopologie für Ressourcen, die an mehreren Standorten bereitgestellt werden, hängt von drei Faktoren ab:
 
-- Ziele und Risiken bei hoher Verfügbarkeit und Notfallwiederherstellung
+- Ziele und Risiken bei Hochverfügbarkeit und Notfallwiederherstellung
 - Die Hardwarefunktionen zum Hosten der geschützten Umgebung
 - Das administrative Arbeitsmodell für jeden Standort.
 
@@ -129,7 +129,7 @@ Eine der einfachsten Methoden wäre das Hosten der geschützten Umgebung an eine
 
 ![Einzelne geschützte Umgebung für standortübergreifende Topologie – Diagramm](media/bastion2.png)
 
-Für standortübergreifende hohe Verfügbarkeit und Notfallwiederherstellung können die Komponenten der geschützten Umgebung auch unter Nutzung eines gemeinsamen PRIV-Verzeichnisses und einer allgemeinen SQL-Datenbank an jedem Standort bereitgestellt werden.  Sollte in dieser Topologie die Netzwerkverbindung getrennt werden, können die Benutzer an jedem Standort weiterhin unabhängig arbeiten.
+Für standortübergreifende Hochverfügbarkeit und Notfallwiederherstellung können die Komponenten der geschützten Umgebung auch unter Nutzung eines gemeinsamen PRIV-Verzeichnisses und einer allgemeinen SQL-Datenbank an jedem Standort bereitgestellt werden.  Sollte in dieser Topologie die Netzwerkverbindung getrennt werden, können die Benutzer an jedem Standort weiterhin unabhängig arbeiten.
 
 ![Mehrere geschützte Umgebungen für standortübergreifende Topologie – Diagramm](media/bastion3.png)
 
@@ -152,15 +152,15 @@ Einige Organisationen haben auch erwogen, die geschützte Umgebung separat von v
 - Zum Schutz vor Angriffen aus den vorhandenen Domänen muss die Verwaltung der geschützten Umgebung von den Administratorkonten der vorhandenen Domäne isoliert werden.
 - Die geschützte Umgebung erfordert TCP/IP-Konnektivität mit den Domänencontrollern in der vorhandenen Domäne.  Eine Liste der Ports finden Sie unter [How to configure a firewall for domains and trusts](https://support.microsoft.com/kb/179442) (Konfigurieren einer Firewall für Domänen und Vertrauensstellungen).
 - Eine virtualisierte Bereitstellung von Active Directory-Domänendiensten setzt bestimmte Features bei der Virtualisierungsplattform voraus, siehe [Bereitstellung und Konfiguration virtualisierter Domänencontroller](https://technet.microsoft.com/library/jj574223.aspx).
-- Eine Bereitstellung mit hoher Verfügbarkeit von SQL Server für den MIM-Dienst erfordert spezielle Speicherkonfiguration, wie unten im Abschnitt [SQL Server-Datenbankspeicher](#sql-server-database-storage) beschrieben.  Möglicherweise bieten derzeit nicht alle Hostinganbieter Windows Server-Hosting mit Datenträgerkonfigurationen an, die für SQL Server-Failovercluster geeignet sind.
+- Eine Bereitstellung mit Hochverfügbarkeit von SQL Server für den MIM-Dienst erfordert spezielle Speicherkonfiguration, wie unten im Abschnitt [SQL Server-Datenbankspeicher](#sql-server-database-storage) beschrieben.  Möglicherweise bieten derzeit nicht alle Hostinganbieter Windows Server-Hosting mit Datenträgerkonfigurationen an, die für SQL Server-Failovercluster geeignet sind.
 
 ## <a name="deployment-preparation-and-recovery-procedures"></a>Vorbereitung der Bereitstellung und Wiederherstellungsverfahren
 
-Bei der Vorbereitung einer Bereitstellung mit hoher Verfügbarkeit oder für die Notfallwiederherstellung bereiten Bereitstellung der geschützten Umgebung muss berücksichtigt werden, wie Windows Server Active Directory, SQL Server und die Datenbank auf freigegebenem Speicher und der MIM-Dienst und seine PAM-Komponenten installiert werden.
+Bei der Vorbereitung einer Bereitstellung mit Hochverfügbarkeit oder für die Notfallwiederherstellung bereiten Bereitstellung der geschützten Umgebung muss berücksichtigt werden, wie Windows Server Active Directory, SQL Server und die Datenbank auf freigegebenem Speicher und der MIM-Dienst und seine PAM-Komponenten installiert werden.
 
 ### <a name="windows-server"></a>Windows Server
 
-Windows Server enthält ein integriertes Feature für hohe Verfügbarkeit, sodass mehrere Computer als Failovercluster zusammenarbeiten können. Die geclusterten Server sind physisch über Kabel sowie durch Software verbunden. Wenn auf einem oder mehreren der Clusterknoten ein Fehler auftritt, werden seine Aufgaben sofort von anderen Knoten übernommen. Dieser Vorgang wird als Failover bezeichnet.   Weitere Informationen finden Sie unter [Failoverclustering: Übersicht](https://technet.microsoft.com/library/hh831579.aspx).
+Windows Server enthält ein integriertes Feature für Hochverfügbarkeit, sodass mehrere Computer als Failovercluster zusammenarbeiten können. Die geclusterten Server sind physisch über Kabel sowie durch Software verbunden. Wenn auf einem oder mehreren der Clusterknoten ein Fehler auftritt, werden seine Aufgaben sofort von anderen Knoten übernommen. Dieser Vorgang wird als Failover bezeichnet.   Weitere Informationen finden Sie unter [Failoverclustering: Übersicht](https://technet.microsoft.com/library/hh831579.aspx).
 
 Stellen Sie sicher, dass das Betriebssystem und die Anwendungen in der geschützten Umgebung Updates zu Sicherheitsproblemen erhalten. Einige dieser Updates erfordern möglicherweise einen Neustart des Servers, darum koordinieren Sie die Zeiten, in denen Updates auf den Servern ausgeführt werden, um längere Ausfallzeiten zu vermeiden. Ein möglicher Ansatz ist die Verwendung [des clusterfähigen Aktualisierens](https://technet.microsoft.com/library/hh831694.aspx) für die Server in einem Windows Server-Failovercluster.
 
@@ -168,7 +168,7 @@ Die Server in der geschützten Umgebung werden einer Domäne hinzugefügt, und d
 
 ### <a name="bastion-environment-active-directory"></a>Active Directory für geschützte Umgebungen
 
-Systemeigen umfassen Windows Server Active Directory-Domänendienste Unterstützung für hohe Verfügbarkeit und Notfallwiederherstellung.
+Systemeigen umfassen Windows Server Active Directory Domain Services Unterstützung für Hochverfügbarkeit und Notfallwiederherstellung.
 
 #### <a name="preparation"></a>Vorbereitung
 
@@ -191,13 +191,13 @@ Sie sollten auch die DNS-Einstellungen von Computern überprüfen, die der gesch
 
 ### <a name="sql-server-database-storage"></a>SQL Server-Datenbankspeicher
 
-Eine Bereitstellung mit hoher Verfügbarkeit erfordert SQL Server-Failovercluster, und SQL Server-Failovercluster-Instanzen reagieren auf Speicher, der für alle Knoten für Datenbank- und Protokollspeicherung freigegeben wird. Der freigegebene Speicher kann in Form von Windows Server Failover Clustering-Clusterdatenträgern, Datenträgern auf einem Storage Area Network (SAN) oder Dateifreigaben auf einem SMB-Server vorliegen.  Beachten Sie, dass diese der geschützten Umgebung zugewiesen werden müssen. Freigeben von Speicher für andere Workloads außerhalb der geschützten Umgebung wird nicht empfohlen, da die Integrität der geschützten Umgebung gefährdet werden könnte.
+Eine Bereitstellung mit Hochverfügbarkeit erfordert SQL Server-Failovercluster, und SQL Server-Failovercluster-Instanzen reagieren auf Speicher, der für alle Knoten für Datenbank- und Protokollspeicherung freigegeben wird. Der freigegebene Speicher kann in Form von Windows Server Failover Clustering-Clusterdatenträgern, Datenträgern auf einem Storage Area Network (SAN) oder Dateifreigaben auf einem SMB-Server vorliegen.  Beachten Sie, dass diese der geschützten Umgebung zugewiesen werden müssen. Freigeben von Speicher für andere Workloads außerhalb der geschützten Umgebung wird nicht empfohlen, da die Integrität der geschützten Umgebung gefährdet werden könnte.
 
 ### <a name="sql-server"></a>SQL Server
 
-MIM-Dienst erfordert eine SQL Server-Bereitstellung in der geschützten Umgebung.   Für eine hohe Verfügbarkeit kann SQL über eine Failoverclusterinstanz (FCI) bereitgestellt werden. Im Gegensatz zu eigenständigen Instanzen ist in FCIs die hohe Verfügbarkeit von SQL Server durch das Vorhandensein redundanter Knoten in der FCI geschützt. Bei einem Fehler oder geplanten Upgrade wird der Ressourcengruppenbesitz zu einem anderen Windows Server-Failovercluster-Knoten verschoben.
+MIM-Dienst erfordert eine SQL Server-Bereitstellung in der geschützten Umgebung.   Für eine hohe Verfügbarkeit kann SQL über eine Failoverclusterinstanz (FCI) bereitgestellt werden. Im Gegensatz zu eigenständigen Instanzen ist in FCIs die Hochverfügbarkeit von SQL Server durch das Vorhandensein redundanter Knoten in der FCI geschützt. Bei einem Fehler oder geplanten Upgrade wird der Ressourcengruppenbesitz zu einem anderen Windows Server-Failovercluster-Knoten verschoben.
 
-Wenn Sie nur Unterstützung für die Wiederherstellung im Notfall, aber keine hohe Verfügbarkeit benötigen, dann können Protokollversand, Transaktionsreplikation, Snapshotreplikation oder Datenbankspiegelung anstelle des Failoverclusterings verwendet werden.   
+Wenn Sie nur Unterstützung für die Wiederherstellung im Notfall, aber keine Hochverfügbarkeit benötigen, dann können Protokollversand, Transaktionsreplikation, Snapshotreplikation oder Datenbankspiegelung anstelle des Failoverclusterings verwendet werden.   
 
 #### <a name="preparation"></a>Vorbereitung
 
@@ -215,7 +215,7 @@ Der MIM-Dienst ist erforderlich, um Aktivierungsanforderungen zu verarbeiten.  D
 
 #### <a name="preparation"></a>Vorbereitung
 Sie sollten den MIM-Dienst auf mehreren Servern bereitstellen, die der PRIV-Domäne hinzugefügt werden.
-Informationen zu hoher Verfügbarkeit finden Sie in den Windows Server-Dokumenten [Hardwareanforderungen und Speicheroptionen für Failovercluster](https://technet.microsoft.com/library/jj612869.aspx) und [Creating a Windows Server 2012 Failover Cluster](http://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx) (Erstellen eines Windows Server 2012-Failoverclusters).
+Informationen zu Hochverfügbarkeit finden Sie in den Windows Server-Dokumenten [Hardwareanforderungen und Speicheroptionen für Failovercluster](https://technet.microsoft.com/library/jj612869.aspx) und [Creating a Windows Server 2012 Failover Cluster](http://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx) (Erstellen eines Windows Server 2012-Failoverclusters).
 
 Für die mehrere Server übergreifende Produktionsbereitstellung können Sie den Netzwerklastenausgleich (Network Load Balancing, NLB) zum Verteilen der Verarbeitungslast verwenden.  Sie sollten auch einen einzelnen Alias (z. B. einen A- oder CNAME-Datensatz) haben, sodass den Benutzern ein einziger gängiger Name angezeigt wird.
 

@@ -2,20 +2,19 @@
 title: Installation des BHOLD-Zugriffsverwaltungsconnectors | Microsoft-Dokumentation
 description: Das BHOLD-Connectormodul unterstützt die anfängliche und laufende Synchronisierung von Daten
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/07/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 6d7f19f470d0c0f82a68652115ab9265a13b3508
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.openlocfilehash: 60886a84c6105e94a2cd3d42f17b86b2d69c8c0a
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2017
-ms.locfileid: "24522327"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358600"
 ---
 # <a name="access-management-connector-installation"></a>Installation des BHOLD-Zugriffsverwaltungsconnectors
 

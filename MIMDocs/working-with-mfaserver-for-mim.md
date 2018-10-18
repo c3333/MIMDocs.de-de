@@ -2,20 +2,19 @@
 title: Verwenden von Azure Multi-Factor Authentication-Server-SDK zum Aktivieren von PAM oder in SSPR-Szenarios | Microsoft-Dokumentation
 description: Richten Sie ein Azure Multi-Factor Authentication-Server-SDK als zweite Sicherheitsebene ein, wenn Benutzer Rollen in Privileged Access Management und der Self-Service-Kennwortzurücksetzung aktivieren.
 keywords: ''
-author: fimguy
+author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 09/02/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 7191e445688cc9e3c5c02b9c6852c869a28a937a
-ms.sourcegitcommit: ad0690bd57e3d056397108bf1c8417965d69a32c
+ms.openlocfilehash: b92a217dd86d9e4de177ebec9ecec7c76222d7b1
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43772677"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358277"
 ---
 # <a name="use-azure-multi-factor-authentication-server-to-activate-pam-or-sspr"></a>Use Azure Multi-Factor Authentication Server to activate PAM or SSPR (Verwenden eines Azure Multi-Factor Authentication-Servers zum Aktivieren von PAM oder SSPR)
 Das folgende Dokument beschreibt, wie Sie einen Azure Multi-Factor Authentication-Server als zweite Sicherheitsebene einrichten, wenn Benutzer Rollen in Priviledge Access Management oder der Self-Service-Kennwortzurücksetzung aktivieren.

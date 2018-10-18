@@ -2,21 +2,20 @@
 title: Arbeiten mit der Hybridberichterstellung in Azure mit Identity Manager 2016 | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie lokale Daten und Clouddaten als Hybridberichte in Azure kombinieren und wie Sie diese Berichte verwalten und anzeigen können.
 keywords: ''
-author: fimguy
-ms.author: davidste
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 2/20/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.suite: ems
-ms.openlocfilehash: 3c9e8c0fa0a0de3cf9710003d4d7f4ed9c0b03bd
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 18e4127b1d854a53734142bb58442627619491ef
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289644"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358532"
 ---
 # <a name="work-with-hybrid-reporting-in-identity-manager"></a>Arbeiten mit der Hybridberichterstellung im Identity Manager
 

@@ -3,21 +3,20 @@ title: Bereitstellen der MIM-Zertifikat-Manager-Anwendung unter Windows | Micros
 description: Erfahren Sie, wie Sie die Zertifikat-Manager-App bereitstellen, um Ihren Benutzern das Verwalten ihrer eigenen Zugriffsrechte zu ermöglichen.
 keywords: ''
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
+ms.author: billmath
+manager: mtillman
 ms.date: 10/16/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: bf655d451e86261ffd3043117a56f4daccb4b460
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 8ff9edce6da865418e300095ff0827853a35d4eb
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289872"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358345"
 ---
 # <a name="mim-certificate-manager-windows-store-application-deployment"></a>Bereitstellung der Windows Store-Anwendung des MIM-Zertifikat-Managers
 

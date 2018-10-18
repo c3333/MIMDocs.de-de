@@ -1,19 +1,18 @@
 ---
 title: Aktualisieren von Konten für MIM-spezifische Dienste für Benachrichtigung und Genehmigungen, wenn gMSA aktiviert ist | Microsoft-Dokumentation
 description: In diesem Thema werden die grundlegenden Schritte zum Konfigurieren von gMSA beschrieben.
-author: fimguy
+author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 06/27/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
-ms.openlocfilehash: cc33293c0a836f9e5118fc372abc5d96c1a5373d
-ms.sourcegitcommit: c6cb2556bb9f2256b959a3c95db7ca5bbfc2b437
+ms.prod: microsoft-identity-manager
+ms.openlocfilehash: af293106b11651dfd720c03165938f8079a3e49b
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37065159"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358219"
 ---
 # <a name="update-of-mim-specific-service-account-for-notifications-to-gmsa"></a>Aktualisieren des Kontos für MIM-spezifischen Dienst für Benachrichtigungen an gMSA
 ===========================================

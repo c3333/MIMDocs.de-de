@@ -8,14 +8,13 @@ ms.reviewer: fimguy
 manager: mtillman
 ms.date: 09/04/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: active-directory-domain-services
-ms.openlocfilehash: 85ab84231c2ebfede125ffaf5fb39964e8a8450c
-ms.sourcegitcommit: acb2c61831cb634278acc439d6d9496ff51a6a54
+ms.prod: microsoft-identity-manager
+ms.openlocfilehash: 750947d04f540e2c8317861c5826c2145deba1fd
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43694794"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358396"
 ---
 # <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Verwenden eines benutzerdefinierten Multi-Factor Authentication-Anbieters über eine API während der Aktivierung von PAM-Rollen oder in SSPR
 
@@ -157,6 +156,6 @@ Verwenden Sie nach dem Neustart des Diensts SSPR und/oder PAM, um die Funktion m
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Erste Schritte mit Azure Multi-Factor Authentication-Server](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy).
+- [Erste Schritte mit Azure Multi-Factor Authentication-Server](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy)
 - [Was ist Azure Multi-Factor Authentication?](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [MIM version release history (Versionsverlauf der MIM-Version)](./reference/version-history.md)

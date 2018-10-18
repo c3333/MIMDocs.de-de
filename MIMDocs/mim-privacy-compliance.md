@@ -2,21 +2,20 @@
 title: Verarbeitung von Daten in Microsoft Identity Manager | Microsoft-Dokumentation
 description: Erfahren Sie mehr zur Verarbeitung von Daten in Microsoft Identity Manager zum Identifizieren von Daten und Erstellen von Berichten für Daten in der Umgebung sowie zum Durchführen von Aktionen in einem angegebenen System, das auf operativen Funktionen und Anforderungen basiert.
 keywords: ''
-author: fimguy
-ms.author: davidste
-manager: mbaldiwn
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 05/22/2018
 ms.topic: get-started-article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.suite: ems
-ms.openlocfilehash: e7134e060647153b5d525e9785139eb8c38f8569
-ms.sourcegitcommit: 6b2c77788a69f751fc7f5c18e678aa1fabf23ebb
+ms.openlocfilehash: 4102ffc450b993faaa62da66bb25f242b7e39280
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38952504"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358719"
 ---
 # <a name="microsoft-identity-manager-data-handling"></a>Verarbeitung von Daten in Microsoft Identity Manager 
 
