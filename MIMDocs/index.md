@@ -4,12 +4,12 @@ ms.topic: landing-page
 ms.prod: microsoft-identity-manager
 title: Microsoft Identity Manager-Dokumentation | Microsoft-Dokumentation
 description: Erfahren Sie, wie Microsoft Identity Manager verwendet wird.
-ms.openlocfilehash: 7fbe483455d3300c465abe47adc21a2381d7893f
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: fb89ce57b751cf150306f0a10d2e051377fa1181
+ms.sourcegitcommit: 2d4eeaec83199473d987fed9fae557ecefe7c1bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333988"
+ms.lasthandoff: 10/20/2018
+ms.locfileid: "49474177"
 ---
 # <a name="microsoft-identity-manager-documentation"></a>Microsoft Identity Manager-Dokumentation
 
@@ -72,9 +72,11 @@ Microsoft Identity Manager 2016 kombiniert die Microsoft-Lösungen zur Identitä
 </ul>
 
 ---
-<br>
-&gt;[!Warning]
-Seit dem 10. Oktober 2017 ist der grundlegende Support für Forefront Identity Manager (FIM) nicht mehr verfügbar. Bitte führen Sie ein <a href="microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md" data-raw-source="[upgrade](microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)">Upgrade</a> auf Microsoft Identity Manager 2016 durch. Weitere Informationen: </br>  – Informationen zum Lebenszyklus von FIM finden Sie <a href="https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010" data-raw-source="[here](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)">hier</a> </br> – Informationen zu öffentlichen Versionen von Produkten der Identity-Reihe finden Sie unter <a href="https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/" data-raw-source="[Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)">Microsoft Identity Software: Public Release Build Versions (Build-Versionen des Public Release)</a>
+
+> [!WARNING]
+> Seit dem 10. Oktober 2017 ist der grundlegende Support für Forefront Identity Manager (FIM) nicht mehr verfügbar. Bitte führen Sie ein <a href="microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md" data-raw-source="[upgrade](microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)">Upgrade</a> auf Microsoft Identity Manager 2016 durch. Weitere Informationen: 
+> - Informationen zum Lebenszyklus von FIM finden Sie <a href="https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010" data-raw-source="[here](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)">hier</a>. 
+> - Informationen zu öffentlichen Versionen von Produkten der Identity-Reihe finden Sie unter <a href="https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/" data-raw-source="[Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)">Microsoft Identity Software: Public Release Build Versions (Build-Versionen des Public Release)</a>.
 
 <h2>Referenz</h2>
 <ul class="panelContent cardsFTitle">
