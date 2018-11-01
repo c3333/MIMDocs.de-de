@@ -9,14 +9,13 @@ manager: mtillman
 ms.date: 07/06/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
-ms.openlocfilehash: 10c8d4246122daa507d79a3f2e26e945c6ab5709
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 9cb1e37f966db5c663694aaccd71f2b4c799dd4b
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333719"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379938"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Verwenden von Azure MFA zur Aktivierung
 > [!IMPORTANT]
@@ -43,7 +42,7 @@ Um Azure MFA mit MIM zu verwenden, benötigen Sie Folgendes:
 
 ## <a name="creating-an-azure-mfa-provider"></a>Erstellen eines Azure MFA-Anbieters
 
-In diesem Abschnitt richten Sie Ihren Azure MFA-Anbieter in Microsoft Azure Active Directory ein.  Wenn Sie Azure MFA bereits verwenden, sei es eigenständig oder in Verbindung mit Azure Active Directory Premium konfiguriert, fahren Sie mit dem nächsten Abschnitt fort.
+In diesem Abschnitt richten Sie Ihren Azure MFA-Anbieter in Microsoft Azure Active Directory ein.  Wenn Sie Azure MFA bereits verwenden, sei es eigenständig oder in Verbindung mit Azure Active Directory Premium konfiguriert, fahren Sie mit dem nächsten Abschnitt fort.
 
 1.  Öffnen Sie einen Webbrowser, und melden Sie sich beim [klassischen Azure-Portal](https://manage.windowsazure.com) als Azure-Abonnementadministrator an.
 
@@ -71,7 +70,7 @@ Im nächsten Schritt generieren Sie eine Datei mit den Authentifizierungsdaten, 
 
 ![Herunterladen eines Multi-Factor Authentication SDK – Screenshot](media/PAM-Azure-MFA-Activation-Image-1.png)
 
-7.  Kopieren Sie die resultierende ZIP-Datei auf alle Systeme, auf denen der MIM-Dienst installiert ist. 
+7.  Kopieren Sie die resultierende ZIP-Datei auf alle Systeme, auf denen der MIM-Dienst installiert ist. 
 
 >[!NOTE]
 > Die ZIP-Datei enthält Schlüsselmaterial, das zur Authentifizierung beim Azure MFA-Dienst verwendet wird.

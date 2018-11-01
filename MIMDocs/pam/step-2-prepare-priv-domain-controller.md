@@ -2,22 +2,21 @@
 title: 'Bereitstellen von PAM – Schritt 2: PRIV-Domänencontroller | Microsoft Docs'
 description: Bereiten Sie den PRIV-Domänencontroller vor, der die geschützte Umgebung bereitstellt, in der Privileged Access Management isoliert wird.
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/14/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 79aa0937ce21bd0c2424c597337e5ab0aa66d3c4
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 0364b0d14d08ab3af32010675e0ba80d39404342
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333631"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50380050"
 ---
 # <a name="step-2---prepare-the-first-priv-domain-controller"></a>Schritt 2: Vorbereiten des ersten PRIV-Domänencontrollers
 

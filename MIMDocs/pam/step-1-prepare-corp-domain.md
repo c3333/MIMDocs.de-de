@@ -2,22 +2,21 @@
 title: 'Bereitstellen von PAM – Schritt 1: CORP-Domäne | Microsoft Docs'
 description: Bereiten Sie die CORP-Domäne mit vorhandenen oder neuen Identitäten vor, die vom Privileged Identity Manager verwaltet werden sollen.
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 0c2261ba908ecd3bef991d5b98efbcb6bf56bedd
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: dda6a05337e9a9778135fc7d833a38369540b3e0
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333563"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379989"
 ---
 # <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Schritt 1: Vorbereiten des Hosts und der CORP-Domäne
 

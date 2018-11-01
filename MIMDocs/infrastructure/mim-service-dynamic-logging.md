@@ -1,23 +1,20 @@
 ---
 title: MIM-Dienst – Dynamische Protokollierung | Microsoft-Dokumentation
 description: Aktivieren der dynamischen Protokollierung des MIM-Diensts ohne den Verwaltungsdienst erneut starten zu müssen
-keywords: ''
-author: fimguy
-ms.author: davidste
-manager: mbaldwin
-ms.date: 06/25/2018
+author: billmath
+ms.author: billmath
+manager: mtillman
+ms.date: 10/29/2018
 ms.topic: article
-ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
-ms.assetid: ''
-ms.openlocfilehash: ff82b2fce31abe417509347ce7b477dd1b4056f2
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: e5d8bcc640ad77b71a515b13bcb3bcf6985654f5
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49332336"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50380084"
 ---
 # <a name="mim-sp1-4414360--service-dynamic-logging"></a>Dynamische Protokollierung des MIM SP1-Diensts (4.4.1436.0)
+
 In 4.4.1436.0 haben wir eine neue Protokollierungsfunktion eingeführt. Dadurch können Administratoren und Supporttechniker die Protokollierung aktivieren, ohne den Verwaltungsdienst neu starten zu müssen.
 
 Nach der Installation sehen Sie die folgenden neuen Zeile in der Datei Microsoft.ResourceManagement.Service.exe.config, die wie folgt heißen:
@@ -55,9 +52,11 @@ Um die Nachverfolgung anzuzeigen, können Sie das [Service Trace Viewer-Tool](ht
 
 Im Build 4.5.x.x wurde das Protokollierungsfeature überarbeitet, sodass der Standardprotokolliergrad **„Warnung“** lautet. Der Dienst schreibt Meldungen in zwei Dateien („00“- und „01“-Indizes werden vor der Erweiterung hinzugefügt). Die Dateien befinden sich im Verzeichnis „C:\Programme\Microsoft Forefront Identity Manager\2010\Service“. Wenn die Datei die maximale Größe überschreitet, beginnt der Dienst, in eine andere Datei zu schreiben. Wenn eine andere Datei vorhanden ist, wird sie überschrieben. Die standardmäßige maximale Größe der Datei ist 1 GB. Um die standardmäßige maximale Größe zu ändern, muss der Parameter **maxOutputFileSizeKB** mit dem Wert der maximalen Dateigröße in KB dem Listener hinzugefügt werden (siehe folgendes Beispiel) und der MIM-Dienst neu gestartet werden. Wenn der Dienst gestartet wird, fügt er der neueren Datei Protokolle hinzu (bei Überschreitung der Speicherplatzbegrenzung wird die älteste Datei überschreiben). 
 
-> [!NOTE] Wie die Größe der Dienstüberprüfungsdatei vor dem Schreiben der Nachricht könnte die Größe der Datei über der maximale Größe für die Größe einer Nachricht liegen. Standardmäßig können die Protokolle ungefähr 6 GB groß sein (drei Listener mit zwei Dateien mit einer Größe von 1 GB).
+> [!NOTE] 
+> Wie die Größe der Dienstüberprüfungsdatei vor dem Schreiben der Nachricht könnte die Größe der Datei über der maximale Größe für die Größe einer Nachricht liegen. Standardmäßig können die Protokolle ungefähr 6 GB groß sein (drei Listener mit zwei Dateien mit einer Größe von 1 GB).
 
-> [!NOTE] Das Dienstkonto benötigt Berechtigungen zum Schreiben in das Verzeichnis „C:\Programme\Microsoft Forefront Identity Manager\2010\Service“. Falls das Dienstkonto nicht über solche Rechte verfügt, werden die Dateien nicht erstellt.
+> [!NOTE] 
+> Das Dienstkonto benötigt Berechtigungen zum Schreiben in das Verzeichnis „C:\Programme\Microsoft Forefront Identity Manager\2010\Service“. Falls das Dienstkonto nicht über solche Rechte verfügt, werden die Dateien nicht erstellt.
 
 Beispiel zum Festlegen der maximalen Dateigröße auf 200 MB (200 * 1.024 KB) für SVCLOG-Dateien und 100 MB (100 * 1.024 KB) für TXT-Dateien
 

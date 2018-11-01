@@ -2,25 +2,24 @@
 title: Bereitstellen von MIM Privileged Access Management mit Windows Server 2016 | Microsoft-Dokumentation
 description: Informationen zum Bereitstellen von Privileged Access Management mit Windows Server 2016
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: ''
-ms.openlocfilehash: fca3ed1b37a1cc3bf9833c2de4d606845867d5d8
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 347eda5872792872a9bb30357c45835303f92e01
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49332900"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379749"
 ---
 # <a name="deploy-mim-pam-with-windows-server-2016"></a>Bereitstellen von MIM PAM mit Windows Server 2016
 
 
-In diesem Szenario können Features von Windows Server 2016 als Domänencontroller für die Gesamtstruktur „PRIV“ durch MIM 2016 SP1 genutzt werden.  Beim Konfigurieren dieses Szenarios ist das Kerberos-Ticket eines Benutzers auf die verbleibende Dauer seiner Rollenaktivierungen zeitlich begrenzt. 
+In diesem Szenario können Features von Windows Server 2016 als Domänencontroller für die Gesamtstruktur „PRIV“ durch MIM 2016 SP1 genutzt werden.  Beim Konfigurieren dieses Szenarios ist das Kerberos-Ticket eines Benutzers auf die verbleibende Dauer seiner Rollenaktivierungen zeitlich begrenzt. 
 
 > [!Note]
 > Technical Preview-Versionen von Windows Server 2016 vor Technical Preview 5 können mit dieser MIM-Version nicht verwendet werden.
