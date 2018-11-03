@@ -7,12 +7,12 @@ manager: mtillman
 ms.date: 06/27/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: d3c0b6677c42d4f14d4f6255a2a661d3ef23661d
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 63f2509d35355a8fe3a59b173756257298079a92
+ms.sourcegitcommit: 6374aa4f7d58b7218626d36d0fc2dc4b38cb8332
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358294"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237229"
 ---
 # <a name="conversion-of-mim-specific-services-to-gmsa"></a>Konvertierung von MIM-spezifischen Diensten in gMSA
 
@@ -82,9 +82,9 @@ Schritt eins auf Ihrem Windows-Domänencontroller
 
     -   Suchen Sie auf dem Server, auf dem der Synchronisierungsdienst installiert ist, das Tool zur Verwaltung des Synchronisierungsdienstschlüssels.
 
-    -   In der Standardeinstellung ist **Keyset exportieren** bereits ausgewählt.
+    -   In der Standardeinstellung ist **Keyset exportieren**  bereits ausgewählt.
 
-    -   Klicken Sie auf **Weiter**.
+    -   Klicken Sie auf  **Weiter**.
 
     -   Jetzt werden Sie aufgefordert, die bereits vorhandenen Kontoinformationen für die Synchronisierung einzugeben.
 
@@ -94,15 +94,15 @@ Schritt eins auf Ihrem Windows-Domänencontroller
 
         -   Kennwort – Kennwort des Synchronisierungsdienstkontos
 
-        -   Domäne – Domäne, von der das Synchronisierungsdienstkonto ein Teil ist
+        -   Domäne – Domäne, zu der das Synchronisierungsdienstkonto gehört
 
-    -   Klicken Sie auf **Weiter**.
+    -   Klicken Sie auf  **Weiter**.
 
     -   Wenn Sie etwas falsch eingegeben haben, erhalten Sie die folgende Fehlermeldung.
 
     -   Nachdem Sie die Kontoinformationen erfolgreich eingegeben haben, wird Ihnen eine Option zum Ändern des Ziels (Exportdateispeicherort) des Verschlüsselungsschlüssels der Sicherung angezeigt.
 
-        -   Standardmäßig ist der Exportspeicherort für die Datei „**C:\\Windows\\system32**\\miiskeys-1.bin“.
+        -   Standardmäßig ist der Exportspeicherort für die Datei „ **C:\\Windows\\system32**\\miiskeys-1.bin“.
 
 4. Installieren Sie Microsoft Identity Manager SP1 Synchronization Service Build 4.4.1302.0. vom Volume License Download Center oder der MSDN Download Site. Nach Abschluss der Installation stellen Sie sicher, dass Sie das Keyset miiskeys.bin speichern.
 
@@ -152,7 +152,7 @@ Schritt eins auf Ihrem Windows-Domänencontroller
 
 ![](media/0201f0281325c80eb70f91cbf0ac4d5b.jpg)
 
-3.  **HINWEIS**:  Es ist ein bekanntes Problem, das Dienste, die verwaltete Konten verwenden, nach dem Serverneustart hängen bleiben, weil der Microsoft-Schlüsselverteilungsdienst nach dem Windows-Neustart nicht neu gestartet wird. Der Dienst konnte nicht gestartet werden, und Windows konnte ebenfalls nicht neu gestartet werden. Das Problem ist mindestens unter Windows Server 2012 R2 reproduzierbar. Führen Sie zur Problemumgehung den Befehl 
+3.  **HINWEIS**:  Es ist ein bekanntes Problem, dass Dienste, die verwaltete Konten verwenden, nach dem Serverneustart hängen bleiben, weil der Microsoft-Schlüsselverteilungsdienst nach dem Windows-Neustart nicht neu gestartet wird. Der Dienst konnte nicht gestartet werden, und Windows konnte ebenfalls nicht neu gestartet werden. Das Problem ist mindestens unter Windows Server 2012 R2 reproduzierbar. Führen Sie zur Problemumgehung den Befehl 
 
 -   **sc triggerinfo kdssvc start/networkon** aus,
 
