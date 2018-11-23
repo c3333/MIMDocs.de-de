@@ -12,12 +12,12 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: 0501dbeb279dc37655d1d9a5e99545b07eea0623
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 077a0330e3a9169583331854525d19cee2d9eaf4
+ms.sourcegitcommit: 3b514aba69af203f176b40cdb7c2a51c477c944a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358685"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51718309"
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Unterstützte Plattformen für MIM 2016
 
@@ -47,7 +47,7 @@ In dieser Tabelle sind die unterstützten Plattformen und Versionen für die ein
 | **MIM-Portale für Kennwortzurücksetzung und Registrierung** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Webbrowser | Alle gängigen unterstützten Browser |
 | **MIM-Add-Ins und -Erweiterungen** | Windows | Windows 7<br/>Windows 8<br/>Windows 8.1<br/>Windows 10 |
-| | Outlook-Integration (optional) | Outlook 2010<br/>Outlook 2013 <br/> Outlook 2016 (unter Windows 10) * |
+| | Outlook-Integration (optional) | Outlook 2010 (unter Windows, mit Ausnahme von Klick-und-Los)<br/>Outlook 2013 (unter Windows, mit Ausnahme von Klick-und-Los) <br/> Outlook 2016 (unter Windows 10, mit Ausnahme von Klick-und-Los) * |
 | | PowerShell-Cmdlets für PAM-Requestor (optional) | Windows 8.1<br/>Windows 10 |
 | **MIM-Zertifikatverwaltung** (Server- und CA-Integration) | Windows server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Zertifizierungsstelle | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |

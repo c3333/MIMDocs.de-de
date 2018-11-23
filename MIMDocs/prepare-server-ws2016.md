@@ -11,14 +11,14 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 49e549913a5fd87528df2205b8d5b0a83f3d2b24
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: a0fa1e837fd73872043748ee73f19a29d1d1412f
+ms.sourcegitcommit: 3b514aba69af203f176b40cdb7c2a51c477c944a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358243"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51718339"
 ---
-# <a name="set-up-an-identity-management-servers-windows-server-2016"></a>Einrichten eines Identitätsverwaltungsservers: Windows Server 2016
+# <a name="set-up-an-identity-management-server-windows-server-2016"></a>Einrichten eines Identitätsverwaltungsservers: Windows Server 2016
 
 > [!div class="step-by-step"]
 > [« Vorbereiten einer Domäne](preparing-domain.md)
@@ -39,9 +39,9 @@ Beginnen Sie mit einem Computer mit Windows Server 2016 mit mindestens 8-12 GB R
 
 1. Melden Sie sich bei dem neuen Computer als Administrator an.
 
-2. Geben Sie dem Computer mithilfe der Systemsteuerung eine statische IP-Adresse im Netzwerk. Konfigurieren Sie die Netzwerkschnittstelle so, dass DNS-Abfragen an die IP-Adresse des Domänencontrollers im vorherigen Schritt gesendet werden, und legen Sie den Computernamen auf **CORPSERVICE** fest.  Dies erfordert einen Neustart des Servers.
+2. Geben Sie dem Computer mithilfe der Systemsteuerung eine statische IP-Adresse im Netzwerk. Konfigurieren Sie die Netzwerkschnittstelle so, dass DNS-Abfragen an die IP-Adresse des Domänencontrollers im vorherigen Schritt gesendet werden, und legen Sie den Computernamen auf **CORPSERVICE** fest.  Dieser Vorgang erfordert einen Neustart des Servers.
 
-3. Öffnen Sie die Systemsteuerung, und fügen Sie den Computer der Domäne *contoso.com* hinzu, die Sie im letzten Schritt konfiguriert haben.  Dies beinhaltet die Bereitstellung des Benutzernamens und der Anmeldeinformationen eines Domänenadministrators wie *Contoso\Administrator*.  Nachdem die Willkommensnachricht angezeigt wird, schließen Sie das Dialogfeld, und starten Sie den Server erneut neu.
+3. Öffnen Sie die Systemsteuerung, und fügen Sie den Computer der Domäne *contoso.com* hinzu, die Sie im letzten Schritt konfiguriert haben.  Dieser Vorgang beinhaltet das Angeben des Benutzernamens und der Anmeldeinformationen eines Domänenadministrators wie *Contoso\Administrator*.  Nachdem die Willkommensnachricht angezeigt wird, schließen Sie das Dialogfeld, und starten Sie den Server erneut neu.
 
 4. Melden Sie sich beim Computer *CORPSERVICE* als Domänenkonto mit lokalen Administratorrechten an, z.B. als *Contoso\MIMINSTALL*.
 
@@ -69,13 +69,13 @@ Beginnen Sie mit einem Computer mit Windows Server 2016 mit mindestens 8-12 GB R
 
 Richten Sie die Serversicherheitsrichtlinien ein, damit die neu erstellten Konten als Dienste ausgeführt werden können.
 > [!NOTE] 
-> Je nach Konfiguration – Einzelserver (All-In-One) oder verteilter Server – müssen Sie sich beim Hinzufügen neuer Konten lediglich an der Rolle des Mitgliedscomputers (z.B. Synchronisierungsserver) orientieren. 
+> Je nach Konfiguration – Einzelserver (All-In-One) oder verteilter Server – müssen Sie sich beim Hinzufügen neuer Konten lediglich an der Rolle des Mitgliedgeräts (z.B. Synchronisierungsserver) orientieren. 
 
 1. Starten Sie das Programm „Lokale Sicherheitsrichtlinie“.
 
 2. Navigieren Sie zu **Lokale Richtlinien > Zuweisen von Benutzerrechten**.
 
-3. Klicken Sie im Detailbereich mit der rechten Maustaste auf **Anmelden als Dienst**, und wählen Sie dann **Eigenschaften**aus.
+3. Klicken Sie im Detailbereich mit der rechten Maustaste auf **Anmelden als Dienst**, und wählen Sie dann **Eigenschaften** aus.
 
     ![Bild: Lokale Sicherheitsrichtlinien](media/MIM-DeployWS3.png)
 
@@ -83,9 +83,9 @@ Richten Sie die Serversicherheitsrichtlinien ein, damit die neu erstellten Konte
 
 5. Klicken Sie auf **OK**, um das Eigenschaftenfenster **Anmelden als Dienst** zu schließen.
 
-6.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **Zugriff vom Netzwerk auf diesen Computer verweigern**, und wählen Sie **Eigenschaften** aus.>
+6.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **Zugriff vom Netzwerk auf diesen Computer verweigern**, und wählen Sie **Eigenschaften** aus.
 
-[!NOTE] Bei separaten Rollenservern unterbricht dieser Schritt einige Funktionen, z.B. das SSPR-Feature.
+[!NOTE] Durch das Trennen der Rollenserver funktionieren einige Funktionen wie SSPR nicht mehr ordnungsgemäß.
 
 7. Klicken Sie zunächst auf **Benutzer oder Gruppe hinzufügen**, geben Sie in das Textfeld `contoso\MIMSync; contoso\MIMService` ein, und klicken Sie auf **OK**.
 
