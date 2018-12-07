@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 535c80fa2ff1b6250ae9a3f340cb514e58f390a9
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: fc70a0edb610fcb862d85902dd5e611e65f6e689
+ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358617"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52825806"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Installieren von MIM 2016: MIM-Dienst und -Portal
 
@@ -68,11 +68,11 @@ Falls Sie im letzten Schritt das MIM-Installationspaket nicht eingerichtet haben
 
 12. Geben Sie *CORPIDM* (den Namen dieses Computers) als MIM-Dienstserveradresse für das MIM-Portal an.
 
-13. Geben Sie *http://mim.contoso.com* als URL für die SharePoint-Websitesammlung an.
+13. Geben Sie `*http://mim.contoso.com*` als URL für die SharePoint-Websitesammlung an.
 
-14. Geben Sie *http://passwordregistration.contoso.com* als URL zur Kennwortregistrierung mit Port 80 an. Es ist empfehlenswert, später ein Update mit dem SSL-Zertifikat auf 443 durchzuführen.
+14. Geben Sie `*http://passwordregistration.contoso.com*` als URL zur Kennwortregistrierung mit Port 80 an. Es ist empfehlenswert, später ein Update mit dem SSL-Zertifikat auf 443 durchzuführen.
 
-15. Geben Sie *http://passwordreset.contoso.com* als URL zur Kennwortzurücksetzung mit Port 80 an. Es ist empfehlenswert, später ein Update mit dem SSL-Zertifikat auf 443 durchzuführen.
+15. Geben Sie `*http://passwordreset.contoso.com*` als URL zur Kennwortzurücksetzung mit Port 80 an. Es ist empfehlenswert, später ein Update mit dem SSL-Zertifikat auf 443 durchzuführen.
 
 16. Aktivieren Sie das Kontrollkästchen, um die Ports 5725 und 5726 in der Firewall zu öffnen, sowie das Kontrollkästchen, um allen authentifizierten Benutzern den Zugriff auf das MIM-Portal zu gewähren.
 

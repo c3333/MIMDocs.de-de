@@ -5,21 +5,23 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 05/22/2018
+ms.date: 12/02/2018
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.suite: ems
-ms.openlocfilehash: 4102ffc450b993faaa62da66bb25f242b7e39280
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: f75eb69360852c9f629b60d4900638c8b51e068a
+ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358719"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52825789"
 ---
 # <a name="microsoft-identity-manager-data-handling"></a>Verarbeitung von Daten in Microsoft Identity Manager 
 
-Dieser Artikel enthält Anleitungen dazu, wie Organisationen notwendige Entscheidungen über die Such-, Lösch-, Update- und Berichtsvorgänge treffen kann, um viele verbundene Datenquellen zu implementieren oder Aktionen mit diesen durchzuführen. Bevor Sie sich für einen Ansatz für das Löschen oder Aktualisieren entscheiden, ist es wichtig, das aktuelle Design und die Konfiguration Ihres Systems für die Identitätsverwaltung (MIM) zu kennen. Im Folgenden finden Sie einige Szenarios, und Kunden sollten folgende Fragen berücksichtigen und beantworten: 
+Dieser Artikel bietet eine Anleitung, wie Organisationen Entscheidungen treffen können, die auf viele vernetzte Datenquellen angewendet werden können.  Dies kann durch Such-, Lösch-, Aktualisierungs- und Berichtsvorgänge erreicht werden.  Bevor Sie sich für einen Ansatz für das Löschen oder Aktualisieren entscheiden, ist es wichtig, das aktuelle Design und die Konfiguration Ihres Systems für die Identitätsverwaltung (MIM) zu kennen. 
+
+Im Folgenden finden Sie einige Szenarios, und Kunden sollten folgende Fragen berücksichtigen und beantworten: 
 
 - Welche Daten sind erforderlich, damit Ihre Identitätsverwaltung Sie bei Geschäftsprozessen unterstützt?
 - Wo werden die aktuellen Daten in MIM gespeichert?
