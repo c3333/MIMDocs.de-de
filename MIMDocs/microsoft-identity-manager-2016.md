@@ -9,16 +9,22 @@ ms.date: 11/05/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.technology: security
-ms.openlocfilehash: 67064d930935f0091c14c64bf271dd0e1ded6bb4
-ms.sourcegitcommit: 3b514aba69af203f176b40cdb7c2a51c477c944a
+ms.openlocfilehash: 60d40a622475351efee846d8510373ecdc565a24
+ms.sourcegitcommit: 486f860f0951413aed335138eb6ad4ce6c50ed4d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51718235"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852628"
 ---
 # <a name="microsoft-identity-manager-2016-news-and-updates"></a>Neuigkeiten und Updates zu Microsoft Identity Manager 2016
 
 Microsoft Identity Manager (MIM) 2016 verwendet als Basis die Identitäts- und Zugriffsverwaltungsfunktionen von Forefront Identity Manager. Wie sein Vorgänger unterstützt MIM Sie dabei, die Benutzer, die Anmeldeinformationen, die Richtlinien und den Zugriff in Ihrer Organisation zu verwalten.  Außerdem ist MIM 2016 um eine hybride Benutzeroberfläche, Funktionen für privilegierte Zugriffsverwaltung (Privileged Access Management) und Unterstützung für neue Plattformen erweitert.
+
+
+Mit MIM kann eine Organisation das Identity Lifecycle Management mit automatisierten Workflows, Geschäftsregeln und einfacher Integration in heterogene Plattformen im Rechenzentrum vereinfachen. MIM ermöglicht der Organisation, über die richtigen Benutzer und Zugriffsrechte für Active Directory für lokale Apps zu verfügen, und Azure AD Connect kann sie dann in Azure AD für Office 365 und cloudgehostete Apps zur Verfügung stellen. Zu den gängigen MIM-Szenarien zählen:
+ - Automatische Identitäts- und Gruppenbereitstellung auf Grundlage von Unternehmensrichtlinien und workflowgesteuerter Bereitstellung
+ - Integration der Inhalte der Verzeichnisse in Systeme der Personalabteilung und anderer Autoritätsquellen
+ - Synchronisierung von Identitäten zwischen Verzeichnissen, Datenbanken und lokalen Anwendungen über allgemeine APIs und Protokolle, von Microsoft und Partnern bereitgestellte Connectors
 
 Das aktuelle Release im Rahmen des grundlegenden Supports ist MIM 2016 Service Pack 1 (SP1).  Dieses Release von August 2017 umfasste Updates für das MIM-Portal, PAM-Szenario und erweiterte Unterstützung für neue Plattformen.  Kunden, die FIM oder MIM-Versionen vor MIM 2016 SP1 ausführen, sollten ein Upgrade auf MIM 2016 SP1 oder eine neuere Hotfixversion durchführen.  Weitere Informationen finden Sie unter [Neuigkeiten zu Microsoft Identity Manager 2016 SP1](./reference/version-history.md).
 
@@ -28,7 +34,7 @@ Microsoft stellt regelmäßig im laufenden Releasezyklus Updates für MIM bereit
 
 ### <a name="major-new-and-updated-scenarios"></a>Wichtige neue und aktualisierte Szenarios
 
-- [Azure AD B2B-Zusammenarbeit mit MIM und Azure-Anwendungsproxy (Vorschauversion)](microsoft-identity-manager-2016-graph-b2b-scenario.md), zuletzt im April 2018 aktualisiert
+- [Azure AD-Business-to-Business-Kollaboration (B2B) mit Microsoft Identity Manager (MIM) 2016 SP1 mit Azure-Anwendungsproxy](microsoft-identity-manager-2016-graph-b2b-scenario.md), zuletzt im April 2018 aktualisiert
 - [MIM-Hybridberichterstellung (allgemein verfügbare Version)](https://cloudblogs.microsoft.com/enterprisemobility/2018/02/23/hybrid-mim-reporting-now-available-in-azure-active-directory/), zuletzt im Februar 2018 aktualisiert
 - [Überarbeitete Liste der veralteten MIM-Features](microsoft-identity-manager-2016-deprecated-features.md), zuletzt im Februar 2018 aktualisiert
 

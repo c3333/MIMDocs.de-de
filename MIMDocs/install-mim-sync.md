@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1bc313a66776778fe3617969645076a6d2d10418
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: cec04cf430ba38ec40b61e4aad68fd8447d13c99
+ms.sourcegitcommit: 4f0b2883922bcb8fbef6b4284c35c6ca62c11565
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49357835"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56952178"
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>Installieren von MIM 2016: MIM Synchronization Service
 
@@ -37,7 +37,7 @@ Um den Microsoft Identity Manager 2016 zu installieren, richten Sie zuerst das I
 
 1. Melden Sie sich als *contoso\miminstall* beim Server an, den Sie für den Synchronisierungsserver **corpsync** der Identitätsverwaltung verwenden.
 
-2. Entpacken Sie das MIM-Installationspaket, oder binden Sie die MIM-Image-DVD ein.
+2. Entpacken Sie das MIM-Installationspaket, oder binden Sie die MIM-Image-DVD ein.  Wenn Sie nicht über diese DVD verfügen, lesen Sie [Microsoft Identity Manager – Lizenzierung und Downloads](microsoft-identity-manager-licensing.md).
 
 ## <a name="install-mim-2016-sp1-synchronization-service"></a>Installieren von MIM 2016 SP1: Synchronisierungsdienst
 
@@ -57,9 +57,9 @@ Um den Microsoft Identity Manager 2016 zu installieren, richten Sie zuerst das I
 
 6. Wählen Sie im Konfigurationsbildschirm für die Synchronisierungsdienstdatenbank Folgendes aus:
 
-   1.  Der Server von SQL Server befindet sich auf einem **Remotecomputer** namens **corpsql.contoso.com**.
+   1.  Der SQL Server befindet sich auf: **Einem Remotecomputer** namens **corpsql.contoso.com**.
 
-   2.  Die SQL Server-Instanz ist: **Die Standardinstanz**.
+   2.  Die SQL Server-Instanz ist: **Die Standardinstanz**
 
    ![Bild: Datenbankverbindung](media/install-mim-sync/MIM_Install3.png)
 
