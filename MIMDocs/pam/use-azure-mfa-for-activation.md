@@ -10,16 +10,16 @@ ms.date: 07/06/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
-ms.openlocfilehash: 9cb1e37f966db5c663694aaccd71f2b4c799dd4b
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.openlocfilehash: 72dd1d3cf34e28567fa672b747a04347b150797e
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379938"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690780"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Verwenden von Azure MFA zur Aktivierung
 > [!IMPORTANT]
-> Zur Ankündigung der Außerkraftsetzung des Azure MFA SDK (Multi-Factor Authentication Software Development Kit): Das Azure MFA SDK wird für Bestandskunden bis zur Ausmusterung am 14. November 2018 unterstützt. Neue Kunden und aktuelle Kunden können das SDK nicht mehr über das klassische Azure-Portal herunterladen. Zum Herunterzuladen müssen Sie sich an den Azure-Kundensupport wenden, um ein für Sie generiertes Paket mit MFA-Dienstanmeldeinformationen zu erhalten. <br> Das Microsoft-Entwicklungsteam arbeitet an Änderungen der MFA durch die Integration in MFA Server SDK.  Dies wird in einem zukünftigen Hotfix enthalten sein. Ankündigungen finden Sie im [Versionsverlauf](/reference/version-history.md). 
+> Zur Ankündigung der Außerkraftsetzung des Azure MFA SDK (Multi-Factor Authentication Software Development Kit): Das Azure MFA SDK wird für Bestandskunden bis zur Ausmusterung am 14. November 2018 unterstützt. Neue Kunden und aktuelle Kunden können das SDK nicht mehr über das klassische Azure-Portal herunterladen. Zum Herunterzuladen müssen Sie sich an den Azure-Kundensupport wenden, um ein für Sie generiertes Paket mit MFA-Dienstanmeldeinformationen zu erhalten. <br> Das Microsoft-Entwicklungsteam arbeitet an Änderungen der MFA durch die Integration in MFA Server SDK.  Dies wird in einem zukünftigen Hotfix enthalten sein. Ankündigungen finden Sie im [Versionsverlauf](../reference/version-history.md). 
 
 
 Beim Konfigurieren einer PAM-Rolle können Sie auswählen, wie Benutzer, die eine Aktivierung der Rolle anfordern, sich autorisieren müssen. Die PAM-Autorisierungsaktivität implementiert diese Wahlmöglichkeiten:
@@ -66,7 +66,7 @@ Im nächsten Schritt generieren Sie eine Datei mit den Authentifizierungsdaten, 
 
 5.  Klicken Sie im Fenster **Azure Multi-Factor Authentication** unter **Downloads** auf **SDK**.
 
-6.  Klicken Sie in der Spalte „ZIP“ auf den Link **Herunterladen** für die Datei mit der Sprache **SDK for ASP.net 2.0 C\#**.
+6.  Klicken Sie in der Spalte „ZIP“ auf den Link **Herunterladen** für die Datei mit der Sprache **SDK for ASP.net 2.0 C\#** .
 
 ![Herunterladen eines Multi-Factor Authentication SDK – Screenshot](media/PAM-Azure-MFA-Activation-Image-1.png)
 
