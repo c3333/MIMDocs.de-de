@@ -9,12 +9,12 @@ ms.date: 09/19/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 7ab76d386d8633de8919167c6b8f26b5137323e5
-ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
+ms.openlocfilehash: 9a9e00f7dca118627a5140967a104d13273cbc26
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52825840"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690804"
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Bereitstellen der Microsoft Identity Manager-Zertifikatverwaltung 2016 (MIM CIM)
 
@@ -38,7 +38,7 @@ In folgendem Diagramm wird ein Beispiel für den Typ der Umgebung dargestellt, d
     Das Lab besteht aus Windows 2016 Datacenter-Servern.
 
     >[!NOTE]
-    >Weitere Informationen zu den unterstützten Plattformen für MIM 2016 finden Sie im Artikel [Unterstützte Plattformen für MIM 2016](/microsoft-identity-manager/microsoft-identity-manager-2016-supported-platforms.md).
+    >Weitere Informationen zu den unterstützten Plattformen für MIM 2016 finden Sie im Artikel [Unterstützte Plattformen für MIM 2016](microsoft-identity-manager-2016-supported-platforms.md).
 
 1. Schritte vor der Bereitstellung
 
@@ -421,9 +421,9 @@ Es wird dringend empfohlen, dass Sie SSL im MIM CM-Portal erforderlich machen. W
 
 7. Lesen Sie auf der Seite „Benutzerlizenzvertrag“ den Vertrag, aktivieren Sie das **Kontrollkästchen** „Ich stimme den Lizenzbedingungen zu“, und klicken Sie anschließend auf „Weiter“.
 
-8. Vergewissern Sie sich auf der Seite „Benutzerdefinierte Installation“, dass das **MIM CM-Portal** und die **MIM CM-Aktualisierungsdienstkomponenten** zur Installation festgelegt sind, und **klicken Sie auf „Weiter“**.
+8. Vergewissern Sie sich auf der Seite „Benutzerdefinierte Installation“, dass das **MIM CM-Portal** und die **MIM CM-Aktualisierungsdienstkomponenten** zur Installation festgelegt sind, und **klicken Sie auf „Weiter“** .
 
-9. Stellen Sie auf der Seite „Virtueller Webordner“ sicher, dass der Name des virtuellen Ordners **CertificateManagement** ist, und **klicken Sie auf „Weiter“**.
+9. Stellen Sie auf der Seite „Virtueller Webordner“ sicher, dass der Name des virtuellen Ordners **CertificateManagement** ist, und **klicken Sie auf „Weiter“** .
 
 10. Klicken Sie auf der Seite „Microsoft Identity Manager-Zertifikatverwaltung installieren“ auf **Installieren**.
 
@@ -455,13 +455,13 @@ Fügen Sie MIMINSTALL für den Konfigurationsassistenten vor der Registrierung i
 
 9. Geben Sie auf jeder Registerkarte im Dialogfeld **Agents – FIM CM** mit mehreren Registerkarten folgende Informationen ein:
 
-   - Benutzername: **Update**
+   - Benutzername: **Aktualisieren**
 
    - Kennwort: **Pass\@word1**
 
    - Kennwort bestätigen: **Pass\@word1**
 
-   - Vorhandenen Benutzer verwenden: **Aktiviert**
+   - Vorhandenen Benutzer verwenden: **Enabled**
 
      >[!NOTE]
      >Diese Konten haben Sie zuvor erstellt. Stellen Sie sicher, dass die Prozeduren in Schritt 8 für alle sechs Agentkontoregisterkarten wiederholt werden.
@@ -478,7 +478,7 @@ Fügen Sie MIMINSTALL für den Konfigurationsassistenten vor der Registrierung i
 
     - Zertifikatvorlage, die für das Zertifikat des FIM CM-Agents verwendet werden soll: **MIMCMSigning**.
 
-    - Zertifikatvorlage, die für das Zertifikat des Enrollment Agents verwendet werden soll: **FIMCMEnrollmentAgent**.
+    - Zertifikatvorlage, die für das Zertifikat des Registrierungs-Agents verwendet werden soll: **FIMCMEnrollmentAgent**.
 
 13. Klicken Sie auf der Seite **Serverzertifikate einrichten** auf **Weiter**.
 
@@ -536,7 +536,7 @@ In diesem Schritt installieren und konfigurieren Sie die FIM CM-Zertifizierungss
 
 6. Schließen Sie das Dialogfeld **Suchen und Ersetzen**.
 
-7. Sie sollten sich in der Zeile **\<add key=”Clm.RequestSecurity.Flags” value=”UseUser,UseGroups” /\>** befinden. Ändern Sie die Zeile in **\<add key=”Clm.RequestSecurity.Flags” value=”UseUser” /\>**.
+7. Sie sollten sich in der Zeile **\<add key=”Clm.RequestSecurity.Flags” value=”UseUser,UseGroups” /\>** befinden. Ändern Sie die Zeile in **\<add key=”Clm.RequestSecurity.Flags” value=”UseUser” /\>** .
 
 8. Speichern Sie alle Änderungen, und schließen Sie die Datei.
 
@@ -668,7 +668,7 @@ In diesem Schritt installieren und konfigurieren Sie die FIM CM-Zertifizierungss
     - Klicken Sie im Dialogfeld **Zertifikat** auf **OK**.
 
         >[!Note]
-        >Wenn die Schaltfläche **OK** nicht aktiviert ist, haben Sie versehentlich ein ausgeblendetes Zeichen in der Fingerabdruckzeichenfolge eingeschlossen, als Sie den Fingerabdruck aus dem clmAgent-Zertifikat kopiert haben. Wiederholen Sie ab **Aufgabe 4: Kopieren Sie den MIMCMAgent-Zertifikatfingerabdruck in die Windows-Zwischenablage** alle Schritte in dieser Übung.
+        >Wenn die Schaltfläche **OK** nicht aktiviert ist, haben Sie versehentlich ein ausgeblendetes Zeichen in der Fingerabdruckzeichenfolge eingeschlossen, als Sie den Fingerabdruck aus dem clmAgent-Zertifikat kopiert haben. Wiederholen Sie alle Schritte in dieser Übung ab **Aufgabe 4: Kopieren Sie den MIMCMAgent-Zertifikatfingerabdruck in die Windows-Zwischenablage**.
 
 4. Stellen Sie im Dialogfeld **Konfigurationseigenschaften** sicher, dass der Fingerabdruck in der Liste **Valid Signing Certificates** (Gültige Signaturzertifikate) erscheint, und klicken Sie auf **OK**.
 
@@ -688,7 +688,7 @@ In diesem Schritt installieren und konfigurieren Sie die FIM CM-Zertifizierungss
 
 **Letzter Schritt in der Bereitstellung**: Wir möchten sicherstellen, dass CONTOSO\\MIMCM-Manager Vorlagen bereitstellen und erstellen und das System konfigurieren können, ohne dass sie Schema- und Domänenadministratoren sind. Das nächste Skript fügt die Berechtigungen mithilfe von dsacls der ACL der Zertifikatvorlagen hinzu. Führen Sie mit dem Konto, das über umfassende Berechtigung zum Ändern der Sicherheit verfügt, Lese- und Schreibberechtigungen für jede vorhandene Zertifikatvorlage in der Gesamtstruktur aus.
 
-Erste Schritte: **Konfigurieren des Dienstverbindungspunkts und von Zielgruppenberechtigungen & Delegieren der Profilvorlagenverwaltung**
+Erste Schritte: **Konfigurieren des Dienstverbindungspunkts und von Zielgruppenberechtigungen und Delegieren der Profilvorlagenverwaltung**
 
 1. Konfigurieren Sie die Berechtigungen auf dem Dienstverbindungspunkt (SCP).
 
@@ -885,7 +885,7 @@ Definieren der Berechtigungen für den OID-Container:
 
 8. Schließen Sie **Active Directory-Standorte und -Dienste**.
 
-**Skripts: Berechtigungen für den OID, Profilvorlage- & Zertifikatvorlagen-Container**
+**Skripts: Berechtigungen für den OID, Profilvorlage- und Zertifikatvorlagen-Container**
 
 ![Diagramm](media/mim-cm-deploy/image021.png)
 

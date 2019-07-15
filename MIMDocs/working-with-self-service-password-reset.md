@@ -5,27 +5,27 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 08/30/2018
+ms.date: 05/11/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 3a86569a8de77f4cf4d5aeafe0cd01dab40232b3
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 90452391170114270765e9a7fe08e98eea0747e4
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358465"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690697"
 ---
 # <a name="self-service-password-reset-deployment-options"></a>Bereitstellungsoptionen für die Self-Service-Kennwortzurücksetzung
 
-Neuen Kunden, die für [Azure Active Directory Premium lizenziert](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-licensing) sind, wird empfohlen, die [Azure AD Self-Service-Kennwortzurücksetzung](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-howitworks.md) zu verwenden, um ein optimales Endbenutzererlebnis bereitzustellen.  Die Azure AD Self-Service-Kennwortzurücksetzung bietet Benutzern eine webbasierte und in Windows integrierte Möglichkeit zum Zurücksetzen des eigenen Kennworts. Außerdem unterstützt die Kennwortzurücksetzung viele der gleichen Funktionen wie MIM, wie z.B. alternative E-Mail-Adressen und Gates für Fragen und Antworten.  Bei der Bereitstellung der Azure AD-Self-Service-Kennwortzurücksetzung unterstützt Azure AD Connect [das Zurückschreiben der neuen Kennwörter in AD DS](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-writeback.md), und der MIM-[Benachrichtigungsdienst für Kennwortänderungen](deploying-mim-password-change-notification-service-on-domain-controller.md) dient auch zum Weiterleiten der Kennwörter an andere Systeme, wie z.B. einen Verzeichnisserver eines anderen Anbieters.  Das Bereitstellen von MIM für die [Kennwortverwaltung](infrastructure/mim2016-password-management.md) erfordert keine Bereitstellung des MIM-Diensts, der MIM-Self-Service-Kennwortzurücksetzung oder von Registrierungsportalen.  Stattdessen können Sie die folgenden Schritte ausführen:
+Neuen Kunden, die für [Azure Active Directory Premium lizenziert](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-licensing) sind, wird empfohlen, die [Azure AD Self-Service-Kennwortzurücksetzung](/azure/active-directory/authentication/concept-sspr-howitworks) zu verwenden, um ein optimales Endbenutzererlebnis bereitzustellen.  Die Azure AD Self-Service-Kennwortzurücksetzung bietet Benutzern eine webbasierte und in Windows integrierte Möglichkeit zum Zurücksetzen des eigenen Kennworts. Außerdem unterstützt die Kennwortzurücksetzung viele der gleichen Funktionen wie MIM, wie z.B. alternative E-Mail-Adressen und Gates für Fragen und Antworten.  Bei der Bereitstellung der Azure AD-Self-Service-Kennwortzurücksetzung unterstützt Azure AD Connect [das Zurückschreiben der neuen Kennwörter in AD DS](/azure/active-directory/authentication/concept-sspr-writeback), und der MIM-[Benachrichtigungsdienst für Kennwortänderungen](deploying-mim-password-change-notification-service-on-domain-controller.md) dient auch zum Weiterleiten der Kennwörter an andere Systeme, wie z.B. einen Verzeichnisserver eines anderen Anbieters.  Das Bereitstellen von MIM für die [Kennwortverwaltung](infrastructure/mim2016-password-management.md) erfordert keine Bereitstellung des MIM-Diensts, der MIM-Self-Service-Kennwortzurücksetzung oder von Registrierungsportalen.  Stattdessen können Sie die folgenden Schritte ausführen:
 
 - Zuerst müssen Sie zum Senden von Kennwörtern an andere Verzeichnisse als Azure AD und AD DS MIM Sync mit Connectors für Active Directory Domain Services und alle zusätzlichen Zielsysteme bereitstellen, MIM für die [Kennwortverwaltung](infrastructure/mim2016-password-management.md) konfigurieren und den [Benachrichtigungsdienst für Kennwortänderungen](deploying-mim-password-change-notification-service-on-domain-controller.md) bereitstellen.
-- Anschließend müssen Sie Azure AD Connect zum [Zurückschreiben der neuen Kennwörter in AD DS](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-writeback.md) konfigurieren, wenn Sie Kennwörter an andere Verzeichnisse als Azure AD senden möchten.
-- Optional können Sie [Benutzer vorab registrieren](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-authenticationdata.md).
-- Führen Sie zum Schluss die [Azure AD Self-Service-Kennwortzurücksetzung für Ihre Endbenutzer durch](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-deployment.md).
+- Anschließend müssen Sie Azure AD Connect zum [Zurückschreiben der neuen Kennwörter in AD DS](/azure/active-directory/authentication/concept-sspr-writeback) konfigurieren, wenn Sie Kennwörter an andere Verzeichnisse als Azure AD senden möchten.
+- Optional können Sie [Benutzer vorab registrieren](/azure/active-directory/authentication/howto-sspr-authenticationdata).
+- Führen Sie zum Schluss die [Azure AD Self-Service-Kennwortzurücksetzung für Ihre Endbenutzer durch](/azure/active-directory/authentication/howto-sspr-deployment).
 
-Bestehenden Kunden, die zuvor den Forefront Identity Manager (FIM) für die Self-Service-Kennwortzurücksetzung bereitgestellt haben und für Azure Active Directory Premium lizenziert sind, wird die Umstellung auf die Azure AD Self-Service-Kennwortzurücksetzung empfohlen.  Sie können die Umstellung auf die Azure AD Self-Service-Kennwortzurücksetzung veranlassen, ohne dass sich die Endbenutzer erneut registrieren müssen, indem Sie [mithilfe von PowerShell eine alternative E-Mail-Adresse oder Mobiltelefonnummer des Benutzers synchronisieren oder einstellen](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-authenticationdata.md). Nachdem Benutzer für die Azure AD Self-Service-Kennwortzurücksetzung registriert sind, kann das FIM-Kennwortzurücksetzungsportal außer Betrieb genommen werden.
+Bestehenden Kunden, die zuvor den Forefront Identity Manager (FIM) für die Self-Service-Kennwortzurücksetzung bereitgestellt haben und für Azure Active Directory Premium lizenziert sind, wird die Umstellung auf die Azure AD Self-Service-Kennwortzurücksetzung empfohlen.  Sie können die Umstellung auf die Azure AD Self-Service-Kennwortzurücksetzung veranlassen, ohne dass sich die Endbenutzer erneut registrieren müssen, indem Sie [mithilfe von PowerShell eine alternative E-Mail-Adresse oder Mobiltelefonnummer des Benutzers synchronisieren oder einstellen](/azure/active-directory/authentication/howto-sspr-authenticationdata). Nachdem Benutzer für die Azure AD Self-Service-Kennwortzurücksetzung registriert sind, kann das FIM-Kennwortzurücksetzungsportal außer Betrieb genommen werden.
 
 Für Kunden, die die Azure AD Self-Service-Kennwortzurücksetzung für ihre Benutzer noch nicht bereitgestellt haben, enthält MIM auch Self-Service-Kennwortzurücksetzungsportale.  Im Vergleich mit FIM enthält MIM 2016 die folgenden Änderungen:
 
@@ -79,7 +79,7 @@ Im nächsten Abschnitt richten Sie Ihren Azure MFA-Anbieter in Microsoft Azure A
 
 ### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Registrieren Sie Ihren Anbieter für die mehrstufige Authentifizierung in Azure
 
-1.  Erstellen Sie einen [MFA-Anbieter](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider.md).
+1.  Erstellen Sie einen [MFA-Anbieter](/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
 
 2. Öffnen Sie einen Supportfall, und fordern Sie das direkte SDK für ASP.NET 2.0 C# an. Das SDK wird nur aktuellen MIM-Benutzern mit MFA bereitgestellt, da das direkte SDK als veraltet gilt. Neue Kunden sollten die nächste MIM-Version verwenden, die in den MFA-Server integriert ist.
 
@@ -99,7 +99,7 @@ Im nächsten Abschnitt richten Sie Ihren Azure MFA-Anbieter in Microsoft Azure A
 
     ![Bild: „pf_auth.cs“-Code](media/MIM-SSPR-pFile.png)
 
-6.  Öffnen Sie in **C:\Programme\Microsoft Forefront Identity Manager\2010\Service**die folgende Datei: **MfaSettings**.xml.
+6.  Öffnen Sie in **C:\Programme\Microsoft Forefront Identity Manager\2010\Service** die folgende Datei: **MfaSettings**.xml.
 
 7.  Kopieren Sie die Werte aus den `LICENSE_KEY, GROUP_KEY, CERT_PASSWORD` -Parametern in die Datei „pf_aut.cs“ in ihre entsprechenden XML-Elemente der Datei „MfaSettings.xml“.
 
@@ -124,6 +124,8 @@ Im nächsten Abschnitt richten Sie Ihren Azure MFA-Anbieter in Microsoft Azure A
 3.  Klicken Sie auf die Registerkarte **Aktivitäten** , und führen Sie einen Bildlauf nach unten zu **Aktivität hinzufügen**aus.
 
 4.  Wählen Sie **Telefongate** oder **SMS-Gate für das Einmalkennwort** aus, und klicken Sie auf **Auswählen** und dann auf **OK**.
+
+Hinweis: Wenn Sie den Azure MFA-Server oder einen anderen Anbieter verwenden, der das einmalige Kennwort selbst generiert, stellen Sie sicher, dass das oben konfigurierte Längenfeld die gleiche Länge hat, wie das, das vom MFA-Anbieter generiert wurde.  Das Kennwort muss für den Azure MFA-Server 6 Zeichen haben.  Der Azure MFA-Server generiert auch seinen eigenen Nachrichtentext, sodass die SMS-Textnachricht ignoriert wird.
 
 Benutzer in Ihrer Organisation können sich jetzt für das Zurücksetzen von Kennwörtern registrieren.  Im Verlauf dieses Vorgangs müssen sie ihre Telefonnummer oder Mobiltelefonnummer eingeben, damit das System weiß, wie es sie anrufen oder ihnen SMS-Nachrichten senden kann.
 

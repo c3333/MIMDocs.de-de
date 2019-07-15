@@ -9,12 +9,12 @@ ms.date: 05/23/2018
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: 61d5f4ec20f5e29d1846a6822bec9669b364760f
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 2d843dcd5285d02a67955e763769a16f1a535abb
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358702"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690727"
 ---
 # <a name="supported-languages"></a>Unterstützte Sprachen
 
@@ -35,7 +35,7 @@ Das Microsoft-Sprachpaket für den MIM-Dienst und -Portal unterstützt folgende 
 |       Bulgarisch       |          bg-BG           |      bg      |
 | Chinesisch (vereinfacht)  |          zh-CN           |   zh-HANS    |
 |   Chinesisch (Taiwan)    |          zh-TW           |   zh-HANT    |
-|       Kroatisch        |          hr-HR           |      HR      |
+|       Kroatisch        |          hr-HR           |      hr      |
 |         Tschechisch         |          cs-CZ           |      cs      |
 |        Dänisch         |          da-DK           |      da      |
 |         Niederländisch         |          nl-NL           |      nl      |
@@ -57,7 +57,7 @@ Das Microsoft-Sprachpaket für den MIM-Dienst und -Portal unterstützt folgende 
 |  Portugiesisch (Brasilien)  |          pt-BR           |    pt-BR     |
 |        Russisch        |          ru-RU           |      ru      |
 |       Rumänisch        |          ro-RO           |      ro      |
-|        Spanisch        |          es-ES           |      es      |
+|        Spanisch        |          es-ES           |      Ja      |
 |        Slowakisch         |          sk-SK           |      sk      |
 |        Schwedisch        |          sv-SE           |      sv      |
 |       Slowenisch       |          sl-SI           |      sl      |
@@ -79,7 +79,7 @@ Die Microsoft-Zertifikatverwaltung unterstützt folgende 9 Sprachen:
 |Italienisch|it-IT|it|
 |Japanisch|ja-JP|ja|
 |Portugiesisch (Portugal)|pt-PT|pt-PT|
-|Spanisch|es-ES|es|
+|Spanisch|es-ES|Ja|
 
 ## <a name="certificate-management-modern-application"></a>Moderne Anwendung für die Zertifikatverwaltung  
 Die moderne Anwendung für die Microsoft-Zertifikatverwaltung unterstützt folgende 33 Sprachen: 
@@ -105,11 +105,11 @@ Die moderne Anwendung für die Microsoft-Zertifikatverwaltung unterstützt folge
 |Portugiesisch (Brasilien)|pt-BR|pt-BR|
 |Russisch|ru-RU|ru|
 |Rumänisch|ro-RO|ro|
-|Spanisch|es-ES|es|
+|Spanisch|es-ES|Ja|
 |Schwedisch|sv-SE|sv|
 |Türkisch|tr-TR|tr|
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 - [Erstmalige Bereitstellung](microsoft-identity-manager-deploy.md)
-- [Versionsverlauf](/reference/version-history.md)
+- [Versionsverlauf](reference/version-history.md)

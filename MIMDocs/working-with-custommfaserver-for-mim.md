@@ -9,12 +9,12 @@ manager: mtillman
 ms.date: 09/04/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 750947d04f540e2c8317861c5826c2145deba1fd
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 7fb111520f94541672fc56d0fd2ee95bfcd3a49e
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358396"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690742"
 ---
 # <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Verwenden eines benutzerdefinierten Multi-Factor Authentication-Anbieters über eine API während der Aktivierung von PAM-Rollen oder in SSPR
 
@@ -32,7 +32,7 @@ In diesem Artikel wird beschrieben, wie Sie MIM mit einem benutzerdefinierten Mu
 Um eine benutzerdefinierte Multi-Factor Authentication-Anbieter-API mit MIM verwenden zu können, benötigen Sie Folgendes:
 
 - Telefonnummern für alle Kandidatenbenutzer
-- MIM-Hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) oder höher: Weitere Informationen zu Ankündigungen finden Sie im [Versionsverlauf](/reference/version-history.md).
+- MIM-Hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) oder höher: Weitere Informationen zu Ankündigungen finden Sie im [Versionsverlauf](reference/version-history.md).
 - MIM-Dienst für SSPR oder PAM konfiguriert
 
 ## <a name="approach-using-custom-multi-factor-authentication-code"></a>Vorgehensweise mithilfe von Code für benutzerdefinierte mehrstufige Authentifizierung
@@ -41,7 +41,7 @@ Um eine benutzerdefinierte Multi-Factor Authentication-Anbieter-API mit MIM verw
 
 Laden Sie den MIM-Hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) oder höher herunter, und installieren Sie diesen.
 
-### <a name="step-2-create-a-dll-which-implements-the-iphoneserviceprovider-interface"></a>Schritt 2: Erstellen Sie eine DLL, die die IPhoneServiceProvider-Schnittstelle implementiert.
+### <a name="step-2-create-a-dll-which-implements-the-iphoneserviceprovider-interface"></a>Schritt 2: Erstellen Sie eine DLL, die die IPhoneServiceProvider-Schnittstelle implementiert.
 
 Die DLL muss eine Klasse enthalten, die drei Methoden implementiert:
 
@@ -135,7 +135,7 @@ namespace CustomPhoneGate
     }
 }
 ```
-### <a name="step-3-backup-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Schritt 3: Sichern Sie die unter „C:\\Programme\\Microsoft Forefront Identity Manager\2010\Service“ gespeicherte MfaSettings.xml-Datei.
+### <a name="step-3-backup-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Schritt 3: Sichern Sie die unter „C:\Programme\Microsoft Forefront Identity Manager\2010\Service“ gespeicherte MfaSettings.xml-Datei.
 
 ### <a name="step-4-edit-the-mfasettingsxml-file"></a>Schritt 4: Bearbeiten Sie die MfaSettings.xml-Datei.
 
