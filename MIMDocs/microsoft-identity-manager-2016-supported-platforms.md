@@ -12,12 +12,12 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: c6da739349f8c4ba4016635e326ed30d5f5954c6
-ms.sourcegitcommit: 67e2de99f86e762125979233f6ee80afcd78dc4d
+ms.openlocfilehash: d4cb70ae60d23049251caa121a1834eeacb05677
+ms.sourcegitcommit: 4c4bc7aa42cd5984c838abdd302490355ddcb4ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56795416"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238916"
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Unterstützte Plattformen für MIM 2016
 
@@ -28,7 +28,7 @@ In dieser Tabelle sind die unterstützten Plattformen und Versionen für die ein
 |-------------------|--------------|--------------|
 | **MIM-Synchronisierung** | Windows Server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 (NR)<br/>Windows Server 2012 R2<br/>Windows Server 2016 * |
 | | Active Directory-Funktionsebene für die Benutzerbereitstellung, PCNS und GAL-Synchronisierung | Windows 2000 (NR)<br/>Windows Server 2003<br/>Windows Server 2008<br/>Windows Server 2008 R2<br/>Windows Server 2012<br/>Windows Server 2012 R2<br/>Windows Server 2016 *
-| | MIM-Synchronisationsdatenbank | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
+| | MIM-Synchronisationsdatenbank | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP4 (NR)<br/>SQL Server 2014 SP3 (NR) <br/> SQL Server 2016 SP2 * |
 | | Active Directory für die Benutzerbereitstellung, PCNS und GAL-Synchronisierung (optional)|Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Exchange für die Bereitstellung von Postfächern und GAL-Synchronisierung (optional)|Exchange Server 2010 SP3 (NR)<br/>Exchange Server 2013 SP1<br/>Exchange Server 2016 * |
 | | Entwicklungsumgebung (optional) | Visual Studio 2012<br/>Visual Studio 2013 <br/> Visual Studio 2015 <br/> Visual Studio 2017 * |
@@ -37,9 +37,9 @@ In dieser Tabelle sind die unterstützten Plattformen und Versionen für die ein
 | |PAM-Szenario:  Windows Server | Windows Server 2012 R2 (NR) <br/> Windows Server 2016 * |
 | |PAM-Szenario: Active Directory für die geschützte Umgebung der PAM-Gesamtstruktur | Windows Server 2012 R2 (NR) <br/> Windows Server 2016 * |
 | |PAM-Szenario: Active Directory für vorhandene PAM-Szenario-Gesamtstrukturen (CORP) | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * |
-| | MIM-Dienstdatenbank | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 |
-| | SharePoint | SharePoint Foundation 2010 (NR)<br/>SharePoint Foundation 2013 SP1 <br/> SharePoint 2016 * |
-| | E-Mail-Server für Bestätigungs- und Gruppenverwaltungs-E-Mails vom MIM-Dienst (optional) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (nur Benachrichtigung vor Build [4.4.1749.0](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history#version-4417490) |
+| | MIM-Dienstdatenbank | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP4 (NR)<br/>SQL Server 2014 SP3 (NR) <br/> SQL Server 2016 SP2 * |
+| | SharePoint | SharePoint Foundation 2010 (NR)<br/>SharePoint Foundation 2013 SP1 (NR) <br/> SharePoint 2016 * |
+| | E-Mail-Server für Bestätigungs- und Gruppenverwaltungs-E-Mails vom MIM-Dienst (optional) | Exchange Server 2010 SP3 (NR)<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (nur Benachrichtigung vor Build [4.4.1749.0](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history#version-4417490)) |
 | | Browser | Alle gängigen unterstützten Browser * (auf mobile Geräte begrenzt)|
 | **MIM-Dienstberichterstellung** | Windows Server |  Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 (NR) <br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Data Warehouse | System Center 2012 – Service Manager <br/> System Center 2012 R2 Service Manager <br/> System Center 2016 Service Manager (Mit 4.4.1459)<br/> [Kompatibilität der SQL Server-Version für System Center 2016](https://docs.microsoft.com/system-center/scsm/upgrade-to-sm-2016) |
@@ -50,11 +50,11 @@ In dieser Tabelle sind die unterstützten Plattformen und Versionen für die ein
 | | PowerShell-Cmdlets für PAM-Requestor (optional) | Windows 8.1<br/>Windows 10 |
 | **MIM-Zertifikatverwaltung** (Server- und CA-Integration) | Windows server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Zertifizierungsstelle | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | MIM CM-Datenbank | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
+| | MIM CM-Datenbank | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP4 (NR)<br/>SQL Server 2014 SP3 (NR) <br/> SQL Server 2016 SP2 * |
 | **MIM-Zertifikatverwaltung** (Anwendung) | Windows | Windows 8<br/>Windows 8.1<br/>Windows 10 |
 | **MIM-Zertifikatverwaltung** (Sammelclient) | Windows | Windows 7 |
 | **MIM-Zertifikatverwaltung** (Auf ActiveX basierende Clientsmartcard) | Windows | Windows 7 <br/> Windows 8 <br/> Windows 8.1 <br/> Windows 10 |
 | **MIM BHOLD-Suite** | Windows Server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | BHOLD-Datenbank | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP2 <br/> SQL Server 2014 * <br/> SQL Server 2016 * |
-| | E-Mail-Server (optional) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * |
+| | BHOLD-Datenbank | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP4  <br/> SQL Server 2014 SP3 * <br/> SQL Server 2016 SP2 * |
+| | E-Mail-Server (optional) | Exchange Server 2010 SP3 (NR)<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * |
 | | Webbrowser | Von Internet Explorer unterstützte Browser mit Silverlight |
