@@ -6,17 +6,17 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 10/12/2017
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 75935513ccb4ec3ebc089f9c5aad1d1624789a13
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 69698721b0fbabc78cf5bb4c1032ab8fc2613772
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358821"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701200"
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Installieren von MIM 2016: Synchronisieren von Active Directory und MIM-Dienst
 
@@ -168,7 +168,7 @@ Der Active Directory-Verwaltungs-Agent ist ein Connector für Active Directory-D
 
 2. Geben Sie auf der Seite **Verwaltungs-Agent erstellen** die folgenden Einstellungen an, und klicken Sie dann auf **Weiter**:
 
-    - Verwaltungs-Agent für: Active Directory-Domänendienste (AD DS)
+    - Verwaltungs-Agent für: Active Directory-Domänendienste
     - Name: ADMA
 
 3. Geben Sie auf der Seite **Mit Active Directory-Gesamtstruktur verbinden** die folgenden Einstellungen an, und klicken Sie dann auf **Weiter**:
@@ -305,7 +305,7 @@ So erstellen Sie die Synchronisierungsregel „AD-Benutzer eingehend“:
 
 4. Geben Sie auf der Registerkarte **Allgemein** die folgenden Informationen an, und klicken Sie dann auf **Weiter**:
 
-    -   Anzeigename: Synchronisierungsregel "AD-Benutzer eingehend"
+    -   Anzeigename: Synchronisierungsregel „AD-Benutzer eingehend“
     -   Datenflussrichtung: Eingehend
 
 5. Geben Sie auf der Registerkarte **Bereich** die folgenden Informationen an, und klicken Sie dann auf **Weiter**:

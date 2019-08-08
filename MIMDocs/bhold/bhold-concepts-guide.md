@@ -6,14 +6,15 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 09/14/2017
+ms.topic: conceptual
 ms.assetid: ''
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 32bd77140cf70047eaa02d363a1348e73783f87a
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 3749b74fd867601ee05f8e45d273ad2de9144b5b
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358838"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701425"
 ---
 # <a name="microsoft-bhold-suite-concepts-guide"></a>Konzepthandbuch für Microsoft BHOLD Suite
 
@@ -25,7 +26,7 @@ Dieser Leitfaden bietet Ihnen einen Überblick darüber, wie BHOLD Suite mit MIM
 
 - Rollenbasierte Zugriffssteuerung
 - Nachweis
-- Analyse
+- Analysen
 - Berichterstellung
 - Zugriffsverwaltungsconnector
 - MIM-Integration
@@ -197,7 +198,7 @@ Zu Beginn einer Kampagne sendet BHOLD eine E-Mail-Benachrichtigung an den Kampag
 
 Kampagnenbesitzer verwenden das Portal ebenfalls, um den Fortschritt der Kampagne zu überwachen. Außerdem werden Kampagnenaktivitäten protokolliert, sodass Kampagnenbesitzer die Aktionen, die während der Kampagne ausgeführt wurden, analysieren können.
 
-## <a name="analytics"></a>Analyse
+## <a name="analytics"></a>Analysen
 
 Ein wichtiger Aspekt beim Implementieren eines umfassenden, auf Rechten basierenden Zugriffssteuerungssystems (RBAC) ist das Gleichgewicht zwischen dem Erhalten der strikten Zugriffssteuerung und dem Vermeiden von unnötigen (oder schlimmer, unerwarteten) Barrieren für den Zugriff. Der Aufwand zum Erhalten dieses Gleichgewichts führt häufig zu einer Struktur der Zugriffssteuerung, die so komplex ist, dass unerwartete Interaktionen zwischen Richtlinien fast unvermeidlich sind.
 
