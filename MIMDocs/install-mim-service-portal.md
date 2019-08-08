@@ -6,17 +6,17 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 04/30/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: fc70a0edb610fcb862d85902dd5e611e65f6e689
-ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
+ms.openlocfilehash: ca2a9a4a646387b044e3a504c19eae904b2a6be1
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52825806"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701285"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Installieren von MIM 2016: MIM-Dienst und -Portal
 
@@ -116,7 +116,7 @@ Nach Abschluss der Installation stellen Sie sicher, dass das MIM-Portal aktiv is
 
     1.  Klicken Sie unter Verwendung von Internet Explorer im **MIM-Portal**auf **Management-Richtlinienregeln**.
 
-    2.  Suchen Sie nach der Verwaltungsrichtlinienregel **Benutzerverwaltung: Benutzer können eigene Attribute lesen**.
+    2.  Suchen Sie nach der Verwaltungsrichtlinienregel **Benutzerverwaltung: Benutzer können eigene Attribute lesen.**
 
     3.  Wählen Sie diese Verwaltungsrichtlinienregel aus, und deaktivieren Sie **Richtlinie ist deaktiviert**.
 
@@ -143,7 +143,7 @@ Nach Abschluss der Installation stellen Sie sicher, dass das MIM-Portal aktiv is
     7.  Schließen Sie die **Systemsteuerung**.
 
 > [!NOTE]
-> Optional: Jetzt können Sie MIM-Add-Ins und -Erweiterungen installieren.
+> Optional: An diesem Punkt können Sie MIM-Add-Ins und -Erweiterungen installieren.
 > 
 > [!div class="step-by-step"]  
 > [« MIM-Synchronisierungsdienst](install-mim-sync.md)
