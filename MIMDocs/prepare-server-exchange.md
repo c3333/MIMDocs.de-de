@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 34a8c16e-3bed-4e16-939b-b9fe17dd834b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: bad4cb03062a77494bbf429a929d62ca6e140c30
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.openlocfilehash: 2994711949122aac7a545d3849db6c66f8cb09ed
+ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701338"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73329303"
 ---
 # <a name="set-up-an-identity-management-server-exchange"></a>Einrichten eines Identitätsverwaltungsservers: Exchange
 
@@ -27,15 +27,7 @@ ms.locfileid: "68701338"
 ## <a name="deploy-microsoft-exchange-server"></a>Bereitstellen von Microsoft Exchange Server
 Wenn Sie MIM zum Senden und Empfangen von E-Mails oder Bereitstellen von Postfächern konfigurieren möchten, ist es notwendig, dass Exchange in der Umgebung vorhanden ist. Wenn Exchange noch nicht bereitgestellt wurde, können Sie zu Evaluierungszwecken eine Testversion installieren:
 
-1. Laden Sie Microsoft Office 2010 Filter Packs, Version 2.0, und Microsoft Office 2010 Filter Packs, Version 2.0 SP1, herunter, und installieren Sie diese anschließend.
-
-    - [MS Office10 FP2.0](http://www.microsoft.com/download/details.aspx?id=17062)
-
-    - [MS Office10 FP2.0 SP1](http://www.microsoft.com/download/details.aspx?id=26604)
-
-2. Herunterladen und Installieren von [Microsoft Unified Communications Managed API 4.0, Core Runtime 64-Bit](http://www.microsoft.com/download/details.aspx?id=34992)
-
-3. Herunterladen und Installieren von [MS Exchange Server 2013 180-Tage-Testversion](http://www.microsoft.com/evalcenter/evaluate-exchange-server-2013)
+* Herunterladen und Installieren von [MS Exchange Server 2013 180-Tage-Testversion](http://www.microsoft.com/evalcenter/evaluate-exchange-server-2013)
 
 > [!div class="step-by-step"]  
 > [« SharePoint](prepare-server-sharepoint.md)
