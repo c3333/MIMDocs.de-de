@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 7df93a0a24aee886ec4d07ee2894d93a91606fa0
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: b14066543c036eb4ec8a350843743b87902a13a1
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358384"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73636978"
 ---
 # <a name="capacity-planning-guide"></a>Kapazitätsplanungshandbuch
 
@@ -96,4 +96,4 @@ Die Konfiguration von MIM-Richtlinien umfasst außerdem Entscheidungen zur Berei
 ## <a name="next-steps"></a>Nächste Schritte
 
 - [Topologieaspekte für die Bereitstellung von MIM](topology-considerations.md)
-- Der zum Download bereitstehende [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide (Handbuch zur Kapazitätsplanung des Forefront Identity Manager (FIM) 2010)](http://go.microsoft.com/fwlink/?LinkId=200180) bietet weitere Informationen zu einem Test-Build und Leistungstestergebnissen.
+- Der zum Download bereitstehende [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide (Handbuch zur Kapazitätsplanung des Forefront Identity Manager (FIM) 2010)](https://www.microsoft.com/en-us/download/details.aspx?id=7437) bietet weitere Informationen zu einem Test-Build und Leistungstestergebnissen.

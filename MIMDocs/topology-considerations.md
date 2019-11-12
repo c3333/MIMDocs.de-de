@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 42562e92b3fe0daa63110d33d8952a3a1fc3de17
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: d9d749029d52c7e685e581ffe603aca63752ca3e
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358079"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73636988"
 ---
 # <a name="topology-considerations"></a>Überlegungen zur Topologie
 Sie können MIM-Komponenten (Microsoft Identity Manager) auf demselben Server oder auf mehreren Servern in mehreren Konfigurationen bereitstellen. Die für die Bereitstellung ausgewählte Topologie hat Auswirkungen auf die Leistung, die Sie in MIM erreichen können. In diesem Artikel werden mehrere Bereitstellungstopologien vorgestellt, die Sie implementieren können.
@@ -39,10 +39,10 @@ In der folgenden Tabelle sind die Optionen zum Hosten der einzelnen MIM-Komponen
 
 | | MIM-Portal | MIM-Dienst | MIM Synchronization Service | SQL Server |
 | --- | --- | --- | --- | --- |
-| Derselbe Computer | Ja  | Ja  | Ja  | Ja  |
-| Separater Server | Ja  | Ja  | Ja  | Ja  |
-| Netzwerklastenausgleichs-Cluster | Ja  | Ja  | | |
-| Server-Cluster | | | | Ja  |
+| Derselbe Computer | Ja | Ja | Ja | Ja |
+| Separater Server | Ja | Ja | Ja | Ja |
+| Netzwerklastenausgleichs-Cluster | Ja | Ja | | |
+| Server-Cluster | | | | Ja |
 
 
 ## <a name="multitier-topology"></a>Mehrschichtige Topologie
@@ -65,4 +65,5 @@ Wie bei der standardmäßigen mehrschichtigen Topologie können Sie die Leistung
 Die Gesamtleistung Ihrer MIM-Bereitstellung hängt stark von den Computern ab, auf denen SQL Server installiert ist und die als Host für MIM Synchronization Service und die MIM-Dienstdatenbank fungieren. Befolgen Sie daher die Ratschläge in der SQL Server-Dokumentation zum Optimieren der Datenbankleistung. Weitere Informationen finden Sie in folgenden Dokumenten:
 
 ## <a name="see-also"></a>Siehe auch
-- Der zum Download bereitstehende [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide](http://go.microsoft.com/fwlink/?LinkId=200180) (Handbuch zur Kapazitätsplanung des Forefront Identity Manager (FIM) 2010) bietet weitere Informationen zu einem Test-Build und Leistungstestergebnissen.
+
+- Der zum Download bereitstehende [Forefront Identity Manager (FIM) 2010 Capactity Planning Guide (Handbuch zur Kapazitätsplanung des Forefront Identity Manager (FIM) 2010)](https://www.microsoft.com/en-us/download/details.aspx?id=7437) bietet weitere Informationen zu einem Test-Build und Leistungstestergebnissen.
