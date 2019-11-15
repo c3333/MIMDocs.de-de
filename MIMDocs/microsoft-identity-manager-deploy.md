@@ -5,20 +5,20 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 10/12/2017
+ms.date: 10/17/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
-ms.reviewer: mwahl
+ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: fdf3745979be2d911c9cc1c245149328311e7ad8
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 8216dc144dd7cee2ccb30d89198f6d2bb3a726c1
+ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358141"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73329442"
 ---
-# <a name="deploy-microsoft-identity-manager-2016-sp1"></a>Bereitstellen von Microsoft Identity Manager 2016 SP1
+# <a name="deploy-microsoft-identity-manager-2016-sp2"></a>Bereitstellen von Microsoft Identity Manager 2016 SP2
 Die Artikel in diesem Abschnitt bieten Schritt-für-Schritt-Anleitungen für die Bereitstellung von Microsoft Identity Manager (MIM) 2016 für Endbenutzer-Self-Service-Szenarien. Es wird dabei von einer Bereitstellung auf einem neuen Server ausgegangen, auf dem zuvor weder FIM noch MIM bereitgestellt wurden.
 
 > [!NOTE]
@@ -28,20 +28,25 @@ Das Szenario für die privilegierte Zugriffsverwaltung wird anders als andere MI
 
 Der Vorgang zum Bereitstellen von MIM ähnelt sehr dem des Vorgängers, FIM 2010 R2. Wenn Sie die Dokumentation für FIM zurate ziehen möchten, lesen Sie das [Bereitstellungshandbuch für Forefront Identity Manager 2010 R2](https://technet.microsoft.com/library/jj134310).
 
-## <a name="first-prepare-a-domain"></a>Erstens: Vorbereiten einer Domäne
+## <a name="first-prepare-a-domain"></a>Zuerst: Vorbereiten einer Domäne
 MIM funktioniert über Active Directory (AD). Führen Sie daher diese Schritte aus, um Ihre Active Directory-Domänencontroller zu konfigurieren.
 - [Einrichten der Domäne](preparing-domain.md)
 
-## <a name="next-prepare-an-identity-management-servers"></a>Nächster Schritt: Vorbereiten von Servern für die Identitätsverwaltung
-Sobald Ihre Domäne eingerichtet und konfiguriert ist, bereiten Sie den Server vor, der Ihre Corporate Identity verwaltet. Dies beinhaltet:
-- [Windows Server 2016](prepare-server-ws2016.md)
-- [SQL Server 2016](prepare-server-sql2016.md)
-- [SharePoint 2016](prepare-server-sharepoint.md)
+
+## <a name="next-prepare-an-identity-management-servers"></a>Nächster Schritt: Vorbereiten eines Identitätsverwaltungsservers
+Sobald Ihre Domäne eingerichtet und konfiguriert ist, bereiten Sie den Server vor, der Ihre Corporate Identity verwaltet.
+
+Weitere Informationen zu unterstützten Plattformen finden Sie unter [Unterstützte Plattformen für MIM 2016 oder höher](microsoft-identity-manager-2016-supported-platforms.md).
+
+ Dies beinhaltet:
+- [Windows Server](prepare-server-ws2016.md)
+- [SQL Server](prepare-server-sql2016.md)
+- [SharePoint Server](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (optional)
 
-## <a name="finally-install-microsoft-identity-manager-2016-sp1-components"></a>Installieren Sie zum Schluss die Komponenten von Microsoft Identity Manager 2016 SP1.
+## <a name="finally-install-microsoft-identity-manager-2016-sp2-components"></a>Letzter Schritt: Installieren von Komponenten von Microsoft Identity Manager 2016 SP2
 Nachdem Sie die Domäne und den Server eingerichtet haben, können Sie die MIM-Komponenten installieren und konfigurieren, um sie mit Active Directory zu synchronisieren.
 - [MIM-Synchronisierungsdienst](install-mim-sync.md)
 - [MIM-Dienst und -Portal](install-mim-service-portal.md)
 - [Synchronisieren von Active Directory und MIM-Dienstdatenbanken](install-mim-sync-ad-service.md)
-- [Unterstützte Plattformen für MIM 2016](microsoft-identity-manager-2016-supported-platforms.md)
+

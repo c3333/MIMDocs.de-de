@@ -5,25 +5,25 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 05/01/2018
+ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
-ms.reviewer: mwahl
+ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: fba7eb3caea1f00c37f00f3fd2bf67dfe3f12871
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.openlocfilehash: b9bc580710a13b3a0868b0580d55469a753e7f33
+ms.sourcegitcommit: 323c2748dcc6b6991b1421dd8e3721588247bc17
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701272"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568084"
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>Installieren von MIM 2016: MIM Synchronization Service
 
 > [!div class="step-by-step"]
 > [« Exchange Server](prepare-server-exchange.md)
 > [MIM-Dienst und -Portal »](install-mim-service-portal.md)
-> 
+ 
 > [!NOTE]
 > Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiel:
 > - Name des Domänencontrollers: **corpdc**
@@ -63,6 +63,8 @@ Um den Microsoft Identity Manager 2016 zu installieren, richten Sie zuerst das I
 
    ![Bild: Datenbankverbindung](media/install-mim-sync/MIM_Install3.png)
 
+    3. *MIM 2016 SP2 und höher:* Konfigurieren des Datenbanknamens für den MIM-Synchronisierungsdienst
+
 7. Konfigurieren Sie das Synchronisierungsdienstkonto gemäß dem zuvor von Ihnen erstellten Konto:
 
    1. Dienstkonto: *MIMSync*
@@ -71,7 +73,10 @@ Um den Microsoft Identity Manager 2016 zu installieren, richten Sie zuerst das I
 
    3. Dienstkontodomäne oder Name des lokalen Computers: *contoso*
 
-   ![Bild: Dienstkonto](media/install-mim-sync/MIM_Install4.png)
+    >[!NOTE]
+    >MIM 2016 SP2 und höher: Stellen Sie für gruppenverwaltete Dienstkonten sicher, dass sich das **$** -Zeichen am Ende des Dienstkontonamens befindet (z. B. MIMSync$), und lassen Sie das Kennwortfeld leer.
+
+    ![Bild: Dienstkonto](media/install-mim-sync/MIM_Install4.png)
 
 8. Geben Sie dem Installationsprogramm für den MIM-Synchronisierungsdienst die relevanten Sicherheitsgruppen an:
 
@@ -97,7 +102,7 @@ Um den Microsoft Identity Manager 2016 zu installieren, richten Sie zuerst das I
 
     3. Ein Hinweis zum Erstellen einer Sicherung des Verschlüsselungsschlüssels wird angezeigt – klicken Sie auf **OK**, und wählen Sie dann einen Ordner zum Speichern der Sicherung des Verschlüsselungsschlüssels aus.
 
-        ![Bild: Hinweis zur Sicherung des Verschlüsselungsschlüsselsatzes für MIM Sync](media/MIM-Install7.png)
+    ![Bild: Hinweis zur Sicherung des Verschlüsselungsschlüsselsatzes für MIM Sync](media/MIM-Install7.png)
 
     4. Wenn das Installationsprogramm die Installation erfolgreich abgeschlossen hat, klicken Sie auf **Fertig stellen**.
 

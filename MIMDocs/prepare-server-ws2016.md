@@ -1,29 +1,34 @@
 ---
-title: Konfigurieren von Windows Server 2016 für MIM 2016 SP1 | Microsoft-Dokumentation
-description: Erfahren Sie mehr über die ersten Schritte und die Mindestanforderungen für die Vorbereitung von Windows Server 2016 für MIM 2016 SP1.
+title: Konfigurieren von Windows Server 2016 oder 2019 für MIM 2016 SP2 | Microsoft-Dokumentation
+description: Informieren Sie sich über die ersten Schritte und die Mindestanforderungen für die Vorbereitung von Windows Server 2016 oder 2019 für MIM 2016 SP2.
 keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 04/26/2018
+ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 7348507593426ba112feef9d68686ee493a6391d
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.openlocfilehash: c6d5d5081f0e932b9c60d8f2025b54e47dc352d5
+ms.sourcegitcommit: 323c2748dcc6b6991b1421dd8e3721588247bc17
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701411"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568036"
 ---
-# <a name="set-up-an-identity-management-server-windows-server-2016"></a>Einrichten eines Identitätsverwaltungsservers: Windows Server 2016
+# <a name="set-up-an-identity-management-server-windows-server-2016-or-2019"></a>Einrichten eines Identitätsverwaltungsservers: Windows Server 2016 oder 2019
 
 > [!div class="step-by-step"]
 > [« Vorbereiten einer Domäne](preparing-domain.md)
-> [SQL Server 2016 »](prepare-server-sql2016.md)
+> [SQL Server »](prepare-server-sql2016.md)
 > 
+
+> [!NOTE]
+> Der Windows Server 2019-Setupvorgang unterscheidet sich nicht von dem für Windows Server 2016.
+
+
 > [!NOTE]
 > Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiel:
 > - Name des Domänencontrollers: **corpdc**
@@ -85,8 +90,6 @@ Richten Sie die Serversicherheitsrichtlinien ein, damit die neu erstellten Konte
 
 6.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **Zugriff vom Netzwerk auf diesen Computer verweigern**, und wählen Sie **Eigenschaften** aus.
 
-[!NOTE] Durch das Trennen der Rollenserver funktionieren einige Funktionen wie SSPR nicht mehr ordnungsgemäß.
-
 7. Klicken Sie zunächst auf **Benutzer oder Gruppe hinzufügen**, geben Sie in das Textfeld `contoso\MIMSync; contoso\MIMService` ein, und klicken Sie auf **OK**.
 
 8. Klicken Sie auf **OK**, um das Eigenschaftenfenster **Zugriff vom Netzwerk auf diesen Computer verweigern** zu schließen.
@@ -99,6 +102,19 @@ Richten Sie die Serversicherheitsrichtlinien ein, damit die neu erstellten Konte
 
 12. Schließen Sie das Fenster „Lokale Sicherheitsrichtlinien“.
 
+## <a name="software-prerequisites"></a>Softwareanforderungen
+
+Stellen Sie vor der Installation von MIM 2016 SP2-Komponenten sicher, dass alle erforderlichen Softwarekomponenten installiert werden:
+
+13. Installieren Sie [Visual C++ 2013 Redistributable-Pakete](https://www.microsoft.com/download/details.aspx?id=40784).
+
+14. Installieren Sie .NET Framework 4.6.
+
+15. Auf dem Server, der den MIM-Synchronisierungsdienst hostet, ist der [SQL Server Native Client](https://www.microsoft.com/download/details.aspx?id=50402) erforderlich.
+
+16. Auf dem Server, auf dem der MIM-Dienst gehostet werden soll, ist .NET Framework 3.5 erforderlich.
+
+17. Wenn Sie TLS 1.2 oder den FIPS-Modus verwenden, finden Sie optional weitere Informationen unter [MIM 2016 SP2 in „nur TLS 1.2“ oder FIPS-Modus-Umgebungen](preparing-tls.md).
 
 ## <a name="change-the-iis-windows-authentication-mode-if-needed"></a>Ändern Sie falls notwendig den IIS Windows-Authentifizierungsmodus.
 
@@ -114,4 +130,4 @@ Richten Sie die Serversicherheitsrichtlinien ein, damit die neu erstellten Konte
 
 > [!div class="step-by-step"]  
 > [« Vorbereiten einer Domäne](preparing-domain.md)
-> [SQL Server 2016 »](prepare-server-sql2016.md)
+> [SQL Server »](prepare-server-sql2016.md)

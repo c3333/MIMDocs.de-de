@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 69698721b0fbabc78cf5bb4c1032ab8fc2613772
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.openlocfilehash: 1627bae6aecdfc3d57261485de04a78feb264013
+ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701200"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73329321"
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Installieren von MIM 2016: Synchronisieren von Active Directory und MIM-Dienst
 
@@ -37,7 +37,7 @@ Der MIM-Verwaltungs-Agent (Management Agent; MA) verbindet MIM Sync mit dem MIM-
 Wenn Sie einen MIM-Verwaltungs-Agent konfigurieren, müssen Sie ein Benutzerkonto angeben. Dieses Dokument verwendet **MIMMA** als Namen für dieses Konto.
 
 > [!NOTE]
-> Das Konto, das Sie für Ihren MIM-Verwaltungs-Agent verwenden, muss dasselbe Konto wie das sein, das Sie während der Installation des MIM-Diensts angegeben haben.
+> Das Konto, das Sie für Ihren MIM-Verwaltungs-Agent verwenden, muss dasselbe Konto wie das sein, das Sie während der Installation des MIM-Diensts angegeben haben. Wenn Sie die Funktion „Use MIMSync account“ (MIMSync-Konto verwenden) aktivieren möchten, muss der MIM-Synchronisierungsdienst mithilfe eines gruppenverwalteten Dienstkontos installiert werden.
 
 ### <a name="to-create-the-mim-ma"></a>So erstellen Sie den MIM MA
 
@@ -52,7 +52,6 @@ Wenn Sie einen MIM-Verwaltungs-Agent konfigurieren, müssen Sie ein Benutzerkont
     -   Name: MIMMA
 
 4.  Geben Sie auf der Seite **Mit Datenbank verbinden** die folgenden Einstellungen an, und klicken Sie dann auf **Weiter**
-
     -   Server: localhost
 
     -   Datenbank: FIMService
