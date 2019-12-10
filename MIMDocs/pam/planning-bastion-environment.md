@@ -12,11 +12,11 @@ ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: f8fd71d2244760d3a6561c6f55bf676e6f42561a
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50380067"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518880"
 ---
 # <a name="planning-a-bastion-environment"></a>Planen einer geschützten Umgebung
 
@@ -164,7 +164,7 @@ Es gibt sieben Anforderungen für die Aktivierung der Verwaltung für eine beste
 
 ### <a name="1-a-security-group-on-the-local-domain"></a>1. Eine Sicherheitsgruppe in der lokalen Domäne
 
-Es muss eine Gruppe in der vorhandenen Domäne geben, deren Name dem NetBIOS-Domänennamen gefolgt von drei Dollarzeichen entspricht, z. B. *CONTOSO$$$*. Der Gruppenbereich muss *Lokal (in Domäne)* sein, und der Gruppentyp muss *Sicherheit* sein. Dies ist erforderlich, damit in der dedizierten administrativen Gesamtstruktur erstellte Gruppen dieselbe Sicherheits-ID wie Gruppen in dieser Domäne aufweisen. Die Erstellung dieser Gruppe erfolgt mit dem folgenden PowerShell-Befehl – dieser wird von einem Administrator der bestehenden Domäne auf einer Arbeitsstation ausgeführt, die der bestehenden Domäne beigetreten ist:
+Es muss eine Gruppe in der vorhandenen Domäne geben, deren Name dem NetBIOS-Domänennamen gefolgt von drei Dollarzeichen entspricht, z. B. *CONTOSO$$$* . Der Gruppenbereich muss *Lokal (in Domäne)* sein, und der Gruppentyp muss *Sicherheit* sein. Dies ist erforderlich, damit in der dedizierten administrativen Gesamtstruktur erstellte Gruppen dieselbe Sicherheits-ID wie Gruppen in dieser Domäne aufweisen. Die Erstellung dieser Gruppe erfolgt mit dem folgenden PowerShell-Befehl – dieser wird von einem Administrator der bestehenden Domäne auf einer Arbeitsstation ausgeführt, die der bestehenden Domäne beigetreten ist:
 
 ```PowerShell
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'

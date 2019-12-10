@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 347eda5872792872a9bb30357c45835303f92e01
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379749"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518518"
 ---
 # <a name="deploy-mim-pam-with-windows-server-2016"></a>Bereitstellen von MIM PAM mit Windows Server 2016
 
@@ -75,7 +75,7 @@ Führen Sie die Installation wie im [Leitfaden für erste Schritte](privileged-i
 
   - Nach dem Konfigurieren der Delegierung und vor dem Neustart des Servers autorisieren Sie die MIM-Administratoren und MIM-Dienstkonten zur Erstellung und Aktualisierung von Schattenprinzipalen.
 
-    ein. Starten Sie ein PowerShell-Fenster, und geben Sie „ADSIEdit“ ein.
+    a. Starten Sie ein PowerShell-Fenster, und geben Sie „ADSIEdit“ ein.
 
     b. Klicken Sie im Menü „Aktion“ auf „Verbinden mit“. Ändern Sie für die Verbindungspunkteinstellung den Namenskontext von „Standardnamenskontext“ in „Konfiguration“, und klicken Sie auf „OK“.
 
@@ -91,7 +91,7 @@ Führen Sie die Installation wie im [Leitfaden für erste Schritte](privileged-i
 
   - Nach dem Konfigurieren der Delegierung und vor dem Neustart des Servers autorisieren Sie die MIM-Administratoren zur Erstellung und Aktualisierung von Authentifizierungsrichtlinien.
 
-    ein.  Starten Sie eine erhöhte **Eingabeaufforderung**, und geben Sie die folgenden Befehle ein, wobei Sie „mimadmin“ in allen vier Zeilen durch den Namen Ihres MIM-Administratorkontos ersetzen:
+    a.  Starten Sie eine erhöhte **Eingabeaufforderung**, und geben Sie die folgenden Befehle ein, wobei Sie „mimadmin“ in allen vier Zeilen durch den Namen Ihres MIM-Administratorkontos ersetzen:
     ```
     dsacls "CN=AuthN Policies,CN=AuthN Policy
     Configuration,CN=Services,CN=configuration,DC=priv,DC=contoso,DC=local" /g

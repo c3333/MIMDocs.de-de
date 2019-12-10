@@ -12,11 +12,11 @@ ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: e9454643f425a6bd306c2828479129312d5a5d4f
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358363"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64516636"
 ---
 # <a name="create-software-certificates-with-certificate-manager"></a>Erstellen von Softwarezertifikaten mit dem Zertifikat-Manager
 Zum Registrieren und Erneuern von Softwarezertifikaten müssen Sie kein Administrator sein und es ist keine virtuelle Smartcard erforderlich. Beachten Sie, dass Sie im Verlauf dazu aufgefordert werden, einen Zertifikatvorgang zuzulassen. Das ist normal.
@@ -65,7 +65,7 @@ Zum Registrieren und Erneuern von Softwarezertifikaten müssen Sie kein Administ
 
     7.  Wählen Sie **Datei** aus, und klicken Sie auf **Snap-In hinzufügen/entfernen**, um das Zertifizierungsstelle-Snap-In zu Ihrer MMC-Konsole hinzuzufügen. Wenn Sie gefragt werden, welchen Computer Sie verwalten möchten, wählen Sie **Lokaler Computer**aus.
 
-    8.  Erweitern Sie im linken Bereich der MMC den Eintrag **Zertifizierungsstelle (lokal)**, und erweitern Sie dann Ihren Zertifikat-Manager in der Liste „Zertifizierungsstelle“.
+    8.  Erweitern Sie im linken Bereich der MMC den Eintrag **Zertifizierungsstelle (lokal)** , und erweitern Sie dann Ihren Zertifikat-Manager in der Liste „Zertifizierungsstelle“.
 
     9. Klicken Sie mit der rechten Maustaste auf **Zertifikatvorlagen**, klicken Sie auf **Neu**, und klicken Sie dann auf **Auszustellende Zertifikatvorlage**.
 

@@ -11,11 +11,11 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
 ms.suite: ems
 ms.openlocfilehash: dd87f00fb3faded60671a47a0ba1dab7e4c2a531
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358175"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64516776"
 ---
 # <a name="hybrid-identity-management-audit-reporting-in-azure-active-directory"></a>Überwachungsberichte zur hybriden Identitätsverwaltung in Azure Active Directory
 Mit Überwachungsberichten in Azure Active Directory (Azure AD) können Sie Identitätsverwaltungsaktivitäten lokal oder in der Cloud überwachen. Sparen Sie Zeit, und senken Sie die Gesamtkosten, indem Sie sämtliche Identitäts- und Zugriffsdaten in einem einzigen Bericht verwalten.

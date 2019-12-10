@@ -12,11 +12,11 @@ ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 04195febdb721291e9dcf72f5bbda04923075596
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379766"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518265"
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Schritt 5 – Einrichten einer Vertrauensstellung zwischen den Gesamtstrukturen PRIV und CORP
 
@@ -75,7 +75,7 @@ Aktivieren Sie für jede vorhandene Gesamtstruktur den Lesezugriff auf AD für P
 3. Klicken Sie mit der rechten Maustaste auf die Domäne **contoso.local**, und wählen Sie **Objektverwaltung zuweisen** aus.  
 4. Klicken Sie auf der Registerkarte „Ausgewählte Benutzer und Gruppen“ auf **Hinzufügen**.  
 5. Klicken Sie im Fenster zur Auswahl von Benutzern, Computern oder Gruppen auf **Speicherorte** , und ändern Sie den Speicherort in *priv.contoso.local*.  Geben Sie für den Objektnamen *Domänen-Admins* ein, und klicken Sie dann auf **Namen überprüfen**. Wenn ein Popupfenster angezeigt wird, geben Sie den Benutzernamen *priv\administrator* sowie das Kennwort ein.  
-6. Fügen Sie hinter „Domänen-Admins“ die Zeichenfolge „*; MIMMonitor*“ hinzu. Nachdem die Namen **Domänen-Admins** und **MIMMonitor** unterstrichen sind, klicken Sie auf **OK** und dann auf **Weiter**.  
+6. Fügen Sie hinter „Domänen-Admins“ die Zeichenfolge „ *; MIMMonitor*“ hinzu. Nachdem die Namen **Domänen-Admins** und **MIMMonitor** unterstrichen sind, klicken Sie auf **OK** und dann auf **Weiter**.  
 7. Wählen Sie in der Liste der allgemeinen Aufgaben **Liest alle Benutzerinformationen** aus, und klicken Sie auf **Weiter** und dann auf **Fertig stellen**.  
 8. Schließen Sie %%amp;quot;Active Directory-Benutzer und -Computer%%amp;quot;.
 

@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 5e259df617c5a95fcd54f49c9cbb70f9cd0c36a4
-ms.sourcegitcommit: 486f860f0951413aed335138eb6ad4ce6c50ed4d
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852662"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64519820"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Bereitstellen von Benutzern in AD DS
 
@@ -214,7 +214,7 @@ Weitere Informationen finden Sie unter den folgenden Themen in der Hilfe:
 > [!NOTE]
 >  Stellen Sie sicher, dass Sie eine Attribut-Importflussregel für das Attribut „ExpectedRulesList“ konfiguriert haben.
 
-### <a name="step-5-create-the-run-profiles"></a>Schritt 5: Erstellen der Ausführungsprofile
+### <a name="step-5-create-the-run-profiles"></a>Schritt 5: Erstellen der Ausführungsprofile
 
 Die folgende Tabelle enthält die Ausführungsprofile, die Sie für das Szenario in diesem Handbuch erstellen müssen.
 
@@ -296,7 +296,7 @@ In den folgenden Tabellen wird die Konfiguration der erforderlichen Fabrikam-Syn
 > [!NOTE]
 >  Wichtig Stellen Sie sicher, dass Sie „Nur erster Fluss“ für den Attributfluss ausgewählt haben, der den definierten Namen als Ziel hat.                                                                          
 
-### <a name="step-7-create-the-workflow"></a>Schritt 7: Erstellen des Workflows
+### <a name="step-7-create-the-workflow"></a>Schritt 7: Erstellen des Workflows
 
 Das Ziel des AD-Bereitstellungsworkflow ist das Hinzufügen der Fabrikam-Synchronisierungsregel für die Bereitstellung an eine Ressource. Die folgenden Tabellen zeigen die Konfiguration.  Erstellen Sie ein Workflow anhand der Daten in den folgenden Tabellen.
 
@@ -315,7 +315,7 @@ Das Ziel des AD-Bereitstellungsworkflow ist das Hinzufügen der Fabrikam-Synchro
 
 
 
-### <a name="step-8-create-the-mpr"></a>Schritt 8: Erstellen der MPR
+### <a name="step-8-create-the-mpr"></a>Schritt 8: Erstellen der MPR
 
 Die erforderliche MPR ist vom Typ „Listenübergang“ und wird ausgelöst, wenn eine Ressource Mitglied der Gruppe „Alle Vertragsnehmer“ wird. Die folgenden Tabellen zeigen die Konfiguration.  Erstellen Sie eine MPR anhand der Daten in den folgenden Tabellen.
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.openlocfilehash: d00eaa284f1d54a1cbe2e0f8b936bbc41c19caea
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379618"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64517856"
 ---
 # <a name="step-7--elevate-a-users-access"></a>Schritt 7 – Erhöhte Rechte für den Benutzerzugriff
 

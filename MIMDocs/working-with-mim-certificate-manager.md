@@ -12,11 +12,11 @@ ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 8ff9edce6da865418e300095ff0827853a35d4eb
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358345"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64517219"
 ---
 # <a name="mim-certificate-manager-windows-store-application-deployment"></a>Bereitstellung der Windows Store-Anwendung des MIM-Zertifikat-Managers
 

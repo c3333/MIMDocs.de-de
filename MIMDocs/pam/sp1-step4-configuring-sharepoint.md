@@ -12,11 +12,11 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 422c4c973d76f5b91fb2463e237ead1984153484
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379429"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518094"
 ---
 # <a name="step-4-configuring-sharepoint"></a>Schritt 4: Konfigurieren von SharePoint
 
@@ -46,7 +46,7 @@ Nach der Installation wird die GUI der SharePoint-Konfiguration geöffnet, und S
 
 1. Wechseln Sie auf der Registerkarte **Verbindung mit einer Serverfarm herstellen** zu **Eine neue Serverfarm erstellen**.
 2. Geben Sie den **SQL-Server** als Datenbankserver für die Konfigurationsdatenbank und das **SharePoint-Dienstkonto** als Datenbankzugriffskonto für SharePoint an.
-3. Geben Sie ein Kennwort als Passphrase der Farmsicherheit an **(die Passphrase wird später nicht verwendet)**.
+3. Geben Sie ein Kennwort als Passphrase der Farmsicherheit an **(die Passphrase wird später nicht verwendet)** .
 4. Übernehmen Sie die weiteren Standardeinstellungen des SharePoint-Konfigurations-Assistenten, um eine Einzelserverfarm zu erstellen.
 
 Details finden Sie im Abschnitt **Konfigurieren von SharePoint** in [Schritt 3: Vorbereiten ein PAM-Servers](/microsoft-identity-manager/pam/step-3-prepare-pam-server). Wenn der Vorgang abgeschlossen ist, führen Sie das Skript „\PAMDeployment.ps1“ erneut aus und wählen Option 4 (SharePoint-Setup), um diesen Schritt abzuschließen.
