@@ -11,11 +11,11 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.suite: ems
 ms.openlocfilehash: 18e4127b1d854a53734142bb58442627619491ef
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358532"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64517518"
 ---
 # <a name="work-with-hybrid-reporting-in-identity-manager"></a>Arbeiten mit der Hybridberichterstellung im Identity Manager
 
@@ -24,13 +24,13 @@ Dieser Artikel erläutert, wie Sie lokale Daten und Clouddaten in Azure in Hybri
 ## <a name="available-hybrid-reports"></a>Verfügbare Hybridberichte
 Dies sind die ersten drei Microsoft Identity Manager-Berichte, die in Azure Active Directory (Azure AD) verfügbar sind:
 
-- **Aktivität zum Zurücksetzen des Kennworts**: Zeigt jede Durchführung einer Kennwortzurücksetzung mithilfe von SSPR (Self-Service Password Reset, Self-Service-Kennwortzurücksetzung) durch einen Benutzer an und stellt die für die Authentifizierung verwendeten Gates oder Methoden bereit.
+- **Aktivität "Zurücksetzen des Kennworts":** Zeigt jede Kennwortzurücksetzung mithilfe der Self-Service-Kennwortzurücksetzung (SSPR) durch einen Benutzer an und stellt die für die Authentifizierung verwendeten Gates oder Methoden bereit.
 
-- **Registrierung für die Kennwortzurücksetzung**: Zeigt jedes Vorkommen einer Benutzerregistrierung für SSPR sowie die zur Authentifizierung verwendete Methode an. Bei der Methode kann es sich z.B. um eine Mobiltelefonnummer oder eine Kombination aus Fragen und Antworten handeln.
+- **Registrierung für die Kennwortzurücksetzung:** Zeigt jede Benutzerregistrierung für SSPR sowie die zur Authentifizierung verwendeten Methoden an. Bei der Methode kann es sich z.B. um eine Mobiltelefonnummer oder eine Kombination aus Fragen und Antworten handeln.
    > [!NOTE]
    > Bei der *Registrierung für die Kennwortzurücksetzung* wird kein Unterschied zwischen SMS-Gate und MFA-Gate gemacht. Beide werden als Mobiltelefonmethoden betrachtet.
 
-- **Self-Service-Gruppenaktivität**: Zeigt jeden Versuch einer Person an, sich selbst zu einer Gruppe oder Gruppenerstellung hinzuzufügen oder daraus zu löschen.
+- **Self-Service-Gruppenaktivität:** Zeigt jeden Versuch einer Person an, sich selbst einer Gruppe hinzuzufügen, sich aus dieser zu löschen oder eine Gruppe zu erstellen.
 
     ![Bild: Azure-Hybridberichterstellung – Aktivität „Zurücksetzen des Kennworts“](media/MIM-Hybrid-passwordreset2.jpg)
 
@@ -56,7 +56,7 @@ Die Anforderungen zum Verwenden der Identity Manager-Hybridberichterstellung sin
 |                                      Azure AD Premium                                       |                                                                                                        Die Hybridberichterstellung ist ein Feature von Azure AD Premium und erfordert Azure AD Premium. </br>Weitere Informationen finden Sie unter [Erste Schritte mit Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium). </br>Erhalten Sie eine [kostenlose 30-Tage-Testversion von Azure AD Premium](https://azure.microsoft.com/trial/get-started-active-directory/).                                                                                                         |
 |                     Sie müssen globaler Administrator Ihres Azure AD-Verzeichnisses sein                     |                                                                   Standardmäßig können nur globale Administratoren die Agents installieren und konfigurieren, die erforderlich sind, um mit der Verwendung des Features zu beginnen, auf das Portal zuzugreifen und Vorgänge in Azure auszuführen. </br>**Wichtig**: Für die Installation der Agents muss ein Geschäfts-, Schul- oder Unikonto verwendet werden. Ein Microsoft-Konto kann nicht verwendet werden. Weitere Informationen finden Sie unter [Als Unternehmen für Azure registrieren](https://docs.microsoft.com/azure/active-directory/sign-up-organization).                                                                   |
 | Der Identity Manager-Hybrid-Agent ist auf jedem Identity Manager-Zieldienstserver installiert |                                                                                                                                                                                                       Für die Hybridberichterstellung müssen die Agents auf den Zielservern installiert und konfiguriert sein, um die Daten zu empfangen und Überwachungs- und Analysefunktionen bereitzustellen.  </br>                                                                                                                                                                                                       |
-|                    Ausgehende Verbindungen zu den Azure-Dienstendpunkten                     | Während der Installation und der Laufzeit benötigt der Agent Konnektivität mit den Azure-Dienstendpunkten. Wenn die ausgehende Konnektivität durch Firewalls blockiert wird, stellen Sie sicher, dass die folgenden Endpunkte der Zulassungsliste hinzugefügt werden:<ul><li>\*.blob.core.windows.net </li><li>\*.servicebus.windows.net – Port: 5671 </li><li>\*.adhybridhealth.azure.com/</li><li><https://management.azure.com> </li><li><https://policykeyservice.dc.ad.msft.net/></li><li><https://login.windows.net></li><li><https://login.microsoftonline.com></li><li><https://secure.aadcdn.microsoftonline-p.com></li></ul> |
+|                    Ausgehende Verbindungen zu den Azure-Dienstendpunkten                     | Während der Installation und der Laufzeit benötigt der Agent Konnektivität mit den Azure-Dienstendpunkten. Wenn die ausgehende Konnektivität durch Firewalls blockiert wird, stellen Sie sicher, dass die folgenden Endpunkte der Zulassungsliste hinzugefügt werden:<ul><li>\*.blob.core.windows.net </li><li>\*.servicebus.windows.net - Port: 5671 </li><li>\*.adhybridhealth.azure.com/</li><li><https://management.azure.com> </li><li><https://policykeyservice.dc.ad.msft.net/></li><li><https://login.windows.net></li><li><https://login.microsoftonline.com></li><li><https://secure.aadcdn.microsoftonline-p.com></li></ul> |
 |                         Ausgehende Konnektivität basierend auf IP-Adressen                         |                                                                                                                                                                                                                      Informationen zu einer auf IP-Adressen basierenden Firewallfilterung finden Sie unter [Azure-IP-Bereiche](https://www.microsoft.com/download/details.aspx?id=41653).                                                                                                                                                                                                                      |
 |                 Die SSL-Inspektion für ausgehenden Datenverkehr wird gefiltert oder ist deaktiviert                 |                                                                                                                                                                                                               Bei der Agent-Registrierung oder bei Vorgängen zum Hochladen von Daten kann es zu Fehlern kommen, wenn auf der Netzwerkebene eine SSL-Inspektion oder -Terminierung für ausgehenden Datenverkehr erfolgt.                                                                                                                                                                                                                |
 |                      Firewallports auf dem Server, der den Agent ausführt                       |                                                                                                                                                                                                          Damit der Agent mit den Azure-Dienstendpunkten kommunizieren kann, müssen die folgenden Firewallports geöffnet sein:<ul><li>TCP-Port 443</li><li>TCP-Port 5671</li></ul>                                                                                                                                                                                                          |
@@ -71,7 +71,7 @@ Nachdem der Agent für die Berichterstellung installiert wurde, werden die Daten
 
 2.  Laden Sie den Identity Manager-Berichterstellungs-Agent herunter, und führen Sie folgende Schritte aus:
 
-    ein. Melden Sie sich beim Azure AD-Verwaltungsportal an, und wählen Sie **Active Directory** aus.
+    a. Melden Sie sich beim Azure AD-Verwaltungsportal an, und wählen Sie **Active Directory** aus.
 
     b. Doppelklicken Sie auf das Verzeichnis, für das Sie globaler Administrator sind und ein Azure AD Premium-Abonnement besitzen.
 
@@ -79,9 +79,9 @@ Nachdem der Agent für die Berichterstellung installiert wurde, werden die Daten
 
 3.  Installieren Sie den Berichterstellungs-Agent, indem Sie folgende Schritte ausführen:
 
-    ein.  Laden Sie die Datei [MIMHReportingAgentSetup.exe](http://download.microsoft.com/download/7/3/1/731D81E1-8C1D-4382-B8EB-E7E7367C0BF2/MIMHReportingAgentSetup.exe) auf den Identity Manager-Dienstserver herunter.
+    a.  Laden Sie die Datei [MIMHReportingAgentSetup.exe](http://download.microsoft.com/download/7/3/1/731D81E1-8C1D-4382-B8EB-E7E7367C0BF2/MIMHReportingAgentSetup.exe) auf den Identity Manager-Dienstserver herunter.
 
-    b.  Führen Sie `MIMHReportingAgentSetup.exe` aus. 
+    b.  Führen Sie `MIMHReportingAgentSetup.exe`aus. 
 
     c.  Führen Sie das Installationsprogramm des Agents aus.
 

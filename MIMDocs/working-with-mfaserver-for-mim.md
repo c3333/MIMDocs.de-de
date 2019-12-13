@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.openlocfilehash: 69b7f8f4b94f9f94b2aef6afd9573ad8173e148e
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379793"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64517676"
 ---
 # <a name="use-azure-multi-factor-authentication-server-to-activate-pam-or-sspr"></a>Use Azure Multi-Factor Authentication Server to activate PAM or SSPR (Verwenden eines Azure Multi-Factor Authentication-Servers zum Aktivieren von PAM oder SSPR)
 Das folgende Dokument beschreibt, wie Sie einen Azure Multi-Factor Authentication-Server als zweite Sicherheitsebene einrichten, wenn Benutzer Rollen in Priviledge Access Management oder der Self-Service-Kennwortzurücksetzung aktivieren.
@@ -39,17 +39,17 @@ Um Azure Multi-Factor Authentication-Server mit MIM verwenden zu können, benöt
 > [!NOTE] 
 > Für die Konfiguration benötigen Sie ein gültiges SSL-Zertifikat, das für das SDK installiert. 
 
-### <a name="step-1-download-azure-multi-factor-authentication-server-from-the-azure-portal"></a>Schritt 1: Herunterladen von Multi-Factor Authentication-Server im Azure-Portal 
+### <a name="step-1-download-azure-multi-factor-authentication-server-from-the-azure-portal"></a>Schritt 1: Laden Sie Multi-Factor Authentication-Server im Azure-Portal herunter. 
 Melden Sie sich beim [Azure-Portal](https://portal.azure.com/) an, und laden Sie den Azure MFA-Server herunter.
 ![working-with-mfaserver-for-mim_downloadmfa](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_downloadmfa.PNG)
 
-### <a name="step-2-generate-activation-credentials"></a>Schritt 2: Generieren von Aktivierungsanmeldeinformationen
+### <a name="step-2-generate-activation-credentials"></a>Schritt 2: Generieren Sie die Anmeldeinformationen für die Aktivierung.
 Verwenden Sie zum Generieren von Aktivierungsanmeldeinformationen den Link **Generieren von Aktivierungsanmeldeinformationen, mit denen die Verwendung initiiert werden kann**. Speichern Sie diese Informationen für später.
 
-### <a name="step-3-install-the-azure-multi-factor-authentication-server"></a>Schritt 3: Installieren von Azure Multi-Factor Authentication-Server
+### <a name="step-3-install-the-azure-multi-factor-authentication-server"></a>Schritt 3: Installieren Sie Multi-Factor Authentication-Server.
 [Installieren](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy#install-and-configure-the-mfa-server) Sie den Server, nachdem Sie diesen heruntergeladen haben.  Ihre Aktivierungsanmeldeinformationen werden benötigt. 
 
-### <a name="step-4-create-your-iis-web-application-that-will-host-the-sdk"></a>Schritt 4: Erstellen Ihrer IIS-Webanwendung, die das SDK hostet
+### <a name="step-4-create-your-iis-web-application-that-will-host-the-sdk"></a>Schritt 4: Erstellen Sie die IIS-Webanwendung, die das SDK hostet.
 1. Öffnen Sie den IIS-Manager. ![working-with-mfaserver-for-mim_iis.PNG](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_iis.PNG)
 2.  Erstellen Sie eine neue Website, rufen Sie „MIM MFASDK“ ab, und verknüpfen Sie es mit einem leeren Verzeichnis. ![working-with-mfaserver-for-mim_sdkweb.PNG](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_sdkweb.PNG)
 3. Öffnen Sie die Multi-Factor Authentication-Konsole, und klicken Sie auf das Webdienst-SDK. ![working-with-mfaserver-for-mim_sdkinstall.PNG](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_sdkinstall.PNG).
@@ -61,15 +61,15 @@ Verwenden Sie zum Generieren von Aktivierungsanmeldeinformationen den Link **Gen
 5. Als nächstes muss das MIM-Dienstkonto importiert werden. Öffnen Sie die Multi-Factor Authentication-Konsole, und klicken Sie auf „Benutzer“. 1. Klicken Sie auf „Importieren aus Active Directory“. 2. Navigieren Sie zum Dienstkonto namens „contoso\mimservice“. 3. Klicken Sie auf „Importieren“ und „Schließen“. ![working-with-mfaserver-for-mim_importmimserviceaccount.PNG](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_importmimserviceaccount.PNG) 
 6. Bearbeiten Sie das MIM-Dienstkonto, um es in der Multi-Factor Authentication-Verwaltungskonsole zu aktivieren. ![working-with-mfaserver-for-mim_enableserviceaccount.PNG](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_enableserviceaccount.PNG)
 7. Aktualisieren Sie die IIS-Authentifizierung auf der „MIM MFASDK“-Website. Zuerst müssen Sie die „Anonyme Authentifizierung“ deaktivieren und dann die „Windows-Authentifizierung“ aktivieren. ![working-with-mfaserver-for-mim_iisconfig.PNG](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_iisconfig.PNG)
-8. Letzter Schritt: Fügen Sie „PhoneFactor Admins“ dem MIM-Dienstkonto hinzu. ![working-with-mfaserver-for-mim_addservicetomfaadmin.PNG](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_addservicetomfaadmin.PNG)
+8. Letzter Schritt: Fügen Sie „PhoneFactor Admins“ das MIM-Dienstkonto hinzu. ![working-with-mfaserver-for-mim_addservicetomfaadmin.PNG](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_addservicetomfaadmin.PNG)
 
 ## <a name="configuring-the-mim-service-for-azure-multi-factor-authentication-server"></a>Konfigurieren des MIM-Diensts für Azure Multi-Factor Authentication-Server 
 
-### <a name="step-1-patch-server-to-452020"></a>Schritt 1: Aktualisieren Sie den Server auf Version 4.5.202.0.
+### <a name="step-1-patch-server-to-452020"></a>Schritt 1: Aktualisieren Sie den Server auf Version 4.5.202.0.
  
-### <a name="step-2-backup-and-open-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Schritt 2: Sichern Sie die unter „C:\Programme\Microsoft Forefront Identity Manager\2010\Service“ gespeicherte MfaSettings.xml-Datei, und öffnen Sie diese.
+### <a name="step-2-backup-and-open-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Schritt 2: Sichern Sie die unter „C:\Programme\Microsoft Forefront Identity Manager\2010\Service“ gespeicherte Datei „MfaSettings.xml“, und öffnen Sie diese.
 
-### <a name="step-3-update-the-following-lines"></a>Schritt 3: Aktualisieren Sie die folgenden Zeilen:
+### <a name="step-3-update-the-following-lines"></a>Schritt 3: Aktualisieren Sie die folgenden Zeilen.
 1. 3.1 Löschen/Entfernen Sie die folgenden Konfigurationeintragszeilen: <br>
 <LICENSE_KEY></LICENSE_KEY><br>
 <GROUP_KEY></GROUP_KEY><br>

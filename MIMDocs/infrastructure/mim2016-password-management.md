@@ -10,11 +10,11 @@ ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 45b46ed10f7eda506fe1fc1af94c4be06a1a37b9
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50380191"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64516581"
 ---
 # <a name="microsoft-identity-manager-2016-password-management"></a>Kennwortverwaltung mit Microsoft Identity Manager 2016
 
@@ -144,7 +144,7 @@ Idealerweise werden Änderungen ohne Fehler synchronisiert, wenn ein Benutzer ei
 -   **Fehlgeschlagene Kennwortsynchronisierung mit einer Zieldatenquelle**: Dies kann auch auftreten, wenn das Netzwerk offline ist, oder wenn die Datenquelle nicht verfügbar ist.
     Die Kennwortänderungsbenachrichtigung wird in die Warteschlange eingereiht und gemäß der Einstellung des Verwaltungs-Agents für Wiederholungsversuche und -intervalle erneut gesendet. Alle Kennwörter werden verschlüsselt, wenn sie für einen erneuten Versuch gespeichert werden. Sie werden gelöscht, sobald der Vorgang erfolgreich abgeschlossen oder die maximale Zahl an Versuchen überschritten wurde.
 
--   **Aktivieren eines betriebsbereiten Standbyservers, auf dem MIM aufgeführt wird, nachdem der Vorgang fehlgeschlagen ist**: Wenn der primäre Server ausfällt, auf dem MIM ausgeführt wird, können Sie einen betriebsbereiten Standbyserver für die Kennwortsynchronisierung festlegen und diesen aktivieren, ohne dass Kennwortänderungen verloren gehen. Weitere Informationen finden Sie unter [MIISactivate: Server Activation Tool (MIISActivate: Serveraktivierungstool)](https://technet.microsoft.com/library/jj590194(v=ws.10).aspx).
+-   **Aktivieren eines betriebsbereiten Standbyservers, auf dem MIM aufgeführt wird, nachdem der Vorgang fehlgeschlagen ist**: Wenn der primäre Server ausfällt, auf dem MIM ausgeführt wird, können Sie einen betriebsbereiten Standbyserver für die Kennwortsynchronisierung festlegen und diesen aktivieren, ohne dass Kennwortänderungen verloren gehen. Weitere Informationen finden Sie unter [MIISactivate: Serveraktivierungstool](https://technet.microsoft.com/library/jj590194(v=ws.10).aspx).
 
 Wenn der Vorgang fehlschlägt, kann dies derartig schwerwiegende Gründe haben, dass auch mehrere Versuche nicht zu einem erfolgreichen Abschluss führen. In solchen Fällen wird ein Fehlerereignis verzeichnet und der Vorgang wird abgebrochen. Folgende Ereignisse werden nicht erneut versucht:
 

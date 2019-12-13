@@ -10,16 +10,16 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.openlocfilehash: 139c58510117ad422529a4ff0facd23040023713
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358770"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64520928"
 ---
 <a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy"></a>Azure AD-Business-to-Business-Kollaboration (B2B) mit Microsoft Identity Manager(MIM) 2016 SP1 mit Azure-Anwendungsproxy
 ============================================================================================================================
 
-Das Anfangsszenario ist die Lebenszyklusverwaltung für externe AD-Benutzerkonten.   In diesem Szenario hat eine Organisation Gäste in ihr Azure AD-Verzeichnis eingeladen und möchte diesen Gästen über den [Azure AD-Anwendungsproxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) oder andere Gatewaymechanismen Zugriff auf die lokale integrierte Windows-Authentifizierung oder Kerberos-basierte Anwendungen gewähren. Der Azure AD-Anwendungsproxy erfordert, dass jeder Benutzer zur Identifikation und Delegierung ein eigenes AD DS-Konto hat.
+Das Anfangsszenario ist die Lebenszyklusverwaltung für externe AD-Benutzerkonten.   In diesem Szenario hat eine Organisation Gäste in ihr Azure AD-Verzeichnis eingeladen und möchte diesen Gästen über den  [Azure AD-Anwendungsproxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) oder andere Gatewaymechanismen Zugriff auf die lokale integrierte Windows-Authentifizierung oder auf Kerberos-basierte Anwendungen gewähren. Der Azure AD-Anwendungsproxy erfordert, dass jeder Benutzer zur Identifikation und Delegierung ein eigenes AD DS-Konto hat.
 
 ## <a name="scenario-specific-guidance"></a>Szenariospezifische Anleitungen
 
@@ -50,7 +50,7 @@ Contoso Pharmaceuticals arbeitet mit Trey Research Inc. als Teil ihrer F&E-Abtei
 
 -   Contoso Pharmaceuticals befindet sich auf einem eigenen Mandanten mit einer eigenen Domäne.
 
--   Jemand hat einen externen Benutzer zum Mandanten von Contoso Pharmaceuticals eingeladen.
+-   Jemand hat einen externen Benutzer eingeladen, den Mandanten von Contoso Pharmaceuticals zu nutzen.
     Dieser Benutzer hat die Einladung angenommen und kann auf freigegebene Ressourcen zugreifen.
 
 -   Contoso Pharmaceuticals hat eine Anwendung über App-Proxy veröffentlicht. In diesem Szenario ist die Beispielanwendung das MIM-Portal. Dies würde es einem Gastbenutzer ermöglichen, an MIM-Prozessen, z. B. Helpdeskszenarien, teilzunehmen oder den Zugriff auf Gruppen in MIM anzufordern.
@@ -69,14 +69,14 @@ Weitere Informationen finden Sie unter [Azure AD Connect-Synchronisierung: Konfi
 ## <a name="create-the-azure-ad-application"></a>Erstellen der Azure AD-Anwendung 
 
 
-Hinweis: Bevor Sie in MIM Sync den Verwaltungs-Agent für den Graph-Connector erstellen, sollten Sie die Anleitung zur Bereitstellung des [Graph-Connectors](microsoft-identity-manager-2016-connector-graph.md) gelesen und eine Anwendung mit einer Client-ID und einem geheimen Schlüssel erstellt haben.
+Hinweis: Bevor Sie im MIM-Synchronisierungsdienst den Verwaltungs-Agent für den Graph-Connector erstellen, sollten Sie die Anleitung zur Bereitstellung des [Graph-Connectors](microsoft-identity-manager-2016-connector-graph.md) gelesen und eine Anwendung mit einer Client-ID und einem Geheimnis erstellt haben.
 Stellen Sie sicher, dass die Anwendung für mindestens eine dieser Berechtigungen autorisiert wurde: `User.Read.All`, `User.ReadWrite.All`, `Directory.Read.All` oder `Directory.ReadWrite.All`. 
 
 ## <a name="create-the-new-management-agent"></a>Erstellen des neuen Verwaltungs-Agents
 
 
-In der Benutzeroberfläche von Synchronization Service Manager wählen Sie **Connectors** und **Erstellen** aus.
-Wählen Sie **Graph (Microsoft)** aus, und geben Sie ihm einen aussagekräftigen Namen.
+Klicken Sie auf der Benutzeroberfläche von Synchronization Service Manager auf  **Connectors**  und anschließend auf  **Erstellen**.
+Wählen Sie  **Graph (Microsoft)**  aus, und geben Sie ihm einen aussagekräftigen Namen.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
@@ -183,7 +183,7 @@ Machen Sie dann die folgenden Angaben
 
 Attributname: **Benutzerprinzipalname**
 
-Attributtyp: **Zeichenfolge (indizierbar)**
+Attributtyp: **String (Indexable)** (Zeichenfolge (indizierbar))
 
 Indiziert = **True**
 
@@ -226,7 +226,7 @@ Konfigurieren Sie die folgenden Regeln für den eingehenden Attributfluss.  Stel
 |                       |                           | [mail⇒mail](javascript:void(0);)                                      |
 |                       |                           | [mobilePhone⇒mobilePhone](javascript:void(0);)                        |
 
-### <a name="synchronization-rule-create-guest-user-account-to-active-directory"></a>Synchronisierungsregel: Gastbenutzerkonto in Active Directory erstellen 
+### <a name="synchronization-rule-create-guest-user-account-to-active-directory"></a>Synchronisierungsregel: Gastbenutzerkonto für Active Directory Domain Services erstellen 
 
 Anhand dieser Synchronisierungsregel wird der Benutzer in Active Directory erstellt.  Stellen Sie sicher, dass der Fluss für `dn` den Benutzer in die Organisationseinheit einordnen muss, die von Azure AD Connect ausgeschlossen wurde.  Aktualisieren Sie außerdem den Fluss für `unicodePwd` so, dass sie Ihrer AD-Kennwortrichtlinie entspricht. Der Benutzer muss das Kennwort nicht kennen.  Beachten Sie, dass der Wert von `262656` für `userAccountControl` die Flags `SMARTCARD_REQUIRED` und `NORMAL_ACCOUNT` kodiert.
 
@@ -249,7 +249,7 @@ Flussregeln:
 | **Y**                 |                           | [RandomNum(0,999)+userPrincipalName⇒unicodePwd](javascript:void(0);)  |
 | **Y**                 |                           | [262656⇒userAccountControl](javascript:void(0);)                      |
 
-### <a name="optional-synchronization-rule-import-b2b-guest-user-objects-sid-to-allow-for-login-to-mim"></a>Optionale Synchronisierungsregel: B2B-Gastbenutzerobjekte SID importieren, um Anmeldung bei MIM zuzulassen 
+### <a name="optional-synchronization-rule-import-b2b-guest-user-objects-sid-to-allow-for-login-to-mim"></a>Optionale Synchronisierungsregel: B2B-Gastbenutzerobjekte-SID importieren, um Anmeldung bei MIM zuzulassen 
 
 Diese eingehende Synchronisierungsregel bringt das SID-Attribut des Benutzers aus Active Directory wieder in MIM, sodass der Benutzer auf das MIM-Portal zugreifen kann.  Für das MIM-Portal ist es erforderlich, dass die Attribute `samAccountName`, `domain` und `objectSid` des Benutzers in der Datenbank des MIM-Diensts gefüllt wurden.
 

@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.openlocfilehash: 2e376bcc88518b911f93ce9cd4ab920eb428815b
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358651"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64519377"
 ---
 <a name="microsoft-identity-manager-connector-for-microsoft-graph"></a>Microsoft Identity Manager-Connector für Microsoft Graph
 =======================================================================================
@@ -22,7 +22,7 @@ ms.locfileid: "49358651"
 <a name="summary"></a>Zusammenfassung 
 =======
 
-Der [Microsoft Identity Manager-Connector für Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495) bietet zusätzliche Integrationsszenarios für Azure AD Premium-Kunden.  Er taucht in der MIM-Oberfläche beim Synchronisieren zusätzlicher Metaverse-Objekte auf, die aus der [Microsoft Graph-API](https://developer.microsoft.com/en-us/graph/) Version 1 und Betaversion abgerufen werden.
+Der [Microsoft Identity Manager-Connector für Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495) bietet zusätzliche Integrationsszenarios für Azure AD Premium-Kunden.  Er wird auf der MIM-Oberfläche für das Synchronisieren zusätzlicher Metaverse-Objekte angezeigt, die aus Version 1 und aus der Betaversion der  [Microsoft Graph-API](https://developer.microsoft.com/en-us/graph/)  abgerufen werden.
 
 <a name="scenarios-covered"></a>Abgedeckte Szenarios
 =================
@@ -37,7 +37,7 @@ Wenn Sie weitere Informationen zum Konfigurieren der MIM-Synchronisierung für d
 <a name="other-identity-management-scenarios"></a>Weitere Szenarios der Identitätsverwaltung
 ---------------
 
-Der Connector kann für bestimmte weitere Szenarios der Identitätsverwaltung verwendet werden. Zu diesen zählen das Erstellen, Lesen, Aktualisieren und Löschen von Benutzer-, Gruppen- und Kontaktobjekten in Azure AD, jenseits der Benutzer- und Gruppensynchronisierung mit Azure AD. Bedenken Sie bei der Auswertung möglicher Szenarios Folgendes: Dieser Connector kann nicht in einem Szenario verwendet werden, das zu einer Datenflussüberlappung, einem tatsächlichen oder einem potenziellen Synchronisierungskonflikt mit einer Azure AD Connect-Bereitstellung führen würde.  [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) wird für die Integration lokaler Verzeichnisse in Azure AD durch die Synchronisierung von Benutzern und Gruppen aus lokalen Verzeichnissen mit Azure AD als Ansatz empfohlen.  Azure AD Connect bietet viele weitere Synchronisierungsfeatures und ermöglicht Szenarios, wie z.B. das Kennwort- und Geräterückschreiben, die für mit MIM erstellte Objekte nicht ausgeführt werden können. Wenn Daten in AD DS zusammengetragen werden, sollten Sie z.B. sicherstellen, dass diese aus Azure AD Connect ausgeschlossen werden, indem Sie versuchen, diese Objekte wieder mit dem Azure AD-Verzeichnis abzugleichen.  Zudem kann dieser Connector nicht verwendet werden, um Änderungen an Azure AD-Objekten vorzunehmen, die von Azure AD Connect erstellt wurden.
+Der Connector kann für bestimmte weitere Szenarios der Identitätsverwaltung verwendet werden. Zu diesen zählen das Erstellen, Lesen, Aktualisieren und Löschen von Benutzer-, Gruppen- und Kontaktobjekten in Azure AD, jenseits der Benutzer- und Gruppensynchronisierung mit Azure AD. Bedenken Sie bei der Auswertung möglicher Szenarios Folgendes: Dieser Connector kann nicht in einem Szenario verwendet werden, das zu einer Datenflussüberlappung, einem tatsächlichen oder einem potenziellen Synchronisierungskonflikt mit einer Azure AD Connect-Bereitstellung führen würde.  [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594)  wird empfohlen, um lokale Verzeichnisse in Azure AD zu integrieren. Dabei werden Benutzer und Gruppen aus lokalen Verzeichnissen synchronisiert und in Azure AD übertragen.  Azure AD Connect bietet viele weitere Synchronisierungsfeatures und ermöglicht Szenarios, wie z.B. das Kennwort- und Geräterückschreiben, die für mit MIM erstellte Objekte nicht ausgeführt werden können. Wenn Daten in AD DS zusammengetragen werden, sollten Sie z.B. sicherstellen, dass diese aus Azure AD Connect ausgeschlossen werden, indem Sie versuchen, diese Objekte wieder mit dem Azure AD-Verzeichnis abzugleichen.  Zudem kann dieser Connector nicht verwendet werden, um Änderungen an Azure AD-Objekten vorzunehmen, die von Azure AD Connect erstellt wurden.
 
 
 
@@ -99,8 +99,8 @@ Weitere Details zu erforderlichen Berechtigungen finden Sie [hier](https://devel
 =======================
 
 
-9.  In der Benutzeroberfläche von Synchronization Service Manager wählen Sie **Connectors** und **Erstellen** aus.
-Wählen Sie **Graph (Microsoft)** aus, erstellen Sie einen Connector, und geben Sie ihm einen aussagekräftigen Namen.
+9.  Klicken Sie auf der Benutzeroberfläche von Synchronization Service Manager auf  **Connectors**  und anschließend auf  **Erstellen**.
+Wählen Sie  **Graph (Microsoft)**   aus, erstellen Sie einen Connector, und geben Sie ihm einen aussagekräftigen Namen.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
@@ -213,7 +213,7 @@ Beispiel hierfür mit [Azure AD PowerShell Module Public Preview Release](https:
 
 ![](media/microsoft-identity-manager-2016-ma-graph/a26ded518f94b9b557064b73615c71f6.png)
 
-New-AzureADPolicy -Definition \@('{"TokenLifetimePolicy":{"Version":1, **"AccessTokenLifetime":"5:00:00"**}}') -DisplayName "OrganizationDefaultPolicyScenario" -IsOrganizationDefault \$true -Type "TokenLifetimePolicy"
+New-AzureADPolicy -Definition \@('{"TokenLifetimePolicy":{"Version":1, **"AccessTokenLifetime":"5:00:00"** }}') -DisplayName "OrganizationDefaultPolicyScenario" -IsOrganizationDefault \$true -Type "TokenLifetimePolicy"
 
 <a name="next-steps"></a>Nächste Schritte
 ----------

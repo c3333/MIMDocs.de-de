@@ -13,11 +13,11 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 2b5340ef3f98ba94904e595c3526d09bdac3f95f
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379921"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518501"
 ---
 # <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Schritt 4 – Installieren von MIM-Komponenten auf PAM-Server und Arbeitsstation
 
@@ -50,7 +50,7 @@ Befolgen Sie die Anweisungen des Installationsprogramms, und schließen Sie die 
 4. Wählen Sie das Generieren eines neuen selbstsignierten Zertifikats.
 
 5. Legen Sie die folgenden Anmeldeinformationen fest:
-   - Name des Dienstkontos: *MIMService*  
+   - Dienstkontoname: *MIMService*  
    - Dienstkontokennwort: <em>Pass@word1</em> (oder das Kennwort, das Sie in Schritt 2 erstellt haben)  
    - Dienstkontodomäne: *PRIV*  
    - Dienst-E-Mail-Konto: <em>MIMService@priv.contoso.local</em>  
@@ -70,23 +70,23 @@ Befolgen Sie die Anweisungen des Installationsprogramms, und schließen Sie die 
     ![Bindungsinformationen für die PAM REST-API – Screenshot](./media/PAM_GS_MIM_2015_Service_Portal_configure_application_pool.png)
 
 12. Konfigurieren Sie das MIM PAM REST-API-Konto so, dass das auch von SharePoint verwendete Konto verwendet wird (da sich das MIM-Portal ebenfalls auf diesem Server befindet):
-    - Anwendungspoolkonto-Name: *SharePoint*  
+    - Name des Anwendungspoolkontos: *SharePoint*  
     - Anwendungspoolkonto-Kennwort: <em>Pass@word1</em> (oder das Kennwort, das Sie in Schritt 2 erstellt haben)  
-    - Anwendungspoolkonto-Domäne: *PRIV*  
+    - Domäne des Anwendungspoolkontos: *PRIV*  
 
     ![Anmeldeinformationen für Anwendungspoolkonto – Screenshot](./media/PAM_GS_Configure_Component_Service.png)
 
     Es kann eine Warnung angezeigt werden, dass das Dienstkonto in seiner aktuellen Konfiguration nicht sicher ist. Das ist in Ordnung.
 
 13. Konfigurieren Sie den MIM PAM-Komponentendienst:
-    - Name des Dienstkontos: *MIMComponent*
+    - Dienstkontoname: *MIMComponent*
     - Dienstkontokennwort: <em>Pass@word1</em> (oder das Kennwort, das Sie in Schritt 2 erstellt haben)  
     - Dienstkontodomäne: *PRIV*
 
     ![Anmeldeinformationen für PAM-Komponentendienst – Screenshot](./media/PAM_GS_Configure_MIM_PAM_component_service.png)
 
 14. Konfigurieren Sie den PAM-Überwachungsdienst:
-    - Name des Dienstkontos: *MIMMonitor*  
+    - Dienstkontoname: *MIMMonitor*  
     - Dienstkontokennwort: <em>Pass@word1</em> (oder das Kennwort, das Sie in Schritt 2 erstellt haben)  
     - Dienstkontodomäne: *PRIV*  
 
@@ -108,7 +108,7 @@ Nach Abschluss der Installation wird der Server neu gestartet. Überprüfen Sie 
 
 5. Klicken Sie in Internet Explorer auf **Verwaltungsrichtlinienregeln**, um das MIM-Portal anzuzeigen.
 
-6. Suchen Sie nach der Verwaltungsrichtlinienregel **Benutzerverwaltung: Benutzer können eigene Attribute lesen**.
+6. Suchen Sie nach der Verwaltungsrichtlinienregel **Benutzerverwaltung: Benutzer können eigene Attribute lesen.**
 
 7. Wählen Sie diese Verwaltungsrichtlinienregel aus, deaktivieren Sie **Richtlinie ist deaktiviert**, klicken Sie auf **OK** und dann auf **Absenden**.
 

@@ -13,11 +13,11 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: e306748e982eb2eb123246bc7f309465823eaf35
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379904"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518219"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Schritt 3: Vorbereiten eines PAM-Servers
 
@@ -35,7 +35,7 @@ Installieren Sie auf einem dritten virtuellen Computer Windows Server 2012 R2,
 
 2. Lesen und akzeptieren Sie die Lizenzbedingungen.
 
-3.  Da dieser Datenträger leer sein wird, wählen Sie **Benutzerdefiniert: Nur Windows installieren** aus, und nutzen Sie den **nicht initialisierten Speicherplatz**.
+3.  Da der Datenträger leer ist, wählen Sie **Benutzerdefiniert: Nur Windows installieren** aus, und verwenden Sie den **nicht initialisierten Speicherplatz**.
 
 4.  Melden Sie sich bei dem neuen Computer als Administrator an.  In der Systemsteuerung weisen Sie dem Computer eine statische IP-Adresse im virtuellen Netzwerk zu, konfigurieren die Netzwerkschnittstelle so, dass sie DNS-Abfragen an die IP-Adresse von PRIVDC sendet, und legen den Computernamen auf *PAMSRV* fest.  Dies erfordert einen Neustart des Servers.
 

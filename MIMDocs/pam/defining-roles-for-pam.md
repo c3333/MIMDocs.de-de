@@ -12,11 +12,11 @@ ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 38a9fc174c037e5d7c3ea17b46dcf9f6ea924822
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50380016"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518588"
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Definieren von Rollen für Privileged Access Management
 
@@ -134,10 +134,10 @@ Die folgende Tabelle enthält Beispiele für Berechtigungen, die relevant für R
 | ---- | ---- |
 | Admin-OE der Ebene 1 ändern                 | Ändern von Organisationseinheiten, die Admin-Objekte der Ebene 1 enthalten, in Active Directory |
 | Admin-OE der Ebene 2 ändern                 | Ändern von Organisationseinheiten, die Admin-Objekte der Ebene 2 enthalten, in Active Directory |
-| Kontenverwaltung: erstellen/löschen/verschieben | Ändern von Standardbenutzerkonten                                      |
-| Kontenverwaltung: zurücksetzen/entsperren       | Zurücksetzen von Kennwörtern und Entsperren von Konten                                  |
-| Sicherheitsgruppe: erstellen/ändern          | Erstellen und Ändern von Sicherheitsgruppen in Active Directory              |
-| Sicherheitsgruppe: löschen                 | Löschen von Sicherheitsgruppen in Active Directory                         |
+| Kontoverwaltung: Erstellen/Löschen/Verschieben | Ändern von Standardbenutzerkonten                                      |
+| Kontoverwaltung: Zurücksetzen/Entsperren       | Zurücksetzen von Kennwörtern und Entsperren von Konten                                  |
+| Sicherheitsgruppe: Erstellen/Ändern          | Erstellen und Ändern von Sicherheitsgruppen in Active Directory              |
+| Sicherheitsgruppe: Löschen                 | Löschen von Sicherheitsgruppen in Active Directory                         |
 | GPO-Verwaltung                         | Verwalten aller Gruppenrichtlinienobjekte in der Domäne/Gesamtstruktur, die sich nicht auf Server der Ebene 0 auswirken             |
 | PC verknüpfen/lokaler Administrator                    | Lokale Administratorrechte für alle Arbeitsstationen                               |
 | Server verknüpfen/lokaler Administrator                   | Lokale Administratorrechte für alle Server                                    |

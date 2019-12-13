@@ -12,11 +12,11 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: dda6a05337e9a9778135fc7d833a38369540b3e0
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379989"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518182"
 ---
 # <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Schritt 1: Vorbereiten des Hosts und der CORP-Domäne
 
@@ -39,7 +39,7 @@ Installieren Sie auf einem virtuellen Computer Windows Server 2012 R2 oder Win
 
 2. Lesen und akzeptieren Sie die Lizenzbedingungen.
 
-3. Da dieser Datenträger leer sein wird, wählen Sie **Benutzerdefiniert: Nur Windows installieren** aus, und verwenden Sie den nicht initialisierten Speicherplatz.
+3. Da der Datenträger leer ist, wählen Sie **Benutzerdefiniert: Nur Windows installieren** aus, und verwenden Sie den nicht initialisierten Speicherplatz.
 
 4. Melden Sie sich bei dem neuen Computer als Administrator an. Wechseln Sie zur Systemsteuerung. Legen Sie den Computernamen auf *CORPDC* fest, und weisen Sie ihm eine statische IP-Adresse im virtuellen Netzwerk zu. Starten Sie den Server neu.
 

@@ -10,11 +10,11 @@ ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 8987bc53af37b32b95b00c3df67d9581d4e47120
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358855"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518773"
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Microsoft Identity Manager 2016 – Empfohlene Vorgehensweisen
 
@@ -174,7 +174,7 @@ Dieser Abschnitt enthält eine Reihe von Schritten, um die Leistung des ersten D
 > [!IMPORTANT]
 > Stellen Sie sicher, dass Sie die empfohlenen Vorgehensweisen aus dem Abschnitt zur Installation von SQL in dieser Anleitung angewendet haben. 
 
-### <a name="step-1-configure-the-sql-server-for-initial-data-load"></a>Schritt 1: Konfigurieren des Servers mit SQL Server für den ersten Datenladevorgang
+### <a name="step-1-configure-the-sql-server-for-initial-data-load"></a>Schritt 1: Konfigurieren Sie SQL Server für den ersten Datenladevorgang.
 Das erste Laden der Daten kann ein lang andauernder Vorgang sein. Wenn Sie am Anfang große Datenmengen laden möchten, können Sie die Zeit für das Auffüllen der Datenbank verkürzen, indem Sie die Volltextsuche vorübergehend deaktivieren und sie nach dem Abschluss des Exports auf dem MIM 2016-Verwaltungs-Agent (FIM-MA) wieder aktivieren.
 
 So deaktivieren Sie die Volltextsuche vorübergehend
@@ -193,11 +193,11 @@ ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 > [!IMPORTANT]
 > Wenn diese Vorgehensweisen nicht umgesetzt werden, kann dies dazu führen, dass nicht mehr genügend Speicherplatz vorhanden ist. Weitere Details zu diesem Thema finden Sie unter [Übersicht über Wiederherstellungsmodelle](http://go.microsoft.com/fwlink/?LinkID=185370). Weitere Informationen finden Sie unter [FIM 2010 Backup and Restore Guide (FIM 2010-Handbuch zur Sicherung und Wiederherstellung)](http://go.microsoft.com/fwlink/?LinkID=165864).
 
-### <a name="step-2-apply-the-minimum-necessary-mim-configuration-during-the-load-process"></a>Schritt 2: Anwenden der Mindestanforderungen für die MIM-Konfiguration während des Ladevorgangs
+### <a name="step-2-apply-the-minimum-necessary-mim-configuration-during-the-load-process"></a>Schritt 2: Wenden Sie während des Ladevorgangs die erforderliche MIM-Minimalkonfiguration an.
 
 Beim ersten Laden sollten Sie nur die Mindestkonfiguration anwenden, die erforderlich ist, um FIM für die Management-Richtlinienregeln (Management Policy Rules, MPRs) und Set-Definitionen zu konfigurieren. Erstellen Sie nach Abschluss des Datenladevorgangs die zusätzlichen Sets, die für die Bereitstellung erforderlich sind. Verwenden Sie die Einstellung zum Aktualisieren der Run-On-Richtlinie auf den Aktionsworkflows, um diese Richtlinien nachträglich auf die geladenen Daten anzuwenden.
 
-### <a name="step-3-configure-and-populate-the-fim-service-with-external-identity-data"></a>Schritt 3: Konfigurieren und Auffüllen des FIM-Diensts mit externen Identitätsdaten
+### <a name="step-3-configure-and-populate-the-fim-service-with-external-identity-data"></a>Schritt 3: Konfigurieren Sie den FIM-Dienst, und füllen Sie diesen mit externen Identitätsdaten auf.
 
 An diesem Punkt sollten Sie die Richtlinien unter „How Do I Synchronize Users from Active Directory Domain Services to FIM (Synchronisieren von Benutzern aus Active Directory-Domänendiensten zu FIM)“ befolgen, um Ihr System mit Benutzern aus Active Directory zu konfigurieren und zu synchronisieren. Wenn Gruppeninformationen synchronisiert werden sollen, finden Sie dazu Informationen im Leitfaden [How Do I Synchronize Groups from Active Directory Domain Services to FIM (Synchronisieren von Gruppen aus Active Directory-Domänendiensten zu FIM)](https://technet.microsoft.com/library/ff686936(v=ws.10).aspx).
 
@@ -214,13 +214,13 @@ Führen Sie für jeden Quellverwaltungs-Agent, der Teil des Initialisierungszykl
 
 4.  Führen Sie auf allen betroffenen Zielverwaltungs-Agents mit Stagingexport einen Deltaimport durch.
 
-### <a name="step-4-apply-your-full-mim-configuration"></a>Schritt 4: Anwenden der vollständigen MIM-Konfiguration
+### <a name="step-4-apply-your-full-mim-configuration"></a>Schritt 4: Wenden Sie die vollständige MIM-Konfiguration an.
 
 Wenden Sie nach Abschluss des ersten Datenladevorgangs die vollständige MIM-Konfiguration für die Bereitstellung an.
 
 Je nach Szenarios kann dies die Erstellung weiterer Sets, MPRs und Workflows umfassen. Verwenden Sie für alle Richtlinien, die Sie rückwirkend auf alle Objekte im System anwenden müssen, die Einstellung für die Ausführung für Richtlinienaktualisierung auf Aktionsworkflows, um diese Richtlinien rückwirkend auf die geladenen Daten anzuwenden.
 
-### <a name="step-5-reconfigure-sql-to-previous-settings"></a>Schritt 5: Zurücksetzen von SQL auf vorherige Einstellungen
+### <a name="step-5-reconfigure-sql-to-previous-settings"></a>Schritt 5: Setzen Sie SQL auf die vorherigen Einstellungen zurück.
 
 Denken Sie daran, die SQL-Einstellungen in die normalen Einstellungen zu ändern. Dies umfasst u. a.:
 
@@ -292,7 +292,7 @@ Das Dienstkonto des FIM-Synchronisierungsdiensts sollte kein Mitglied der Sicher
 
 ### <a name="password-reset-deployed-to-kiosk-like-computers-should-set-local-security-to-clear-virtual-memory-pagefile"></a>Bei Kennwortzurücksetzungen an Kiosk-Computern Auslagerungsdatei des virtuellen Arbeitsspeichers löschen
 
-Beim Bereitstellen einer FIM-Kennwortzurücksetzung auf einer als Kiosk gedachten Arbeitsstation sollte die lokale Sicherheitsrichtlinieneinstellung „Herunterfahren: Auslagerungsdatei des virtuellen Arbeitsspeichers löschen“ aktiviert werden, damit vertrauliche Informationen aus dem Arbeitsspeicher für nicht autorisierte Benutzer nicht verfügbar sind.
+Wenn die FIM-Kennwortzurücksetzung auf einer Arbeitsstation bereitgestellt wird, die als Kiosk verwendet werden soll, empfehlen wir, die Einstellung „Shutdown: Clear virtual memory pagefile local security policy“ (Herunterfahren: lokale Sicherheitsrichtlinie für Auslagerungsdatei des virtuellen Speichers löschen) zu aktivieren. So wird vermieden, dass vertrauliche Informationen aus dem Prozessspeicher nicht autorisierten Benutzern zur Verfügung gestellt werden.
 
 ### <a name="implementing-ssl-for-the-fim-portal"></a>Implementieren von SSL für das FIM-Portal
 
@@ -498,7 +498,7 @@ Es sollten möglichst wenige Bedingungen verwendet werden, die auf mehrwertigen 
 
 #### <a name="kiosk-like-computers-that-are-used-for-password-reset-should-set-local-security-to-clear-the-virtual-memory-pagefile"></a>Bei Kennwortzurücksetzungen an Kiosk-Computern Auslagerungsdatei des virtuellen Arbeitsspeichers löschen
 
-Beim Bereitstellen der MIM-Kennwortzurücksetzung auf einer als Kiosk gedachten Arbeitsstation sollte die lokale Sicherheitsrichtlinieneinstellung „Herunterfahren: Auslagerungsdatei des virtuellen Arbeitsspeichers löschen“ aktiviert werden, damit vertrauliche Informationen aus dem Arbeitsspeicher für nicht autorisierte Benutzer nicht verfügbar sind.
+Wenn die MIM-Kennwortzurücksetzung auf einer Arbeitsstation bereitgestellt wird, die als Kiosk verwendet werden soll, empfehlen wir, die Einstellung „Shutdown: Clear virtual memory pagefile local security policy“ (Herunterfahren: lokale Sicherheitsrichtlinie für Auslagerungsdatei des virtuellen Speichers löschen) zu aktivieren. So wird vermieden, dass vertrauliche Informationen aus dem Prozessspeicher nicht autorisierten Benutzern zur Verfügung gestellt werden.
 
 #### <a name="users-should-always-register-for-a-password-reset-on-a-computer-that-they-are-logged-on-to"></a>Registrierung für Kennwortzurücksetzung auf Anmeldecomputer
 

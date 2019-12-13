@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 1f69f9f08cba24898509c771e4477b81c5ed272f
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358005"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64519184"
 ---
 # <a name="bhold-reporting-installation"></a>Installation der BHOLD-Berichterstellung
 
