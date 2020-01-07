@@ -9,12 +9,12 @@ ms.date: 09/07/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 48ff4a06233ba95288432c4cfe48e37b4d1449ab
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: e4b18d3caa866767524c56ce184e787a190e9390
+ms.sourcegitcommit: 8ba50298cef65e8cc90402282e88410fad86b4d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64519153"
+ms.lasthandoff: 12/18/2019
+ms.locfileid: "75187313"
 ---
 # <a name="bhold-core-installation"></a>Installation von BHOLD Core
 
@@ -100,7 +100,7 @@ Bevor Sie mit der Installation des BHOLD Core-Moduls beginnen, müssen Sie darau
 | **Domäne**                                  | Gibt die Domäne an, die den BHOLD-Server, das BHOLD-Dienstkonto und die BHOLD-Anwendungsgruppe enthält. **Wichtig:** Geben Sie den Domänennamen an, indem Sie den kurzen NetBIOS-Namen verwenden, nicht den vollqualifizierten Domänennamen (FQDN). Wenn der FQDN der Domäne beispielsweise „fabrikam.com“ ist, geben Sie den Domänennamen als „FABRIKAM“ an. | Geben Sie den Domänennamen hier ein:                                                                                                                                        |
 | **Anwendungsgruppe**                       | Gibt den Namen der Sicherheitsgruppe an, die Sie zuvor in [Erforderliche Benutzer und Gruppen](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx#rug) erstellt haben.                                                                                                                                  | Geben Sie den Gruppennamen hier ein:                                                                                                                                         |
 | **Dienstbenutzer**                            | Gibt den Anmeldenamen des Dienstbenutzerkontos an, das Sie zuvor in [Erforderliche Benutzer und Gruppen](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx#rug) erstellt haben.                                                                                                                      | Geben Sie den Benutzerkontonamen hier ein:                                                                                                                                  |
-| **Passwort**                                | Gibt das Kennwort des BHOLD Core-Dienstbenutzerkontos an.                                                                                                                                                                                                                                              | Geben Sie das Kennwort hier ein: **Wichtig:** Achten Sie darauf, das Kennwort an einem verborgenen, sicheren Ort aufzubewahren.                                                                |
+| **Kennwort**                                | Gibt das Kennwort des BHOLD Core-Dienstbenutzerkontos an.                                                                                                                                                                                                                                              | Geben Sie das Kennwort hier ein: **Wichtig:** Achten Sie darauf, das Kennwort an einem verborgenen, sicheren Ort aufzubewahren.                                                                |
 | **IP/Port der Website**                         | Gibt die IP-Adresse und Portnummer der Website an, die auf dem Intranetserver erstellt werden soll. Ändern Sie den Standardwert (\*) nur, wenn Sie nicht dieselbe IP-Adresse wie die der Standardwebsite verwenden. Ändern Sie die Portnummer nur zu einem verfügbaren Port, wenn der Standardport (5151) bereits verwendet wird.             | Wenn von der Standardwebsite nicht die Standard-IP-Adresse verwendet wird, geben Sie diese IP-Adresse hier an:  Wenn die Standardportnummer bereits verwendet wird, geben Sie die Portnummer für die BHOLD-Website hier an: |
 
 ### <a name="database-settings"></a>Datenbankeinstellungen
@@ -108,17 +108,17 @@ Bevor Sie mit der Installation des BHOLD Core-Moduls beginnen, müssen Sie darau
 | **Element**                                       | **Beschreibung**                                                                                                                                                                                                                                                           | **Wert**                                                                                                                                                                                                                                                                                                                                                                                             |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Verwenden der integrierten Sicherheit**                    | Gibt an, dass die Windows-Authentifizierung für den Zugriff auf die Datenbank verwendet wird.                                                                                                                                                                                                     | Aktivieren Sie das Kontrollkästchen, wenn die Windows-Authentifizierung für das Verbinden mit SQL Server verwendet wird. Deaktivieren Sie das Kontrollkästchen, wenn die SQL Server-Authentifizierung verwendet wird. Wenn die SQL Server-Authentifizierung verwendet wird, muss die Datenbank erstellt werden, bevor das BHOLD Core-Setup ausgeführt wird. **Hinweis:** Wenn die Windows-Authentifizierung verwendet wird, müssen Sie mit einem Konto angemeldet sein, dem die Serverrolle „Systemadministrator“ auf dem Datenbankserver zugewiesen ist. |
-| **Datenbankbenutzer** und  **Datenbankkennwort** | Gibt den Benutzernamen und das Kennwort eines Benutzers mit der Serverrolle „Systemadministrator“ auf dem Datenbankserver an. Diese Werte werden nur bereitgestellt, wenn die SQL Server-Authentifizierung verwendet wird.                                                                                               | Geben Sie hier den SQL Server-Benutzernamen an:  Geben Sie hier das SQL Server-Benutzerkennwort an: **Hinweis:** Achten Sie darauf, das Kennwort an einem verborgenen, sicheren Ort aufzubewahren.                                                                                                                                                                                                                                                  |
-| **Datenbankserver** und  **Datenbankname**   | Gibt den NetBIOS-Namen des Datenbankservers und den Namen der Datenbank (Standard: b1) an, die das BHOLD Core-Setup erstellt. Wenn Sie nicht die Standardinstanz des Datenbankservers verwenden, geben Sie die Instanz des Datenbankservers in der Form *\<Server\>*\\*\<Instanz\>* an. | Geben Sie den Servernamen (oder Server- und Instanznamen) hier ein:  Geben Sie den Datenbanknamen hier ein:                                                                                                                                                                                                                                                                                                                   |
+| **Datenbankbenutzer** und **Datenbankkennwort** | Gibt den Benutzernamen und das Kennwort eines Benutzers mit der Serverrolle „Systemadministrator“ auf dem Datenbankserver an. Diese Werte werden nur bereitgestellt, wenn die SQL Server-Authentifizierung verwendet wird.                                                                                               | Geben Sie hier den SQL Server-Benutzernamen an:  Geben Sie hier das SQL Server-Benutzerkennwort an: **Hinweis:** Achten Sie darauf, das Kennwort an einem verborgenen, sicheren Ort aufzubewahren.                                                                                                                                                                                                                                                  |
+| **Datenbankserver** und **Datenbankname**   | Gibt den NetBIOS-Namen des Datenbankservers und den Namen der Datenbank (Standard: b1) an, die das BHOLD Core-Setup erstellt. Wenn Sie nicht die Standardinstanz des Datenbankservers verwenden, geben Sie die Instanz des Datenbankservers in der Form *\<Server\>* \\ *\<Instanz\>* an. | Geben Sie den Servernamen (oder Server- und Instanznamen) hier ein:  Geben Sie den Datenbanknamen hier ein:                                                                                                                                                                                                                                                                                                                   |
 | **Festlegen von Einschränkungen für die Datenbankbenutzer**    | Veraltet.                                                                                                                                                                                                                                                                 | Ändern Sie den Standardwert nicht.                                                                                                                                                                                                                                                                                                                                                                       |
 |                                                |                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                       |
-|                                                |                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                       |
+|                                                |                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                       |
 
 ## <a name="bhold-core-setup"></a>BHOLD Core-Setup
 
 Melden Sie sich zum Installieren des BHOLD Core-Moduls als Mitglied der Gruppe „Domänenadministratoren“ an, laden Sie folgende Datei herunter, und führen Sie diese als Administrator auf dem Server aus, auf dem Sie das BHOLD Core-Modul installieren möchten: 
 
-- BholdCore *\<Version\>*\_Release.msi
+- BholdCore *\<Version\>* \_Release.msi
 
 Ersetzen Sie *\<Version\>* durch die Versionsnummer der BHOLD Core-Version, die Sie installieren.
 
@@ -132,7 +132,7 @@ Nach Abschluss des BHOLD Core-Setups müssen Sie die Windows-Firewall konfigurie
 
 Wenn Benutzer mithilfe eines Webbrowsers auf einem Remotecomputer auf BHOLD zugreifen, müssen Sie die Windows-Firewall auf dem BHOLD Core-Server so konfigurieren, dass sie eingehende Verbindungen mit dem Websiteport zulässt, den Sie bei der Installation von BHOLD Core angegeben haben.
 
-Um dieses Verfahren ausführen zu können, müssen Sie Mitglied der Gruppe Administratoren auf dem lokalen Computer sein.
+Um diese Schritte ausführen zu können, müssen Sie Mitglied der Administratorengruppe auf dem lokalen Computer sein.
 
 #### <a name="to-permit-incoming-connections-to-the-bhold-website"></a>Zulassen eingehender Verbindungen mit der BHOLD-Website
 
@@ -156,7 +156,7 @@ Damit IIS ordnungsgemäß mit dem BHOLD Core-Modul funktioniert, müssen Sie den
 
 **Aktivieren der Unterstützung für 32-Bit-Anwendungen für den BHOLD Core-Anwendungspool**
 
-1.  Klicken Sie zum Öffnen des Internetinformationsdienste-Managers auf **Start**, zeigen Sie auf **Verwaltung**, und klicken Sie dann auf **Internetinformationsdienste-Manager (IIS)**.
+1.  Klicken Sie zum Öffnen des Internetinformationsdienste-Managers auf **Start**, zeigen Sie auf **Verwaltung**, und klicken Sie dann auf **Internetinformationsdienste-Manager (IIS)** .
 
 2.  Erweitern Sie in der Konsolenstruktur den Servernamen, und klicken Sie dann auf **Anwendungspool**.
 
@@ -177,11 +177,11 @@ Zum Durchführen dieses Verfahrens ist mindestens die Mitgliedschaft in **Domän
 
 1.  Klicken Sie im Active Directory Domain Services-Domänencontroller auf **Start** > **Alle Programme** > **Zubehör**, klicken Sie mit der rechten Maustaste auf **Eingabeaufforderung**, und klicken Sie dann auf **Als Administrator ausführen**.
 
-2.  Geben Sie an der Eingabeaufforderung folgenden Befehl ein, und drücken Sie dann die EINGABETASTE: setspn –S HTTP/ *\<networkalias\> \<domain\>* \\ *\<accountname\>*. Hierbei ist:
+2.  Geben Sie an der Eingabeaufforderung folgenden Befehl ein, und drücken Sie dann die EINGABETASTE: setspn –S HTTP/ *\<Netzwerkalias\> \<Domäne\>* \\ *\<Kontoname\>* . Hierbei ist:
 
     -   *\<Netzwerkalias\>* die Adresse, die Clients verwenden, um eine Verbindung mit der BHOLD-Website herzustellen.
 
-    -   *\<Domäne\>*\\*\<Kontoname\>* der Domänen- bzw. Benutzername des BHOLD Core-Dienstkontos, das Sie bei der Installation von BHOLD Core erstellt haben.
+    -   *\<Domäne\>* \\ *\<Kontoname\>* der Domänen- bzw. Benutzername des BHOLD Core-Dienstkontos, das Sie bei der Installation von BHOLD Core erstellt haben.
 
 3.  Wiederholen Sie den vorherigen Schritt für alle anderen Namen, die Clients verwenden, um eine Verbindung mit der BHOLD-Website herzustellen, z.B. CNAME-Aliase, Namen, die einen vollqualifizierten Domänennamen enthalten oder Namen, die einen kurzen NetBIOS-Domänennamen enthalten.
 

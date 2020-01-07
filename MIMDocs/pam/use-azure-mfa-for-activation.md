@@ -10,16 +10,18 @@ ms.date: 07/06/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
-ms.openlocfilehash: 72dd1d3cf34e28567fa672b747a04347b150797e
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 6c3a2d87037a818a9a8784b0d4a7b86227fcaef4
+ms.sourcegitcommit: 28a20aaa1f08b428cc1ae0eae43ae47de4d9d22a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67690780"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684056"
 ---
 # <a name="using-azure-mfa-for-activation"></a>Verwenden von Azure MFA zur Aktivierung
 > [!IMPORTANT]
-> Zur Ankündigung der Außerkraftsetzung des Azure MFA SDK (Multi-Factor Authentication Software Development Kit): Das Azure MFA SDK wird für Bestandskunden bis zur Ausmusterung am 14. November 2018 unterstützt. Neue Kunden und aktuelle Kunden können das SDK nicht mehr über das klassische Azure-Portal herunterladen. Zum Herunterzuladen müssen Sie sich an den Azure-Kundensupport wenden, um ein für Sie generiertes Paket mit MFA-Dienstanmeldeinformationen zu erhalten. <br> Das Microsoft-Entwicklungsteam arbeitet an Änderungen der MFA durch die Integration in MFA Server SDK.  Dies wird in einem zukünftigen Hotfix enthalten sein. Ankündigungen finden Sie im [Versionsverlauf](../reference/version-history.md). 
+> Entsprechend der Ankündigung ist das Software Development Kit für Azure Multi-Factor Authentication veraltet und wird für Bestandskunden bis zur Ausmusterung am 14. November 2018 unterstützt. Neue Kunden und aktuelle Kunden können das Azure MFA SDK nicht mehr über das klassische Azure-Portal herunterladen. Informationen zur Verwendung des Azure MFA-Servers finden Sie unter [Verwenden des Azure MFA-Servers bei PAM oder SSPR](../working-with-mfaserver-for-mim.md).
+
+
 
 
 Beim Konfigurieren einer PAM-Rolle können Sie auswählen, wie Benutzer, die eine Aktivierung der Rolle anfordern, sich autorisieren müssen. Die PAM-Autorisierungsaktivität implementiert diese Wahlmöglichkeiten:
@@ -54,7 +56,11 @@ In diesem Abschnitt richten Sie Ihren Azure MFA-Anbieter in Microsoft Azure Acti
 
 ## <a name="downloading-the-azure-mfa-service-credentials"></a>Herunterladen der Azure MFA-Dienstanmeldeinformationen
 
-Im nächsten Schritt generieren Sie eine Datei mit den Authentifizierungsdaten, die von PAM zum Kontaktieren von Azure MFA benötigt werden.
+> [!IMPORTANT]
+> Das Azure MFA SDK ist nicht mehr verfügbar. Informationen zur Verwendung des Azure MFA-Servers finden Sie stattdessen unter [Verwenden des Azure MFA-Servers bei PAM oder SSPR](../working-with-mfaserver-for-mim.md).
+
+
+Im vorherigen Schritt haben Sie eine Datei mit den Authentifizierungsdaten generiert, die von PAM zum Kontaktieren von Azure MFA benötigt werden.
 
 1. Öffnen Sie einen Webbrowser, und melden Sie sich beim [klassischen Azure-Portal](https://manage.windowsazure.com) als Azure-Abonnementadministrator an.
 
@@ -134,7 +140,7 @@ Die folgenden Ereignisse finden sich im Privileged Access Management-Ereignispro
 |-----|----------|--------------|-------------|
 | 101 | Fehler       | MIM-Dienst            | Der Benutzer hat die Azure MFA nicht abgeschlossen (z. B. weil er nicht ans Telefon gegangen ist). |
 | 103 | Informationen | MIM-Dienst            | Der Benutzer hat Azure MFA während der Aktivierung abgeschlossen.                       |
-| 825 | Warning     | PAM-Überwachungsdienst | Die Telefonnummer wurde geändert.                                |
+| 825 | Warnung     | PAM-Überwachungsdienst | Die Telefonnummer wurde geändert.                                |
 
 Wenn Sie weitere Informationen zu Fehlern bei Telefonanrufen (Ereignis 101) benötigen, können Sie auch einen Bericht von Azure MFA anzeigen oder herunterladen.
 
