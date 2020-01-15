@@ -92,7 +92,6 @@
 ### [Handbuch zur Exportleistung](https://technet.microsoft.com/library/hh322883)
 ## Berichterstellung
 ### [Berichterstellung über benutzerdefinierte Berichte und Erweiterbarkeit](https://technet.microsoft.com/library/jj133861)
-## [Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/) (Microsoft-Identitätssoftware: veröffentlichte Buildversionen)
 # [Referenz](./reference/microsoft-identity-manager-2016-developer-reference.md)
 ## Entwicklerreferenz
 ### [MIM 2016 developer reference (Entwicklerreferenz für MIM 2016)](./reference/microsoft-identity-manager-2016-developer-reference.md)
