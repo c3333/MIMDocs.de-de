@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: 8216dc144dd7cee2ccb30d89198f6d2bb3a726c1
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: ea9caef07c2496c5d2e040f5d88764938231220b
+ms.sourcegitcommit: 80cdfd782cc6e2a4c4698decd54342f0e1460f5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73329442"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75756172"
 ---
 # <a name="deploy-microsoft-identity-manager-2016-sp2"></a>Bereitstellen von Microsoft Identity Manager 2016 SP2
 Die Artikel in diesem Abschnitt bieten Schritt-für-Schritt-Anleitungen für die Bereitstellung von Microsoft Identity Manager (MIM) 2016 für Endbenutzer-Self-Service-Szenarien. Es wird dabei von einer Bereitstellung auf einem neuen Server ausgegangen, auf dem zuvor weder FIM noch MIM bereitgestellt wurden.
@@ -30,7 +30,8 @@ Der Vorgang zum Bereitstellen von MIM ähnelt sehr dem des Vorgängers, FIM 2010
 
 ## <a name="first-prepare-a-domain"></a>Zuerst: Vorbereiten einer Domäne
 MIM funktioniert über Active Directory (AD). Führen Sie daher diese Schritte aus, um Ihre Active Directory-Domänencontroller zu konfigurieren.
-- [Einrichten der Domäne](preparing-domain.md)
+- [Domäneneinrichtung](preparing-domain.md) oder
+- [Domäneneinrichtung für gruppenverwaltete Dienstkonten](preparing-domain-gmsa.md)
 
 
 ## <a name="next-prepare-an-identity-management-servers"></a>Nächster Schritt: Vorbereiten eines Identitätsverwaltungsservers
@@ -49,4 +50,3 @@ Nachdem Sie die Domäne und den Server eingerichtet haben, können Sie die MIM-K
 - [MIM-Synchronisierungsdienst](install-mim-sync.md)
 - [MIM-Dienst und -Portal](install-mim-service-portal.md)
 - [Synchronisieren von Active Directory und MIM-Dienstdatenbanken](install-mim-sync-ad-service.md)
-
