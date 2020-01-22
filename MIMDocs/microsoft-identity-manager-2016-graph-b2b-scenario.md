@@ -9,12 +9,12 @@ ms.date: 10/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 139c58510117ad422529a4ff0facd23040023713
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: ba70cd299f2ebec31555bb40b935a6b54779d198
+ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64520928"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76256630"
 ---
 <a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy"></a>Azure AD-Business-to-Business-Kollaboration (B2B) mit Microsoft Identity Manager(MIM) 2016 SP1 mit Azure-Anwendungsproxy
 ============================================================================================================================
@@ -31,8 +31,6 @@ Einige Annahmen bei der Konfiguration von B2B mit MIM und dem Azure AD-Anwendung
 -   Sie haben bereits die Anweisungen im Artikel zum Herunterladen und Installieren des [Graph-Connectors](microsoft-identity-manager-2016-connector-graph.md) befolgt.
 
 -   Sie haben Azure AD Connect für die Synchronisierung von Benutzern und Gruppen mit Azure AD konfiguriert.
-
--   Sie haben Azure AD Connect konfiguriert, um Office-Gruppen zur Steuerung der Anwendung [zurück auf die lokalen AD DS](http://robsgroupsblog.com/blog/how-to-write-back-an-office-group-in-azure-active-directory-to-a-mail-enabled-security-group-in-an-on-premises-active-directory) zu synchronisieren.
 
 -   Anwendungsproxyconnectors und Connectorgruppen sind bereits eingerichtet. Falls dies nicht der Fall ist, finden Sie [hier](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-enable#install-and-register-a-connector) Unterstützung für die Installation und Konfiguration.
 
@@ -63,20 +61,20 @@ Standardmäßig geht Azure AD Connect davon aus, dass Benutzer, die keine Admini
 Daher müssen die Benutzer, die von MIM aus Azure AD in AD DS eingebracht wurden, so gespeichert werden, dass Azure AD nicht versucht, diese Benutzer wieder mit Azure AD zu synchronisieren.
 Eine Möglichkeit, dies zu tun, besteht darin, eine neue Organisationseinheit in AD DS anzulegen und Azure AD Connect so zu konfigurieren, dass diese Organisationseinheit ausgeschlossen wird.  
 
-Weitere Informationen finden Sie unter [Azure AD Connect-Synchronisierung: Konfigurieren der Filterung](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-configure-filtering). 
+Weitere Informationen finden Sie unter [Azure AD Connect-Synchronisierung: Konfigurieren der Filterung](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-configure-filtering). 
  
 
 ## <a name="create-the-azure-ad-application"></a>Erstellen der Azure AD-Anwendung 
 
 
-Hinweis: Bevor Sie im MIM-Synchronisierungsdienst den Verwaltungs-Agent für den Graph-Connector erstellen, sollten Sie die Anleitung zur Bereitstellung des [Graph-Connectors](microsoft-identity-manager-2016-connector-graph.md) gelesen und eine Anwendung mit einer Client-ID und einem Geheimnis erstellt haben.
+Anmerkung: Bevor Sie im MIM-Synchronisierungsdienst den Verwaltungs-Agent für den Graph-Connector erstellen, sollten Sie die Anleitung zur Bereitstellung des [Graph-Connectors](microsoft-identity-manager-2016-connector-graph.md) gelesen und eine Anwendung mit einer Client-ID und einem Geheimnis erstellt haben.
 Stellen Sie sicher, dass die Anwendung für mindestens eine dieser Berechtigungen autorisiert wurde: `User.Read.All`, `User.ReadWrite.All`, `Directory.Read.All` oder `Directory.ReadWrite.All`. 
 
 ## <a name="create-the-new-management-agent"></a>Erstellen des neuen Verwaltungs-Agents
 
 
 Klicken Sie auf der Benutzeroberfläche von Synchronization Service Manager auf  **Connectors**  und anschließend auf  **Erstellen**.
-Wählen Sie  **Graph (Microsoft)**  aus, und geben Sie ihm einen aussagekräftigen Namen.
+Wählen Sie  **Graph (Microsoft)**   aus, und geben Sie ihm einen aussagekräftigen Namen.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
@@ -132,7 +130,7 @@ Auf dem Bildschirm „Anker konfigurieren“ ist das Konfigurieren des Ankerattr
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/9377ab7b760221517a431384689c8c76.png)
 
-#### <a name="configure-connector-filter"></a>Connector-Filter konfigurieren
+#### <a name="configure-connector-filter"></a>Connectorfilter konfigurieren
 
 Auf der Seite „Connector-Filter konfigurieren“ können Sie Objekte in MIM anhand eines Attributfilters filtern. In diesem Szenario für B2B besteht das Ziel darin, nur Benutzer einzubringen, deren `userType`-Attribut den Wert `Guest` aufweist, und keine Benutzer mit dem userType `member`.
 
@@ -318,4 +316,4 @@ Nach Abschluss der Konfiguration verfügen Sie über die Anmeldeinformationen de
 
 [Bereitstellen von sicherem Remotezugriff auf lokale Anwendungen](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
 
-[Download des Microsoft Identity Manager-Connectors für Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495)
+[Download des Microsoft Identity Manager-Connectors für Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495)
