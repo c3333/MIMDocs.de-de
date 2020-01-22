@@ -9,12 +9,12 @@ manager: mtillman
 ms.date: 09/04/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 7fb111520f94541672fc56d0fd2ee95bfcd3a49e
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 9ce531fb3f6f9c831ecdb716f006f947611871e6
+ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67690742"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76256596"
 ---
 # <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Verwenden eines benutzerdefinierten Multi-Factor Authentication-Anbieters über eine API während der Aktivierung von PAM-Rollen oder in SSPR
 
@@ -22,7 +22,7 @@ Kunden von Azure AD Premium oder Azure MFA können Azure MFA in den zwei MIM-Sze
 
 MIM-Kunden haben zwei weitere Optionen:
 
- - Verwenden eines benutzerdefinierten Einmalkennwortanbieters, der nur im MIM SSPR-Szenario anwendbar ist und in der Anleitung [Configure Self-Service Password Reset with OTP SMS Gate (Konfigurieren der Self-Service-Kennwortzurücksetzung mit OTP SMS-Gate)](https://docs.microsoft.com/en-us/previous-versions/mim/hh824692(v=ws.10)) dokumentiert ist.
+ - Verwenden eines benutzerdefinierten Einmalkennwortanbieters, der nur im MIM SSPR-Szenario anwendbar ist und in der Anleitung [Configure Self-Service Password Reset with OTP SMS Gate (Konfigurieren der Self-Service-Kennwortzurücksetzung mit OTP SMS-Gate)](https://docs.microsoft.com/previous-versions/mim/hh824692(v=ws.10)) dokumentiert ist.
  - Verwenden Sie einen benutzerdefinierten Telefonanbieter mit mehrstufiger Authentifizierung. Dies gilt für die in diesem Artikel beschriebenen Szenarios für MIM SSPR und PAM.
 
 In diesem Artikel wird beschrieben, wie Sie MIM mit einem benutzerdefinierten Multi-Factor Authentication-Anbieter über eine API und ein vom Kunden entwickeltes SDK für die Integration verwenden.  
@@ -32,7 +32,7 @@ In diesem Artikel wird beschrieben, wie Sie MIM mit einem benutzerdefinierten Mu
 Um eine benutzerdefinierte Multi-Factor Authentication-Anbieter-API mit MIM verwenden zu können, benötigen Sie Folgendes:
 
 - Telefonnummern für alle Kandidatenbenutzer
-- MIM-Hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) oder höher: Weitere Informationen zu Ankündigungen finden Sie im [Versionsverlauf](reference/version-history.md).
+- MIM-Hotfix 4.5.202.0 oder höher: siehe Ankündigungen im [Versionsverlauf](reference/version-history.md)
 - MIM-Dienst für SSPR oder PAM konfiguriert
 
 ## <a name="approach-using-custom-multi-factor-authentication-code"></a>Vorgehensweise mithilfe von Code für benutzerdefinierte mehrstufige Authentifizierung
@@ -41,13 +41,13 @@ Um eine benutzerdefinierte Multi-Factor Authentication-Anbieter-API mit MIM verw
 
 Laden Sie den MIM-Hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) oder höher herunter, und installieren Sie diesen.
 
-### <a name="step-2-create-a-dll-which-implements-the-iphoneserviceprovider-interface"></a>Schritt 2: Erstellen Sie eine DLL, die die IPhoneServiceProvider-Schnittstelle implementiert.
+### <a name="step-2-create-a-dll-which-implements-the-iphoneserviceprovider-interface"></a>Schritt 2: Erstellen Sie eine DLL, die die IPhoneServiceProvider-Schnittstelle implementiert.
 
 Die DLL muss eine Klasse enthalten, die drei Methoden implementiert:
 
 - `InitiateCall`: Der MIM-Dienst ruft diese Methode auf. Der Dienst übergibt die Telefonnummer und Anforderung-ID als Parameter.  Die Methode muss für den `PhoneCallStatus`-Wert `Pending`, `Success` oder `Failed` zurückgeben.
-- `GetCallStatus`: Wenn für einen früheren Aufruf von `initiateCall` `Pending` zurückgegeben wurde, ruft der MIM-Dienst diese Methode auf. Diese Methode gibt für den `PhoneCallStatus`-Wert `Pending`, `Success` oder `Failed` zurück.
-- `GetFailureMessage`: Wenn für einen früheren Aufruf von `InitiateCall` oder `GetCallStatus` `Failed` zurückgegeben wurde, ruft der MIM-Dienst diese Methode auf. Diese Methode gibt eine diagnostische Meldung zurück.
+- `GetCallStatus`: Wenn für einen früheren Aufruf von `initiateCall``Pending` zurückgegeben wurde, ruft der MIM-Dienst diese Methode auf. Diese Methode gibt für den `PhoneCallStatus`-Wert `Pending`, `Success` oder `Failed` zurück.
+- `GetFailureMessage`: Wenn für einen früheren Aufruf von `InitiateCall` oder `GetCallStatus``Failed` zurückgegeben wurde, ruft der MIM-Dienst diese Methode auf. Diese Methode gibt eine diagnostische Meldung zurück.
 
 Die Implementierungen dieser Methoden müssen threadsicher sein, und außerdem dürfen die Implementierungen von `GetCallStatus` und `GetFailureMessage` nicht davon ausgehen, dass diese vom selben Thread aufgerufen werden wie bei einem vorherigen Aufruf von `InitiateCall`.
 
@@ -135,7 +135,7 @@ namespace CustomPhoneGate
     }
 }
 ```
-### <a name="step-3-backup-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Schritt 3: Sichern Sie die unter „C:\Programme\Microsoft Forefront Identity Manager\2010\Service“ gespeicherte MfaSettings.xml-Datei.
+### <a name="step-3-backup-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Schritt 3: Sichern Sie die unter „C:\Programme\Microsoft Forefront Identity Manager\2010\Service“ gespeicherte MfaSettings.xml-Datei.
 
 ### <a name="step-4-edit-the-mfasettingsxml-file"></a>Schritt 4: Bearbeiten Sie die MfaSettings.xml-Datei.
 
@@ -156,6 +156,6 @@ Verwenden Sie nach dem Neustart des Diensts SSPR und/oder PAM, um die Funktion m
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Erste Schritte mit Azure Multi-Factor Authentication-Server](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy)
+- [Erste Schritte mit Azure Multi-Factor Authentication-Server](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
 - [Was ist Azure Multi-Factor Authentication?](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [MIM version release history (Versionsverlauf der MIM-Version)](./reference/version-history.md)
