@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: a74f4074d9a0cf8378fd4972b7f51f723bd2f1c6
-ms.sourcegitcommit: 80cdfd782cc6e2a4c4698decd54342f0e1460f5f
+ms.openlocfilehash: be5dc1e8615f56d3157a78891e80897e446eafab
+ms.sourcegitcommit: 32c7a46b2f8ed3f2f9ebc6f79a4ecb0019fe62e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75756255"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77527921"
 ---
 # <a name="configure-a-domain-for-group-managed-service-accounts-gmsa-scenario"></a>Konfigurieren einer Domäne für ein Szenario für gruppenverwaltete Dienstkonten
 
@@ -109,7 +109,7 @@ Alle Komponenten Ihrer MIM-Bereitstellung benötigen ihre eigenen Identitäten i
 4.  Fügen Sie SPNs hinzu, um die Kerberos-Authentifizierung für Dienstkonten zu aktivieren.
 
     ```PowerShell
-    Set-ADServiceAccount -Identity svcMIMAppPool -ServicePrincipalNames @{Add="http/mim.contoso.com"}
+    setspn -S http/mim.contoso.com contoso\svcMIMAppPool
     ```
 
 5.  Stellen Sie sicher, dass Sie die folgenden „A“-DNS-Einträge für die richtige Namensauflösung registrieren (vorausgesetzt, dass der MIM-Dienst, das MIM-Portal sowie die Websites für die Kennwortzurücksetzung und Kennwortregistrierung auf demselben Computer gehostet werden).
