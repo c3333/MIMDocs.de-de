@@ -2,21 +2,21 @@
 title: Installieren des Microsoft Identity Manager-Diensts und -Portals | Microsoft-Dokumentation
 description: Hier finden Sie die Schritte zum Konfigurieren und Installieren Erste Schritte zum Konfigurieren und Installieren des MIM-Diensts und -Portals für Microsoft Identity Manager 2016
 keywords: ''
-author: billmath
-ms.author: billmath
-manager: mtillman
+author: EugeneSergeev
+ms.author: esergeev
+manager: aashiman
 ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: 1f7aa8e257ef4fd1d97ee602a4e0f3f878d8c1b6
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 4604c17d3e58c57f9819aaa036dc12a669aed55d
+ms.sourcegitcommit: d98a76d933d4d7ecb02c72c30d57abe3e7f5d015
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73568072"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78289490"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Installieren von MIM 2016: MIM-Dienst und -Portal
 
@@ -51,6 +51,11 @@ Falls Sie im letzten Schritt das MIM-Installationspaket nicht eingerichtet haben
     ![Bild: Konfigurieren der MIM-Datenbankverbindung](media/install-mim-service-portal/MIM_Install10.png)
 
 7. Geben Sie bei **Configure mail server connection** (Konfigurieren der E-Mail-Server-Verbindung) den Namen Ihres Exchange-Servers als **Mailserver** an. Alternativ können Sie das **Office 365-Postfach** verwenden. Falls Sie keinen E-Mail-Server konfiguriert haben, verwenden Sie **localhost** als Namen für den E-Mail-Server, und deaktivieren Sie die oberen zwei Kontrollkästchen. Klicken Sie auf **Weiter**.
+    >[!NOTE]
+    >MIM 2016 SP2 und höher: Wenn Sie gruppenverwaltete Dienstkonten verwenden, müssen Sie das Kontrollkästchen **Anderen Benutzer für Exchange verwenden** auch aktivieren, wenn Sie nicht beabsichtigen, Exchange zu verwenden.
+    
+    >[!NOTE]
+    >Wenn die Option **Exchange Online verwenden** ausgewählt ist, müssen Sie den Wert PollExchangeEnabled des Registrierungsschlüssels „HKLM\SYSTEM\CurrentControlSet\Services\FIMService“ nach der Installation auf 1 festlegen, damit der MIM-Dienst Genehmigungsantworten vom MIM Outlook-Add-On verarbeiten kann.
 
     ![Bild: Konfigurieren der E-Mail-Server-Verbindung](media/install-mim-service-portal/MIM_Install11.png)
 

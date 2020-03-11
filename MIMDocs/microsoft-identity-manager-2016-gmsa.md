@@ -1,24 +1,24 @@
 ---
 title: Konvertierung von MIM-spezifischen Diensten in gMSA | Microsoft-Dokumentation
 description: In diesem Thema werden die grundlegenden Schritte zum Konfigurieren von gMSA beschrieben.
-author: billmath
-ms.author: billmath
-manager: mtillman
+author: EugeneSergeev
+ms.author: esergeev
+manager: aashiman
 ms.date: 06/27/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 96d375d82a71a21f0be444d628f387c4e1ffdd09
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 49216a2d2077dd1be83f17719e996a20abb61cf8
+ms.sourcegitcommit: d98a76d933d4d7ecb02c72c30d57abe3e7f5d015
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64520846"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78289514"
 ---
 # <a name="conversion-of-mim-specific-services-to-gmsa"></a>Konvertierung von MIM-spezifischen Diensten in gMSA
 
 In diesem Handbuch werden die grundlegenden Schritte zum Konfigurieren von gMSA für unterstützte Dienste beschrieben. Der Prozess zum Konvertieren in gMSA ist einfach, sobald Sie Ihre Umgebung vorkonfigurieren.
 
-Erforderlicher Hotfix: \<Verknüpfung zu aktueller KB\>
+Erforderliches Hotfix: [4.5.26.0 oder höher](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history)
 
 Unterstützt:
 
@@ -163,7 +163,9 @@ Schritt eins auf Ihrem Windows-Domänencontroller
 4.  Führen Sie die MSI-Datei des MIM-Diensts mit erhöhten Rechten aus, und wählen Sie die Änderungsoption.
 
 5.  Aktivieren Sie auf „Hauptserver-Verbindungsseite konfigurieren“ das Kontrollkästchen „Anderes Konto für Exchange verwenden (für verwaltete Konten)“. Hier haben Sie eine Option zum Verwenden des alten Kontos, das über ein Postfach verfügt oder ein Cloudpostfach nutzt.
-
+    >[!NOTE]
+    >Wenn die Option **Exchange Online verwenden** ausgewählt ist, müssen Sie den Wert PollExchangeEnabled des Registrierungsschlüssels „HKLM\SYSTEM\CurrentControlSet\Services\FIMService“ nach der Installation auf 1 festlegen, damit der MIM-Dienst Genehmigungsantworten vom MIM Outlook-Add-On verarbeiten kann.
+    
 ![](media/0cd8ce521ed7945c43bef6100f8eb222.png)
 
 6.  Geben Sie auf der Seite „MIM-Dienst-Konto konfigurieren“ das Dienstkonto mit dem \$-Symbol am Ende ein. Geben Sie auch das E-Mail-Kontokennwort für den Dienst ein. Das Dienstkontokennwort sollte deaktiviert werden.
@@ -198,7 +200,7 @@ Schritt eins auf Ihrem Windows-Domänencontroller
 
 13.  Schließen Sie die Installation ab.
 
-Hinweis:
+Anmerkung:
 
 -  Nach der Installation werden in der Registrierung zwei neue Schlüssel im Pfad
     - „HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Forefront Identity
