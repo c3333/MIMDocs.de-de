@@ -4,17 +4,17 @@ description: Das BHOLD-Modell ermöglicht Ihnen das Strukturieren von Daten aus 
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 3d2510d6ea604dd88e56436812ed8bc975bc5c2b
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 6f7e0979246eb2124604f594c57b40ec11cc7140
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64516734"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042015"
 ---
 # <a name="bhold-model-generator-installation"></a>Installation des BHOLD-Modellgenerators
 
@@ -26,7 +26,7 @@ Vor der Installation des BHOLD-Modellgeneratormoduls müssen Sie Folgendes insta
 
 1. Das BHOLD Core-Modul auf dem Server, auf dem Sie das BHOLD-Modellgeneratormodul installieren möchten. Weitere Informationen zum Installieren des BHOLD Core-Moduls finden Sie unter [BHOLD Core Installation (Installation von BHOLD Core)](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx).
 
-2. Der Microsoft OLE DB-Anbieter für Microsoft Jet muss installiert sein. Weitere Informationen finden Sie in [diesem Artikel](http://support.microsoft.com/kb/271908).
+2. Der Microsoft OLE DB-Anbieter für Microsoft Jet muss installiert sein. Weitere Informationen finden Sie in [diesem Artikel](https://support.microsoft.com/kb/271908).
 
 > [!WARNING]
 > Installieren Sie den BHOLD-Modellgenerator nicht in Ihrem Produktionsnetzwerk. Der BHOLD-Modellgenerator ist dafür konzipiert, offline in einer Stagingumgebung verwendet zu werden, um ein normalisiertes Rollenmodell zu erstellen, das Sie in das Rollenmodell Ihres Unternehmens importieren können. Das Ausführen des BHOLD-Modellgenerators in Ihrem Produktionsnetzwerk kann zum Verlust Ihres vorhandenen Rollenmodells führen.
@@ -39,7 +39,7 @@ Microsoft Access Database Engine 2010 Redistributable
 
  
 
-*Von \<*<http://daipvstf:8080/tfs/ActiveDirectory/IAM/_workitems>*\>*
+*Von \<* <http://daipvstf:8080/tfs/ActiveDirectory/IAM/_workitems> *\>*
 
  
 
@@ -52,7 +52,7 @@ Microsoft Access Database Engine 2010 Redistributable
 | **Verwenden eines Sicherheitsanbieters auf einer Domäne/einem Computer** | Bei der Auswahl dieser Option wird angegeben, dass die Active Directory Domain Services-Sicherheit den Zugriff auf BHOLD Core steuert.                                                                                                                | Aktivieren Sie das Kontrollkästchen. **Wichtig:** Die Installation schlägt fehl, wenn dieses Kontrollkästchen nicht aktiviert ist.                                                                                                                                                                                                                   |
 | **Domäne**                                  | Gibt die Domäne an, die das Dienstkonto enthält, das Sie bei der Installation von BHOLD Core erstellt haben. Weitere Informationen finden Sie unter [BHOLD Core Installation (Installation von BHOLD Core)](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | Der Domänenname wird automatisch vom Assistenten bereitgestellt. Ändern Sie den Namen nur, wenn dieser falsch ist. **Wichtig:** Geben Sie den Domänennamen an, indem Sie den kurzen NetBIOS-Namen verwenden, nicht den vollqualifizierten Domänennamen (FQDN). Wenn der FQDN der Domäne beispielsweise „fabrikam.com“ ist, geben Sie den Domänennamen als „FABRIKAM“ an. |
 | **Benutzer**                                    | Gibt den Anmeldenamen des BHOLD Core-Dienstbenutzerkontos an.                                                                                                                                                          | Geben Sie den Benutzerkontonamen hier ein:                                                                                                                                                                                                                                                                                    |
-| **Passwort**                                | Gibt das Kennwort des Dienstbenutzerkontos an.                                                                                                                                                                       | Geben Sie das Kennwort hier ein: **Wichtig:** Achten Sie darauf, das Kennwort an einem verborgenen, sicheren Ort aufzubewahren.                                                                                                                                                                                                                  |
+| **Kennwort**                                | Gibt das Kennwort des Dienstbenutzerkontos an.                                                                                                                                                                       | Geben Sie das Kennwort hier ein: **Wichtig:** Achten Sie darauf, das Kennwort an einem verborgenen, sicheren Ort aufzubewahren.                                                                                                                                                                                                                  |
 
 **Einstellungen für die Datenbanksicherung**
 
@@ -60,13 +60,13 @@ Microsoft Access Database Engine 2010 Redistributable
 |---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Verwenden der integrierten Sicherheit**                 | Gibt an, dass die Windows-Authentifizierung für den Zugriff auf die Datenbank verwendet wird.                                                                                                                                                                                                                                                                                                                                                        | Aktivieren Sie das Kontrollkästchen, wenn die Windows-Authentifizierung für das Verbinden mit SQL Server verwendet wird. Deaktivieren Sie das Kontrollkästchen, wenn die SQL Server-Authentifizierung verwendet wird. Wenn die SQL Server-Authentifizierung verwendet wird, muss die Datenbank erstellt werden, bevor das BHOLD Core-Setup ausgeführt wird. **Hinweis:** Wenn die Windows-Authentifizierung verwendet wird, müssen Sie mit einem Konto angemeldet sein, dem die Serverrolle „Systemadministrator“ auf dem Datenbankserver zugewiesen ist. **Wichtig:** Verwenden Sie die SQL Server-Authentifizierung nur in Testumgebungen. Microsoft empfiehlt dringend, die Windows-Authentifizierung in Produktionsumgebungen zu verwenden. |
 | **Datenbankbenutzer** und **Datenbankkennwort** | Gibt den Benutzernamen und das Kennwort eines Benutzers mit der Serverrolle „Systemadministrator“ auf dem Datenbankserver an. Diese Werte werden nur bereitgestellt, wenn die SQL Server-Authentifizierung verwendet wird.                                                                                                                                                                                                                                                  | Geben Sie hier den SQL Server-Benutzernamen an:  Geben Sie hier das SQL Server-Benutzerkennwort an: </br></br> **Wichtig:** Achten Sie darauf, das Kennwort an einem verborgenen, sicheren Ort aufzubewahren.                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **Datenbankserver** und **Datenbankname**   | Gibt den NetBIOS-Namen des Datenbankservers und den Namen der Sicherungsdatenbank ein, die das Setup des BHOLD-Modellgenerators erstellt. Wenn Sie nicht die Standardinstanz des Datenbankservers verwenden, geben Sie die Instanz des Datenbankservers in der Form *\<Server\>*\\*\<Instanz\>* an.  Microsoft empfiehlt, dass Sie für die Benennung der Sicherungsdatenbank den Namen der BHOLD Core-Datenbank gefolgt von \_BACKUP verwenden, z.B. B1_BACKUP. | Geben Sie den Servernamen (oder Server- und Instanznamen) hier ein: </br> Geben Sie den Datenbanknamen hier ein:
+| **Datenbankserver** und **Datenbankname**   | Gibt den NetBIOS-Namen des Datenbankservers und den Namen der Sicherungsdatenbank ein, die das Setup des BHOLD-Modellgenerators erstellt. Wenn Sie nicht die Standardinstanz des Datenbankservers verwenden, geben Sie die Instanz des Datenbankservers in der Form *\<Server\>* \\ *\<Instanz\>* an.  Microsoft empfiehlt, dass Sie für die Benennung der Sicherungsdatenbank den Namen der BHOLD Core-Datenbank gefolgt von \_BACKUP verwenden, z.B. B1_BACKUP. | Geben Sie den Servernamen (oder Server- und Instanznamen) hier ein: </br> Geben Sie den Datenbanknamen hier ein:
 
 ## <a name="bhold-model-generator-setup"></a>Setup des BHOLD-Modellgenerators
 
 Melden Sie sich zum Installieren des BHOLD-Modellgeneratormoduls als Mitglied der Gruppe „Domänenadministratoren“ an, laden Sie folgende Datei herunter, und führen Sie diese als Administrator auf dem Server aus, auf dem Sie das BHOLD Core-Modul installieren möchten:
 
-- BholdModelGenerator *\<Version\>*\_Release.msi
+- BholdModelGenerator *\<Version\>* \_Release.msi
 
 Ersetzen Sie *\<Version\>* durch die Versionsnummer der Version des BHOLD-Modellgenerators, die Sie installieren.
 

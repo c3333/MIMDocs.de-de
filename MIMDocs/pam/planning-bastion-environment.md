@@ -4,19 +4,19 @@ description: ''
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f8fd71d2244760d3a6561c6f55bf676e6f42561a
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 3b99bd6d8f10c993d65e026bab23deeb65c547e9
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518880"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043952"
 ---
 # <a name="planning-a-bastion-environment"></a>Planen einer geschützten Umgebung
 
@@ -42,7 +42,7 @@ Gemäß dem [Ebenenmodell](tier-model-for-partitioning-administrative-privileges
 
 Die Produktionsgesamtstruktur *CORP* sollte der administrativen Gesamtstruktur *PRIV* vertrauen, aber nicht umgekehrt. Dabei kann es sich um eine Domänen- oder Gesamtstruktur-Vertrauensstellung handeln. Die administrative Gesamtstruktur muss den verwalteten Domänen und Gesamtstrukturen nicht vertrauen, um Active Directory verwalten zu können. Zusätzliche Anwendungen können jedoch eine bidirektionale Vertrauensstellung, Sicherheitsüberprüfungen und Tests erfordern.
 
-Um sicherzustellen, dass Konten in der administrativen Gesamtstruktur nur die geeigneten Produktionshosts verwenden, sollte die ausgewählte Authentifizierung verwendet werden. Zur Verwaltung von Domänencontrollern und Delegierung von Rechten in Active Directory ist hierbei in der Regel die Berechtigung für die Anmeldung auf Domänencontrollern für die jeweiligen Administratorkonten der Ebene 0 in der administrativen Gesamtstruktur erforderlich. Weitere Informationen finden Sie unter [Konfigurieren der Einstellungen für ausgewählte Authentifizierung](http://technet.microsoft.com/library/cc816580.aspx).
+Um sicherzustellen, dass Konten in der administrativen Gesamtstruktur nur die geeigneten Produktionshosts verwenden, sollte die ausgewählte Authentifizierung verwendet werden. Zur Verwaltung von Domänencontrollern und Delegierung von Rechten in Active Directory ist hierbei in der Regel die Berechtigung für die Anmeldung auf Domänencontrollern für die jeweiligen Administratorkonten der Ebene 0 in der administrativen Gesamtstruktur erforderlich. Weitere Informationen finden Sie unter [Konfigurieren der Einstellungen für ausgewählte Authentifizierung](https://technet.microsoft.com/library/cc816580.aspx).
 
 ## <a name="maintain-logical-separation"></a>Verwalten der logischen Trennung
 

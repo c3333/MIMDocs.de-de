@@ -4,19 +4,19 @@ description: Informieren Sie sich über die ersten Schritte und die Mindestanfor
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: c6d5d5081f0e932b9c60d8f2025b54e47dc352d5
-ms.sourcegitcommit: d98a76d933d4d7ecb02c72c30d57abe3e7f5d015
+ms.openlocfilehash: cf8261c4e6f6529fd82760206b62b689a75d0acb
+ms.sourcegitcommit: c214bb0b1373b65b1c9c215379fd820ab0c13f0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853549"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79382294"
 ---
 # <a name="set-up-an-identity-management-server-windows-server-2016-or-2019"></a>Einrichten eines Identitätsverwaltungsservers: Windows Server 2016 oder 2019
 

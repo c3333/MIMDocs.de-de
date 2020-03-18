@@ -4,22 +4,22 @@ author: billmath
 description: Der Microsoft Graph-Connector ermöglicht die Lebenszyklusverwaltung für externe AD-Benutzerkonten. In diesem Szenario hat eine Organisation Gäste in ihr Azure AD-Verzeichnis eingeladen und möchte diesen Gästen Zugriff auf die lokale integrierte Windows-Authentifizierung oder Kerberos-basierte Anwendungen gewähren
 keywords: ''
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: ba70cd299f2ebec31555bb40b935a6b54779d198
-ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
+ms.openlocfilehash: 0d5f970168934f3fcc4c721aad0a439e2babcfe7
+ms.sourcegitcommit: c214bb0b1373b65b1c9c215379fd820ab0c13f0f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76256630"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79381504"
 ---
 <a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy"></a>Azure AD-Business-to-Business-Kollaboration (B2B) mit Microsoft Identity Manager(MIM) 2016 SP1 mit Azure-Anwendungsproxy
 ============================================================================================================================
 
-Das Anfangsszenario ist die Lebenszyklusverwaltung für externe AD-Benutzerkonten.   In diesem Szenario hat eine Organisation Gäste in ihr Azure AD-Verzeichnis eingeladen und möchte diesen Gästen über den  [Azure AD-Anwendungsproxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) oder andere Gatewaymechanismen Zugriff auf die lokale integrierte Windows-Authentifizierung oder auf Kerberos-basierte Anwendungen gewähren. Der Azure AD-Anwendungsproxy erfordert, dass jeder Benutzer zur Identifikation und Delegierung ein eigenes AD DS-Konto hat.
+Das Anfangsszenario ist die Lebenszyklusverwaltung für externe AD-Benutzerkonten.   In diesem Szenario hat eine Organisation Gäste in ihr Azure AD-Verzeichnis eingeladen und möchte diesen Gästen über den [Azure AD-Anwendungsproxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) oder andere Gatewaymechanismen Zugriff auf die lokale integrierte Windows-Authentifizierung oder Kerberos-basierte Anwendungen gewähren. Der Azure AD-Anwendungsproxy erfordert, dass jeder Benutzer zur Identifikation und Delegierung ein eigenes AD DS-Konto hat.
 
 ## <a name="scenario-specific-guidance"></a>Szenariospezifische Anleitungen
 
@@ -48,7 +48,7 @@ Contoso Pharmaceuticals arbeitet mit Trey Research Inc. als Teil ihrer F&E-Abtei
 
 -   Contoso Pharmaceuticals befindet sich auf einem eigenen Mandanten mit einer eigenen Domäne.
 
--   Jemand hat einen externen Benutzer eingeladen, den Mandanten von Contoso Pharmaceuticals zu nutzen.
+-   Jemand hat einen externen Benutzer zum Mandanten von Contoso Pharmaceuticals eingeladen.
     Dieser Benutzer hat die Einladung angenommen und kann auf freigegebene Ressourcen zugreifen.
 
 -   Contoso Pharmaceuticals hat eine Anwendung über App-Proxy veröffentlicht. In diesem Szenario ist die Beispielanwendung das MIM-Portal. Dies würde es einem Gastbenutzer ermöglichen, an MIM-Prozessen, z. B. Helpdeskszenarien, teilzunehmen oder den Zugriff auf Gruppen in MIM anzufordern.
@@ -73,8 +73,8 @@ Stellen Sie sicher, dass die Anwendung für mindestens eine dieser Berechtigunge
 ## <a name="create-the-new-management-agent"></a>Erstellen des neuen Verwaltungs-Agents
 
 
-Klicken Sie auf der Benutzeroberfläche von Synchronization Service Manager auf  **Connectors**  und anschließend auf  **Erstellen**.
-Wählen Sie  **Graph (Microsoft)**   aus, und geben Sie ihm einen aussagekräftigen Namen.
+In der Benutzeroberfläche von Synchronization Service Manager wählen Sie **Connectors** und **Erstellen** aus.
+Wählen Sie **Graph (Microsoft)** aus, und geben Sie ihm einen aussagekräftigen Namen.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 

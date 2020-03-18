@@ -4,19 +4,19 @@ description: Planen von Microsoft Identity Manager 2016 in der TLS 1.2-Umgebun
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/26/2017
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: b574a9c8536a460cdddf57131a821775672c082a
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: f8d0be0cb9ffa0f32415f11b407954cb0c985024
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73383915"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043442"
 ---
 # <a name="planning-mim-2016-sp2-in-tls-12-or-fips-mode-environments"></a>Planen von MIM 2016 SP2 in den TLS 1.2- oder FIPS-Modus-Umgebungen
 
@@ -25,7 +25,7 @@ ms.locfileid: "73383915"
 > Dieser Artikel gilt nur für MIM 2016 SP2.
 
 Bei der Installation von MIM 2016 SP2 in der gesperrten Umgebung, in der alle Verschlüsselungsprotokolle außer TLS 1.2 deaktiviert sind, gelten die folgenden Anforderungen:
-- Für das Einrichten einer sicheren TLS 1.2-Verbindung sind für die MIM-Komponenten die neuesten Updates für Windows Server und .NET Framework erforderlich, die die Installation der TLS 1.2-Unterstützung in .NET 3.5 Framework ermöglichen. Abhängig von der Serverkonfiguration müssen Sie *möglicherweise* [SystemDefaultTlsVersions für .NET Framework](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the-net-framework) aktivieren und/oder [alle SCHANNEL-Protokolle außer TLS 1.2](https://docs.microsoft.com/windows-server/security/tls/tls-registry-settings) in der Registrierung in *Client*- und *Server*-Unterschlüsseln deaktivieren.
+- Für das Einrichten einer sicheren TLS 1.2-Verbindung sind für die MIM-Komponenten die neuesten Updates für Windows Server und .NET Framework erforderlich, die die Installation der TLS 1.2-Unterstützung in .NET 3.5 Framework ermöglichen. Abhängig von der Serverkonfiguration müssen Sie *möglicherweise*[SystemDefaultTlsVersions für .NET Framework](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the-net-framework) aktivieren und/oder [alle SCHANNEL-Protokolle außer TLS 1.2](https://docs.microsoft.com/windows-server/security/tls/tls-registry-settings) in der Registrierung in *Client*- und *Server*-Unterschlüsseln deaktivieren.
 
 ## <a name="mim-synchronization-service-sql-ma"></a>MIM-Synchronisierungsdienst, SQL-Verwaltungs-Agent
 

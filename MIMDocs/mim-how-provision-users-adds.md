@@ -4,17 +4,17 @@ description: Durchgehen des Einstellungsprozesses von Benutzern in AD DS mit Mic
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 77f1eb5d8355472c7aee7bc9f389ca8b24ab76a9
-ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
+ms.openlocfilehash: 149339a6e1029f01378a518a98029c1d588de6f9
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76256613"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044173"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Bereitstellen von Benutzern in AD DS
 
@@ -499,8 +499,8 @@ Führen Sie die Ausführungsprofile gemäß den Anweisungen in diesem Abschnitt 
 
 ![Überprüfen, ob der Benutzer in der Organisationseinheit FIMObjects ist](media/how-provision-users-adds/image033.jpg)
 
-<a name="summary"></a>Zusammenfassung
-=======
+## <a name="summary"></a>Zusammenfassung
+
 
 Das Ziel dieses Dokuments ist es, Ihnen die wichtigsten Bausteine für die Synchronisierung eines Benutzers in MIM mit AD DS vorzustellen. Während der ersten Testphase sollten Sie zunächst mit einem Minimum an Attributen beginnen, die zum Durchführen einer Aufgabe nötig sind, und weitere Attribute für Ihr Szenario hinzufügen, wenn die allgemeinen Schritte erwartungsgemäß funktionieren. Wenn Sie die Komplexität auf einem Mindestlevel halten, vereinfacht dies die Problembehandlung.
 
@@ -512,11 +512,7 @@ Eine Beschreibung, wie Sie diese Objekte aus Ihrer Testumgebung entfernen könne
 In einem typischen Szenario mit Synchronisierung, die AD DS als Synchronisierungsziel enthält, ist MIM nicht autoritativ für alle Attribute eines Objekts. Wenn Sie z.B. Benutzerobjekte in AD DS mithilfe von FIM verwalten, müssen zumindest die Domäne und die Attribute „objectSID“ durch den Verwaltungs-Agent von AD DS bereitgestellt werden.
 Die Attribute des Kontonamens, die Domänenattribute und die Attribute „objectSID“ sind erforderlich, damit sich ein Benutzer im FIM-Portal anmelden kann. Es ist eine weitere eingehende Synchronisierungsregel für den AD DS-Connectorbereich erforderlich, um diese Attribute aus AD DS zu füllen. Beim Verwalten von Objekten mit mehreren Quellen für Attributwerte müssen Sie sicherstellen, dass Sie die Attributflussrangfolge ordnungsgemäß konfigurieren. Wenn die Attributflussrangfolge nicht ordnungsgemäß konfiguriert ist, verhindert die Synchronisierungs-Engine das Auffüllen der Attributwerte. Weitere Informationen zur Attributflussrangfolge finden Sie im Artikel [About Attribute Flow Precedence (Informationen zur Attributflussrangfolge)](https://go.microsoft.com/FWLink/p/?LinkId=189675).
 
-<a name="see-also"></a>Weitere Informationen
-=========
-
-<a name="other-resources"></a>Weitere Ressourcen
----------------
+## <a name="next-steps"></a>Nächste Schritte
 
 [Using FIM to Enable or Disable Accounts in Active Directory (Aktivieren oder Deaktivieren von Konten in Active Directory mithilfe von FIM)](https://go.microsoft.com/FWLink/p/?LinkId=189670)
 

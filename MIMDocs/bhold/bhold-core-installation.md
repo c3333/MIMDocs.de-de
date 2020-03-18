@@ -4,17 +4,17 @@ description: Dokumentation zur Installation von BHOLD Core
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: e4b18d3caa866767524c56ce184e787a190e9390
-ms.sourcegitcommit: 8ba50298cef65e8cc90402282e88410fad86b4d9
+ms.openlocfilehash: c4dfb4184292ba1b5da8c4e3e176d53e6a885ed8
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2019
-ms.locfileid: "75187313"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042269"
 ---
 # <a name="bhold-core-installation"></a>Installation von BHOLD Core
 

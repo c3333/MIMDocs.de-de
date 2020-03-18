@@ -4,17 +4,17 @@ description: Informationen zum Bereitstellen von Privileged Access Management mi
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 347eda5872792872a9bb30357c45835303f92e01
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 521b96c3ef9cae5a5f9151ddf125cfb534ae0332
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518518"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044020"
 ---
 # <a name="deploy-mim-pam-with-windows-server-2016"></a>Bereitstellen von MIM PAM mit Windows Server 2016
 
@@ -50,7 +50,7 @@ Führen Sie die Installation wie im [Leitfaden für erste Schritte](privileged-i
 
   - Die unter „Konfigurieren der Überwachung“ (Punkt 8) und „Konfigurieren der Registrierungseinträge“ Punkt 10) beschrieben Änderungen **werden empfohlen, sind jedoch nicht erforderlich**, wenn CORP- und PRIV-Domänencontroller sich auf der Windows Server 2016-Domänenfunktionsebene befinden.
 
-- Wenn Sie Windows Server 2012 R2 als Betriebssystem für CORPDC verwenden, müssen Sie die Hotfixes 2919442, 2919355, [und das Update 3155495](http://support.microsoft.com/kb/3156418) auf CORPDC installieren.
+- Wenn Sie Windows Server 2012 R2 als Betriebssystem für CORPDC verwenden, müssen Sie die Hotfixes 2919442, 2919355, [und das Update 3155495](https://support.microsoft.com/kb/3156418) auf CORPDC installieren.
 
 - Folgen Sie den Anweisungen unter [Schritt 2: Vorbereiten des PRIV-Domänencontrollers](step-2-prepare-priv-domain-controller.md), aber nehmen Sie die folgenden Anpassungen vor:
 

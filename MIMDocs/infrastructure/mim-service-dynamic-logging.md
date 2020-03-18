@@ -3,16 +3,16 @@ title: MIM-Dienst – Dynamische Protokollierung | Microsoft-Dokumentation
 description: Aktivieren der dynamischen Protokollierung des MIM-Diensts ohne den Verwaltungsdienst erneut starten zu müssen
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/29/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 90ef2ab63be3914d1d48c7319821177e7e62f9e0
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 69ebe774ddea0176fb26ef74b8f4352e4bb5d039
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68701300"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042167"
 ---
 # <a name="mim-sp1-4414360--service-dynamic-logging"></a>Dynamische Protokollierung des MIM SP1-Diensts (4.4.1436.0)
 
@@ -49,7 +49,7 @@ Um die Nachverfolgung anzuzeigen, können Sie das [Service Trace Viewer-Tool](ht
 
  ![Screenshot des Service Trace Viewer-Tools](media/mim-service-dynamic-logging/screen04.png)
 
-# <a name="updates-build-45xx-or-greater"></a>Updates: Build 4.5.x.x oder höher
+## <a name="updates-build-45xx-or-greater"></a>Updates: Build 4.5.x.x oder höher
 
 Im Build 4.5.x.x wurde das Protokollierungsfeature überarbeitet, sodass der Standardprotokolliergrad **„Warnung“** lautet. Der Dienst schreibt Meldungen in zwei Dateien („00“- und „01“-Indizes werden vor der Erweiterung hinzugefügt). Die Dateien befinden sich im Verzeichnis „C:\Programme\Microsoft Forefront Identity Manager\2010\Service“. Wenn die Datei die maximale Größe überschreitet, beginnt der Dienst, in eine andere Datei zu schreiben. Wenn eine andere Datei vorhanden ist, wird sie überschrieben. Die standardmäßige maximale Größe der Datei ist 1 GB. Um die standardmäßige maximale Größe zu ändern, muss der Parameter **maxOutputFileSizeKB** mit dem Wert der maximalen Dateigröße in KB dem Listener hinzugefügt werden (siehe folgendes Beispiel) und der MIM-Dienst neu gestartet werden. Wenn der Dienst gestartet wird, fügt er der neueren Datei Protokolle hinzu (bei Überschreitung der Speicherplatzbegrenzung wird die älteste Datei überschreiben). 
 

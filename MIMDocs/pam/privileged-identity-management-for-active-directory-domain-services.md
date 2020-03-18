@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über Privileged Access Management und wie es Sie
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/30/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -13,12 +13,12 @@ ms.reviewer: mwahl
 ms.suite: ems
 experimental: true
 experiment_id: kgremban_images
-ms.openlocfilehash: 3855842f0339e2611c75761484de9c059eec6fa0
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 1d00b232d8c7b09fea72e033a51dd590992291c3
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518789"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043901"
 ---
 # <a name="privileged-access-management-for-active-directory-domain-services"></a>Privileged Access Management für Active Directory-Domänendienste
 
@@ -50,7 +50,7 @@ PAM erschwert es Angreifern, in ein Netzwerk einzudringen und Zugriff auf privil
 
 ## <a name="setting-up-pam"></a>Einrichten eines PAM-Systems
 
-PAM baut auf dem Prinzip der Just-in-Time-Verwaltung auf, die mit [Just Enough Administration (JEA)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DCIM-B362) verwandt ist. JEA ist ein Windows PowerShell-Toolkit, das einen Satz von Befehlen zum Ausführen von Aktivitäten mit Berechtigungen definiert. Es handelt sich um einen Endpunkt, an dem Administratoren die Autorisierung zum Ausführen von Befehlen erhalten können. In JEA entscheidet ein Administrator, dass ein Benutzer mit einer bestimmten Berechtigung eine bestimmte Aufgabe ausführen darf. Jedes Mal, wenn ein berechtigter Benutzer diese Aufgabe ausführen muss, aktiviert er diese Berechtigung. Die Berechtigung läuft nach einem bestimmten Zeitraum ab, sodass ein böswilliger Benutzer den Zugriff nicht stehlen kann.
+PAM baut auf dem Prinzip der Just-in-Time-Verwaltung auf, die mit [Just Enough Administration (JEA)](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DCIM-B362) verwandt ist. JEA ist ein Windows PowerShell-Toolkit, das einen Satz von Befehlen zum Ausführen von Aktivitäten mit Berechtigungen definiert. Es handelt sich um einen Endpunkt, an dem Administratoren die Autorisierung zum Ausführen von Befehlen erhalten können. In JEA entscheidet ein Administrator, dass ein Benutzer mit einer bestimmten Berechtigung eine bestimmte Aufgabe ausführen darf. Jedes Mal, wenn ein berechtigter Benutzer diese Aufgabe ausführen muss, aktiviert er diese Berechtigung. Die Berechtigung läuft nach einem bestimmten Zeitraum ab, sodass ein böswilliger Benutzer den Zugriff nicht stehlen kann.
 
 Für Einrichtung und Betrieb von PAM sind vier Schritte erforderlich.
 

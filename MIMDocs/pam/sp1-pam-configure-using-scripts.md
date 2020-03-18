@@ -4,19 +4,19 @@ description: Dieser Artikel ist Teil der Reihe über die PAM-Konfiguration mithi
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 07/20/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 28e8f5c28cd38ad820c6a1f12385dffbd0641ddd
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 102754fc88af32cb9abed40716ba9168a041d58e
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518313"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043884"
 ---
 # <a name="configure-pam-using-scripts"></a>Konfigurieren von PAM mithilfe von Skripts
 
@@ -57,7 +57,7 @@ Aktualisieren Sie die Datei „PAMDeploymentConfig.xml“, und legen Sie die akt
 
 ### <a name="validation"></a>Validation
 
-|  Computer | Ausführung als   | Befehle   |
+|  Machine | Ausführung als   | Befehle   |
 |---|---|---|
 | CORP-Client  | CORP-Benutzer (lokaler Administrator)  |   .\PAMDeployment.ps1; Wählen Sie Menüoption 7 (MIM PAM-Clienteinrichtung)  |
 | CORP-DC  | CORP-Domänenadministrator   | Import-module .\PAMValidation.psm1 ; Create-PAMValidationCORPDCConfig   |

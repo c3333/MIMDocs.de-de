@@ -4,7 +4,7 @@ description: Bereiten Sie einen PAM-Server vor, der SQL und SharePoint für Ihre
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -12,12 +12,12 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: e306748e982eb2eb123246bc7f309465823eaf35
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 7a0a0437e767f793150d875bcaf31213a7fdf627
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518219"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043663"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Schritt 3: Vorbereiten eines PAM-Servers
 
@@ -78,7 +78,7 @@ Konfigurieren Sie die Serversicherheitsrichtlinien, damit die neu erstellten Kon
 
 9. Klicken Sie im Detailbereich mit der rechten Maustaste auf **Lokal anmelden verweigern**, und wählen Sie dann **Eigenschaften** aus.  
 10. Klicken Sie auf **Benutzer oder Gruppe hinzufügen**, geben Sie in „Benutzer- und Gruppennamen“ die Zeichenfolge *priv\mimmonitor; priv\MIMService; priv\mimcomponent* ein, und klicken Sie auf **OK**.  
-11. Klicken Sie auf **OK**, um das Dialogfeld „Eigenschaften“ zu schließen.  
+11. Klicken Sie auf **OK**, um das Eigenschaftenfenster zu schließen.  
 12. Schließen Sie das Fenster „Lokale Sicherheitsrichtlinien“.  
 
 13. Öffnen Sie die Systemsteuerung, und wechseln Sie zu **Benutzerkonten**.
@@ -186,7 +186,7 @@ Erstellen Sie nun eine SharePoint-Websitesammlung, die dieser Webanwendung zugeo
 
     Vergewissern Sie sich, dass die Variable **CompatibilityLevel** auf *14* festgelegt ist. Wenn *15* zurückgegeben wird, wurde die Websitesammlung nicht für die 2010-Umgebungsversion erstellt. Löschen Sie die Websitesammlung, und erstellen Sie diese neu.
 
-2.  Führen Sie den folgenden PowerShell-Befehl über **SharePoint 2013-Verwaltungsshell** aus. Dies deaktiviert den serverseitigen SharePoint-Ansichtszustand und die SharePoint-Aufgabe **Integritätsanalyseauftrag (Stündlich, Microsoft SharePoint Foundation-Timer, Alle Server)**.
+2.  Führen Sie den folgenden PowerShell-Befehl über **SharePoint 2013-Verwaltungsshell** aus. Dies deaktiviert den serverseitigen SharePoint-Ansichtszustand und die SharePoint-Aufgabe **Integritätsanalyseauftrag (Stündlich, Microsoft SharePoint Foundation-Timer, Alle Server)** .
 
     ```PowerShell
     $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;

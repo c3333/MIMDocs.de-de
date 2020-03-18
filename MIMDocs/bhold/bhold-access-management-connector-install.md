@@ -4,17 +4,17 @@ description: Das BHOLD-Connectormodul unterstützt die anfängliche und laufende
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 60886a84c6105e94a2cd3d42f17b86b2d69c8c0a
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: ae9cc0bb4c63089c6733c06b7b035b2b9566fdd0
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64516063"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79041862"
 ---
 # <a name="access-management-connector-installation"></a>Installation des BHOLD-Zugriffsverwaltungsconnectors
 
@@ -22,7 +22,7 @@ Das Modul des BHOLD Suite-Zugriffsverwaltungsconnectors unterstützt die laufend
 
 ## <a name="access-management-connector-software-requirements"></a>Softwareanforderungen für den Zugriffsverwaltungsconnector
 
-Bevor Sie das Modul des Zugriffsverwaltungsconnectors installieren, müssen Sie Microsoft .NET Framework 4 installieren. Weitere Informationen und Installationsanweisungen zu .NET Framework 4 finden Sie auf der [Microsoft .NET-Homepage](http://www.microsoft.com/net).
+Bevor Sie das Modul des Zugriffsverwaltungsconnectors installieren, müssen Sie Microsoft .NET Framework 4 installieren. Weitere Informationen und Installationsanweisungen zu .NET Framework 4 finden Sie auf der [Microsoft .NET-Homepage](https://www.microsoft.com/net).
 Sie müssen den Zugriffsverwaltungsconnector auf einem Computer installieren, auf dem der FIM-Synchronisierungsdienst von MIM ausgeführt wird.
 
 ## <a name="access-management-connector-setup"></a>Setup des Zugriffsverwaltungsconnectors

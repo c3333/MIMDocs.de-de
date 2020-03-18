@@ -4,19 +4,19 @@ description: Hier erhalten Sie die vollständige Liste der für die Bereitstellu
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/17/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: ea9caef07c2496c5d2e040f5d88764938231220b
-ms.sourcegitcommit: 80cdfd782cc6e2a4c4698decd54342f0e1460f5f
+ms.openlocfilehash: 5a80718b038a10bb8d746a86856b87d016783fd6
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75756172"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043187"
 ---
 # <a name="deploy-microsoft-identity-manager-2016-sp2"></a>Bereitstellen von Microsoft Identity Manager 2016 SP2
 Die Artikel in diesem Abschnitt bieten Schritt-für-Schritt-Anleitungen für die Bereitstellung von Microsoft Identity Manager (MIM) 2016 für Endbenutzer-Self-Service-Szenarien. Es wird dabei von einer Bereitstellung auf einem neuen Server ausgegangen, auf dem zuvor weder FIM noch MIM bereitgestellt wurden.

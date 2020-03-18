@@ -4,17 +4,17 @@ description: ''
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 01/05/2018
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 8987bc53af37b32b95b00c3df67d9581d4e47120
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 72b77034d5591d0bc2ab420f185acee719fe8324
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518773"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043000"
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Microsoft Identity Manager 2016 – Empfohlene Vorgehensweisen
 
@@ -193,11 +193,11 @@ ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 > [!IMPORTANT]
 > Wenn diese Vorgehensweisen nicht umgesetzt werden, kann dies dazu führen, dass nicht mehr genügend Speicherplatz vorhanden ist. Weitere Details zu diesem Thema finden Sie unter [Übersicht über Wiederherstellungsmodelle](http://go.microsoft.com/fwlink/?LinkID=185370). Weitere Informationen finden Sie unter [FIM 2010 Backup and Restore Guide (FIM 2010-Handbuch zur Sicherung und Wiederherstellung)](http://go.microsoft.com/fwlink/?LinkID=165864).
 
-### <a name="step-2-apply-the-minimum-necessary-mim-configuration-during-the-load-process"></a>Schritt 2: Wenden Sie während des Ladevorgangs die erforderliche MIM-Minimalkonfiguration an.
+### <a name="step-2-apply-the-minimum-necessary-mim-configuration-during-the-load-process"></a>Schritt 2: Wenden Sie während des Ladevorgangs die erforderliche MIM-Minimalkonfiguration an.
 
 Beim ersten Laden sollten Sie nur die Mindestkonfiguration anwenden, die erforderlich ist, um FIM für die Management-Richtlinienregeln (Management Policy Rules, MPRs) und Set-Definitionen zu konfigurieren. Erstellen Sie nach Abschluss des Datenladevorgangs die zusätzlichen Sets, die für die Bereitstellung erforderlich sind. Verwenden Sie die Einstellung zum Aktualisieren der Run-On-Richtlinie auf den Aktionsworkflows, um diese Richtlinien nachträglich auf die geladenen Daten anzuwenden.
 
-### <a name="step-3-configure-and-populate-the-fim-service-with-external-identity-data"></a>Schritt 3: Konfigurieren Sie den FIM-Dienst, und füllen Sie diesen mit externen Identitätsdaten auf.
+### <a name="step-3-configure-and-populate-the-fim-service-with-external-identity-data"></a>Schritt 3: Konfigurieren Sie den FIM-Dienst, und füllen Sie diesen mit externen Identitätsdaten auf.
 
 An diesem Punkt sollten Sie die Richtlinien unter „How Do I Synchronize Users from Active Directory Domain Services to FIM (Synchronisieren von Benutzern aus Active Directory-Domänendiensten zu FIM)“ befolgen, um Ihr System mit Benutzern aus Active Directory zu konfigurieren und zu synchronisieren. Wenn Gruppeninformationen synchronisiert werden sollen, finden Sie dazu Informationen im Leitfaden [How Do I Synchronize Groups from Active Directory Domain Services to FIM (Synchronisieren von Gruppen aus Active Directory-Domänendiensten zu FIM)](https://technet.microsoft.com/library/ff686936(v=ws.10).aspx).
 

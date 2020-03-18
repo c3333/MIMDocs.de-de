@@ -4,25 +4,25 @@ description: Erfahren Sie, wie Sie Privileged Access Management für Hochverfüg
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 0d0d55d4007ab88df4c2f3b5a30ca0fdedea9fe2
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 67ce70e6bc0603a991731cf1e5fb95751f5016c6
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518641"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043969"
 ---
 # <a name="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment"></a>Hohe Verfügbarkeit und Überlegungen zur Notfallwiederherstellung für die geschützte Umgebung
 
 Dieser Artikel beschreibt Überlegungen zu Hochverfügbarkeit und Notfallwiederherstellung bei der Bereitstellung von Active Directory Domain Services (AD DS) und Microsoft Identity Manager 2016 (MIM) für Privileged Access Management (PAM).
 
-Unternehmen konzentrieren sich auf Hochverfügbarkeit und Notfallwiederherstellung für Workloads in Windows Server, SQL Server und Active Directory. Aber die zuverlässige Verfügbarkeit der geschützten Umgebung für Privileged Access Management ist auch wichtig. Die geschützte Umgebung ist ein wichtiger Bestandteil der IT-Infrastruktur der Organisation, da Benutzer mit ihren Komponenten interagieren, um administrative Rollen zu übernehmen. Um weitere Informationen zu Hochverfügbarkeit im Allgemeinen zu erhalten, können Sie das Whitepaper [Microsoft High Availability Overview](http://download.microsoft.com/download/3/B/5/3B51A025-7522-4686-AA16-8AE2E536034D/Microsoft%20High%20Availability%20Strategy%20White%20Paper.doc) (Übersicht von Microsoft zu Hochverfügbarkeit) herunterladen.
+Unternehmen konzentrieren sich auf Hochverfügbarkeit und Notfallwiederherstellung für Workloads in Windows Server, SQL Server und Active Directory. Aber die zuverlässige Verfügbarkeit der geschützten Umgebung für Privileged Access Management ist auch wichtig. Die geschützte Umgebung ist ein wichtiger Bestandteil der IT-Infrastruktur der Organisation, da Benutzer mit ihren Komponenten interagieren, um administrative Rollen zu übernehmen. Um weitere Informationen zu Hochverfügbarkeit im Allgemeinen zu erhalten, können Sie das Whitepaper [Microsoft High Availability Overview](https://download.microsoft.com/download/3/B/5/3B51A025-7522-4686-AA16-8AE2E536034D/Microsoft%20High%20Availability%20Strategy%20White%20Paper.doc) (Übersicht von Microsoft zu Hochverfügbarkeit) herunterladen.
 
 ## <a name="high-availability-and-disaster-recovery-scenarios"></a>Szenarien zu Hochverfügbarkeit und Notfallwiederherstellung
 
@@ -214,7 +214,7 @@ Der MIM-Dienst ist erforderlich, um Aktivierungsanforderungen zu verarbeiten.  D
 
 #### <a name="preparation"></a>Vorbereitung
 Sie sollten den MIM-Dienst auf mehreren Servern bereitstellen, die der PRIV-Domäne hinzugefügt werden.
-Informationen zu Hochverfügbarkeit finden Sie in den Windows Server-Dokumenten [Hardwareanforderungen und Speicheroptionen für Failovercluster](https://technet.microsoft.com/library/jj612869.aspx) und [Creating a Windows Server 2012 Failover Cluster](http://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx) (Erstellen eines Windows Server 2012-Failoverclusters).
+Informationen zu Hochverfügbarkeit finden Sie in den Windows Server-Dokumenten [Hardwareanforderungen und Speicheroptionen für Failovercluster](https://technet.microsoft.com/library/jj612869.aspx) und [Creating a Windows Server 2012 Failover Cluster](https://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx) (Erstellen eines Windows Server 2012-Failoverclusters).
 
 Für die mehrere Server übergreifende Produktionsbereitstellung können Sie den Netzwerklastenausgleich (Network Load Balancing, NLB) zum Verteilen der Verarbeitungslast verwenden.  Sie sollten auch einen einzelnen Alias (z. B. einen A- oder CNAME-Datensatz) haben, sodass den Benutzern ein einziger gängiger Name angezeigt wird.
 

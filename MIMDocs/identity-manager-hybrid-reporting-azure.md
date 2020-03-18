@@ -4,18 +4,18 @@ description: Mit Hybridberichten zur Überwachung von Aktivitäten in Azure Acti
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 02/20/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
 ms.suite: ems
-ms.openlocfilehash: dd87f00fb3faded60671a47a0ba1dab7e4c2a531
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 6f4f2aea998fc5682d1fb21d77e4d4f1c582d770
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64516776"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042150"
 ---
 # <a name="hybrid-identity-management-audit-reporting-in-azure-active-directory"></a>Überwachungsberichte zur hybriden Identitätsverwaltung in Azure Active Directory
 Mit Überwachungsberichten in Azure Active Directory (Azure AD) können Sie Identitätsverwaltungsaktivitäten lokal oder in der Cloud überwachen. Sparen Sie Zeit, und senken Sie die Gesamtkosten, indem Sie sämtliche Identitäts- und Zugriffsdaten in einem einzigen Bericht verwalten.
@@ -29,7 +29,7 @@ Die Hybridberichterstellung für die Überwachung unterstützt IT-Experten dabei
 
 * **Verringern der Kosten für die Infrastruktur des Berichterstellungssystems**. Dank der Hybridberichterstellung in der Cloud können Sie Kosten in Zusammenhang mit Ihrer lokalen Data Warehouse-Infrastruktur vermeiden.
 
-## <a name="how-does-it-work"></a>Wie funktioniert es?
+## <a name="how-does-it-work"></a>So funktioniert es
 
 Um die lokalen Daten zu sammeln, installieren Sie zunächst einen Berichterstellungs-Agent auf dem Identity Manager 2016-Server. [Laden Sie den Identity Manager-Agent für die Berichterstellung herunter](https://www.microsoft.com/download/details.aspx?id=55112).
 

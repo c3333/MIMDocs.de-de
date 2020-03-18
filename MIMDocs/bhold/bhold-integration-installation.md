@@ -4,17 +4,17 @@ description: Das BHOLD-Integrationsmodul fügt MIM und FIM eine Self-Service-Rol
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 317c9ae4c940a509b6ac328cd5bb7cd7baa4dde9
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 3005e06606ec4b3b6854003213c712770376b35d
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64516013"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042201"
 ---
 # <a name="bhold-fimmim-integration-installation"></a>Installation der BHOLD FIM/MIM-Integration
 
@@ -48,14 +48,14 @@ Darüber hinaus müssen Sie darauf vorbereitet sein, die Informationen bereitzus
 | **Verwenden eines Sicherheitsanbieters auf einer Domäne** | Bei der Auswahl dieser Option wird angegeben, dass die Active Directory Domain Services-Sicherheit den Zugriff auf BHOLD Core steuert.                                                                                                                    | Aktivieren Sie das Kontrollkästchen. **Wichtig:** Die Installation schlägt fehl, wenn dieses Kontrollkästchen nicht aktiviert ist.                                                                                                                                                                                                                   |
 | **Domäne**                          | Gibt die Domäne an, die das **Dienstkonto** enthält, das Sie bei der Installation von BHOLD Core erstellt haben. Weitere Informationen finden Sie unter [BHOLD Core Installation (Installation von BHOLD Core)](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | Der Domänenname wird automatisch vom Assistenten bereitgestellt. Ändern Sie den Namen nur, wenn dieser falsch ist. **Wichtig:** Geben Sie den Domänennamen an, indem Sie den kurzen NetBIOS-Namen verwenden, nicht den vollqualifizierten Domänennamen (FQDN). Wenn der FQDN der Domäne beispielsweise „fabrikam.com“ ist, geben Sie den Domänennamen als „FABRIKAM“ an. |
 | **Benutzername**                        | Gibt den Anmeldenamen des BHOLD Core-Dienstbenutzerkontos an.                                                                                                                                                              | Geben Sie den Benutzerkontonamen hier ein:                                                                                                                                                                                                                                                                                    |
-| **Passwort**                        | Gibt das Kennwort des Dienstbenutzerkontos an.                                                                                                                                                                           | Geben Sie das Kennwort hier ein: **Wichtig:** Achten Sie darauf, das Kennwort an einem verborgenen, sicheren Ort aufzubewahren.                                                                                                                                                                                                                  |
+| **Kennwort**                        | Gibt das Kennwort des Dienstbenutzerkontos an.                                                                                                                                                                           | Geben Sie das Kennwort hier ein: **Wichtig:** Achten Sie darauf, das Kennwort an einem verborgenen, sicheren Ort aufzubewahren.                                                                                                                                                                                                                  |
 
 ### <a name="fim-service-settings"></a>Einstellungen für den FIM-Dienst
 
 | **Element**            | **Beschreibung**                                                                                                                                                                                                                               | **Wert**                                                                                           |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 | **Benutzer**            | Gibt den Anmeldenamen eines Kontos mit Administratorrechten für FIM an. Microsoft empfiehlt dringend, dass Sie nicht das Konto verwenden, das dem Stammbenutzer in BHOLD Core zugeordnet ist (standardmäßig das Konto, das zum Installieren von BHOLD Core verwendet wurde). | Geben Sie den Benutzerkontonamen hier ein:                                                                   |
-| **Passwort**        | Gibt das Kennwort des FIM-Administratorbenutzerkontos an.                                                                                                                                                                                 | Geben Sie das Kennwort hier ein: **Wichtig:** Achten Sie darauf, das Kennwort an einem verborgenen, sicheren Ort aufzubewahren. |
+| **Kennwort**        | Gibt das Kennwort des FIM-Administratorbenutzerkontos an.                                                                                                                                                                                 | Geben Sie das Kennwort hier ein: **Wichtig:** Achten Sie darauf, das Kennwort an einem verborgenen, sicheren Ort aufzubewahren. |
 | **FIM-Datenbank**    | Gibt den Namen der FIM-Dienstdatenbank an.                                                                                                                                                                                               | FIMService                                                                                          |
 | **IP/Port der Website** | Gibt den Namen oder die IP-Adresse des FIM-Portalservers und den Websiteport an.                                                                                                                                                               | Geben Sie den Servernamen oder die Serveradresse und den Port hier ein:                                                     |
 
@@ -65,7 +65,7 @@ Darüber hinaus müssen Sie darauf vorbereitet sein, die Informationen bereitzus
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 | **Domäne**             | Gibt den Namen der Domäne des Kontos an, das in **Benutzer** angegeben wurde. Geben Sie die Domäne im kurzen NetBIOS-Format an.                                                                                                                                                                                                                                                                   | Geben Sie den Domänennamen des Benutzerkontos hier ein:                                                            |
 | **Benutzer**               | Gibt den Anmeldenamen des Kontos **eines BHOLD-Benutzers an, der Supervisor** für alle Benutzer und Rollen ist und über die Berechtigung verfügt, Benutzerrollen zu verknüpfen und aufzuheben. Microsoft empfiehlt dringend, dass Sie nicht das Konto verwenden, das dem Stammbenutzer in BHOLD Core zugeordnet ist (standardmäßig das Konto, das zum Installieren von BHOLD Core verwendet wurde). Bei diesem Konto darf es sich um dasselbe Konto handeln, das Sie zum Herstellen einer Verbindung mit FIM verwenden. | Geben Sie den Benutzerkontonamen hier ein:                                                                   |
-| **Passwort**           | Gibt das Kennwort des Benutzerkontos an, das in **Benutzer** angegeben ist.                                                                                                                                                                                                                                                                                                                             | Geben Sie das Kennwort hier ein: **Wichtig:** Achten Sie darauf, das Kennwort an einem verborgenen, sicheren Ort aufzubewahren. |
+| **Kennwort**           | Gibt das Kennwort des Benutzerkontos an, das in **Benutzer** angegeben ist.                                                                                                                                                                                                                                                                                                                             | Geben Sie das Kennwort hier ein: **Wichtig:** Achten Sie darauf, das Kennwort an einem verborgenen, sicheren Ort aufzubewahren. |
 | **IP-Adresse/absolute Adresse** | Gibt die IP-Adresse des BHOLD Core-Websiteservers an. Verwenden Sie nicht den Servernamen.                                                                                                                                                                                                                                                                                                        | Geben Sie die IP-Adresse hier ein:                                                                          |
 | **Portnummer**        | Gibt die Portnummer der BHOLD Core-Website an.                                                                                                                                                                                                                                                                                                                                          | Geben Sie die Portnummer hier ein:                                                                         |
 
@@ -121,7 +121,7 @@ In der folgenden Tabelle werden die Dateien und die ursprünglichen und geänder
 | AttestationCampaigns.aspx |    http://<BHOLD_Server>/bhold/Attestation/Campaigns.aspx?hideMenu=1 | https://<BHOLD_Server_FQDN>/bhold/Attestation/Campaigns.aspx?hideMenu=1 | 
 | AttestationMain.aspx      |  http://<BHOLD_Server>/bhold/Attestation/Dashboard.aspx?hideMenu=1        | https://<BHOLD_Server_FQDN>/bhold/Attestation/Dashboard.aspx?hideMenu=1 |
 | Reporting.aspx            | http://<BHOLD_Server>/bhold/Reporting/index_fim.html |  https://<BHOLD_Server_FQDN>/bhold/Reporting/index_fim.html |
-| Selfservice.aspx          | RoleExchangePoint=http://\<*FIM_Server*\>: \<*FIM_Port*\>/BHOLD/RoleExchangePoint/ BHOLDRoleExchangePoint.svc,TransportMode=Transport | RoleExchangePoint=https://\<*FIM_Server_FQDN*\>: \<*FIM_SSL_Port\>*\>/BHOLD/RoleExchangePoint/ BHOLDRoleExchangePoint.svc,TransportMode=Transport |
+| Selfservice.aspx          | RoleExchangePoint=http://\<*FIM_Server*\>: \<*FIM_Port*\>/BHOLD/RoleExchangePoint/ BHOLDRoleExchangePoint.svc,TransportMode=Transport | RoleExchangePoint=https://\<*FIM_Server_FQDN*\>: \<*FIM_SSL_Port\>* \>/BHOLD/RoleExchangePoint/ BHOLDRoleExchangePoint.svc,TransportMode=Transport |
 
 Hierbei gilt Folgendes:
 
@@ -189,7 +189,7 @@ Wenn keine genehmigende Person für eine Self-Service-Rollenanforderungen durch 
 
 18. Klicken Sie auf der Seite **Organizational unit/root** (Organisationseinheit/Stamm) auf **Ändern**.
 
-19. Geben Sie auf der Seite **Modify organizational unit attributes/root** (Attribute/Stamm der Organisationseinheit ändern) unter **Genehmigende Person** die Domäne und den Benutzernamen des Benutzers, der die Anforderungen für Rollenzuweisungen genehmigt, im Format *\<Domäne\>*\\*\<Benutzer\>* ein. Hierbei entspricht *\<Domäne\>* dem kurzen NetBIOS-Domänennamen und *\<Benutzer\>* dem Anmeldenamen des Benutzers.
+19. Geben Sie auf der Seite **Modify organizational unit attributes/root** (Attribute/Stamm der Organisationseinheit ändern) unter **Genehmigende Person** die Domäne und den Benutzernamen des Benutzers, der die Anforderungen für Rollenzuweisungen genehmigt, im Format *\<Domäne\>* \\ *\<Benutzer\>* ein. Hierbei entspricht *\<Domäne\>* dem kurzen NetBIOS-Domänennamen und *\<Benutzer\>* dem Anmeldenamen des Benutzers.
 20. Klicken Sie auf **OK**.
 
 > [!IMPORTANT]

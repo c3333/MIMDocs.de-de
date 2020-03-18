@@ -4,19 +4,19 @@ description: Richten Sie eine Vertrauensstellung zwischen den Gesamtstrukturen v
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 11/29/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 04195febdb721291e9dcf72f5bbda04923075596
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 0cf952c93c0a7b95fd41939efc767e9e8c20be5e
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518265"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043646"
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Schritt 5 – Einrichten einer Vertrauensstellung zwischen den Gesamtstrukturen PRIV und CORP
 
@@ -80,14 +80,14 @@ Aktivieren Sie für jede vorhandene Gesamtstruktur den Lesezugriff auf AD für P
 8. Schließen Sie %%amp;quot;Active Directory-Benutzer und -Computer%%amp;quot;.
 
 9. Öffnen Sie ein PowerShell-Fenster.
-10. Verwenden Sie `netdom`, um sicherzustellen, dass der SID-Verlauf aktiviert und die SID-Filterung deaktiviert ist. Typ:
+10. Verwenden Sie `netdom`, um sicherzustellen, dass der SID-Verlauf aktiviert und die SID-Filterung deaktiviert ist. Type:
     ```cmd
     netdom trust contoso.local /quarantine:no /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
     ```
     Die Ausgabe muss entweder **Der SID-Verlauf für diese Vertrauensstellung wird aktiviert** oder **Der SID-Verlauf ist für diese Vertrauensstellung bereits aktiviert** lauten.
 
-    Die Ausgabe sollte auch **Für diese Vertrauensstellung ist keine SID-Filterung aktiviert** angeben. Weitere Informationen finden Sie unter [Disable SID filter quarantining](http://technet.microsoft.com/library/cc772816.aspx) (Deaktivieren der SID-Filterquarantäne).
+    Die Ausgabe sollte auch **Für diese Vertrauensstellung ist keine SID-Filterung aktiviert** angeben. Weitere Informationen finden Sie unter [Disable SID filter quarantining](https://technet.microsoft.com/library/cc772816.aspx) (Deaktivieren der SID-Filterquarantäne).
 
 ## <a name="start-the-monitoring-and-component-services"></a>Starten der Überwachungs- und Komponentendienste
 

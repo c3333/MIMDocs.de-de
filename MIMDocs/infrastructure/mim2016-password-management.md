@@ -4,17 +4,17 @@ description: ''
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/01/2017
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 45b46ed10f7eda506fe1fc1af94c4be06a1a37b9
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: b28c9623e3a05168adafc19c43634d686dc7e8e2
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64516581"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042405"
 ---
 # <a name="microsoft-identity-manager-2016-password-management"></a>Kennwortverwaltung mit Microsoft Identity Manager 2016
 
@@ -67,13 +67,13 @@ Der PCNS wird auf jedem AD-Domänencontroller ausgeführt. Die Systeme, die die 
 
 Dies sind die Komponenten, die in den Kennwortsynchronisierungsprozess involviert sind:
 
--   **Benachrichtigungsdienst für Kennwortänderungen („pcnssvc.exe“)**: Der PCNS wird auf einem Domänencontroller ausgeführt und erfasst Benachrichtigungen bezüglich Kennwortänderungen von einem lokalen Kennwortfilter. Diese fügt er einer Warteschlange für den Zielserver hinzu, der MIM ausführt, und stellt sie mit RPC bereit. Der Dienst verschlüsselt das Kennwort und stellt sicher, dass es so lange geschützt ist, bis es dem MIM-Zielserver bereitgestellt wurde.
+-   **Benachrichtigungsdienst für Kennwortänderungen („pcnssvc.exe“)** : Der PCNS wird auf einem Domänencontroller ausgeführt und erfasst Benachrichtigungen bezüglich Kennwortänderungen von einem lokalen Kennwortfilter. Diese fügt er einer Warteschlange für den Zielserver hinzu, der MIM ausführt, und stellt sie mit RPC bereit. Der Dienst verschlüsselt das Kennwort und stellt sicher, dass es so lange geschützt ist, bis es dem MIM-Zielserver bereitgestellt wurde.
 
--   **Dienstprinzipalname (Service Principal Name, SPN)**: Der SPN ist eine Eigenschaft des Kontoobjekts in AD, die vom Kerberos-Protokoll verwendet wird, um den PCNS und das Ziel zu authentifizieren. Der SPN stellt sicher, dass der PCNS den richtigen MIM-Server authentifiziert, und dass kein andere Dienst die Benachrichtigungen über Kennwortänderungen empfängt. Der SPN wird mit dem Tool „setspn.exe“ erstellt und zugewiesen. Weiter Informationen zur Konfigurierung des SPN finden Sie unter „Using Password Synchronization (Verwenden der Kennwortsynchronisierung)“.
+-   **Dienstprinzipalname (Service Principal Name, SPN)** : Der SPN ist eine Eigenschaft des Kontoobjekts in AD, die vom Kerberos-Protokoll verwendet wird, um den PCNS und das Ziel zu authentifizieren. Der SPN stellt sicher, dass der PCNS den richtigen MIM-Server authentifiziert, und dass kein andere Dienst die Benachrichtigungen über Kennwortänderungen empfängt. Der SPN wird mit dem Tool „setspn.exe“ erstellt und zugewiesen. Weiter Informationen zur Konfigurierung des SPN finden Sie unter „Using Password Synchronization (Verwenden der Kennwortsynchronisierung)“.
 
--   **Filter für Benachrichtigungen zu Kennwortänderungen („pcnsflt.dll“)**: Der Kennwortfilter wird zum Empfangen von Nur-Text-Kennwörtern von AD verwendet. Dieser Filter wird von der lokalen Sicherheitsautorität (LSA) auf jedem Windows Server-Domänencontroller geladen, der an der Verteilung von Kennwörtern an einen MIM-Zielserver beteiligt ist. Sobald der Filter installiert und der Domänencontroller neu gestartet wurde, empfängt der Filter Benachrichtigungen zu Kennwortänderungen, die von diesem Domänencontroller ausgehen. Der Filter für Kennwortbenachrichtigungen wird gleichzeitig mit anderen Filtern auf dem Domänencontroller ausgeführt.
+-   **Filter für Benachrichtigungen zu Kennwortänderungen („pcnsflt.dll“)** : Der Kennwortfilter wird zum Empfangen von Nur-Text-Kennwörtern von AD verwendet. Dieser Filter wird von der lokalen Sicherheitsautorität (LSA) auf jedem Windows Server-Domänencontroller geladen, der an der Verteilung von Kennwörtern an einen MIM-Zielserver beteiligt ist. Sobald der Filter installiert und der Domänencontroller neu gestartet wurde, empfängt der Filter Benachrichtigungen zu Kennwortänderungen, die von diesem Domänencontroller ausgehen. Der Filter für Kennwortbenachrichtigungen wird gleichzeitig mit anderen Filtern auf dem Domänencontroller ausgeführt.
 
--   **Hilfsprogramm für die Konfigurierung des Benachrichtigungsdienstes für Kennwortänderungen („pcnscfg.exe“)**: Das Hilfsprogramm „pcnscfg.exe“ wird verwendet, um die Konfigurationsparameter des Benachrichtigungsdienstes für Kennwortänderungen, die in AD gespeichert sind, zu verwalten und zu warten. Zu diesen Konfigurationsparametern zählen z.B. Parameter zum Definieren der Zielserver, des Wiederholungsintervalls der Kennwortwarteschlange und Parameter zum Aktivieren und Deaktivieren der Zielserver. Sie werden bei der Authentifizierung und beim Senden von Kennwortbenachrichtigungen an den MIM-Zielserver verwendet.
+-   **Hilfsprogramm für die Konfigurierung des Benachrichtigungsdienstes für Kennwortänderungen („pcnscfg.exe“)** : Das Hilfsprogramm „pcnscfg.exe“ wird verwendet, um die Konfigurationsparameter des Benachrichtigungsdienstes für Kennwortänderungen, die in AD gespeichert sind, zu verwalten und zu warten. Zu diesen Konfigurationsparametern zählen z.B. Parameter zum Definieren der Zielserver, des Wiederholungsintervalls der Kennwortwarteschlange und Parameter zum Aktivieren und Deaktivieren der Zielserver. Sie werden bei der Authentifizierung und beim Senden von Kennwortbenachrichtigungen an den MIM-Zielserver verwendet.
     Die Dienstkonfiguration wird in AD gespeichert, sodass die Konfiguration immer nur auf einem Domänencontroller aktualisiert werden muss. AD repliziert die Änderung auf allen anderen Domänencontrollern.
 
 -   **RPC-Server (Remote Procedure Call) auf dem Server, auf dem MIM ausgeführt wird**: Wenn die Kennwortsynchronisierung aktiviert ist, wird er RPC-Server auf dem Server, auf dem MIM ausgeführt wird, gestartet. So kann er Benachrichtigungen des Benachrichtigungsdienstes zu Kennwortänderungen empfangen. RPC wählt dynamisch einen zu verwendenden Portbereich. Wenn Sie möchten, dass MIM mit der AD-Gesamtstruktur durch eine Firewall hindurch kommuniziert, müssen Sie einen Portbereich öffnen.
@@ -153,7 +153,7 @@ Wenn der Vorgang fehlschlägt, kann dies derartig schwerwiegende Gründe haben, 
 | 6919  | Informationen | Ein Festlegungsvorgang zur Kennwortsynchronisierung konnte nicht durchgeführt werden, weil der Zeitstempel abgelaufen ist.                                                                      |
 | 6921  | Fehler       | Der Festlegungsvorgang zur Kennwortsynchronisierung konnte nicht verarbeitet werden, weil die Kennwortverwaltung im Zielverwaltungs-Agent nicht aktiviert ist.                                |
 | 6922  | Fehler       | Der Festlegungsvorgang zur Kennwortsynchronisierung konnte nicht verarbeitet werden, weil die Kennwortverwaltung im Zielverwaltungs-Agent nicht konfiguriert ist.                             |
-| 6923  | Warning     | Der Festlegungsvorgang zur Kennwortsynchronisierung konnte nicht verarbeitet werden, weil das Ziel-Connectorbereichsobjekt nicht im verknüpften Verzeichnis gefunden werden konnte.                  |
+| 6923  | Warnung     | Der Festlegungsvorgang zur Kennwortsynchronisierung konnte nicht verarbeitet werden, weil das Ziel-Connectorbereichsobjekt nicht im verknüpften Verzeichnis gefunden werden konnte.                  |
 | 6927  | Fehler       | Der Festlegungsvorgang zur Kennwortsynchronisierung ist fehlgeschlagen, weil das Kennwort nicht den Kennwortrichtlinien des Zielsystems entspricht.                                      |
 | 6928  | Fehler       | Der Festlegungsvorgang zur Kennwortsynchronisierung ist fehlgeschlagen, weil die Kennworterweiterung des Zielverwaltungs-Agents nicht so konfiguriert wurde, dass sie Kennwortfestlegungsvorgänge unterstützt. |
 
