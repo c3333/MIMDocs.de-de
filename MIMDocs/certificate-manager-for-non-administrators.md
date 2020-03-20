@@ -4,19 +4,19 @@ description: Erfahren Sie, wie Sie Smartcards für Benutzer ohne Administratorre
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 4d66c566912f186bce175dde9f16346942afd72e
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 91409b0272c0b21cac90dbc4c162e5bf4d9f8464
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64516645"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042133"
 ---
 # <a name="enroll-smart-cards-for-non-administrators"></a>Registrieren von Smartcards für Nichtadministratoren
 Wenn ein Benutzer auf seinem Computer kein lokaler Administrator ist, kann er standardmäßig keine Smartcard auf seinen eigenen Computern registrieren. Mithilfe des folgenden Verfahrens können Sie diese Einschränkung umgehen.
@@ -69,7 +69,7 @@ Wenn ein Benutzer auf seinem Computer kein lokaler Administrator ist, kann er st
 
     1.  Melden Sie sich beim CM-Portal (Zertifikatverwaltung) als Benutzer mit Administratorrechten an.
 
-    2.  Wechseln Sie zu **Verwaltung** &gt; **Profilvorlagen verwalten**, und stellen Sie sicher, dass das Kontrollkästchen neben der erstellten Profilvorlage aktiviert ist, und klicken Sie dann auf „Ausgewählte Profilvorlage kopieren“.
+    2.  Wechseln Sie zu **Verwaltung** &gt; **Profilvorlagen verwalten**, stellen Sie sicher, dass das Kontrollkästchen neben der erstellten Profilvorlage aktiviert ist, und klicken Sie dann auf „Ausgewählte Profilvorlage kopieren“.
 
     3.  Geben Sie den Namen der Profilvorlage ein, fügen Sie „nonAdmin“ hinzu, und klicken Sie dann auf **OK**.
 

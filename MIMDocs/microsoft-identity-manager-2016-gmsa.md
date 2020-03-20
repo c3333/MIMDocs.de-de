@@ -1,219 +1,202 @@
 ---
-title: Konvertierung von MIM-spezifischen Diensten in gMSA | Microsoft-Dokumentation
-description: In diesem Thema werden die grundlegenden Schritte zum Konfigurieren von gMSA beschrieben.
+title: Konvertieren von spezifischen Microsoft Identity Manager-Diensten zu gMSA | Microsoft-Dokumentation
+description: In diesem Artikel werden die Voraussetzungen und grundlegenden Schritte zum Konfigurieren eines über Gruppen verwalteten Dienstkontos (group Managed Service Account, gMSA) vorgestellt.
 author: EugeneSergeev
 ms.author: esergeev
-manager: aashiman
-ms.date: 06/27/2018
+manager: daveba
+ms.date: 03/10/2020
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 49216a2d2077dd1be83f17719e996a20abb61cf8
-ms.sourcegitcommit: d98a76d933d4d7ecb02c72c30d57abe3e7f5d015
+ms.openlocfilehash: 4586b9998a9526a867ffe7ace9489fe56fff146c
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78289514"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044207"
 ---
-# <a name="conversion-of-mim-specific-services-to-gmsa"></a>Konvertierung von MIM-spezifischen Diensten in gMSA
+# <a name="convert-microsoft-identity-manager-specific-services-to-use-group-managed-service-accounts"></a>Konvertieren von spezifischen Microsoft Identity Manager-Diensten zu über Gruppen verwalteten Dienstkonten
 
-In diesem Handbuch werden die grundlegenden Schritte zum Konfigurieren von gMSA für unterstützte Dienste beschrieben. Der Prozess zum Konvertieren in gMSA ist einfach, sobald Sie Ihre Umgebung vorkonfigurieren.
+Dieser Artikel ist ein Leitfaden zum Konfigurieren unterstützter Microsoft Identity Manager-Dienste für die Verwendung von über Gruppen verwalteten Dienstkonten (group Managed Service Accounts, gMSA). Nachdem Sie Ihre Umgebung vorkonfiguriert haben, ist die Konvertierung zu einem gMSA ganz einfach.
 
-Erforderliches Hotfix: [4.5.26.0 oder höher](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history)
+## <a name="prerequisites"></a>Voraussetzungen
 
-Unterstützt:
+- Laden Sie folgenden erforderlichen Hotfix herunter, und installieren Sie ihn: [Microsoft Identity Manager 4.5.26.0 oder höher](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history).
 
--   MIM-Synchronisierungsdienst (FIMSynchronizationService)
--   MIM-Dienst (FIMService)
--   MIM-Kennwortregistrierung
--   MIM-Kennwortzurücksetzung
--   PAM-Überwachungsdienst (PamMonitoringService)
--   PAM-Komponentendienst (PrivilegeManagementComponentService)
+    Unterstützte Dienste:
 
-Nicht unterstützt:
+    -   Microsoft Identity Manager-Synchronisierungsdienst (FIMSynchronizationService)
+    -   Microsoft Identity Manager-Dienst (FIMService)
+    -   Microsoft Identity Manager-Kennwortregistrierung
+    -   Microsoft Identity Manager-Kennwortzurücksetzung
+    -   Privileged Access Management-Überwachungsdienst (PamMonitoringService)
+    -   PAM-Komponentendienst (PrivilegeManagementComponentService)
 
--   Das MIM-Portal wird nicht unterstützt. Es ist Teil der SharePoint-Umgebung, und Sie müssten die Bereitstellung im Farmmodus und das [Konfigurieren der automatischen Kennwortänderung in SharePointServer](https://docs.microsoft.com/sharepoint/administration/configure-automatic-password-change) durchführen.
--   Alle Verwaltungs-Agents
--   Microsoft-Zertifikatverwaltung
--   BHOLD
+    Nicht unterstützte Dienste:
 
-<a name="general-information"></a>Allgemeine Informationen 
---------------------
+    -   Das Microsoft Identity Manager-Portal wird nicht unterstützt. Das Portal gehört zur SharePoint-Umgebung, und Sie müssten es im Farmmodus bereitstellen und die [automatische Kennwortänderung in SharePointServer konfigurieren](https://docs.microsoft.com/sharepoint/administration/configure-automatic-password-change).
+    -   Alle Verwaltungs-Agents außer dem Microsoft Identity Manager-Dienstverwaltungs-Agent
+    -   Microsoft-Zertifikatverwaltung
+    -   BHOLD
 
-Das Lesen dieser Informationen ist zum Durchführen der Einrichtung und zum Verständnis erforderlich.
+- Hintergrundinformationen und allgemeine Referenzinformationen zum Einrichten Ihrer Umgebung finden Sie hier: 
 
--   [Gruppenverwaltete Dienstkonten: Übersicht](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)
+    -   [Über Gruppen verwaltete Dienstkonten: Übersicht](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)  
+    -   [New-ADServiceAccount](https://docs.microsoft.com/powershell/module/addsadministration/new-adserviceaccount?view=win10-ps)  
 
--   <https://docs.microsoft.com/powershell/module/addsadministration/new-adserviceaccount?view=win10-ps>
+- Bevor Sie beginnen, [erstellen Sie den Stammschlüssel des Schlüsselverteilungsdiensts](https://technet.microsoft.com/library/jj128430(v=ws.11).aspx) auf Ihrem Windows-Domänencontroller. Beachten Sie die folgenden Informationen:  
 
--   <https://technet.microsoft.com/library/jj128430(v=ws.11).aspx>
+    - Stammschlüssel werden von den Schlüsselverteilungsdiensten (Key Distribution Services, KDS) verwendet, um Kennwörter und andere Informationen auf Domänencontrollern zu generieren.
+    - Erstellen Sie nur einen Stammschlüssel pro Domäne, falls einer erforderlich ist.  
+    - Schließen Sie `Add-KDSRootKey –EffectiveImmediately` ein. „–EffectiveImmediately“ bedeutet, dass es bis zu 10 Stunden dauern kann, den Stammschlüssel auf allen Domänencontrollern zu repliziert. Die Replikation auf zwei Domänencontrollern kann ca. 1 Stunde dauern. 
+    ![Die Zeichenfolge „–EffectiveImmediately“](media/7fbdf01a847ea0e330feeaf062e30668.png)
 
-Schritt eins auf Ihrem Windows-Domänencontroller
+## <a name="actions-to-run-on-the-active-directory-domain-controller"></a>Auf dem Active Directory-Domänencontroller auszuführende Aktionen
 
-1.  Erstellen Sie den Stammschlüssel der Schlüsselverteilungsdienste (Key Distribution Services, KDS), falls erforderlich (nur einmal pro Domäne). Der Stammschlüssel wird (zusammen mit anderen Informationen) vom KDS-Dienst auf Domänencontrollern zum Generieren von Kennwörtern verwendet.
+1.  Erstellen Sie eine Gruppe namens *MIMSync_Servers*, und fügen Sie dieser Gruppe alle Synchronisierungsserver hinzu.
 
-    -   Add-KdsRootKey –EffectiveImmediately
+    ![Erstellen einer Gruppe namens „MIMSync_Servers“](media/a4dc3f6c0cb1f715ba690744f54dce5c.png)
 
-    -   „– EffectiveImmediately“ bedeutet Warten bis zu \~10 Stunden / Notwendigkeit, an alle Domänencontroller zu replizieren. Dies dauert bei zwei Domänencontrollern etwa eine Stunde.
+1.  Melden Sie sich als *Domänenadministrator* mit einem Konto bei Windows PowerShell an, das bereits in die Domäne eingebunden ist, und führen Sie dann folgenden Befehl aus: 
 
-![](media/7fbdf01a847ea0e330feeaf062e30668.png)
+    `New-ADServiceAccount -Name MIMSyncGMSAsvc -DNSHostName MIMSyncGMSAsvc.contoso.com -PrincipalsAllowedToRetrieveManagedPassword "MIMSync_Servers"`
 
-## <a name="synchronization-service"></a>Synchronisierungsdienst
------------------------
+    ![Der Befehl in PowerShell](media/f6deb0664553e01bcc6b746314a11388.png)
 
-1.  Erstellen Sie eine Gruppe namens „MIMSync_Servers“, und fügen Sie dieser Gruppe alle Synchronisierungsserver hinzu.
+    - Zeigen Sie Details des gMSA für die Synchronisierung an:  
+     ![Details des gMSA für die Synchronisierung](media/c80b0a7ed11588b3fb93e6977b384be4.png)
 
-![](media/a4dc3f6c0cb1f715ba690744f54dce5c.png)
+    - Wenn Sie den Benachrichtigungsdienst für Kennwortänderungen (Password Change Notification Service, PCNS) ausführen, aktualisieren Sie die Delegierung mithilfe des folgenden Befehls:
 
-2.  Führen Sie dann von Windows PowerShell den folgenden Befehl als Domänenadministrator aus, dessen Computerkonto bereits in die Domäne eingebunden ist.
+        `Set-ADServiceAccount -Identity MIMSyncGMSAsvc -ServicePrincipalNames
+        @{Add="PCNSCLNT/mimsync.contoso.com"}`
 
-    -   New-ADServiceAccount -Name MIMSyncGMSAsvc -DNSHostName MIMSyncGMSAsvc.contoso.com -PrincipalsAllowedToRetrieveManagedPassword "MIMSync_Servers"
+## <a name="actions-to-run-on-the-microsoft-identity-manager-synchronization-server"></a>Auf dem Microsoft Identity Manager-Synchronisierungsserver auszuführende Aktionen
 
-![](media/f6deb0664553e01bcc6b746314a11388.png)
+1. Sichern Sie im Synchronization Service Manager den Verschlüsselungsschlüssel. Dieser wird für den Änderungsmodus der Installation benötigt. Gehen Sie wie folgt vor:
 
--   Abrufen von Details der GSMA (Group Managed Service Accounts) für die Synchronisierung:
+    a. Suchen Sie auf dem Server, auf dem der Synchronization Service Manager installiert ist, das Tool zur Verwaltung des Synchronisierungsdienstschlüssels. Die Option **Keyset exportieren** ist standardmäßig bereits ausgewählt.
 
-![](media/c80b0a7ed11588b3fb93e6977b384be4.png)
+    b. Wählen Sie **Weiter** aus. 
+    
+    c. Geben Sie an der Eingabeaufforderung die Kontoinformationen für den Synchronisierungsdienst von Microsoft Identity Manager oder Forefront Identity Manager (FIM) ein, und überprüfen Sie diese:
 
--   Wenn der PCNS-Dienst ausgeführt wird, müssen Sie die Delegierung aktualisieren.
+    -   **Kontoname**: Der Name des Synchronisierungsdienstkontos, das bei der Erstinstallation verwendet wurde.  
+    -   **Kennwort:** Das Kennwort des Synchronisierungsdienstkontos.  
+    -   **Domäne:** Die Domäne, zu der das Synchronisierungsdienstkonto gehört.
 
-    -   Set-ADServiceAccount -Identity MIMSyncGMSAsvc -ServicePrincipalNames \@{Add="PCNSCLNT/mimsync.contoso.com"}
+    d. Wählen Sie **Weiter** aus.
 
-3. Achten Sie als Nächstes bei den Synchronisierungsdiensten darauf, den Verschlüsselungsschlüssel zu sichern, da er bei der Änderungsmodusinstallation angefordert wird.
+    Wenn Sie die Kontoinformationen erfolgreich eingegeben haben, können Sie das Ziel bzw. den Speicherort der Exportdatei für den Verschlüsselungsschlüssel der Sicherung ändern. Standardmäßig lautet der Exportspeicherort für die Datei *C:\Windows\system32\miiskeys-1.bin*.
 
-    -   Suchen Sie auf dem Server, auf dem der Synchronisierungsdienst installiert ist, das Tool zur Verwaltung des Synchronisierungsdienstschlüssels.
+1. Installieren Sie Microsoft Identity Manager SP1 – zu finden im Volume Licensing Service Center oder auf der Downloadwebsite von MSDN. Wenn die Installation abgeschlossen ist, speichern Sie das Keyset *miiskeys.bin*.
 
-    -   In der Standardeinstellung ist **Keyset exportieren**  bereits ausgewählt.
+   ![Das Fenster mit dem Installationsfortschritt des Microsoft Identity Manager-Synchronisierungsdiensts](media/ef5f16085ec1b2b1637fa3d577a95dbf.png)
 
-    -   Klicken Sie auf **Weiter**.
+1. Installieren Sie [Hotfix 4.5.2.6.0](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history) oder höher.
 
-    -   Jetzt werden Sie aufgefordert, die bereits vorhandenen Kontoinformationen für die Synchronisierung einzugeben.
+1. Nachdem das Patch installiert ist, beenden Sie den FIM-Synchronisierungsdienst wie folgt:
 
-    -   Geben Sie die FIM-Synchronisierungskontoinformationen ein, und überprüfen Sie sie.
+   a. Wählen Sie in der Systemsteuerung **Programme und Features** > **Microsoft Identity Manager** aus.  
+   b. Wählen Sie auf der Seite **Synchronisierungsdienst** die Option **Ändern** > **Weiter** aus.  
+   c. Wählen Sie im Fenster **Wartungsoptionen** die Option **Konfigurieren** aus.
 
-        -   Kontoname – Kontoname des Synchronisierungsdienstkontos, das bei der Erstinstallation verwendet wird
+   ![Das Fenster mit Wartungsoptionen](media/dc98c011bec13a33b229a0e792b78404.png)
 
-        -   Kennwort – Kennwort des Synchronisierungsdienstkontos
+   d. Löschen Sie im Fenster **Microsoft Identity Manager-Synchronisierungsdienst konfigurieren** den Standardwert im Feld **Dienstkonto**, und geben Sie **MIMSyncGMSA$** ein. Schließen Sie unbedingt das Dollarzeichen ($) ein, wie in der folgenden Abbildung gezeigt. Lassen Sie das Feld **Kennwort** leer.
 
-        -   Domäne – Domäne, zu der das Synchronisierungsdienstkonto gehört
+   ![Das Fenster „Microsoft Identity Manager-Synchronisierungsdienst konfigurieren“](media/38df9369bf13e1c3066a49ed20e09041.png)
 
-    -   Klicken Sie auf **Weiter**.
+   e. Klicken Sie auf **Weiter** > **Weiter** > **Installieren**.  
+   f. Stellen Sie das Keyset aus der Datei *miiskeys.bin* wieder her, die Sie zuvor gespeichert haben.
 
-    -   Wenn Sie etwas falsch eingegeben haben, erhalten Sie die folgende Fehlermeldung.
+   ![Optionen zum Wiederherstellen der Keysetkonfiguration](media/44cd474323584feb6d8b48b80cfceb9b.png)
 
-    -   Nachdem Sie die Kontoinformationen erfolgreich eingegeben haben, wird Ihnen eine Option zum Ändern des Ziels (Exportdateispeicherort) des Verschlüsselungsschlüssels der Sicherung angezeigt.
+   ![Die Liste der Verwaltungs-Agents im Synchronization Service Manager](media/03e7762f34750365e963f0b90e43717c.png)
 
-        -   Standardmäßig ist der Exportspeicherort für die Datei „ **C:\\Windows\\system32**\\miiskeys-1.bin“.
-
-4. Installieren Sie Microsoft Identity Manager SP1 Synchronization Service Build 4.4.1302.0. vom Volume License Download Center oder der MSDN Download Site. Nach Abschluss der Installation stellen Sie sicher, dass Sie das Keyset miiskeys.bin speichern.
-
-![](media/ef5f16085ec1b2b1637fa3d577a95dbf.png)
-
-
-5. Installieren Sie das aktuelle [Hotfix 4.5.x.x](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history) oder höher.
-
-- Beenden Sie nach dem Patchen den FIM-Synchronisierungsdienst.
-- Systemsteuerungsprogramme und Features von Microsoft Identity Manager
-- Synchronisierungsdienst: „Ändern“ -\> „Weiter“ -\> „Konfigurieren“ –\> „Weiter“
-
-![](media/dc98c011bec13a33b229a0e792b78404.png)
-
--  Löschen Sie den Kontonamen.
--  Geben Sie den Namen des Dienstkontos **MIMSyncGMSA** mit dem \$-Symbol wie im
-- Screenshot ein. Lassen Sie das Kennwort leer.
-
-![](media/38df9369bf13e1c3066a49ed20e09041.png)
-
-- „Weiter“ –\> „Weiter“ –\> „Installieren“
-- Stellen Sie das Keyset aus der gespeicherten BIN-Datei wieder her.
-
-![](media/44cd474323584feb6d8b48b80cfceb9b.png)
-
-![](media/03e7762f34750365e963f0b90e43717c.png)
-> [!NOTE]
-> Die SQL-Berechtigung, die dem Konto hinzugefügt wird, wird für die Anmeldung erstellt. Aus diesem Grund müssen Sie zulassen, dass der Benutzer, der berechtigt ist, den Änderungsmodus anzuwenden, Konto und DBO der Synchronisierungsdienst-Datenbank hinzufügt.
-
-## <a name="mim-service"></a>MIM-Dienst
------------
+## <a name="microsoft-identity-manager-service"></a>Microsoft Identity Manager-Dienst
 
 >[!IMPORTANT]
->Der folgende Prozess muss durchgeführt werden, wenn zuerst die mit dem MIM-Dienst verknüpften Konten in gMSA-Konten konvertiert werden. Die im Anhang erwähnten PowerShell-Cmdlets können nur zum Ändern der Kontoinformationen verwendet werden, sobald die anfängliche Konfiguration abgeschlossen ist.*
+>Befolgen Sie die Anweisungen in diesem Abschnitt genau, wenn Sie Konten im Zusammenhang mit dem Microsoft Identity Manager-Dienst in gMSA-Konten konvertieren.
 
-1.  Erstellen Sie gruppenverwaltete Konten für MIM-Dienst, PAM-Rest-API, PAM-Überwachungsdienst, PAM-Komponentendienst, SSPR-Registrierungsportal und SSPR-Rücksetzungsportal.
+1. Erstellen Sie über Gruppen verwaltete Konten für den Microsoft Identity Manager-Dienst, die PAM-REST-API, den PAM-Überwachungsdienst, den PAM-Komponentendienst, das SSPR-Registrierungsportal (Self-Service-Kennwortzurücksetzung) und das SSPR-Rücksetzungsportal.
 
-    -   Stellen Sie sicher, dass Sie gMSA-Delegierung und SPN aktualisieren.
-        -   Set-ADServiceAccount -Identity \<Konto\> -ServicePrincipalNames \@{Add="\<SPN\>"}
-        -   Stellvertretung
-            -   Set-ADServiceAccount -Identity \<gMSA-Konto\> -TrustedForDelegation \$true
-        -   Eingeschränkte Delegierung
-            -   \$delspns = 'http/mim', 'http/mim.contoso.com'
-            -   New-ADServiceAccount -Name \<gMSA-Konto\> -DNSHostName \<gMSA-Konto\>.contoso.com -PrincipalsAllowedToRetrieveManagedPassword \<Gruppe\> -ServicePrincipalNames \$spns -OtherAttributes \@{'msDS-AllowedToDelegateTo'=\$delspns }
+    -   Aktualisieren Sie die Delegierung und den Dienstprinzipalnamen (Service Principal Name, SPN) für das gMSA:
 
-2.  Fügen Sie das Konto für den MIM-Dienst in den Synchronisierungsgruppen hinzu. Es ist für SSPR erforderlich.
+        - `Set-ADServiceAccount -Identity \<account\> -ServicePrincipalNames
+            @{Add="\<SPN\>"}`
+    -   Delegierung:
 
-![](media/0201f0281325c80eb70f91cbf0ac4d5b.jpg)
+        - `Set-ADServiceAccount -Identity \<gmsaaccount\>
+                -TrustedForDelegation $true`
+    -   Eingeschränkte Delegierung:
+        -   `$delspns = 'http/mim', 'http/mim.contoso.com'`
+        -   `New-ADServiceAccount -Name \<gmsaaccount\> -DNSHostName
+                \<gmsaaccount\>.contoso.com
+                -PrincipalsAllowedToRetrieveManagedPassword \<group\>
+                -ServicePrincipalNames $spns -OtherAttributes
+                @{'msDS-AllowedToDelegateTo'=$delspns }`
 
-3.  **HINWEIS**:  Es ist ein bekanntes Problem, dass Dienste, die verwaltete Konten verwenden, nach dem Serverneustart hängen bleiben, weil der Microsoft-Schlüsselverteilungsdienst nach dem Windows-Neustart nicht neu gestartet wird. Der Dienst konnte nicht gestartet werden, und Windows konnte ebenfalls nicht neu gestartet werden. Das Problem ist mindestens unter Windows Server 2012 R2 reproduzierbar. Führen Sie zur Problemumgehung den Befehl 
+1. Fügen Sie ein Konto für den Microsoft Identity Manager-Dienst in Synchronisierungsgruppen hinzu. Dieser Schritt ist für SSPR erforderlich.
 
--   **sc triggerinfo kdssvc start/networkon** aus,
+    ![Das Fenster „Active Directory-Benutzer und-Computer“](media/0201f0281325c80eb70f91cbf0ac4d5b.jpg)
 
-    um den Microsoft-Schlüsselverteilungsdienst zu starten, wenn das Netzwerk aktiviert ist (in der Regel am Anfang des Startzyklus).
+    > [!NOTE]  
+    > In Windows Server 2012 R2 tritt ein bekanntes Problem auf: Dienste, die ein verwaltetes Konto verwenden, reagieren nach dem Neustart des Servers nicht mehr, weil der Microsoft-Schlüsselverteilungsdienst nach dem Neustart von Windows nicht gestartet wird. Führen Sie als Problemumgehung den folgenden Befehl aus: 
+    >
+    > `sc triggerinfo kdssvc start/networkon`
+    >
+    > Der Befehl startet den Microsoft-Schlüsselverteilungsdienst, wenn das Netzwerk aktiviert ist (in der Regel am Anfang des Startzyklus).
+    >
+    > Informationen zu einem ähnlichen Problem finden Sie unter [AD FS Windows 2012 R2: adfssrv hangs in starting mode](https://social.technet.microsoft.com/Forums/en-US/a290c5c0-3112-409f-8cb0-ff23e083e5d1/ad-fs-windows-2012-r2-adfssrv-hangs-in-starting-mode?forum=winserverDS) (AD FS Windows 2012 R2: „adfssrv“ reagiert im Startmodus nicht).
 
-    Lesen Sie die Diskussion über ein ähnliches Problem: <https://social.technet.microsoft.com/Forums/a290c5c0-3112-409f-8cb0-ff23e083e5d1/ad-fs-windows-2012-r2-adfssrv-hangs-in-starting-mode?forum=winserverDS>.
+1.  Führen Sie das MSI-Paket für den Microsoft Identity Manager-Dienst mit erhöhten Rechten aus, und wählen Sie **Ändern** aus.
 
-4.  Führen Sie die MSI-Datei des MIM-Diensts mit erhöhten Rechten aus, und wählen Sie die Änderungsoption.
+1.  Aktivieren Sie im Fenster **E-Mail-Server-Verbindung konfigurieren** das Kontrollkästchen **Anderen Benutzer für Exchange verwenden (für verwaltete Konten)** . Jetzt wird Ihnen die Option angezeigt, das aktuelle Exchange-Konto oder das Cloudpostfach zu ändern.
 
-5.  Aktivieren Sie auf „Hauptserver-Verbindungsseite konfigurieren“ das Kontrollkästchen „Anderes Konto für Exchange verwenden (für verwaltete Konten)“. Hier haben Sie eine Option zum Verwenden des alten Kontos, das über ein Postfach verfügt oder ein Cloudpostfach nutzt.
     >[!NOTE]
-    >Wenn die Option **Exchange Online verwenden** ausgewählt ist, müssen Sie den Wert PollExchangeEnabled des Registrierungsschlüssels „HKLM\SYSTEM\CurrentControlSet\Services\FIMService“ nach der Installation auf 1 festlegen, damit der MIM-Dienst Genehmigungsantworten vom MIM Outlook-Add-On verarbeiten kann.
+    >Wenn Sie die Option **Exchange Online verwenden** auswählen, legen Sie den *PollExchangeEnabled*-Wert des Registrierungsschlüssels **HKLM\SYSTEM\CurrentControlSet\Services\FIMService** nach der Installation auf **1** fest, damit der Microsoft Identity Manager-Dienst Genehmigungsantworten vom Outlook-Add-In für Microsoft Identity Manager verarbeiten kann.
     
-![](media/0cd8ce521ed7945c43bef6100f8eb222.png)
+    ![Das Fenster „E-Mail-Server-Verbindung konfigurieren“](media/0cd8ce521ed7945c43bef6100f8eb222.png)
 
-6.  Geben Sie auf der Seite „MIM-Dienst-Konto konfigurieren“ das Dienstkonto mit dem \$-Symbol am Ende ein. Geben Sie auch das E-Mail-Kontokennwort für den Dienst ein. Das Dienstkontokennwort sollte deaktiviert werden.
+1.  Geben Sie im Fenster **MIM-Dienstkonto konfigurieren** im Feld **Dienstkontoname** den Namen des Dienstkontos ein. Schließen Sie unbedingt das Dollarzeichen ($) ein. Geben Sie auch im Feld **Kennwort des Dienst-E-Mail-Kontos** ein Kennwort ein. Das Feld **Kennwort für Dienstkonto** sollte nicht verfügbar sein.
 
-![](media/db0d543df6e1b0174a47135617c23fcb.png)
+    ![Das Fenster „MIM-Dienstkonto konfigurieren“](media/db0d543df6e1b0174a47135617c23fcb.png)
 
-7.  Da die LogonUser-Funktion für verwaltete Konten nicht funktioniert, wird auf der nächsten Seite die Warnung „Überprüfen Sie, ob das Dienstkonto in seiner aktuellen Konfiguration sicher ist.“ angezeigt.
+    Da die LogonUser-Funktion für verwaltete Konten nicht funktioniert, wird auf der nächsten Seite diese Warnung angezeigt: „Überprüfen Sie, ob das Dienstkonto in seiner aktuellen Konfiguration sicher ist“.
 
-![cid:image007.png\@01D36EB7.562E6CF0](media/d350bc13751b2d0a884620db072ed019.png)
+    ![Fenster „Sicherheitswarnung für Konto“](media/d350bc13751b2d0a884620db072ed019.png)
 
-8.  Geben Sie auf der Seite „Privileged Access Management-REST-API konfigurieren“ den Kontonamen des Anwendungspools mit dem \$-Symbol am Ende ein, und lassen Sie das Feld „Kennwort“ leer.
+1.  Geben Sie im Fenster **Privileged Access Management-REST-API konfigurieren** im Feld **Kontoname für Anwendungspool** den Namen des Kontos ein. Schließen Sie unbedingt das Dollarzeichen ($) ein. Lassen Sie das Feld **Kennwort für Anwendungspoolkonto** leer.
 
-![](media/88db2f6f291fff8bcdd0da5d538aafc6.png)
+    ![Das Fenster „Privileged Access Management-REST-API konfigurieren“](media/88db2f6f291fff8bcdd0da5d538aafc6.png)
 
-9.  Geben Sie auf der Seite „PAM-Komponentendienst konfigurieren“ den Dienstkontonamen mit dem \$-Symbol am Ende ein, und lassen Sie das Feld „Kennwort“ leer.
+1.  Geben Sie im Fenster **PAM-Komponentendienst konfigurieren** im Feld **Dienstkontoname** den Namen des Dienstkontos ein. Schließen Sie unbedingt das Dollarzeichen ($) ein. Lassen Sie das Feld **Kennwort für Dienstkonto** leer.
 
-![](media/93cfbcefb4d17635dd35c5ead690fd1e.png)
+    ![Das Fenster „PAM-Komponentendienst konfigurieren“](media/93cfbcefb4d17635dd35c5ead690fd1e.png)
 
-![cid:image010.png\@01D36EB8.A295A3F0](media/9d2b52f6faed10601e7e2166a339fb47.png)
+    ![Das Fenster „Sicherheitswarnung für Konto“](media/9d2b52f6faed10601e7e2166a339fb47.png)
 
-10.  Geben Sie auf der Seite „Privileged Access Management-Überwachungsdienst konfigurieren“ den Dienstkontonamen mit dem \$-Symbol am Ende ein, und lassen Sie das Feld „Kennwort“ leer.
+1.  Geben Sie im Fenster **Privileged Access Management-Überwachungsdienst konfigurieren** im Feld **Dienstkontoname** den Namen des Dienstkontos ein. Schließen Sie unbedingt das Dollarzeichen ($) ein. Lassen Sie das Feld **Kennwort für Dienstkonto** leer.
 
-![](media/d1e824248edf12a77fc9ffb011475164.png)
+    ![Das Fenster „Privileged Access Management-Überwachungsdienst konfigurieren“](media/d1e824248edf12a77fc9ffb011475164.png)
 
-11.  Geben Sie auf der Seite „MIM-Kennwort-Registrierungsportal konfigurieren“ den Kontonamen mit dem \$-Symbol am Ende ein, und lassen Sie das Feld „Kennwort“ leer.
+1.  Geben Sie im Fenster **MIM-Kennwortregistrierungsportal konfigurieren** im Feld **Kontoname** den Namen des Kontos ein. Schließen Sie unbedingt das Dollarzeichen ($) ein. Lassen Sie das Feld **Kennwort** leer.
 
-![](media/601e935cdfda298b61ae753a2a152996.png)
+    ![Das Fenster „MIM-Kennwortregistrierungsportal konfigurieren“](media/601e935cdfda298b61ae753a2a152996.png)
 
-12.  Geben Sie auf der Seite „MIM-Kennwort-Rücksetzungsportal konfigurieren“ den Kontonamen mit dem \$-Symbol am Ende ein, und lassen Sie das Feld „Kennwort“ leer.
+1.  Geben Sie im Fenster **MIM-Kennwortzurücksetzungsportal konfigurieren** im Feld **Kontoname** den Namen des Kontos ein. Schließen Sie unbedingt das Dollarzeichen ($) ein. Lassen Sie das Feld **Kennwort** leer.
 
-![](media/10c8cfa8ff2b6d703d14bd0b7ddc6949.png)
+    ![Das Fenster „MIM-Kennwortzurücksetzungsportal konfigurieren“](media/10c8cfa8ff2b6d703d14bd0b7ddc6949.png)
 
-13.  Schließen Sie die Installation ab.
+1.  Schließen Sie die Installation ab.
 
-Anmerkung:
+    > [!NOTE]
+    > Während der Installation werden im Registrierungspfad **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Forefront Identity Manager\2010\Service** zwei neue Schlüssel zum Speichern des verschlüsselten Exchange-Kennworts erstellt. Ein Eintrag ist für *ExchangeOnline* gedacht, der andere für *ExchangeOnPremise*. Bei einem der Einträge sollte der Wert in der Spalte **Daten** leer sein.
 
--  Nach der Installation werden in der Registrierung zwei neue Schlüssel im Pfad
-    - „HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Forefront Identity
-    - Manager\\2010\\Service“ zum Speichern des verschlüsselten Exchange-Kennworts erstellt. Einer ist für
-    - Exchange Online und der andere für die lokale Exchange-Instanz bestimmt (einer davon sollte
-    - leer sein.)
+    > ![Der Registrierungs-Editor](media/73e2b8a3c149a4ec6bacb4db2c749946.jpg)
 
-![cid:image014.jpg\@01D36F53.303D5190](media/73e2b8a3c149a4ec6bacb4db2c749946.jpg)
+Um das Kennwort für Ihre gespeicherten Konten zu aktualisieren, ohne den Änderungsmodus ausführen zu müssen, [laden Sie dieses PowerShell-Skript herunter](microsoft-identity-manager-2016-gmsascript.md).
 
-- Um das Kennwort zu aktualisieren, [steht hier ein Skript zum Herunterladen bereit](microsoft-identity-manager-2016-gmsascript.md), damit der Kunde nicht den Änderungsmodus ausführen muss.
+Zum Verschlüsseln des Exchange-Kennworts erstellt das Installationsprogramm einen zusätzlichen Dienst und führt diesen im verwalteten Konto aus. Die folgenden Meldungen werden während der Installation zum Ereignisprotokoll **Anwendung** hinzugefügt:
 
-- Zum Verschlüsseln des Exchange-Kennworts erstellt das Installationsprogramm einen zusätzlichen Dienst und
-    - führt ihn unter dem verwalteten Konto aus. Die folgenden Nachrichten werden während der Installation
-    - dem Anwendungsereignisprotokoll hinzugefügt.
-
-![cid:image016.jpg\@01D36F53.303D5190](media/95b315454705cd4d939b55ac5ad910f5.jpg)
+![Das Fenster „Ereignisanzeige“](media/95b315454705cd4d939b55ac5ad910f5.jpg)

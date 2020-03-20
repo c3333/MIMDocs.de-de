@@ -4,19 +4,19 @@ description: Migrieren Sie eine Gruppe zur Gesamtstruktur PRIV, damit sie mit Pr
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 0473ea9e01a44aeb4acbebe01e6e6f989c8581d0
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: e88407ceb1c7ac99f1746f453b7e4a7a5d296e5a
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64517825"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043629"
 ---
 # <a name="step-6--transition-a-group-to-privileged-access-management"></a>Schritt 6 – Übergang eine Gruppe zur privilegierten Zugriffsverwaltung
 
@@ -65,10 +65,10 @@ Die Cmdlets müssen einmal für jede Gruppe und einmal für jedes Mitglied einer
 
     Der Befehl **New-PAMGroup** übernimmt die beiden folgenden Parameter als Referenz:
 
-     -   Den Domänenname der Gesamtstruktur „CORP“ in NetBIOS-Form.  
+     -   Den Domänennamen der CORP-Gesamtstruktur in NetBIOS-Form.  
      -   Den Namen der Gruppe, die aus dieser Domäne kopiert wird.  
-     -   Den NetBIOS-Namen des Domänencontrollers der Gesamtstruktur „CORP“.  
-     -   Die Anmeldeinformationen eines Domänenadministrators in der Gesamtstruktur „CORP“.  
+     -   Den NetBIOS-Namen des Domänencontrollers der CORP-Gesamtstruktur.  
+     -   Die Anmeldeinformationen eines Domänenadministrators in der CORP-Gesamtstruktur.  
 
 5. (Optional) Entfernen Sie auf CORPDC das Konto von Jen aus der Gruppe **CONTOSO CorpAdmins**, sofern dieses noch vorhanden ist.  Dies ist nur für Demonstrationszwecke erforderlich, um zu veranschaulichen, wie Berechtigungen mit Konten verknüpft werden können, die in der PRIV-Gesamtstruktur erstellt werden.
 

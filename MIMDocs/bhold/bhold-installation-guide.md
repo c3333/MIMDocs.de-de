@@ -4,17 +4,17 @@ description: Dokumentation zur Installation von BHOLD SP1
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/11/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 05eb2afc0ddbf6104e27a5c24e121a55bd805292
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: fb3cf6e5b00c1bd0c01d86aff474dc2ff28c2815
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68238903"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042252"
 ---
 # <a name="microsoft-bhold-suite-sp1-60-installation-guide"></a>Installationshandbuch für Microsoft BHOLD Suite SP1 (6.0)
 
@@ -93,7 +93,7 @@ Weitere Informationen zu den bewährten Methoden für SQL Server finden Sie unte
 ### <a name="trusted-certificates-list-update"></a>Aktualisieren der Liste der vertrauenswürdigen Zertifikate
 
 Windows kann so konfiguriert werden, dass Zertifikatketten vor dem Starten eines Diensts überprüft werden. Auf solchen Systemen kann ein Dienst nicht starten, wenn der ausführbare Code des Diensts mit einem Zertifikat signiert wurde, das sich nicht in der Liste vertrauenswürdiger Zertifikate (Trusted Certificate List, TCL) des Servers befindet. Die Microsoft BHOLD Suite SP1-Software verfügt über Code, der mit einer Zertifikatkette für die Codesignatur signiert wurde, die ihren Ursprung in einem Zertifikat der Microsoft-Stammzertifizierungsstelle 2010 hat.
-Windows kann so konfiguriert werden, dass Stammzertifikate von Microsoft über eine Internetverbindung angerufen werden. Auf einem nicht verbundenen System enthält Windows Server jedoch nur die Zertifikate, die im Stammprogramm vorhanden waren, bevor Windows Server veröffentlicht wurde. In den Releases von Windows Server vor Windows Server 2010 enthalten diese Zertifikate nicht das Stammzertifikat, das für das Überprüfen der BHOLD Suite SP1-Zertifikatkette für die Codesignatur erforderlich ist. Wenn Sie ein oder mehrere Microsoft BHOLD Suite SP1-Module auf einem System installieren möchten, das nicht über eine aktuelle TCL verfügt, müssen Sie vor der Installation eines BHOLD Suite SP1-Moduls das Aktualisierungspaket für den Stamm herunterladen und installieren oder die Gruppenrichtlinie verwenden, um das Aktualisierungsprogramm für den Stamm zu installieren. Weitere Informationen finden Sie unter [Mitglieder des Microsoft-Programms für Stammzertifikate](http://support.microsoft.com/kb/931125).
+Windows kann so konfiguriert werden, dass Stammzertifikate von Microsoft über eine Internetverbindung angerufen werden. Auf einem nicht verbundenen System enthält Windows Server jedoch nur die Zertifikate, die im Stammprogramm vorhanden waren, bevor Windows Server veröffentlicht wurde. In den Releases von Windows Server vor Windows Server 2010 enthalten diese Zertifikate nicht das Stammzertifikat, das für das Überprüfen der BHOLD Suite SP1-Zertifikatkette für die Codesignatur erforderlich ist. Wenn Sie ein oder mehrere Microsoft BHOLD Suite SP1-Module auf einem System installieren möchten, das nicht über eine aktuelle TCL verfügt, müssen Sie vor der Installation eines BHOLD Suite SP1-Moduls das Aktualisierungspaket für den Stamm herunterladen und installieren oder die Gruppenrichtlinie verwenden, um das Aktualisierungsprogramm für den Stamm zu installieren. Weitere Informationen finden Sie unter [Mitglieder des Microsoft-Programms für Stammzertifikate](https://support.microsoft.com/kb/931125).
 
 ### <a name="installing-bhold-suite-sp1-on-windows-server-20122016-required-step"></a>Erforderliche Schritte für die Installation von BHOLD Suite SP1 unter Windows Server 2012/2016 
 

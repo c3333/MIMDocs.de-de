@@ -4,19 +4,19 @@ description: Bereiten Sie den PRIV-Domänencontroller vor, der die geschützte U
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/14/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 0364b0d14d08ab3af32010675e0ba80d39404342
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 97b425fc4444b241ddce99e7d5e3abf564daf245
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518078"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043697"
 ---
 # <a name="step-2---prepare-the-first-priv-domain-controller"></a>Schritt 2: Vorbereiten des ersten PRIV-Domänencontrollers
 
@@ -34,7 +34,7 @@ In diesem Abschnitt richten Sie einen virtuellen Computer ein, der als Domänenc
 
 Installieren Sie Windows Server 2012 R2 auf einem anderen neuen virtuellen Computer ohne installierte Software, um den Computer „PRIVDC“ zu erstellen.
 
-1. Wählen Sie die benutzerdefinierte Installation von Windows Server (kein Upgrade). Geben Sie bei der Installation **Windows Server 2012 R2 Standard (Server mit grafischer Benutzeroberfläche) x64** an. _Wählen Sie nicht_ **Datacenter oder Server Core** aus.
+1. Wählen Sie die benutzerdefinierte Installation von Windows Server (kein Upgrade). Geben Sie bei der Installation **Windows Server 2012 R2 Standard (Server mit grafischer Benutzeroberfläche) x64**an. _Wählen Sie nicht_ **Data Center oder Server Core**aus.
 
 2. Lesen und akzeptieren Sie die Lizenzbedingungen.
 
@@ -237,7 +237,7 @@ Verwenden Sie PowerShell auf PRIVDC, um die DNS-Namensweiterleitung zu konfiguri
    ```
 
 > [!NOTE]
-> Die nächsten Schritte in diesem Dokument beschreiben die Installation von MIM 2016-Serverkomponenten auf einem einzelnen Computer. Wenn Sie planen, zur Sicherstellung von Hochverfügbarkeit einen weiteren Server hinzuzufügen, müssen Sie zusätzliche Kerberos-Einstellungen konfigurieren. Die Vorgehensweise ist unter [FIM 2010: Einrichten der Kerberos-Authentifizierung](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx) beschrieben.
+> Die nächsten Schritte in diesem Dokument beschreiben die Installation von MIM 2016-Serverkomponenten auf einem einzelnen Computer. Wenn Sie planen, zur Sicherstellung von Hochverfügbarkeit einen weiteren Server hinzuzufügen, müssen Sie zusätzliche Kerberos-Einstellungen konfigurieren. Die Vorgehensweise ist unter [FIM 2010: Einrichten der Kerberos-Authentifizierung](https://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx) beschrieben.
 
 ### <a name="configure-delegation-to-give-mim-service-accounts-access"></a>Konfigurieren der Delegierung, um MIM-Dienstkonten Zugriff zu gewähren
 

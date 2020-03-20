@@ -4,19 +4,19 @@ description: Verwenden Sie Verwaltungs-Agents und MIM Synchronization Service, u
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/12/2017
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1627bae6aecdfc3d57261485de04a78feb264013
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 81cf34959ccdea5ad9eb463f85a25d26bc1d8ede
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73329321"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042422"
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Installieren von MIM 2016: Synchronisieren von Active Directory und MIM-Dienst
 
@@ -148,13 +148,13 @@ Wenn Sie einen MIM-Verwaltungs-Agent konfigurieren, müssen Sie ein Benutzerkont
     | Typ | Exportieren | Typ |
     | MitgliedshipAddWorkflow | Exportieren | membershipAddWorkflow |
     | MitgliedshipLocked | Exportieren | membershipLocked |
-    | AccountName | importieren | accountName |
-    | DisplayedOwner | importieren | displayedOwner |
-    | DisplayName | importieren | displayName |
-    | MailNickName | importieren | mailNickName |
-    | Mitglied | importieren | Element |
-    | Bereich | importieren | scope |
-    | Typ | importieren | Typ |
+    | AccountName | Importieren | accountName |
+    | DisplayedOwner | Importieren | displayedOwner |
+    | DisplayName | Importieren | displayName |
+    | MailNickName | Importieren | mailNickName |
+    | Mitglied | Importieren | Element |
+    | Bereich | Importieren | scope |
+    | Typ | Importieren | Typ |
 
 10.  Klicken Sie auf der Seite **Aufheben der Bereitstellung konfigurieren** auf **Weiter**
 
@@ -305,7 +305,7 @@ So erstellen Sie die Synchronisierungsregel „AD-Benutzer eingehend“:
 4. Geben Sie auf der Registerkarte **Allgemein** die folgenden Informationen an, und klicken Sie dann auf **Weiter**:
 
     -   Anzeigename: Synchronisierungsregel „AD-Benutzer eingehend“
-    -   Datenflussrichtung: Eingehend
+    -   Datenflussrichtung: Eingehende Verbindungen
 
 5. Geben Sie auf der Registerkarte **Bereich** die folgenden Informationen an, und klicken Sie dann auf **Weiter**:
 

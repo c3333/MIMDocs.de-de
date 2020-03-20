@@ -4,48 +4,47 @@ author: fimguy
 description: Der Microsoft Identity Manager-Connector für Microsoft Graph ermöglicht die Lebenszyklusverwaltung über das AD-Konto des externen Benutzers. In diesem Szenario hat eine Organisation Gäste in ihr Azure AD-Verzeichnis eingeladen und möchte diesen Gästen Zugriff auf die lokale integrierte Windows-Authentifizierung oder Kerberos-basierte Anwendungen gewähren
 keywords: ''
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 2e376bcc88518b911f93ce9cd4ab920eb428815b
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 462b649ca02519e5af5c3b1243506a74efa7052a
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64519377"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044258"
 ---
-<a name="microsoft-identity-manager-connector-for-microsoft-graph"></a>Microsoft Identity Manager-Connector für Microsoft Graph
-=======================================================================================
+# <a name="microsoft-identity-manager-connector-for-microsoft-graph"></a>Microsoft Identity Manager-Connector für Microsoft Graph
 
-<a name="summary"></a>Zusammenfassung 
-=======
+
+## <a name="summary"></a>Zusammenfassung 
+
 
 Der [Microsoft Identity Manager-Connector für Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495) bietet zusätzliche Integrationsszenarios für Azure AD Premium-Kunden.  Er wird auf der MIM-Oberfläche für das Synchronisieren zusätzlicher Metaverse-Objekte angezeigt, die aus Version 1 und aus der Betaversion der  [Microsoft Graph-API](https://developer.microsoft.com/en-us/graph/)  abgerufen werden.
 
-<a name="scenarios-covered"></a>Abgedeckte Szenarios
-=================
+## <a name="scenarios-covered"></a>Abgedeckte Szenarios
 
-<a name="b2b-account-lifecycle-management"></a>Lebenszyklusverwaltung von B2B-Konten
---------------------------------
+
+### <a name="b2b-account-lifecycle-management"></a>Lebenszyklusverwaltung von B2B-Konten
+
 
 Im Anfangsszenario des Microsoft Identity Manager-Connector für Microsoft Graph hilft dieser als Connector beim Automatisieren der Lebenszyklusverwaltung über das AD DS-Konto für externe Benutzer. In diesem Szenario synchronisiert eine Organisation über Azure AD Connect Mitarbeiter aus AD DS mit Azure AD. Zudem hat die Organisation Gäste in ihr Azure AD-Verzeichnis eingeladen. Das Einladen eines Gasts führt dazu, dass ein externes Benutzerobjekt in dem Azure AD-Verzeichnis dieser Organisation enthalten ist, das sich nicht in den AD DS dieser Organisation befindet. Anschließend möchte die Organisation diesen Gästen über den [Azure AD-Anwendungsproxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) oder andere Gatewaymechanismen Zugriff auf die lokale integrierte Windows-Authentifizierung oder Kerberos-basierte Anwendungen gewähren. Der Azure AD-Anwendungsproxy erfordert, dass jeder Benutzer zur Identifikation und Delegierung ein eigenes AD DS-Konto hat.  
 
 Wenn Sie weitere Informationen zum Konfigurieren der MIM-Synchronisierung für die automatische Erstellung und Verwaltung von AD DS-Konten für Gäste erhalten möchten, lesen Sie nach den Anweisungen in diesem Artikel die Informationen im Artikel [Azure AD-B2B-Zusammenarbeit mit MIM 2016 SP1 mit dem Azure-Anwendungsproxy](~/microsoft-identity-manager-2016-graph-b2b-scenario.md).  Dieser Artikel veranschaulicht die Synchronisierungsregeln, die für den Connector erforderlich sind.
 
-<a name="other-identity-management-scenarios"></a>Weitere Szenarios der Identitätsverwaltung
----------------
+### <a name="other-identity-management-scenarios"></a>Weitere Szenarios der Identitätsverwaltung
+
 
 Der Connector kann für bestimmte weitere Szenarios der Identitätsverwaltung verwendet werden. Zu diesen zählen das Erstellen, Lesen, Aktualisieren und Löschen von Benutzer-, Gruppen- und Kontaktobjekten in Azure AD, jenseits der Benutzer- und Gruppensynchronisierung mit Azure AD. Bedenken Sie bei der Auswertung möglicher Szenarios Folgendes: Dieser Connector kann nicht in einem Szenario verwendet werden, das zu einer Datenflussüberlappung, einem tatsächlichen oder einem potenziellen Synchronisierungskonflikt mit einer Azure AD Connect-Bereitstellung führen würde.  [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594)  wird empfohlen, um lokale Verzeichnisse in Azure AD zu integrieren. Dabei werden Benutzer und Gruppen aus lokalen Verzeichnissen synchronisiert und in Azure AD übertragen.  Azure AD Connect bietet viele weitere Synchronisierungsfeatures und ermöglicht Szenarios, wie z.B. das Kennwort- und Geräterückschreiben, die für mit MIM erstellte Objekte nicht ausgeführt werden können. Wenn Daten in AD DS zusammengetragen werden, sollten Sie z.B. sicherstellen, dass diese aus Azure AD Connect ausgeschlossen werden, indem Sie versuchen, diese Objekte wieder mit dem Azure AD-Verzeichnis abzugleichen.  Zudem kann dieser Connector nicht verwendet werden, um Änderungen an Azure AD-Objekten vorzunehmen, die von Azure AD Connect erstellt wurden.
 
 
 
-<a name="preparing-to-use-the-connector-for-microsoft-graph"></a>Vorbereiten der Verwendung des Connectors für Microsoft Graph
-=============================================================
+## <a name="preparing-to-use-the-connector-for-microsoft-graph"></a>Vorbereiten der Verwendung des Connectors für Microsoft Graph
 
-<a name="authorizing-the-connector-to-retrieve-or-manage-objects-in-your-azure-ad-directory"></a>Autorisieren Sie den Connector zum Abrufen oder Verwalten von Objekten in Ihrem Azure AD-Verzeichnis
-----------------------------------------------------
+### <a name="authorizing-the-connector-to-retrieve-or-manage-objects-in-your-azure-ad-directory"></a>Autorisieren Sie den Connector zum Abrufen oder Verwalten von Objekten in Ihrem Azure AD-Verzeichnis
+
 
 1.  Für den Connector muss in Azure AD eine Web-App/API-Anwendung erstellt werden, damit dieser mit entsprechenden Berechtigungen autorisiert werden kann, um über Microsoft Graph in Azure AD-Objekten verwendet zu werden.
 
@@ -83,8 +82,8 @@ Weitere Details zu erforderlichen Berechtigungen finden Sie [hier](https://devel
 5. Erteilen Sie der Anwendung die erforderlichen Berechtigungen.
 
 
-<a name="installing-the-connector"></a>Installieren des Connectors
-========================
+## <a name="installing-the-connector"></a>Installieren des Connectors
+
 
 6.  Stellen Sie vor dem Installieren des Connectors sicher, dass auf dem Synchronisierungsserver Folgendes festgelegt ist: 
 
@@ -95,8 +94,8 @@ Weitere Details zu erforderlichen Berechtigungen finden Sie [hier](https://devel
 
 8.  Starten Sie den MIM-Synchronisierungsdienst neu.
  
-<a name="connector-configuration"></a>Connectorkonfiguration
-=======================
+## <a name="connector-configuration"></a>Connectorkonfiguration
+
 
 
 9.  Klicken Sie auf der Benutzeroberfläche von Synchronization Service Manager auf  **Connectors**  und anschließend auf  **Erstellen**.
@@ -110,7 +109,7 @@ Wählen Sie  **Graph (Microsoft)**   aus, erstellen Sie einen Connector, und g
 
 ![](media/microsoft-identity-manager-2016-ma-graph/77c2eb73bab8d5187da06293938f5fd9.png)
 
-Abbildung 5. Seite Konnektivität
+Abbildung 5. Konnektivitätsseite
 
 Die Konnektivitätsseite (Abbildung 5) enthält die verwendete Version der Graph-API und den Namen des Mandanten. Die Client-ID und der geheime Clientschlüssel stellen die Anwendungs-ID und den Schlüsselwert der WebAPI-Anwendung dar, die in Azure AD erstellt werden müssen.
 
@@ -128,8 +127,8 @@ Die Seite „Globale Parameter“ enthält die folgenden Einstellungen:
 
  - Kennwortänderung für erstellten Benutzer beim nächsten Zeichen erzwingen: Diese Option wird für neue Benutzer verwendet, die während des Exports erstellt werden. Wenn die Option aktiviert ist, dann wird die Eigenschaft [forceChangePasswordNextSignIn](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/passwordprofile) auf „true“ gesetzt, andernfalls auf „false“.
 
-<a name="configuring-the-connector-schema-and-operations"></a>Konfigurieren von Connectorschema und -vorgängen
-=========================
+## <a name="configuring-the-connector-schema-and-operations"></a>Konfigurieren von Connectorschema und -vorgängen
+
 
 12.   Konfigurieren Sie das Schema.  Der Connector unterstützt die folgende Liste von Objekttypen:
 
@@ -163,8 +162,8 @@ Mehrwertige Attribute (Collection) werden für jeden Typ aus der obigen Liste eb
 Der Connector verwendet das Attribut `id` zum Verankern und DN für alle Objekte.  Daher ist keine Umbenennung erforderlich, da die Graph-API nicht zulässt, dass ein Objekt das zugehörige Attribut „id“ ändert.
 
 
-<a name="access-token-lifetime"></a>Lebensdauer von Zugriffstoken
-=====================
+## <a name="access-token-lifetime"></a>Lebensdauer von Zugriffstoken
+
 
 Eine Graph-Anwendung erfordert für den Zugriff auf die Graph-API ein Zugriffstoken. Ein Connector fordert für jede Importiteration ein neues Zugriffstoken an (die Importiteration hängt von der Seitengröße ab). Beispiel:
 
@@ -176,26 +175,30 @@ In diesem Fall gibt es während des Imports zwei Iterationen, von denen jedes 5.
 
 Während des Exports wird für jedes Objekt, das hinzugefügt, aktualisiert oder gelöscht werden muss, ein neues Zugriffstoken angefordert.
 
-<a name="troubleshooting"></a>Problembehandlung
-===============
+## <a name="troubleshooting"></a>Problembehandlung
+
 
 **Aktivieren von Protokollen**
 
 Wenn in Graph Probleme auftreten, können Protokolle verwendet werden, um diese zu lokalisieren. So können Ablaufverfolgungen [auf die gleiche Weise aktiviert werden wie für generische Connectors](https://social.technet.microsoft.com/wiki/contents/articles/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors.aspx). Oder einfach durch Hinzufügen des Folgenden zu `miiserver.exe.config` (in Abschnitt `system.diagnostics/sources`):
 
-
+```
 \<source name="ConnectorsLog" switchValue="Verbose"\>
 
 \<listeners\>
 
->   \<add initializeData="ConnectorsLog"   type="System.Diagnostics.EventLogTraceListener, System, Version=4.0.0.0,   Culture=neutral, PublicKeyToken=b77a5c561934e089"   name="ConnectorsLogListener" traceOutputOptions="LogicalOperationStack,   DateTime, Timestamp, Call stack" /\>
+\<add initializeData="ConnectorsLog"
+type="System.Diagnostics.EventLogTraceListener, System, Version=4.0.0.0,
+Culture=neutral, PublicKeyToken=b77a5c561934e089"
+name="ConnectorsLogListener" traceOutputOptions="LogicalOperationStack,
+DateTime, Timestamp, Call stack" /\>
 
 \<remove name="Default" /\>
 
 \</listeners\>
 
 \</source\>
-
+```
 >[!NOTE]
 >Wenn „Diesen Verwaltungs-Agent in einem separaten Prozess ausführen“ aktiviert ist, sollte `dllhost.exe.config` anstelle von `miiserver.exe.config` verwendet werden.
 
@@ -215,12 +218,9 @@ Beispiel hierfür mit [Azure AD PowerShell Module Public Preview Release](https:
 
 New-AzureADPolicy -Definition \@('{"TokenLifetimePolicy":{"Version":1, **"AccessTokenLifetime":"5:00:00"** }}') -DisplayName "OrganizationDefaultPolicyScenario" -IsOrganizationDefault \$true -Type "TokenLifetimePolicy"
 
-<a name="next-steps"></a>Nächste Schritte
-----------
+## <a name="next-steps"></a>Nächste Schritte
+
 - [Graph-Tester (sehr hilfreich für die Problembehandlung bei HTTP-Aufrufen)]( https://developer.microsoft.com/en-us/graph/graph-explorer)
 - [Versionsverwaltung, Support und Richtlinien für wesentliche Änderungen für Microsoft Graph](https://developer.microsoft.com/en-us/graph/docs/concepts/versioning_and_support)
 - [Download des Microsoft Identity Manager-Connectors für Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495)
-
-<a name="scenario-specific-guides"></a>Szenariospezifische Anleitungen
-----------------------------------
-[MIM B2B End to End Deployment]( ~/microsoft-identity-manager-2016-graph-b2b-scenario.md) (MIM-B2B-End-to-End-Bereitstellung)
+[Azure AD-Business-to-Business-Kollaboration (B2B) mit Microsoft Identity Manager(MIM) 2016 SP1 mit Azure-Anwendungsproxy]( ~/microsoft-identity-manager-2016-graph-b2b-scenario.md)

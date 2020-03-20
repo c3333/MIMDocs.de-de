@@ -4,17 +4,17 @@ description: Installieren der Microsoft Identity Manager 2016-Zertifikatverwaltu
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/19/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 9a9e00f7dca118627a5140967a104d13273cbc26
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 35fe08363b6964bf6d264ab1e60cd9751aa7b6aa
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67690804"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043034"
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Bereitstellen der Microsoft Identity Manager-Zertifikatverwaltung 2016 (MIM CIM)
 
@@ -233,7 +233,7 @@ Alle drei oben aufgeführten Konten verfügen über erweiterte Rechte innerhalb 
 
 10. Stellen Sie auf der Registerkarte **Erweiterungen** in der Liste **Erweiterungen in dieser Vorlage** sicher, dass **Anwendungsrichtlinien** ausgewählt ist, und klicken Sie anschließend auf **Bearbeiten**.
 
-11. Klicken Sie im Dialogfeld **Anwendungsrichtlinienerweiterung bearbeiten** auf die Anwendungsrichtlinien **Verschlüsselndes Dateisystem** und **Sichere E-Mail**. Klicken Sie auf **Entfernen**und dann auf **OK**.
+11. Klicken Sie im Dialogfeld **Anwendungsrichtlinienerweiterung bearbeiten** auf die Anwendungsrichtlinien **Verschlüsselndes Dateisystem** und **Sichere E-Mail**. Klicken Sie auf **Entfernen** und dann auf **OK**.
 
 12. Führen Sie auf der Registerkarte **Sicherheit** die folgenden Schritte aus:
 
@@ -610,7 +610,7 @@ In diesem Schritt installieren und konfigurieren Sie die FIM CM-Zertifizierungss
 
 11. Erweitern Sie in der Konsolenstruktur **Anwendungs- und Dienstprotokolle**, und klicken Sie anschließend auf **FIM-Zertifikatverwaltung**.
 
-12. Überprüfen Sie in der Liste der Ereignisse, ob die neuesten Ereignisse seit dem letzten Neustart der Zertifikatdienste *keine* **Warnungs-** oder **Fehlerereignisse** einschließen.
+12. Überprüfen Sie in der Liste der Ereignisse, ob die neuesten Ereignisse seit dem letzten Neustart der Zertifikatdienste *keine***Warnungs-** oder **Fehlerereignisse** einschließen.
 
     >[!NOTE] 
     >Das letzte Ereignis sollte angeben, dass das Beendigungsmodul mithilfe der Einstellungen aus `SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\ContosoRootCA\ExitModules\Clm.Exit` geladen wird.

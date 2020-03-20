@@ -4,17 +4,17 @@ description: Eine Liste der von Microsoft Identity Manager 2016 SP1 unterstützt
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 05/23/2018
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: 5704e978734bea13f1a362aeb203810f3864205a
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 2caf9f06067c229d585019f912a7ff4e00fad3e6
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68701472"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044122"
 ---
 # <a name="supported-languages"></a>Unterstützte Sprachen
 
@@ -57,7 +57,7 @@ Das Microsoft-Sprachpaket für den MIM-Dienst und -Portal unterstützt folgende 
 |  Portugiesisch (Brasilien)  |          pt-BR           |    pt-BR     |
 |        Russisch        |          ru-RU           |      ru      |
 |       Rumänisch        |          ro-RO           |      ro      |
-|        Spanisch        |          es-ES           |      Ja      |
+|        Spanisch        |          es-ES           |      es      |
 |        Slowakisch         |          sk-SK           |      sk      |
 |        Schwedisch        |          sv-SE           |      sv      |
 |       Slowenisch       |          sl-SI           |      sl      |
@@ -79,7 +79,7 @@ Die Microsoft-Zertifikatverwaltung unterstützt folgende 9 Sprachen:
 |Italienisch|it-IT|it|
 |Japanisch|ja-JP|ja|
 |Portugiesisch (Portugal)|pt-PT|pt-PT|
-|Spanisch|es-ES|Ja|
+|Spanisch|es-ES|es|
 
 ## <a name="certificate-management-modern-application"></a>Moderne Anwendung für die Zertifikatverwaltung  
 Die moderne Anwendung für die Microsoft-Zertifikatverwaltung unterstützt folgende 33 Sprachen: 
@@ -105,7 +105,7 @@ Die moderne Anwendung für die Microsoft-Zertifikatverwaltung unterstützt folge
 |Portugiesisch (Brasilien)|pt-BR|pt-BR|
 |Russisch|ru-RU|ru|
 |Rumänisch|ro-RO|ro|
-|Spanisch|es-ES|Ja|
+|Spanisch|es-ES|es|
 |Schwedisch|sv-SE|sv|
 |Türkisch|tr-TR|tr|
 

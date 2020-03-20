@@ -4,17 +4,17 @@ description: Erste Schritte mit MIM 2016-Komponenten durch Installation und Konf
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.assetid: ''
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 3749b74fd867601ee05f8e45d273ad2de9144b5b
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: f120709e517d82d4f94e72f4d0a44361f5552a1c
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68701425"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042303"
 ---
 # <a name="microsoft-bhold-suite-concepts-guide"></a>Konzepthandbuch für Microsoft BHOLD Suite
 
@@ -48,7 +48,7 @@ Ein zusätzlicher Vorteil von RBAC ist die Möglichkeit, die Trennung von Aufgab
 Mit BHOLD Suite können Sie Rollen innerhalb Ihrer Organisation angeben und organisieren, Benutzern Rollen zuweisen und Rollen die geeigneten Berechtigungen zuweisen. Diese Struktur wird als Rollenmodell bezeichnet. Es enthält und verbindet fünf Objekttypen: 
 
 - Organisationseinheiten
-- Users
+- -Benutzer
 - Rollen
 - Berechtigungen
 - Applications
@@ -74,7 +74,7 @@ In diesem Beispiel gehört jeder Verkaufsmitarbeiter zu zwei Organisationseinhei
 
 OrgUnits können in BHOLD Suite erstellt werden, indem das BHOLD Core-Webportal oder der BHOLD-Modellgenerator verwendet wird.
 
-#### <a name="users"></a>Users
+#### <a name="users"></a>-Benutzer
 
 Wie bereits erwähnt, muss jeder Benutzer mindestens einer Organisationseinheit (OrgUnit) angehören. Da Organisationseinheiten den wichtigsten Mechanismus darstellen, um einem Benutzer Rollen zuzuweisen, gehört ein bestimmter Benutzer in den meisten Organisationen mehreren OrgUnits an, um das Zuweisen von Rollen zu diesem Benutzer zu vereinfachen. In einigen Fällen kann es jedoch erforderlich sein, einem Benutzer eine Rolle zuzuweisen, die von den OrgUnits, denen der Benutzer angehört, ausgenommen ist. Folglich kann ein Benutzer direkt einer Rolle zugewiesen werden und Rollen von den OrgUnits erhalten, denen dieser angehört.
 
@@ -214,7 +214,7 @@ Das BHOLD-Analyseportal ermöglicht es Ihnen, Regelsätze zu erstellen, die aus 
 
 Eine Regel kann folgende Elementgruppen testen:
 
-- Users
+- -Benutzer
 - Organisationseinheiten
 - Rollen
 - Berechtigungen
@@ -233,7 +233,7 @@ Jeder Filter besteht aus einem Typ, einem Operator (der typabhängig ist), einem
 |   |   |   |   |   |
 |---|---|---|---|---|
 |**Typ:**   | Anzahl von   |
-| **Schlüssel:**  | Users  |
+| **Schlüssel:**  | -Benutzer  |
 | **Operator**  | >  |
 | **Wert:** | 10 |
 
@@ -261,7 +261,7 @@ Wenn Sie beispielsweise die Implementierung einer Richtlinie für die Trennung v
 |   |  |
 |---|--|
 |Name:| SoD-Test für Zahlungen|
-|Element:| Users|
+|Element:| -Benutzer|
 |Teilmengenfilter:| Besitzt eine Berechtigung für das Anfordern von Zahlungen|
 |Regelfilter: | Kann keine Berechtigung für das Genehmigen von Zahlungen besitzen|
 
@@ -277,7 +277,7 @@ Wenn Ihre Geschäftsrichtlinie beispielsweise erfordert, dass Manager entweder �
 |  |  |
 |--|--|
 |Name: | Ändern des SoD-Tests für Zahlungen|
-|Element: | Users |
+|Element: | -Benutzer |
 |Teilmengenfilter: | Besitzt einen Rollen-Manager|
 | Regelfilter: |Muss eine Berechtigung zum Ändern von Zahlungen besitzen </br> Muss eine Berechtigung zum Genehmigen von Zahlungen besitzen|
 
@@ -288,7 +288,7 @@ Im Gegensatz zu anderen Operatoren geben die Operatoren **Besitzt exklusiv eins*
 |  |  |
 |--|--|
 |Name: | Test zum Genehmigen von Reviews|
-|Element: | Users|
+|Element: | -Benutzer|
 | Teilmengenfilter: | Besitzt einen Rollen-Manager
 |Regelfilter: | Besitzt exklusiv eine Berechtigung zum Genehmigen von Reviews|
 
@@ -311,7 +311,7 @@ Folgende Kategorien werden von den integrierten Berichten abgedeckt:
 - Nachweis
 - Steuerelemente
 - Innere Zugriffsteuerung
-- Logging
+- Protokollierung
 - Modell
 - Statistiken
 - Workflow
