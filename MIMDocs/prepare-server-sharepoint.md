@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 7fb65eec7a42da94c4f27a30e59c09739279e882
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 6597a7b364c1b7fa023e78bef917163ea2c19dac
+ms.sourcegitcommit: 87f94edf26fdb7f2c65c06c22cd0bc80d2f20450
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79043527"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80374293"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Einrichten eines Identitätsverwaltungsservers: SharePoint
 
@@ -132,7 +132,7 @@ Folgen Sie den im **Konfigurations-Assistenten für SharePoint-Produkte** erläu
    Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
    ```
 
-4. Öffnen Sie auf Ihrem Identitätsverwaltungsserver eine neue Registerkarte des Webbrowsers, navigieren Sie zu http://mim.contoso.com/, und melden Sie sich als *contoso\miminstall* an.  Eine leere SharePoint-Website namens *MIM-Portal* wird angezeigt.
+4. Öffnen Sie auf Ihrem Identitätsverwaltungsserver eine neue Registerkarte des Webbrowsers, navigieren Sie zu `http://mim.contoso.com/`, und melden Sie sich als *contoso\miminstall* an.  Eine leere SharePoint-Website namens *MIM-Portal* wird angezeigt.
 
     ![Bild: MIM-Portal unter http://mim.contoso.com/](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
 
