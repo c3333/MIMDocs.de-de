@@ -12,18 +12,18 @@ ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: accdda41616ba6c02959eda8549b6dbc322fc627
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043918"
 ---
 # <a name="understand-the-components-of-pam"></a>Verstehen der Komponenten von PAM
 
 Durch Privileged Access Management lässt sich der administrative Zugriff von täglich verwendeten Benutzerkonten trennen. Diese Lösung basiert auf parallelen Gesamtstrukturen:
 
-- *CORP:* Ihre allgemeine Unternehmensgesamtstruktur, die eine oder mehrere Domänen umfasst. Sie verfügen möglicherweise über mehrere CORP-Gesamtstrukturen – zur Vereinfachung wird bei den Beispielen in diesen Artikeln jedoch nur eine einzige Gesamtstruktur in einer einzigen Domäne verwendet.  
-- *PRIV:* Eine dedizierte Gesamtstruktur, die speziell für dieses PAM-Szenario erstellt wurde. Diese Gesamtstruktur enthält eine Domäne zur Aufnahme privilegierter Gruppen und Konten, die aus mindestens einer CORP-Domäne stammen.
+- *CORP*: Ihre allgemeine Unternehmensgesamtstruktur, die eine oder mehrere Domänen umfasst. Sie verfügen möglicherweise über mehrere CORP-Gesamtstrukturen – zur Vereinfachung wird bei den Beispielen in diesen Artikeln jedoch nur eine einzige Gesamtstruktur in einer einzigen Domäne verwendet.  
+- *PRIV*: Eine dedizierte Gesamtstruktur, die speziell für dieses PAM-Szenario erstellt wurde. Diese Gesamtstruktur enthält eine Domäne zur Aufnahme privilegierter Gruppen und Konten, die aus mindestens einer CORP-Domäne stammen.
 
 Die für PAM konfigurierte MIM-Lösung umfasst die folgenden Komponenten:  
 

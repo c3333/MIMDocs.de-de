@@ -10,10 +10,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.openlocfilehash: 41aba931111d6ef46e60dfed173362e59c411dfe
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044275"
 ---
 # <a name="self-service-password-reset-deployment-options"></a>Bereitstellungsoptionen für die Self-Service-Kennwortzurücksetzung
@@ -85,7 +85,7 @@ Im nächsten Abschnitt richten Sie Ihren Azure MFA-Anbieter in Microsoft Azure A
 
 3. Kopieren Sie die resultierende ZIP-Datei auf alle Systeme, auf denen der MIM-Dienst installiert ist.  Bedenken Sie dabei, dass die ZIP-Datei Schlüsselmaterial enthält, das zur Authentifizierung beim Azure MFA-Dienst verwendet wird.
 
-### <a name="update-the-configuration-file"></a>Aktualisieren Sie die Konfigurationsdatei.
+### <a name="update-the-configuration-file"></a>Aktualisieren der Konfigurationsdatei
 
 1. Melden Sie sich auf dem Computer, auf dem der MIM-Dienst installiert ist, als der Benutzer an, der MIM installiert hat.
 
@@ -99,15 +99,15 @@ Im nächsten Abschnitt richten Sie Ihren Azure MFA-Anbieter in Microsoft Azure A
 
     ![Bild: „pf_auth.cs“-Code](media/MIM-SSPR-pFile.png)
 
-6.  Öffnen Sie in **C:\Programme\Microsoft Forefront Identity Manager\2010\Service** die folgende Datei: **MfaSettings**.xml.
+6.  Öffnen Sie in **C:\Programme\Microsoft Forefront Identity Manager\2010\Service**die folgende Datei: **MfaSettings**.xml.
 
 7.  Kopieren Sie die Werte aus den `LICENSE_KEY, GROUP_KEY, CERT_PASSWORD` -Parametern in die Datei „pf_aut.cs“ in ihre entsprechenden XML-Elemente der Datei „MfaSettings.xml“.
 
 8.  Extrahieren Sie in der ZIP-Datei des SDKs unter „\pf\certs“ die Datei **cert_key.p12** , und geben Sie den vollständigen Pfad zu dieser Datei in der Datei „MfaSettings.xml“ in das XML-Element „ `<CertFilePath>` “ ein.
 
-9. Geben Sie im „ `<username>` “-Element einen beliebigen Benutzernamen ein.
+9. Geben Sie im `<username>` -Element einen beliebigen Benutzernamen ein.
 
-10. Geben Sie im `<DefaultCountryCode>`-Element Ihren standardmäßigen Ländercode ein. Sind für Benutzer Telefonnummern ohne einen Ländercode registriert, ist dies der Ländercode, den die Benutzer erhalten. Hat ein Benutzer einen internationalen Ländercode, muss dieser in die registrierte Telefonnummer einbezogen werden.
+10. Geben Sie im `<DefaultCountryCode>` -Element Ihren standardmäßigen Ländercode ein. Sind für Benutzer Telefonnummern ohne einen Ländercode registriert, ist dies der Ländercode, den die Benutzer erhalten. Hat ein Benutzer einen internationalen Ländercode, muss dieser in die registrierte Telefonnummer einbezogen werden.
 
 11. Speichern Sie die Datei „MfaSettings.xml“ unter demselben Namen am gleichen Speicherort.
 

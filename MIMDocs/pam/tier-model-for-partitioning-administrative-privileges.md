@@ -12,10 +12,10 @@ ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 4fb5689400d170adc19f15cbbc2d45915cb39fe3
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043595"
 ---
 # <a name="tier-model-for-partitioning-administrative-privileges"></a>Ebenenmodell zur Partitionierung von Administratorrechten
@@ -38,7 +38,7 @@ Um das Risiko zu senken, dass Anmeldeinformationen für Administratorkonten gest
 
 Im nächsten Schritt müssen Anmeldebeschränkungen implementiert und Prozesse und Vorgehensweisen umgesetzt werden, die die Einhaltung der Anforderungen an das Ebenenmodell sicherstellen. Im Idealfall sollte die Offenlegung von Anmeldeinformationen auf die niedrigste Berechtigung für die Rolle auf der jeweiligen Ebene reduziert werden.
 
-Anmeldebeschränkungen sollten erzwungen werden, um sicherzustellen, dass Konten mit hohen Berechtigungen keinen Zugriff auf weniger sichere Ressourcen erhalten. Beispiel:
+Anmeldebeschränkungen sollten erzwungen werden, um sicherzustellen, dass Konten mit hohen Berechtigungen keinen Zugriff auf weniger sichere Ressourcen erhalten. Beispiele:
 
 - Domänenadministratoren (Ebene 0) können sich nicht bei Unternehmensservern (Ebene 1) und Standardbenutzer-Arbeitsstationen (Ebene 2) anmelden.
 - Serveradministratoren (Ebene 1) können sich nicht bei Standardbenutzer-Arbeitsstationen (Ebene 2) anmelden.

@@ -12,10 +12,10 @@ ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 2adf1152aaf874d0ff0d93079fb4bfbfcf731b60
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044292"
 ---
 # <a name="mim-certificate-manager-windows-store-application-deployment"></a>Bereitstellung der Windows Store-Anwendung des MIM-Zertifikat-Managers
@@ -261,7 +261,7 @@ Wenn Sie eine Profilvorlage erstellen, müssen Sie „Virtuelle SmartCard erstel
       get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1
       ```
 
-## <a name="deploy-the-app"></a>Bereitstellen der App
+## <a name="deploy-the-app"></a>Bereitstellen der Anwendung
 
 Wenn Sie die Zertifikat-Manager-App einrichten möchten, laden Sie aus dem Download Center die Datei „MIMDMModernApp_&lt;Version&gt;_AnyCPU_Test.zip“ herunter, und extrahieren Sie deren gesamten Inhalt. Die APPX-Datei ist das Installationsprogramm. Sie können diese Datei auf dieselbe Weise bereitstellen, auf die Sie normalerweise Windows Store-Apps bereitstellen. Das heißt, Sie können [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx) oder [Intune](https://technet.microsoft.com/library/dn613839.aspx) verwenden, um die App querzuladen, sodass Benutzer über das Unternehmensportal auf sie zugreifen müssen oder sie durch direktes Übertragen an ihre Computer erhalten.
 

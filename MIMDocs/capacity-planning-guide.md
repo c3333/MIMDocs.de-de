@@ -12,10 +12,10 @@ ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 15eb35d01ed5c5c6e125c45f238bb2f7a7c564d7
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042116"
 ---
 # <a name="capacity-planning-guide"></a>Kapazitätsplanungshandbuch
@@ -26,7 +26,7 @@ Bevor Sie mit MIM beginnen, sollten Sie diese Anleitung zusammen mit Testumgebun
 
 Wenn Sie noch nicht mit MIM 2016 und den zugehörigen Komponenten vertraut sind, sollten Sie weitere Informationen zu [Microsoft Identity Manager 2016](microsoft-identity-manager-2016.md) lesen, bevor Sie die nächsten Schritte ausführen.
 
-## <a name="overview"></a>Übersicht
+## <a name="overview"></a>Overview
 
 Es gibt eine ganze Anzahl von Faktoren, die sich auf die gesamte Kapazität und Leistung Ihrer Microsoft Identity Manager-Bereitstellung auswirken können:
 
@@ -49,11 +49,11 @@ Die wichtigsten Faktoren, die Einfluss auf die Kapazität einer MIM 2016-Bereits
 
 Die Komponenten von Microsoft Identity Manager müssen sich nicht auf demselben Computer befinden. Ein Betrachten dieser Komponenten und der physischen oder virtuellen Computer, auf denen die Komponenten gehostet werden sollen, ist ein wichtiger Bestandteil der Kapazitätsplanung.
 
-Hardwarefaktoren können sich auf die Leistung der MIM-Umgebung auswirken. Beispiel:
+Hardwarefaktoren können sich auf die Leistung der MIM-Umgebung auswirken. Beispiele:
 
 - Wie sieht die Konfiguration der physischen Datenträger für den Computer aus, auf dem die MIM 2016 Service-SQL-Datenbank ausgeführt wird? Die Anzahl der Spindeln, aus denen die Datenträgerkonfiguration oder die Verteilung der Protokoll- und Datendateien bestehen, kann die Leistung des Systems erheblich beeinflussen.
 
-Berücksichtigen Sie außerdem die externen Faktoren in Ihrer Konfiguration. Beispiel:
+Berücksichtigen Sie außerdem die externen Faktoren in Ihrer Konfiguration. Beispiele:
 
 - Falls Sie ein SAN als die MIM 2016 Dienstdatenbank-Konfiguration verwenden, beachten Sie, welche anderen Anwendungen ebenfalls ein SAN verwenden. Diese Anwendungen wirken sich möglicherweise auf die Leistung der Datenbank aus, wenn sie um die freigegebenen Datenträgerressourcen im SAN konkurrieren.
 

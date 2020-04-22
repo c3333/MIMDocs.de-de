@@ -12,10 +12,10 @@ ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 81cf34959ccdea5ad9eb463f85a25d26bc1d8ede
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042422"
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Installieren von MIM 2016: Synchronisieren von Active Directory und MIM-Dienst
@@ -24,7 +24,7 @@ ms.locfileid: "79042422"
 > [« MIM-Dienst und -Portal](install-mim-service-portal.md)
 > 
 > [!NOTE]
-> Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiel:
+> Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiele:
 > - Domänencontrollername: **mimservername**
 > - Domänenname: **contoso**
 > - Kennwort – <strong>Pass@word1</strong>
@@ -72,7 +72,7 @@ Wenn Sie einen MIM-Verwaltungs-Agent konfigurieren, müssen Sie ein Benutzerkont
 
     -   ExpectedRuleEntry
 
-    -   Gruppe
+    -   Group
 
     -   Person
 
@@ -148,13 +148,13 @@ Wenn Sie einen MIM-Verwaltungs-Agent konfigurieren, müssen Sie ein Benutzerkont
     | Typ | Exportieren | Typ |
     | MitgliedshipAddWorkflow | Exportieren | membershipAddWorkflow |
     | MitgliedshipLocked | Exportieren | membershipLocked |
-    | AccountName | Importieren | accountName |
-    | DisplayedOwner | Importieren | displayedOwner |
-    | DisplayName | Importieren | displayName |
-    | MailNickName | Importieren | mailNickName |
-    | Mitglied | Importieren | Element |
-    | Bereich | Importieren | scope |
-    | Typ | Importieren | Typ |
+    | AccountName | importieren | accountName |
+    | DisplayedOwner | importieren | displayedOwner |
+    | DisplayName | importieren | displayName |
+    | MailNickName | importieren | mailNickName |
+    | Mitglied | importieren | Element |
+    | Bereich | importieren | scope |
+    | Typ | importieren | Typ |
 
 10.  Klicken Sie auf der Seite **Aufheben der Bereitstellung konfigurieren** auf **Weiter**
 
@@ -167,7 +167,7 @@ Der Active Directory-Verwaltungs-Agent ist ein Connector für Active Directory-D
 
 2. Geben Sie auf der Seite **Verwaltungs-Agent erstellen** die folgenden Einstellungen an, und klicken Sie dann auf **Weiter**:
 
-    - Verwaltungs-Agent für: Active Directory-Domänendienste
+    - Verwaltungs-Agent für: Active Directory-Domänendienste (AD DS)
     - Name: ADMA
 
 3. Geben Sie auf der Seite **Mit Active Directory-Gesamtstruktur verbinden** die folgenden Einstellungen an, und klicken Sie dann auf **Weiter**:
@@ -304,8 +304,8 @@ So erstellen Sie die Synchronisierungsregel „AD-Benutzer eingehend“:
 
 4. Geben Sie auf der Registerkarte **Allgemein** die folgenden Informationen an, und klicken Sie dann auf **Weiter**:
 
-    -   Anzeigename: Synchronisierungsregel „AD-Benutzer eingehend“
-    -   Datenflussrichtung: Eingehende Verbindungen
+    -   Anzeigename: Synchronisierungsregel "AD-Benutzer eingehend"
+    -   Datenflussrichtung: Eingehend
 
 5. Geben Sie auf der Registerkarte **Bereich** die folgenden Informationen an, und klicken Sie dann auf **Weiter**:
 
@@ -392,7 +392,7 @@ Passen Sie die Attributflussrangfolge für die von diesem Connector beigetragene
 
 Um den Active Directory Connector zu initialisieren, müssen Sie einen vollständigen Import und eine vollständige Synchronisierung für diesen ausführen. Der vollständige Import überträgt die vorhandenen Objekte aus AD in den Connectorbereich. Bei der vollständigen Synchronisierung werden die Synchronisierungsregeln aktualisiert, damit sie mit denjenigen des MIM-Connectors übereinstimmen.
 
-1. Öffnen Sie den Synchronisierungsdienst-Manager, und klicken Sie im Menü **Extras** auf **Verwaltungs-Agents**.
+1. den Synchronization Service Manager öffnen, und im Menü **Extras** auf **Verwaltungs-Agents** klicken.
 
 2. Wählen Sie in der Liste **Verwaltungs-Agents** den Eintrag **ADMA** aus.
 

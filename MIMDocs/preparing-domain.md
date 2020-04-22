@@ -12,10 +12,10 @@ ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 70ac40d38af06e6be98e00caf1dc73630b62334e
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043476"
 ---
 # <a name="set-up-a-domain"></a>Einrichten einer Domäne
@@ -32,7 +32,7 @@ Dieser Artikel führt Sie durch die Schritte, in denen Sie Ihre Domäne für ein
 Alle Komponenten Ihrer MIM-Bereitstellung benötigen ihre eigenen Identitäten in der Domäne. Dazu gehören sowohl die MIM-Komponenten „Service“ und „Sync“ als auch SharePoint und SQL.
 
 > [!NOTE]
-> Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiel:
+> Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiele:
 > - Name des Domänencontrollers: **corpdc**
 > - Domänenname: **contoso**
 > - Servername des MIM-Diensts: **corpservice**

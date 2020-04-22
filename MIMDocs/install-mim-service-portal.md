@@ -12,10 +12,10 @@ ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: markwahl-msft
 ms.suite: ems
 ms.openlocfilehash: e381bb418ce8215dafc369bf33782483a6e4de3e
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042439"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Installieren von MIM 2016: MIM-Dienst und -Portal
@@ -25,7 +25,7 @@ ms.locfileid: "79042439"
 > [Datenbanken synchronisieren »](install-mim-sync-ad-service.md)
  
 > [!NOTE]
-> Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiel:
+> Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiele:
 > - Domänencontrollername: **mimservername**
 > - Domänenname: **contoso**
 > - Kennwort – <strong>Pass@word1</strong>
@@ -124,7 +124,7 @@ Nach Abschluss der Installation stellen Sie sicher, dass das MIM-Portal aktiv is
 
     1.  Klicken Sie unter Verwendung von Internet Explorer im **MIM-Portal**auf **Management-Richtlinienregeln**.
 
-    2.  Suchen Sie nach der Verwaltungsrichtlinienregel **Benutzerverwaltung: Benutzer können eigene Attribute lesen.**
+    2.  Suchen Sie nach der Verwaltungsrichtlinienregel **Benutzerverwaltung: Benutzer können eigene Attribute lesen**.
 
     3.  Wählen Sie diese Verwaltungsrichtlinienregel aus, und deaktivieren Sie **Richtlinie ist deaktiviert**.
 
@@ -150,7 +150,7 @@ Nach Abschluss der Installation stellen Sie sicher, dass das MIM-Portal aktiv is
     7.  Schließen Sie die **Systemsteuerung**.
 
 > [!NOTE]
-> Optional: An diesem Punkt können Sie MIM-Add-Ins und -Erweiterungen installieren.
+> Optional: Jetzt können Sie MIM-Add-Ins und -Erweiterungen installieren.
  
 > [!div class="step-by-step"]  
 > [« MIM-Synchronisierungsdienst](install-mim-sync.md)

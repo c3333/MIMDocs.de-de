@@ -12,10 +12,10 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 41c1ff575bafb4c892d0657234554387680b75f1
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043748"
 ---
 # <a name="step-8-pam-deployment-verification"></a>Schritt 8: Überprüfen der PAM-Bereitstellung
@@ -43,7 +43,7 @@ Schritt 1:
 
 Mit diesen Befehlen werden die erforderlichen Gruppen und Benutzer für die Überprüfung erstellt.
 
-Schritt 2:
+Schritt 2:
 
 1. Melden Sie sich mit dem MIMAdmin-Konto auf dem PAM-Server an.
 2. Führen Sie PowerShell als Administrator aus.
@@ -53,7 +53,7 @@ Schritt 2:
 
 Mit diesem Schritt werden die Benutzer und Gruppen in die PAM-Umgebung migriert.
 
-Schritt 3:
+Schritt 3:
 
 1. Melden Sie sich als lokaler Administrator auf dem CORP-Client an.
 2. Führen Sie PowerShell als Administrator aus.

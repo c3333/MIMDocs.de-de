@@ -17,10 +17,10 @@ ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: f6e43abea8b58ccff7fa376b266a91cb138f5aa9
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044383"
 ---
 # <a name="connect-to-your-directories"></a>Herstellen der Verbindung zu Ihren Verzeichnissen
@@ -29,7 +29,7 @@ Connectors verknüpfen bestimmte verbundene Datenquellen mit Microsoft Identity 
 
 In Forefront Identity Manager wurden Connectors als Verwaltungs-Agents bezeichnet. Dieser Begriff wird in einigen Artikeln oder Teilen des Produkts noch verwendet, beachten Sie aber, dass beide Begriffe sich auf das gleiche Konzept beziehen.
 
-Dieser Artikel behandelt die in MIM enthaltenen und unterstützte Connectors, aber mit dem Connector für Extensible Connectivity 2.0 können Sie sogar Verbindungen zu noch mehr Datenquellen herstellen. Einige Partner haben auf diese Weise ihre eigenen Connectors erstellt. Eine vollständige Liste finden Sie im Wiki [FIM 2010: Management Agents from Partners (Verwaltungs-Agents von Partnern)](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx).
+Dieser Artikel behandelt die in MIM enthaltenen und unterstützte Connectors, aber mit dem Connector für Extensible Connectivity 2.0 können Sie sogar Verbindungen zu noch mehr Datenquellen herstellen. Einige Partner haben auf diese Weise ihre eigenen Connectors erstellt. Eine vollständige Liste finden Sie im Wiki [FIM 2010: Management Agents from Partners](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx).
 
 ## <a name="supported-connectors-in-mim-2016-sp1"></a>Unterstützte Connectors in MIM 2016 SP1
 

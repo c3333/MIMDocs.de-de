@@ -12,10 +12,10 @@ ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 6597a7b364c1b7fa023e78bef917163ea2c19dac
-ms.sourcegitcommit: 87f94edf26fdb7f2c65c06c22cd0bc80d2f20450
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80374293"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Einrichten eines Identitätsverwaltungsservers: SharePoint
@@ -29,7 +29,7 @@ ms.locfileid: "80374293"
 > Der SharePoint Server 2019-Setupvorgang unterscheidet sich nicht von dem für SharePoint Server 2016 **mit der Ausnahme eines zusätzlichen Schritts** zum Entsperren von ASHX-Dateien, die vom MIM-Portal verwendet werden.
 
 > [!NOTE]
-> Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiel:
+> Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiele:
 > - Name des Domänencontrollers: **corpdc**
 > - Domänenname: **contoso**
 > - Servername des MIM-Diensts: **corpservice**
@@ -68,7 +68,7 @@ Führen Sie die folgenden Schritte aus, um SharePoint 2016 zu installieren. Nach
 
 Folgen Sie den im **Konfigurations-Assistenten für SharePoint-Produkte** erläuterten Schritten, um SharePoint für die Arbeit mit MIM zu konfigurieren.
 
-1. Wechseln Sie auf die Registerkarte **Verbindung mit einer Serverfarm herstellen** , um eine neue Serverfarm zu erstellen.
+1. Wechseln Sie auf die Registerkarte die Option **Verbindung mit einer Serverfarm herstellen** aus, um eine neue Serverfarm zu erstellen.
 
 2. Geben Sie diesen Server als Datenbankserver wie **corpsql** für die Konfigurationsdatenbank und *Contoso\SharePoint* als Datenbankzugriffskonto für SharePoint an.
 3. Erstellen Sie ein Kennwort für die Passphrase der Farmsicherheit.

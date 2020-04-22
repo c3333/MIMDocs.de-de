@@ -12,10 +12,10 @@ ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 97b425fc4444b241ddce99e7d5e3abf564daf245
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043697"
 ---
 # <a name="step-2---prepare-the-first-priv-domain-controller"></a>Schritt 2: Vorbereiten des ersten PRIV-Domänencontrollers
@@ -38,7 +38,7 @@ Installieren Sie Windows Server 2012 R2 auf einem anderen neuen virtuellen Com
 
 2. Lesen und akzeptieren Sie die Lizenzbedingungen.
 
-3. Da der Datenträger leer ist, wählen Sie **Benutzerdefiniert: Nur Windows installieren** aus, und verwenden Sie den nicht initialisierten Speicherplatz.
+3. Da dieser Datenträger leer sein wird, wählen Sie **Benutzerdefiniert: Nur Windows installieren** aus, und verwenden Sie den nicht initialisierten Speicherplatz.
 
 4. Nach der Installation der Betriebssystemversion melden Sie sich als neuer Administrator bei diesem neuen Computer an. Verwenden Sie die Systemsteuerung, um den Computernamen *PRIVDC* festzulegen und dem Computer im virtuellen Netzwerk eine statische IP-Adresse zuzuweisen. Konfigurieren Sie den DNS-Server dann so, dass der im vorherigen Schritt installierte Domänencontroller verwendet wird. Dies erfordert einen Neustart des Servers.
 
@@ -237,7 +237,7 @@ Verwenden Sie PowerShell auf PRIVDC, um die DNS-Namensweiterleitung zu konfiguri
    ```
 
 > [!NOTE]
-> Die nächsten Schritte in diesem Dokument beschreiben die Installation von MIM 2016-Serverkomponenten auf einem einzelnen Computer. Wenn Sie planen, zur Sicherstellung von Hochverfügbarkeit einen weiteren Server hinzuzufügen, müssen Sie zusätzliche Kerberos-Einstellungen konfigurieren. Die Vorgehensweise ist unter [FIM 2010: Einrichten der Kerberos-Authentifizierung](https://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx) beschrieben.
+> Die nächsten Schritte in diesem Dokument beschreiben die Installation von MIM 2016-Serverkomponenten auf einem einzelnen Computer. Wenn Sie planen, zur Sicherstellung von Hochverfügbarkeit einen weiteren Server hinzuzufügen, müssen Sie zusätzliche Kerberos-Einstellungen konfigurieren, wie unter [FIM 2010: Kerberos Authentication Setup](https://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx) (FIM 2010: Einrichten der Kerberos-Authentifizierung) beschrieben.
 
 ### <a name="configure-delegation-to-give-mim-service-accounts-access"></a>Konfigurieren der Delegierung, um MIM-Dienstkonten Zugriff zu gewähren
 

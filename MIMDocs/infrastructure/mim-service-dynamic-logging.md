@@ -8,10 +8,10 @@ ms.date: 10/29/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: 69ebe774ddea0176fb26ef74b8f4352e4bb5d039
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042167"
 ---
 # <a name="mim-sp1-4414360--service-dynamic-logging"></a>Dynamische Protokollierung des MIM SP1-Diensts (4.4.1436.0)
@@ -31,7 +31,7 @@ Protokollierungsstufen der dynamischen Protokollierung finden Sie [hier](https:/
 - Critical = Der Standardebenendienst schreibt nur kritische Ereignisse
 - Aktualisieren von Zeile 8 (dynamicLogging mode="true" loggingLevel="Critical") mit bevorzugtem Protokollierwert
 
-Dynamische Protokollierungskonfiguration in Zeile 266: Microsoft.ResourceManagement.Service.exe.config
+Die config-Datei der dynamischen Protokollierung befindet sich in Zeile 266: „Microsoft.ResourceManagement.Service.exe.config“
 
 ![Hervorgehobene Abschnitte zeigen die Zeilen mit den verschiedenen verfügbaren Protokollierungsbereichen](media/mim-service-dynamic-logging/screen02.png)
 

@@ -10,10 +10,10 @@ ms.date: 09/04/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: b157b2a8716d20ce3b472d5655d393e64f2baa6b
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044360"
 ---
 # <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Verwenden eines benutzerdefinierten Multi-Factor Authentication-Anbieters über eine API während der Aktivierung von PAM-Rollen oder in SSPR
@@ -135,7 +135,7 @@ namespace CustomPhoneGate
     }
 }
 ```
-### <a name="step-3-backup-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Schritt 3: Sichern Sie die unter „C:\Programme\Microsoft Forefront Identity Manager\2010\Service“ gespeicherte MfaSettings.xml-Datei.
+### <a name="step-3-backup-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Schritt 3: Sichern Sie die unter „C:\\Programme\\Microsoft Forefront Identity Manager\2010\Service“ gespeicherte MfaSettings.xml-Datei.
 
 ### <a name="step-4-edit-the-mfasettingsxml-file"></a>Schritt 4: Bearbeiten Sie die MfaSettings.xml-Datei.
 
@@ -156,6 +156,6 @@ Verwenden Sie nach dem Neustart des Diensts SSPR und/oder PAM, um die Funktion m
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Erste Schritte mit Azure Multi-Factor Authentication-Server](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
+- [Erste Schritte mit Azure Multi-Factor Authentication-Server](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy).
 - [Was ist Azure Multi-Factor Authentication?](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [MIM version release history (Versionsverlauf der MIM-Version)](./reference/version-history.md)

@@ -12,10 +12,10 @@ ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 7df1a4ca7a33aa2a00ac0b2c3ef24056c9720b5b
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043238"
 ---
 # <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Upgrade aus Forefront Identity Manager 2010 R2
@@ -197,6 +197,6 @@ In dieser Anleitung wird davon ausgegangen, dass Sie Folgendes bereits eingerich
 
 4. Beachten Sie, dass der **Forefront Identity Manager-Dienst** neu gestartet wurde.
 
-Anmerkung: Wenn die FIM-Add-Ins und -Erweiterungen derzeit auf den Computern der Benutzer für SSPR bereitgestellt werden, konfigurieren Sie auf keinen Fall die neuen MFA-Telefongates zur Kennwortzurücksetzung. Dies darf erst geschehen, nachdem alle FIM-Add-Ins und -Erweiterungen auf MIM 2016 aktualisiert wurden.  Da die FIM 2010 und FIM 2010 R2-Add-ins und -Erweiterungen die neuen Telefongates nicht erkennen, geben sie einen Fehler zurück. Ein Benutzer ist dann nicht in der Lage, die Zurücksetzung des Kennworts abzuschließen.
+Hinweis: Wenn die FIM-Add-Ins und -Erweiterungen derzeit auf den Computern der Benutzer für SSPR bereitgestellt werden, konfigurieren Sie auf keinen Fall die neuen MFA-Telefongates zur Kennwortzurücksetzung. Dies darf erst geschehen, nachdem alle FIM-Add-Ins und -Erweiterungen auf MIM 2016 aktualisiert wurden.  Da die FIM 2010 und FIM 2010 R2-Add-ins und -Erweiterungen die neuen Telefongates nicht erkennen, geben sie einen Fehler zurück. Ein Benutzer ist dann nicht in der Lage, die Zurücksetzung des Kennworts abzuschließen.
 
 Hilfe zum Microsoft Identity Manager 2016 SP1-Upgrade finden Sie im folgenden [Microsoft Identity Manager 2016 Service Pack 1-Updatepaket](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/).

@@ -12,10 +12,10 @@ ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: b8a1b55ed836f46c184941ccf6ec25ef63ad4c30
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042099"
 ---
 # <a name="create-software-certificates-with-certificate-manager"></a>Erstellen von Softwarezertifikaten mit dem Zertifikat-Manager
@@ -93,4 +93,4 @@ Zum Registrieren und Erneuern von Softwarezertifikaten müssen Sie kein Administ
 
 10. Wenn Sie archivierte Zertifikate neu ausstellen möchten, aktivieren Sie die Kontrollkästchen auf der linken Seite von **Archivierte Zertifikate erneut ausstellen** , und klicken Sie auf **OK**.
 
-11. Wenn Sie die Zertifikatsverwaltung mithilfe der virtuellen Smartcard verwenden, müssen Sie Datensammlungselemente deaktivieren, da diese nicht mit aktivierter Datensammlung funktioniert. Deaktivieren Sie die Datensammlung für jede Richtlinie, indem Sie im linken Bereich auf die Richtlinie klicken, dann das Kontrollkästchen neben **Beispieldatenelement** deaktivieren und schließlich auf **Datensammlungselemente löschen**klicken. Klicken Sie dann auf **OK**.
+11. Wenn Sie die Zertifikatsverwaltung mithilfe der virtuellen Smartcard verwenden, müssen Sie Datensammlungselemente deaktivieren, da diese nicht mit aktivierter Datensammlung funktioniert. Deaktivieren Sie die Datensammlung für jede Richtlinie, indem Sie im linken Bereich auf die Richtlinie klicken, dann das Kontrollkästchen neben **Beispieldatenelement** deaktivieren und schließlich auf **Datensammlungselemente löschen**klicken. Klicken Sie anschließend auf **OK**.

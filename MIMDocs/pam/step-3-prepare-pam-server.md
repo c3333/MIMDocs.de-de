@@ -13,10 +13,10 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 7a0a0437e767f793150d875bcaf31213a7fdf627
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043663"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Schritt 3: Vorbereiten eines PAM-Servers
@@ -35,7 +35,7 @@ Installieren Sie auf einem dritten virtuellen Computer Windows Server 2012 R2,
 
 2. Lesen und akzeptieren Sie die Lizenzbedingungen.
 
-3.  Da der Datenträger leer ist, wählen Sie **Benutzerdefiniert: Nur Windows installieren** aus, und verwenden Sie den **nicht initialisierten Speicherplatz**.
+3.  Da dieser Datenträger leer sein wird, wählen Sie **Benutzerdefiniert: Nur Windows installieren** aus, und nutzen Sie den **nicht initialisierten Speicherplatz**.
 
 4.  Melden Sie sich bei dem neuen Computer als Administrator an.  In der Systemsteuerung weisen Sie dem Computer eine statische IP-Adresse im virtuellen Netzwerk zu, konfigurieren die Netzwerkschnittstelle so, dass sie DNS-Abfragen an die IP-Adresse von PRIVDC sendet, und legen den Computernamen auf *PAMSRV* fest.  Dies erfordert einen Neustart des Servers.
 
@@ -78,7 +78,7 @@ Konfigurieren Sie die Serversicherheitsrichtlinien, damit die neu erstellten Kon
 
 9. Klicken Sie im Detailbereich mit der rechten Maustaste auf **Lokal anmelden verweigern**, und wählen Sie dann **Eigenschaften** aus.  
 10. Klicken Sie auf **Benutzer oder Gruppe hinzufügen**, geben Sie in „Benutzer- und Gruppennamen“ die Zeichenfolge *priv\mimmonitor; priv\MIMService; priv\mimcomponent* ein, und klicken Sie auf **OK**.  
-11. Klicken Sie auf **OK**, um das Eigenschaftenfenster zu schließen.  
+11. Klicken Sie auf **OK**, um das Dialogfeld „Eigenschaften“ zu schließen.  
 12. Schließen Sie das Fenster „Lokale Sicherheitsrichtlinien“.  
 
 13. Öffnen Sie die Systemsteuerung, und wechseln Sie zu **Benutzerkonten**.
@@ -129,13 +129,13 @@ Installieren Sie mit dem SharePoint Foundation 2013 mit SP1-Installationsprogram
 
 1. Klicken Sie mit der rechten Maustaste auf „PowerShell“, und wählen Sie **Als Administrator ausführen** aus.  
 2. Wechseln Sie in das Verzeichnis, in dem SharePoint entpackt wurde.  
-3. Geben Sie den Befehl `.\prerequisiteinstaller.exe` ein.
+3. Geben Sie den Befehl `.\prerequisiteinstaller.exe`.
 
 Nachdem die erforderlichen Komponenten für SharePoint installiert wurden, installieren Sie SharePoint Foundation 2013 mit SP1.
 
 1.  Klicken Sie mit der rechten Maustaste auf „PowerShell“, und wählen Sie **Als Administrator ausführen** aus.  
 2.  Wechseln Sie in das Verzeichnis, in dem SharePoint entpackt wurde.  
-3.  Geben Sie den Befehl `.\setup.exe` ein.  
+3.  Geben Sie den Befehl `.\setup.exe`.  
 4.  Wählen Sie den Typ für einen **vollständigen Server** aus.  
 5.  Nachdem die Installation abgeschlossen ist, wählen Sie die Option zum Ausführen des Assistenten aus.  
 

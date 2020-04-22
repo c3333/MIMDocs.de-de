@@ -12,10 +12,10 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 102754fc88af32cb9abed40716ba9168a041d58e
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043884"
 ---
 # <a name="configure-pam-using-scripts"></a>Konfigurieren von PAM mithilfe von Skripts
@@ -55,9 +55,9 @@ Aktualisieren Sie die Datei „PAMDeploymentConfig.xml“, und legen Sie die akt
 | PAM-Server  | Lokaler Administrator (MIM-Administrator nach dem Domänenbeitritt)  | .\PAMDeployment.ps1; Wählen Sie Menüoption 5 (MIM PAM-Einrichtung)   |
 |  PAM-Server |MIM-Administrator   | .\PAMDeployment.ps1; Wählen Sie Menüoption 6 (Einrichten der PAM-Vertrauensstellung) .\PAMDeployment.ps1; Wählen Sie Menüoption 6 (Einrichten der PAM-Vertrauensstellung) |
 
-### <a name="validation"></a>Validation
+### <a name="validation"></a>Überprüfung
 
-|  Machine | Ausführung als   | Befehle   |
+|  Computer | Ausführung als   | Befehle   |
 |---|---|---|
 | CORP-Client  | CORP-Benutzer (lokaler Administrator)  |   .\PAMDeployment.ps1; Wählen Sie Menüoption 7 (MIM PAM-Clienteinrichtung)  |
 | CORP-DC  | CORP-Domänenadministrator   | Import-module .\PAMValidation.psm1 ; Create-PAMValidationCORPDCConfig   |

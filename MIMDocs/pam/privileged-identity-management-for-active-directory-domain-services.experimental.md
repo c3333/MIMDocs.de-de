@@ -1,5 +1,5 @@
 ---
-title: Was ist PAM für Active Directory-Domänendienste? | Microsoft-Dokumentation
+title: Was ist PAM für Active Directory-Domänendienste? | Microsoft Docs
 description: Mit der privilegierten Zugriffsverwaltung (PAM) können Organisationen den privilegierten Zugriff innerhalb einer vorhandenen Active Directory-Umgebung einschränken.
 keywords: ''
 author: billmath
@@ -13,10 +13,10 @@ ms.reviewer: mwahl
 ms.suite: ems
 experiment_id: kgremban_images
 ms.openlocfilehash: acec45a2843febd3821d9045336098cdeb4ddcf7
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043935"
 ---
 # <a name="privileged-access-management-for-active-directory-domain-services"></a>Privileged Access Management für Active Directory-Domänendienste
@@ -47,13 +47,13 @@ PAM baut auf dem Prinzip der Just-in-Time-Verwaltung auf, die mit [Just Enough A
 
 Für Einrichtung und Betrieb von PAM sind vier Schritte erforderlich.
 
-1. **Vorbereiten:** Bestimmen Sie, welche Gruppen in Ihrer vorhandenen Gesamtstruktur wichtige Berechtigungen haben. Erstellen Sie diese Gruppen ohne Mitglieder in der geschützten Gesamtstruktur neu.
+1. **Vorbereiten**: Bestimmen Sie, welche Gruppen in Ihrer vorhandenen Gesamtstruktur maßgebliche Berechtigungen haben. Erstellen Sie diese Gruppen ohne Mitglieder in der geschützten Gesamtstruktur neu.
 
-2. **Schützen**: Richten Sie einen Lebenszyklus- und Authentifizierungsschutz wie z. B. Multi-Factor Authentication (MFA) ein, wenn Benutzer die Just-in-Time-Verwaltung anfordern. Die MFA verhindert programmgesteuerte Angriffe mittels Schadsoftware oder im Anschluss an den Diebstahl von Anmeldeinformationen.
+2. **Schützen**: Richten Sie einen Lebenszyklus- und Authentifizierungsschutz ein, wie z. B. die mehrstufige Authentifizierung (Multi-Factor Authentication, MFA), wenn Benutzer die Just-in-Time-Verwaltung anfordern. Die MFA verhindert programmgesteuerte Angriffe mittels Schadsoftware oder im Anschluss an den Diebstahl von Anmeldeinformationen.
 
-3. **Handeln:** Nachdem die Authentifizierungsvoraussetzungen erfüllt wurden und eine Anforderung genehmigt wurde, wird ein Benutzerkonto temporär einer privilegierten Gruppe in der geschützten Gesamtstruktur hinzugefügt. Während eines vorher festgelegten Zeitraums besitzt der Administrator alle Rechte und Zugriffsberechtigungen, die dieser Gruppe zugewiesen sind. Nach Ablauf des Zeitraums wird das Konto aus der Gruppe entfernt.
+3. **Betreiben**: Nachdem die Authentifizierungsvoraussetzungen erfüllt sind und eine Anforderung genehmigt wurde, wird ein Benutzerkonto temporär einer privilegierten Gruppe in der geschützten Gesamtstruktur hinzugefügt. Während eines vorher festgelegten Zeitraums besitzt der Administrator alle Rechte und Zugriffsberechtigungen, die dieser Gruppe zugewiesen sind. Nach Ablauf des Zeitraums wird das Konto aus der Gruppe entfernt.
 
-4. **Überwachen:** Mit PAM lassen sich Anforderungen eines privilegierten Zugriffs überwachen. Außerdem können für diese Anforderungen Benachrichtigungen und Berichte erstellt werden. Sie können den Verlauf privilegierter Zugriffe überprüfen und sehen, wer eine Aktivität ausgeführt hat. Sie können entscheiden, ob die Aktivität zulässig ist oder nicht, und nicht autorisierte Aktivitäten ermitteln, wie z. B. einen Versuch, einen Benutzer direkt einer privilegierten Gruppe in der ursprünglichen Gesamtstruktur hinzuzufügen. Dieser Schritt ist nicht nur wichtig für die Erkennung von Schadsoftware, sondern auch für die Überwachung auf "interne" Angreifer.
+4. **Überwachen**: PAM bietet die Überwachung von, Benachrichtigungen zu und Berichte zu Anforderungen des privilegierten Zugriffs. Sie können den Verlauf privilegierter Zugriffe überprüfen und sehen, wer eine Aktivität ausgeführt hat. Sie können entscheiden, ob die Aktivität zulässig ist oder nicht, und nicht autorisierte Aktivitäten ermitteln, wie z. B. einen Versuch, einen Benutzer direkt einer privilegierten Gruppe in der ursprünglichen Gesamtstruktur hinzuzufügen. Dieser Schritt ist nicht nur wichtig für die Erkennung von Schadsoftware, sondern auch für die Überwachung auf "interne" Angreifer.
 
 ## <a name="how-does-pam-work"></a>Wie funktioniert PAM?
 
@@ -71,13 +71,13 @@ Täglich verwendete Benutzerkonten müssen nicht in eine neue Gesamtstruktur ver
 
 PAM bietet die folgenden Vorteile:
 
-- **Einschränkung von Berechtigungen:** Benutzer besitzen keine Berechtigungen für Konten, die auch für Aufgaben ohne Berechtigungen wie das Lesen von E-Mails oder den Internetzugriff verwendet werden. Benutzer müssen Berechtigungen anfordern. Anforderungen werden anhand von MIM-Richtlinien, die von einem PAM-Administrator festgelegt werden, genehmigt oder abgelehnt. Erst nachdem eine Anforderung genehmigt wurde, ist der privilegierte Zugriff verfügbar.
+- **Isolation bzw. Bestimmung des Geltungsbereichs von Berechtigungen**: Benutzer besitzen keine Berechtigungen in Konten, die auch für Aufgaben ohne Berechtigungen wie das Lesen von E-Mails oder den Internetzugriff verwendet werden. Benutzer müssen Berechtigungen anfordern. Anforderungen werden anhand von MIM-Richtlinien, die von einem PAM-Administrator festgelegt werden, genehmigt oder abgelehnt. Erst nachdem eine Anforderung genehmigt wurde, ist der privilegierte Zugriff verfügbar.
 
-- **Hochstufung und Nachweis:** Hierbei handelt es sich um neue Authentifizierungs- und Autorisierungsanforderungen, mit denen sich der Lebenszyklus getrennter Administratorkonten leichter verwalten lässt. Der Benutzer kann die Hochstufung eines Administratorkontos anfordern, woraufhin diese Anforderung MIM-Workflows durchläuft.
+- **Hochstufung und Nachweis**: Es gibt neue Herausforderungen an die Authentifizierung und Autorisierung, die zum Verwalten des Lebenszyklus getrennter Administratorkonten bewältigt werden müssen. Der Benutzer kann die Hochstufung eines Administratorkontos anfordern, woraufhin diese Anforderung MIM-Workflows durchläuft.
 
-- **Zusätzliche Protokollierung:** Neben den integrierten MIM-Workflows findet eine zusätzliche Protokollierung für PAM statt, die die Anforderung, ihre Autorisierung und nach der Genehmigung aufgetretene Ereignisse identifiziert.
+- **Zusätzliche Protokollierung**: Neben den integrierten MIM-Workflows gibt es eine zusätzliche Protokollierung für PAM, die die Anforderung, ihre Autorisierung sowie nach der Genehmigung aufgetretene Ereignisse identifiziert.
 
-- **Anpassbarer Workflow:** Die MIM-Workflows können für unterschiedliche Szenarios konfiguriert werden. Basierend auf den Parametern des Benutzers, der eine Anforderung stellt, bzw. der angeforderten Rollen können mehrere Workflows verwendet werden.
+- **Anpassbarer Workflow**: Die MIM-Workflows können für unterschiedliche Szenarien konfiguriert werden. Basierend auf den Parametern des anfordernden Benutzers bzw. der angeforderten Rollen können mehrere Workflows verwendet werden.
 
 ## <a name="how-do-users-request-privileged-access"></a>Wie können Benutzer einen privilegierten Zugriff anfordern?
 

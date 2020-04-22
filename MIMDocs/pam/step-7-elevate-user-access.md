@@ -9,10 +9,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.openlocfilehash: 05e05966bf90700885e67ba16f10ab0d7864cf10
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043612"
 ---
 # <a name="step-7--elevate-a-users-access"></a>Schritt 7 – Erhöhte Rechte für den Benutzerzugriff
@@ -30,7 +30,7 @@ Ohne erhöhte Rechte kann Jen nicht auf die privilegierte Ressource in der CORP-
 1. Melden Sie sich bei CORPWKSTN ab, um alle zwischengespeicherten offenen Verbindungen zu entfernen.
 2. Melden Sie sich bei CORPWKSTN als *CONTOSO\Jen* an, und wechseln Sie zur **Desktopansicht**.
 3. Öffnen Sie eine DOS-Eingabeaufforderung.
-4. Geben Sie den Befehl `dir \\corpwkstn\corpfs` ein. Die Fehlermeldung **Zugriff verweigert** sollte angezeigt werden.
+4. Geben Sie den Befehl `dir \\corpwkstn\corpfs`. Die Fehlermeldung **Zugriff verweigert** sollte angezeigt werden.
 5. Lassen Sie das Eingabeaufforderungsfenster geöffnet.
 
 ## <a name="request-privileged-access-from-mim"></a>Fordern Sie privilegierten Zugriff von MIM an.
@@ -90,7 +90,7 @@ Aktivieren Sie die Rechte durch die Anforderung des privilegierten Zugriffs übe
     ```
 
 3. Geben Sie nach der entsprechenden Aufforderung das Kennwort für das Konto PRIV.Jen ein. Ein neues Webbrowserfenster wird angezeigt.
-4. Navigieren Sie zu „ http://pamsrv.priv.contoso.local:8090 “, und stellen Sie sicher, dass eine Webseite des Beispielportals angezeigt wird.
+4. Navigieren Sie zu „http://pamsrv.priv.contoso.local:8090“, und stellen Sie sicher, dass eine Webseite des Beispielportals angezeigt wird.
 5. Wählen Sie in Internet Explorer **Extras** > **Internetoptionen** aus, und klicken Sie dann auf die Registerkarte **Sicherheit**.
 6. Klicken Sie auf die Zone **Lokales Intranet** > **Sites** > **Erweitert**, und fügen Sie anschließend die Website der Zone hinzu.
 7. Schließen Sie das Dialogfeld **Internetoptionen** .

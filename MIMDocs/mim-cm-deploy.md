@@ -10,10 +10,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 35fe08363b6964bf6d264ab1e60cd9751aa7b6aa
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043034"
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Bereitstellen der Microsoft Identity Manager-Zertifikatverwaltung 2016 (MIM CIM)
@@ -455,13 +455,13 @@ Fügen Sie MIMINSTALL für den Konfigurationsassistenten vor der Registrierung i
 
 9. Geben Sie auf jeder Registerkarte im Dialogfeld **Agents – FIM CM** mit mehreren Registerkarten folgende Informationen ein:
 
-   - Benutzername: **Aktualisieren**
+   - Benutzername: **Update**
 
    - Kennwort: **Pass\@word1**
 
    - Kennwort bestätigen: **Pass\@word1**
 
-   - Vorhandenen Benutzer verwenden: **Enabled**
+   - Vorhandenen Benutzer verwenden: **Aktiviert**
 
      >[!NOTE]
      >Diese Konten haben Sie zuvor erstellt. Stellen Sie sicher, dass die Prozeduren in Schritt 8 für alle sechs Agentkontoregisterkarten wiederholt werden.
@@ -478,7 +478,7 @@ Fügen Sie MIMINSTALL für den Konfigurationsassistenten vor der Registrierung i
 
     - Zertifikatvorlage, die für das Zertifikat des FIM CM-Agents verwendet werden soll: **MIMCMSigning**.
 
-    - Zertifikatvorlage, die für das Zertifikat des Registrierungs-Agents verwendet werden soll: **FIMCMEnrollmentAgent**.
+    - Zertifikatvorlage, die für das Zertifikat des Enrollment Agents verwendet werden soll: **FIMCMEnrollmentAgent**.
 
 13. Klicken Sie auf der Seite **Serverzertifikate einrichten** auf **Weiter**.
 
@@ -668,7 +668,7 @@ In diesem Schritt installieren und konfigurieren Sie die FIM CM-Zertifizierungss
     - Klicken Sie im Dialogfeld **Zertifikat** auf **OK**.
 
         >[!Note]
-        >Wenn die Schaltfläche **OK** nicht aktiviert ist, haben Sie versehentlich ein ausgeblendetes Zeichen in der Fingerabdruckzeichenfolge eingeschlossen, als Sie den Fingerabdruck aus dem clmAgent-Zertifikat kopiert haben. Wiederholen Sie alle Schritte in dieser Übung ab **Aufgabe 4: Kopieren Sie den MIMCMAgent-Zertifikatfingerabdruck in die Windows-Zwischenablage**.
+        >Wenn die Schaltfläche **OK** nicht aktiviert ist, haben Sie versehentlich ein ausgeblendetes Zeichen in der Fingerabdruckzeichenfolge eingeschlossen, als Sie den Fingerabdruck aus dem clmAgent-Zertifikat kopiert haben. Wiederholen Sie ab **Aufgabe 4: Kopieren Sie den MIMCMAgent-Zertifikatfingerabdruck in die Windows-Zwischenablage** alle Schritte in dieser Übung.
 
 4. Stellen Sie im Dialogfeld **Konfigurationseigenschaften** sicher, dass der Fingerabdruck in der Liste **Valid Signing Certificates** (Gültige Signaturzertifikate) erscheint, und klicken Sie auf **OK**.
 
@@ -688,7 +688,7 @@ In diesem Schritt installieren und konfigurieren Sie die FIM CM-Zertifizierungss
 
 **Letzter Schritt in der Bereitstellung**: Wir möchten sicherstellen, dass CONTOSO\\MIMCM-Manager Vorlagen bereitstellen und erstellen und das System konfigurieren können, ohne dass sie Schema- und Domänenadministratoren sind. Das nächste Skript fügt die Berechtigungen mithilfe von dsacls der ACL der Zertifikatvorlagen hinzu. Führen Sie mit dem Konto, das über umfassende Berechtigung zum Ändern der Sicherheit verfügt, Lese- und Schreibberechtigungen für jede vorhandene Zertifikatvorlage in der Gesamtstruktur aus.
 
-Erste Schritte: **Konfigurieren des Dienstverbindungspunkts und von Zielgruppenberechtigungen und Delegieren der Profilvorlagenverwaltung**
+Erste Schritte: **Konfigurieren des Dienstverbindungspunkts und von Zielgruppenberechtigungen & Delegieren der Profilvorlagenverwaltung**
 
 1. Konfigurieren Sie die Berechtigungen auf dem Dienstverbindungspunkt (SCP).
 
@@ -710,10 +710,10 @@ Erste Schritte: **Konfigurieren des Dienstverbindungspunkts und von Zielgruppenb
 
 10. Fügen Sie im Dialogfeld **CORPCM-Eigenschaften** auf der Registerkarte **Sicherheit** die folgenden Gruppen mit den entsprechenden Berechtigungen hinzu:
 
-    | Gruppe          | Berechtigungen      |
+    | Group          | Berechtigungen      |
     |----------------|------------------|
-    | mimcm-Manager | Überwachungsdaten </br> FIM CM Audit</br> FIM CM-Enrollment Agent</br> FIM CM Request Enroll</br> FIM CM Request Recover</br> FIM CM Request Renew</br> FIM CM Request Revoke </br> FIM CM Request Unblock Smart Card |
-    | mimcm-HelpDesk | Überwachungsdaten</br> FIM CM-Enrollment Agent</br> FIM CM Request Revoke</br> FIM CM Request Unblock Smart Card |
+    | mimcm-Manager | Siehe </br> FIM CM Audit</br> FIM CM-Enrollment Agent</br> FIM CM Request Enroll</br> FIM CM Request Recover</br> FIM CM Request Renew</br> FIM CM Request Revoke </br> FIM CM Request Unblock Smart Card |
+    | mimcm-HelpDesk | Siehe</br> FIM CM-Enrollment Agent</br> FIM CM Request Revoke</br> FIM CM Request Unblock Smart Card |
 
 11. Klicken Sie im Dialogfeld **CORPDC-Eigenschaften** auf **OK**.
 
@@ -885,7 +885,7 @@ Definieren der Berechtigungen für den OID-Container:
 
 8. Schließen Sie **Active Directory-Standorte und -Dienste**.
 
-**Skripts: Berechtigungen für den OID, Profilvorlage- und Zertifikatvorlagen-Container**
+**Skripts: Berechtigungen für den OID, Profilvorlage- & Zertifikatvorlagen-Container**
 
 ![Diagramm](media/mim-cm-deploy/image021.png)
 

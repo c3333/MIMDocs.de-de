@@ -1,5 +1,5 @@
 ---
-title: Was ist die Hybridberichterstellung in Azure AD? | Microsoft-Dokumentation
+title: Was ist die Hybridberichterstellung in Azure AD? | Microsoft Docs
 description: Mit Hybridberichten zur Überwachung von Aktivitäten in Azure Active Directory können Sie überwachte Ereignisse sowohl lokal als auch in der Cloud anzeigen.
 keywords: ''
 author: billmath
@@ -11,10 +11,10 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
 ms.suite: ems
 ms.openlocfilehash: 6f4f2aea998fc5682d1fb21d77e4d4f1c582d770
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042150"
 ---
 # <a name="hybrid-identity-management-audit-reporting-in-azure-active-directory"></a>Überwachungsberichte zur hybriden Identitätsverwaltung in Azure Active Directory
@@ -29,7 +29,7 @@ Die Hybridberichterstellung für die Überwachung unterstützt IT-Experten dabei
 
 * **Verringern der Kosten für die Infrastruktur des Berichterstellungssystems**. Dank der Hybridberichterstellung in der Cloud können Sie Kosten in Zusammenhang mit Ihrer lokalen Data Warehouse-Infrastruktur vermeiden.
 
-## <a name="how-does-it-work"></a>So funktioniert es
+## <a name="how-does-it-work"></a>Wie funktioniert es?
 
 Um die lokalen Daten zu sammeln, installieren Sie zunächst einen Berichterstellungs-Agent auf dem Identity Manager 2016-Server. [Laden Sie den Identity Manager-Agent für die Berichterstellung herunter](https://www.microsoft.com/download/details.aspx?id=55112).
 

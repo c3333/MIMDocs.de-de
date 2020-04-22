@@ -8,10 +8,10 @@ ms.date: 06/27/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: a380135c82a6e4d1b317ae64a8c135ecc9e9ad45
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044190"
 ---
 # <a name="update-of-mim-specific-service-account-for-notifications-to-gmsa"></a>Aktualisieren des Kontos für MIM-spezifischen Dienst für Benachrichtigungen an gMSA
@@ -19,7 +19,7 @@ ms.locfileid: "79044190"
 
 Aktualisieren Sie das Kennwort für gespeicherte Konten. Verwenden Sie den folgenden PowerShell-Code, sodass Kunden nicht den Änderungsmodus ausführen müssen.
 
-PowerShell: Aktualisierung des Office 365-Kontos:
+PowerShell: Office 365-Kontoupdate:
 
 ```powershell
 #O365update.ps1

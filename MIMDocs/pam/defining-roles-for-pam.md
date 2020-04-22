@@ -12,10 +12,10 @@ ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: f05769a7d1db38ecde200e18e45c6ca29a75b756
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044037"
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Definieren von Rollen für Privileged Access Management
@@ -114,7 +114,7 @@ Erstellen Sie anstatt der Standardgruppen wie „Domänenadministratoren“ neue
 
 Die folgende Tabelle enthält Beispiele für Berechtigungen, die relevant für Rollen zur Verwaltung von AD sind.
 
-| Role-Eigenschaft | Beschreibung |
+| Rolle | Description |
 | ---- | ---- |
 | Wartung Domäne/DC | Die Mitgliedschaft in der Gruppe „Domäne\Administratoren“ ermöglicht die Problembehandlung und die Änderung des Betriebssystems auf dem Domänencontroller. Vorgänge wie das Höherstufen eines neuen Domänencontrollers in eine vorhandene Domäne in der Gesamtstruktur und das Delegieren von AD-Rollen.
 |Virtuelle DCs verwalten | Verwalten der virtuellen Computer (VMs) des Domänencontrollers (DC) mithilfe der Virtualization Management-Software. Diese Berechtigung kann über Vollzugriff auf alle virtuellen Computer im Management-Tool oder mit der Funktion der rollenbasierten Zugriffskontrolle (RBAC) gewährt werden. |
@@ -130,14 +130,14 @@ Die folgende Tabelle enthält Beispiele für Berechtigungen, die relevant für R
 
 Die folgende Tabelle enthält Beispiele für Berechtigungen, die relevant für Rollen zur Verwaltung oder Verwendung der in AD gespeicherten Daten sind.
 
-| Role-Eigenschaft | Beschreibung |
+| Rolle | Description |
 | ---- | ---- |
 | Admin-OE der Ebene 1 ändern                 | Ändern von Organisationseinheiten, die Admin-Objekte der Ebene 1 enthalten, in Active Directory |
 | Admin-OE der Ebene 2 ändern                 | Ändern von Organisationseinheiten, die Admin-Objekte der Ebene 2 enthalten, in Active Directory |
-| Kontoverwaltung: Erstellen/Löschen/Verschieben | Ändern von Standardbenutzerkonten                                      |
-| Kontoverwaltung: Zurücksetzen/Entsperren       | Zurücksetzen von Kennwörtern und Entsperren von Konten                                  |
-| Sicherheitsgruppe: Erstellen/Ändern          | Erstellen und Ändern von Sicherheitsgruppen in Active Directory              |
-| Sicherheitsgruppe: Löschen                 | Löschen von Sicherheitsgruppen in Active Directory                         |
+| Kontenverwaltung: erstellen/löschen/verschieben | Ändern von Standardbenutzerkonten                                      |
+| Kontenverwaltung: zurücksetzen/entsperren       | Zurücksetzen von Kennwörtern und Entsperren von Konten                                  |
+| Sicherheitsgruppe: erstellen/ändern          | Erstellen und Ändern von Sicherheitsgruppen in Active Directory              |
+| Sicherheitsgruppe: löschen                 | Löschen von Sicherheitsgruppen in Active Directory                         |
 | GPO-Verwaltung                         | Verwalten aller Gruppenrichtlinienobjekte in der Domäne/Gesamtstruktur, die sich nicht auf Server der Ebene 0 auswirken             |
 | PC verknüpfen/lokaler Administrator                    | Lokale Administratorrechte für alle Arbeitsstationen                               |
 | Server verknüpfen/lokaler Administrator                   | Lokale Administratorrechte für alle Server                                    |
