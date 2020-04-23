@@ -10,10 +10,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.openlocfilehash: 0d5f970168934f3fcc4c721aad0a439e2babcfe7
-ms.sourcegitcommit: c214bb0b1373b65b1c9c215379fd820ab0c13f0f
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79381504"
 ---
 <a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy"></a>Azure AD-Business-to-Business-Kollaboration (B2B) mit Microsoft Identity Manager(MIM) 2016 SP1 mit Azure-Anwendungsproxy
