@@ -99,7 +99,7 @@ Windows kann so konfiguriert werden, dass Stammzertifikate von Microsoft über e
 
 ![Installieren von BHOLD mithilfe von IIS](media/bhold-installation-guide/iis-install-bhold.png)
 
-Wenn Sie BHOLD Suite SP1 unter Windows Server 2012 oder 2016 installieren, sind die BHOLD-Webseiten nicht verfügbar, bis Sie die Datei „applicationHost.config“ ändern, die sich in ```C:\Windows\System32\inetsrv\config``` befindet. Fügen Sie ```<globalModules>``` im Abschnitt ```preCondition="bitness64``` zu dem Eintrag hinzu, der ```<add name="SPNativeRequestModule"``` beginnt, sodass der Code folgendermaßen lautet:
+Wenn Sie BHOLD Suite SP1 unter Windows Server 2012 oder 2016 installieren, sind die BHOLD-Webseiten nicht verfügbar, bis Sie die Datei „applicationHost.config“ ändern, die sich in ```C:\Windows\System32\inetsrv\config``` befindet. Fügen Sie ```preCondition="bitness64``` im Abschnitt ```<globalModules>``` zu dem Eintrag hinzu, der ```<add name="SPNativeRequestModule"``` beginnt, sodass der Code folgendermaßen lautet:
 
 ```<add name="SPNativeRequestModule" image="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\isapi\spnativerequestmodule.dll" preCondition="bitness64"/>```
 
