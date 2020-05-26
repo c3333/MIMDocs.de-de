@@ -8,12 +8,12 @@ ms.date: 01/17/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-ms.openlocfilehash: 05e05966bf90700885e67ba16f10ab0d7864cf10
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: bdb02eed8e22b373c6cfa5028153cad6aee9a536
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043612"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83279962"
 ---
 # <a name="step-7--elevate-a-users-access"></a>Schritt 7 – Erhöhte Rechte für den Benutzerzugriff
 
@@ -90,7 +90,7 @@ Aktivieren Sie die Rechte durch die Anforderung des privilegierten Zugriffs übe
     ```
 
 3. Geben Sie nach der entsprechenden Aufforderung das Kennwort für das Konto PRIV.Jen ein. Ein neues Webbrowserfenster wird angezeigt.
-4. Navigieren Sie zu „http://pamsrv.priv.contoso.local:8090“, und stellen Sie sicher, dass eine Webseite des Beispielportals angezeigt wird.
+4. Navigieren Sie zu „`http://pamsrv.priv.contoso.local:8090`“, und stellen Sie sicher, dass eine Webseite des Beispielportals angezeigt wird.
 5. Wählen Sie in Internet Explorer **Extras** > **Internetoptionen** aus, und klicken Sie dann auf die Registerkarte **Sicherheit**.
 6. Klicken Sie auf die Zone **Lokales Intranet** > **Sites** > **Erweitert**, und fügen Sie anschließend die Website der Zone hinzu.
 7. Schließen Sie das Dialogfeld **Internetoptionen** .

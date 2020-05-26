@@ -9,12 +9,12 @@ manager: daveba
 ms.date: 09/04/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: b157b2a8716d20ce3b472d5655d393e64f2baa6b
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 284345d79cda8d60d055a642d047e28e63ea20cb
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044360"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83279945"
 ---
 # <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Verwenden eines benutzerdefinierten Multi-Factor Authentication-Anbieters über eine API während der Aktivierung von PAM-Rollen oder in SSPR
 
@@ -39,7 +39,7 @@ Um eine benutzerdefinierte Multi-Factor Authentication-Anbieter-API mit MIM verw
 
 ### <a name="step-1-ensure-mim-service-is-at-version-452020-or-later"></a>Schritt 1: Stellen Sie sicher, dass der MIM-Dienst die Version 4.5.202.0 oder höher aufweist.
 
-Laden Sie den MIM-Hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) oder höher herunter, und installieren Sie diesen.
+Laden Sie den MIM-Hotfix [4.5.202.0](https://support.microsoft.com/help/4346632/hotfix-rollup-package-build-4-5-202-0-is-available-for-microsoft) oder höher herunter, und installieren Sie diesen.
 
 ### <a name="step-2-create-a-dll-which-implements-the-iphoneserviceprovider-interface"></a>Schritt 2: Erstellen Sie eine DLL, die die IPhoneServiceProvider-Schnittstelle implementiert.
 

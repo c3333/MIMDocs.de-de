@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: e381bb418ce8215dafc369bf33782483a6e4de3e
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: a85a8eeaf999c193a3e2bbd3f2cdf75cef65e574
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79042439"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83279996"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Installieren von MIM 2016: MIM-Dienst und -Portal
 
@@ -25,7 +25,7 @@ ms.locfileid: "79042439"
 > [Datenbanken synchronisieren »](install-mim-sync-ad-service.md)
  
 > [!NOTE]
-> Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiele:
+> Diese exemplarische Vorgehensweise verwendet Beispielnamen und -werte eines Unternehmens namens Contoso. Ersetzen Sie diese durch eigene Namen und Werte. Beispiel:
 > - Domänencontrollername: **mimservername**
 > - Domänenname: **contoso**
 > - Kennwort – <strong>Pass@word1</strong>
@@ -115,7 +115,7 @@ Wenn alle Vorinstallationsdefinitionen bereit sind, klicken Sie auf **Installier
 
 Nach Abschluss der Installation stellen Sie sicher, dass das MIM-Portal aktiv ist.
 
-1. Starten Sie Internet Explorer, und stellen Sie eine Verbindung mit dem MIM-Portal unter *http://mim.contoso.com/identitymanagement* her. Beachten Sie, dass es beim ersten Besuch der Seite möglicherweise zu einer kurzen Verzögerung kommen kann.
+1. Starten Sie Internet Explorer, und stellen Sie eine Verbindung mit dem MIM-Portal unter `http://mim.contoso.com/identitymanagement` her. Beachten Sie, dass es beim ersten Besuch der Seite möglicherweise zu einer kurzen Verzögerung kommen kann.
     - Authentifizieren Sie sich in Internet Explorer bei Bedarf als *contoso\miminstall*.
 
 2. Öffnen Sie in Internet Explorer die **Internetoptionen**, wechseln Sie zur Registerkarte **Sicherheit** , und fügen Sie die Website zur Zone **Lokales Intranet** hinzu, wenn sie noch nicht vorhanden ist.  Schließen Sie das Dialogfeld **Internetoptionen** .
@@ -124,7 +124,7 @@ Nach Abschluss der Installation stellen Sie sicher, dass das MIM-Portal aktiv is
 
     1.  Klicken Sie unter Verwendung von Internet Explorer im **MIM-Portal**auf **Management-Richtlinienregeln**.
 
-    2.  Suchen Sie nach der Verwaltungsrichtlinienregel **Benutzerverwaltung: Benutzer können eigene Attribute lesen**.
+    2.  Suchen Sie nach der Verwaltungsrichtlinienregel **Benutzerverwaltung: Benutzer können eigene Attribute lesen.**
 
     3.  Wählen Sie diese Verwaltungsrichtlinienregel aus, und deaktivieren Sie **Richtlinie ist deaktiviert**.
 
@@ -150,7 +150,7 @@ Nach Abschluss der Installation stellen Sie sicher, dass das MIM-Portal aktiv is
     7.  Schließen Sie die **Systemsteuerung**.
 
 > [!NOTE]
-> Optional: Jetzt können Sie MIM-Add-Ins und -Erweiterungen installieren.
+> Optional: An diesem Punkt können Sie MIM-Add-Ins und -Erweiterungen installieren.
  
 > [!div class="step-by-step"]  
 > [« MIM-Synchronisierungsdienst](install-mim-sync.md)
