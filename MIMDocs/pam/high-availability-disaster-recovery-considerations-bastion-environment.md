@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 67ce70e6bc0603a991731cf1e5fb95751f5016c6
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 2153fdb0559a78bcc82ca6901ee7cb0cabc01f23
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043969"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83280098"
 ---
 # <a name="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment"></a>Hohe Verfügbarkeit und Überlegungen zur Notfallwiederherstellung für die geschützte Umgebung
 
@@ -182,7 +182,7 @@ Das Verfahren zum Hinzufügen eines zusätzlichen Domänencontrollers finden Sie
 
 Stellen Sie nach einem Ausfall sicher, dass mindestens ein Domänencontroller in der geschützten Umgebung verfügbar ist, bevor Sie die anderen Server neu starten.
 
-Innerhalb einer Domäne verteilt Active Directory die Flexible Single Master Operation-Rollen (FSMO) auf die Domänencontroller, wie in [How Operations Masters Work](https://technet.microsoft.com/library/cc780487.aspx) (So funktioniert Operations Masters) beschrieben.  Wenn bei einem Domänencontroller ein Fehler aufgetreten ist, müssen möglicherweise eine oder mehrere der [Domänencontrollerrollen](https://technet.microsoft.com/library/cc786438.aspx), die dem Domänencontroller zugewiesen wurden, übertragen werden.
+Innerhalb einer Domäne verteilt Active Directory die Flexible Single Master Operation-Rollen (FSMO) auf die Domänencontroller, wie in [How Operations Masters Work](https://technet.microsoft.com/library/cc780487.aspx) (So funktioniert Operations Masters) beschrieben.  Wenn bei einem Domänencontroller ein Fehler aufgetreten ist, müssen möglicherweise eine oder mehrere der Domänencontrollerrollen, die dem Domänencontroller zugewiesen wurden, übertragen werden.
 
 Nachdem Sie festgestellt haben, dass ein Domänencontroller nicht für die Produktion zurückgegeben wird, überprüfen Sie, ob diesem Domänencontroller Rollen zugewiesen wurden, und weisen Sie diese nach Bedarf neu zu. Anleitungen finden Sie in [View the Current Operations Master Role Holders](https://technet.microsoft.com/library/cc816893.aspx) (Anzeigen der aktuellen Operations Master-Rolleninhaber) und zugehörigen Artikeln.
 
@@ -214,7 +214,7 @@ Der MIM-Dienst ist erforderlich, um Aktivierungsanforderungen zu verarbeiten.  D
 
 #### <a name="preparation"></a>Vorbereitung
 Sie sollten den MIM-Dienst auf mehreren Servern bereitstellen, die der PRIV-Domäne hinzugefügt werden.
-Informationen zu Hochverfügbarkeit finden Sie in den Windows Server-Dokumenten [Hardwareanforderungen und Speicheroptionen für Failovercluster](https://technet.microsoft.com/library/jj612869.aspx) und [Creating a Windows Server 2012 Failover Cluster](https://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx) (Erstellen eines Windows Server 2012-Failoverclusters).
+Informationen zu Hochverfügbarkeit finden Sie in den Windows Server-Dokumenten [Hardwareanforderungen und Speicheroptionen für Failovercluster](https://technet.microsoft.com/library/jj612869.aspx) und [Creating a Windows Server 2012 Failover Cluster](https://techcommunity.microsoft.com/t5/failover-clustering/creating-a-windows-server-2012-failover-cluster/ba-p/371763) (Erstellen eines Windows Server 2012-Failoverclusters).
 
 Für die mehrere Server übergreifende Produktionsbereitstellung können Sie den Netzwerklastenausgleich (Network Load Balancing, NLB) zum Verteilen der Verarbeitungslast verwenden.  Sie sollten auch einen einzelnen Alias (z. B. einen A- oder CNAME-Datensatz) haben, sodass den Benutzern ein einziger gängiger Name angezeigt wird.
 

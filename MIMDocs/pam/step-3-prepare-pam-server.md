@@ -12,12 +12,12 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 7a0a0437e767f793150d875bcaf31213a7fdf627
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 3098816d07603384a28db47c0bc60ac92a340e8f
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043663"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83279979"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Schritt 3: Vorbereiten eines PAM-Servers
 
@@ -35,7 +35,7 @@ Installieren Sie auf einem dritten virtuellen Computer Windows Server 2012 R2,
 
 2. Lesen und akzeptieren Sie die Lizenzbedingungen.
 
-3.  Da dieser Datenträger leer sein wird, wählen Sie **Benutzerdefiniert: Nur Windows installieren** aus, und nutzen Sie den **nicht initialisierten Speicherplatz**.
+3.  Da der Datenträger leer ist, wählen Sie **Benutzerdefiniert: Nur Windows installieren** aus, und verwenden Sie den **nicht initialisierten Speicherplatz**.
 
 4.  Melden Sie sich bei dem neuen Computer als Administrator an.  In der Systemsteuerung weisen Sie dem Computer eine statische IP-Adresse im virtuellen Netzwerk zu, konfigurieren die Netzwerkschnittstelle so, dass sie DNS-Abfragen an die IP-Adresse von PRIVDC sendet, und legen den Computernamen auf *PAMSRV* fest.  Dies erfordert einen Neustart des Servers.
 
@@ -78,7 +78,7 @@ Konfigurieren Sie die Serversicherheitsrichtlinien, damit die neu erstellten Kon
 
 9. Klicken Sie im Detailbereich mit der rechten Maustaste auf **Lokal anmelden verweigern**, und wählen Sie dann **Eigenschaften** aus.  
 10. Klicken Sie auf **Benutzer oder Gruppe hinzufügen**, geben Sie in „Benutzer- und Gruppennamen“ die Zeichenfolge *priv\mimmonitor; priv\MIMService; priv\mimcomponent* ein, und klicken Sie auf **OK**.  
-11. Klicken Sie auf **OK**, um das Dialogfeld „Eigenschaften“ zu schließen.  
+11. Klicken Sie auf **OK**, um das Eigenschaftenfenster zu schließen.  
 12. Schließen Sie das Fenster „Lokale Sicherheitsrichtlinien“.  
 
 13. Öffnen Sie die Systemsteuerung, und wechseln Sie zu **Benutzerkonten**.
@@ -129,13 +129,13 @@ Installieren Sie mit dem SharePoint Foundation 2013 mit SP1-Installationsprogram
 
 1. Klicken Sie mit der rechten Maustaste auf „PowerShell“, und wählen Sie **Als Administrator ausführen** aus.  
 2. Wechseln Sie in das Verzeichnis, in dem SharePoint entpackt wurde.  
-3. Geben Sie den Befehl `.\prerequisiteinstaller.exe`.
+3. Geben Sie den Befehl `.\prerequisiteinstaller.exe` ein.
 
 Nachdem die erforderlichen Komponenten für SharePoint installiert wurden, installieren Sie SharePoint Foundation 2013 mit SP1.
 
 1.  Klicken Sie mit der rechten Maustaste auf „PowerShell“, und wählen Sie **Als Administrator ausführen** aus.  
 2.  Wechseln Sie in das Verzeichnis, in dem SharePoint entpackt wurde.  
-3.  Geben Sie den Befehl `.\setup.exe`.  
+3.  Geben Sie den Befehl `.\setup.exe` ein.  
 4.  Wählen Sie den Typ für einen **vollständigen Server** aus.  
 5.  Nachdem die Installation abgeschlossen ist, wählen Sie die Option zum Ausführen des Assistenten aus.  
 
@@ -204,7 +204,7 @@ Erstellen Sie nun eine SharePoint-Websitesammlung, die dieser Webanwendung zugeo
 ## <a name="set-the-website-as-the-local-intranet"></a>Festlegen der Website als lokales Intranet
 
 1. Starten Sie Internet Explorer, und öffnen Sie im Webbrowser eine Registerkarte.
-2. Navigieren Sie zu http://pamsrv.priv.contoso.local:82/, und melden Sie sich als „PRIV\MIMAdmin“ an.  Eine leere SharePoint-Website namens „MIM-Portal“ wird angezeigt.  
+2. Navigieren Sie zu `http://pamsrv.priv.contoso.local:82/`, und melden Sie sich als „PRIV\MIMAdmin“ an.  Eine leere SharePoint-Website namens „MIM-Portal“ wird angezeigt.  
 3. Öffnen Sie dann in Internet Explorer das Dialogfeld **Internetoptionen**, wechseln Sie zur Registerkarte **Sicherheit**, wählen Sie **Lokales Intranet** aus, und fügen Sie die URL `http://pamsrv.priv.contoso.local:82/` hinzu.
 
 Sollte bei der Anmeldung ein Fehler auftreten, müssen die Kerberos-SPNs, die Sie zuvor im [Schritt 2](step-2-prepare-priv-domain-controller.md) erstellt haben, möglicherweise aktualisiert werden.

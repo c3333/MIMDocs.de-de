@@ -12,12 +12,12 @@ ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 0456f463357aea69913804b8d15241737932ff4d
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 070e85177a28c3091834cafd2e61611aa9043ea8
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043680"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83280013"
 ---
 # <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Schritt 4 – Installieren von MIM-Komponenten auf PAM-Server und Arbeitsstation
 
@@ -59,7 +59,7 @@ Befolgen Sie die Anweisungen des Installationsprogramms, und schließen Sie die 
 
 7. Geben Sie *PAMSRV* als Serveradresse für den MIM-Dienst an.
 
-8. Geben Sie *http://pamsrv.priv.contoso.local:82* als URL für die SharePoint-Websitesammlung an.
+8. Geben Sie `http://pamsrv.priv.contoso.local:82` als URL für die SharePoint-Websitesammlung an.
 
 9. Lassen Sie die URL für das Registrierungsportal leer.
 
@@ -100,7 +100,7 @@ Nach Abschluss der Installation wird der Server neu gestartet. Überprüfen Sie 
 
 1. Melden Sie sich nach dem Neustart von PAMSRV als „PRIV\Administrator“ an.
 
-2. Starten Sie Internet Explorer, und stellen Sie eine Verbindung mit dem MIM-Portal unter http://pamsrv.priv.contoso.local:82/identitymanagement her. Es tritt möglicherweise eine kurze Verzögerung auf, wenn die Seite das erste Mal gefunden wird.
+2. Starten Sie Internet Explorer, und stellen Sie eine Verbindung mit dem MIM-Portal unter `http://pamsrv.priv.contoso.local:82/identitymanagement` her. Es tritt möglicherweise eine kurze Verzögerung auf, wenn die Seite das erste Mal gefunden wird.
 
 3. Melden Sie sich in Internet Explorer ggf. als „PRIV\Administrator“ an.
 
@@ -155,7 +155,7 @@ In diesem Abschnitt installieren und konfigurieren Sie die Beispielwebanwendung 
    </httpProtocol>
    ```
 
-5. Konfigurieren Sie die Beispielwebanwendung. Bearbeiten Sie die Datei **C:\Programme\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js** in einem Text-Editor wie dem Editor von Windows. Legen Sie den Wert von **pamRespApiUrl** auf *http://pamsrv.priv.contoso.local:8086/api/pamresources/* fest.
+5. Konfigurieren Sie die Beispielwebanwendung. Bearbeiten Sie die Datei **C:\Programme\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js** in einem Text-Editor wie dem Editor von Windows. Legen Sie den Wert von **pamRespApiUrl** auf `http://pamsrv.priv.contoso.local:8086/api/pamresources/` fest.
 
 6. Starten Sie IIS mit dem folgenden Befehl neu, damit diese Änderungen wirksam werden.
 
@@ -163,7 +163,7 @@ In diesem Abschnitt installieren und konfigurieren Sie die Beispielwebanwendung 
    iisreset
    ```
 
-7. (Optional) Überprüfen Sie, ob sich der Benutzer für die REST-API authentifizieren kann. Öffnen Sie als Administrator einen Webbrowser auf PAMSRV.  Navigieren Sie zur Website-URL „http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/“, authentifizieren Sie sich ggf., und stellen Sie sicher, dass ein Download erfolgt.
+7. (Optional) Überprüfen Sie, ob sich der Benutzer für die REST-API authentifizieren kann. Öffnen Sie als Administrator einen Webbrowser auf PAMSRV.  Navigieren Sie zur Website-URL „`http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/`“, authentifizieren Sie sich ggf., und stellen Sie sicher, dass ein Download erfolgt.
 
 ## <a name="install-the-mim-pam-requestor-cmdlets"></a>Installieren der MIM PAM-Requestor-Cmdlets
 
@@ -179,7 +179,7 @@ Installieren Sie die MIM PAM-Requestor-Cmdlets auf der Arbeitsstation, die Sie i
 
 5.  Geben Sie für das benutzerdefinierte Setup an, dass der **PAM-Client** installiert werden soll. Das **MIM-Add-In für Outlook** oder die **MIM-Kennwort- und -Authentifizierungserweiterungen** sollen jedoch nicht installiert werden.
 
-6.  Geben Sie für die PAM-Serveradresse als Hostnamen des PRIV-MIM-Servers *pamsrv.priv.contoso.local* an.
+6.  Geben Sie für die PAM-Serveradresse als Hostnamen des PRIV-MIM-Servers `pamsrv.priv.contoso.local` an.
 
 Nach Abschluss der Installation starten Sie „CORPWKSTN“ neu, um die Registrierung des neuen PowerShell-Moduls abzuschließen.
 
