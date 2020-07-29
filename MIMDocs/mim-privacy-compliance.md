@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.suite: ems
-ms.openlocfilehash: e95cf26b62e582eaa3c07c40e551bc5930d3b1b0
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: b89f7561869e154ed5639835d1233e19e356ee76
+ms.sourcegitcommit: f87be3d09cee6a8880b3a6babf32e0d064fde36b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044105"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87176743"
 ---
 # <a name="microsoft-identity-manager-data-handling"></a>Verarbeitung von Daten in Microsoft Identity Manager 
 
@@ -161,7 +161,7 @@ Eine weitere Möglichkeit ist das direkte Entfernen des Benutzerobjekts aus der 
 ### <a name="certificate-management"></a>Zertifikatverwaltung
 Löschen Sie einen Benutzer aus Active Directory, um ihn aus der Zertifikatverwaltung zu entfernen.
 
-Die Zertifikatverwaltung speicher nur die Benutzer-ID des Profils aus Zertifikatdiensten mit der Domäne „sAMAccountName“. Sobald der Benutzer aus Active Directory gelöscht wurde, wird der Benutzercache nur für Zertifikate beibehalten, in denen dieser registriert ist. Es wird nicht empfohlen, Elemente aus der Datenbank zu löschen, da dies die Ausführung der Umgebung beeinträchtigen kann.
+Die Zertifikatverwaltung speicher nur die Benutzer-ID des Profils aus Zertifikatdiensten mit der Domäne „sAMAccountName“. Sobald der Benutzer aus Active Directory gelöscht ist, wird der Benutzercache nur für Zertifikate beibehalten, in denen dieser registriert ist. Es wird nicht empfohlen, Elemente aus der Datenbank zu löschen, da dies die Ausführung der Umgebung beeinträchtigen kann.
 
 ## <a name="opt-out-of-telemetry"></a>Deaktivieren der Telemetrie
 In vorherigen Builds wurden von FIM/MIM anonymisierte Telemetriedaten zu jeder Bereitstellung gesammelt und über HTTPS an die Microsoft-Server übertragen. Diese Daten wurden von Microsoft früher zur Verbesserung von zukünftigen FIM- und MIM-Versionen verwendet.

@@ -7,12 +7,12 @@ manager: daveba
 ms.date: 03/10/2020
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 4586b9998a9526a867ffe7ace9489fe56fff146c
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 5985ded45a53a804728572404fb0db43e988ac1d
+ms.sourcegitcommit: f87be3d09cee6a8880b3a6babf32e0d064fde36b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044207"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87176760"
 ---
 # <a name="convert-microsoft-identity-manager-specific-services-to-use-group-managed-service-accounts"></a>Konvertieren von spezifischen Microsoft Identity Manager-Diensten zu über Gruppen verwalteten Dienstkonten
 
