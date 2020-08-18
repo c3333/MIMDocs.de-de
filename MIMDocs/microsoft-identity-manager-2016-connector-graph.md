@@ -1,20 +1,20 @@
 ---
 title: Der Microsoft Identity Manager-Connector für Microsoft Graph | Microsoft-Dokumentation
-author: fimguy
 description: Der Microsoft Identity Manager-Connector für Microsoft Graph ermöglicht die Lebenszyklusverwaltung über das AD-Konto des externen Benutzers. In diesem Szenario hat eine Organisation Gäste in ihr Azure AD-Verzeichnis eingeladen und möchte diesen Gästen Zugriff auf die lokale integrierte Windows-Authentifizierung oder Kerberos-basierte Anwendungen gewähren
 keywords: ''
+author: billmath
 ms.author: billmath
 manager: daveba
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 462b649ca02519e5af5c3b1243506a74efa7052a
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 63ebdbc229c7d2dabbbb5a06f7dbbd5f3d367796
+ms.sourcegitcommit: cd503e8e9933d39d6fbf894c7d27bf9566301ac8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044258"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88168353"
 ---
 # <a name="microsoft-identity-manager-connector-for-microsoft-graph"></a>Microsoft Identity Manager-Connector für Microsoft Graph
 
@@ -22,7 +22,7 @@ ms.locfileid: "79044258"
 ## <a name="summary"></a>Zusammenfassung 
 
 
-Der [Microsoft Identity Manager-Connector für Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495) bietet zusätzliche Integrationsszenarios für Azure AD Premium-Kunden.  Er wird auf der MIM-Oberfläche für das Synchronisieren zusätzlicher Metaverse-Objekte angezeigt, die aus Version 1 und aus der Betaversion der  [Microsoft Graph-API](https://developer.microsoft.com/en-us/graph/)  abgerufen werden.
+Der [Microsoft Identity Manager-Connector für Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495) bietet zusätzliche Integrationsszenarios für Azure AD Premium-Kunden.  Er wird auf der MIM-Oberfläche für das Synchronisieren zusätzlicher Metaverse-Objekte angezeigt, die aus Version 1 und aus der Betaversion der  [Microsoft Graph-API](https://developer.microsoft.com/en-us/graph/)  abgerufen werden.
 
 ## <a name="scenarios-covered"></a>Abgedeckte Szenarios
 
@@ -222,5 +222,5 @@ New-AzureADPolicy -Definition \@('{"TokenLifetimePolicy":{"Version":1, **"Access
 
 - [Graph-Tester (sehr hilfreich für die Problembehandlung bei HTTP-Aufrufen)]( https://developer.microsoft.com/en-us/graph/graph-explorer)
 - [Versionsverwaltung, Support und Richtlinien für wesentliche Änderungen für Microsoft Graph](https://developer.microsoft.com/en-us/graph/docs/concepts/versioning_and_support)
-- [Download des Microsoft Identity Manager-Connectors für Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495)
+- [Download des Microsoft Identity Manager-Connectors für Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495)
 [Azure AD-Business-to-Business-Kollaboration (B2B) mit Microsoft Identity Manager(MIM) 2016 SP1 mit Azure-Anwendungsproxy]( ~/microsoft-identity-manager-2016-graph-b2b-scenario.md)
