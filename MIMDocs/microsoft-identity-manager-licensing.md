@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.reviewer: billmath
 ms.suite: ems
-ms.openlocfilehash: 62a6b936dc30b8593c8758a6158244d0f6dbbc4f
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: b7b0dd73e5a87f338dc8cd91e61ee6a19c84068a
+ms.sourcegitcommit: d6178a67014d66d37056c13d10328ae03e3cd781
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043017"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970361"
 ---
 # <a name="microsoft-identity-manager-2016-licensing-and-downloads"></a>Microsoft Identity Manager 2016 – Lizenzierung und Downloads
 
@@ -30,7 +30,7 @@ Microsoft Identity Manager 2016 wird pro Benutzer lizenziert.  Details zur Lizen
 
 Microsoft Identity Manager 2016 ist in Azure Active Directory Premium (P1 und P2) enthalten, was ein Teil von Enterprise Mobility + Security ist.
 
-Azure AD Premium ist über ein [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), das [Microsoft Open License Programm](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx), und das [Cloud Solution Provider](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409)-Programm verfügbar. Azure- und Office 365-Abonnenten können Azure Active Directory Premium P1 und P2 auch online erwerben.  Weitere Informationen finden Sie in der [Preisübersicht für Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
+Azure AD Premium ist über ein [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), das [Microsoft Open License Programm](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx), und das [Cloud Solution Provider](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409)-Programm verfügbar. Azure- und Microsoft 365-Abonnenten können Azure Active Directory Premium P1 und P2 auch online erwerben.  Weitere Informationen finden Sie in der [Preisübersicht für Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
 ### <a name="mim-cals"></a>MIM-Clientzugriffslizenzen
 
@@ -103,7 +103,7 @@ Die folgenden Downloads sind unter Umständen auch relevant:
 
 - [MIM-Hybridberichterstellungs-Agent](https://www.microsoft.com/download/details.aspx?id=55112)
 
-- [Generischer LDAP-Connector, generischer SQL-Connector, Graph-Connector, Lotus Domino-Connector, PowerShell-Connector, Connector für Webdienste](http://go.microsoft.com/fwlink/?LinkId=717495)
+- [Generischer LDAP-Connector, generischer SQL-Connector, Graph-Connector, Lotus Domino-Connector, PowerShell-Connector, Connector für Webdienste](https://go.microsoft.com/fwlink/?LinkId=717495)
 
 - [Connector für SharePoint User Profile Store](https://www.microsoft.com/download/details.aspx?id=41164)
 
