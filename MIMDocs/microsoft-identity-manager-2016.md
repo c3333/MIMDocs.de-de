@@ -8,19 +8,19 @@ manager: daveba
 ms.date: 10/18/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 01d5427c3672354ff6c2dc4259c1f2e43e380a8c
-ms.sourcegitcommit: c9f5f960fd39745bf5b57161a2fd0238c88d035a
+ms.openlocfilehash: 66cb97afa69decfde8df9f3c78f15c48abd7982b
+ms.sourcegitcommit: d6178a67014d66d37056c13d10328ae03e3cd781
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85133548"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970378"
 ---
 # <a name="microsoft-identity-manager-2016-news-and-updates"></a>Neuigkeiten und Updates zu Microsoft Identity Manager 2016
 
 Microsoft Identity Manager (MIM) 2016 verwendet als Basis die Identitäts- und Zugriffsverwaltungsfunktionen von Forefront Identity Manager. Wie sein Vorgänger unterstützt MIM Sie dabei, die Benutzer, die Anmeldeinformationen, die Richtlinien und den Zugriff in Ihrer Organisation zu verwalten.  Außerdem ist MIM 2016 um eine hybride Benutzeroberfläche, Funktionen für privilegierte Zugriffsverwaltung (Privileged Access Management) und Unterstützung für neue Plattformen erweitert.
 
 
-Mit MIM kann eine Organisation das Identity Lifecycle Management mit automatisierten Workflows, Geschäftsregeln und einfacher Integration in heterogene Plattformen im Rechenzentrum vereinfachen. MIM ermöglicht der Organisation, über die richtigen Benutzer und Zugriffsrechte für Active Directory für lokale Apps zu verfügen, und Azure AD Connect kann sie dann in Azure AD für Office 365 und cloudgehostete Apps zur Verfügung stellen. Zu den gängigen MIM-Szenarien zählen:
+Mit MIM kann eine Organisation das Identity Lifecycle Management mit automatisierten Workflows, Geschäftsregeln und einfacher Integration in heterogene Plattformen im Rechenzentrum vereinfachen. MIM ermöglicht der Organisation, über die richtigen Benutzer und Zugriffsrechte für Active Directory für lokale Apps zu verfügen, und Azure AD Connect kann sie dann in Azure AD für Microsoft 365 und in der Cloud gehostete Apps zur Verfügung stellen. Zu den gängigen MIM-Szenarien zählen:
  - Automatische Identitäts- und Gruppenbereitstellung auf Grundlage von Unternehmensrichtlinien und workflowgesteuerter Bereitstellung
  - Integration der Inhalte der Verzeichnisse in Systeme der Personalabteilung und anderer Autoritätsquellen
  - Synchronisierung von Identitäten zwischen Verzeichnissen, Datenbanken und lokalen Anwendungen über allgemeine APIs und Protokolle, von Microsoft und Partnern bereitgestellte Connectors

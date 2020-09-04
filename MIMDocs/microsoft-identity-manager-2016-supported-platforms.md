@@ -12,12 +12,12 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: 04e96f3c8eb71041dccb173f2a1dc7dbba46ef01
-ms.sourcegitcommit: cd503e8e9933d39d6fbf894c7d27bf9566301ac8
+ms.openlocfilehash: 4ef6c5aa5ba3814ab20dff445729da4acf96ecf7
+ms.sourcegitcommit: d6178a67014d66d37056c13d10328ae03e3cd781
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88168336"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970395"
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Unterstützte Plattformen für MIM 2016
 
@@ -46,7 +46,7 @@ In dieser Tabelle sind die unterstützten Plattformen und Versionen für die ein
 | **MIM-Portale für Kennwortzurücksetzung und Registrierung** | Windows Server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
 | | Webbrowser | Alle gängigen unterstützten Browser |
 | **MIM-Add-Ins und -Erweiterungen** | Windows | Windows 7<br/>Windows 8<br/>Windows 8.1<br/>Windows 10 |
-| | Outlook-Integration (optional) | Outlook 2010 (unter Windows, mit Ausnahme von Klick-und-Los)<br/>Outlook 2013 (unter Windows, mit Ausnahme von Klick-und-Los) <br/> Outlook 2016 (unter Windows 10, mit Ausnahme von Klick-und-Los) *<br/>Office 365 Outlook (unter Windows 10, einschließlich Klick-und-Los) ** |
+| | Outlook-Integration (optional) | Outlook 2010 (unter Windows, mit Ausnahme von Klick-und-Los)<br/>Outlook 2013 (unter Windows, mit Ausnahme von Klick-und-Los) <br/> Outlook 2016 (unter Windows 10, mit Ausnahme von Klick-und-Los) *<br/>Outlook für Microsoft 365 (unter Windows 10, einschließlich Klick-und-Los) ** |
 | | PowerShell-Cmdlets für PAM-Requestor (optional) | Windows 8.1<br/>Windows 10 |
 | **MIM-Zertifikatverwaltung** (Server- und CA-Integration) | Windows-Server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
 | | Zertifizierungsstelle | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
