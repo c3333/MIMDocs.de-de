@@ -12,12 +12,12 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: 4ef6c5aa5ba3814ab20dff445729da4acf96ecf7
-ms.sourcegitcommit: d6178a67014d66d37056c13d10328ae03e3cd781
-ms.translationtype: HT
+ms.openlocfilehash: f1f8fb9f443bcafb720b1fd0e9880c93a9772c22
+ms.sourcegitcommit: 22fa4dac943a0c6b0815b711bd1996f77a390e7c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970395"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92174544"
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Unterstützte Plattformen für MIM 2016
 
@@ -30,7 +30,7 @@ In dieser Tabelle sind die unterstützten Plattformen und Versionen für die ein
 | | Active Directory-Funktionsebene für die Benutzerbereitstellung, PCNS und GAL-Synchronisierung | Windows 2000 (NR)<br/>Windows Server 2003<br/>Windows Server 2008<br/>Windows Server 2008 R2<br/>Windows Server 2012 R2<br/>Windows Server 2012 R2<br/>Windows Server 2016 *
 | | MIM-Synchronisationsdatenbank | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP4 (NR)<br/>SQL Server 2014 SP3 (NR) <br/>SQL Server 2016 SP2 * <br/>SQL Server 2017 ** <br/> SQL Server 2019 ** |
 | | Active Directory für die Benutzerbereitstellung, PCNS und GAL-Synchronisierung (optional)|Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
-| | Exchange für die Bereitstellung von Postfächern und GAL-Synchronisierung (optional)|Exchange Server 2010 SP3 (NR)<br/>Exchange Server 2013 SP1<br/>Exchange Server 2016 *<br/>Exchange Server 2019 ** |
+| | Exchange für die Bereitstellung von Postfächern und GAL-Synchronisierung (optional)|Exchange Server 2013 SP1<br/>Exchange Server 2016 *<br/>Exchange Server 2019 ** |
 | | Entwicklungsumgebung (optional) | Visual Studio 2012<br/>Visual Studio 2013 <br/> Visual Studio 2015 <br/> Visual Studio 2017 * |
 | | Zusätzliches verbundenes System (optional) | Active Directory Domain Services<br/>Active Directory<br/>Lightweight Directory Services<br/>SQL Server 2008 oder höher<br/>SharePoint Server 2013<br/> SharePoint Server 2016 *<br/> SharePoint Server 2019 ** <br/> Andere Produkte von Drittanbietern |
 | **MIM-Dienst und -Portal** | Windows Server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
@@ -38,23 +38,23 @@ In dieser Tabelle sind die unterstützten Plattformen und Versionen für die ein
 | |PAM-Szenario: Active Directory für die geschützte Umgebung der PAM-Gesamtstruktur | Windows Server 2012 R2 (NR) <br/> Windows Server 2016 * <br/> Windows Server 2019 ** |
 | |PAM-Szenario: Active Directory für vorhandene PAM-Szenario-Gesamtstrukturen (CORP) | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * <br/> Windows Server 2019 ** |
 | | MIM-Dienstdatenbank | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP4 (NR)<br/>SQL Server 2014 SP3 (NR) <br/> SQL Server 2016 SP2 *<br/> SQL Server 2017 ** <br/> SQL Server 2019 ** |
-| | SharePoint | SharePoint Foundation 2010 (NR)<br/>SharePoint Foundation 2013 SP1 (NR) <br/> SharePoint 2016 *<br/> SharePoint 2019 ** |
-| | E-Mail-Server für Bestätigungs- und Gruppenverwaltungs-E-Mails vom MIM-Dienst (optional) | Exchange Server 2010 SP3 (NR)<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 *<br/> Exchange Server 2019 ** <br/> Exchange Online * (nur Benachrichtigung vor Build [4.4.1749.0](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history#version-4417490)) |
+| | SharePoint | SharePoint Foundation 2010 SP2 (Nr.)<br/>SharePoint Foundation 2013 SP1 (NR) <br/> SharePoint 2016 *<br/> SharePoint 2019 ** |
+| | E-Mail-Server für Bestätigungs- und Gruppenverwaltungs-E-Mails vom MIM-Dienst (optional) | Exchange Server 2013 SP1 <br/> Exchange Server 2016 *<br/> Exchange Server 2019 ** <br/> Exchange Online * (nur Benachrichtigung vor Build [4.4.1749.0](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history#version-4417490)) |
 | | Browser | Alle gängigen unterstützten Browser * (auf mobile Geräte begrenzt)|
 | **MIM-Dienstberichte** | Windows Server |  Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 (NR) <br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
-| | Data Warehouse | System Center 2012 – Service Manager <br/> System Center 2012 R2 Service Manager <br/> System Center 2016 Service Manager (Mit 4.4.1459)<br/> System Center 2019 Service Manager ** |
+| | Data Warehouse | System Center 2012 Service Manager SP1 <br/> System Center 2012 R2 Service Manager <br/> System Center 2016 Service Manager (Mit 4.4.1459)<br/> System Center 2019 Service Manager ** |
 | **MIM-Portale für Kennwortzurücksetzung und Registrierung** | Windows Server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
 | | Webbrowser | Alle gängigen unterstützten Browser |
-| **MIM-Add-Ins und -Erweiterungen** | Windows | Windows 7<br/>Windows 8<br/>Windows 8.1<br/>Windows 10 |
-| | Outlook-Integration (optional) | Outlook 2010 (unter Windows, mit Ausnahme von Klick-und-Los)<br/>Outlook 2013 (unter Windows, mit Ausnahme von Klick-und-Los) <br/> Outlook 2016 (unter Windows 10, mit Ausnahme von Klick-und-Los) *<br/>Outlook für Microsoft 365 (unter Windows 10, einschließlich Klick-und-Los) ** |
+| **MIM-Add-Ins und -Erweiterungen** | Windows | Windows 7<br/>Windows 8.1<br/>Windows 10 |
+| | Outlook-Integration (optional) | Outlook 2013 (unter Windows, mit Ausnahme von Klick-und-Los) <br/> Outlook 2016 (unter Windows 10, mit Ausnahme von Klick-und-Los) *<br/>Outlook für Microsoft 365 (unter Windows 10, einschließlich Klick-und-Los) ** |
 | | PowerShell-Cmdlets für PAM-Requestor (optional) | Windows 8.1<br/>Windows 10 |
 | **MIM-Zertifikatverwaltung** (Server- und CA-Integration) | Windows-Server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
 | | Zertifizierungsstelle | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
 | | MIM CM-Datenbank | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP4 (NR)<br/>SQL Server 2014 SP3 (NR) <br/> SQL Server 2016 SP2 *<br/> SQL Server 2017 ** |
-| **MIM-Zertifikatverwaltung** (Anwendung) | Windows | Windows 8<br/>Windows 8.1<br/>Windows 10 |
+| **MIM-Zertifikatverwaltung** (Anwendung) | Windows | Windows 8.1<br/>Windows 10 |
 | **MIM-Zertifikatverwaltung** (Sammelclient) | Windows | Windows 7 |
-| **MIM-Zertifikatverwaltung** (Auf ActiveX basierende Clientsmartcard) | Windows | Windows 7 <br/> Windows 8 <br/> Windows 8.1 <br/> Windows 10 |
+| **MIM-Zertifikatverwaltung** (Auf ActiveX basierende Clientsmartcard) | Windows | Windows 7 <br/>Windows 8.1 <br/> Windows 10 |
 | **MIM BHOLD-Suite** | Windows Server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | BHOLD-Datenbank | SQL Server 2008 R2 SP3 (NR)<br/>SQL Server 2012 SP4  <br/> SQL Server 2014 SP3 * <br/> SQL Server 2016 SP2 * |
-| | E-Mail-Server (optional) | Exchange Server 2010 SP3 (NR)<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * |
+| | E-Mail-Server (optional) | Exchange Server 2013 SP1 <br/> Exchange Server 2016 * |
 | | Webbrowser | Von Internet Explorer unterstützte Browser mit Silverlight |

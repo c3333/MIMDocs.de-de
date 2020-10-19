@@ -16,12 +16,12 @@ ms.date: 01/23/2019
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f6e43abea8b58ccff7fa376b266a91cb138f5aa9
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
-ms.translationtype: HT
+ms.openlocfilehash: 157fd8d2a6b4296899f90c661e12ba6e19743d0f
+ms.sourcegitcommit: 22fa4dac943a0c6b0815b711bd1996f77a390e7c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044383"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92174524"
 ---
 # <a name="connect-to-your-directories"></a>Herstellen der Verbindung zu Ihren Verzeichnissen
 
@@ -33,25 +33,25 @@ Dieser Artikel behandelt die in MIM enthaltenen und unterstützte Connectors, ab
 
 ## <a name="supported-connectors-in-mim-2016-sp1"></a>Unterstützte Connectors in MIM 2016 SP1
 
-| Name | Unterstützte Versionen der verbundenen Datenquelle und technische Links |
+| Connectorname | Unterstützte Versionen der verbundenen Datenquelle und technische Links |
 | ---- | ----------------------------------------------- |
 | Active Directory-Domänendienste | Active Directory in Windows Server 2012-2019 |
 | Active Directory Lightweight Directory Services (ADLDS) | Active Directory Lightweight Directory Services (ADLDS) |
-| Active Directory-GAL (globale Adressliste) | Active Directory-GAL (globale Adressliste) – Exchange 2013-2019 |
+| Active Directory-GAL (globale Adressliste) | Active Directory globale Adressliste (GAL) in Exchange 2013-2019 |
 | Extensible Connectivity 2.0 | Jede aufruf- oder dateibasierte Datenquelle |
 | FIM-Dienst | MIM-Dienst. Beachten Sie, dass die Versionen von MIM-Synchronisierungsdienst und MIM-Dienst identisch sind. |
-| IBM DB2 Universal Database | IBM DB2, Versionen 9.5 oder 9.7; IBM DB2 OLEDB v9.5 FP5 oder v9.7 FP1 |
-| IBM-Verzeichnisserver | IBM Tivoli Directory Server 6.x |
-| Novell eDirectory | Novell eDirectory, Versionen 8.7.3, 8.8.5 und 8.8.6 |
-| Oracle-Datenbank | Oracle Database 10g oder 11g; 64-Bit-Client |
-| Microsoft SQL Server | SQL Server 2012-2017 |
-| Verzeichnisserver für Oracle (zuvor Sun und Netscape) | Sun Directory Server 6.x, 7.x und Oracle 11 |
-| [Windows PowerShell-Connector für FIM 2010 R2 – technische Referenz](https://msdn.microsoft.com/library/dn640417.aspx) | Windows PowerShell 2.0 oder höher |
-| [Microsoft Azure Active Directory Connector](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory (nicht für neue Bereitstellungen empfohlen) |
-| [Generischer LDAP-Connector für FIM 2010 R2 – technische Referenz](https://msdn.microsoft.com/library/dn510997.aspx) | [LDAP v3-Server (RFC 4510-konform)](reference/microsoft-identity-manager-2016-connector-genericldap.md#overview-of-the-generic-ldap-connector) |
-| [Generischer SQL-Connector](reference/microsoft-identity-manager-2016-connector-genericsql.md) | [Der Connector wird mit allen 64-Bit-ODBC-Treibern unterstützt](reference/microsoft-identity-manager-2016-connector-genericsql.md#overview-of-the-generic-sql-connector) |
-| [Connector für Lotus Domino](https://msdn.microsoft.com/library/hh859750.aspx) | Lotus Notes Release v8.5.x, v9.0.x |
-| [SharePoint Services-Connector-UPA](https://msdn.microsoft.com/library/dn511003.aspx) | SharePoint Server 2013-2019 mit Benutzerprofildienst-Anwendung (UPA) |
+| IBM DB2 Universal Database | IBM DB2, Versionen 9.5 oder 9.7; IBM DB2 OLEDB v9.5 FP5 oder v9.7 FP1 <br/> Verwenden Sie für spätere Versionen einen generischen SQL-Connector.|
+| IBM-Verzeichnisserver | IBM Tivoli Directory Server 6.x <br/> Verwenden des generischen LDAP-Connector für spätere Versionen|
+| Novell eDirectory | Novell eDirectory, Versionen 8.7.3, 8.8.5 und 8.8.6 <br/> Verwenden des generischen LDAP-Connector für spätere Versionen|
+| Oracle-Datenbank | Oracle Database 10g oder 11g; 64-Bit-Client <br/> Verwenden Sie für spätere Versionen einen generischen SQL-Connector.|
+| Microsoft SQL Server | SQL Server 2012-2017 <br/> Verwenden Sie den generischen SQL-Connector für spätere Versionen oder SQL Azure|
+| Verzeichnisserver für Oracle (zuvor Sun und Netscape) | Sun Directory Server 6.x, 7.x und Oracle 11<br/> Verwenden des generischen LDAP-Connector für spätere Versionen |
+| [Windows PowerShell-Connector](https://msdn.microsoft.com/library/dn640417.aspx) | Windows PowerShell 2.0 oder höher |
+| [Microsoft Azure Active Directory Connector](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory (nicht empfohlen für neue bereit Stellungen) |
+| [Generischer LDAP-Connector](https://msdn.microsoft.com/library/dn510997.aspx) | [LDAP v3-Server (RFC 4510-kompatibel)](reference/microsoft-identity-manager-2016-connector-genericldap.md#overview-of-the-generic-ldap-connector) |
+| [Generischer SQL-Connector](reference/microsoft-identity-manager-2016-connector-genericsql.md) | [Der Connector wird für alle 64-Bit-ODBC-Treiber unterstützt.](reference/microsoft-identity-manager-2016-connector-genericsql.md#overview-of-the-generic-sql-connector) |
+| [Connector für Lotus Domino](https://msdn.microsoft.com/library/hh859750.aspx) | Lotus Notes Release v 8.5. x, v 9.0. x |
+| [SharePoint Services-Connector-UPA](https://msdn.microsoft.com/library/dn511003.aspx) | SharePoint Server 2013-2019 mit Benutzerprofil-Dienst Anwendung (uPA) |
 | [Connector für Webdienste](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5.0 oder 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1 und andere SOAP- und REST-APIs](https://docs.microsoft.com/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |
 | [Attribut-Wert-Paar-Textdatei](https://technet.microsoft.com/library/cc708644(v=ws.10).aspx) | Attribut-Wert-Paar-Textdateien |
 | [Textdatei mit Trennzeichen](https://technet.microsoft.com/library/cc720612(v=ws.10).aspx) | Textdateien mit Trennzeichen |
